@@ -1,0 +1,14 @@
+{
+  "passed": false,
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "location": "assets/js/app.mjs:57-62,77-84,123-125",
+      "issue": "The inactive mask is loaded only at startup and is reused across map-changing imports and reset. After a failed Origins migration, the published baseline grid is prepared using the retained old map's mask; reset then restores Origins with incorrect placement eligibility and grid ownership.",
+      "repro": "Store publication-v2.json as the draft after adding {id:'review-cropped-point',name:'Review author point',x:100,y:10,faction:null,objects:[]}; reload and wait for gilneasApp.ready. Migration correctly falls back without overwriting storage. Invoke resetDraft() and confirm. The image and SVG frame become Origins/3526x4548, but canPlace([8,8]) returns true although origins-inactive-mask.png marks that pixel inactive. The reset grid differs from fresh Origins startup in 1225 cells. Independently, importing publication-v1.json into fresh Origins restores the old map but canPlace([8,8]) returns false although the original mask permits it.",
+      "required_fix": "Bind mask loading and baseline-grid preparation to the target snapshot. Reset must use an Origins-prepared baseline, and map-changing imports must adopt the matching mask before preparing or committing the incoming snapshot."
+    }
+  ],
+  "suggestions": [],
+  "summary": "All four previous blockers are fixed. Current verification passed 101 Node tests, eight focused browser regressions, syntax and diff checks, v1/v2 author-data/manual-grid migration probes, and the 46-entry runtime manifest. The latest scenario-territory regression is green, and manual migrations do not add its new polygons. One current mask-transition blocker was reproduced. No repository files edited or commits made."
+}

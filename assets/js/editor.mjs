@@ -674,7 +674,7 @@ export function initEditor(ctx) {
   byId('location-edit').addEventListener('click', () => editLocation(ctx.getSelectedId()));
   byId('object-create').addEventListener('click', () => addObject(ctx.getSelectedId()));
   byId('houses-open').addEventListener('click', openHouses);
-  byId('territories-open').addEventListener('click', openTerritories);
+  byId('territories-open').addEventListener('click', () => typeof ctx.onOpenTerritories==='function'?ctx.onOpenTerritories():openTerritories());
   byId('location-move').addEventListener('click', moveLocation);
   byId('location-delete').addEventListener('click', deleteLocation);
   byId('map-task-cancel').addEventListener('click', cancelMapTask);

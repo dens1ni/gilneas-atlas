@@ -1,4 +1,5 @@
 import { sovereignOf, factionMembers, effectiveFaction } from './model.mjs';
+import { createFactionShield } from './heraldry.mjs';
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const FAVORITES_KEY = 'gilneas-atlas-favorites-v1';
@@ -48,6 +49,16 @@ function locationGlyph(location) {
 
 const casefold = value => String(value ?? '').normalize('NFKC').toLocaleLowerCase('ru');
 const colorOf = faction => /^#[0-9a-f]{6}$/i.test(faction?.color || '') ? faction.color : '#b39467';
+const unknownAffiliation = location => location.provenance?.affiliationStatus === 'unknown' ||
+  (location.faction == null && location.provenance?.confidence === 'reconstruction' && location.provenance?.affiliationStatus !== 'independent');
+function crestImage(snapshot) {
+  const crest = snapshot.meta.gilneasCrest;
+  if (typeof crest !== 'string' || !crest) return null;
+  const image = make('img', 'faction-crest');
+  image.src = crest;
+  image.alt = '';
+  return image;
+}
 
 /** Wire the static atlas DOM. Data and editing remain with the parent. */
 export function initUI(context) {
@@ -62,6 +73,7 @@ export function initUI(context) {
   let tab = 'all';
   let mapInteraction = null;
   const groupOpen = new Map();
+  let navigationSearching = false;
   let groupsFolded = false;
   let lastSelectedId = null;
   let lastDossierId = null;
@@ -84,6 +96,52 @@ export function initUI(context) {
   const factionMap = () => new Map(data().factions.map(faction => [faction.id, faction]));
   const includedFactions = () => selectedFaction == null ? null : new Set(factionMembers(data().factions, selectedFaction));
   const viewRect = () => viewport.getBoundingClientRect();
+  const tooltip = dom['marker-tooltip'] || make('div', 'marker-tooltip');
+  tooltip.id = 'marker-tooltip';
+  tooltip.classList.add('marker-tooltip');
+  tooltip.setAttribute('role', 'tooltip');
+  tooltip.hidden = true;
+  tooltip.style.position = 'absolute';
+  tooltip.style.pointerEvents = 'none';
+  viewport.append(tooltip);
+  let tooltipMarker = null;
+
+  function hideMarkerTooltip() {
+    tooltip.hidden = true;
+    tooltipMarker?.removeAttribute('aria-describedby');
+    tooltipMarker = null;
+  }
+
+  function showMarkerTooltip(marker, location) {
+    hideMarkerTooltip();
+    if (mapInteraction || pointers.size || viewport.classList.contains('dragging')) return;
+    tooltipMarker = marker;
+    const factions = factionMap();
+    const faction = factions.get(location.faction);
+    const sovereign = faction ? factions.get(sovereignOf(data().factions, faction.id)) : null;
+    const description = location.shortDescription || String(location.description || '').match(/^[\s\S]*?(?:[.!?](?=\s|$)|$)/)?.[0] || '';
+    const unknown = unknownAffiliation(location);
+    tooltip.style.setProperty('--tooltip-color', colorOf(faction));
+    tooltip.replaceChildren(make('div', 'tooltip-title', location.name), make('p', 'tooltip-description', description),
+      make('div', 'tooltip-faction', faction?.name || (unknown ? 'Принадлежность не установлена' : 'Без державы')),
+      make('div', 'tooltip-sovereign', `Подданство: ${sovereign?.name || (unknown ? 'Не установлено' : 'Независимое владение')}`));
+    const rect = viewRect(), anchor = marker.getBoundingClientRect();
+    const margin = 8, gap = 10;
+    tooltip.style.maxWidth = `${Math.max(1, Math.min(320, rect.width - margin * 2))}px`;
+    tooltip.style.maxHeight = `${Math.max(1, rect.height - margin * 2)}px`;
+    tooltip.style.overflowWrap = 'anywhere';
+    tooltip.style.overflow = 'hidden';
+    tooltip.style.left = '0px';
+    tooltip.style.top = '0px';
+    tooltip.hidden = false;
+    const box = tooltip.getBoundingClientRect();
+    let x = anchor.right - rect.left + gap;
+    if (x + box.width > rect.width - margin) x = anchor.left - rect.left - gap - box.width;
+    const y = Math.min(rect.height - box.height - margin, anchor.top - rect.top);
+    tooltip.style.left = `${Math.max(margin, Math.min(rect.width - box.width - margin, x))}px`;
+    tooltip.style.top = `${Math.max(margin, y)}px`;
+    marker.setAttribute('aria-describedby', tooltip.id);
+  }
 
   function availableRect() {
     const rect = viewRect();
@@ -114,6 +172,7 @@ export function initUI(context) {
   }
 
   function applyCamera(next) {
+    hideMarkerTooltip();
     camera = constrained(next);
     world.style.transform = `translate(${camera.x}px, ${camera.y}px) scale(${camera.scale})`;
     world.style.setProperty('--inverse-scale', String(1 / camera.scale));
@@ -153,7 +212,7 @@ export function initUI(context) {
       y: area.y + area.height / 2 - (bounds.y + bounds.height / 2) * scale, scale }, animate);
   }
 
-  function home(animate = true) { frame(HOME_BOUNDS, animate); }
+  function home(animate = true) { frame(data().meta.homeBounds || HOME_BOUNDS, animate); }
   function fit(animate = true) { frame({ x: 0, y: 0, width: data().meta.width, height: data().meta.height }, animate); }
   function zoom(factor) {
     if (!Number.isFinite(factor) || factor <= 0) return;
@@ -207,11 +266,13 @@ export function initUI(context) {
     syncPanels();
   }
   function setMapInteraction(callback) {
+    hideMarkerTooltip();
     mapInteraction = typeof callback === 'function' ? callback : null;
     body.classList.toggle('map-editing', Boolean(mapInteraction));
   }
 
   function selectLocation(id) {
+    hideMarkerTooltip();
     context.onSelect(id);
     setPanel('dossier', true);
     focusLocation(id);
@@ -243,6 +304,7 @@ export function initUI(context) {
   }
   viewport.addEventListener('pointerdown', event => {
     if (event.button !== 0 || pointers.has(event.pointerId)) return;
+    hideMarkerTooltip();
     cancelFlight();
     if (!pointers.size) suppressMapClick = false;
     const capture = event.target.closest('.map-marker') || viewport;
@@ -297,7 +359,7 @@ export function initUI(context) {
   viewport.addEventListener('pointerup', endDrag);
   viewport.addEventListener('pointercancel', endDrag);
   viewport.addEventListener('click', event => {
-    if (suppressMapClick) { event.preventDefault(); event.stopImmediatePropagation(); }
+    if (suppressMapClick && event.detail !== 0) { event.preventDefault(); event.stopImmediatePropagation(); }
     else if (mapInteraction) {
       event.preventDefault();
       event.stopImmediatePropagation();
@@ -312,21 +374,33 @@ export function initUI(context) {
   }, true);
 
   function renderNavigation() {
+    if (!navigationSearching) {
+      for (const node of dom['location-list'].querySelectorAll('details[data-collapse-key]')) groupOpen.set(node.dataset.collapseKey, node.open);
+    }
     const snapshot = data();
     const factions = factionMap();
     const query = casefold(dom.search.value).trim();
+    navigationSearching = Boolean(query);
+    const restoreCollapse = (node, key) => {
+      node.dataset.collapseKey = key;
+      node.open = query ? true : groupOpen.get(key) ?? !groupsFolded;
+      node.addEventListener('toggle', () => {
+        if (node.isConnected && !query && !navigationSearching) groupOpen.set(key, node.open);
+      });
+    };
     for (const [id, name] of [['filter-all', 'all'], ['filter-favorites', 'favorites'], ['filter-nobles', 'nobles']]) {
       dom[id].classList.toggle('active', tab === name);
       dom[id].setAttribute('aria-pressed', String(tab === name));
     }
     if (tab === 'nobles') {
-      const nobles = (snapshot.nobles || []).filter(noble => !query || casefold([noble.name, noble.title, noble.house, noble.owner].join(' ')).includes(query));
+      const houseName = noble => factions.get(noble.house)?.name || noble.house;
+      const nobles = (snapshot.nobles || []).filter(noble => !query || casefold([noble.name, noble.title, houseName(noble), noble.owner].join(' ')).includes(query));
       dom['location-list'].replaceChildren(...nobles.map(noble => {
         const row = make('button', 'noble-row');
         row.type = 'button';
         row.dataset.nobleId = noble.id;
         const label = make('span');
-        label.append(make('span', '', noble.name), make('small', '', [noble.title, noble.house].filter(Boolean).join(' · ')));
+        label.append(make('span', '', noble.name), make('small', '', [noble.title, houseName(noble)].filter(Boolean).join(' · ')));
         row.append(icon('shield'), label);
         row.addEventListener('click', () => context.onShowNoble?.(noble.id));
         return row;
@@ -338,39 +412,106 @@ export function initUI(context) {
     dom['fold-groups'].hidden = false;
     const included = includedFactions();
     const rows = snapshot.locations.filter(location => (!included || included.has(location.faction)) && (tab !== 'favorites' || favorites.has(location.id)) &&
-      (!query || casefold([location.name, location.owner, location.house, location.englishName, ...(location.aliases || []), factions.get(location.faction)?.name].join(' ')).includes(query)));
-    const groups = new Map();
-    rows.forEach(location => {
-      if (!groups.has(location.faction)) groups.set(location.faction, []);
-      groups.get(location.faction).push(location);
-    });
-    const fragment = document.createDocumentFragment();
-    for (const [id, locations] of groups) {
-      const faction = factions.get(id);
-      const group = make('details', 'group');
-      group.open = query ? true : groupOpen.get(id) ?? !groupsFolded;
-      group.addEventListener('toggle', () => { if (group.isConnected && !dom.search.value.trim()) groupOpen.set(id, group.open); });
-      if (id != null) group.dataset.factionId = id;
-      group.style.setProperty('--faction-color', colorOf(faction));
-      const summary = make('summary');
-      summary.append(make('span', 'group-name', faction?.name || 'Без державы'), make('span', 'group-count', locations.length), icon('chevron', 'chevron'));
-      group.append(summary);
-      locations.sort((a, b) => Number(Boolean(b.capital)) - Number(Boolean(a.capital)) || a.name.localeCompare(b.name, 'ru'));
-      for (const location of locations) {
-        const row = make('button', 'location-row');
-        row.type = 'button';
-        row.dataset.locationId = location.id;
-        row.classList.toggle('active', location.id === context.getSelectedId());
-        row.append(make('span', 'row-name', location.name), make('small', 'location-type', TYPE_NAMES[location.type] || location.type));
-        if (location.capital) { const crown = make('span', 'row-capital'); crown.append(icon('crown')); row.append(crown); }
-        if (favorites.has(location.id)) row.append(icon('star', 'row-favorite'));
-        row.addEventListener('click', () => selectLocation(location.id));
-        group.append(row);
-      }
-      fragment.append(group);
+      (!query || casefold([location.name, location.owner, location.house, location.englishName, ...(location.aliases || []), factions.get(location.faction)?.name, factions.get(location.faction)?.ruler].join(' ')).includes(query)));
+    const objectRows = snapshot.locations.flatMap(location => (location.objects || [])
+      .filter(object => Object.hasOwn(object, 'faction') && (!included || included.has(object.faction)) &&
+        (tab !== 'favorites' || favorites.has(location.id)) && (!query || casefold([object.name, object.owner,
+          object.description, location.name, factions.get(object.faction)?.name].join(' ')).includes(query)))
+      .map(object => ({ location, object })));
+    const nodes = new Map(snapshot.factions.map(faction => [faction.id, { id: faction.id, faction, locations: [], objects: [], children: [] }]));
+    const roots = [];
+    for (const node of nodes.values()) {
+      const parent = nodes.get(node.faction.parent);
+      (parent ? parent.children : roots).push(node);
     }
+    const unassigned = { id: null, affiliation: 'independent', faction: null, locations: [], objects: [], children: [] };
+    const unknown = { id: null, affiliation: 'unknown', faction: null, locations: [], objects: [], children: [] };
+    roots.push(unassigned, unknown);
+    for (const location of rows) (nodes.get(location.faction) || (unknownAffiliation(location) ? unknown : unassigned)).locations.push(location);
+    for (const entry of objectRows) (nodes.get(entry.object.faction) || unassigned).objects.push(entry);
+    const countLocations = node => node.locations.length + node.children.reduce((total, child) => total + countLocations(child), 0);
+    const countObjects = node => node.objects.length + node.children.reduce((total, child) => total + countObjects(child), 0);
+    const makeLocationRow = location => {
+      const row = make('button', 'location-row');
+      row.type = 'button';
+      row.dataset.locationId = location.id;
+      row.classList.toggle('active', location.id === context.getSelectedId());
+      row.append(make('span', 'row-name', location.name), make('small', 'location-type', TYPE_NAMES[location.type] || location.type));
+      if (location.capital) { const crown = make('span', 'row-capital'); crown.append(icon('crown')); row.append(crown); }
+      if (favorites.has(location.id)) row.append(icon('star', 'row-favorite'));
+      row.addEventListener('click', () => selectLocation(location.id));
+      return row;
+    };
+    const makeGroup = node => {
+      const count = countLocations(node);
+      const objectCount = countObjects(node);
+      if (!count && !objectCount) return null;
+      const group = make('details', 'group faction-tree');
+      restoreCollapse(group, JSON.stringify(['faction', node.id, node.affiliation ?? null]));
+      if (node.id != null) group.dataset.factionId = node.id;
+      else group.dataset.affiliation = node.affiliation;
+      group.dataset.locationCount = count;
+      group.dataset.objectCount = objectCount;
+      group.style.setProperty('--faction-color', colorOf(node.faction));
+      const summary = make('summary');
+      const junior = node.faction?.ruler && factions.get(node.faction.parent)?.parent != null;
+      const heading = make('span', 'group-heading');
+      if (node.id === 'gilneas') { const crest = crestImage(snapshot); if (crest) heading.append(crest); }
+      heading.append(make('span', 'group-name', junior ? node.faction.ruler : node.faction?.name || (node.affiliation === 'unknown' ? 'Принадлежность не установлена' : 'Без державы')));
+      if (junior) heading.append(make('small', 'group-house-name', node.faction.name));
+      summary.append(heading, make('span', 'group-count', count), icon('chevron', 'chevron'));
+      if (objectCount) {
+        const objectTotal = make('small', 'group-object-count', objectCount);
+        objectTotal.setAttribute('aria-label', `Объекты: ${objectCount}`);
+        summary.append(objectTotal);
+      }
+      group.append(summary);
+      if (node.locations.length) {
+        const category = make('details', 'registry-category');
+        category.dataset.categoryId = 'locations';
+        restoreCollapse(category, JSON.stringify(['category', node.id, node.affiliation ?? null, 'locations']));
+        const heading = make('summary');
+        heading.append(make('span', 'category-name', 'Владения'), make('span', 'category-count', node.locations.length), icon('chevron', 'chevron'));
+        node.locations.sort((a, b) => Number(Boolean(b.capital)) - Number(Boolean(a.capital)) || a.name.localeCompare(b.name, 'ru'));
+        category.append(heading, ...node.locations.map(makeLocationRow));
+        group.append(category);
+      }
+      if (node.objects.length) {
+        const category = make('details', 'registry-category');
+        category.dataset.categoryId = 'objects';
+        restoreCollapse(category, JSON.stringify(['category', node.id, node.affiliation ?? null, 'objects']));
+        const heading = make('summary');
+        heading.append(make('span', 'category-name', 'Объекты'), make('span', 'category-count', node.objects.length), icon('chevron', 'chevron'));
+        category.append(heading);
+        node.objects.sort((a, b) => a.object.name.localeCompare(b.object.name, 'ru'));
+        for (const { location, object } of node.objects) {
+          const row = make('button', 'object-row');
+          row.type = 'button';
+          row.dataset.locationId = location.id;
+          row.dataset.objectId = object.id;
+          row.append(make('span', 'row-name', object.name), make('small', '', location.name));
+          row.addEventListener('click', () => {
+            selectLocation(location.id);
+            const card = [...dom['dossier-objects'].querySelectorAll('.object-card')].find(item => item.dataset.objectId === object.id);
+            if (card) { card.open = true; card.scrollIntoView({ block: 'nearest' }); }
+          });
+          category.append(row);
+        }
+        group.append(category);
+      }
+      const children = node.children.map(makeGroup).filter(Boolean);
+      if (children.length) {
+        const branch = make('div', 'faction-children');
+        branch.append(...children);
+        group.append(branch);
+      }
+      return group;
+    };
+    const fragment = document.createDocumentFragment();
+    fragment.append(...roots.map(makeGroup).filter(Boolean));
     dom['location-list'].replaceChildren(fragment);
     dom['result-count'].textContent = `${rows.length} ${rows.length === 1 ? 'владение' : rows.length >= 2 && rows.length <= 4 ? 'владения' : 'владений'}`;
+    if (objectRows.length) dom['result-count'].append(document.createTextNode(` · Объекты: ${objectRows.length}`));
   }
 
   function renderMarkers() {
@@ -381,16 +522,17 @@ export function initUI(context) {
       const marker = make('button', 'map-marker');
       marker.type = 'button';
       marker.dataset.locationId = location.id;
-      marker.title = location.name;
       marker.setAttribute('aria-label', location.name);
+      marker.addEventListener('mouseenter', () => showMarkerTooltip(marker, location));
+      marker.addEventListener('focus', () => showMarkerTooltip(marker, location));
+      marker.addEventListener('mouseleave', hideMarkerTooltip);
+      marker.addEventListener('blur', hideMarkerTooltip);
       marker.style.left = `${location.x}px`;
       marker.style.top = `${location.y}px`;
       marker.style.setProperty('--marker-color', colorOf(factions.get(location.faction)));
       marker.classList.toggle('capital', Boolean(location.capital));
       marker.classList.toggle('selected', location.id === context.getSelectedId());
-      marker.classList.toggle('reconstruction', location.provenance?.confidence === 'reconstruction');
       marker.classList.toggle('dimmed', Boolean(included && !included.has(location.faction) && location.id !== context.getSelectedId()));
-      marker.hidden = !dom['show-reconstructions'].checked && location.provenance?.confidence === 'reconstruction' && location.id !== context.getSelectedId();
       marker.append(icon(locationGlyph(location)), make('span', 'marker-label', location.name));
       marker.addEventListener('click', () => selectLocation(location.id));
       fragment.append(marker);
@@ -418,7 +560,7 @@ export function initUI(context) {
       row.classList.toggle('active', selectedFaction === faction.id);
       row.setAttribute('aria-pressed', String(selectedFaction === faction.id));
       const name = make('span', 'faction-name', faction.name);
-      row.append(make('i'), name);
+      row.append((faction.id === 'gilneas' && crestImage(snapshot)) || make('i'), name);
       if (depth) {
         const parent = factions.get(faction.parent);
         const badge = make('small', 'faction-parent', parent?.name);
@@ -430,21 +572,26 @@ export function initUI(context) {
       return row;
     }));
     dom['faction-clear'].hidden = selectedFaction == null;
-    const territories = document.createDocumentFragment();
-    for (const territory of snapshot.territories || []) {
-      const polygon = document.createElementNS(SVG_NS, 'polygon');
-      polygon.dataset.territoryId = territory.id;
-      polygon.setAttribute('points', territory.points.map(point => point.join(',')).join(' '));
-      polygon.setAttribute('fill', colorOf(factions.get(territory.faction)));
-      polygon.setAttribute('stroke', colorOf(factions.get(territory.faction)));
-      polygon.setAttribute('fill-opacity', '0.15');
-      polygon.setAttribute('stroke-opacity', '0.55');
-      polygon.setAttribute('opacity', included && !included.has(territory.faction) ? '0.12' : '1');
-      territories.append(polygon);
+    const visible = dom['show-territories']?.checked ?? true;
+    if (typeof context.onRenderTerritories === 'function') {
+      context.onRenderTerritories({ visible, selectedFaction, includedFactions: included ? [...included] : null });
+    } else {
+      const territories = document.createDocumentFragment();
+      for (const territory of snapshot.territories || []) {
+        const polygon = document.createElementNS(SVG_NS, 'polygon');
+        polygon.dataset.territoryId = territory.id;
+        polygon.setAttribute('points', territory.points.map(point => point.join(',')).join(' '));
+        polygon.setAttribute('fill', colorOf(factions.get(territory.faction)));
+        polygon.setAttribute('stroke', colorOf(factions.get(territory.faction)));
+        polygon.setAttribute('fill-opacity', '0.15');
+        polygon.setAttribute('stroke-opacity', '0.55');
+        polygon.setAttribute('opacity', included && !included.has(territory.faction) ? '0.12' : '1');
+        territories.append(polygon);
+      }
+      dom['territory-layer'].replaceChildren(territories);
+      dom['territory-layer'].toggleAttribute('hidden', !visible);
     }
-    dom['territory-layer'].replaceChildren(territories);
-    dom['territory-layer'].toggleAttribute('hidden', !dom['show-territories'].checked);
-    world.classList.toggle('show-labels', dom['show-labels'].checked);
+    world.classList.toggle('show-labels', dom['show-labels']?.checked ?? false);
   }
 
   function citationIds(record) {
@@ -496,41 +643,53 @@ export function initUI(context) {
     for (const record of [location, ...(location.objects || [])]) {
       for (const id of citationIds(record)) if (allSources.has(id) && !cited.has(id)) cited.set(id, { record: allSources.get(id), number: typeof id === 'number' ? id : data().sources.findIndex(source => source.id === id) + 1 });
     }
+    dom.dossier.style.setProperty('--dossier-faction-color', colorOf(faction));
+    dom['dossier-faction'].style.color = 'var(--dossier-faction-color)';
     dom['dossier-type'].textContent = TYPE_NAMES[location.type] || 'Досье владения';
     dom['dossier-title'].textContent = location.name;
     const fields = [TYPE_NAMES[location.type] || location.type, location.capital ? 'Столица' : '', location.subtitle];
     dom['dossier-subtitle'].textContent = [...new Set(fields.filter(Boolean))].join(' · ');
-    const unknownAffiliation = location.provenance?.affiliationStatus === 'unknown' || (location.faction == null && location.provenance?.confidence === 'reconstruction');
-    dom['dossier-faction'].textContent = faction?.name || (unknownAffiliation ? 'Принадлежность не установлена' : 'Без державы');
-    dom['dossier-sovereign'].textContent = sovereign?.name || (unknownAffiliation ? 'Не установлено' : 'Независимое владение');
+    const unknown = unknownAffiliation(location);
+    dom['dossier-faction'].textContent = faction?.name || (unknown ? 'Принадлежность не установлена' : 'Без державы');
+    dom['dossier-sovereign'].textContent = sovereign?.name || (unknown ? 'Не установлено' : 'Независимое владение');
     dom['dossier-owner'].textContent = location.owner || 'Не установлен';
     dom['dossier-favorite'].setAttribute('aria-pressed', String(favorites.has(location.id)));
     dom['dossier-favorite'].setAttribute('aria-label', favorites.has(location.id) ? 'Убрать из избранного' : 'В избранное');
     dom['dossier-description'].textContent = location.description || '';
     dom['dossier-description'].style.whiteSpace = 'pre-wrap';
-    dom['dossier-seal'].replaceChildren(icon(faction?.id === 'gilneas' || sovereign?.id === 'gilneas' ? 'rose' : 'shield'));
+    dom['dossier-seal'].replaceChildren(createFactionShield(data(), location.faction));
     dom['dossier-seal'].setAttribute('aria-hidden', 'true');
     const provenance = dom['dossier-provenance'];
     provenance.replaceChildren();
-    const confidence = location.provenance?.confidence || location.confidence;
-    const status = { confirmed: 'Подтверждённая локация', reconstruction: 'Реконструкция для эпохи', custom: 'Авторская локация' }[confidence];
-    if (status) provenance.append(make('span', 'confidence', status));
-    if (location.provenance?.note) provenance.append(make('p', '', location.provenance.note));
     appendCitations(provenance, location, cited);
+    const wowpediaUrl = safeUrl({ url: location.wowpediaUrl });
+    if (wowpediaUrl) {
+      const link = make('a', 'wowpedia-link', 'Wowpedia');
+      link.href = wowpediaUrl;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      provenance.append(link);
+    }
     provenance.hidden = !provenance.childNodes.length;
 
     dom['dossier-objects'].replaceChildren(...(location.objects || []).map(object => {
       const card = make('details', 'object-card');
       card.dataset.objectId = object.id;
       card.open = sameLocation && openObjects.has(object.id);
+      const objectFaction = factions.get(effectiveFaction(location, object));
+      const objectAffiliation = objectFaction?.name || (!Object.hasOwn(object, 'faction') && unknown ? 'Принадлежность не установлена' : 'Независимый объект');
+      card.style.setProperty('--object-color', colorOf(objectFaction));
       const summary = make('summary');
       const symbol = make('span', 'object-icon');
-      symbol.append(icon(object.type === 'building' ? 'building' : object.type === 'resource' ? 'resource' : 'shield'));
-      summary.append(symbol, make('span', 'object-title', object.name), icon('chevron', 'chevron'));
+      symbol.append(createFactionShield(data(), effectiveFaction(location, object)));
+      const badge = make('small', 'object-faction-badge', objectAffiliation);
+      badge.style.color = 'var(--object-color)';
+      const heading = make('span', 'object-heading');
+      heading.append(make('span', 'object-title', object.name), badge);
+      summary.append(symbol, heading, icon('chevron', 'chevron'));
       card.append(summary);
-      const objectFaction = factions.get(effectiveFaction(location, object));
       const owner = object.owner || location.owner;
-      card.append(make('small', 'object-ownership', `${objectFaction?.name || 'Независимый объект'} · ${owner || 'Владелец не установлен'}`));
+      card.append(make('small', 'object-ownership', `${objectAffiliation} · ${owner || 'Владелец не установлен'}`));
       if (object.description) card.append(make('p', 'object-description', object.description));
       if (object.type === 'resource' && object.amount != null && String(object.amount).length) card.append(make('p', 'amount', `Запас: ${object.amount}`));
       if (object.modifiers?.length) {
@@ -579,6 +738,7 @@ export function initUI(context) {
   }
 
   function render() {
+    hideMarkerTooltip();
     if (selectedFaction != null && !data().factions.some(faction => faction.id === selectedFaction)) selectedFaction = null;
     const meta = data().meta;
     const id = selected()?.id ?? null;
@@ -654,7 +814,7 @@ export function initUI(context) {
     context.onFavoriteChange?.(location.id, favorites.has(location.id));
   });
   dom['faction-clear'].addEventListener('click', () => { selectedFaction = null; render(); });
-  for (const id of ['show-territories', 'show-labels', 'show-reconstructions']) dom[id].addEventListener('change', render);
+  for (const id of ['show-territories', 'show-labels']) dom[id]?.addEventListener('change', render);
   dom['layers-fold'].addEventListener('click', () => {
     dom['layer-body'].hidden = !dom['layer-body'].hidden;
     dom['layers-fold'].setAttribute('aria-expanded', String(!dom['layer-body'].hidden));
@@ -663,12 +823,13 @@ export function initUI(context) {
     dom[id].addEventListener('click', () => { tab = name; renderNavigation(); });
   }
   dom['fold-groups'].addEventListener('click', () => {
-    groupsFolded = Boolean(dom['location-list'].querySelector('details[open]'));
-    for (const group of dom['location-list'].querySelectorAll('details.group')) {
-      group.open = !groupsFolded;
-      groupOpen.set(group.dataset.factionId ?? null, group.open);
+    const folded = Boolean(dom['location-list'].querySelector('details[open]'));
+    if (!navigationSearching) groupsFolded = folded;
+    for (const group of dom['location-list'].querySelectorAll('details[data-collapse-key]')) {
+      group.open = !folded;
+      if (!navigationSearching) groupOpen.set(group.dataset.collapseKey, group.open);
     }
-    dom['fold-groups'].textContent = groupsFolded ? 'Развернуть' : 'Свернуть';
+    dom['fold-groups'].textContent = folded ? 'Развернуть' : 'Свернуть';
   });
   document.addEventListener('keydown', event => {
     if (event.defaultPrevented || event.ctrlKey || event.metaKey || event.altKey || document.querySelector('dialog[open]')) return;

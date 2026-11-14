@@ -1,0 +1,206 @@
+/* Last-loaded royal registry skin. Map markers, faction rows and cameras are
+   deliberately outside these surface/control selectors. */
+:root {
+  --royal-panel: var(--panel, #1a1d1f);
+  --royal-header: #202629;
+  --royal-ink: var(--ink, #ddd5c2);
+  --royal-muted: var(--muted, #96978d);
+  --royal-line: var(--line-soft, #393b3b);
+  --royal-control: #26282a;
+  --royal-control-line: #605b4c;
+}
+
+:is(.iron-panel, .iron-dialog, #dossier, .parchment) {
+  background: var(--royal-panel);
+  color: var(--royal-ink);
+  color-scheme: dark;
+  font-family: Georgia, 'Times New Roman', serif;
+  scrollbar-color: #918163 var(--royal-panel);
+}
+
+:is(#navigation, #layers, #boundary-tools, #dossier, .iron-dialog)
+  > :is(.panel-head, .dossier-head, .dialog-head) {
+  background: var(--royal-header);
+  color: var(--royal-ink);
+  border-bottom: 1px solid var(--royal-line);
+  box-shadow: none;
+}
+
+/* Equal 44px hit targets, including the registry's formerly tiny controls.
+   ID specificity beats the parchment and narrow-landscape declarations. */
+:is(#navigation, #layers, #boundary-tools, #dossier, .iron-dialog)
+  :is(button.square, button.paper-square) {
+  box-sizing: border-box;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  flex: 0 0 44px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--royal-control-line);
+  border-radius: 2px;
+  background: var(--royal-control);
+  color: var(--royal-ink);
+  box-shadow: inset 0 0 0 1px #101213, 0 2px 3px #0004;
+}
+
+:is(#navigation, #layers, #boundary-tools, #dossier, .iron-dialog)
+  :is(button.square, button.paper-square):hover:not(:disabled) {
+  background: #303432;
+  border-color: #9b8a68;
+  color: var(--gold-bright, #e0c493);
+}
+
+/* Preserve the established identity boxes; remove only the wax treatment. */
+#dossier #dossier-seal {
+  clip-path: none;
+  border-radius: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  transform: none;
+}
+#dossier #dossier-seal::after { content: none; }
+#dossier-seal .faction-shield { width: 58px; height: 65px; }
+#dossier .object-icon { display: flex; align-items: center; justify-content: center; }
+#dossier .object-icon .faction-shield { width: 25px; height: 30px; }
+#noble-crest { display: inline-flex; flex: none; align-items: center; justify-content: center; }
+#noble-crest .faction-shield { width: 64px; height: 78px; }
+.faction-shield { flex: none; fill: none; stroke: none; overflow: visible; }
+.faction-shield .shield-field { stroke-linejoin: miter; }
+.faction-shield .shield-device { pointer-events: none; }
+
+/* Cream text and neutral separators, leaving affiliation labels exact. */
+#dossier :is(.dossier-identity h2, .ownership dd, #dossier-description,
+  .composition h3, .object-title, .object-card p),
+#noble-dossier :is(#noble-title, .noble-tenure dd, .noble-body section h3,
+  .noble-body section p, .noble-holding .holding-name) {
+  color: var(--royal-ink);
+}
+#dossier :is(.ownership dt, #dossier-subtitle,
+  .provenance, #dossier-sources > summary, #dossier-source-list blockquote,
+  .object-card small, .empty-objects),
+#noble-dossier :is(.noble-tenure dt, .noble-holding small, .noble-source blockquote) {
+  color: var(--royal-muted);
+}
+#dossier :is(.provenance a, #dossier-source-list a, .object-sources a),
+#noble-dossier .noble-source a { color: var(--gold-bright, #e0c493); }
+#dossier :is(.ownership, .composition > header, #dossier-sources,
+  .dossier-actions, .object-actions),
+#noble-dossier :is(.noble-tenure, .noble-body section h3) {
+  border-color: var(--royal-line);
+}
+#dossier .paper-rule { color: var(--gold, #c2a575); }
+#dossier .paper-rule::before,
+#dossier .paper-rule::after { background: var(--royal-line); }
+#dossier .object-card {
+  background: var(--royal-panel);
+  border-color: var(--object-color, #87918d);
+}
+#dossier .object-card .object-faction-badge { color: var(--object-color); }
+#dossier .object-card .modifier.bonus { color: var(--bonus, #5eaa78); }
+#dossier .object-card .modifier.penalty { color: var(--penalty, #d37978); }
+#noble-dossier .noble-holding {
+  background: var(--royal-panel);
+  border-color: var(--holding-color, #87918d);
+  color: var(--royal-ink);
+}
+#noble-dossier .noble-holding:hover:not(:disabled) {
+  background: var(--royal-control);
+  color: var(--royal-ink);
+  border-color: var(--holding-color, #87918d);
+}
+
+/* Shared action geometry without restyling tree/faction navigation rows. */
+:is(#navigation, #layers, #boundary-tools, #dossier, .iron-dialog)
+  :is(button, label.import-button):not(:where(.location-row, .noble-row, .object-row, .faction-row)) {
+  box-sizing: border-box;
+  min-height: 44px;
+  border-radius: 2px;
+}
+:is(#navigation, #layers, #boundary-tools, #dossier, .iron-dialog)
+  :is(button, label.import-button):not(:where(.location-row, .noble-row, .object-row, .faction-row, .square, .paper-square, .noble-holding)) {
+  padding: 10px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--royal-control-line);
+  background: var(--royal-control);
+  color: var(--royal-ink);
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+:is(#navigation, #layers, #boundary-tools, #dossier, .iron-dialog)
+  :is(button, label.import-button):not(:where(.location-row, .noble-row, .object-row, .faction-row, .square, .paper-square, .noble-holding)):hover:not(:disabled) {
+  background: #303432;
+  border-color: #9b8a68;
+  color: var(--gold-bright, #e0c493);
+}
+:is(#boundary-tools, #dossier, .iron-dialog) :is(button.brass-button, button.paper-button) {
+  color: #e1c794;
+  border-color: #8c7450;
+  background: #302e27;
+}
+:is(#boundary-tools, #dossier, .iron-dialog)
+  :is(button.danger-button, button.penalty-button, button[data-object-delete], button.square.delete) {
+  color: #d79494;
+  border-color: #754147;
+  background: #362328;
+}
+:is(#boundary-tools, #dossier, .iron-dialog)
+  :is(button.danger-button, button.penalty-button, button[data-object-delete], button.square.delete):hover:not(:disabled) {
+  color: #e9b3ae;
+  border-color: #b66570;
+  background: #4d2932;
+}
+:is(#boundary-tools, #dossier, .iron-dialog) button.bonus-button {
+  color: #abd0a9;
+  border-color: #668968;
+  background: #203b2a;
+}
+:is(#dossier, .iron-dialog) :is(.object-actions, .form-button-row, .modifier-add-actions) {
+  align-items: stretch;
+}
+
+/* Keep native field geometry and scroll containers, including the registry
+   search wrapper: no hidden overflow or global width changes. */
+:is(.iron-dialog, #boundary-tools) :is(input:not([type=checkbox]):not([type=range]):not([type=color]):not([type=hidden]):not([type=file]), select) {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  height: 44px;
+  min-height: 44px;
+}
+#navigation .search { min-height: 44px; }
+#navigation .search input { height: 44px; min-height: 44px; }
+
+/* One registry heading scale; long names still wrap in their existing track. */
+:is(#navigation, #layers, #boundary-tools, #dossier, .iron-dialog)
+  > :is(.panel-head, .dossier-head, .dialog-head) h2 {
+  font: normal 19px/1.25 Georgia, 'Times New Roman', serif;
+  color: #dfd1b1;
+}
+:is(#navigation, #layers, #boundary-tools, #dossier, .iron-dialog)
+  > :is(.panel-head, .dossier-head, .dialog-head) span.eyebrow {
+  font: 7px/1.5 Georgia, 'Times New Roman', serif;
+  letter-spacing: 1.45px;
+  color: var(--gold, #c2a575);
+}
+:is(#navigation, #layers, #boundary-tools, #dossier, .iron-dialog)
+  > :is(.panel-head, .dossier-head, .dialog-head)
+  :is(button.square, button.paper-square) svg { width: 19px; height: 19px; }
+
+/* Short landscape keeps its original scroll budget despite larger controls;
+   reduce chrome gaps, never row height or the panel's established footprint. */
+@media (max-width: 1050px) and (max-height: 540px) and (orientation: landscape) {
+  #navigation > .panel-head { padding-top: 4px; padding-bottom: 4px; }
+  #navigation .search { margin-top: 4px !important; min-height: 44px !important; }
+  #navigation .list-tabs { margin-top: 2px; }
+  #navigation .list-meta { padding-top: 0; padding-bottom: 0; }
+}

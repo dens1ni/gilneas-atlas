@@ -74,7 +74,7 @@ class ReviewRegression(unittest.TestCase):
  def test_map_interaction_doubleclick_finishes_before_duplicate_vertex_guard(self):
   page=self.page
   page.evaluate("window.gilneasApp.ui.setPanel('navigation',false);window.gilneasApp.ui.setPanel('layers',false);window.gilneasApp.ui.home(false);const ui=window.gilneasApp.ui;const set=ui.setMapInteraction.bind(ui);ui.setMapInteraction=callback=>{window.reviewInteraction=callback;set(callback)}")
-  count=page.evaluate('window.gilneasApp.getData().territories.length');page.locator('#editor-open').click();page.locator('#territories-open').click();page.locator('#territory-name').fill('Область callback');page.locator('#territory-faction').select_option('crowley');page.locator('#territory-form button[type=submit]').click()
+  count=page.evaluate('window.gilneasApp.getData().territories.length');page.evaluate('window.gilneasApp.editor.openTerritories()');page.locator('#territory-name').fill('Область callback');page.locator('#territory-faction').select_option('crowley');page.locator('#territory-form button[type=submit]').click()
   page.evaluate("window.reviewCallback=window.reviewInteraction;for(const p of [[1450,3730],[1620,3730],[1620,3910]])window.reviewCallback(p,{type:'click'});window.reviewCallback([1620,3910],{type:'dblclick'})")
   self.assertEqual(page.evaluate('window.gilneasApp.getData().territories.length'),count+1)
   self.assertEqual(len(page.evaluate('window.gilneasApp.getData().territories.at(-1).points')),3)
@@ -83,7 +83,7 @@ class ReviewRegression(unittest.TestCase):
   self.assertTrue(page.locator('#map-task').is_hidden());self.assertFalse(self.errors,self.errors)
  def test_native_doubleclick_finishes_real_polygon_task(self):
   page=self.page;page.evaluate("window.gilneasApp.ui.setPanel('navigation',false);window.gilneasApp.ui.setPanel('layers',false);window.gilneasApp.ui.home(false)")
-  count=page.evaluate('window.gilneasApp.getData().territories.length');page.locator('#editor-open').click();page.locator('#territories-open').click();page.locator('#territory-name').fill('Область двойного щелчка');page.locator('#territory-faction').select_option('crowley');page.locator('#territory-form button[type=submit]').click();cam=page.evaluate('window.gilneasApp.ui.getCamera()');r=page.locator('#viewport').bounding_box()
+  count=page.evaluate('window.gilneasApp.getData().territories.length');page.evaluate('window.gilneasApp.editor.openTerritories()');page.locator('#territory-name').fill('Область двойного щелчка');page.locator('#territory-faction').select_option('crowley');page.locator('#territory-form button[type=submit]').click();cam=page.evaluate('window.gilneasApp.ui.getCamera()');r=page.locator('#viewport').bounding_box()
   def screen(x,y):return (r['x']+cam['x']+x*cam['scale'],r['y']+cam['y']+y*cam['scale'])
   page.mouse.click(*screen(1450,3730));page.mouse.click(*screen(1620,3730));page.mouse.dblclick(*screen(1620,3910));page.wait_for_timeout(80)
   self.assertEqual(page.evaluate('window.gilneasApp.getData().territories.length'),count+1,'Native dblclick must close and commit the polygon')
@@ -95,7 +95,7 @@ class ReviewRegression(unittest.TestCase):
   self.assertTrue(page.locator('#map-task').is_hidden());self.assertFalse(self.errors,self.errors)
  def test_native_doubleclick_first_vertex_closes_without_duplicate(self):
   page=self.page;page.evaluate("window.gilneasApp.ui.setPanel('navigation',false);window.gilneasApp.ui.setPanel('layers',false);window.gilneasApp.ui.home(false)")
-  count=page.evaluate('window.gilneasApp.getData().territories.length');page.locator('#editor-open').click();page.locator('#territories-open').click();page.locator('#territory-name').fill('Замыкание первой вершины');page.locator('#territory-faction').select_option('crowley');page.locator('#territory-form button[type=submit]').click();cam=page.evaluate('window.gilneasApp.ui.getCamera()');r=page.locator('#viewport').bounding_box()
+  count=page.evaluate('window.gilneasApp.getData().territories.length');page.evaluate('window.gilneasApp.editor.openTerritories()');page.locator('#territory-name').fill('Замыкание первой вершины');page.locator('#territory-faction').select_option('crowley');page.locator('#territory-form button[type=submit]').click();cam=page.evaluate('window.gilneasApp.ui.getCamera()');r=page.locator('#viewport').bounding_box()
   def screen(x,y):return (r['x']+cam['x']+x*cam['scale'],r['y']+cam['y']+y*cam['scale'])
   for point in [(1450,3730),(1620,3730),(1620,3910)]:page.mouse.click(*screen(*point))
   page.mouse.dblclick(*screen(1450,3730))

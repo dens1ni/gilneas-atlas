@@ -1,12 +1,12 @@
 {
   "name": "gilneas-atlas",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "description": "Интерактивный атлас довоенного Гилнеаса — статический сайт для GitHub Pages",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check assets/js/model.mjs && node --check assets/js/app.mjs && node --check assets/js/ui.mjs && node --check assets/js/editor.mjs && node --check assets/js/export.mjs && node --check assets/js/chronicle.mjs",
+    "check": "node --check assets/js/model.mjs && node --check assets/js/app.mjs && node --check assets/js/ui.mjs && node --check assets/js/editor.mjs && node --check assets/js/export.mjs && node --check assets/js/chronicle.mjs && node --check assets/js/noble-profile.mjs && node --check assets/js/noble-dossier.mjs && node --check assets/js/draft-publication.mjs && node --check assets/js/territory-engine.mjs && node --check assets/js/territory-data.mjs && node --check assets/js/smooth-territories.mjs && node --check assets/js/territories.mjs && node --check assets/js/heraldry.mjs && node --check assets/js/map-publication.mjs",
     "serve": "python3 -m http.server 4173 --bind 127.0.0.1"
   }
 }

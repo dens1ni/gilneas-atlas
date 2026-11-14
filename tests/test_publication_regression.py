@@ -15,7 +15,7 @@ class PublicationRegression(unittest.TestCase):
     page.evaluate("window.gilneasApp.selectId('northgate-river')")
     self.assertEqual(page.locator('#dossier-sovereign').inner_text(),'Не установлено','Unknown political tenure must not become confirmed independence')
     page.evaluate("window.gilneasApp.selectId('gilneas-city')")
-    self.assertEqual(page.locator('#dossier-provenance .confidence').inner_text(),'Подтверждённая локация','A confirmed place is not proof of every private property claim')
+    self.assertEqual(page.locator('#dossier-provenance .confidence').count(),0,'Historical bookkeeping stays in data, not the visible card')
     b.close()
   finally:server.shutdown();server.server_close()
 if __name__=='__main__':unittest.main()

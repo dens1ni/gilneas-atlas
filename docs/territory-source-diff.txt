@@ -1,0 +1,218 @@
+--- Naitroud source
+
++++ Gilneas port
+
+@@ -1,6 +1,8 @@
+
+ function installSmoothTerritories(scope) {
+-    const STEP = 8;
+     const vertex = (x, y) => x + ',' + y;
+-    const point = id => id.split(',').map(n => Number(n) * STEP);
++    const point = (id, step = 1, width = Infinity, height = Infinity) => {
++        const [x, y] = id.split(',').map(Number);
++        return [Math.min(x * step, width), Math.min(y * step, height)];
++    };
+
+     // A single planar interface graph, including owner 0 (unclaimed). Ownership
+@@ -8,4 +10,5 @@
+
+     // verbatim for the owner on its other side.
+     function graph(layer) {
++        const STEP = layer.step ?? 8, mapWidth = layer.mapWidth ?? layer.width * STEP, mapHeight = layer.mapHeight ?? layer.height * STEP;
+         const { width: w, height: h, cells } = layer,
+         edges = [],
+@@ -62,5 +65,5 @@
+
+             chains.push({
+                 ids,
+-                points: ids.map(point),
++                points: ids.map(id => point(id, STEP, mapWidth, mapHeight)),
+                 closed: ids[0] === ids[ids.length - 1] && !junction(start),
+                 right: forward ? first.right : first.left,
+@@ -76,5 +79,5 @@
+
+             if (!used.has(i))
+                 trace(i, edges[i].a);
+-        smoothGraph(chains, w * STEP, h * STEP);
++        smoothGraph(chains, mapWidth, mapHeight, STEP / 8);
+         for (const c of chains)
+             if (!c.segments)
+@@ -140,5 +143,5 @@
+
+         return index < 0 ? [ps[0], ps.at(-1)] : simplify(ps.slice(0, index + 1), tolerance).slice(0, -1).concat(simplify(ps.slice(index), tolerance));
+     }
+-    function flowing(raw, closed) {
++    function flowing(raw, closed, scale = 1) {
+         let ps;
+         if (closed) {
+@@ -147,12 +150,12 @@
+
+                 if (Math.hypot(raw[i][0] - raw[0][0], raw[i][1] - raw[0][1]) > Math.hypot(raw[far][0] - raw[0][0], raw[far][1] - raw[0][1]))
+                     far = i;
+-            ps = simplify(raw.slice(0, far + 1), 10).slice(0, -1).concat(simplify(raw.slice(far), 10)).slice(0, -1);
++            ps = simplify(raw.slice(0, far + 1), 10 * scale).slice(0, -1).concat(simplify(raw.slice(far), 10 * scale)).slice(0, -1);
+             if (ps.length < 3)
+                 ps = raw.slice(0, -1);
+         } else
+-            ps = simplify(raw, 10);
++            ps = simplify(raw, 10 * scale);
+         // Uniform arc-length samples avoid short knots at every former cell corner.
+         const sampled = [ps[0]],
+-        spacing = 28;
++        spacing = 28 * scale;
+         let carry = 0;
+         for (let i = 0; i < (closed ? ps.length : ps.length - 1); i++) {
+@@ -166,5 +169,5 @@
+
+         if (!closed)
+             sampled.push(ps.at(-1));
+-        return simplify(localSmooth(closed ? sampled.concat([sampled[0]]) : sampled, closed), 1.5);
++        return simplify(localSmooth(closed ? sampled.concat([sampled[0]]) : sampled, closed), 1.5 * scale);
+     }
+     const cross = (a, b, c) => (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0]);
+@@ -186,5 +189,6 @@
+
+     }
+     class SegmentIndex {
+-        constructor() {
++        constructor(size = 32) {
++            this.size = size;
+             this.buckets = new Map();
+             this.chains = new Map();
+@@ -192,6 +196,6 @@
+
+         keys(a, b) {
+             const out = [];
+-            for (let y = Math.floor(Math.min(a[1], b[1]) / 32); y <= Math.floor(Math.max(a[1], b[1]) / 32); y++)
+-                for (let x = Math.floor(Math.min(a[0], b[0]) / 32); x <= Math.floor(Math.max(a[0], b[0]) / 32); x++)
++            for (let y = Math.floor(Math.min(a[1], b[1]) / this.size); y <= Math.floor(Math.max(a[1], b[1]) / this.size); y++)
++                for (let x = Math.floor(Math.min(a[0], b[0]) / this.size); x <= Math.floor(Math.max(a[0], b[0]) / this.size); x++)
+                     out.push(x + ',' + y);
+             return out;
+@@ -240,6 +244,6 @@
+
+         return hit;
+     }
+-    function smoothGraph(chains, width, height) {
+-        const index = new SegmentIndex();
++    function smoothGraph(chains, width, height, scale = 1) {
++        const index = new SegmentIndex(32 * scale);
+         chains.forEach((c, i) => index.set(i, c.points));
+         chains.forEach((chain, id) => {
+@@ -248,10 +252,10 @@
+
+             if (raw.every(p => p[0] === 0 || p[1] === 0 || p[0] === width || p[1] === height))
+                 return;
+-            const rawIndex = new SegmentIndex();
++            const rawIndex = new SegmentIndex(32 * scale);
+             rawIndex.set(id, raw);
+             const rawArea = area(raw),
+             frame = raw.filter(p => p[0] === 0 || p[1] === 0 || p[0] === width || p[1] === height);
+             function safe(ps) {
+-                const candidateIndex = new SegmentIndex();
++                const candidateIndex = new SegmentIndex(32 * scale);
+                 candidateIndex.set(id, ps);
+                 const ring = equal(raw[0], raw.at(-1));
+@@ -263,6 +267,7 @@
+
+                         return false;
+                 const near = (p, grid) => {
+-                    for (const s of grid.query([p[0] - 12, p[1] - 12], [p[0] + 12, p[1] + 12]))
+-                        if (distance(p, s.a, s.b) <= 12)
++                    const deviation = 12 * scale;
++                    for (const s of grid.query([p[0] - deviation, p[1] - deviation], [p[0] + deviation, p[1] + deviation]))
++                        if (distance(p, s.a, s.b) <= deviation)
+                             return true;
+                     return false;
+@@ -291,5 +296,5 @@
+
+                 return true;
+             }
+-            let candidate = flowing(raw, chain.closed);
++            let candidate = flowing(raw, chain.closed, scale);
+             if (!safe(candidate)) {
+                 // Only constrained 64px windows fall back; long free curves stay flowing.
+@@ -297,5 +302,5 @@
+
+                 for (let start = 0; start < raw.length - 1; start += 8) {
+                     const end = Math.min(raw.length - 1, start + 8),
+-                    part = flowing(raw.slice(start, end + 1), false);
++                    part = flowing(raw.slice(start, end + 1), false, scale);
+                     const trial = candidate.slice(0, -1).concat(part, raw.slice(end + 1));
+                     candidate.push(...(safe(trial) ? part : raw.slice(start, end + 1)).slice(1));
+@@ -304,12 +309,12 @@
+
+             // The raster grid is only a topology source. Render shared cubic curves,
+             // not the flattened samples used by the collision validator.
+-            const knots = simplify(candidate, .45);
++            const knots = simplify(candidate, .45 * scale);
+             let curves = cubic(knots, chain.closed),
+-            flattened = flatten(curves);
++            flattened = flatten(curves, .04 * scale);
+             if (!safe(flattened)) {
+                 // A narrow neck must not force a long border back to polygon facets.
+                 // Retry smaller tangents, then isolate only the colliding curve windows.
+                 curves = cubic(candidate, chain.closed, .75);
+-                flattened = flatten(curves);
++                flattened = flatten(curves, .04 * scale);
+                 if (!safe(flattened)) {
+                     const smooth = cubic(candidate, chain.closed, .65),
+@@ -320,5 +325,5 @@
+
+                         for (let i = start; i < end; i++)
+                             trial[i] = smooth[i];
+-                        if (safe(flatten(trial))) {
++                        if (safe(flatten(trial, .04 * scale))) {
+                             curves = trial;
+                             return;
+@@ -332,5 +337,5 @@
+
+                     for (let start = 0; start < curves.length; start += 12)
+                         accept(start, Math.min(start + 12, curves.length));
+-                    flattened = flatten(curves);
++                    flattened = flatten(curves, .04 * scale);
+                 }
+             }
+@@ -362,5 +367,5 @@
+
+         return result;
+     }
+-    function flatten(segments) {
++    function flatten(segments, tolerance = .04) {
+         if (!segments.length)
+             return [];
+@@ -368,5 +373,5 @@
+
+         const mid = (a, b) => [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
+         function split(a, c1, c2, b, depth) {
+-            if (depth >= 12 || (distance(c1, a, b) <= .04 && distance(c2, a, b) <= .04)) {
++            if (depth >= 12 || (distance(c1, a, b) <= tolerance && distance(c2, a, b) <= tolerance)) {
+                 out.push(b);
+                 return;
+@@ -464,14 +469,14 @@
+
+                 })).filter(c => c.right !== c.left) : chains;
+         return layer.keys.map((key, index) => {
+-            const path = new Path2D();
++            const path = typeof Path2D === 'function' ? new Path2D() : null;
+             let d = '';
+             for (const ss of loops(mapped, index + 1, true)) {
+-                path.moveTo(...ss[0].a);
++                path?.moveTo(...ss[0].a);
+                 d += 'M' + ss[0].a.join(' ');
+                 for (const s of ss) {
+-                    path.bezierCurveTo(...s.c1, ...s.c2, ...s.b);
++                    path?.bezierCurveTo(...s.c1, ...s.c2, ...s.b);
+                     d += 'C' + [...s.c1, ...s.c2, ...s.b].join(' ');
+                 }
+-                path.closePath();
++                path?.closePath();
+                 d += 'Z';
+             }
+@@ -531,2 +536,5 @@
+
+     }
+ }
++
++const scope = {};
++installSmoothTerritories(scope);

@@ -1,3 +1,5 @@
+import { validate as validateTerritoryGrid } from './territory-engine.mjs';
+
 const clone = (value, ancestors = new Set(), path = 'snapshot') => {
   if (value && typeof value === 'object') {
     if (ancestors.has(value)) throw new Error('Циклический снимок не является JSON');
@@ -157,10 +159,17 @@ export function upsertFaction(data, faction) {
 export function deleteFaction(data, id) {
   return mutateSnapshot(data, next => {
     if (!next.factions.some(f => f.id === id)) throw new Error(`Фракция не найдена: ${id}`);
+    const grid = next.territoryGrid;
+    const owner = grid ? grid.keys.indexOf(id) + 1 : 0;
     const referenced = next.factions.some(f => f.parent === id) ||
       next.locations.some(l => l.faction === id || l.objects.some(o => o.faction === id)) ||
-      next.territories.some(t => t.faction === id);
+      next.territories.some(t => t.faction === id) ||
+      Boolean(owner && grid.cells.some(value => value === owner));
     if (referenced) throw new Error(`Фракция используется: ${id}`);
+    if (owner) {
+      grid.keys.splice(owner - 1, 1);
+      grid.cells = grid.cells.map(value => value > owner ? value - 1 : value);
+    }
     next.factions = next.factions.filter(f => f.id !== id);
   });
 }
@@ -271,6 +280,9 @@ export function makeId(prefix) {
 
 export function normalizeData(raw) {
   if (!raw || typeof raw !== 'object' || Array.isArray(raw)) throw new Error('Ожидается снимок атласа');
+  // Reject oversized/malformed optional grids before cloning their cell array.
+  // Missing grids stay missing: legacy polygon snapshots remain valid.
+  if (Object.hasOwn(raw, 'territoryGrid')) validateTerritoryGrid(raw.territoryGrid, raw.factions, raw.meta, { clone: false });
   const data = clone(raw);
   if (data.version !== 1) throw new Error('Несовместимая версия снимка');
   data.meta = { ...data.meta };
@@ -313,7 +325,21 @@ export function normalizeData(raw) {
     });
   });
   data.territories.forEach(t => claim(t, 'территория'));
-  data.nobles.forEach(n => claim(n, 'знать'));
+  data.nobles.forEach(n => {
+    claim(n, 'знать');
+    if (typeof n.name !== 'string' || !n.name.trim().length) throw new Error(`Некорректное имя персонажа: ${n.id}`);
+    for (const field of ['title', 'description', 'appearance', 'socialStatus', 'overlordText', 'allegiance', 'holdingsNote', 'wowpediaUrl']) {
+      if (Object.hasOwn(n, field) && typeof n[field] !== 'string') throw new Error(`Некорректное поле персонажа: ${field} (${n.id})`);
+    }
+    if (Object.hasOwn(n, 'overlord') && n.overlord !== null && typeof n.overlord !== 'string') {
+      const value = n.overlord;
+      if (!value || typeof value !== 'object' || Array.isArray(value) || typeof value.name !== 'string' || !value.name.trim().length ||
+          Object.hasOwn(value, 'relation') && typeof value.relation !== 'string' ||
+          Object.hasOwn(value, 'id') && (typeof value.id !== 'string' || !value.id.length)) {
+        throw new Error(`Некорректное поле персонажа: overlord (${n.id})`);
+      }
+    }
+  });
   data.sources.forEach(s => {
     claim(s, 'источник', true);
     for (const field of ['title', 'url', 'canonicalUrl', 'quote', 'note']) {
@@ -343,12 +369,19 @@ export function normalizeData(raw) {
   data.locations.forEach(l => { validateProvenance(l); l.objects.forEach(validateProvenance); });
   data.factions.forEach(validateProvenance);
   data.territories.forEach(validateProvenance);
+  if (Object.hasOwn(data, 'territoryGrid')) {
+    validateProvenance(data.territoryGrid);
+    validateSources(data.territoryGrid);
+  }
   data.nobles.forEach(validateProvenance);
   data.factions = data.factions.map(f => {
     if (typeof f.name !== 'string' || !f.name.length || !colorPattern.test(f.color)) throw new Error('Некорректная фракция');
     return { ...f, name: text(f.name, 160), parent: f.parent ?? null };
   });
   const factionIds = new Set(data.factions.map(f => f.id));
+  data.nobles.forEach(n => {
+    if (n.house != null && !factionIds.has(n.house)) throw new Error(`Неизвестная фракция персонажа: ${n.id}`);
+  });
   data.factions.forEach(f => sovereignOf(data.factions, f.id));
   data.locations = data.locations.map(l => {
     if (typeof l.name !== 'string' || !l.name.length) throw new Error('Некорректная локация');

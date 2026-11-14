@@ -1,0 +1,28 @@
+{
+  "passed": false,
+  "security_concerns": [],
+  "logic_errors": [
+    {
+      "location": "assets/js/draft-publication.mjs:22-26",
+      "issue": "Source deletions and author metadata edits bypass the three-way comparison. Deleted published sources are resurrected, and custom crest/wall metadata is overwritten unconditionally.",
+      "repro": "Clone publication-v1.json; remove source 1 and all references to it. normalizeData accepts the draft, but reconcileDraftPublication restores source 1. Setting draft.meta.gilneasCrest='assets/ui/author-crest.svg' also results in replacement with the published banner."
+    },
+    {
+      "location": "assets/js/model.mjs:328,394; assets/js/noble-profile.mjs:10-18",
+      "issue": "Noble names are not validated before persistence, while holdings compare them directly against potentially empty owners.",
+      "repro": "Set gilneasApp.getData().nobles[0].name='' and import that snapshot. The real browser import succeeds and stores the empty name; opening its dossier displays a blank heading and assigns 32 unowned locations as personal holdings."
+    },
+    {
+      "location": "assets/js/noble-profile.mjs:11-15",
+      "issue": "An absent house.ruler still grants authority based solely on house membership, including holdings and a ruling suzerain.",
+      "repro": "Normalize a snapshot containing realm(ruler='King'), its child house without a ruler field, a house-owned location, and noble(name='Non-ruler family member',house='house'). deriveNobleProfile assigns that location and King as suzerain despite no ruler assignment."
+    },
+    {
+      "location": "assets/js/territories.mjs:120-122",
+      "issue": "Worker rejection handling lacks the revision guard used for successful results. An obsolete failure rejects readiness for a newer grid and leaves an incorrect error status after recovery.",
+      "repro": "Delay the first geometryAsync promise, replace the grid twice, call whenReady(), then reject the obsolete promise. Verified: whenReady rejects with STALE_WORKER_FAILURE; subsequent current geometry succeeds, but the failure status remains."
+    }
+  ],
+  "suggestions": [],
+  "summary": "Four reproducible blockers remain. Independently verified 75 Node tests, syntax/diff checks, targeted browser tests, native quota-failure rollback, and the 33-file subpath export. Security scan found only trusted constant HTML. No files modified or commits made."
+}

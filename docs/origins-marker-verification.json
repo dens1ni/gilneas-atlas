@@ -1,0 +1,49 @@
+{
+  "locations": 39,
+  "exactIdsPreserved": true,
+  "loreOwnersObjectsPreserved": true,
+  "originalDimensions": [
+    3247,
+    4860
+  ],
+  "newDimensions": [
+    3526,
+    4548
+  ],
+  "registration": {
+    "method": "SIFT+RANSAC geometric registration only",
+    "homography": [
+      [
+        1.0000714084639792,
+        4.6356373315115434e-7,
+        21.829301742553138
+      ],
+      [
+        0.00029746699753263394,
+        1.0003107079022746,
+        -294.74264523091625
+      ],
+      [
+        8.099890258558749e-8,
+        3.3643335134196704e-8,
+        1
+      ]
+    ],
+    "matches": 1259,
+    "inliers": 1217,
+    "median_error_pixels": 0.312077134847641,
+    "p95_error_pixels": 1.3550926446914673
+  },
+  "reviewNotes": [
+    "Coordinate origin is upper left of the untouched supplied 3526x4548 raster; x increases right and y increases down. Do not multiply coordinates for the parent 1.5x enhancement.",
+    "Coordinates are exact integer marker choices, NOT claims of one-pixel geographical certainty. Confidence describes this marker association with the visible site, not canonical historical existence/ownership.",
+    "All 39 canonical IDs and source names are retained. This scratch review changes no owners, factions, descriptions, lore, provenance, or historical phase.",
+    "The new and old common raster terrain register approximately x+22,y-294, not generic width/height scaling. Custom Dalaran, restored SW town and wrong legacy minor points require manual visual overrides.",
+    "Confidence low: Stoneward Prison exact yard; Hayward Fishery island identification; Hammond/Allen farm-name assignments; Emberstone Mine portal; Bradshaw Mill building; Deep Elem Mine portal.",
+    "Confidence medium: Violet Citadel exact named building in custom Dalaran; orchard/stable function; Tempest Reach exact building. These are best terrain-backed candidates, not recovered canonical plans.",
+    "Parent registration.json: 1259 matches,1217 inliers,median0.312077px,p951.355093px. Independent review SIFT:2458 matches,2382 inliers,median0.374817px,p951.556092px; agreement on near-unit scale/crop shift.",
+    "Bounds use [left,top,right,bottom] in source pixels and are visual context envelopes, not ownership polygons or authoritative surveyed extents.",
+    "Wiki pages were consulted only for localization relationships, not to import late owners/events. URLs and numbered task-local citations are recorded in coordinates-review.md.",
+    "Full numbered annotation: coordinates-review-annotated.jpg; detailed inspection sheet: coordinates-review-details.jpg. Colors: yellow high, cyan medium, magenta low."
+  ]
+}

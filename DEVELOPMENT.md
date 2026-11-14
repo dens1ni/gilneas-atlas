@@ -1,10 +1,10 @@
 # Build and verification prerequisites
 
-Use a project virtual environment and install `Pillow`, `numpy`, `scipy`, and `playwright`. `opencv-python-headless` was tested during the terrain-retouch experiment, but the final pipeline does not require it.
+Use a project virtual environment and install `Pillow`, `numpy`, `scipy`, `playwright` and `opencv-python-headless`. The Origins replacement-mask registration uses OpenCV; visitors need none of these dependencies.
 
 ```sh
 python3 -m venv .venv
-.venv/bin/python -m pip install pillow numpy scipy playwright
+.venv/bin/python -m pip install pillow numpy scipy playwright opencv-python-headless
 .venv/bin/python -m playwright install chromium
 npm test
 npm run check

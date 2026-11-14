@@ -43,8 +43,18 @@ with sync_playwright() as p:
     baseline = page.evaluate('window.gilneasApp.getData()')
     assert len(baseline['locations']) == 39
     assert len(baseline['nobles']) == 17
-    assert len(baseline['sources']) == 64
-    assert page.locator('#base-map').evaluate('e=>[e.naturalWidth,e.naturalHeight]') == [4870, 7290]
+    assert len(baseline['sources']) == 69
+    assert len(baseline['territoryGrid']['cells']) == 62985
+    assert page.locator('#wall-progress').get_attribute('value') == '10'
+    assert page.locator('#wall-progress').get_attribute('max') == '100'
+    assert page.locator('#boundary-vector path').count() > 0
+    assert baseline['meta']['gilneasCrest'] == 'assets/ui/gilneas-royal-shield.svg'
+    assert page.locator('.brand img').get_attribute('src') == 'assets/ui/gilneas-royal-shield.svg'
+    assert page.locator('#map-home img').get_attribute('src') == 'assets/ui/gilneas-royal-shield.svg'
+    assert page.locator('.brand img').evaluate('e=>getComputedStyle(e).backgroundColor') == 'rgba(0, 0, 0, 0)'
+    assert page.locator('img[src*=gilneas-human-banner]').count() == 0
+    assert all(location.get('wowpediaUrl') and location.get('shortDescription') for location in baseline['locations'])
+    assert page.locator('#base-map').evaluate('e=>[e.naturalWidth,e.naturalHeight]') == [5289, 6822]
     assert all(not location['objects'] for location in baseline['locations'])
     page.screenshot(path=str(out / 'live-desktop.png'), full_page=True)
     page.locator('#search').fill('Янтарная')
@@ -91,6 +101,26 @@ with sync_playwright() as p:
     page.reload(wait_until='networkidle')
     page.wait_for_function('window.gilneasApp?.ready')
     assert page.evaluate('window.gilneasApp.getData()') == baseline
+    page.locator('#filter-all').click()
+    page.locator('#search').fill('')
+    page.evaluate("window.gilneasApp.ui.setPanel('navigation',true)")
+    tree=page.locator('#location-list details[data-faction-id=gilneas] details[data-faction-id=crowley] details[data-faction-id=silverlaine]')
+    assert tree.count()==1
+    page.evaluate("window.gilneasApp.ui.setPanel('dossier',false);window.gilneasApp.ui.setPanel('navigation',false);window.gilneasApp.ui.setPanel('layers',false);window.gilneasApp.ui.focusLocation('shadowfang',false)")
+    page.locator('.map-marker[data-location-id=shadowfang]').hover()
+    assert page.locator('#marker-tooltip').is_visible()
+    assert page.locator('.tooltip-faction').inner_text()=='Дом Сребролена'
+    page.mouse.move(2,2)
+    page.evaluate("window.gilneasApp.nobleDossier.open('noble-darius')")
+    assert page.locator('#noble-dossier').is_visible()
+    assert 'Генн Седогрив' in page.locator('#noble-suzerain').inner_text()
+    assert 'Крепость над Пирвудом' in page.locator('#noble-holdings').inner_text()
+    assert page.locator('#noble-crest .faction-shield').count() == 1
+    assert page.locator('#noble-crest .shield-device').get_attribute('href').endswith('gilneas-royal-symbol.png')
+    assert page.locator('#noble-dossier').evaluate('e=>getComputedStyle(e).backgroundColor') == page.locator('#navigation').evaluate('e=>getComputedStyle(e).backgroundColor')
+    page.screenshot(path=str(out/'live-noble.png'),full_page=True)
+    page.mouse.click(2,2)
+    assert page.locator('#noble-dossier').is_hidden()
     page.set_viewport_size({'width': 390, 'height': 844})
     page.evaluate("window.gilneasApp.selectId('gilneas-city')")
     page.wait_for_timeout(550)
@@ -102,6 +132,6 @@ with sync_playwright() as p:
     context.close()
     browser.close()
 
-result = {'url': base, 'byte_matches': verified, 'catalogue': {'locations': 39, 'nobles': 17, 'sources': 64}, 'image_size': [4870, 7290], 'tests': {'editor_bonus_penalty': 'passed', 'reload': 'passed', 'invalid_import_atomicity': 'passed', 'browser_zip_export': 'passed', 'reset': 'passed', 'mobile': 'passed'}, 'page_errors': errors, 'http_errors': failed, 'console_errors': console_errors}
+result = {'url': base, 'byte_matches': verified, 'catalogue': {'locations': 39, 'nobles': 17, 'sources': 69}, 'image_size': [5289, 6822], 'tests': {'editor_bonus_penalty': 'passed', 'hover': 'passed', 'tree': 'passed', 'noble_modal': 'passed', 'naitroud_boundaries': 'passed', 'wall_progress': 'passed', 'reload': 'passed', 'invalid_import_atomicity': 'passed', 'browser_zip_export': 'passed', 'reset': 'passed', 'mobile': 'passed'}, 'page_errors': errors, 'http_errors': failed, 'console_errors': console_errors}
 (out / 'live-verification.json').write_text(json.dumps(result, ensure_ascii=False, indent=2))
 print(json.dumps(result, ensure_ascii=False, indent=2))

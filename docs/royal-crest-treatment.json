@@ -1,0 +1,59 @@
+{
+  "sourceSha256": "d25c2e4f0f2a7e317d6e591bb4f1911c0f826b82865e902bae8785e3820e9dec",
+  "source": "user-supplied Gilneas royal banner",
+  "sourceCrop": [
+    148,
+    240,
+    305,
+    420
+  ],
+  "shape": "M1 1H59V46.4L30 71 1 46.4Z",
+  "field": "#131516",
+  "edge": "#65707b",
+  "device": "#9aa8b6",
+  "samples": {
+    "field": {
+      "box": [
+        138,
+        300,
+        152,
+        355
+      ],
+      "medianRgb": [
+        19,
+        21,
+        22
+      ]
+    },
+    "edge": {
+      "box": [
+        116,
+        300,
+        132,
+        350
+      ],
+      "approximateRgb": [
+        101,
+        112,
+        123
+      ]
+    }
+  },
+  "selectedComponents": [
+    {
+      "index": 1,
+      "pixels": 6832
+    },
+    {
+      "index": 2,
+      "pixels": 655
+    },
+    {
+      "index": 3,
+      "pixels": 71
+    }
+  ],
+  "symbol": "assets/ui/gilneas-royal-symbol.png",
+  "shield": "assets/ui/gilneas-royal-shield.svg",
+  "treatment": "Keep supplied silver RGB, derive alpha from local luminance only, retain open spaces and all three components. Existing shield shape unchanged; graphite field and silver edge replace the old blue and gold."
+}

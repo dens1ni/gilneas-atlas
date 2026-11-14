@@ -7,7 +7,7 @@ test('published atlas uses the chosen epoch and exposes three sovereign realms w
   const {normalizeData,sovereignOf}=await import('../assets/js/model.mjs');
   const json=await readFile(new URL('../assets/data/atlas.json',import.meta.url),'utf8');
   const data=normalizeData(JSON.parse(json));
-  assert.equal(data.meta.width,3247);assert.equal(data.meta.height,4860);
+  assert.equal(data.meta.width,3526);assert.equal(data.meta.height,4548);
   for(const name of ['Королевство Гилнеас','Королевство Даларан','Королевство Лордерон'])assert.ok(data.factions.some(f=>f.name===name&&f.parent===null),name);
   for(const name of ['Дом Седогривов','Дом Краули'])assert.ok(data.factions.some(f=>f.name===name),name);
   const g=data.factions.find(f=>f.name==='Королевство Гилнеас');

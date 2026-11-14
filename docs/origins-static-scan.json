@@ -1,0 +1,10 @@
+{
+  "files_scanned": 44,
+  "patterns_verified": 4,
+  "findings": [],
+  "manifest_files": 46,
+  "manifest_paths_valid": true,
+  "workflow_mirror_byte_equal": true,
+  "scan_tool": "bounded source and asset inventory scan, patterns self-tested with test-only noncredentials",
+  "limitations": "Static scan is one gate; independent review and actual browser regressions are separate."
+}

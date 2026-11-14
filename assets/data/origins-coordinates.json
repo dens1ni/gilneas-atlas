@@ -1,0 +1,788 @@
+{
+  "width": 3526,
+  "height": 4548,
+  "locations": [
+    {
+      "id": "gilneas-city",
+      "x": 1795,
+      "y": 3050,
+      "basis": "Visible central fortified hub joining the four canal-separated city sectors; city representative, not a district duplicate.",
+      "confidence": "high",
+      "original": {
+        "x": 1800,
+        "y": 3370
+      },
+      "landmarkBounds": [
+        1530,
+        2810,
+        2070,
+        3310
+      ]
+    },
+    {
+      "id": "greymane-manor",
+      "x": 808,
+      "y": 3042,
+      "basis": "Large western roofed residence inside a rounded enclosure, clearly separate from the concentric memorial near the city.",
+      "confidence": "high",
+      "original": {
+        "x": 1090,
+        "y": 3350
+      },
+      "landmarkBounds": [
+        741,
+        2974,
+        876,
+        3112
+      ]
+    },
+    {
+      "id": "cathedral-quarter",
+      "x": 1685,
+      "y": 3005,
+      "basis": "Open landscaped NW sector/park immediately in front of the gray cruciform cathedral; distinct from the cathedral roof.",
+      "confidence": "high",
+      "original": {
+        "x": 1690,
+        "y": 3240
+      },
+      "landmarkBounds": [
+        1560,
+        2850,
+        1790,
+        3060
+      ]
+    },
+    {
+      "id": "lights-dawn-cathedral",
+      "x": 1708,
+      "y": 2930,
+      "basis": "Actual broad cruciform gray roof in the NW/central city, identified in the close architectural crop; not the central round hub.",
+      "confidence": "high",
+      "original": {
+        "x": 1740,
+        "y": 3320
+      },
+      "landmarkBounds": [
+        1645,
+        2870,
+        1780,
+        2985
+      ]
+    },
+    {
+      "id": "greymane-court",
+      "x": 1685,
+      "y": 3170,
+      "basis": "Built-up SW wedge within the curved city waterfront, south of Cathedral Quarter and west of Military District.",
+      "confidence": "high",
+      "original": {
+        "x": 1670,
+        "y": 3460
+      },
+      "landmarkBounds": [
+        1550,
+        3060,
+        1790,
+        3290
+      ]
+    },
+    {
+      "id": "merchant-square",
+      "x": 1925,
+      "y": 2945,
+      "basis": "Dense NE city block of repeated buildings and courtyards. Rectangular shape is not evidence that this is the prison.",
+      "confidence": "high",
+      "original": {
+        "x": 1890,
+        "y": 3250
+      },
+      "landmarkBounds": [
+        1850,
+        2835,
+        2005,
+        3062
+      ]
+    },
+    {
+      "id": "military-district",
+      "x": 1920,
+      "y": 3180,
+      "basis": "Dense SE city sector, below Merchant Square and east of Greymane Court, using street/canal divisions.",
+      "confidence": "high",
+      "original": {
+        "x": 1870,
+        "y": 3470
+      },
+      "landmarkBounds": [
+        1810,
+        3090,
+        2040,
+        3300
+      ]
+    },
+    {
+      "id": "stoneward-prison",
+      "x": 1822,
+      "y": 3207,
+      "basis": "Compact rectangular enclosure below/left of the SE military roofs. Correct district is known, but this exact yard is a candidate, not a uniquely identified prison building.",
+      "confidence": "low",
+      "original": {
+        "x": 1970,
+        "y": 3540
+      },
+      "landmarkBounds": [
+        1785,
+        3155,
+        1865,
+        3258
+      ]
+    },
+    {
+      "id": "keel-harbor",
+      "x": 1221,
+      "y": 2780,
+      "basis": "Actual wooden waterfront dock group at the western bend of the Northgate sea channel, rather than inland terrain.",
+      "confidence": "high",
+      "original": {
+        "x": 1210,
+        "y": 3095
+      },
+      "landmarkBounds": [
+        1160,
+        2741,
+        1285,
+        2821
+      ]
+    },
+    {
+      "id": "duskhaven",
+      "x": 791,
+      "y": 3442,
+      "basis": "Main dense intact SW coastal town block. Whole-town context bounds include its western harbor, not just one roof or the old generic terrain pin.",
+      "confidence": "high",
+      "original": {
+        "x": 1190,
+        "y": 3480
+      },
+      "landmarkBounds": [
+        545,
+        3299,
+        920,
+        3570
+      ]
+    },
+    {
+      "id": "crowley-orchard",
+      "x": 832,
+      "y": 3602,
+      "basis": "Distinct enclosed cultivated/garden tract south of Duskhaven, west of the adjacent stable-like compound. Orchard identity is a contextual reconstruction; tree species are not visible.",
+      "confidence": "medium",
+      "original": {
+        "x": 1160,
+        "y": 3650
+      },
+      "landmarkBounds": [
+        772,
+        3536,
+        894,
+        3673
+      ]
+    },
+    {
+      "id": "crowley-stable-grounds",
+      "x": 941,
+      "y": 3599,
+      "basis": "Elongated roof-and-yard compound immediately east of the southern planted enclosure, consistent with the stated orchard/stables relation. Stable function not uniquely visible.",
+      "confidence": "medium",
+      "original": {
+        "x": 1260,
+        "y": 3660
+      },
+      "landmarkBounds": [
+        893,
+        3562,
+        991,
+        3637
+      ]
+    },
+    {
+      "id": "hayward-fishery",
+      "x": 738,
+      "y": 3557,
+      "basis": "Small separately outlined built waterfront island/parcel directly south of the town, with dock-like projections. Fishery name is a candidate; adjacent compounds can be confused in this dark render.",
+      "confidence": "low",
+      "original": {
+        "x": 1080,
+        "y": 3540
+      },
+      "landmarkBounds": [
+        694,
+        3519,
+        781,
+        3594
+      ]
+    },
+    {
+      "id": "hammond-farmstead",
+      "x": 820,
+      "y": 3273,
+      "basis": "Real parallel-row cultivated plot north of the restored town. Corn-farm candidate, not a proven named property; custom geography does not reproduce the wiki west/downhill relation precisely.",
+      "confidence": "low",
+      "original": {
+        "x": 1460,
+        "y": 3540
+      },
+      "landmarkBounds": [
+        786,
+        3236,
+        859,
+        3310
+      ]
+    },
+    {
+      "id": "allen-farmstead",
+      "x": 910,
+      "y": 3382,
+      "basis": "Real road-loop roof-and-yard clearing south of the cultivated-plot candidate. Farm-name/livestock identification unresolved; not a canonical surveyed Allen location.",
+      "confidence": "low",
+      "original": {
+        "x": 1470,
+        "y": 3430
+      },
+      "landmarkBounds": [
+        874,
+        3353,
+        953,
+        3421
+      ]
+    },
+    {
+      "id": "emberstone-village",
+      "x": 2213,
+      "y": 2615,
+      "basis": "Three visible brown roofs on the mainland beside the Northgate River below the NE rocky slopes; old transformed point fell too far east.",
+      "confidence": "high",
+      "original": {
+        "x": 2530,
+        "y": 3060
+      },
+      "landmarkBounds": [
+        2185,
+        2569,
+        2258,
+        2655
+      ]
+    },
+    {
+      "id": "emberstone-mine",
+      "x": 2263,
+      "y": 2663,
+      "basis": "Dark timber-like feature against the rock face immediately beside the river village. Best visible entrance candidate; portal identity and exact mine bounds not independently confirmed.",
+      "confidence": "low",
+      "original": {
+        "x": 2610,
+        "y": 3020
+      },
+      "landmarkBounds": [
+        2249,
+        2648,
+        2282,
+        2681
+      ]
+    },
+    {
+      "id": "stormglen",
+      "x": 1856,
+      "y": 3882,
+      "basis": "Actual southern coastal fishing-village roof concentration, connected to the pier/causeway, rather than a generic shore point.",
+      "confidence": "high",
+      "original": {
+        "x": 1820,
+        "y": 4190
+      },
+      "landmarkBounds": [
+        1728,
+        3829,
+        1985,
+        3938
+      ]
+    },
+    {
+      "id": "blackwald",
+      "x": 1799,
+      "y": 3622,
+      "basis": "Representative actual dark woodland west/southwest of the giant tree and north of the coastal village; an area pin, not a precise forest border.",
+      "confidence": "medium",
+      "original": {
+        "x": 1860,
+        "y": 3900
+      },
+      "landmarkBounds": [
+        1618,
+        3430,
+        1985,
+        3830
+      ]
+    },
+    {
+      "id": "taldoren",
+      "x": 2057,
+      "y": 3500,
+      "basis": "Huge ochre branching inland tree in its rocky pocket; selects the visible tree itself, not nearby shoreline vegetation.",
+      "confidence": "high",
+      "original": {
+        "x": 2010,
+        "y": 3840
+      },
+      "landmarkBounds": [
+        1976,
+        3417,
+        2137,
+        3584
+      ]
+    },
+    {
+      "id": "bradshaw-mill",
+      "x": 1844,
+      "y": 3796,
+      "basis": "Distinct elongated gray-roofed roadside building on the southern forest edge north of Stormglen. Mill identity is not visually diagnostic; nearby smaller structure is an alternative.",
+      "confidence": "low",
+      "original": {
+        "x": 1730,
+        "y": 3830
+      },
+      "landmarkBounds": [
+        1825,
+        3778,
+        1864,
+        3815
+      ]
+    },
+    {
+      "id": "tempests-reach",
+      "x": 2290,
+      "y": 3250,
+      "basis": "Elongated visible mainland building/lighthouse candidate on the eastern road and rocky coast. Does not use the bare offshore island or Galewatch beacon.",
+      "confidence": "medium",
+      "original": {
+        "x": 2240,
+        "y": 3440
+      },
+      "landmarkBounds": [
+        2256,
+        3210,
+        2329,
+        3289
+      ]
+    },
+    {
+      "id": "aderics-repose",
+      "x": 1420,
+      "y": 3106,
+      "basis": "Pale central monument of the clearly concentric cemetery/memorial enclosure west of Gilneas City. Distinct morphology from the western manor.",
+      "confidence": "high",
+      "original": {
+        "x": 1397,
+        "y": 3392
+      },
+      "landmarkBounds": [
+        1325,
+        2990,
+        1520,
+        3205
+      ]
+    },
+    {
+      "id": "northgate-woods",
+      "x": 1993,
+      "y": 2621,
+      "basis": "Visible dark woodland west of the upper river, between the capital road and water; representative forest terrain, not a village rooftop.",
+      "confidence": "medium",
+      "original": {
+        "x": 2190,
+        "y": 2970
+      },
+      "landmarkBounds": [
+        1950,
+        2530,
+        2061,
+        2735
+      ]
+    },
+    {
+      "id": "northgate-river",
+      "x": 2066,
+      "y": 2620,
+      "basis": "Actual water in the upper diagonal Northgate River channel beside the village. Intentionally a water marker, not a land-only placement.",
+      "confidence": "high",
+      "original": {
+        "x": 2020,
+        "y": 2850
+      }
+    },
+    {
+      "id": "northern-headlands",
+      "x": 1500,
+      "y": 2435,
+      "basis": "Rugged mainland high ground on the eastern/right side of the coastal outlet, southeast of the northern offshore beacon island.",
+      "confidence": "medium",
+      "original": {
+        "x": 1540,
+        "y": 2780
+      },
+      "landmarkBounds": [
+        1268,
+        2175,
+        1743,
+        2741
+      ]
+    },
+    {
+      "id": "the-headlands",
+      "x": 990,
+      "y": 2580,
+      "basis": "Actual western rocky/yellow-green coastal projection opposite the northern headland and northwest of Keel Harbor.",
+      "confidence": "medium",
+      "original": {
+        "x": 1080,
+        "y": 2960
+      },
+      "landmarkBounds": [
+        850,
+        2324,
+        1159,
+        2778
+      ]
+    },
+    {
+      "id": "pyrewood",
+      "x": 1800,
+      "y": 1895,
+      "basis": "Compact actual village of dark roofs immediately south/southeast of the bluff keep; excludes its southern ponds.",
+      "confidence": "high",
+      "original": {
+        "x": 1760,
+        "y": 2180
+      },
+      "landmarkBounds": [
+        1689,
+        1820,
+        1911,
+        1966
+      ]
+    },
+    {
+      "id": "shadowfang",
+      "x": 1675,
+      "y": 1725,
+      "basis": "Pale masonry walls, towers and roofed fortress on the western Silverpine coastal bluff, distinct from the village below.",
+      "confidence": "high",
+      "original": {
+        "x": 1660,
+        "y": 2025
+      },
+      "landmarkBounds": [
+        1574,
+        1669,
+        1776,
+        1782
+      ]
+    },
+    {
+      "id": "ambermill",
+      "x": 2498,
+      "y": 1648,
+      "basis": "Principal eastern Silverpine road-loop building/sawmill-like group; registration gives a consistent nearby anchor.",
+      "confidence": "high",
+      "original": {
+        "x": 2475,
+        "y": 1930
+      },
+      "landmarkBounds": [
+        2470,
+        1599,
+        2529,
+        1699
+      ]
+    },
+    {
+      "id": "dalaran-city",
+      "x": 3020,
+      "y": 1428,
+      "basis": "Open paved main plaza within the enlarged complete purple/gold custom city. Manually overrides the old crater transformation.",
+      "confidence": "high",
+      "original": {
+        "x": 2890,
+        "y": 1526
+      },
+      "landmarkBounds": [
+        2718,
+        1147,
+        3281,
+        1731
+      ]
+    },
+    {
+      "id": "fenris-keep",
+      "x": 2600,
+      "y": 575,
+      "basis": "Prominent rectangular pale-framed roof/courtyard building inside the lake-island fortress, not an arbitrary island point.",
+      "confidence": "high",
+      "original": {
+        "x": 2600,
+        "y": 925
+      },
+      "landmarkBounds": [
+        2570,
+        545,
+        2630,
+        608
+      ]
+    },
+    {
+      "id": "fenris-isle",
+      "x": 2646,
+      "y": 835,
+      "basis": "Open grass on the southern island extension; spatially separate from the fortress marker and clear of the shoreline.",
+      "confidence": "high",
+      "original": {
+        "x": 2700,
+        "y": 1110
+      },
+      "landmarkBounds": [
+        2465,
+        393,
+        2883,
+        935
+      ]
+    },
+    {
+      "id": "lordaeron-city",
+      "x": 3110,
+      "y": 80,
+      "basis": "Actually visible square-roofed building in the clipped city near the top edge. Replaces the negative-y transformed old capital point.",
+      "confidence": "high",
+      "original": {
+        "x": 3020,
+        "y": 260
+      },
+      "landmarkBounds": [
+        2786,
+        0,
+        3376,
+        250
+      ]
+    },
+    {
+      "id": "silverpine",
+      "x": 2152,
+      "y": 806,
+      "basis": "Registered northern Silverpine forest-region representative within the visible mainland woodland; regional, not a building or political boundary.",
+      "confidence": "medium",
+      "original": {
+        "x": 2130,
+        "y": 1100
+      }
+    },
+    {
+      "id": "lordamere-lake",
+      "x": 2864,
+      "y": 875,
+      "basis": "Clearly open lake water southeast of Fenris Isle, west of the southern small islands; intentionally not moved onto land.",
+      "confidence": "high",
+      "original": {
+        "x": 2950,
+        "y": 1080
+      },
+      "landmarkBounds": [
+        2790,
+        835,
+        2925,
+        915
+      ]
+    },
+    {
+      "id": "deep-elem-mine",
+      "x": 2411,
+      "y": 1266,
+      "basis": "Registered legacy site on the rocky rim of the brown forest fissure. Actual braced mine portal is not resolved; do not substitute the timber-looking shoreline structures by enlarged Dalaran.",
+      "confidence": "low",
+      "original": {
+        "x": 2390,
+        "y": 1560
+      },
+      "landmarkBounds": [
+        2370,
+        1210,
+        2490,
+        1390
+      ]
+    },
+    {
+      "id": "galewatch-lighthouse",
+      "x": 1099,
+      "y": 2203,
+      "basis": "Actual compact stone tower/beacon on the isolated steep northern rocky island. Explicitly rejects the erroneous old east-coast coordinate.",
+      "confidence": "high",
+      "original": {
+        "x": 2640,
+        "y": 3350
+      },
+      "landmarkBounds": [
+        1072,
+        2167,
+        1130,
+        2253
+      ]
+    },
+    {
+      "id": "violet-citadel",
+      "x": 2977,
+      "y": 1337,
+      "basis": "Prominent large gold-rimmed violet dome/tower in the north-central monumental cluster of the enlarged custom city. Canonical Citadel association is not uniquely readable from this unlabelled vignette; distinct from the city-plaza marker.",
+      "confidence": "medium",
+      "original": {
+        "x": 2875,
+        "y": 1480
+      },
+      "landmarkBounds": [
+        2916,
+        1256,
+        3014,
+        1386
+      ]
+    }
+  ],
+  "anchors": [
+    {
+      "id": "gilneas-central-hub",
+      "description": "visual city junction",
+      "new": {
+        "x": 1795,
+        "y": 3050
+      },
+      "oldEquivalent": {
+        "x": 1773.5,
+        "y": 3343.96
+      },
+      "method": "visual landmark; inverse of parent registration for common-terrain reference only"
+    },
+    {
+      "id": "greymane-manor-building",
+      "description": "rounded western residence",
+      "new": {
+        "x": 808,
+        "y": 3042
+      },
+      "oldEquivalent": {
+        "x": 786.26,
+        "y": 3336.01
+      },
+      "method": "visual landmark; inverse of parent registration for common-terrain reference only"
+    },
+    {
+      "id": "shadowfang-fortress",
+      "description": "masonry bluff fortress",
+      "new": {
+        "x": 1675,
+        "y": 1725
+      },
+      "oldEquivalent": {
+        "x": 1653.39,
+        "y": 2018.97
+      },
+      "method": "visual landmark; inverse of parent registration for common-terrain reference only"
+    },
+    {
+      "id": "fenris-fortress",
+      "description": "island fortress main building",
+      "new": {
+        "x": 2600,
+        "y": 575
+      },
+      "oldEquivalent": {
+        "x": 2578.61,
+        "y": 868.84
+      },
+      "method": "visual landmark; inverse of parent registration for common-terrain reference only"
+    },
+    {
+      "id": "galewatch-island-beacon",
+      "description": "north island tower",
+      "new": {
+        "x": 1099,
+        "y": 2203
+      },
+      "oldEquivalent": {
+        "x": 1077.28,
+        "y": 2497.02
+      },
+      "method": "visual landmark; inverse of parent registration for common-terrain reference only"
+    },
+    {
+      "id": "taldoren-tree",
+      "description": "large ochre inland tree",
+      "new": {
+        "x": 2057,
+        "y": 3500
+      },
+      "oldEquivalent": {
+        "x": 2035.63,
+        "y": 3793.98
+      },
+      "method": "visual landmark; inverse of parent registration for common-terrain reference only"
+    },
+    {
+      "id": "dalaran-custom-city-plaza",
+      "description": "custom city manual override",
+      "new": {
+        "x": 3020,
+        "y": 1428
+      },
+      "oldEquivalent": {
+        "x": 2998.86,
+        "y": 1721.75
+      },
+      "method": "visual landmark; inverse of parent registration for common-terrain reference only"
+    },
+    {
+      "id": "duskhaven-whole-town",
+      "description": "intact restored SW urban block",
+      "new": {
+        "x": 791,
+        "y": 3442
+      },
+      "oldEquivalent": {
+        "x": 769.26,
+        "y": 3736
+      },
+      "method": "visual landmark; inverse of parent registration for common-terrain reference only"
+    },
+    {
+      "id": "lordaeron-visible-building",
+      "description": "clipped positive-y capital proxy",
+      "new": {
+        "x": 3110,
+        "y": 80
+      },
+      "oldEquivalent": {
+        "x": 3088.77,
+        "y": 373.73
+      },
+      "method": "visual landmark; inverse of parent registration for common-terrain reference only"
+    }
+  ],
+  "notes": [
+    "Coordinate origin is upper left of the untouched supplied 3526x4548 raster; x increases right and y increases down. Do not multiply coordinates for the parent 1.5x enhancement.",
+    "Coordinates are exact integer marker choices, NOT claims of one-pixel geographical certainty. Confidence describes this marker association with the visible site, not canonical historical existence/ownership.",
+    "All 39 canonical IDs and source names are retained. This scratch review changes no owners, factions, descriptions, lore, provenance, or historical phase.",
+    "The new and old common raster terrain register approximately x+22,y-294, not generic width/height scaling. Custom Dalaran, restored SW town and wrong legacy minor points require manual visual overrides.",
+    "Confidence low: Stoneward Prison exact yard; Hayward Fishery island identification; Hammond/Allen farm-name assignments; Emberstone Mine portal; Bradshaw Mill building; Deep Elem Mine portal.",
+    "Confidence medium: Violet Citadel exact named building in custom Dalaran; orchard/stable function; Tempest Reach exact building. These are best terrain-backed candidates, not recovered canonical plans.",
+    "Parent registration.json: 1259 matches,1217 inliers,median0.312077px,p951.355093px. Independent review SIFT:2458 matches,2382 inliers,median0.374817px,p951.556092px; agreement on near-unit scale/crop shift.",
+    "Bounds use [left,top,right,bottom] in source pixels and are visual context envelopes, not ownership polygons or authoritative surveyed extents.",
+    "Wiki pages were consulted only for localization relationships, not to import late owners/events. URLs and numbered task-local citations are recorded in coordinates-review.md.",
+    "Full numbered annotation: coordinates-review-annotated.jpg; detailed inspection sheet: coordinates-review-details.jpg. Colors: yellow high, cyan medium, magenta low."
+  ]
+}

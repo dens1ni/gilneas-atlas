@@ -1,0 +1,33 @@
+{
+  "sourceMap": [
+    {
+      "recordId": "noble-tulvan",
+      "sourceId": 65,
+      "ledgerId": 74,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan?action=render"
+    },
+    {
+      "recordId": "noble-harford",
+      "sourceId": 66,
+      "ledgerId": 75,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Harford?action=render"
+    },
+    {
+      "recordId": "noble-morrison",
+      "sourceId": 67,
+      "ledgerId": 76,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison?action=render"
+    },
+    {
+      "recordId": "noble-aderic",
+      "sourceId": 68,
+      "ledgerId": 77,
+      "url": "https://wowpedia.fandom.com/wiki/Aderic?action=render"
+    }
+  ],
+  "crestSourceId": 69,
+  "oldSourceIdsPreserved": true,
+  "locations": 39,
+  "nobles": 17,
+  "sources": 69
+}

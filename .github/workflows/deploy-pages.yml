@@ -26,15 +26,13 @@ jobs:
           node-version: '22'
       - name: Check module syntax and site files
         run: |
-          if test -f tests/model.test.mjs; then node --test tests/model.test.mjs; fi
-          node --check assets/js/app.mjs
-          node --check assets/js/model.mjs
-          node --check assets/js/ui.mjs
-          node --check assets/js/editor.mjs
+          if test -f tests/model.test.mjs; then npm test; fi
+          npm run check
           test -s index.html
           test -s assets/data/atlas.json
-          test -s assets/maps/gilneas-enhanced.webp
-          test -s assets/maps/inactive-mist.webp
+          test -s assets/maps/gilneas-origins-enhanced.webp
+          test -s assets/maps/origins-inactive-mist.webp
+          node --input-type=module -e "import fs from 'node:fs';const files=JSON.parse(fs.readFileSync('assets/runtime-manifest.json','utf8'));for(const file of files)if(!fs.existsSync(file))throw new Error('Missing runtime path: '+file);"
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Prepare static publish root
@@ -45,7 +43,7 @@ jobs:
           mkdir -p _site/.github/workflows _site/assets/export
           cp .github/workflows/deploy-pages.yml _site/.github/workflows/
           cp .github/workflows/deploy-pages.yml _site/assets/export/deploy-pages.yml
-          rm -f _site/assets/maps/processing-preview.jpg
+          rm -f _site/assets/maps/processing-preview.jpg _site/assets/maps/origins-processing-preview.jpg
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:

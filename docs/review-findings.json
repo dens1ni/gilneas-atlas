@@ -1,0 +1,37 @@
+{
+  "initial_verdict": "changes_required",
+  "security_concerns": [],
+  "findings": [
+    {
+      "id": "invalid-renderer-import",
+      "severity": "high",
+      "description": "Malformed meta.labels/meta.chronicle could save before rendering failed, preventing the next startup.",
+      "reproduction_test": "test_review_regressions.ReviewRegression.test_malformed_import_leaves_live_and_saved_snapshot_untouched",
+      "initial_test_result": "failed as expected"
+    },
+    {
+      "id": "stale-faction-filter",
+      "severity": "medium",
+      "description": "Removing the selected unused faction from an imported valid snapshot left a stale filter and caused rendering to throw.",
+      "reproduction_test": "test_review_regressions.ReviewRegression.test_valid_import_clears_deleted_selected_faction",
+      "initial_test_result": "failed as expected"
+    },
+    {
+      "id": "native-polygon-doubleclick",
+      "severity": "low",
+      "description": "The shared map-interaction callback received doubleclick but did not close the polygon; explicit Finish still worked.",
+      "reproduction_test": "test_review_regressions.ReviewRegression.test_native_doubleclick_finishes_real_polygon_task",
+      "initial_test_result": "failed as expected"
+    }
+  ],
+  "remediation": "fixed_and_locally_verified",
+  "verification": {
+    "node_tests_passed": 58,
+    "python_browser_tests_passed": 51,
+    "integrated_review_regressions_passed": 7,
+    "clean_export_root_and_project_prefix": "passed",
+    "independent_followup_review": "passed",
+    "pages_export_packaging_review": "passed"
+  },
+  "publication_gate": "Do not publish until these integrated regressions pass and the independent follow-up review is clean."
+}

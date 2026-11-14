@@ -1,0 +1,12 @@
+{
+  "name": "gilneas-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Интерактивный атлас довоенного Гилнеаса — статический сайт для GitHub Pages",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check assets/js/model.mjs && node --check assets/js/app.mjs && node --check assets/js/ui.mjs && node --check assets/js/editor.mjs && node --check assets/js/export.mjs && node --check assets/js/chronicle.mjs",
+    "serve": "python3 -m http.server 4173 --bind 127.0.0.1"
+  }
+}

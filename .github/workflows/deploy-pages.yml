@@ -1,0 +1,55 @@
+name: Deploy Gilneas Atlas
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: gilneas-pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Check module syntax and site files
+        run: |
+          if test -f tests/model.test.mjs; then node --test tests/model.test.mjs; fi
+          node --check assets/js/app.mjs
+          node --check assets/js/model.mjs
+          node --check assets/js/ui.mjs
+          node --check assets/js/editor.mjs
+          test -s index.html
+          test -s assets/data/atlas.json
+          test -s assets/maps/gilneas-enhanced.webp
+          test -s assets/maps/inactive-mist.webp
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Prepare static publish root
+        run: |
+          mkdir -p _site
+          cp index.html .nojekyll README.md package.json _site/
+          cp -R assets _site/assets
+          mkdir -p _site/.github/workflows _site/assets/export
+          cp .github/workflows/deploy-pages.yml _site/.github/workflows/
+          cp .github/workflows/deploy-pages.yml _site/assets/export/deploy-pages.yml
+          rm -f _site/assets/maps/processing-preview.jpg
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

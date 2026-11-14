@@ -1,0 +1,120 @@
+{
+  "source_size": [
+    3247,
+    4860
+  ],
+  "method": "difference strokes + boundary-connected flood fill",
+  "marked_pixels": 294397,
+  "inactive_pixels": 1546272,
+  "free_regions": 15,
+  "edge_feather_px": 18,
+  "notes": "Annotation is a work-scope mask, not a canonical political boundary.",
+  "source_sha256": "5d9825ff744f3c026ae4742b05702e2f17ad40a9360436b5cea598bb44ff1c9d",
+  "correction_sha256": "a49475f4137670c67122d5b5633920389e30f9555369976929033392aa3d13c9",
+  "enhanced_size": [
+    4870,
+    7290
+  ],
+  "upscale": "1.5x Lanczos + conservative brightness/color/unsharp; no generative details",
+  "period_reconstruction": {
+    "status": "cartographic reconstruction",
+    "wall_path": [
+      [
+        1410,
+        2468
+      ],
+      [
+        1460,
+        2490
+      ],
+      [
+        1540,
+        2513
+      ],
+      [
+        1620,
+        2536
+      ],
+      [
+        1705,
+        2562
+      ],
+      [
+        1755,
+        2570
+      ],
+      [
+        1800,
+        2581
+      ],
+      [
+        1845,
+        2629
+      ],
+      [
+        1908,
+        2680
+      ],
+      [
+        1975,
+        2699
+      ],
+      [
+        2048,
+        2703
+      ],
+      [
+        2110,
+        2687
+      ],
+      [
+        2175,
+        2663
+      ],
+      [
+        2205,
+        2635
+      ],
+      [
+        2256,
+        2628
+      ],
+      [
+        2300,
+        2646
+      ],
+      [
+        2335,
+        2692
+      ],
+      [
+        2408,
+        2774
+      ],
+      [
+        2470,
+        2848
+      ],
+      [
+        2518,
+        2890
+      ]
+    ],
+    "removed": [
+      "visible Greymane wall strip",
+      "modern Dalaran crater",
+      "visible green Forsaken glow"
+    ],
+    "not_claimed": "No canon pre-wall terrain scan exists in the supplied files; local terrain is reconstructed.",
+    "sources": [
+      "https://wowpedia.fandom.com/wiki/Greymane_Wall",
+      "https://wowpedia.fandom.com/wiki/Dalaran_Crater"
+    ],
+    "dalaran_representation": "stylized ground-city cartographic vignette; not a literal recovered city image"
+  },
+  "assets_bytes": {
+    "gilneas-enhanced.webp": 8561362,
+    "inactive-mask.png": 23568,
+    "inactive-mist.webp": 178692
+  }
+}

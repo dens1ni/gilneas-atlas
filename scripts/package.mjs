@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createZip } from '../assets/js/export.mjs';
+const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const files=JSON.parse(await fs.readFile(path.join(root,'assets/runtime-manifest.json'),'utf8'));
+const entries=await Promise.all(files.map(async name=>({name,data:new Uint8Array(await fs.readFile(path.join(root,name)))})));
+const target=process.argv[2]||path.join(root,'artifacts','Гилнеас-GitHub-Pages.zip');
+await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,createZip(entries));
+console.log(JSON.stringify({archive:target,files:entries.length,bytes:(await fs.stat(target)).size}));

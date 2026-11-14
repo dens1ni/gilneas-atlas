@@ -1,0 +1,1118 @@
+[
+  {
+    "source": 1,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas_City.md",
+    "quote": "Gilneas City (or the Ruins of Gilneas City[3] and simply Gilneas) was the capital city of the kingdom of Gilneas located in the peninsula of the same name.",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "By the start of the Second War Gilneas had become recognized as a significant entity in the political landscape of Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Nobles_of_Gilneas.md",
+    "quote": "The Greymane family rules over all of Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "It is ruled by King Genn Greymane of the Greymane family.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4755,GilneasCity,Гилнеас,654,0,3057,0,0,564,675,906,0,0,811,0,0,0,13,-1,0,0,0,1572864,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 5,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Greymane_Manor.md",
+    "quote": "Greymane Manor is a palatial estate high in the hills of western Gilneas, owned by Genn Greymane and his family.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4817,GreymaneManor,\"Поместье Седогрива\",654,4714,3192,0,0,0,675,911,0,8,0,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 6,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Cathedral_Quarter.md",
+    "quote": "Cathedral Quarter is the northwestern section of [Gilneas City](https://wowpedia.fandom.com/wiki/GilneasCity \"Gilneas City\") , and is the location of the [Light's Dawn Cathedral](https://wowpedia.fandom.com/wiki/Light%27sDawnCathedral \"Light's Dawn Cathedral\") .",
+    "declaredVerified": true
+  },
+  {
+    "source": 1,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas_City.md",
+    "quote": "Gilneas City (or the Ruins of Gilneas City[3] and simply Gilneas) was the capital city of the kingdom of Gilneas located in the peninsula of the same name.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4759,CathedralQuarter,\"Соборный квартал\",654,4755,3065,0,0,564,675,0,0,5,0,0,0,0,13,-1,0,0,0,1073741824,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 7,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Light_27s_Dawn_Cathedral.md",
+    "quote": "Light's Dawn Cathedral is a massive building located in the center of [Gilneas City](https://wowpedia.fandom.com/wiki/GilneasCity \"Gilneas City\") .",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4761,\"Light's Dawn Cathedral\",\"Собор Рассвета\",654,4755,3071,0,0,0,675,0,0,5,0,0,0,0,13,-1,0,0,0,1073741824,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 8,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/Greymane_Court.md",
+    "quote": "The Greymane Court is the southwestern section of Gilneas City.",
+    "declaredVerified": true
+  },
+  {
+    "source": 1,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas_City.md",
+    "quote": "Gilneas City (or the Ruins of Gilneas City[3] and simply Gilneas) was the capital city of the kingdom of Gilneas located in the peninsula of the same name.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4758,GreymaneCourt,\"Площадь Седогрива\",654,4755,3063,0,0,564,675,0,0,3,812,0,0,0,13,-1,0,0,0,1073741824,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 9,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/Merchant_Square.md",
+    "quote": "The Merchant Square is the northeastern section of Gilneas City.",
+    "declaredVerified": true
+  },
+  {
+    "source": 1,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas_City.md",
+    "quote": "Gilneas City (or the Ruins of Gilneas City[3] and simply Gilneas) was the capital city of the kingdom of Gilneas located in the peninsula of the same name.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4756,MerchantSquare,\"Торговая площадь\",654,4755,3059,0,0,564,675,0,0,0,0,0,0,0,13,-1,0,0,0,1073741824,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 10,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/Military_District.md",
+    "quote": "The Military District is the southeastern section of Gilneas City and was apparently focused on the Gilnean military.",
+    "declaredVerified": true
+  },
+  {
+    "source": 1,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas_City.md",
+    "quote": "Gilneas City (or the Ruins of Gilneas City[3] and simply Gilneas) was the capital city of the kingdom of Gilneas located in the peninsula of the same name.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4757,MilitaryDistrict,\"Военный квартал\",654,4755,3061,0,0,564,675,0,0,2,0,0,0,0,13,-1,0,0,0,1073741824,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 11,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/Stoneward_Prison.md",
+    "quote": "The Stoneward Prison (or Gilneas City Prison ) [[ 1 ]]() is a fortified [prison](https://warcraft.wiki.gg/wiki/Prison \"Prison\") complex located in the [Military District](https://warcraft.wiki.gg/wiki/MilitaryDistrict \"Military District\") of [Gilneas City](https://warcraft.wiki.gg/wiki/GilneasCity \"Gilneas City\") .",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4762,StonewardPrison,\"Каменная тюрьма\",654,4755,3073,0,0,0,675,0,0,3,813,0,0,0,15,-1,0,0,0,1073741824,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 12,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Keel_Harbor.md",
+    "quote": "Keel Harbor is a small harbor in central Gilneas, west of Gilneas City.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4726,KeelHarbor,\"Килевая гавань\",654,4714,2976,0,0,568,675,908,0,10,0,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 13,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Duskhaven.md",
+    "quote": "Duskhaven was a town located along the southwestern coast of Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4786,Duskhaven,\"Темная Гавань\",654,4714,3127,0,0,0,675,909,0,5,0,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 14,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Crowley_Orchard.md",
+    "quote": "Crowley Orchard was an apple orchard located south and very close to the town of Duskhaven in southwestern Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 14,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Crowley_Orchard.md",
+    "quote": "The farm was owned by the Crowley family, as the name suggests.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4807,CrowleyOrchard,\"Сад Краули\",654,4714,3169,0,0,0,675,907,0,7,815,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 15,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Crowley_Stable_Grounds.md",
+    "quote": "The Crowley Stable Grounds was an extensive area located east of the Crowley Orchard in Gilneas .",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4818,CrowleyStableGrounds,\"Конюшни Краули\",654,4714,3194,0,0,0,675,907,0,7,0,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 16,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Hayward_Fishery.md",
+    "quote": "Hayward Fishery was formerly a small single island prior the Cataclysm.",
+    "declaredVerified": true
+  },
+  {
+    "source": 16,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Hayward_Fishery.md",
+    "quote": "It is now a tiny archipelago off the coast of southwestern Gilneas which houses an abandoned fishing business, that was run by the Hayward brothers: Sebastian, Ron, Trent, Walt, and Tim Hayward.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4808,HaywardFishery,\"Рыбное хозяйство Хейварда\",654,4714,3171,0,0,568,675,907,0,7,816,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 17,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Hammond_Farmstead.md",
+    "quote": "Hammond Farmstead was a farm located west and downhill of Duskhaven, in southwestern Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 17,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Hammond_Farmstead.md",
+    "quote": "Melinda Hammond owned the farmstead where she grew corn.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4793,HammondFarmstead,\"Ферма Хэммондов\",654,4714,3141,0,0,0,675,908,0,5,0,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 18,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Allen_Farmstead.md",
+    "quote": "Allen Farmstead was a livestock farm located west of and downhill from Duskhaven, and is next door to the Hammond Farmstead, in southwestern Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4792,AllenFarmstead,\"Ферма Аллена\",654,4714,3139,0,0,0,675,908,0,5,0,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 19,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Emberstone_Village.md",
+    "quote": "Emberstone Village is a village along the Northgate River in northeastern Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4734,EmberstoneVillage,\"Деревня Тлеющего Угля\",654,4714,2992,0,0,0,675,910,0,8,0,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 20,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Emberstone_Mine.md",
+    "quote": "Emberstone Mine is a mine in northeastern Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4732,\"Emberstone Mine\",\"Шахта Тлеющего Угля\",654,4714,2988,0,0,0,675,910,0,0,0,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 21,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Stormglen_Village.md",
+    "quote": "Stormglen Village is a small village located in the southern edge of the Blackwald in Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 22,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowhead-ru-quest_24483_D0_B3_D1_80_D0_BE_D0_B7_D0_BE_D0_B2_D0_BE_D0_B9-_D0_BF_D0_B5_D1_80_D0_B5_D0_B2_D0_B0_D0_BB.md",
+    "quote": "Разведчики доложили, что в этой рыбацкой деревне мы сможем отдохнуть и пополнить припасы.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4731,\"Stormglen Village\",\"Грозовой Перевал\",654,4714,2986,0,0,568,675,909,0,6,0,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 23,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Blackwald.md",
+    "quote": "# Blackwald\n**The Blackwald** is a forest in southern [Gilneas](https://wowpedia.fandom.com/wiki/Gilneas_peninsula \"Gilneas peninsula\") , located south of [Gilneas City](https://wowpedia.fandom.com/wiki/Gilneas_City \"Gilneas City\") and north of [Stormglen Village](https://wowpedia.fandom.com/wiki/Stormglen_Village \"Stormglen Village\") .\nThese woods were the home of the [Druids of the Scythe](https://wowpedia.fandom.com/wiki/Druids_of_the_Scythe \"Druids of the Scythe\") , who eventually became the first [worgen](https://wowpedia.fandom.com/wiki/Worgen \"Worgen\") .",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4730,TheBlackwald,\"Черная дубрава\",654,4714,2984,0,0,608,675,915,0,6,822,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 24,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Tal_27doren.md",
+    "quote": "Tal'doren, also known as \"the wild home\", is located in the eastern section of the Blackwald in southern Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 24,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Tal_27doren.md",
+    "quote": "Belysra Starbreeze appears to claim the Druids of the Pack called Tal'doren home in ancient Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4841,Tal'doren,Тал'дорен,654,4714,3247,0,0,0,675,914,0,0,821,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 25,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Bradshaw_Mill.md",
+    "quote": "The Bradshaw Mill is a ruined and abandoned mill located in the southern part of the Blackwald, north of Stormglen Village in Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4868,TheBradshawMill,\"Мельница Брэдшоу\",654,4714,3307,0,0,608,675,0,0,11,0,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 26,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Tempest_27s_Reach.md",
+    "quote": "Tempest's Reach is a village and lighthouse on the eastern coast of Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4788,Tempest'sReach,\"Предел бури\",654,4714,3131,0,0,0,675,908,0,8,0,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 27,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Aderic_27s_Repose.md",
+    "quote": "Aderic's Repose is a cemetery in Gilneas located outside of the city to the west, not far from Keel Harbor to the north.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4727,AdericsRepose,\"Покой Адерика\",654,4714,2978,0,0,0,675,907,0,8,814,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 28,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Northgate_Woods.md",
+    "quote": "# Northgate Woods\nThe **Northgate Woods** is a forested area in [Gilneas](https://wowpedia.fandom.com/wiki/Gilneas_peninsula \"Gilneas peninsula\") , located north of [Gilneas City](https://wowpedia.fandom.com/wiki/Gilneas_City \"Gilneas City\") and south of the [Greymane Wall](https://wowpedia.fandom.com/wiki/Greymane_Wall \"Greymane Wall\") .\nThe [Northgate River](https://wowpedia.fandom.com/wiki/Northgate_River \"Northgate River\") acts as its eastern border while the road leading to the wall's entrance is its western border. There is no incentive to go here during the [worgen starting experience](https://wowpedia.fandom.com/wiki/Worgen_starting_experience \"Worgen starting experience\") .",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4729,\"Northgate Woods\",\"Лес Северных врат\",654,4714,2982,0,0,0,675,0,0,8,0,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 29,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/Northgate_River.md",
+    "quote": "Northgate River is a river found on the Gilnean peninsula.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4790,NorthgateRiver,\"Река Северных врат\",654,4714,3135,0,0,0,675,0,0,5,0,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 30,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Northern_Headlands.md",
+    "quote": "The Northern Headlands is a region running along the Greymane Wall in northwestern Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4728,NothernHeadlands,\"Северный каменистый мыс\",654,4714,2980,0,0,614,675,908,0,8,818,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 31,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Headlands.md",
+    "quote": "The Headlands is a big area of Gilneas located northwest of Keel Harbor.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4725,TheHeadlands,\"Каменистый мыс\",654,4714,2974,0,0,614,675,908,0,10,823,0,0,0,13,-1,0,0,0,1073758208,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "He owned the towns of Pyrewood Village and Ambermill.",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "At the time of the Second War, Lord Crowley was a nobleman whose lands and people were in northern Gilneas, including some land outside of the border that would later be known as the Greymane Wall.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "204,PyrewoodVillage,\"Деревня Погребальных Костров\",0,130,261,0,11,0,675,720,0,15,301,0,0,0,15,-1,0,0,0,1073758272,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 33,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Shadowfang_Keep.md",
+    "quote": "It was the home to the lords of Pyrewood Village, who answered to Darius Crowley's family.[4] The lord of the castle was Baron Silverlaine and his forces were led by Commander Springvale, a paladin of the Silver Hand.",
+    "declaredVerified": true
+  },
+  {
+    "source": 33,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Shadowfang_Keep.md",
+    "quote": "Jordan Stilwell and Daphne Stilwell used to live and work here before the Third War.",
+    "declaredVerified": true
+  },
+  {
+    "source": 33,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Shadowfang_Keep.md",
+    "quote": "Distraught and broken, Arugal accepted the worgen as his children and retreated into the keep and named the place Shadowfang Keep.[1] Communing with Alpha Prime, he became a key servant of the Wolf Cult, converting the humans of Silverpine into worgen, namely the Moonrage and Shadowfang packs.",
+    "declaredVerified": true
+  },
+  {
+    "source": 34,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/Shadowfang_Keep.md",
+    "quote": "Shadowfang Keep, originally named Silverlaine Keep,[1] is a haunted keep not far from the borders of Gilneas in southern Silverpine Forest, on a high bluff overlooking Pyrewood Village.",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "He owned the towns of Pyrewood Village and Ambermill.",
+    "declaredVerified": true
+  },
+  {
+    "source": 35,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Ambermill.md",
+    "quote": "## History [ [](https://auth.fandom.com/signin?redirect=https%3A%2F%2Fwowpedia.fandom.com%2Fwiki%2FAmbermill%3Faction%3Dedit%26section%3D1&uselang=en&metadata=article-registration-edit-article-section \"Sign in to edit\") ]\nPrior to the advent of the [Third War](https://wowpedia.fandom.com/wiki/Third_War \"Third War\") , Ambermill was a relatively unimportant site in the Silverpine Forest and was mainly used for [lumber](https://wowpedia.fandom.com/wiki/Lumber \"Lumber\") harvesting, but",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "233,Ambermill,\"Янтарная мельница\",0,130,285,0,11,0,675,191,0,14,642,0,0,0,15,-1,0,0,0,1073758272,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 36,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Dalaran__kingdom_action_render.md",
+    "quote": "Dalaran, officially the Magocracy of Dalaran,[5] is a small, magocratic nation founded originally as a city-state by Arathi magi near the coast of Lordamere Lake in Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 36,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Dalaran__kingdom_action_render.md",
+    "quote": "During the Second War, Dalaran pledged to support the Alliance of Lordaeron and gave large amounts of aid, magi and sorcerers to the war effort.",
+    "declaredVerified": true
+  },
+  {
+    "source": 37,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Antonidas.md",
+    "quote": "During the Second War, he pledged loyalty to the Alliance of Lordaeron on behalf of Dalaran, in the war against the orcs.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "4395,Dalaran,Даларан,571,0,2153,0,89,468,675,431,0,75,546,0,6,0,15,-1,0,0,0,18728,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 38,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Fenris_Isle.md",
+    "quote": "Fenris Isle was once home to a thriving military outpost of the kingdom of Lordaeron called Fenris Keep.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "235,FenrisKeep,\"Крепость Фенриса\",0,130,608,0,11,0,675,718,0,13,0,0,0,0,15,-1,0,0,0,1073758272,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 38,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Fenris_Isle.md",
+    "quote": "Fenris Isle is a large island located in the center of Lordamere Lake and it is generally considered to be a part of Silverpine Forest.",
+    "declaredVerified": true
+  },
+  {
+    "source": 38,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Fenris_Isle.md",
+    "quote": "Fenris Isle was once home to a thriving military outpost of the kingdom of Lordaeron called Fenris Keep.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "172,FenrisIsle,\"Остров Фенриса\",0,130,247,0,11,0,675,718,0,12,0,0,0,0,15,-1,0,0,0,1073758272,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 39,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Capital_City.md",
+    "quote": "Capital City[1][2][3][4][5][6][7] or simply Lordaeron City[8] and Lordaeron[9][10] was the capital city of the Kingdom of Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 39,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Capital_City.md",
+    "quote": "The city was the center of the Alliance of Lordaeron during the Second War, and so prospered as the effective capital of humanity.",
+    "declaredVerified": true
+  },
+  {
+    "source": 39,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Capital_City.md",
+    "quote": "Ruler(s) | King Terenas Menethil II † | | Languages | Common, Thalassian, Dwarven, Gnomish | | Faiths | Holy Light | | Affiliation | Kingdom of Lordaeron, Church of Light, Alliance of Lordaeron | | Location | Southern Tirisfal Glades | | Status | Ruined | Capital City[1][2][3][4][5][6][7] or simply Lordaeron City[8] and Lordaeron[9][10] was the capital city of the Kingdom of Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 40,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Silverpine_Forest.md",
+    "quote": "**Silverpine Forest** , or simply **Silverpine** , [[ 1 ]]() is a vast, ancient forest that runs along [Lordaeron](https://wowpedia.fandom.com/wiki/Lordaeron \"Lordaeron\") 's rugged western coast. The land ranges from fairly flat to hilly, and is nestled among even taller mountains.",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "At the time of the Second War, Lord Crowley was a nobleman whose lands and people were in northern Gilneas, including some land outside of the border that would later be known as the Greymane Wall.",
+    "declaredVerified": true
+  },
+  {
+    "source": 4,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/AreaTable-4.4.2.60895-ruRU.csv",
+    "quote": "130,SilverpineForest,\"Серебряный бор\",0,0,210,0,11,28,675,2,0,0,0,0,4,0.40000000596,15,-1,0,0,0,16448,256,0,0,0,0",
+    "declaredVerified": true
+  },
+  {
+    "source": 41,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Lordamere_Lake.md",
+    "quote": "Lordamere Lake (or Lake Lordamere)[1] is one of the largest lakes in the Eastern Kingdoms, rivaled only by Darrowmere Lake to the east.",
+    "declaredVerified": true
+  },
+  {
+    "source": 41,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Lordamere_Lake.md",
+    "quote": "Here, many human kingdoms, at the age of the Alliance of Lordaeron, that were prosperous, have been found around the lake's shores and nearby mountains, including Lordaeron, Dalaran and Alterac.",
+    "declaredVerified": true
+  },
+  {
+    "source": 42,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Deep_Elem_Mine.md",
+    "quote": "The Deep Elem Mine is a mine in the middle of Silverpine Forest.[[56, 46]](/wiki/SilverpineForest)",
+    "declaredVerified": true
+  },
+  {
+    "source": 42,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Deep_Elem_Mine.md",
+    "quote": "Led by the cunning Grimson the Pale, the former foreman of the mine,[1] the worgen made the mine their home.",
+    "declaredVerified": true
+  },
+  {
+    "source": 43,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Galewatch_Lighthouse.md",
+    "quote": "is a lighthouse situated on a large rocky island in the furthest northern reaches of Gilneas.",
+    "declaredVerified": true
+  },
+  {
+    "source": 44,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Violet_Citadel.md",
+    "quote": "The Violet Citadel (or the Violet Tower)[1][2] is the main fortress of Dalaran which housed/houses the Eye of Dalaran, Chamber of Air, research laboratories and great spell libraries of the Kirin Tor — the mage class of Dalaran.",
+    "declaredVerified": true
+  },
+  {
+    "source": 36,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Dalaran__kingdom_action_render.md",
+    "quote": "The Kirin Tor's headquarters was the Violet Citadel, an impressive building so named for its stone walls which gave off a faint violet light.",
+    "declaredVerified": true
+  },
+  {
+    "source": 45,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_genn.md",
+    "quote": "During the Second War, Greymane met with the other human leaders at Capital City to hear of Stormwind's fall at the hands of the orcish Horde. Greymane joined the other human leaders in forming the Alliance of Lordaeron to counter the Horde threat, but due to his pride, he offered only token support.[5]",
+    "declaredVerified": false
+  },
+  {
+    "source": 46,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-primary.txt",
+    "quote": "Genn and several of the most influential Gilnean nobles had made the trip",
+    "declaredVerified": false
+  },
+  {
+    "source": 47,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_greymane_family.md",
+    "quote": "The **Greymane** family (also known as the **Greymane clan**)[1] is the ruling line of the [kingdom of Gilneas](/wiki/Gilneas_(kingdom)). The family ruled from [Greymane Manor](/wiki/Greymane_Manor) and had a Royal Chemist in the form of [Krennan Aranas](/wiki/Krennan_Aranas).",
+    "declaredVerified": false
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_crowley.md",
+    "quote": "At the time of the [Second War](/wiki/Second_War), Lord Crowley was a nobleman whose lands and people were in northern [Gilneas](/wiki/Gilneas_(kingdom)), including some land outside of the border that would later be known as the [Greymane Wall](/wiki/Greymane_Wall). He owned the towns of [Pyrewood Village](/wiki/Pyrewood_Village) and [Ambermill](/wiki/Ambermill).",
+    "declaredVerified": false
+  },
+  {
+    "source": 46,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-primary.txt",
+    "quote": "Genn and several of the most influential Gilnean nobles had made the trip",
+    "declaredVerified": false
+  },
+  {
+    "source": 48,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-primary_ru.md",
+    "quote": "— И чтобы включить его в состав стены, придется отрезать часть земель лорда Краули. Как минимум деревню Погребальных Костров и Янтарную мельницу.",
+    "declaredVerified": false
+  },
+  {
+    "source": 49,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_godfrey_target.md",
+    "quote": "Prior to the [Second War](/wiki/Second_War), Godfrey was among the [Gilnean](/wiki/Gilneas_(kingdom)) nobles who accompanied King [Genn Greymane](/wiki/Genn_Greymane) to [Lordaeron](/wiki/Lordaeron) to create the [Alliance of Lordaeron](/wiki/Alliance_of_Lordaeron).",
+    "declaredVerified": false
+  },
+  {
+    "source": 46,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-primary.txt",
+    "quote": "Genn and several of the most influential Gilnean nobles had made the trip",
+    "declaredVerified": false
+  },
+  {
+    "source": 50,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_ashbury.md",
+    "quote": "He and [Genn](/wiki/Genn) grew up together, and he was once one of the king's most trusted friends. He was present in the [Capital City](/wiki/Capital_City) to create the [Alliance of Lordaeron](/wiki/Alliance_of_Lordaeron) and agreed with [Lord Godfrey](/wiki/Lord_Godfrey), to send only a token army.",
+    "declaredVerified": false
+  },
+  {
+    "source": 46,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-primary.txt",
+    "quote": "Genn and several of the most influential Gilnean nobles had made the trip",
+    "declaredVerified": false
+  },
+  {
+    "source": 51,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_betrayal.md",
+    "quote": "He managed to convince two of the eastern lords to go with his plan. The fool seems to think he can strike a deal with the [Forsaken](/wiki/Forsaken) by turning Greymane over to them.",
+    "declaredVerified": false
+  },
+  {
+    "source": 52,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_marley_mobile.md",
+    "quote": "**Lord Marley** was a [Gilnean](https://wowpedia.fandom.com/wiki/Gilneas_(kingdom)) noble. King [Genn Greymane](https://wowpedia.fandom.com/wiki/Genn_Greymane) had originally planned to have the [Greymane Wall](https://wowpedia.fandom.com/wiki/Greymane_Wall) cut through Marley's domain, but later decided to have it cut through [Lord Darius Crowley](https://wowpedia.fandom.com/wiki/Lord_Darius_Crowley)'s domain instead at the recommendation of [Lord Godfrey](https://wowpedia.fandom.com/wiki/Lord_Godfrey).[1]",
+    "declaredVerified": false
+  },
+  {
+    "source": 46,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-primary.txt",
+    "quote": "Genn and several of the most influential Gilnean nobles had made the trip",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 53,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_archibald.md",
+    "quote": "Archibald Greymane was the king of Gilneas and the father of Genn Greymane. Under his rule, Gilneas prospered. His views on asking for help were that it was for the weak.[2] He passed this onto his son Genn, who became very stubborn, refusing any sort of aid until the Fall of Gilneas, where he began to finally move past this view.",
+    "declaredVerified": false
+  },
+  {
+    "source": 46,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-primary.txt",
+    "quote": "Genn and several of the most influential Gilnean nobles had made the trip",
+    "declaredVerified": false
+  },
+  {
+    "source": 46,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-primary.txt",
+    "quote": "Genn and several of the most influential Gilnean nobles had made the trip",
+    "declaredVerified": false
+  },
+  {
+    "source": 54,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-ashbury1.md",
+    "quote": "Lord Ashbury the 1st was a Gilnean noble and the father of Baron Ashbury. Lord Ashbury helped King Archibald Greymane build Gilneas up to a nation of great power. King Archibald always told his son Prince Genn to trust in the Ashburys’ fidelity to the crown because of the accomplishments of Lord Ashbury. [1]",
+    "declaredVerified": false
+  },
+  {
+    "source": 55,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_walden.md",
+    "quote": "**Lord Walden** was a [human](/wiki/Human) nobleman from eastern [Gilneas](/wiki/Gilneas_peninsula).",
+    "declaredVerified": false
+  },
+  {
+    "source": 51,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_betrayal.md",
+    "quote": "He managed to convince two of the eastern lords to go with his plan. The fool seems to think he can strike a deal with the [Forsaken](/wiki/Forsaken) by turning Greymane over to them.",
+    "declaredVerified": false
+  },
+  {
+    "source": 56,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-leader_pack.md",
+    "quote": "One of [Sylvanas](/wiki/Sylvanas_Windrunner)' handpicked [dark rangers](/wiki/Dark_ranger) is overseeing the battlefront from the Walden house near the shore. Take this whistle and use it when you're close to her.",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 57,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_hewell.md",
+    "quote": "**Lord Hewell** is a nobleman of [Gilneas](/wiki/Gilneas_peninsula) who can be found at [Tempest's Reach](/wiki/Tempest%27s_Reach) during the [worgen starting experience](/wiki/Worgen_starting_experience). Though the eastern lords ([Lord Walden](/wiki/Lord_Walden) and [Baron Ashbury](/wiki/Baron_Ashbury)) took part in [Lord Godfrey](/wiki/Lord_Godfrey)'s plan to take [King Genn Greymane](/wiki/King_Genn_Greymane) captive in order to bargain with the [Forsaken](/wiki/Forsaken), Hewell refused to betray his king. Instead he remained by Greymane's side until [Krennan Aranas](/wiki/Krennan_Aranas) sent an [adventurer](/wiki/Adventurer) to help.",
+    "declaredVerified": false
+  },
+  {
+    "source": 58,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-flank_ru.md",
+    "quote": "Поговорите с лордом Хьювелом, чтобы он отправил вас на почтовую станцию, где вас ждет Лорна Краули.",
+    "declaredVerified": false
+  },
+  {
+    "source": 59,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_silverlaine.md",
+    "quote": "Baron Silverlaine was master of the keep before it fell to Arugal's worgen.",
+    "declaredVerified": false
+  },
+  {
+    "source": 60,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-sfk-official-excerpt.txt",
+    "quote": "Baron Silverlaine was master of the keep before it fell to Arugal’s worgen.",
+    "declaredVerified": false
+  },
+  {
+    "source": 33,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_shadowfang.md",
+    "quote": "Shadowfang Keep was previously a part of the [kingdom of Gilneas](/wiki/Gilneas_(kingdom)). It was the home to the lords of [Pyrewood Village](/wiki/Pyrewood_Village), who answered to [Darius Crowley](/wiki/Darius_Crowley)'s family.[4] The lord of the castle was [Baron Silverlaine](/wiki/Baron_Silverlaine) and his forces were led by [Commander Springvale](/wiki/Commander_Springvale), a [paladin](/wiki/Paladin) of the [Silver Hand](/wiki/Silver_Hand). [Jordan Stilwell](/wiki/Jordan_Stilwell) and [Daphne Stilwell](/wiki/Daphne_Stilwell) used to live and work here before the [Third War](/wiki/Third_War). [Landen Stilwell](/wiki/Landen_Stilwell) was still here years later.",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 61,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_longshore.md",
+    "quote": "**Baron Longshore** is the former captain of the _[Heedless](https://wowpedia.fandom.com/wiki/Heedless \"Heedless\")_ , a ship in the [pirate](https://wowpedia.fandom.com/wiki/Pirate \"Pirate\") fleet of the [Southsea Freebooters](https://wowpedia.fandom.com/wiki/Southsea_Freebooters \"Southsea Freebooters\") , and hails from [Gilneas](https://wowpedia.fandom.com/wiki/Gilneas_peninsula \"Gilneas peninsula\") .\n[[ 1 ]]() He is located on the [Merchant Coast](https://wowpedia.fandom.com/wiki/Merchant_Coast \"Merchant Coast\") in the [Northern Barrens](https://wowpedia.fandom.com/wiki/Northern_Barrens \"Northern Barrens\") .",
+    "declaredVerified": false
+  },
+  {
+    "source": 62,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_longshore_demand.md",
+    "quote": "Oh, me word is good, friend. I used ta be a real Baron, ye know.",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 63,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_candren.md",
+    "quote": "**Lord Candren** is the [quartermaster](/wiki/Quartermaster) for [Gilneas](/wiki/Gilneas_(faction)). He is found in [Darnassus](/wiki/Darnassus)'s [Temple Gardens](/wiki/Temple_Gardens), near the [flight master](/wiki/Flight_master).",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 64,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_isiden.md",
+    "quote": "Isiden Perenolde[1] was the nephew of Lord Aiden Perenolde, King of Alterac. When Alterac was placed under martial law by order of King Terenas, Isiden fled to Gilneas, where he hoped to rally support.[2] He was eventually backed by Genn Greymane, Gilneas' king, as the matter of the succession began to heat up.[3]",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 46,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-primary.txt",
+    "quote": "Genn and several of the most influential Gilnean nobles had made the trip",
+    "declaredVerified": false
+  },
+  {
+    "source": 50,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_ashbury.md",
+    "quote": "He and [Genn](/wiki/Genn) grew up together, and he was once one of the king's most trusted friends. He was present in the [Capital City](/wiki/Capital_City) to create the [Alliance of Lordaeron](/wiki/Alliance_of_Lordaeron) and agreed with [Lord Godfrey](/wiki/Lord_Godfrey), to send only a token army.",
+    "declaredVerified": false
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "By the start of the Second War Gilneas had become recognized as a significant entity in the political landscape of Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "At the time of the Second War, Lord Crowley was a nobleman whose lands and people were in northern Gilneas, including some land outside of the border that would later be known as the Greymane Wall.",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "It is ruled by King Genn Greymane of the Greymane family.",
+    "declaredVerified": true
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 36,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Dalaran__kingdom_action_render.md",
+    "quote": "Dalaran, officially the Magocracy of Dalaran,[5] is a small, magocratic nation founded originally as a city-state by Arathi magi near the coast of Lordamere Lake in Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 36,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Dalaran__kingdom_action_render.md",
+    "quote": "During the Second War, Dalaran pledged to support the Alliance of Lordaeron and gave large amounts of aid, magi and sorcerers to the war effort.",
+    "declaredVerified": true
+  },
+  {
+    "source": 37,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Antonidas.md",
+    "quote": "During the Second War, he pledged loyalty to the Alliance of Lordaeron on behalf of Dalaran, in the war against the orcs.",
+    "declaredVerified": true
+  },
+  {
+    "source": 39,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Capital_City.md",
+    "quote": "Capital City[1][2][3][4][5][6][7] or simply Lordaeron City[8] and Lordaeron[9][10] was the capital city of the Kingdom of Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 39,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Capital_City.md",
+    "quote": "The city was the center of the Alliance of Lordaeron during the Second War, and so prospered as the effective capital of humanity.",
+    "declaredVerified": true
+  },
+  {
+    "source": 39,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Capital_City.md",
+    "quote": "Ruler(s) | King Terenas Menethil II † | | Languages | Common, Thalassian, Dwarven, Gnomish | | Faiths | Holy Light | | Affiliation | Kingdom of Lordaeron, Church of Light, Alliance of Lordaeron | | Location | Southern Tirisfal Glades | | Status | Ruined | Capital City[1][2][3][4][5][6][7] or simply Lordaeron City[8] and Lordaeron[9][10] was the capital city of the Kingdom of Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "By the start of the Second War Gilneas had become recognized as a significant entity in the political landscape of Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "At the time of the Second War, Lord Crowley was a nobleman whose lands and people were in northern Gilneas, including some land outside of the border that would later be known as the Greymane Wall.",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "It is ruled by King Genn Greymane of the Greymane family.",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "He owned the towns of Pyrewood Village and Ambermill.",
+    "declaredVerified": true
+  },
+  {
+    "source": 35,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Ambermill.md",
+    "quote": "## History [ [](https://auth.fandom.com/signin?redirect=https%3A%2F%2Fwowpedia.fandom.com%2Fwiki%2FAmbermill%3Faction%3Dedit%26section%3D1&uselang=en&metadata=article-registration-edit-article-section \"Sign in to edit\") ]\nPrior to the advent of the [Third War](https://wowpedia.fandom.com/wiki/Third_War \"Third War\") , Ambermill was a relatively unimportant site in the Silverpine Forest and was mainly used for [lumber](https://wowpedia.fandom.com/wiki/Lumber \"Lumber\") harvesting, but",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "By the start of the Second War Gilneas had become recognized as a significant entity in the political landscape of Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "At the time of the Second War, Lord Crowley was a nobleman whose lands and people were in northern Gilneas, including some land outside of the border that would later be known as the Greymane Wall.",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "It is ruled by King Genn Greymane of the Greymane family.",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "By the start of the Second War Gilneas had become recognized as a significant entity in the political landscape of Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "At the time of the Second War, Lord Crowley was a nobleman whose lands and people were in northern Gilneas, including some land outside of the border that would later be known as the Greymane Wall.",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "It is ruled by King Genn Greymane of the Greymane family.",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "He owned the towns of Pyrewood Village and Ambermill.",
+    "declaredVerified": true
+  },
+  {
+    "source": 35,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Ambermill.md",
+    "quote": "## History [ [](https://auth.fandom.com/signin?redirect=https%3A%2F%2Fwowpedia.fandom.com%2Fwiki%2FAmbermill%3Faction%3Dedit%26section%3D1&uselang=en&metadata=article-registration-edit-article-section \"Sign in to edit\") ]\nPrior to the advent of the [Third War](https://wowpedia.fandom.com/wiki/Third_War \"Third War\") , Ambermill was a relatively unimportant site in the Silverpine Forest and was mainly used for [lumber](https://wowpedia.fandom.com/wiki/Lumber \"Lumber\") harvesting, but",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "By the start of the Second War Gilneas had become recognized as a significant entity in the political landscape of Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "At the time of the Second War, Lord Crowley was a nobleman whose lands and people were in northern Gilneas, including some land outside of the border that would later be known as the Greymane Wall.",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "It is ruled by King Genn Greymane of the Greymane family.",
+    "declaredVerified": true
+  },
+  {
+    "source": 38,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Fenris_Isle.md",
+    "quote": "Fenris Isle was once home to a thriving military outpost of the kingdom of Lordaeron called Fenris Keep.",
+    "declaredVerified": true
+  },
+  {
+    "source": 36,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Dalaran__kingdom_action_render.md",
+    "quote": "Dalaran, officially the Magocracy of Dalaran,[5] is a small, magocratic nation founded originally as a city-state by Arathi magi near the coast of Lordamere Lake in Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 36,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Dalaran__kingdom_action_render.md",
+    "quote": "During the Second War, Dalaran pledged to support the Alliance of Lordaeron and gave large amounts of aid, magi and sorcerers to the war effort.",
+    "declaredVerified": true
+  },
+  {
+    "source": 37,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Antonidas.md",
+    "quote": "During the Second War, he pledged loyalty to the Alliance of Lordaeron on behalf of Dalaran, in the war against the orcs.",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "By the start of the Second War Gilneas had become recognized as a significant entity in the political landscape of Lordaeron.",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "At the time of the Second War, Lord Crowley was a nobleman whose lands and people were in northern Gilneas, including some land outside of the border that would later be known as the Greymane Wall.",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_action_render.md",
+    "quote": "It is ruled by King Genn Greymane of the Greymane family.",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_crowley.md",
+    "quote": "At the time of the [Second War](/wiki/Second_War), Lord Crowley was a nobleman whose lands and people were in northern [Gilneas](/wiki/Gilneas_(kingdom)), including some land outside of the border that would later be known as the [Greymane Wall](/wiki/Greymane_Wall). He owned the towns of [Pyrewood Village](/wiki/Pyrewood_Village) and [Ambermill](/wiki/Ambermill).",
+    "declaredVerified": false
+  },
+  {
+    "source": 50,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_ashbury.md",
+    "quote": "He and [Genn](/wiki/Genn) grew up together, and he was once one of the king's most trusted friends. He was present in the [Capital City](/wiki/Capital_City) to create the [Alliance of Lordaeron](/wiki/Alliance_of_Lordaeron) and agreed with [Lord Godfrey](/wiki/Lord_Godfrey), to send only a token army.",
+    "declaredVerified": false
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "He owned the towns of Pyrewood Village and Ambermill.",
+    "declaredVerified": true
+  },
+  {
+    "source": 35,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Ambermill.md",
+    "quote": "## History [ [](https://auth.fandom.com/signin?redirect=https%3A%2F%2Fwowpedia.fandom.com%2Fwiki%2FAmbermill%3Faction%3Dedit%26section%3D1&uselang=en&metadata=article-registration-edit-article-section \"Sign in to edit\") ]\nPrior to the advent of the [Third War](https://wowpedia.fandom.com/wiki/Third_War \"Third War\") , Ambermill was a relatively unimportant site in the Silverpine Forest and was mainly used for [lumber](https://wowpedia.fandom.com/wiki/Lumber \"Lumber\") harvesting, but",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_.md",
+    "quote": "The construction of the Wall was completed prior to the Third War.",
+    "declaredVerified": true
+  },
+  {
+    "source": 2,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Gilneas__kingdom_.md",
+    "quote": "Years later, while the Alliance of Lordaeron was unaware of the death cults forming in their lands before, the departure of Quel'Thalas who stated that the humans' poor leadership had led to the burning of their forests during the Second War,[15] alongside the liberation of the orcs from internment camps by Thrall, led to the departure of Gilneas and its military from the Alliance.[16] Consequently, King Greymane started the construction of the Greymane Wall, an enormous stone barrier that now separates Gilneas from Lordaeron, attempting to forever remove his nation from what he considered \"other people's troubles\".",
+    "declaredVerified": true
+  },
+  {
+    "source": 32,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-evidence/wowpedia-Darius_Crowley.md",
+    "quote": "At the time of the Second War, Lord Crowley was a nobleman whose lands and people were in northern Gilneas, including some land outside of the border that would later be known as the Greymane Wall.",
+    "declaredVerified": true
+  },
+  {
+    "source": 3,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_nobles_full.md",
+    "quote": "The [Crowley](https://wowpedia.fandom.com/wiki/Darius_Crowley) family ruled over the lands that constituted both [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) (and as a result, [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep)) and [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill),[4] making [Baron Silverlaine](https://wowpedia.fandom.com/wiki/Baron_Silverlaine) a vassal of theirs as a result. [Lord Mayor Morrison](https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison) was also the mayor of Pyrewood, placing him implicitly under Crowley's service. [Lord Harford](https://wowpedia.fandom.com/wiki/Lord_Harford) was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well. The [Marley](https://wowpedia.fandom.com/wiki/Lord_Marley) family ruled over an unspecified province near Gilneas' borders, which at the time stretched to about the proximity of the [Deep Elem Mine](https://wowpedia.fandom.com/wiki/Deep_Elem_Mine). His lands were deemed ill-suited as they lacked natural boundaries to assist with the wall. Given that his lands would not have drawn issue with the Crowleys, his territories were likely near Deep Elem Mine; perhaps [Ambermill](https://wowpedia.fandom.com/wiki/Ambermill) itself and the surrounding land, which would have made him subservient to Crowley himself. Marley notably remained behind the Greymane Wall in spite of this.",
+    "declaredVerified": false
+  },
+  {
+    "source": 55,
+    "path": "/Users/daniil_si/.hermes/cache/scratch/gilneas-nobles-source-wp_walden.md",
+    "quote": "**Lord Walden** was a [human](/wiki/Human) nobleman from eastern [Gilneas](/wiki/Gilneas_peninsula).",
+    "declaredVerified": false
+  }
+]

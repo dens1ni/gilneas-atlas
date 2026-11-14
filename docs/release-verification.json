@@ -1,0 +1,18 @@
+[
+  {
+    "prefix": "/",
+    "points": 39,
+    "nobles": 17,
+    "asset_errors": [],
+    "page_errors": [],
+    "editor_reload": "passed"
+  },
+  {
+    "prefix": "/gilneas-atlas/",
+    "points": 39,
+    "nobles": 17,
+    "asset_errors": [],
+    "page_errors": [],
+    "editor_reload": "passed"
+  }
+]

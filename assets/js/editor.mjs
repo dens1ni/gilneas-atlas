@@ -1,14 +1,23 @@
 import { makeId, upsertObject, updateLocation, removeObject, normalizeData, removeLocation, upsertFaction, deleteFaction,
   upsertTerritory, removeTerritory, validatePolygon } from './model.mjs';
 import { svgIcon } from './icons.mjs';
+import { populateTypeSelect } from './object-types.mjs';
+import { isEditingEnabled, getEditingRevision } from './edit-mode.mjs';
+import { initLocationLinksEditor } from './location-links-ui.mjs';
 
 /** Editor transactions are delegated to the parent; no storage is owned here. */
 export function initEditor(ctx) {
+  const editingEnabled = () => ctx.isEditingEnabled?.() ?? isEditingEnabled();
   const byId = id => document.getElementById(id);
+  populateTypeSelect(byId('object-type'));
+  populateTypeSelect(byId('location-type'), { scope: 'location' });
+  byId('object-owner').placeholder = 'Не установлен';
+  byId('modifier-fields').querySelector('h3').textContent = 'Модификаторы объекта';
   let objectDraft = null;
   let locationDraft = null;
   let mapTask = null;
   const getUI = () => ctx.getUI?.() ?? ctx.ui;
+  const locationLinksEditor = initLocationLinksEditor({ getData: ctx.getData });
 
   function showDialog(id, titleId) {
     document.querySelectorAll('dialog[open]').forEach(dialog => dialog.close());
@@ -58,7 +67,7 @@ export function initEditor(ctx) {
   }
 
   function appendModifier(kind) {
-    if (!objectDraft) return;
+    if (!editingEnabled() || !objectDraft) return;
     objectDraft.modifiers = [...objectDraft.modifiers, { id: makeId('modifier'), kind, text: '' }];
     renderModifiers();
     byId('modifier-list').lastElementChild.querySelector('textarea').focus();
@@ -75,10 +84,11 @@ export function initEditor(ctx) {
   function updateObjectType() {
     const type = byId('object-type').value;
     byId('object-amount-field').hidden = type !== 'resource';
-    byId('modifier-fields').hidden = type !== 'building';
+    byId('modifier-fields').hidden = false;
   }
 
   function refresh() {
+    locationLinksEditor.refresh();
     const location = ctx.getData().locations.find(record => record.id === ctx.getSelectedId());
     byId('editor-selection-name').textContent = location?.name ?? 'Не выбрано';
     ['location-edit', 'location-move', 'object-create', 'location-delete'].forEach(id => { byId(id).disabled = !location; });
@@ -115,6 +125,7 @@ export function initEditor(ctx) {
   }
 
   function beginPointTask(message, callback) {
+    if (!editingEnabled()) return;
     cancelMapTask();
     const ui = getUI();
     if (!ui?.setMapInteraction) {
@@ -126,6 +137,7 @@ export function initEditor(ctx) {
     byId('map-task-text').textContent = message;
     byId('map-task').hidden = false;
     ui.setMapInteraction(point => {
+      if (!editingEnabled()) { cancelMapTask(); return; }
       if (!validPoint(point)) return;
       const picked = point.map(Math.round);
       cancelMapTask();
@@ -135,11 +147,13 @@ export function initEditor(ctx) {
   }
 
   function fillLocation(location, creating = false) {
+    if (!editingEnabled()) return;
     locationDraft = { id: location.id, creating };
     byId('location-form').reset();
+    locationLinksEditor.fill(location);
     byId('location-form-title').textContent = creating ? 'Новая локация' : `Досье · ${location.name}`;
     byId('location-name').value = location.name;
-    byId('location-type').value = location.type;
+    populateTypeSelect(byId('location-type'), { scope: 'location', currentType: location.type });
     populateFactions(byId('location-faction'), location.faction ?? '__independent__');
     byId('location-owner').value = location.owner ?? '';
     byId('location-description').value = location.description ?? '';
@@ -152,6 +166,7 @@ export function initEditor(ctx) {
   }
 
   function editLocation(id) {
+    if (!editingEnabled()) return;
     const location = ctx.getData().locations.find(record => record.id === id);
     if (!location) {
       ctx.toast?.('Выберите существующую локацию.');
@@ -161,6 +176,7 @@ export function initEditor(ctx) {
   }
 
   function createLocation() {
+    if (!editingEnabled()) return;
     beginPointTask('Нажмите на активную часть карты, чтобы разместить новую локацию. Esc — отмена.', point => {
       fillLocation({ id: makeId('location'), name: '', type: 'settlement', faction: null, owner: '',
         description: '', x: point[0], y: point[1], capital: false, provenance: { confidence: 'custom' } }, true);
@@ -168,6 +184,7 @@ export function initEditor(ctx) {
   }
 
   function moveLocation() {
+    if (!editingEnabled()) return;
     const id = ctx.getSelectedId();
     const location = ctx.getData().locations.find(record => record.id === id);
     if (!location) {
@@ -186,6 +203,7 @@ export function initEditor(ctx) {
   }
 
   function openObject(locationId, objectId = null) {
+    if (!editingEnabled()) return;
     const location = ctx.getData().locations.find(record => record.id === locationId);
     if (!location) {
       ctx.toast?.('Выберите существующую локацию.');
@@ -200,7 +218,7 @@ export function initEditor(ctx) {
       modifiers: (obj?.modifiers ?? []).map(modifier => ({ ...modifier })) };
     byId('object-form').reset();
     byId('object-form-title').textContent = `${obj ? 'Изменить объект' : 'Новый объект'} · ${location.name}`;
-    byId('object-type').value = obj?.type ?? 'building';
+    populateTypeSelect(byId('object-type'), { currentType: obj?.type ?? 'building' });
     byId('object-name').value = obj?.name ?? '';
     byId('object-description').value = obj?.description ?? '';
     byId('object-owner').value = obj?.owner ?? '';
@@ -217,10 +235,13 @@ export function initEditor(ctx) {
   function editObject(locationId, objectId) { openObject(locationId, objectId); }
 
   async function deleteObject(locationId, objectId) {
+    if (!editingEnabled()) return;
+    const revision = getEditingRevision();
     try {
       const obj = ctx.getData().locations.find(record => record.id === locationId)?.objects.find(record => record.id === objectId);
       if (!obj) throw new Error('Объект больше не существует.');
       if (!await ctx.confirm('Удалить объект?', `«${obj.name}» и его модификаторы будут удалены из владения.`)) return;
+      if (!editingEnabled() || revision !== getEditingRevision()) return;
       ctx.replaceData(removeObject(ctx.getData(), locationId, objectId));
       ctx.toast?.('Объект удалён.');
     } catch (error) {
@@ -230,11 +251,14 @@ export function initEditor(ctx) {
 
   byId('modifier-bonus-add').addEventListener('click', () => appendModifier('bonus'));
   async function deleteLocation() {
+    if (!editingEnabled()) return;
+    const revision = getEditingRevision();
     try {
       const id = ctx.getSelectedId();
       const location = ctx.getData().locations.find(record => record.id === id);
       if (!location) throw new Error('Выберите существующую локацию.');
       if (!await ctx.confirm('Удалить локацию?', `«${location.name}» и все её объекты будут удалены. Области влияния останутся.`)) return;
+      if (!editingEnabled() || revision !== getEditingRevision()) return;
       ctx.replaceData(removeLocation(ctx.getData(), id));
       ctx.onSelect?.(null);
       byId('editor').close();
@@ -249,12 +273,13 @@ export function initEditor(ctx) {
   byId('object-type').addEventListener('change', updateObjectType);
   byId('location-form').addEventListener('submit', event => {
     event.preventDefault();
-    if (!locationDraft) return;
+    if (!editingEnabled() || !locationDraft) return;
     try {
       const data = ctx.getData();
       const location = data.locations.find(record => record.id === locationDraft.id);
       if (!locationDraft.creating && !location) throw new Error('Локация больше не существует.');
       const patch = {
+        ...locationLinksEditor.readPatch(),
         name: byId('location-name').value,
         type: byId('location-type').value,
         faction: byId('location-faction').value === '__independent__' ? null : byId('location-faction').value,
@@ -262,7 +287,8 @@ export function initEditor(ctx) {
         description: byId('location-description').value,
         x: Number(byId('location-x').value),
         y: Number(byId('location-y').value),
-        capital: byId('location-capital').checked,
+        ...(locationDraft.creating || Object.hasOwn(location, 'capital') || byId('location-capital').checked
+          ? { capital: byId('location-capital').checked } : {}),
         provenance: { ...location?.provenance, confidence: byId('location-confidence').value },
       };
       const id = locationDraft.id;
@@ -279,7 +305,7 @@ export function initEditor(ctx) {
   });
   byId('object-form').addEventListener('submit', event => {
     event.preventDefault();
-    if (!objectDraft) return;
+    if (!editingEnabled() || !objectDraft) return;
     try {
       let data = ctx.getData();
       const location = data.locations.find(record => record.id === objectDraft.locationId);
@@ -293,9 +319,12 @@ export function initEditor(ctx) {
         name: byId('object-name').value,
         description: byId('object-description').value,
         owner: byId('object-owner').value,
-        modifiers: byId('object-type').value === 'building' ? objectDraft.modifiers.map(modifier => ({ ...modifier })) : [],
+        modifiers: objectDraft.modifiers.map(modifier => ({ ...modifier })),
       };
-      if (obj.type === 'resource') obj.amount = byId('object-amount').value;
+      const amount = byId('object-amount').value;
+      // Keep legacy numeric/null stock literal unless the author edits its text.
+      const unchangedAmount = existing && Object.hasOwn(existing, 'amount') && amount === String(existing.amount ?? '');
+      if (!unchangedAmount && (obj.type === 'resource' || Object.hasOwn(obj, 'amount') || amount !== '')) obj.amount = amount;
       const faction = byId('object-faction').value;
       if (faction === '__inherit__') {
         delete obj.faction;
@@ -353,6 +382,7 @@ export function initEditor(ctx) {
   }
 
   function editHouse(id) {
+    if (!editingEnabled()) return;
     const faction = ctx.getData().factions.find(record => record.id === id);
     if (!faction) { setError('house-error', 'Дом больше не существует.'); return; }
     byId('house-id').value = id;
@@ -409,6 +439,7 @@ export function initEditor(ctx) {
   }
 
   function openHouses() {
+    if (!editingEnabled()) return;
     renderHouses();
     newHouse();
     const heading = byId('houses-editor').querySelector('h2');
@@ -417,10 +448,13 @@ export function initEditor(ctx) {
   }
 
   async function deleteHouse(id) {
+    if (!editingEnabled()) return;
+    const revision = getEditingRevision();
     try {
       const faction = ctx.getData().factions.find(record => record.id === id);
       if (!faction) throw new Error('Дом больше не существует.');
       if (!await ctx.confirm('Удалить дом?', `«${faction.name}» будет удалён, если у него нет назначений и вассалов.`)) return;
+      if (!editingEnabled() || revision !== getEditingRevision()) return;
       ctx.replaceData(deleteFaction(ctx.getData(), id));
       renderHouses();
       newHouse();
@@ -438,6 +472,7 @@ export function initEditor(ctx) {
 
   byId('house-form').addEventListener('submit', event => {
     event.preventDefault();
+    if (!editingEnabled()) return;
     try {
       const id = byId('house-id').value || makeId('house');
       const faction = { id, name: byId('house-name').value, parent: byId('house-parent').value || null,
@@ -509,6 +544,7 @@ export function initEditor(ctx) {
   }
 
   function updateTerritory(id, patch) {
+    if (!editingEnabled()) return;
     try {
       const data = ctx.getData();
       const territory = data.territories.find(record => record.id === id);
@@ -522,10 +558,13 @@ export function initEditor(ctx) {
   }
 
   async function deleteTerritory(id) {
+    if (!editingEnabled()) return;
+    const revision = getEditingRevision();
     try {
       const territory = ctx.getData().territories.find(record => record.id === id);
       if (!territory) throw new Error('Область больше не существует.');
       if (!await ctx.confirm('Удалить область?', `«${territory.name}» будет удалена. Локации и их владельцы не изменятся.`)) return;
+      if (!editingEnabled() || revision !== getEditingRevision()) return;
       ctx.replaceData(removeTerritory(ctx.getData(), id));
       renderTerritories();
       setError('territory-error');
@@ -537,6 +576,7 @@ export function initEditor(ctx) {
   }
 
   function openTerritories() {
+    if (!editingEnabled()) return;
     renderTerritories();
     byId('territory-form').reset();
     populateFactions(byId('territory-faction'), ctx.getData().factions[0]?.id ?? '__independent__');
@@ -575,6 +615,7 @@ export function initEditor(ctx) {
   }
 
   function beginTerritory(territory, replacing = false) {
+    if (!editingEnabled()) return;
     cancelMapTask();
     const ui = getUI();
     if (!ui?.setMapInteraction) { setError('territory-error', 'Карта ещё не готова.'); return; }
@@ -598,7 +639,7 @@ export function initEditor(ctx) {
   }
 
   function finishTerritory() {
-    if (mapTask?.kind !== 'territory') return;
+    if (!editingEnabled() || mapTask?.kind !== 'territory') return;
     try {
       const first = mapTask.points[0], last = mapTask.points.at(-1);
       // A clicked closing vertex is implied by SVG polygon and the model.
@@ -619,6 +660,7 @@ export function initEditor(ctx) {
 
   byId('territory-form').addEventListener('submit', event => {
     event.preventDefault();
+    if (!editingEnabled()) return;
     const faction = byId('territory-faction').value;
     beginTerritory({ id: makeId('territory'), name: byId('territory-name').value,
       faction: faction === '__independent__' ? null : faction });
@@ -654,11 +696,11 @@ export function initEditor(ctx) {
 
   byId('export-site').addEventListener('click', event => parentAction(event.currentTarget, ctx.onExportSite));
   byId('export-json').addEventListener('click', event => parentAction(event.currentTarget, ctx.onExportJson));
-  byId('draft-reset').addEventListener('click', event => parentAction(event.currentTarget, ctx.onReset));
+  byId('draft-reset').addEventListener('click', event => { if (editingEnabled()) parentAction(event.currentTarget, ctx.onReset); });
   byId('import-json').addEventListener('change', async event => {
     const input = event.currentTarget;
     const file = input.files?.[0];
-    if (!file) return;
+    if (!file || !editingEnabled()) { input.value = ''; return; }
     input.disabled = true;
     try {
       await parentAction(null, () => ctx.onImport(file));
@@ -674,7 +716,7 @@ export function initEditor(ctx) {
   byId('location-edit').addEventListener('click', () => editLocation(ctx.getSelectedId()));
   byId('object-create').addEventListener('click', () => addObject(ctx.getSelectedId()));
   byId('houses-open').addEventListener('click', openHouses);
-  byId('territories-open').addEventListener('click', () => typeof ctx.onOpenTerritories==='function'?ctx.onOpenTerritories():openTerritories());
+  byId('territories-open').addEventListener('click', () => { if (editingEnabled()) typeof ctx.onOpenTerritories==='function'?ctx.onOpenTerritories():openTerritories(); });
   byId('location-move').addEventListener('click', moveLocation);
   byId('location-delete').addEventListener('click', deleteLocation);
   byId('map-task-cancel').addEventListener('click', cancelMapTask);
@@ -694,5 +736,15 @@ export function initEditor(ctx) {
     if (!byId('location-editor').open) locationDraft = null;
   });
 
-  return { open, editLocation, addObject, editObject, deleteObject, openHouses, openTerritories, refresh };
+  function cancelEditing() {
+    cancelMapTask();
+    objectDraft = null; locationDraft = null;
+    for (const id of ['location-editor', 'object-editor', 'houses-editor', 'territory-editor']) {
+      const dialog = byId(id);
+      if (dialog.open) dialog.close();
+      dialog.querySelectorAll('form').forEach(form => form.reset());
+    }
+  }
+  window.addEventListener('gilneas-edit-mode-changed', event => { if (!event.detail?.enabled) cancelEditing(); });
+  return { open, editLocation, addObject, editObject, deleteObject, openHouses, openTerritories, refresh, cancelEditing };
 }

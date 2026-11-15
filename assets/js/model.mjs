@@ -1,4 +1,9 @@
 import { validate as validateTerritoryGrid } from './territory-engine.mjs';
+import { OBJECT_TYPE_IDS } from './object-types.mjs';
+import { validateRoyalCouncil } from './royal-council.mjs';
+import { validateWallConstruction } from './wall-progress.mjs';
+import { validateNobleLifeStatus } from './noble-life-status.mjs';
+import { validateLocationLinks } from './location-links.mjs';
 
 const clone = (value, ancestors = new Set(), path = 'snapshot') => {
   if (value && typeof value === 'object') {
@@ -144,6 +149,9 @@ export function removeLocation(data, id) {
   return mutateSnapshot(data, next => {
     findLocation(next, id);
     next.locations = next.locations.filter(l => l.id !== id);
+    for (const location of next.locations) {
+      if (Object.hasOwn(location, 'linkedLocationIds')) location.linkedLocationIds = location.linkedLocationIds.filter(targetId => targetId !== id);
+    }
   });
 }
 
@@ -164,6 +172,8 @@ export function deleteFaction(data, id) {
     const referenced = next.factions.some(f => f.parent === id) ||
       next.locations.some(l => l.faction === id || l.objects.some(o => o.faction === id)) ||
       next.territories.some(t => t.faction === id) ||
+      next.nobles.some(n => n.house === id) ||
+      (next.royalCouncil?.members || []).some(member => member.kind === 'faction' && member.refId === id) ||
       Boolean(owner && grid.cells.some(value => value === owner));
     if (referenced) throw new Error(`Фракция используется: ${id}`);
     if (owner) {
@@ -328,6 +338,7 @@ export function normalizeData(raw) {
   data.nobles.forEach(n => {
     claim(n, 'знать');
     if (typeof n.name !== 'string' || !n.name.trim().length) throw new Error(`Некорректное имя персонажа: ${n.id}`);
+    validateNobleLifeStatus(n);
     for (const field of ['title', 'description', 'appearance', 'socialStatus', 'overlordText', 'allegiance', 'holdingsNote', 'wowpediaUrl']) {
       if (Object.hasOwn(n, field) && typeof n[field] !== 'string') throw new Error(`Некорректное поле персонажа: ${field} (${n.id})`);
     }
@@ -357,6 +368,13 @@ export function normalizeData(raw) {
   (data.meta.chronicle ?? []).forEach(validateSources);
   data.locations.forEach(location => { validateSources(location); location.objects.forEach(validateSources); });
   data.nobles.forEach(validateSources);
+  data.nobles.forEach(noble => {
+    if (noble.fieldSources && Object.hasOwn(noble.fieldSources, 'lifeStatus')) {
+      const references = noble.fieldSources.lifeStatus;
+      if (!Array.isArray(references)) throw new Error(`Ожидается массив источников fieldSources.lifeStatus (${noble.id})`);
+      for (const id of references) if (!sourceIds.has(id)) throw new Error(`Неизвестный источник fieldSources.lifeStatus (${noble.id}): ${String(id)}`);
+    }
+  });
   const validateProvenance = record => {
     const provenance = record.provenance;
     if (provenance && Object.hasOwn(provenance, 'sources')) {
@@ -375,6 +393,12 @@ export function normalizeData(raw) {
   }
   data.nobles.forEach(validateProvenance);
   data.factions = data.factions.map(f => {
+    if (Object.hasOwn(f,'heraldry')) {
+      const heraldry=f.heraldry;
+      if (!heraldry || typeof heraldry!=='object' || Array.isArray(heraldry) || typeof heraldry.symbol!=='string' || !heraldry.symbol.length) throw new Error('Некорректный герб фракции (heraldry)');
+      for (const field of ['field','edge','device']) if (Object.hasOwn(heraldry,field) && (typeof heraldry[field]!=='string' || !colorPattern.test(heraldry[field]))) throw new Error(`Некорректный цвет герба (heraldry.${field})`);
+      for (const field of ['origin','note','source']) if (Object.hasOwn(heraldry,field) && typeof heraldry[field]!=='string') throw new Error(`Некорректное поле герба (heraldry.${field})`);
+    }
     if (typeof f.name !== 'string' || !f.name.length || !colorPattern.test(f.color)) throw new Error('Некорректная фракция');
     return { ...f, name: text(f.name, 160), parent: f.parent ?? null };
   });
@@ -390,7 +414,7 @@ export function normalizeData(raw) {
     if (!Number.isFinite(l.x) || !Number.isFinite(l.y) || l.x < 0 || l.y < 0 || l.x > data.meta.width || l.y > data.meta.height) throw new Error('Точка вне карты');
     l.objects = l.objects.map(o => {
       if (Object.hasOwn(o, 'faction') && o.faction !== null && !factionIds.has(o.faction)) throw new Error('Неизвестная фракция объекта');
-      if (!['building', 'resource', 'landmark'].includes(o.type)) throw new Error('Неверный тип объекта');
+      if (!OBJECT_TYPE_IDS.includes(o.type)) throw new Error('Неверный тип объекта');
       if (typeof o.name !== 'string' || !o.name.length) throw new Error('Отсутствует название объекта');
       o.modifiers = o.modifiers.map(m => {
         if (!['bonus', 'penalty'].includes(m.kind)) throw new Error('Неверный вид модификатора');
@@ -400,6 +424,9 @@ export function normalizeData(raw) {
     });
     return { ...l, name: text(l.name, 160), description: text(l.description), owner: text(l.owner, 160), faction: l.faction ?? null, type: l.type ?? 'settlement' };
   });
+  validateLocationLinks(data);
+  if (Object.hasOwn(data.meta,'wallConstruction')) validateWallConstruction(data.meta.wallConstruction,{claim,validateSources});
+  if (Object.hasOwn(data,'royalCouncil')) validateRoyalCouncil(data.royalCouncil,data,{claim,validateSources});
   data.territories.forEach(t => {
     if (!factionIds.has(t.faction)) throw new Error('Неизвестная фракция территории');
     validatePolygon(t.points);

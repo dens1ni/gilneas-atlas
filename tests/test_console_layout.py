@@ -10,6 +10,7 @@ class ConsoleLayout(unittest.TestCase):
   try:
    with sync_playwright() as p:
     b=p.chromium.launch();page=b.new_page();page.goto(f'http://127.0.0.1:{srv.server_port}/');page.wait_for_function('window.gilneasApp?.ready')
+    page.locator('#editor-open').click();page.locator('label:has(#editing-enabled)').click();page.locator('[data-close=editor]').click()
     for width,height in [(1440,1000),(390,844),(360,780),(844,390)]:
      page.set_viewport_size({'width':width,'height':height});page.wait_for_timeout(80)
      for dialog,method in [('houses-editor','openHouses'),('territory-editor','openTerritories')]:

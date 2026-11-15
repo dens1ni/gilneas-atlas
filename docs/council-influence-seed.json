@@ -1,0 +1,1762 @@
+{
+  "version": 1,
+  "personCount": 17,
+  "people": [
+    {
+      "memberId": "council-noble-genn",
+      "refId": "noble-genn",
+      "influence": {
+        "party": 100,
+        "kingdom": 100
+      },
+      "basis": "scenario",
+      "holdings": [
+        "gilneas-city",
+        "greymane-manor",
+        "cathedral-quarter",
+        "lights-dawn-cathedral",
+        "greymane-court",
+        "merchant-square",
+        "military-district",
+        "stoneward-prison",
+        "keel-harbor",
+        "duskhaven",
+        "crowley-orchard",
+        "crowley-stable-grounds",
+        "hayward-fishery",
+        "hammond-farmstead",
+        "allen-farmstead",
+        "emberstone-village",
+        "emberstone-mine",
+        "stormglen",
+        "blackwald",
+        "taldoren",
+        "bradshaw-mill",
+        "tempests-reach",
+        "aderics-repose",
+        "northgate-woods",
+        "northern-headlands",
+        "the-headlands",
+        "pyrewood",
+        "shadowfang",
+        "ambermill",
+        "galewatch-lighthouse"
+      ],
+      "sourceIds": [
+        48,
+        45,
+        46,
+        47,
+        3,
+        1,
+        2,
+        9,
+        10,
+        4,
+        5
+      ],
+      "note": "Король и глава роялистского направления; faction.ruler точно совпадает для gilneas и greymane. Столица — главная политическая опора. Общекоролевский охват не превращает владения Краули и Сребролена в личную собственность Генна. Поместье включено только по действующей домовой принадлежности с осторожным весом. Сырой сценарный результат 102 ограничен до 100; кварталы столицы и вассальные активы повторно не прибавлены.",
+      "uncertainty": [
+        "Буквальный location.owner для gilneas-city описывает текущую запись атласа; источник о столице сам по себе не доказывает частный земельный титул на город.",
+        "greymane-manor.owner пуст: позднее семейное владение известно, но дата здания до стены не доказана. Остальные пустые owners не заполняются.",
+        "Проект стены на 10/100 — авторский этап, не датированная реальная политическая шкала. Суверен не становится собственным советником.",
+        "Название партии авторское; текущий статус остаётся «король, участник Альянса», не изгнанник или бывший король."
+      ]
+    },
+    {
+      "memberId": "council-noble-darius",
+      "refId": "noble-darius",
+      "influence": {
+        "party": 94,
+        "kingdom": 84
+      },
+      "basis": "scenario",
+      "holdings": [
+        "crowley-orchard",
+        "crowley-stable-grounds",
+        "pyrewood",
+        "shadowfang",
+        "ambermill"
+      ],
+      "sourceIds": [
+        48,
+        32,
+        46,
+        3,
+        14,
+        15,
+        4,
+        2,
+        33,
+        40,
+        35
+      ],
+      "note": "Глава crowley, подтверждённый ранний советник и лидер интернационалистского направления. Пирвуд и Янтарная мельница прямо записаны за Дариусом и названы в ранней ретроспективе; два северных узла важнее малых хозяйств. Харизма и широкое влияние засвидетельствованы. Сад и конюшни имеют пустой owner и лишь осторожный сценарный вес через его дом. shadowfang виден в вассальной сфере, но его активный вес целиком оставлен Сребролену.",
+      "uncertainty": [
+        "Граница северного домена и население городков не измерены; сценарные контуры не канонический кадастр. Янтарная мельница не превращается в крупную столицу из-за слова town.",
+        "Сад и конюшни не датированы до стены и не дают Дариусу доказанный личный довоенный титул на каждое здание.",
+        "silverlaine.parent === crowley сохранён как авторская конфигурация; это не доказательство единого партийного голоса барона.",
+        "Сопоставление раннего влияния Краули и Годфри качественное. Баллы 84/80 не числа из рассказа; поздние мятеж, заключение и воргенская армия не учитываются.",
+        "Не известно, что именно он уже сказал на авторском этапе 10/100; stance — согласованная с лором стартовая линия, не датированный протокол."
+      ]
+    },
+    {
+      "memberId": "council-noble-godfrey",
+      "refId": "noble-godfrey",
+      "influence": {
+        "party": 85,
+        "kingdom": 80
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        46,
+        48,
+        49
+      ],
+      "note": "Глава godfrey и подтверждённый ранний советник. Главный вес даёт прямо засвидетельствованное командование постоянным ополчением, а не выдуманный замок. Ранняя сцена признаёт его широкое влияние, сопоставимое с Краули; при обсуждении стены он предлагает созвать совет. Известный по тексту собственный realm остаётся без канонического location ID, поэтому holdings пуст и нет земельного бонуса.",
+      "uncertainty": [
+        "В данных нет ни одного location.owner === «Винсент Годфри» и ни одной локации его домовой ветви. Размер ополчения и точные границы его realm не установлены.",
+        "Нельзя назначать ему shadowfang, keel-harbor, northgate-woods, northern-headlands или emberstone-village/emberstone-mine: поздний захват, соседство и военная должность не право собственности.",
+        "Бонус должности не утверждает, что этот же командный пост непрерывно сохранялся каждую дату между ранними сценами; отдельного календарного протокола нет.",
+        "Он сначала опасается разрыва торговли; высокий рейтинг не означает безусловной ранней вражды ко всему Альянсу или переноса будущей измены.",
+        "Не изображать безусловным противником всякой торговли с самого начала: его ограниченное участие в Альянсе первоначально служило торговым интересам."
+      ]
+    },
+    {
+      "memberId": "council-noble-ashbury",
+      "refId": "noble-ashbury",
+      "influence": {
+        "party": 60,
+        "kingdom": 55
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        46,
+        45,
+        50,
+        51,
+        3,
+        54
+      ],
+      "note": "Глава ashbury, подтверждённый ранний советник и доверенный друг Генна. Средний общекоролевский вес основан на придворной связи и семейной верности, не на неназванных замках. В текущем Council он роялист с partyBasis=scenario; отдельный голос за стену не доказан. Именных владений в атласе нет.",
+      "uncertainty": [
+        "Поддержка малого союзного войска не равна голосу за стену или отказу от торговли.",
+        "Довоенный частный домен не локализован. Позднее eastern lord и присутствие в tempests-reach не дают владения поселением.",
+        "Не приписывается автоматическое наследование того же титула от Лорда Эшбери I; отец не получает повторный активный рейтинг.",
+        "Ограниченная помощь Альянсу не равна одобрению прекращения всей торговли или строительства стены.",
+        "Поздняя измена не меняет его стартовую партийную линию."
+      ]
+    },
+    {
+      "memberId": "council-noble-marley",
+      "refId": "noble-marley",
+      "influence": {
+        "party": 0,
+        "kingdom": 30
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        48,
+        3,
+        "court-source-8",
+        52,
+        46
+      ],
+      "note": "Точное ruler-соответствие marley разрешает только существующую домовую власть. Приграничный домен прямо упомянут при планировании стены, но ни одной его локации или личного owner в атласе нет. Ограниченный рейтинг 30 отражает этот качественный контекст, не площадь, вымышленный замок или раннее кресло советника. Текущая партия neutral: party=0, в запас партий не входит.",
+      "uncertainty": [
+        "Домен существует в тексте, но размер, точный участок и канонические IDs неизвестны; holdings=[] не означает, что Марли вообще не имел земли.",
+        "Нельзя назначать Марли ambermill, deep-elem-mine или соседние северные локации по вики-гипотезе.",
+        "noble.title/socialStatus/description и faction.description называют советника, но без ранней даты. Текущий Council и исследование строже: advisor=false; неподтверждённая должность не получает бонус.",
+        "Каталожный титул советника не даёт отдельной даты службы до стены. advisor=false в строгом стартовом срезе; возможна явная сценарная галочка.",
+        "Не выводить голос из совместных поздних охот или выгоды от переноса маршрута."
+      ]
+    },
+    {
+      "memberId": "council-noble-archibald",
+      "refId": "noble-archibald",
+      "influence": {
+        "party": 0,
+        "kingdom": 0
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        45,
+        53,
+        "court-source-29",
+        46
+      ],
+      "note": "Исторический предшественник, active=false. Наследие Арчибальда объясняет традицию Генна, но не даёт действующего участника, владений или второй суммы за корону. Оба сценарных показателя равны нулю.",
+      "uncertainty": [
+        "Дата смерти не назначается. Прошлая монаршая власть не переносится на current faction.ruler и нынешний партийный запас.",
+        "party=neutral — техническая нераспределённость исключённой записи, не политический нейтралитет предка.",
+        "Точная дата смерти не доказана и не нужна для исключения из текущего совета."
+      ]
+    },
+    {
+      "memberId": "council-noble-ashbury-first",
+      "refId": "noble-ashbury-first",
+      "influence": {
+        "party": 0,
+        "kingdom": 0
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        3,
+        54,
+        "court-source-30",
+        46,
+        50
+      ],
+      "note": "Представитель двора Арчибальда, отец барона; active=false. Историческая служба не является ранним назначением при Генне. 0/0, без повторного влияния через сына или дом ashbury.",
+      "uncertainty": [
+        "Жизнь и служба при Генне после Второй войны не установлены; дата смерти и автоматическое наследование одного баронского титула не выводятся.",
+        "Не называть бароном I и не датировать смерть по текущему инфобоксу.",
+        "advisor=false означает не советник текущего Генна; historicalAdvisorTo=noble-archibald."
+      ]
+    },
+    {
+      "memberId": "council-noble-walden",
+      "refId": "noble-walden",
+      "influence": {
+        "party": 0,
+        "kingdom": 8
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        3,
+        55,
+        60,
+        51,
+        56
+      ],
+      "note": "Низкий сценарный резерв недатированного потенциального союзника. walden.ruler — пустая строка, поэтому house=walden не делает Уолдена главой дома и не открывает чужие владения. Поздние сведения о семье и доме у берега не задают его ранний личный актив. Нейтрал: party=0.",
+      "uncertainty": [
+        "Ранние титул, придворная служба, партия и собственник дома не установлены.",
+        "Поздний Walden house, помощь Годфри, измена и пребывание в tempests-reach не дают ранней должности, владения или роялистского бонуса.",
+        "Нельзя выводить роялизм, поддержку стены или раннее кресло из позднего сотрудничества с Годфри.",
+        "При включении в авторский пул пометить presenceBasis=scenario и votingSeat=false."
+      ]
+    },
+    {
+      "memberId": "council-noble-hewell",
+      "refId": "noble-hewell",
+      "influence": {
+        "party": 0,
+        "kingdom": 8
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        57,
+        58,
+        3,
+        26
+      ],
+      "note": "Недатированный потенциальный союзник без домовой власти и личного location.owner. Лишь малый сценарный резерв; поздняя верность Генну не используется как ранний партийный или советнический бонус. Нейтрал: party=0, holdings=[].",
+      "uncertainty": [
+        "Ранний приезд, должность и владение не подтверждены. Поздняя связь с tempests-reach или manor не доказывает собственность до стены. Имя и noble-hewell сохранены буквально.",
+        "Поздний отказ от измены — не доказательство членства в авторских роялистах до стены.",
+        "Не отождествлять Хьювелла с другим именем/новым домом; использовать существующий ID."
+      ]
+    },
+    {
+      "memberId": "council-noble-silverlaine",
+      "refId": "noble-silverlaine",
+      "influence": {
+        "party": 0,
+        "kingdom": 40
+      },
+      "basis": "scenario",
+      "holdings": [
+        "shadowfang"
+      ],
+      "sourceIds": [
+        3,
+        59,
+        60,
+        33,
+        34
+      ],
+      "note": "Локальное влияние названного хозяина каменной крепости. shadowfang.owner буквально совпадает с именем барона, silverlaine.ruler также совпадает. Крепость весит больше малого здания, но её точная датировка до стены неизвестна: вес уменьшен с 30 до 25. Рейтинг 40 ниже подтверждённых ранних государственных ролей; партия нейтральная, без автоматического голоса Краули.",
+      "uncertainty": [
+        "Поздняя ретроспектива подтверждает хозяина до падения крепости, не точный год до стены; location.provenance.ownerStatus=unknown сохранён.",
+        "Вассальная связь с Краули авторская и не создаёт личного голоса против стены. Пирвуд и Янтарная мельница не передаются барону.",
+        "Замковый актив учитывается один раз у барона; видимость у Дариуса и Генна в deriveNobleProfile не даёт им повторных земельных баллов.",
+        "В первичном Lord of His Pack не назван ни Сребролен, ни его вассалитет.",
+        "Наличие северной крепости не датирует баронское владение точно до выхода из Альянса.",
+        "Вассальная связь с Краули — принятая авторская конфигурация, а не подтверждённый стеновой голос."
+      ]
+    },
+    {
+      "memberId": "council-noble-longshore",
+      "refId": "noble-longshore",
+      "influence": {
+        "party": 0,
+        "kingdom": 8
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        3,
+        61,
+        62
+      ],
+      "note": "Малый сценарный резерв потенциального союзника. Личное позднее свидетельство о настоящем прежнем баронстве не датирует раннюю власть и не локализует участок. Ни дом, ни усадьба, ни корабль не добавлены. Нейтрал: party=0.",
+      "uncertainty": [
+        "Дата титула, довоенная земля и раннее участие неизвестны. Поздний Heedless, пиратство и отсечение стеной не дают активов или голоса в текущем срезе.",
+        "Не приписывать раннюю пиратскую роль или мнение о стене по его поздней судьбе.",
+        "То, что его позднее оставили за стеной, не означает, что ранее он голосовал против."
+      ]
+    },
+    {
+      "memberId": "council-noble-candren",
+      "refId": "noble-candren",
+      "influence": {
+        "party": 0,
+        "kingdom": 8
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        3,
+        63
+      ],
+      "note": "Малый резерв недатированного потенциального союзника. Поздняя интендантская должность не считается ранним административным ресурсом. Земли семьи в исследовании прямо не локализованы; власть и holdings не придуманы. Нейтрал: party=0.",
+      "uncertainty": [
+        "Дата титула, домен и назначение при Генне после Второй войны неизвестны. Снабжение гилнеасцев в позднем Дарнасе не раннее кресло советника.",
+        "Не поднимать позднего интенданта до советника Генна после Второй войны."
+      ]
+    },
+    {
+      "memberId": "council-noble-isiden",
+      "refId": "noble-isiden",
+      "influence": {
+        "party": 0,
+        "kingdom": 20
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        45,
+        64
+      ],
+      "note": "Послевоенный альтеракский претендент и гость с поддержкой Генна. Это даёт ограниченную дипломатическую значимость 20, но не гилнеасский суверенитет, имущество или должность. Притязание на Альтерак не владеемый объект. Нейтрал: party=0.",
+      "uncertainty": [
+        "Поддержка направлена от Генна к Исидену, обратная клятва или партийная принадлежность не доказана. Точная длительность пребывания, усадьба и дата участия на 10/100 неизвестны.",
+        "Кредит поддержки направлен от Генна к Исидену; обратную клятву, вассалитет или голос «за стену» источник не даёт.",
+        "Не утверждать, что он приехал именно на 10/100 или оставался до начала работ."
+      ]
+    },
+    {
+      "memberId": "council-noble-tulvan",
+      "refId": "noble-tulvan",
+      "influence": {
+        "party": 0,
+        "kingdom": 8
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        3,
+        "court-source-20",
+        "court-source-24",
+        65
+      ],
+      "note": "Малый резерв недатированной ранней версии личности из реестра. Ни графский домен, ни замок, ни ранняя военная должность не выведены из поздней биографии или прозвища. Нейтрал: party=0, holdings=[].",
+      "uncertainty": [
+        "Дата титула и земли семьи неизвестны. Арена, сила, форма воргена и «Earl of Evisceration» не ранние ресурсы и не основание назначения советником.",
+        "Не выдавать прозвище «Earl of Evisceration» за доказанное раннее графское владение.",
+        "Не переносить позднюю физическую силу, форму воргена или арену в ранний совет."
+      ]
+    },
+    {
+      "memberId": "council-noble-harford",
+      "refId": "noble-harford",
+      "influence": {
+        "party": 0,
+        "kingdom": 8
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        3,
+        "court-source-21",
+        "court-source-25",
+        66
+      ],
+      "note": "Малый резерв потенциального союзника без установленного раннего домена. Прямая поздняя реплика о гилнеасской родине не доказывает вассалитет Краули, владение крепостью или сторону в споре. Нейтрал: party=0.",
+      "uncertainty": [
+        "Ранние титул, служба и участок неизвестны; likely/географическое соседство не устанавливают власть. Служба Аругалу, плен и Серебряный Рассвет относятся к позднему контексту и не дают бонуса.",
+        "Не назначать ему раннюю службу Аругалу, членство в Серебряном Рассвете, плен или смерть; это будущее относительно выбранного слоя.",
+        "Вассалитет Краули не доказан, и сам по себе не даёт голос против стены."
+      ]
+    },
+    {
+      "memberId": "council-noble-morrison",
+      "refId": "noble-morrison",
+      "influence": {
+        "party": 0,
+        "kingdom": 8
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        3,
+        "court-source-22",
+        "court-source-26",
+        32,
+        67
+      ],
+      "note": "Малый сценарный резерв возможного представителя жителей. Муниципальный титул в позднем источнике не датирует раннее мэрство, не даёт частного Пирвуда или кресла королевского советника. Рейтинг не получает бонуса за город Дариуса. Нейтрал: party=0.",
+      "uncertainty": [
+        "Начало муниципальной службы и ранняя политическая сторона неизвестны. Владелец pyrewood в текущих данных — Дариус Краули; управление советом не личное владение и не доказанный вассальный договор.",
+        "Не назначать наследственный домен, раннее мэрство или кресло королевского советника из муниципального титула.",
+        "Не выводить партию или голос из местоположения Пирвуда."
+      ]
+    },
+    {
+      "memberId": "council-noble-aderic",
+      "refId": "noble-aderic",
+      "influence": {
+        "party": 0,
+        "kingdom": 0
+      },
+      "basis": "scenario",
+      "holdings": [],
+      "sourceIds": [
+        3,
+        "court-source-23",
+        "court-source-27",
+        27,
+        46,
+        68
+      ],
+      "note": "Мемориальный патриарх, active=false. Ни королевский пир, ни захоронение в aderics-repose не образуют живого владельца или партийного ресурса. 0/0; королевский титул и принадлежность к Седогривам не назначены.",
+      "uncertainty": [
+        "Дата смерти, монарший титул и династическая связь не установлены. Имя мемориала не personal location.owner.",
+        "Точная дата смерти и связь с династией Седогривов не установлены.",
+        "Не назначать партию Адерику из совпадения с названием королевского пира."
+      ]
+    }
+  ],
+  "partyPoints": {
+    "royalists": 235,
+    "internationalists": 84
+  },
+  "method": {
+    "basis": "scenario",
+    "canonicalNumericScores": false,
+    "authorization": "User-authorized initial game/scenario seed; review-only, not applied to production.",
+    "scopeLiteral": "После Второй войны, до выхода Гилнеаса из Альянса и до возведения Стены Седогрива.",
+    "reviewedFiles": [
+      "assets/data/atlas.json",
+      "assets/js/noble-profile.mjs",
+      "assets/js/model.mjs",
+      "docs/court-politics-research.json",
+      "docs/court-politics-research.md",
+      "docs/court-politics-ledger.json",
+      "docs/court-evidence/ (только существующие фрагменты, связанные с исследованием)"
+    ],
+    "freshWebResearch": false,
+    "stableOrder": "royalCouncil.members filtered by kind === person, original array order; no alphabetical or score sorting.",
+    "scales": {
+      "perPerson": {
+        "min": 0,
+        "max": 100,
+        "integer": true,
+        "notPopulationPercent": true
+      },
+      "kingdomMeaning": "Качественная стартовая политическая значимость в Гилнеасе, не площадь, богатство, население или доля голосов.",
+      "partyMeaning": "Влияние внутри уже назначенной партии; neutral и inactive получают 0, это не отрицание потенциальной ценности союзника.",
+      "kingdomCalculation": "Для active: clamp(sum(roleWeights) + sum(unique directly scored holding weights), 0, 100). Для inactive: 0.",
+      "partyCalculation": "Для active в royalists/internationalists: clamp(kingdom + documented party role adjustment, 0, 100). Для neutral/inactive: 0.",
+      "sizeProxy": "Только качественный охват власти и виды существующих стратегических объектов. Численность, доходы и кадастровые площади не известны; сценарные контуры и пиксели карты не превращаются в канонический размер домена.",
+      "limitation": "Весовые коэффициенты и итоговые числа — открытые игровые решения, а не математический закон или числа из лорных источников."
+    },
+    "authorityRule": {
+      "nameComparison": "Nonempty noble.name; exact literal equality, no spelling repair or normalization.",
+      "factionControl": "Only a nonempty faction.ruler === noble.name. Empty ruler and unknown house membership grant no authority.",
+      "personalLocationMatch": "Only a nonempty location.owner === noble.name. An office, guest status, namesake, presence, or map proximity is not ownership.",
+      "holdingsFieldMeaning": "Exact canonical IDs returned by deriveNobleProfile from the reviewed current snapshot, deduped in data order. The array is a control/suzerainty view, not a list of all personally owned properties.",
+      "explicitKnownHoldingsLocation": "method.personAudit[].explicitKnownHoldings records literal personal owner matches separately; chronology/status uncertainty remains explicit.",
+      "objectsInReviewedData": 0,
+      "unmappedDomains": "Godfrey and Marley have domains attested in narrative, but no matching canonical location IDs; no synthetic keep/estate IDs are created."
+    },
+    "roleWeights": {
+      "activeScenarioReserve": {
+        "kingdom": 5,
+        "note": "Минимальный сценарный резерв активной записи; не доказательство реального раннего влияния."
+      },
+      "sovereign": {
+        "kingdom": 35,
+        "note": "Действующий монарх по точному непустому faction.ruler; вместо бонуса главы дома."
+      },
+      "explicitHouseRuler": {
+        "kingdom": 10,
+        "note": "Точное непустое faction.ruler === noble.name; принадлежность дому без этого совпадения не даёт бонус."
+      },
+      "confirmedEarlyAdvisor": {
+        "kingdom": 20,
+        "note": "Только Дариус, Годфри и барон Эшбери: ранний совет проверен в существующем исследовании."
+      },
+      "standingMilitiaCommander": {
+        "kingdom": 30,
+        "note": "Должность Годфри из ранней сцены; это не частное владение военным кварталом, крепостью или казармой."
+      },
+      "attestedBroadPersonalInfluence": {
+        "kingdom": 15,
+        "note": "Ранняя широкая личная значимость: харизма Дариуса и прямое сопоставление его влияния с Годфри. Не равенство канонических чисел."
+      },
+      "trustedCourtFriend": {
+        "kingdom": 20,
+        "note": "Личная ранняя близость барона Эшбери к Генну и семейная верность короне; не голос за стену."
+      },
+      "sovereignNationalReach": {
+        "kingdom": 20,
+        "note": "Общекоролевский политический охват Генна; не сумма рейтингов вассалов или стоимости их владений."
+      },
+      "attestedUnmappedBorderDomain": {
+        "kingdom": 15,
+        "note": "Контекст Марли: домен прямо упомянут при выборе рубежа, но не локализован. Это качественная поправка, без новых ID, площади, замка или должности."
+      },
+      "attestedRoyalGuestPatronage": {
+        "kingdom": 15,
+        "note": "Исиден — послевоенный претендент с поддержкой Генна; не гилнеасский владелец, вассал или советник."
+      },
+      "undatedPotentialIdentityReserve": {
+        "kingdom": 3,
+        "note": "Одинаково малый резерв недатированных потенциальных союзников. Не переносит поздние должности, подвиги или верность в раннюю эпоху."
+      }
+    },
+    "strategicHoldingWeights": {
+      "capital": {
+        "fullWeight": 40,
+        "note": "Столица как политический узел; не свидетельство частной собственности на каждый квартал."
+      },
+      "fortress": {
+        "fullWeight": 30,
+        "acceptedPreWallUncertainWeight": 25,
+        "note": "Крепость с названным хозяином. Для shadowfang ранняя датировка неизвестна: сценарный вес уменьшен с 30 до 25."
+      },
+      "northernTown": {
+        "fullWeight": 15,
+        "note": "Каждый из двух прямо названных северных городков Краули; население и площадь не выдумываются."
+      },
+      "minorEstate": {
+        "fullWeight": 4,
+        "acceptedPreWallUncertainWeight": 2,
+        "note": "Небольшая хозяйственная/резиденциальная опора. Недатированные до стены поместье, сад и конюшни получают 2 вместо 4."
+      },
+      "overlappingOrIndirect": {
+        "fullWeight": 0,
+        "note": "Составные кварталы, повторно видимые вассальные объекты и остальная сфера сюзерена не складываются как отдельные активы."
+      }
+    },
+    "partyRoleAdjustments": {
+      "leader": {
+        "adjustment": 10,
+        "note": "Генн и Дариус — главы соответствующих сценарных направлений."
+      },
+      "attestedStrategist": {
+        "adjustment": 5,
+        "note": "Годфри непосредственно поддерживает проект и предлагает созвать совет после оговорок о торговле."
+      },
+      "scenarioCourtAlignment": {
+        "adjustment": 5,
+        "note": "Барон Эшбери уже отнесён текущим Council к роялистам с partyBasis=scenario; его стеновой голос остаётся неизвестен."
+      }
+    },
+    "deduplication": {
+      "people": "One row per exact memberId/refId, only kind=person; seven faction/house rows never contribute.",
+      "holdings": "Profile arrays retain exact indirect IDs for audit, but one canonical asset has at most one nonzero scored claimant. Prefer the explicit personal owner or its direct explicit house ruler, not each ancestor.",
+      "capitalBundle": [
+        "gilneas-city",
+        "cathedral-quarter",
+        "lights-dawn-cathedral",
+        "greymane-court",
+        "merchant-square",
+        "military-district",
+        "stoneward-prison"
+      ],
+      "capitalBundleRule": "Only gilneas-city has a capital asset weight; its displayed districts/buildings do not add a second capital/militia/fortress bonus.",
+      "shadowfangRule": "Scored once for noble-silverlaine; Darius and Genn may see it via parent links, but receive 0 additional holding points for it.",
+      "crownRule": "Genn receives a qualitative sovereign reach role, never a sum of subordinate person ratings or their estate weights.",
+      "scoredHoldingClaimants": {
+        "gilneas-city": "council-noble-genn",
+        "greymane-manor": "council-noble-genn",
+        "crowley-orchard": "council-noble-darius",
+        "crowley-stable-grounds": "council-noble-darius",
+        "pyrewood": "council-noble-darius",
+        "ambermill": "council-noble-darius",
+        "shadowfang": "council-noble-silverlaine"
+      }
+    },
+    "sourceIdsPolicy": "Union of exact current Council member.sources, noble.sources/provenance.sources, explicitly selected political evidence IDs, and sources/provenance.sources of scored holdings. Deduped preserving input order and original integer/string type. Source identity is not an endorsement of a late title in the early era.",
+    "sourceEvidenceLimits": "Existing stored sources and archived excerpts only; no new web retrieval. Localization sources establish names, not early ownership. Mirrors are not independent corroboration. No cited source supplies the numeric ratings.",
+    "personAudit": [
+      {
+        "memberId": "council-noble-genn",
+        "refId": "noble-genn",
+        "nameLiteral": "Генн Седогрив",
+        "activeLiteral": true,
+        "partyLiteral": "royalists",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": false,
+        "authorityFactionIds": [
+          "gilneas",
+          "greymane"
+        ],
+        "explicitKnownHoldings": [
+          "gilneas-city"
+        ],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [
+            "gilneas-city"
+          ],
+          "house": [
+            "greymane-manor",
+            "cathedral-quarter",
+            "lights-dawn-cathedral",
+            "greymane-court",
+            "merchant-square",
+            "military-district",
+            "stoneward-prison",
+            "keel-harbor",
+            "duskhaven",
+            "hayward-fishery",
+            "hammond-farmstead",
+            "allen-farmstead",
+            "emberstone-village",
+            "emberstone-mine",
+            "stormglen",
+            "blackwald",
+            "taldoren",
+            "bradshaw-mill",
+            "tempests-reach",
+            "aderics-repose",
+            "northgate-woods",
+            "northern-headlands",
+            "the-headlands",
+            "galewatch-lighthouse"
+          ],
+          "vassal": [
+            "crowley-orchard",
+            "crowley-stable-grounds",
+            "pyrewood",
+            "shadowfang",
+            "ambermill"
+          ]
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "sovereign",
+            "kingdomWeight": 35
+          },
+          {
+            "rule": "sovereignNationalReach",
+            "kingdomWeight": 20
+          }
+        ],
+        "scoredHoldings": [
+          {
+            "id": "gilneas-city",
+            "category": "capital",
+            "kingdomWeight": 40,
+            "relation": "literal-location-owner",
+            "ownerLiteral": "Генн Седогрив",
+            "factionLiteral": "greymane",
+            "preWallChronology": "confirmed-in-reviewed-data",
+            "sourceIds": [
+              1,
+              2,
+              3,
+              9,
+              10,
+              4
+            ]
+          },
+          {
+            "id": "greymane-manor",
+            "category": "minorEstate",
+            "kingdomWeight": 2,
+            "relation": "explicit-ruler-faction-domain",
+            "ownerLiteral": "",
+            "factionLiteral": "greymane",
+            "preWallChronology": "uncertain",
+            "sourceIds": [
+              3,
+              5,
+              4
+            ]
+          }
+        ],
+        "zeroWeightHoldings": [
+          "cathedral-quarter",
+          "lights-dawn-cathedral",
+          "greymane-court",
+          "merchant-square",
+          "military-district",
+          "stoneward-prison",
+          "keel-harbor",
+          "duskhaven",
+          "crowley-orchard",
+          "crowley-stable-grounds",
+          "hayward-fishery",
+          "hammond-farmstead",
+          "allen-farmstead",
+          "emberstone-village",
+          "emberstone-mine",
+          "stormglen",
+          "blackwald",
+          "taldoren",
+          "bradshaw-mill",
+          "tempests-reach",
+          "aderics-repose",
+          "northgate-woods",
+          "northern-headlands",
+          "the-headlands",
+          "pyrewood",
+          "shadowfang",
+          "ambermill",
+          "galewatch-lighthouse"
+        ],
+        "politicalEvidenceSourceIds": [
+          1,
+          3,
+          45,
+          46,
+          47,
+          48
+        ],
+        "rawKingdom": 102,
+        "cappedKingdom": 100,
+        "partyRule": "leader",
+        "partyAdjustment": 10,
+        "finalInfluence": {
+          "party": 100,
+          "kingdom": 100
+        }
+      },
+      {
+        "memberId": "council-noble-darius",
+        "refId": "noble-darius",
+        "nameLiteral": "Дариус Краули",
+        "activeLiteral": true,
+        "partyLiteral": "internationalists",
+        "advisorLiteral": true,
+        "potentialAllyLiteral": false,
+        "authorityFactionIds": [
+          "crowley"
+        ],
+        "explicitKnownHoldings": [
+          "pyrewood",
+          "ambermill"
+        ],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [
+            "pyrewood",
+            "ambermill"
+          ],
+          "house": [
+            "crowley-orchard",
+            "crowley-stable-grounds"
+          ],
+          "vassal": [
+            "shadowfang"
+          ]
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "explicitHouseRuler",
+            "kingdomWeight": 10
+          },
+          {
+            "rule": "confirmedEarlyAdvisor",
+            "kingdomWeight": 20
+          },
+          {
+            "rule": "attestedBroadPersonalInfluence",
+            "kingdomWeight": 15
+          }
+        ],
+        "scoredHoldings": [
+          {
+            "id": "crowley-orchard",
+            "category": "minorEstate",
+            "kingdomWeight": 2,
+            "relation": "explicit-ruler-faction-domain",
+            "ownerLiteral": "",
+            "factionLiteral": "crowley",
+            "preWallChronology": "uncertain",
+            "sourceIds": [
+              3,
+              14,
+              15,
+              4
+            ]
+          },
+          {
+            "id": "crowley-stable-grounds",
+            "category": "minorEstate",
+            "kingdomWeight": 2,
+            "relation": "explicit-ruler-faction-domain",
+            "ownerLiteral": "",
+            "factionLiteral": "crowley",
+            "preWallChronology": "uncertain",
+            "sourceIds": [
+              14,
+              15,
+              4
+            ]
+          },
+          {
+            "id": "pyrewood",
+            "category": "northernTown",
+            "kingdomWeight": 15,
+            "relation": "literal-location-owner",
+            "ownerLiteral": "Дариус Краули",
+            "factionLiteral": "crowley",
+            "preWallChronology": "confirmed-in-reviewed-data",
+            "sourceIds": [
+              2,
+              32,
+              33,
+              40,
+              4
+            ]
+          },
+          {
+            "id": "ambermill",
+            "category": "northernTown",
+            "kingdomWeight": 15,
+            "relation": "literal-location-owner",
+            "ownerLiteral": "Дариус Краули",
+            "factionLiteral": "crowley",
+            "preWallChronology": "confirmed-in-reviewed-data",
+            "sourceIds": [
+              32,
+              35,
+              4
+            ]
+          }
+        ],
+        "zeroWeightHoldings": [
+          "shadowfang"
+        ],
+        "politicalEvidenceSourceIds": [
+          32,
+          46,
+          48
+        ],
+        "rawKingdom": 84,
+        "cappedKingdom": 84,
+        "partyRule": "leader",
+        "partyAdjustment": 10,
+        "finalInfluence": {
+          "party": 94,
+          "kingdom": 84
+        }
+      },
+      {
+        "memberId": "council-noble-godfrey",
+        "refId": "noble-godfrey",
+        "nameLiteral": "Винсент Годфри",
+        "activeLiteral": true,
+        "partyLiteral": "royalists",
+        "advisorLiteral": true,
+        "potentialAllyLiteral": false,
+        "authorityFactionIds": [
+          "godfrey"
+        ],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "explicitHouseRuler",
+            "kingdomWeight": 10
+          },
+          {
+            "rule": "confirmedEarlyAdvisor",
+            "kingdomWeight": 20
+          },
+          {
+            "rule": "standingMilitiaCommander",
+            "kingdomWeight": 30
+          },
+          {
+            "rule": "attestedBroadPersonalInfluence",
+            "kingdomWeight": 15
+          }
+        ],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          46,
+          48,
+          49
+        ],
+        "rawKingdom": 80,
+        "cappedKingdom": 80,
+        "partyRule": "attestedStrategist",
+        "partyAdjustment": 5,
+        "finalInfluence": {
+          "party": 85,
+          "kingdom": 80
+        }
+      },
+      {
+        "memberId": "council-noble-ashbury",
+        "refId": "noble-ashbury",
+        "nameLiteral": "Барон Эшбери",
+        "activeLiteral": true,
+        "partyLiteral": "royalists",
+        "advisorLiteral": true,
+        "potentialAllyLiteral": false,
+        "authorityFactionIds": [
+          "ashbury"
+        ],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "explicitHouseRuler",
+            "kingdomWeight": 10
+          },
+          {
+            "rule": "confirmedEarlyAdvisor",
+            "kingdomWeight": 20
+          },
+          {
+            "rule": "trustedCourtFriend",
+            "kingdomWeight": 20
+          }
+        ],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          45,
+          46,
+          50
+        ],
+        "rawKingdom": 55,
+        "cappedKingdom": 55,
+        "partyRule": "scenarioCourtAlignment",
+        "partyAdjustment": 5,
+        "finalInfluence": {
+          "party": 60,
+          "kingdom": 55
+        }
+      },
+      {
+        "memberId": "council-noble-marley",
+        "refId": "noble-marley",
+        "nameLiteral": "Лорд Марли",
+        "activeLiteral": true,
+        "partyLiteral": "neutral",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": true,
+        "authorityFactionIds": [
+          "marley"
+        ],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "explicitHouseRuler",
+            "kingdomWeight": 10
+          },
+          {
+            "rule": "attestedUnmappedBorderDomain",
+            "kingdomWeight": 15
+          }
+        ],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          48,
+          3,
+          "court-source-8",
+          52
+        ],
+        "rawKingdom": 30,
+        "cappedKingdom": 30,
+        "partyRule": null,
+        "partyAdjustment": 0,
+        "finalInfluence": {
+          "party": 0,
+          "kingdom": 30
+        }
+      },
+      {
+        "memberId": "council-noble-archibald",
+        "refId": "noble-archibald",
+        "nameLiteral": "Арчибальд Седогрив",
+        "activeLiteral": false,
+        "partyLiteral": "neutral",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": false,
+        "authorityFactionIds": [],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          45,
+          53,
+          "court-source-29"
+        ],
+        "rawKingdom": 0,
+        "cappedKingdom": 0,
+        "partyRule": null,
+        "partyAdjustment": 0,
+        "finalInfluence": {
+          "party": 0,
+          "kingdom": 0
+        }
+      },
+      {
+        "memberId": "council-noble-ashbury-first",
+        "refId": "noble-ashbury-first",
+        "nameLiteral": "Лорд Эшбери I",
+        "activeLiteral": false,
+        "partyLiteral": "neutral",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": false,
+        "authorityFactionIds": [],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          3,
+          54,
+          "court-source-30"
+        ],
+        "rawKingdom": 0,
+        "cappedKingdom": 0,
+        "partyRule": null,
+        "partyAdjustment": 0,
+        "finalInfluence": {
+          "party": 0,
+          "kingdom": 0
+        }
+      },
+      {
+        "memberId": "council-noble-walden",
+        "refId": "noble-walden",
+        "nameLiteral": "Лорд Уолден",
+        "activeLiteral": true,
+        "partyLiteral": "neutral",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": true,
+        "authorityFactionIds": [],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "undatedPotentialIdentityReserve",
+            "kingdomWeight": 3
+          }
+        ],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          3,
+          55,
+          60,
+          56
+        ],
+        "rawKingdom": 8,
+        "cappedKingdom": 8,
+        "partyRule": null,
+        "partyAdjustment": 0,
+        "finalInfluence": {
+          "party": 0,
+          "kingdom": 8
+        }
+      },
+      {
+        "memberId": "council-noble-hewell",
+        "refId": "noble-hewell",
+        "nameLiteral": "Лорд Хьювелл",
+        "activeLiteral": true,
+        "partyLiteral": "neutral",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": true,
+        "authorityFactionIds": [],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "undatedPotentialIdentityReserve",
+            "kingdomWeight": 3
+          }
+        ],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          57
+        ],
+        "rawKingdom": 8,
+        "cappedKingdom": 8,
+        "partyRule": null,
+        "partyAdjustment": 0,
+        "finalInfluence": {
+          "party": 0,
+          "kingdom": 8
+        }
+      },
+      {
+        "memberId": "council-noble-silverlaine",
+        "refId": "noble-silverlaine",
+        "nameLiteral": "Барон Сребролен",
+        "activeLiteral": true,
+        "partyLiteral": "neutral",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": true,
+        "authorityFactionIds": [
+          "silverlaine"
+        ],
+        "explicitKnownHoldings": [
+          "shadowfang"
+        ],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [
+          "shadowfang"
+        ],
+        "holdingsByProfileScope": {
+          "personal": [
+            "shadowfang"
+          ],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "explicitHouseRuler",
+            "kingdomWeight": 10
+          }
+        ],
+        "scoredHoldings": [
+          {
+            "id": "shadowfang",
+            "category": "fortress",
+            "kingdomWeight": 25,
+            "relation": "literal-location-owner",
+            "ownerLiteral": "Барон Сребролен",
+            "factionLiteral": "silverlaine",
+            "preWallChronology": "uncertain",
+            "sourceIds": [
+              3,
+              33,
+              59,
+              34
+            ]
+          }
+        ],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          3,
+          33,
+          59,
+          60
+        ],
+        "rawKingdom": 40,
+        "cappedKingdom": 40,
+        "partyRule": null,
+        "partyAdjustment": 0,
+        "finalInfluence": {
+          "party": 0,
+          "kingdom": 40
+        }
+      },
+      {
+        "memberId": "council-noble-longshore",
+        "refId": "noble-longshore",
+        "nameLiteral": "Барон Дольноберег",
+        "activeLiteral": true,
+        "partyLiteral": "neutral",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": true,
+        "authorityFactionIds": [],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "undatedPotentialIdentityReserve",
+            "kingdomWeight": 3
+          }
+        ],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          3,
+          61,
+          62
+        ],
+        "rawKingdom": 8,
+        "cappedKingdom": 8,
+        "partyRule": null,
+        "partyAdjustment": 0,
+        "finalInfluence": {
+          "party": 0,
+          "kingdom": 8
+        }
+      },
+      {
+        "memberId": "council-noble-candren",
+        "refId": "noble-candren",
+        "nameLiteral": "Лорд Кандрен",
+        "activeLiteral": true,
+        "partyLiteral": "neutral",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": true,
+        "authorityFactionIds": [],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "undatedPotentialIdentityReserve",
+            "kingdomWeight": 3
+          }
+        ],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          3,
+          63
+        ],
+        "rawKingdom": 8,
+        "cappedKingdom": 8,
+        "partyRule": null,
+        "partyAdjustment": 0,
+        "finalInfluence": {
+          "party": 0,
+          "kingdom": 8
+        }
+      },
+      {
+        "memberId": "council-noble-isiden",
+        "refId": "noble-isiden",
+        "nameLiteral": "Исиден Перенольд",
+        "activeLiteral": true,
+        "partyLiteral": "neutral",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": true,
+        "authorityFactionIds": [],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "attestedRoyalGuestPatronage",
+            "kingdomWeight": 15
+          }
+        ],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          45,
+          64
+        ],
+        "rawKingdom": 20,
+        "cappedKingdom": 20,
+        "partyRule": null,
+        "partyAdjustment": 0,
+        "finalInfluence": {
+          "party": 0,
+          "kingdom": 20
+        }
+      },
+      {
+        "memberId": "council-noble-tulvan",
+        "refId": "noble-tulvan",
+        "nameLiteral": "Лорд Джеффри Тулван",
+        "activeLiteral": true,
+        "partyLiteral": "neutral",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": true,
+        "authorityFactionIds": [],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "undatedPotentialIdentityReserve",
+            "kingdomWeight": 3
+          }
+        ],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          3,
+          "court-source-20",
+          "court-source-24",
+          65
+        ],
+        "rawKingdom": 8,
+        "cappedKingdom": 8,
+        "partyRule": null,
+        "partyAdjustment": 0,
+        "finalInfluence": {
+          "party": 0,
+          "kingdom": 8
+        }
+      },
+      {
+        "memberId": "council-noble-harford",
+        "refId": "noble-harford",
+        "nameLiteral": "Лорд Харфорд",
+        "activeLiteral": true,
+        "partyLiteral": "neutral",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": true,
+        "authorityFactionIds": [],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "undatedPotentialIdentityReserve",
+            "kingdomWeight": 3
+          }
+        ],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          3,
+          "court-source-21",
+          "court-source-25",
+          66
+        ],
+        "rawKingdom": 8,
+        "cappedKingdom": 8,
+        "partyRule": null,
+        "partyAdjustment": 0,
+        "finalInfluence": {
+          "party": 0,
+          "kingdom": 8
+        }
+      },
+      {
+        "memberId": "council-noble-morrison",
+        "refId": "noble-morrison",
+        "nameLiteral": "Лорд-мэр Моррисон",
+        "activeLiteral": true,
+        "partyLiteral": "neutral",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": true,
+        "authorityFactionIds": [],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [
+          {
+            "rule": "activeScenarioReserve",
+            "kingdomWeight": 5
+          },
+          {
+            "rule": "undatedPotentialIdentityReserve",
+            "kingdomWeight": 3
+          }
+        ],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          3,
+          "court-source-22",
+          "court-source-26",
+          67,
+          32
+        ],
+        "rawKingdom": 8,
+        "cappedKingdom": 8,
+        "partyRule": null,
+        "partyAdjustment": 0,
+        "finalInfluence": {
+          "party": 0,
+          "kingdom": 8
+        }
+      },
+      {
+        "memberId": "council-noble-aderic",
+        "refId": "noble-aderic",
+        "nameLiteral": "Адерик",
+        "activeLiteral": false,
+        "partyLiteral": "neutral",
+        "advisorLiteral": false,
+        "potentialAllyLiteral": false,
+        "authorityFactionIds": [],
+        "explicitKnownHoldings": [],
+        "explicitKnownHoldingsMeaning": "Буквальное непустое location.owner совпадает с noble.name в текущем атласе. Это не новая проверка частного титула или ранней датировки.",
+        "explicitKnownHoldingsPreWallUncertain": [],
+        "holdingsByProfileScope": {
+          "personal": [],
+          "house": [],
+          "vassal": []
+        },
+        "roleWeights": [],
+        "scoredHoldings": [],
+        "zeroWeightHoldings": [],
+        "politicalEvidenceSourceIds": [
+          3,
+          "court-source-23",
+          "court-source-27",
+          68
+        ],
+        "rawKingdom": 0,
+        "cappedKingdom": 0,
+        "partyRule": null,
+        "partyAdjustment": 0,
+        "finalInfluence": {
+          "party": 0,
+          "kingdom": 0
+        }
+      }
+    ],
+    "pool": {
+      "oneTimeInitialization": true,
+      "cap": null,
+      "computedWith": "Python 3 integer sum",
+      "rule": "Sum kingdom ratings only for exact active=true kind=person records already assigned to that party in the reviewed Council.",
+      "notSummed": [
+        "party influence bars",
+        "neutral people",
+        "inactive predecessors",
+        "faction/house rows",
+        "nested/profile holding counts",
+        "subordinate ratings added to their ancestors"
+      ],
+      "contributors": {
+        "royalists": [
+          {
+            "memberId": "council-noble-genn",
+            "refId": "noble-genn",
+            "kingdom": 100
+          },
+          {
+            "memberId": "council-noble-godfrey",
+            "refId": "noble-godfrey",
+            "kingdom": 80
+          },
+          {
+            "memberId": "council-noble-ashbury",
+            "refId": "noble-ashbury",
+            "kingdom": 55
+          }
+        ],
+        "internationalists": [
+          {
+            "memberId": "council-noble-darius",
+            "refId": "noble-darius",
+            "kingdom": 84
+          }
+        ]
+      },
+      "excludedInactiveMemberIds": [
+        "council-noble-archibald",
+        "council-noble-ashbury-first",
+        "council-noble-aderic"
+      ],
+      "excludedNeutralActiveMemberIds": [
+        "council-noble-marley",
+        "council-noble-walden",
+        "council-noble-hewell",
+        "council-noble-silverlaine",
+        "council-noble-longshore",
+        "council-noble-candren",
+        "council-noble-isiden",
+        "council-noble-tulvan",
+        "council-noble-harford",
+        "council-noble-morrison"
+      ],
+      "initialTotal": 319,
+      "initialSharesPercent": {
+        "royalists": 73.67,
+        "internationalists": 26.33
+      },
+      "laterIndependence": "These are one-time start balances. Later explicit scenario actions may spend/change pools independently. Person bar edits, render, reload, recruitment, or source updates do not automatically recompute/refill/spend the pools.",
+      "automaticRefill": false,
+      "automaticSpend": false,
+      "automaticReseedOnReload": false,
+      "displayProposal": "Raw uncapped point balances without /100, plus shares derived from the current two balances; royal silver and muted teal are presentation only."
+    },
+    "dataAudit": {
+      "councilRows": 24,
+      "houseRowsExcludedFromPool": 7,
+      "personRows": 17,
+      "activePersonRows": 14,
+      "activePartyCounts": {
+        "royalists": 3,
+        "internationalists": 1,
+        "neutral": 10
+      },
+      "sourceRegistryCount": 80,
+      "sourceIdDuplicates": [],
+      "locationCount": 39,
+      "nestedObjectCount": 0,
+      "historicalInactiveRefIds": [
+        "noble-archibald",
+        "noble-ashbury-first",
+        "noble-aderic"
+      ],
+      "confirmedEarlyAdvisorRefIds": [
+        "noble-darius",
+        "noble-godfrey",
+        "noble-ashbury"
+      ],
+      "emptyProfileHoldingRefIds": [
+        "noble-godfrey",
+        "noble-ashbury",
+        "noble-marley",
+        "noble-archibald",
+        "noble-ashbury-first",
+        "noble-walden",
+        "noble-hewell",
+        "noble-longshore",
+        "noble-candren",
+        "noble-isiden",
+        "noble-tulvan",
+        "noble-harford",
+        "noble-morrison",
+        "noble-aderic"
+      ],
+      "personRefIdsWithoutRulerAuthority": [
+        "noble-archibald",
+        "noble-ashbury-first",
+        "noble-walden",
+        "noble-hewell",
+        "noble-longshore",
+        "noble-candren",
+        "noble-isiden",
+        "noble-tulvan",
+        "noble-harford",
+        "noble-morrison",
+        "noble-aderic"
+      ],
+      "existingInfluenceFields": [],
+      "existingPartyPointsField": false,
+      "legacyConflict": "Marley noble/faction prose calls him councilor, while Council advisor=false and chronological research do not establish an early appointment. This seed follows the stricter Council/evidence flags without editing either record.",
+      "waldenBlankRuler": "",
+      "temporalMismatch": "Several nobles display historical_reference while their Council optional-potential rows are active=true. Active flags are scenario availability, not proof of early office; low reserves and neutral status preserve that distinction."
+    },
+    "verification": {
+      "exactMemberIds": [
+        "council-noble-genn",
+        "council-noble-darius",
+        "council-noble-godfrey",
+        "council-noble-ashbury",
+        "council-noble-marley",
+        "council-noble-archibald",
+        "council-noble-ashbury-first",
+        "council-noble-walden",
+        "council-noble-hewell",
+        "council-noble-silverlaine",
+        "council-noble-longshore",
+        "council-noble-candren",
+        "council-noble-isiden",
+        "council-noble-tulvan",
+        "council-noble-harford",
+        "council-noble-morrison",
+        "council-noble-aderic"
+      ],
+      "exactRefIds": [
+        "noble-genn",
+        "noble-darius",
+        "noble-godfrey",
+        "noble-ashbury",
+        "noble-marley",
+        "noble-archibald",
+        "noble-ashbury-first",
+        "noble-walden",
+        "noble-hewell",
+        "noble-silverlaine",
+        "noble-longshore",
+        "noble-candren",
+        "noble-isiden",
+        "noble-tulvan",
+        "noble-harford",
+        "noble-morrison",
+        "noble-aderic"
+      ],
+      "expectedPersonCount": 17,
+      "uniqueMemberCount": 17,
+      "uniqueRefCount": 17,
+      "profileHoldingsExactMatch": true,
+      "allSourceIdsInCurrentRegistry": true,
+      "allExplicitKnownHoldingsLiteralOwnerMatch": true,
+      "nonzeroScoredHoldingCount": 7,
+      "storedResearchEvidenceLinksRechecked": 66,
+      "productionDataFile": "assets/data/atlas.json",
+      "productionDataSha256Before": "632c6623f4b16216fda80ff278de8b6670ee75fad8fd0bcc47fb767edc6ffaca",
+      "productionDataSha256After": "632c6623f4b16216fda80ff278de8b6670ee75fad8fd0bcc47fb767edc6ffaca",
+      "productionDataUnchanged": true,
+      "reviewedInputHashes": {
+        "assets/data/atlas.json": "632c6623f4b16216fda80ff278de8b6670ee75fad8fd0bcc47fb767edc6ffaca",
+        "assets/js/noble-profile.mjs": "1f4505ab0bfc046eea1f05ddacbef74d428d6bc6d5b63020d57fb97697595a08",
+        "docs/court-politics-research.json": "ad98fb8e1a84664bfc16ad0ab8aa70b4bb67385a85d223c094fa15ab723d663d",
+        "docs/court-politics-research.md": "29289c90b020b2e107cfc9cd175879f71beee1aac3ec4177f350331391af0e8c",
+        "docs/court-politics-ledger.json": "93297a16f12251e2a0e0306844fd1d594c5cffdbd4cd0195435a343c4493fd97"
+      },
+      "mapAssetFileCount": 10,
+      "mapAssetHashSetSha256Before": "26ae3a3cae2ce8ef5a26fef363d42f4ca8a0aa38b3afadc9fdf7dbb3b3f3947a",
+      "mapAssetHashSetSha256After": "26ae3a3cae2ce8ef5a26fef363d42f4ca8a0aa38b3afadc9fdf7dbb3b3f3947a",
+      "mapAssetsByteUnchanged": true,
+      "baselineProductionFiles": 69,
+      "concurrentProductionFileChangesObserved": [
+        "assets/css/court-ui.css",
+        "assets/css/royal-council.css",
+        "assets/js/council-window.mjs",
+        "assets/js/draft-publication.mjs",
+        "assets/js/royal-council.mjs"
+      ],
+      "concurrencyNote": "Shared worktree already contains other agents/parent work. The atlas data and maps stayed byte-identical; whole UI bundle immutability is not claimed. This task performs no production write.",
+      "repositoryWritesAllowed": [
+        "docs/council-influence-seed.json",
+        "docs/council-influence-seed.md"
+      ],
+      "commitsPerformed": false,
+      "deployPerformed": false,
+      "productionApplied": false,
+      "readbackRequirement": "Parent/subagent validator reads back both exact target files and recomputes IDs, counts, scores, pools and production/map hashes after the two documentation writes."
+    }
+  }
+}

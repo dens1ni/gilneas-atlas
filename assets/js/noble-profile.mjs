@@ -28,7 +28,7 @@ export function deriveNobleProfile(data, id) {
       if(objectScope)holdings.push({kind:'object',id:object.id,name:object.name,type:object.type,locationId:location.id,locationName:location.name,faction:effectiveFaction(location,object),owner:object.owner||location.owner||'',scope:objectScope});
     }
   }
-  const ids=[...new Set([...(noble.sources||[]),...(noble.provenance?.sources||[])])];
+  const ids=[...new Set([...(noble.sources||[]),...(noble.provenance?.sources||[]),...(noble.fieldSources?.lifeStatus||[])])];
   const sources=ids.map(sourceId=>data.sources.find(source=>source.id===sourceId)).filter(Boolean);
   return {...noble,house,isSovereign,suzerain,holdings,sources,appearance:noble.appearance||'Внешность для выбранной эпохи не описана в источниках.',socialStatus:noble.socialStatus||noble.title||'Положение не установлено'};
 }

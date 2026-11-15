@@ -31,6 +31,7 @@ BASELINE = {
 }
 
 BOOTSTRAP = """async (baseline) => {
+    document.body.classList.add('edit-mode');
     const model = await import('/assets/js/model.mjs');
     let data = model.normalizeData(baseline);
     let selected = 'keep';
@@ -221,7 +222,7 @@ class IsolatedEditor(unittest.TestCase):
         modifier_id = self.page.locator('.modifier-editor-row').get_attribute('data-modifier-id')
         self.page.locator('#object-type').select_option('resource')
         self.assertTrue(self.page.locator('#object-amount-field').is_visible(), 'resources expose an amount field')
-        self.assertFalse(self.page.locator('#modifier-fields').is_visible())
+        self.assertTrue(self.page.locator('#modifier-fields').is_visible(), 'The expanded shared catalog keeps resource effects editable')
         self.page.locator('#object-amount').fill('  20 тонн железа  ')
         self.page.locator('#object-type').select_option('building')
         self.assertEqual(self.page.locator('#modifier-list textarea').input_value(), 'Снабжение')
@@ -231,7 +232,7 @@ class IsolatedEditor(unittest.TestCase):
         obj = self.location()['objects'][0]
         self.assertEqual(obj['type'], 'resource')
         self.assertEqual(obj['amount'], '  20 тонн железа  ')
-        self.assertEqual(obj['modifiers'], [])
+        self.assertEqual(obj['modifiers'], [{'id':modifier_id,'kind':'bonus','text':'Снабжение'}], 'Changing to resource preserves effects instead of discarding them')
         self.page.evaluate("window.__atlas.editor.editObject('keep', window.__atlas.data.locations[0].objects[0].id)")
         self.assertEqual(self.page.locator('#object-amount').input_value(), '  20 тонн железа  ')
         self.assertEqual(self.page.evaluate('window.__atlas.commits.length'), 1)

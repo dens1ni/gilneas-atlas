@@ -1,0 +1,741 @@
+| Elizabeth Crowley
+
+ | 
+
+Full art (v)
+
+The Forsaken have their own unique way of mending the injured.
+
+ | Faction | 
+Horde
+
+ | Type | 
+Ally
+
+ | Rules | 
+(2), Discard a card → Elizabeth heals 4 damage from target hero or ally.
+
+ | Race | 
+Undead
+
+ | Class | 
+Priest
+
+ | ATK type | 
+Holy
+
+ | ATK | 
+2
+
+ | Cost | 
+2
+
+ | Health | 
+3
+
+ | Set | 
+Drums of War
+
+ | Number | 
+166/268
+
+ | Rarity | 
+Common
+
+ | Artist | 
+Clint Langley
+
+This article contains information from the Trading Card Game which is considered non-canon.
+
+ | 
+ | 
+
+v
+
+e
+
+Drums of War
+
+ | 
+
+ | 
+
+ |  
+
+Heroes
+
+ | 
+
+ | Alliance | 
+
+001 Grand Marshal Goldensword
+
+002 Lord Benjamin Tremendouson
+
+003 Martiana the Mindwrench
+
+004 Oakenclaw
+
+005 Pidge Filthfinder
+
+006 Shaii, Strategist Supreme
+
+007 Spellweaver Jihan
+
+008 Umbrage
+
+009 Zorin of the Thunderhead
+
+ | 
+
+ | Horde | 
+
+010 Boarguts the Impaler
+
+011 Justice Blindburn
+
+012 The Longeye
+
+013 Maleo the Blur
+
+014 Shalu Stormshatter
+
+015 Sinthya Flabberghast
+
+016 Spiritualist Sunshroud
+
+017 Turane Soulpact
+
+018 Velindra Sepulchre
+
+ | 
+
+ | 
+
+ |  
+
+Abilities
+
+ | 
+
+ | Druid | 
+
+019 Aquatic Form
+
+020 Celestial Communion
+
+021 Cower
+
+022 Feral Charge
+
+023 Hibernate
+
+024 Life of the Land
+
+025 Master Instinct
+
+026 Moonflare
+
+ | 
+
+ | Hunter | 
+
+027 Empty the Stables
+
+028 Hissy
+
+029 Hunter's Mark
+
+030 Resourcefulness
+
+031 Snipe
+
+032 Sudden Shot
+
+033 Turn the Blade
+
+034 Zip
+
+ | 
+
+ | Mage | 
+
+035 Conjured Cinnamon Roll
+
+036 Ice Lance
+
+037 Mystic Denial
+
+038 Presence of Mind
+
+039 Pyroclastic Consumption
+
+040 Spell Suppression
+
+041 Temporary Dissipation
+
+042 Transfigure
+
+ | 
+
+ | Paladin | 
+
+043 Aura of Accuracy
+
+044 Blessing of Trials
+
+045 Crusader Strike
+
+046 Inspiring Light
+
+047 Penance
+
+048 Reprisal
+
+049 Seal of Justice
+
+050 Seal of Righteousness
+
+ | 
+
+ | Priest | 
+
+051 Dawn's Grace
+
+052 Equalize
+
+053 Exasperate
+
+054 Misery
+
+055 Precognition
+
+056 Shadow Word: Anguish
+
+057 Sublimate
+
+058 Vampiric Tendrils
+
+ | 
+
+ | Rogue | 
+
+059 Deathblow
+
+060 Detect Traps
+
+061 Gang Up
+
+062 Nerves of Steel
+
+063 Pernicious Poison
+
+064 Ransack
+
+065 Slay the Feeble
+
+066 Surge of Adrenaline
+
+ | 
+
+ | Shaman | 
+
+067 Energized
+
+068 Greater Chain Lightning
+
+069 Grounding Totem
+
+070 Lightning Overload
+
+071 Natural Conduit
+
+072 Primal Totem
+
+073 Water Breathing
+
+074 Winterstorm Totem
+
+ | 
+
+ | Warlock | 
+
+075 Curse of Fatigue
+
+076 Drain Will
+
+077 Enslaved Abyssal
+
+078 Gakmat
+
+079 Rain of Shadow
+
+080 Suspended Curse
+
+081 Unending Breath
+
+082 Unholy Power
+
+ | 
+
+ | Warrior | 
+
+083 Absolute Poise
+
+084 Battle Tactics
+
+085 Behead
+
+086 Enduring Shout
+
+087 Menace
+
+088 Taunt
+
+089 War of Attrition
+
+090 Weapon Mastery
+
+ | 
+
+ | Dual-Class | 
+
+091 Arcane Spikes
+
+092 Bloody Ritual
+
+093 Courageous Defense
+
+094 Creeping Shadow
+
+095 Demolish
+
+096 Eagle Sight
+
+097 Engulfing Blaze
+
+098 Fire and Ice
+
+099 Immobilize
+
+100 Lose Control
+
+101 Natural Disaster
+
+102 Nature Unleashed
+
+103 Revitalize
+
+104 Revival Stone
+
+105 Spell Ricochet
+
+106 Sphere of Divinity
+
+107 Thud!
+
+108 Topple
+
+ | 
+
+ | All | 
+
+109 Owned!
+
+110 Pandamonium!
+
+111 Slashdance
+
+ | 
+
+ | 
+
+ |  
+
+Allies
+
+ | 
+
+ | Alliance | 
+
+112 Al'lanora
+
+113 Anguar Frostbeard
+
+114 Braeden Nightblade
+
+115 Brelnor Mindbender
+
+116 Catarina Clark
+
+117 Chief Researcher Kartos
+
+118 Consul Rhys Lorgrand
+
+119 Cymbre Shadowdrifter
+
+120 Daniel Soortan
+
+121 Durgrin Ironedge
+
+122 Elementalist Psyrin
+
+123 Envoy Aiden LeNoir
+
+124 Envoy Samantha Dillon
+
+125 Errzig Cogflicker
+
+126 Falcore
+
+127 Gryth Thurden, Gryphon Master
+
+128 The Hammerhand Brothers
+
+129 Helena Demonfire
+
+130 High Tinker Mekkatorque
+
+131 Keward Rocksalt
+
+132 Kinivus
+
+133 Lanthus of the Forest
+
+134 Lolly the Unsuspecting
+
+135 Loraala
+
+136 Magnus Longbarrel
+
+137 Meganna Callaghan
+
+138 Mollie Brightheart
+
+139 Ninoo of the Light
+
+140 Rayne Savageboon
+
+141 Ryno the Short
+
+142 Swordsmith Hanso
+
+143 Tinker Art Seaclock
+
+144 Tinker Bixy Blue
+
+145 Tinker Burnfizzle
+
+146 Tinker Casey Springlock
+
+147 Tonks the Tenacious
+
+148 Treewarden Tolven
+
+149 Tully Fiddlewit
+
+150 Virkaltor
+
+151 Weldon Barov
+
+152 Woodsie Leafsong
+
+153 Wyler Surestrike
+
+154 Zempre, Grace of Elune
+
+155 Zophos
+
+ | 
+
+ | Horde | 
+
+156 ALAMO
+
+157 Alexi Barov
+
+158 Boum Headshot
+
+159 Cairne Bloodhoof
+
+160 Centurion Addisyn
+
+161 Chief Researcher Amereldine
+
+162 Cromarius Blackfist
+
+163 Darbun Steppeheart
+
+164 Defender Kaniya
+
+165 Doomsayer Din'ju
+
+166 Elizabeth Crowley
+
+167 Erindae Firestrider
+
+168 Gatlin Clouds-the-Sky
+
+169 Geoffrey Kimble
+
+170 Himul Longstrider
+
+171 Horkin Figluster
+
+172 Jack Coor
+
+173 Jee'zee
+
+174 Jil'ti
+
+175 Johnny Rotten
+
+176 Kileana Darkblaze
+
+177 Kirga Earthguard
+
+178 Kray'zin Firetusk
+
+179 Lifemender Dorn
+
+180 Logor Blackfist
+
+181 Malicious Mallina
+
+182 Michael Garrett, Bat Handler
+
+183 Mistress Naila Flameburst
+
+184 Mortok
+
+185 Munkin Blackfist
+
+186 Nok'tal the Savage
+
+187 Orion
+
+188 Quakelord Razek Warhoof
+
+189 Rensarth Shadowsun
+
+190 Roktar Blackfist
+
+191 Rula Blackfist
+
+192 Sanva
+
+193 Sarn Earthtrembler
+
+194 Sepirion
+
+195 Skumm Bag'go
+
+196 Sorga the Swift
+
+197 Tormentor Emek
+
+198 Zari'zari
+
+199 Zi'mo
+
+ | 
+
+ | Neutral | 
+
+200 Dagg'um Ty'gor
+
+201 The Red Bearon
+
+202 Vixton Pinchwhistle
+
+ | 
+
+ | 
+
+ |  
+
+Equipment
+
+ | 
+
+ | Armor | 
+
+203 Amani Mask of Death
+
+204 Blue Suede Shoes
+
+205 Boots of the Resilient
+
+206 Cloak of Subjugated Power
+
+207 Forest Stalker's Bracers
+
+208 Girdle of the Blasted Reaches
+
+209 Gladiator's Regalia
+
+210 Masquerade Gown
+
+211 Merciless Gladiator's Battlegear
+
+212 Mok'Nathal Wildercloak
+
+213 Nyn'jah's Tabi Boots
+
+214 Scaled Breastplate of Carnage
+
+215 Vengeful Gladiator's Vestments
+
+ | 
+
+ | Item | 
+
+216 Arcanite Dragonling
+
+217 Rune of Metamorphosis
+
+218 Veteran's Pendant
+
+219 Medallion of the Alliance
+
+220 Medallion of the Horde
+
+ | 
+
+ | Weapon | 
+
+221 Black Amnesty
+
+222 Bloodseeker
+
+223 Blue Diamond Witchwand
+
+224 Cold Forged Hammer
+
+225 Continuum Blade
+
+226 Frostguard
+
+227 Gladiator's Spellblade
+
+228 Ice Barbed Spear
+
+229 Light's Justice
+
+230 Lohn'goron, Bow of the Torn-Heart
+
+231 Merciless Gladiator's Greatsword
+
+232 Netherbane
+
+233 The Oathkeeper
+
+234 The Staff of Twin Worlds
+
+235 Vengeful Gladiator's Bonecracker
+
+236 Wand of Biting Cold
+
+237 Electrified Dagger
+
+238 Glacial Blade
+
+ | 
+
+ | 
+
+ |  
+
+Quests
+
+ | 
+
+ | Alliance | 
+
+239 Establishing New Outposts
+
+240 In Defense of Halaa
+
+241 Order Must Be Restored
+
+ | 
+
+ | Horde | 
+
+241 Bolstering Our Defenses
+
+242 Enemies, Old and New
+
+243 The Final Message to the Wildhammer
+
+ | 
+
+ | Neutral | 
+
+245 Arena Master
+
+246 Corruption of Earth and Seed
+
+247 The Last Barov
+
+248 Oshu'gun Crystal Powder
+
+249 Outland Sucks!
+
+250 A Rare Bean
+
+251 Revenge Is Tasty
+
+252 Scouring the Desert
+
+253 Someone Else's Hard Work Pays Off
+
+254 Soup for the Soul
+
+255 Spirits of Auchindoun
+
+256 Super Hot Stew
+
+ | 
+
+ | 
+
+ |  
+
+Locations
+
+ | 
+
+ | Alliance | 
+
+257 Darnassus
+
+258 Southshore
+
+259 Stormwind City
+
+ | 
+
+ | Horde | 
+
+260 Sen'jin Village
+
+261 Tarren Mill
+
+262 Thunder Bluff
+
+ | 
+
+ | Objectives | 
+
+263 Auchindoun Spirit Towers
+
+264 Halaa
+
+265 Hellfire Citadel
+
+266 Silithus
+
+267 Towers of Eastern Plaguelands
+
+268 Twin Spire Ruins

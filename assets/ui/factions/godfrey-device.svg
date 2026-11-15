@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" width="40" height="44">
+<title>godfrey device</title>
+<g fill="#9aa8b6" stroke="#343c43" stroke-width=".75" stroke-linejoin="round">
+<path d="M20 3 24 10 22 27H18L16 10Z"/>
+<path d="M11 27H29V30H22V36H18V30H11Z"/>
+<path d="M16.5 36H23.5V40H16.5Z"/>
+<path d="M5 16 9 17 30 35 27 38 7 20ZM35 16 31 17 10 35 13 38 33 20Z"/>
+<path d="M20 8V23" fill="none" stroke="#c0c9d1" stroke-width=".7"/>
+</g>
+</svg>

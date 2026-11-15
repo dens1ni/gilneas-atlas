@@ -1,0 +1,179 @@
+[
+  {
+    "requestedTitle": "Archibald Greymane",
+    "title": "Archibald Greymane",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Archibald+Greymane&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-63",
+    "revid": 5707894,
+    "evidenceFile": "docs/noble-family-evidence/Archibald_Greymane--family-api.txt",
+    "length": 1505,
+    "relevant": [
+      "\n | Relative(s) | \nGenn (son), Mia (daughter-in-law), Tess and Liam (grandchildren)\n",
+      " | Relative(s) | \nGenn (son), Mia (daughter-in-law), Tess and Liam (grandchildren)\n\n | ",
+      "\nArchibald Greymane was the king of Gilneas and the father of Genn Greymane. Under his rule, Gilneas prospered. His views on asking for help were that it was for the weak.[2] He passed this onto his son Genn, who became very stubborn, refusing any sort of aid until the Fall of Gilneas, where he began to finally move past this view.\n\nQuotes[]",
+      "\nSpeculation[]\n\n | ",
+      " | \nThis article or section includes speculation, observations or opinions possibly supported by lore or by Blizzard officials. It should not be taken as representing official lore.\n\nHe is believed to be buried at Aderic's Repose along with his grandson."
+    ]
+  },
+  {
+    "requestedTitle": "Lord Ashbury the 1st",
+    "title": "Lord Ashbury the 1st",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Ashbury+the+1st&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-64",
+    "revid": 5592799,
+    "evidenceFile": "docs/noble-family-evidence/Lord_Ashbury_the_1st--family-api.txt",
+    "length": 586,
+    "relevant": [
+      "\n | Relative(s) | \nBaron Ashbury (son)\n",
+      "\nLord Ashbury the 1st was a Gilnean noble and the father of Baron Ashbury. Lord Ashbury helped King Archibald Greymane build Gilneas up to a nation of great power. King Archibald always told his son Prince Genn to trust in the Ashburys’ fidelity to the crown because of the accomplishments of Lord Ashbury.[1]\n\nReferences[]"
+    ]
+  },
+  {
+    "requestedTitle": "Baron Ashbury",
+    "title": "Baron Ashbury",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Baron+Ashbury&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-65",
+    "revid": 6091234,
+    "evidenceFile": "docs/noble-family-evidence/Baron_Ashbury--family-api.txt",
+    "length": 3681,
+    "relevant": [
+      "\n | Relative(s) | \nLord Ashbury the 1st (Father)\n",
+      " | Relative(s) | \nLord Ashbury the 1st (Father)\n\nBaron Ashbury was an eastern nobleman from Gilneas.",
+      "\n This section concerns content related to the Warcraft novels, novellas, or short stories.\n\nHe and Genn grew up together, and he was once one of the king's most trusted friends. He was present in the Capital City to create the Alliance of Lordaeron and agreed with Lord Godfrey, to send only a token army. He participated in the hunts with Genn, Lord Marley and Godfrey in the Blackwald.[1]",
+      "\n This section concerns content related to the Warcraft manga or comics.\n\nOne day before the attack on Gilneas City, he quarreled with Lord Walden because of the bad situation in Gilneas especially the shortage of livestock.[2]",
+      "\n This section concerns content related to Cataclysm.\n\nHe joined with Lord Vincent Godfrey to turn Genn Greymane over to the Forsaken in exchange for an end to hostilities. Along with his ally, Lord Walden, Ashbury was slain by Gilnean worgen who fought to save their King. Godfrey, Ashbury, and Walden were all raised in undeath by the Forsaken and served them for a time. After Godfrey betrayed the Forsaken by slaying Sylvanas Windrunner, Ashbury fled with his master into nearby Shadowfang Keep."
+    ]
+  },
+  {
+    "requestedTitle": "Lord Candren",
+    "title": "Lord Candren",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Candren&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-66",
+    "revid": 6025429,
+    "evidenceFile": "docs/noble-family-evidence/Lord_Candren--family-api.txt",
+    "length": 837,
+    "relevant": [
+      "\n This section concerns content related to Battle for Azeroth.\n\nLord Candren survived the Burning of Teldrassil and made his way to Stormwind Embassy."
+    ]
+  },
+  {
+    "requestedTitle": "Lord Geoffery Tulvan",
+    "title": "Lord Geoffery Tulvan",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Geoffery+Tulvan&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-62",
+    "revid": 6277869,
+    "evidenceFile": "docs/noble-family-evidence/Lord_Geoffery_Tulvan--family-api.txt",
+    "length": 1258,
+    "relevant": []
+  },
+  {
+    "requestedTitle": "Lord Harford",
+    "title": "Lord Harford",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Harford&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-67",
+    "revid": 6426308,
+    "evidenceFile": "docs/noble-family-evidence/Lord_Harford--family-api.txt",
+    "length": 1524,
+    "relevant": [
+      "What have they done to you, <name>? How could this have happened?\nRemember the worgen you once were, <brother/sister>! You were our savior! Fight this!\nListen to me <name>. You must fight against the Lich King's control. He is a monster that wants to see this world - our world - in ruin.\nDon't let him use you to accomplish his goals. You were once a hero and you can be again."
+    ]
+  },
+  {
+    "requestedTitle": "Lord Hewell",
+    "title": "Lord Hewell",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Hewell&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-70",
+    "revid": 6633197,
+    "evidenceFile": "docs/noble-family-evidence/Lord_Hewell--family-api.txt",
+    "length": 1009,
+    "relevant": []
+  },
+  {
+    "requestedTitle": "Lord Marley",
+    "title": "Lord Marley",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Marley&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-68",
+    "revid": 5590492,
+    "evidenceFile": "docs/noble-family-evidence/Lord_Marley--family-api.txt",
+    "length": 671,
+    "relevant": []
+  },
+  {
+    "requestedTitle": "Lord Vincent Godfrey",
+    "title": "Lord Vincent Godfrey",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Vincent+Godfrey&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-71",
+    "revid": 6849682,
+    "evidenceFile": "docs/noble-family-evidence/Lord_Vincent_Godfrey--family-api.txt",
+    "length": 15239,
+    "relevant": [
+      "\n This section concerns content related to the Warcraft novels, novellas, or short stories.\n\nPrior to the Second War, Godfrey was among the Gilnean nobles who accompanied King Genn Greymane to Lordaeron to create the Alliance of Lordaeron. Genn trusted his counsel but was always suspicious of his ambitions. Godfrey suggested that to stay in the good graces of their sister kingdoms for the benefit of trade and tariffs, Gilneas should only send a small token force instead of the whole Gilnean army, a sentiment echoed by Baron Ashbury. Genn noted that unlike Darius Crowley's empathetic urge to aid the other human nations, Godfrey's notion was a smart political play that ensured notoriety for himself, as he was the commander of Gilneas' standing militia. However, Genn also saw the wisdom in Godfrey's advice and stated that he would consider it.",
+      "\nPrior to the Second War, Godfrey was among the Gilnean nobles who accompanied King Genn Greymane to Lordaeron to create the Alliance of Lordaeron. Genn trusted his counsel but was always suspicious of his ambitions. Godfrey suggested that to stay in the good graces of their sister kingdoms for the benefit of trade and tariffs, Gilneas should only send a small token force instead of the whole Gilnean army, a sentiment echoed by Baron Ashbury. Genn noted that unlike Darius Crowley's empathetic urge to aid the other human nations, Godfrey's notion was a smart political play that ensured notoriety for himself, as he was the commander of Gilneas' standing militia. However, Genn also saw the wisdom in Godfrey's advice and stated that he would consider it.\n\nFollowing the end of the Second War, Genn told Godfrey of his intentions of constructing the Greymane Wall to seal Gilneas off from the rest of the world. Godfrey pointed out that while Genn was considering building the wall through the lands of Lord Marley, constructing it through a mountainous region in Lord Crowley's domain would make for a more secure natural barrier, although doing so would cut off the northern villages of Ambermill and Pyrewood. Genn warned that Darius might not take well to having his lands cut off, but Godfrey insisted that it was the best course of action for Gilneas. The fact that this placement of the wall would make Godfrey's own lands the most strategically valuable — as they would form the realm nearest to the wall and would thus be Gilneas' buffer to the outside — did not escape Genn, but he conceded that Godfrey was right, regardless of his personal motives. As Godfrey finished his goblet of wine, he fought the urge to smile.[4]",
+      "\n This section concerns content related to the Warcraft manga or comics.\n\n This section concerns content related to Cataclysm.",
+      "\n This section concerns content related to Cataclysm.\n\nGodfrey in Gilneas City.",
+      "\nLord Godfrey is later raised as a Forsaken himself by the Val'kyr. Once he returned to \"life,\" he led the attack against Pyrewood Village, where Lord Crowley and other survivors of Gilneas had settled. During this time he also used necromancy to resurrect Sean Dempsey, who had been eaten by crocolisks, only to murder him again. He later kidnaps Crowley's daughter Lorna and holds her for ransom as commanded by Sylvanas Windrunner, where he would rather kill her and raise her as a member of the forsaken, hoping to force a ceasefire between the Gilneas Liberation Front and the Forsaken. After Crowley surrenders to Sylvanas at the shattered Greymane Wall Godfrey betrays her, shooting and killing the Banshee Queen (who is shortly afterward resurrected by the Val'kyr). Now wanted by both the Alliance and the Horde, Godfrey made a run for nearby Shadowfang Keep.\n\nGodfrey's corpse below Tempest's Reach, shortly before being retrieved by the Forsaken.",
+      "\n This section concerns content related to the Warcraft manga or comics.\n\nMy kingdom? My kingdom is no more.",
+      "\nYour father and Greymane saw to that... No, Gilneas died when they allowed murderous beasts to reign free. Unchecked.\n\nWorld of Warcraft[]"
+    ]
+  },
+  {
+    "requestedTitle": "Lord Mayor Morrison",
+    "title": "Lord Mayor Morrison",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Mayor+Morrison&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-69",
+    "revid": 6243284,
+    "evidenceFile": "docs/noble-family-evidence/Lord_Mayor_Morrison--family-api.txt",
+    "length": 1238,
+    "relevant": [
+      "\n3 Relatives\n\n4 Patch changes",
+      "\nRelatives[]\n\n | ",
+      " | \nThis section includes speculation on characters that might be related, usually because they may share a last name. It should not be taken as representing official lore.\n\nHe may be related to Brambley Morrison and Vinnie Morrison.",
+      "\nHe may be related to Brambley Morrison and Vinnie Morrison.\n\nPatch changes[]"
+    ]
+  },
+  {
+    "requestedTitle": "Baron Longshore",
+    "title": "Baron Longshore",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Baron+Longshore&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-72",
+    "revid": 6664278,
+    "evidenceFile": "docs/noble-family-evidence/Baron_Longshore--family-api.txt",
+    "length": 1686,
+    "relevant": [
+      "\n This section concerns content related to Cataclysm.\n\nAfter the Cataclysm, his fleet was decimated by the Alliance navy. He and the surviving Southsea Cutthroats can be found incarcerated by the Northwatch Expeditionary Unit.[2] Horde adventurers are able to rescue him in a quest, in exchange for the location of his stolen treasure. He eventually double-crosses the adventurers and attacks them."
+    ]
+  },
+  {
+    "requestedTitle": "Aderic",
+    "title": "Aderic",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Aderic&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-73",
+    "revid": 6625850,
+    "evidenceFile": "docs/noble-family-evidence/Aderic--family-api.txt",
+    "length": 827,
+    "relevant": []
+  },
+  {
+    "requestedTitle": "Silverlaine Thorne",
+    "title": "Silverlaine Thorne",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Silverlaine+Thorne&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-74",
+    "revid": 5561906,
+    "evidenceFile": "docs/noble-family-evidence/Silverlaine_Thorne--family-api.txt",
+    "length": 20,
+    "relevant": []
+  },
+  {
+    "requestedTitle": "Krennan Aranas",
+    "title": "Krennan Aranas",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Krennan+Aranas&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "sourceId": "family-source-75",
+    "revid": 6626433,
+    "evidenceFile": "docs/noble-family-evidence/Krennan_Aranas--family-api.txt",
+    "length": 3905,
+    "relevant": [
+      "\n This section concerns content related to the Warcraft manga or comics.\n\n This section concerns content related to Cataclysm.",
+      "\n This section concerns content related to Cataclysm.\n\nDuring Tess Greymane's birth Krennan made a potion that secured her life. Shortly before the attack on Gilneas City, Genn Greymane asked him to find a potion for him.[1] During the attack, he was saved by adventurers sent by Genn.[2]"
+    ]
+  }
+]

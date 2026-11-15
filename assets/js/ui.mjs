@@ -1,5 +1,9 @@
 import { sovereignOf, factionMembers, effectiveFaction } from './model.mjs';
 import { createFactionShield } from './heraldry.mjs';
+import { createTypeIcon, typeName } from './object-types.mjs';
+import { decorateLocationMarker, renderLocationLinkSections } from './location-links-ui.mjs';
+import { createNobleLifeStatusTag } from './noble-life-status.mjs';
+import { orderNobles } from './noble-order.mjs';
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const FAVORITES_KEY = 'gilneas-atlas-favorites-v1';
@@ -51,14 +55,7 @@ const casefold = value => String(value ?? '').normalize('NFKC').toLocaleLowerCas
 const colorOf = faction => /^#[0-9a-f]{6}$/i.test(faction?.color || '') ? faction.color : '#b39467';
 const unknownAffiliation = location => location.provenance?.affiliationStatus === 'unknown' ||
   (location.faction == null && location.provenance?.confidence === 'reconstruction' && location.provenance?.affiliationStatus !== 'independent');
-function crestImage(snapshot) {
-  const crest = snapshot.meta.gilneasCrest;
-  if (typeof crest !== 'string' || !crest) return null;
-  const image = make('img', 'faction-crest');
-  image.src = crest;
-  image.alt = '';
-  return image;
-}
+
 
 /** Wire the static atlas DOM. Data and editing remain with the parent. */
 export function initUI(context) {
@@ -66,6 +63,11 @@ export function initUI(context) {
   const body = document.body;
   const viewport = dom.viewport;
   const world = dom.world;
+  const dossierHeader = dom.dossier.querySelector('.dossier-head');
+  const dossierHeaderLabel = make('span', 'dossier-header-label');
+  const dossierHeaderName = make('span', 'dossier-header-name');
+  dom['dossier-type'].before(dossierHeaderLabel);
+  dossierHeaderLabel.append(dom['dossier-type'], dossierHeaderName);
   const mobileMedia = window.matchMedia(MOBILE_QUERY);
   let mobile = mobileMedia.matches;
   let initialized = false;
@@ -112,9 +114,23 @@ export function initUI(context) {
     tooltipMarker = null;
   }
 
+  function positionSelectedLabel() {
+    const label = dom.markers.querySelector('.map-marker.selected .marker-label');
+    if (!label) return;
+    const rect = viewRect(), margin = 8;
+    label.style.maxWidth = `${Math.max(1, rect.width - margin * 2)}px`;
+    label.style.setProperty('--selected-label-x', '0px');
+    label.style.setProperty('--selected-label-y', '0px');
+    const box = label.getBoundingClientRect();
+    const left = Math.max(rect.left + margin, Math.min(rect.right - margin - box.width, box.left));
+    const top = Math.max(rect.top + margin, Math.min(rect.bottom - margin - box.height, box.top));
+    label.style.setProperty('--selected-label-x', `${left - box.left}px`);
+    label.style.setProperty('--selected-label-y', `${top - box.top}px`);
+  }
+
   function showMarkerTooltip(marker, location) {
     hideMarkerTooltip();
-    if (mapInteraction || pointers.size || viewport.classList.contains('dragging')) return;
+    if (location.id === context.getSelectedId() || mapInteraction || pointers.size || viewport.classList.contains('dragging')) return;
     tooltipMarker = marker;
     const factions = factionMap();
     const faction = factions.get(location.faction);
@@ -177,6 +193,7 @@ export function initUI(context) {
     world.style.transform = `translate(${camera.x}px, ${camera.y}px) scale(${camera.scale})`;
     world.style.setProperty('--inverse-scale', String(1 / camera.scale));
     dom['zoom-status'].textContent = `${Math.round(camera.scale * 100)}%`;
+    positionSelectedLabel();
   }
 
   function cancelFlight() {
@@ -250,6 +267,11 @@ export function initUI(context) {
     body.classList.toggle('layers-hidden', dom.layers.hidden);
     body.classList.toggle('dossier-open', !dom.dossier.hidden);
     dom['nav-open'].hidden = mobile || !dom.navigation.hidden;
+    if (dom['layers-open']) {
+      dom['layers-open'].hidden = mobile || !dom.layers.hidden;
+      dom['layers-open'].setAttribute('aria-expanded', String(!dom.layers.hidden));
+      dom['layers-open'].setAttribute('aria-controls', 'layers');
+    }
     for (const name of ['navigation', 'layers', 'dossier']) {
       body.classList.toggle(`mobile-panel-${name}`, mobile && !dom[name].hidden);
       dom[name].setAttribute('aria-hidden', String(dom[name].hidden));
@@ -257,11 +279,13 @@ export function initUI(context) {
       button.classList.toggle('active', !dom[name].hidden);
       button.setAttribute('aria-pressed', String(!dom[name].hidden));
     }
+    positionSelectedLabel();
   }
   function setPanel(name, open) {
     if (!Object.hasOwn(panels, name)) return;
     if (name === 'dossier' && !selected()) open = false;
     if (mobile && open) for (const key of Object.keys(panels)) panels[key] = false;
+    if (name === 'layers' && open) panels.dossier = false;
     panels[name] = Boolean(open);
     syncPanels();
   }
@@ -271,9 +295,17 @@ export function initUI(context) {
     body.classList.toggle('map-editing', Boolean(mapInteraction));
   }
 
+  function unfoldDossier() {
+    dom['dossier-body'].hidden = false;
+    dom.dossier.classList.remove('folded');
+    dom['dossier-fold'].setAttribute('aria-expanded', 'true');
+    dom['dossier-fold'].setAttribute('aria-label', 'Свернуть досье');
+  }
+
   function selectLocation(id) {
     hideMarkerTooltip();
     context.onSelect(id);
+    unfoldDossier();
     setPanel('dossier', true);
     focusLocation(id);
   }
@@ -366,6 +398,11 @@ export function initUI(context) {
       mapInteraction(toMap(event.clientX, event.clientY), event);
     }
   }, true);
+  viewport.addEventListener('click', event => {
+    if (event.defaultPrevented || mapInteraction || suppressMapClick || event.button !== 0 || event.altKey || event.metaKey) return;
+    if (event.target.closest('.map-marker, button, input, select, textarea, summary, a, label, [role="button"], [contenteditable]:not([contenteditable="false"])')) return;
+    context.onClearSelection?.();
+  });
   viewport.addEventListener('dblclick', event => {
     if (!mapInteraction || suppressMapClick || event.altKey || event.metaKey) return;
     event.preventDefault();
@@ -394,14 +431,17 @@ export function initUI(context) {
     }
     if (tab === 'nobles') {
       const houseName = noble => factions.get(noble.house)?.name || noble.house;
-      const nobles = (snapshot.nobles || []).filter(noble => !query || casefold([noble.name, noble.title, houseName(noble), noble.owner].join(' ')).includes(query));
+      const nobles = orderNobles(snapshot).filter(noble => !query || casefold([noble.name, noble.title, houseName(noble), noble.owner].join(' ')).includes(query));
       dom['location-list'].replaceChildren(...nobles.map(noble => {
         const row = make('button', 'noble-row');
         row.type = 'button';
         row.dataset.nobleId = noble.id;
         const label = make('span');
-        label.append(make('span', '', noble.name), make('small', '', [noble.title, houseName(noble)].filter(Boolean).join(' · ')));
-        row.append(icon('shield'), label);
+        const name = make('span', 'noble-row-heading');
+        name.append(make('span', 'noble-row-name', noble.name), createNobleLifeStatusTag(noble));
+        label.append(name, make('small', '', [noble.title, houseName(noble)].filter(Boolean).join(' · ')));
+        if (factions.has(noble.house)) row.append(createFactionShield(snapshot, noble.house));
+        row.append(label);
         row.addEventListener('click', () => context.onShowNoble?.(noble.id));
         return row;
       }));
@@ -436,9 +476,12 @@ export function initUI(context) {
       row.type = 'button';
       row.dataset.locationId = location.id;
       row.classList.toggle('active', location.id === context.getSelectedId());
-      row.append(make('span', 'row-name', location.name), make('small', 'location-type', TYPE_NAMES[location.type] || location.type));
-      if (location.capital) { const crown = make('span', 'row-capital'); crown.append(icon('crown')); row.append(crown); }
-      if (favorites.has(location.id)) row.append(icon('star', 'row-favorite'));
+      const copy = make('span', 'row-copy');
+      copy.append(make('span', 'row-name', location.name), make('small', 'location-type', typeName(location.type)));
+      const marks = make('span', 'row-marks');
+      if (location.capital) { const crown = make('span', 'row-capital'); crown.append(icon('crown')); marks.append(crown); }
+      if (favorites.has(location.id)) marks.append(icon('star', 'row-favorite'));
+      row.append(copy, marks);
       row.addEventListener('click', () => selectLocation(location.id));
       return row;
     };
@@ -456,7 +499,7 @@ export function initUI(context) {
       const summary = make('summary');
       const junior = node.faction?.ruler && factions.get(node.faction.parent)?.parent != null;
       const heading = make('span', 'group-heading');
-      if (node.id === 'gilneas') { const crest = crestImage(snapshot); if (crest) heading.append(crest); }
+      if (node.faction) heading.append(createFactionShield(snapshot, node.id));
       heading.append(make('span', 'group-name', junior ? node.faction.ruler : node.faction?.name || (node.affiliation === 'unknown' ? 'Принадлежность не установлена' : 'Без державы')));
       if (junior) heading.append(make('small', 'group-house-name', node.faction.name));
       summary.append(heading, make('span', 'group-count', count), icon('chevron', 'chevron'));
@@ -533,11 +576,15 @@ export function initUI(context) {
       marker.classList.toggle('capital', Boolean(location.capital));
       marker.classList.toggle('selected', location.id === context.getSelectedId());
       marker.classList.toggle('dimmed', Boolean(included && !included.has(location.faction) && location.id !== context.getSelectedId()));
-      marker.append(icon(locationGlyph(location)), make('span', 'marker-label', location.name));
+      const symbol = location.capital || Object.hasOwn(TYPE_NAMES, location.type)
+        ? icon(locationGlyph(location)) : createTypeIcon(location.type);
+      marker.append(symbol, make('span', 'marker-label', location.name));
+      decorateLocationMarker(marker, location);
       marker.addEventListener('click', () => selectLocation(location.id));
       fragment.append(marker);
     }
     dom.markers.replaceChildren(fragment);
+    positionSelectedLabel();
   }
 
   function renderLayers() {
@@ -560,7 +607,7 @@ export function initUI(context) {
       row.classList.toggle('active', selectedFaction === faction.id);
       row.setAttribute('aria-pressed', String(selectedFaction === faction.id));
       const name = make('span', 'faction-name', faction.name);
-      row.append((faction.id === 'gilneas' && crestImage(snapshot)) || make('i'), name);
+      row.append(createFactionShield(snapshot, faction.id), name);
       if (depth) {
         const parent = factions.get(faction.parent);
         const badge = make('small', 'faction-parent', parent?.name);
@@ -632,7 +679,10 @@ export function initUI(context) {
 
   function renderDossier() {
     const location = selected();
-    if (!location) { syncPanels(); return; }
+    if (!location) {
+      renderLocationLinkSections({ snapshot: data(), locationId: null, onSelect: selectLocation, body: dom['dossier-body'] });
+      syncPanels(); return;
+    }
     const factions = factionMap();
     const faction = factions.get(location.faction);
     const sovereign = faction ? factions.get(sovereignOf(data().factions, faction.id)) : null;
@@ -645,10 +695,12 @@ export function initUI(context) {
     }
     dom.dossier.style.setProperty('--dossier-faction-color', colorOf(faction));
     dom['dossier-faction'].style.color = 'var(--dossier-faction-color)';
-    dom['dossier-type'].textContent = TYPE_NAMES[location.type] || 'Досье владения';
+    dom['dossier-type'].textContent = typeName(location.type);
+    dossierHeaderName.textContent = location.name;
+    dossierHeaderLabel.title = `${dom['dossier-type'].textContent} · ${location.name}`;
+    dossierHeader.title = dossierHeaderLabel.title;
     dom['dossier-title'].textContent = location.name;
-    const fields = [TYPE_NAMES[location.type] || location.type, location.capital ? 'Столица' : '', location.subtitle];
-    dom['dossier-subtitle'].textContent = [...new Set(fields.filter(Boolean))].join(' · ');
+    dom['dossier-subtitle'].textContent = location.capital ? 'Столица' : typeName(location.type);
     const unknown = unknownAffiliation(location);
     dom['dossier-faction'].textContent = faction?.name || (unknown ? 'Принадлежность не установлена' : 'Без державы');
     dom['dossier-sovereign'].textContent = sovereign?.name || (unknown ? 'Не установлено' : 'Независимое владение');
@@ -681,15 +733,17 @@ export function initUI(context) {
       card.style.setProperty('--object-color', colorOf(objectFaction));
       const summary = make('summary');
       const symbol = make('span', 'object-icon');
-      symbol.append(createFactionShield(data(), effectiveFaction(location, object)));
+      symbol.append(createTypeIcon(object.type));
       const badge = make('small', 'object-faction-badge', objectAffiliation);
       badge.style.color = 'var(--object-color)';
+      const badges = make('span', 'object-badges');
+      badges.append(badge);
+      const owner = typeof object.owner === 'string' ? object.owner.trim() : '';
+      if (owner) badges.append(make('small', 'object-owner-badge', owner));
       const heading = make('span', 'object-heading');
-      heading.append(make('span', 'object-title', object.name), badge);
+      heading.append(make('span', 'object-title', object.name), badges);
       summary.append(symbol, heading, icon('chevron', 'chevron'));
       card.append(summary);
-      const owner = object.owner || location.owner;
-      card.append(make('small', 'object-ownership', `${objectAffiliation} · ${owner || 'Владелец не установлен'}`));
       if (object.description) card.append(make('p', 'object-description', object.description));
       if (object.type === 'resource' && object.amount != null && String(object.amount).length) card.append(make('p', 'amount', `Запас: ${object.amount}`));
       if (object.modifiers?.length) {
@@ -705,6 +759,7 @@ export function initUI(context) {
       appendCitations(citations, object, cited);
       if (citations.childNodes.length) card.append(citations);
       const actions = make('div', 'object-actions');
+      actions.setAttribute('data-edit-only', '');
       for (const [kind, label, glyph, callback] of [['edit', 'Редактировать', 'quill', context.onEditObject], ['delete', 'Удалить', 'trash', context.onDeleteObject]]) {
         const button = make('button', '', label);
         button.type = 'button';
@@ -719,6 +774,12 @@ export function initUI(context) {
       return card;
     }));
     if (!location.objects?.length) dom['dossier-objects'].append(make('p', 'empty-objects', 'Объекты не добавлены.'));
+    dom.dossier.querySelector('.composition').classList.toggle('composition-empty', !location.objects?.length);
+    const composition = dom.dossier.querySelector('.composition');
+    composition.hidden = location.isLocation === true && !location.objects?.length && !document.body.classList.contains('edit-mode');
+    composition.querySelector('h3').textContent = location.isLocation === true ? 'Собственные объекты' : 'Объекты владения';
+    renderLocationLinkSections({ snapshot: data(), locationId: location.id, onSelect: selectLocation,
+      onEditLocation: context.onEditLocation, body: dom['dossier-body'] });
     dom['dossier-source-list'].replaceChildren(...[...cited.values()].map(({ record, number }) => {
       const entry = make('div', 'source-entry');
       entry.append(sourceLink(record, `[${number}] ${record.title || record.url || 'Источник'}`));
@@ -728,9 +789,7 @@ export function initUI(context) {
     dom['dossier-sources'].hidden = cited.size === 0;
     if (!sameLocation) {
       dom.dossier.scrollTop = 0;
-      dom.dossier.classList.remove('folded');
-      dom['dossier-body'].hidden = false;
-      dom['dossier-fold'].setAttribute('aria-expanded', 'true');
+      unfoldDossier();
       dom['dossier-sources'].open = false;
     }
     lastDossierId = location.id;
@@ -772,9 +831,11 @@ export function initUI(context) {
   }
 
   dom.search.addEventListener('input', renderNavigation);
+  window.addEventListener('gilneas-edit-mode-changed', renderDossier);
   dom['nav-close'].addEventListener('click', () => setPanel('navigation', false));
   dom['nav-open'].addEventListener('click', () => setPanel('navigation', true));
   dom['layers-close'].addEventListener('click', () => setPanel('layers', false));
+  dom['layers-open']?.addEventListener('click', () => setPanel('layers', true));
   for (const [id, name] of [['mobile-nav', 'navigation'], ['mobile-layers', 'layers'], ['mobile-dossier', 'dossier']]) {
     dom[id].addEventListener('click', () => setPanel(name, dom[name].hidden));
   }
@@ -799,6 +860,7 @@ export function initUI(context) {
     dom['dossier-body'].hidden = !dom['dossier-body'].hidden;
     dom.dossier.classList.toggle('folded', dom['dossier-body'].hidden);
     dom['dossier-fold'].setAttribute('aria-expanded', String(!dom['dossier-body'].hidden));
+    dom['dossier-fold'].setAttribute('aria-label', dom['dossier-body'].hidden ? 'Развернуть досье' : 'Свернуть досье');
   });
   dom['dossier-edit'].addEventListener('click', () => { if (selected()) context.onEditLocation?.(selected().id); });
   dom['dossier-add-object'].addEventListener('click', () => { if (selected()) context.onAddObject?.(selected().id); });
@@ -846,5 +908,5 @@ export function initUI(context) {
   });
   refreshViewport();
   render();
-  return { render, renderDossier, focusLocation, home, fit, zoom, setPanel, toMap, getCamera, setMapInteraction, refreshViewport };
+  return { render, renderDossier, unfoldDossier, focusLocation, home, fit, zoom, setPanel, toMap, getCamera, setMapInteraction, refreshViewport };
 }

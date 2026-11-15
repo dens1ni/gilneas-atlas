@@ -1,0 +1,79 @@
+| Lord Candren
+
+ | 
+
+ | Title | 
+<Gilneas Quartermaster>
+
+ | Gender | 
+Male
+
+ | Race | 
+Human (Humanoid)
+
+ | Level | 
+60
+
+ | Reaction | 
+Alliance Horde
+
+ | Affiliation(s) | 
+Gilneas
+
+ | Occupation | 
+Vendor
+
+ | Location | 
+Temple Gardens, Darnassus[37, 47]
+
+ | Status | 
+Alive
+
+Lord Candren is the quartermaster for Gilneas. He is found in Darnassus's Temple Gardens, near the flight master.
+
+ This section concerns content related to Battle for Azeroth.
+
+Lord Candren survived the Burning of Teldrassil and made his way to Stormwind Embassy.
+
+Vendor information[]
+
+ | 
+
+ | [Cape of Gilneas]
+1 48 71
+
+ | 
+
+ | 
+
+ | [Gilnean Satchel]
+2
+
+ | 
+
+ | [Gilneas Tabard]
+10
+
+ | 
+
+ | 
+
+ | [Mantle of Gilneas]
+1 48 14
+
+ | 
+
+ | [Shroud of Gilneas]
+1 49 27
+
+ | 
+
+Patch changes[]
+
+ Patch 4.0.3a (2010-11-23): Added.   
+
+External links[]
+
+Wowhead
+
+WoWDB

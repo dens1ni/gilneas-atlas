@@ -1,0 +1,27 @@
+{
+  "rejectedAsLore": [
+    {
+      "sourceId": "family-source-32",
+      "url": "https://wowpedia.fandom.com/wiki/Agent_Crowley",
+      "file": "docs/noble-family-evidence/Agent_Crowley.md",
+      "reason": "Client Challenge: no article text. Recovered actual article via MediaWiki API source family-source-54."
+    },
+    {
+      "sourceId": "family-source-55",
+      "file": "docs/noble-family-evidence/Hiram_Creed--api.txt",
+      "reason": "Redirect only; real title Lord Hiram Creed was retrieved separately (family-source-10/76)."
+    },
+    {
+      "sourceId": "family-source-74",
+      "file": "docs/noble-family-evidence/Silverlaine_Thorne--family-api.txt",
+      "reason": "Redirect only; not used for genealogical claims."
+    },
+    {
+      "sourceId": "family-source-12",
+      "file": "docs/noble-family-evidence/Category-Aristocrats--page2.md",
+      "reason": "Navigation only: retry with letter pages, then exact MediaWiki category API."
+    }
+  ],
+  "categoryCorrection": "HTML category lists report 629 pages, but correctly parsing quoted Prince Nastykhan yields 630 ns=0 pages; live MediaWiki API returns precisely 637 unique page IDs: 630 ns=0 pages and 7 ns=14 subcategories. No silent count mismatch.",
+  "apiCanonicalRule": "canonicalUrl on a successful parse record is derived from returned parse.title, not assumed from slug."
+}

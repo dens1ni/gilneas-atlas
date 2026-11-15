@@ -152,12 +152,20 @@ test('valid migration preserves author citation edits and exact numeric/string s
   assert.deepEqual(reconcileDraftPublication(result, published, previous), result);
 });
 
-test('publication metadata adopts absent or exactly unchanged previous defaults', () => {
-  for (const absent of [false, true]) {
+test('publication metadata adopts first-time absent or exactly unchanged defaults but preserves author deletion', () => {
+  const fields = ['gilneasCrest', 'crestSource', 'wallConstruction'];
+  for (const state of ['unchanged', 'first-adoption', 'author-deleted']) {
     const previous = prior(), published = release(), draft = prior();
-    Object.assign(previous.meta, { gilneasCrest: 'assets/ui/prior.svg', crestSource: 'https://example.invalid/old-crest', wallConstruction: { value: 0, max: 100 } });
-    if (!absent) Object.assign(draft.meta, structuredClone(previous.meta));
+    const priorDefaults = { gilneasCrest: 'assets/ui/prior.svg', crestSource: 'https://example.invalid/old-crest', wallConstruction: { value: 0, max: 100 } };
+    if (state !== 'first-adoption') Object.assign(previous.meta, priorDefaults);
+    if (state === 'unchanged') Object.assign(draft.meta, structuredClone(previous.meta));
+    const original = structuredClone(draft);
     const result = reconcileDraftPublication(draft, published, previous);
-    for (const field of ['gilneasCrest', 'crestSource', 'wallConstruction']) assert.deepEqual(result.meta[field], published.meta[field]);
+    for (const field of fields) {
+      if (state === 'author-deleted') assert.equal(Object.hasOwn(result.meta, field), false, field);
+      else assert.deepEqual(result.meta[field], published.meta[field], field);
+    }
+    assert.deepEqual(draft, original);
+    assert.deepEqual(reconcileDraftPublication(result, published, previous), result);
   }
 });

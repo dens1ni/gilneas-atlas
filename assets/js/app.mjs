@@ -1,19 +1,23 @@
 import { normalizeData, loadDraft, saveDraft, resetDraft, deserializeSnapshot, serializeSnapshot, removeObject } from './model.mjs';
 import { initUI } from './ui.mjs';
 import { initEditor } from './editor.mjs';
-import { reconcileDraftPublication } from './draft-publication.mjs';
+import { initEditMode, isEditingEnabled } from './edit-mode.mjs';
+import { reconcileDraftPublication, previousPublicationFile } from './draft-publication.mjs';
 import { reconcileMapPublication } from './map-publication.mjs';
 import { initTerritories, prepareTerritoryGrid } from './territories.mjs';
 import { initNobleDossier } from './noble-dossier.mjs';
 import { initChronicle } from './chronicle.mjs';
+import { initRoyalCouncilWindow } from './council-window.mjs';
+import { initWallJournal } from './wall-journal.mjs';
+import { initMapPresentation } from './map-presentation.mjs';
 import { decorateIcons } from './icons.mjs';
 import { exportSite, downloadFile } from './export.mjs';
 
 const $=id=>document.getElementById(id);
 const root=new URL('../../',import.meta.url);
-let data,baseline,selectedId=null,ui,editor,chronicle,nobleDossier,boundaries;
+let data,baseline,selectedId=null,ui,editor,chronicle,nobleDossier,boundaries,royalCouncil,wallJournal,mapPresentation;
 const inactiveMasks=new Map();
-let isDraft=false,toastTimer;
+let isDraft=false,toastTimer,editMode;
 function toast(message) {
   $('toast').textContent=String(message);$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,5500);
 }
@@ -22,16 +26,26 @@ function updateDraftBadge() {
 }
 function select(id) {
   if(!data.locations.some(l=>l.id===id))return;
-  selectedId=id;ui.render();ui.setPanel('dossier',true);ui.focusLocation(id);editor?.refresh?.();
+  selectedId=id;ui.render();ui.setPanel('dossier',true);ui.unfoldDossier?.();ui.focusLocation(id);editor?.refresh?.();
+}
+function clearSelection() {
+  if(selectedId===null)return;
+  selectedId=null;ui.setPanel('dossier',false);ui.render();editor?.refresh?.();
+}
+function requireEditing(revision) {
+  if(!isEditingEnabled()||(revision!==undefined&&revision!==editMode.getRevision()))
+    throw Error('Включите режим редактирования в Редакторе атласа.');
 }
 function commit(incoming) {
+  requireEditing();
   const normalized=normalizeData(incoming);
   requireInactiveMask(normalized);
+  mapPresentation.requirePrepared(normalized);
   const next=prepareTerritoryGrid(normalized,point=>canPlaceFor(normalized,point));
   saveDraft(localStorage,next);
   data=next;isDraft=true;
   if(selectedId&&!data.locations.some(l=>l.id===selectedId))selectedId=null;
-  ui.render();editor?.refresh?.();updateDraftBadge();
+  ui.render();mapPresentation.renderFrame(data);editor?.refresh?.();updateDraftBadge();
   window.dispatchEvent(new CustomEvent('gilneas-data-changed'));
   return data;
 }
@@ -84,8 +98,10 @@ async function loadInactiveMask(snapshot) {
   return entry.ready;
 }
 async function deleteObject(locationId,objectId) {
+  if(!isEditingEnabled())return;
+  const revision=editMode.getRevision();
   if(await confirmAction('Удалить объект?','Объект и его модификаторы будут удалены из локального черновика.')) {
-    try{commit(removeObject(data,locationId,objectId));toast('Объект удалён.');}catch(error){toast(error.message);}
+    try{requireEditing(revision);commit(removeObject(data,locationId,objectId));toast('Объект удалён.');}catch(error){toast(error.message);}
   }
 }
 async function onExportSite() {
@@ -98,18 +114,28 @@ function onExportJson() {
 }
 async function onImport(file) {
   if(!file)return;
+  requireEditing();const revision=editMode.getRevision();
   if(file.size>20000000)throw Error('Файл снимка слишком велик');
-  const next=deserializeSnapshot(await file.text());await loadInactiveMask(next);commit(next);toast('Атлас восстановлен из JSON.');return next;
+  const next=deserializeSnapshot(await file.text());
+  await Promise.all([loadInactiveMask(next),mapPresentation.prepare(next)]);
+  requireEditing(revision);
+  commit(next);toast('Атлас восстановлен из JSON.');return next;
 }
 async function onReset() {
+  requireEditing();const revision=editMode.getRevision();
   if(!(await confirmAction('Восстановить королевский архив?','Все локальные изменения будут отменены. Опубликованный сайт и скачанные резервные копии не изменятся.')))return;
-  await loadInactiveMask(baseline);
+  await Promise.all([loadInactiveMask(baseline),mapPresentation.prepare(baseline)]);
+  requireEditing(revision);
   const next=prepareTerritoryGrid(normalizeData(baseline),point=>canPlaceFor(baseline,point));
-  resetDraft(localStorage);data=next;isDraft=false;selectedId=null;ui.render();editor?.refresh?.();updateDraftBadge();toast('Опубликованный атлас восстановлен.');
+  resetDraft(localStorage);data=next;isDraft=false;selectedId=null;ui.render();mapPresentation.renderFrame(data);editor?.refresh?.();updateDraftBadge();
+  window.dispatchEvent(new CustomEvent('gilneas-data-changed'));
+  toast('Опубликованный атлас восстановлен.');
 }
 function wireDialogs() {
   document.querySelectorAll('[data-close]').forEach(button=>button.onclick=()=>$(button.dataset.close).close());
   document.querySelectorAll('dialog').forEach(dialog=>{
+    if(dialog.dataset.backdropWired==='true')return;
+    dialog.dataset.backdropWired='true';
     let outsideDown=false;
     const outside=e=>{const r=dialog.getBoundingClientRect();return e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom;};
     dialog.addEventListener('pointerdown',e=>outsideDown=e.target===dialog&&outside(e));
@@ -119,10 +145,18 @@ function wireDialogs() {
   $('fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch{toast('Полный экран недоступен в этом браузере.');}};
   document.addEventListener('keydown',e=>{
     if(e.target.closest('input,textarea,select,[contenteditable=true]')||document.querySelector('dialog[open]'))return;
-    if(e.key.toLowerCase()==='e'||e.key.toLowerCase()==='у') {if(selectedId){e.preventDefault();editor.editLocation(selectedId);}}
+    if(e.key.toLowerCase()==='e'||e.key.toLowerCase()==='у') {if(selectedId&&isEditingEnabled()){e.preventDefault();editor.editLocation(selectedId);}}
   });
 }
 async function start() {
+  editMode=initEditMode({onChange:enabled=>{
+    if(!enabled){
+      editor?.cancelEditing?.();
+      boundaries?.close();
+      if($('confirmation').open)$('confirm-no').click();
+    }
+  }});
+  mapPresentation=initMapPresentation();
   decorateIcons();wireDialogs();
   const response=await fetch(new URL('assets/data/atlas.json',root),{cache:'no-store'});
   if(!response.ok)throw Error('Королевский реестр недоступен: '+response.status);
@@ -132,7 +166,7 @@ async function start() {
   data=restored.data;isDraft=restored.isDraft;
   if(isDraft&&baseline.meta.publicationRevision&&data.meta.publicationRevision!==baseline.meta.publicationRevision){
     try{
-      const previousVersion=data.meta.publicationRevision?.startsWith('faction-dossiers')?'publication-v2.json':'publication-v1.json';
+      const previousVersion=previousPublicationFile(data.meta);
       const prior=await fetch(new URL('assets/data/'+previousVersion,root));
       if(!prior.ok)throw new Error('Предыдущая основа недоступна: '+prior.status);
       const previous=await prior.json();
@@ -146,27 +180,33 @@ async function start() {
   }
   const [baselineMask]=await Promise.all([loadInactiveMask(baseline).catch(error=>{
     console.warn('Маска опубликованного атласа недоступна; восстановление потребует повторной загрузки.',error);return null;
-  }),loadInactiveMask(data)]);
+  }),loadInactiveMask(data),mapPresentation.prepare(data)]);
   if(baselineMask)baseline=prepareTerritoryGrid(baseline,point=>canPlaceFor(baseline,point));
   data=prepareTerritoryGrid(data,canPlace);
-  chronicle=initChronicle(()=>data);
   nobleDossier=initNobleDossier({getData:()=>data,onSelect:select});
-  ui=initUI({getData:()=>data,getSelectedId:()=>selectedId,onSelect:select,
+  royalCouncil=initRoyalCouncilWindow({getData:()=>data,replaceData:commit,isEditingEnabled,toast,confirm:confirmAction,onShowNoble:id=>nobleDossier.open(id)});
+  wallJournal=initWallJournal({getData:()=>data,replaceData:commit,isEditingEnabled,toast,confirm:confirmAction});
+  chronicle=initChronicle(()=>data,{onOpenCouncil:()=>royalCouncil.open()});
+  wireDialogs();
+  ui=initUI({getData:()=>data,getSelectedId:()=>selectedId,onSelect:select,onClearSelection:clearSelection,
     onEditLocation:id=>editor.editLocation(id),onAddObject:id=>editor.addObject(id),
     onEditObject:(lid,oid)=>editor.editObject(lid,oid),onDeleteObject:deleteObject,
     onShowNoble:id=>nobleDossier.open(id),onRenderTerritories:state=>boundaries?.render({visible:state.visible,included:state.includedFactions?new Set(state.includedFactions):null})});
-  editor=initEditor({getData:()=>data,getSelectedId:()=>selectedId,replaceData:commit,
+  editor=initEditor({getData:()=>data,getSelectedId:()=>selectedId,replaceData:commit,isEditingEnabled,
     onSelect:select,ui,toast,confirm:confirmAction,onExportSite,onExportJson,onImport,onReset,canPlace,onOpenTerritories:()=>boundaries.open()});
-  boundaries=initTerritories({getData:()=>data,replaceData:commit,ui,canPlace,toast});
+  boundaries=initTerritories({getData:()=>data,replaceData:commit,isEditingEnabled,ui,canPlace,toast});
   await boundaries.whenReady();
+  mapPresentation.renderFrame(data);
+  await mapPresentation.reveal();
   $('editor-open').onclick=()=>editor.open();
   updateDraftBadge();
   window.gilneasApp={ready:true,getData:()=>normalizeData(data),getSelectedId:()=>selectedId,
-    selectId:select,replaceData:commit,ui,editor,chronicle,nobleDossier,boundaries,canPlace,exportSite:onExportSite,
+    selectId:select,clearSelection,replaceData:commit,ui,editor,chronicle,nobleDossier,boundaries,royalCouncil,wallJournal,mapPresentation,canPlace,exportSite:onExportSite,
     exportJson:onExportJson,importSnapshot:onImport,resetDraft:onReset};
   if(restored.error)toast('Черновик не прочитан. Открыт опубликованный атлас; повреждённый снимок сохранён в браузере.');
 }
 start().catch(error=>{
+  mapPresentation?.fail(error);
   console.error(error);toast('Атлас не загрузился: '+error.message);
   $('location-list').textContent='Не удалось открыть атлас. Проверьте наличие папки assets и подключение к сайту.';
 });

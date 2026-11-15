@@ -1,0 +1,60 @@
+/* Selected stars use the same opaque brass in every favorites view. */
+#filter-favorites { min-width: 44px; min-height: 44px; }
+#dossier-favorite[aria-pressed="true"] svg,
+#filter-favorites[aria-pressed="true"] svg,
+#location-list .row-favorite {
+  fill: var(--gold-bright, #e0c493);
+  stroke: var(--gold-bright, #e0c493);
+}
+#dossier-favorite[aria-pressed="false"] svg,
+#filter-favorites[aria-pressed="false"] svg {
+  fill: none;
+}
+
+/* Reserve the trailing marks column even when neither mark is present.
+   Title and type share the flexible column; icons cannot add a grid row. */
+#location-list .location-row {
+  grid-template-columns: minmax(0, 1fr) 32px;
+  align-items: center;
+  column-gap: 6px;
+}
+#location-list .location-row .row-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 2px;
+}
+#location-list .location-row .row-name { line-height: 1.5; }
+#location-list .location-row .location-type {
+  margin: 0;
+  line-height: 1.3;
+}
+#location-list .location-row .row-marks {
+  display: grid;
+  grid-template-columns: 14px 14px;
+  column-gap: 4px;
+  align-items: center;
+  justify-self: end;
+  width: 32px;
+  min-width: 32px;
+  height: 16px;
+}
+#location-list .row-marks :is(.row-capital, .row-favorite) {
+  grid-row: 1;
+  margin: 0;
+}
+#location-list .row-marks .row-capital { grid-column: 1; }
+#location-list .row-marks .row-favorite {
+  grid-column: 2;
+  width: 14px;
+  height: 14px;
+}
+
+/* A short portrait sheet must retain a whole row below its 44px controls.
+   Reclaim chrome gaps instead of hiding the list or shrinking hit targets. */
+@media (max-width: 760px) and (max-height: 700px) and (orientation: portrait) {
+  #navigation > .panel-head { padding-top: 4px; padding-bottom: 4px; }
+  #navigation .search { margin-top: 4px !important; }
+  #navigation .list-tabs { margin-top: 2px; }
+  #navigation .list-meta { padding-top: 0; padding-bottom: 0; }
+}

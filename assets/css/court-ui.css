@@ -1,0 +1,173 @@
+/* Last-loaded, narrowly scoped court interaction corrections. */
+#region-labels { display: none; }
+/* Vertical-only heraldry: an auto Y axis otherwise makes X scrollable too. */
+#layers { overflow-x: hidden; overflow-y: auto; }
+#layer-body, #faction-list { min-width: 0; }
+#faction-list .faction-row :is(.faction-name, .faction-parent) {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+/* The registry return control occupies the top-left 44px row. Place the
+   chapter below that real footprint rather than covering either with z-index. */
+body.nav-hidden .map-title { top: 78px; }
+/* A later sibling marker must not paint over selected text inside its pill. */
+#markers .map-marker.selected { z-index: 16; }
+#markers .map-marker.selected .marker-label {
+  width: max-content;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  overflow: visible;
+  text-overflow: clip;
+  clip: auto;
+  clip-path: none;
+  mask: none;
+  transform: translate(calc(-50% + var(--selected-label-x, 0px)), var(--selected-label-y, 0px));
+}
+/* Dossiers share the registry's full frame, not a recolored parchment ring. */
+:is(#navigation, #layers, #dossier, #noble-dossier) {
+  border: 1px solid #6b604b;
+  border-radius: 3px;
+  box-shadow: 0 10px 36px #0008, inset 0 0 0 2px #111619;
+}
+:is(#navigation, #layers, #dossier, #noble-dossier)::before,
+:is(#navigation, #layers, #dossier, #noble-dossier)::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 11px;
+  height: 11px;
+  border-top: 2px solid #b69966;
+  border-left: 2px solid #b69966;
+  pointer-events: none;
+  z-index: 2;
+}
+:is(#navigation, #layers, #dossier, #noble-dossier)::after {
+  left: auto;
+  right: -1px;
+  transform: scaleX(-1);
+}
+#dossier > .dossier-head {
+  position: sticky;
+  top: 0;
+  height: 44px;
+  min-height: 44px;
+  padding: 0 8px;
+}
+#dossier :is(#dossier-fold, #dossier-close) {
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  flex: 0 0 32px;
+  padding: 0;
+  position: relative;
+}
+#dossier :is(#dossier-fold, #dossier-close) svg {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  z-index: 1;
+}
+#dossier .dossier-header-label { flex: 1; min-width: 0; }
+#dossier .dossier-header-label .eyebrow { display: block; }
+#dossier .dossier-header-name { display: none; }
+#dossier.folded .dossier-header-name {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 17px;
+  color: var(--royal-ink, #ddd5c2);
+}
+/* Native reproduction already hid the body, but fixed panel height survived
+   .parchment.folded. Reset that actual winning height, not map geometry. */
+#dossier.folded { height: auto; min-height: 0; max-height: none; bottom: auto; }
+#dossier #dossier-body[hidden] { display: none; }
+#chronicle .chronicle-source-links { display: block; margin-top: 8px; }
+#dossier .object-badges { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+#dossier .object-card .object-faction-badge { margin-top: 0; }
+#dossier .object-card .object-owner-badge {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  padding: 3px 7px;
+  border: 1px solid var(--royal-line, #393b3b);
+  color: var(--royal-muted, #96978d);
+  font-size: 10px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+#location-list .group-heading > .faction-shield { width: 19px; height: 22px; }
+#faction-list .faction-row > .faction-shield { width: 15px; height: 18px; }
+#faction-list .faction-row.vassal > .faction-shield { width: 10px; height: 13px; }
+#location-list .noble-row > .faction-shield { width: 21px; height: 25px; }
+#layers #layers-close { display: inline-flex; }
+#layers-open {
+  left: auto;
+  /* Mirror the registry return control in the map's top row. */
+  right: 22px;
+  top: 22px;
+  bottom: auto;
+  min-height: 44px;
+  z-index: 21;
+}
+@media (min-width: 761px) and (min-height: 541px), (min-width: 1051px) {
+  /* Reserve the return-control row without covering the dossier header. */
+  #dossier { top: 78px; }
+}
+@media (max-width: 760px), (max-width: 1050px) and (max-height: 540px) {
+  /* Preserve the registry's existing mobile-sheet frame on every dossier. */
+  :is(#navigation, #layers, #dossier) {
+    border-radius: 5px 5px 2px 2px;
+    box-shadow: 0 -6px 24px #0009;
+  }
+  #dossier :is(#dossier-fold, #dossier-close) {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    flex-basis: 44px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    color: var(--royal-ink, #ddd5c2);
+  }
+  #dossier :is(#dossier-fold, #dossier-close)::before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 6px;
+    top: 6px;
+    border: 1px solid var(--royal-control-line, #605b4c);
+    border-radius: 2px;
+    background: var(--royal-control, #26282a);
+    box-shadow: inset 0 0 0 1px #101213, 0 2px 3px #0004;
+    pointer-events: none;
+  }
+  #dossier :is(#dossier-fold, #dossier-close):hover:not(:disabled)::before {
+    background: #303432;
+    border-color: #9b8a68;
+  }
+  #dossier :is(#dossier-fold, #dossier-close):hover:not(:disabled) {
+    background: transparent;
+    color: var(--gold-bright, #e0c493);
+  }
+  body.nav-hidden .map-title { top: 20px; }
+  #dossier.folded { top: auto; bottom: calc(var(--dock) + 8px); }
+  #layers-open { display: none !important; }
+}
+@media (max-width: 760px) and (min-height: 541px) and (orientation: landscape) {
+  /* Narrow landscape still uses the mobile dock above the height threshold. */
+  #layers { right: 70px; }
+}
+@media (max-width: 1050px) and (max-height: 540px) and (orientation: landscape) {
+  /* Keep the native layers close button outside the camera-control rail. */
+  #layers { right: 70px; }
+  #dossier.folded { top: 8px; bottom: auto; }
+}

@@ -108,6 +108,7 @@ class UITest(unittest.TestCase):
             self.page.add_init_script(f"if (localStorage.getItem('gilneas-atlas-favorites-v1') === null) localStorage.setItem('gilneas-atlas-favorites-v1', {json.dumps(storage)});")
         self.page.goto(self.url + '/index.html', wait_until='networkidle')
         self.page.evaluate("""async data => {
+            document.body.classList.add('edit-mode');
             window.fixtureData = data;
             window.fixtureSelected = null;
             window.calls = [];
@@ -276,15 +277,16 @@ class UITest(unittest.TestCase):
         self.assertEqual(building.locator('li.modifier.bonus').count(), 2)
         self.assertEqual(building.locator('li.modifier.penalty').count(), 1)
         self.assertEqual(building.locator('li.modifier.bonus').first.text_content(), unsafe)
-        self.assertIn('Гилнеас', building.locator('.object-ownership').inner_text())
+        self.assertIn('Гилнеас', building.locator('summary .object-faction-badge').inner_text())
+        self.assertEqual(building.locator('.object-owner-badge, .object-ownership').count(), 0, 'Unspecified owner does not inherit or duplicate affiliation')
         resource = self.page.locator('details.object-card[data-object-id="test-resource"]')
         resource.locator('summary').click()
-        self.assertIn('Независим', resource.locator('.object-ownership').inner_text())
+        self.assertIn('Независим', resource.locator('summary .object-faction-badge').inner_text())
         self.assertIn('20 тестовых единиц', resource.locator('.amount').inner_text())
         landmark = self.page.locator('details.object-card[data-object-id="test-landmark"]')
         landmark.locator('summary').click()
-        self.assertIn('Тестовый дом', landmark.locator('.object-ownership').inner_text())
-        self.assertIn('Тестовый хранитель', landmark.locator('.object-ownership').inner_text())
+        self.assertIn('Тестовый дом', landmark.locator('summary .object-faction-badge').inner_text())
+        self.assertIn('Тестовый хранитель', landmark.locator('summary .object-owner-badge').inner_text())
         for selector, call in [('[data-object-edit="test-building"]', ['edit-object', 'gilneas-city', 'test-building']),
                                ('[data-object-delete="test-building"]', ['delete-object', 'gilneas-city', 'test-building'])]:
             button = self.page.locator(selector)
@@ -600,11 +602,34 @@ class UITest(unittest.TestCase):
         self.assertEqual(self.camera(), before)
         self.page.locator('#search').fill('')
         self.page.locator('#viewport').focus()
+        expected_fit = self.page.evaluate("""() => {
+            const viewport = document.querySelector('#viewport').getBoundingClientRect();
+            const navigation = document.querySelector('#navigation').getBoundingClientRect();
+            const layers = document.querySelector('#layers').getBoundingClientRect();
+            const left = Math.max(24, navigation.right - viewport.left + 24);
+            const right = Math.min(viewport.width - 24, layers.left - viewport.left - 24);
+            const width = right - left, height = viewport.height - 48;
+            const meta = window.fixtureData.meta;
+            const scale = Math.min(width / meta.width, height / meta.height) * 0.94;
+            return {x: left + width / 2 - meta.width * scale / 2,
+                    y: 24 + height / 2 - meta.height * scale / 2, scale};
+        }""")
+
+        def wait_for_camera(target):
+            # RAF starts on a browser frame, not when keyboard.press returns.
+            # Await the exact destination, not a fixed wall-clock delay or a
+            # partial zoom; a missing shortcut must still time out.
+            self.page.wait_for_function("""target => {
+                const camera = window.ui.getCamera();
+                return ['x', 'y', 'scale'].every(key => Math.abs(camera[key] - target[key]) < 1e-8);
+            }""", arg=target, polling=50, timeout=3000)
+
         self.page.keyboard.press('0')
-        self.page.wait_for_timeout(650)
+        wait_for_camera(expected_fit)
         self.assertLess(self.camera()['scale'], before['scale'])
+        self.assertAlmostEqual(self.camera()['scale'], expected_fit['scale'], delta=1e-9)
         self.page.locator('#viewport').dispatch_event('keydown', {'key': 'п', 'code': 'KeyG', 'bubbles': True})
-        self.page.wait_for_timeout(650)
+        wait_for_camera(before)
         self.assertAlmostEqual(self.camera()['scale'], before['scale'], delta=0.001)
         self.page.keyboard.press('+')
         self.assertGreater(self.camera()['scale'], before['scale'])
@@ -620,8 +645,11 @@ class UITest(unittest.TestCase):
         self.assertNotEqual(self.page.evaluate('document.activeElement.id'), 'search')
         self.page.evaluate("document.querySelector('#help').close()")
         self.page.locator('#viewport').focus()
+        self.page.evaluate('window.ui.fit(false)')
+        self.assertLess(self.camera()['scale'], before['scale'])
         self.page.keyboard.press('g')
-        self.page.wait_for_timeout(650)
+        wait_for_camera(before)
+        self.assertAlmostEqual(self.camera()['scale'], before['scale'], delta=0.001)
         self.assert_clean()
 
 

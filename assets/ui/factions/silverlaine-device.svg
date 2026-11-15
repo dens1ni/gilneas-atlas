@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" width="40" height="44">
+<title>silverlaine device</title>
+<g fill="#9aa8b6" stroke="#343c43" stroke-width=".75" stroke-linejoin="round">
+<path fill-rule="evenodd" d="M7 13V6H12V11H17V6H23V11H28V6H33V13L30 16V36L33 40H7L10 36V16ZM16 36H24V28C24 22 16 22 16 28Z"/>
+<path d="M7 15H33M11 20H29" fill="none" stroke="#65707b" stroke-width="1"/>
+<path d="M15 17H25" fill="none" stroke="#c0c9d1" stroke-width=".7"/>
+</g>
+</svg>

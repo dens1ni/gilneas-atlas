@@ -13,6 +13,7 @@ class ReviewRegression(unittest.TestCase):
  def tearDownClass(cls):cls.browser.close();cls.p.stop();cls.server.shutdown();cls.server.server_close()
  def setUp(self):
   self.context=self.browser.new_context(viewport={'width':1440,'height':1000});self.page=self.context.new_page();self.errors=[];self.page.on('pageerror',lambda e:self.errors.append(str(e)));self.page.goto(f'http://127.0.0.1:{self.server.server_port}/');self.page.wait_for_function('window.gilneasApp?.ready')
+  self.page.locator('#editor-open').click();self.page.locator('label:has(#editing-enabled)').click();self.page.locator('[data-close=editor]').click()
  def tearDown(self):self.context.close()
  def test_malformed_import_leaves_live_and_saved_snapshot_untouched(self):
   page=self.page

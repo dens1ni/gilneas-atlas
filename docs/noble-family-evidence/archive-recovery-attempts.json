@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://wowpedia.fandom.com/wiki/Dame_Alys_Finnsson",
+    "exitCode": 1,
+    "stdout": "",
+    "stderr": "{\n  \"recovered\": false,\n  \"url\": \"https://wowpedia.fandom.com/wiki/Dame_Alys_Finnsson\",\n  \"hint\": \"No archive copy found. Try the API-first pivot or the browser tool.\"\n}\n"
+  },
+  {
+    "url": "https://wowpedia.fandom.com/wiki/Lord_Woofington",
+    "exitCode": 0,
+    "stdout": "{\n  \"route\": \"wayback\",\n  \"provenance\": \"snapshot\",\n  \"snapshot_timestamp\": \"20251118114028\",\n  \"source_url\": \"https://web.archive.org/web/20251118114028/https://wowpedia.fandom.com/wiki/Lord_Woofington\",\n  \"recovered\": true,\n  \"url\": \"https://wowpedia.fandom.com/wiki/Lord_Woofington\",\n  \"body_bytes\": 298269,\n  \"saved_to\": \"/Users/daniil_si/gilneas-atlas/docs/noble-family-evidence/Lord_Woofington--recovered.html\"\n}\n",
+    "stderr": "\nNOTE: this is an ARCHIVED SNAPSHOT, not the live page. Cite it with its timestamp.\n"
+  }
+]

@@ -72,13 +72,15 @@
     "researchCounts": {
       "locationsResearched": 69,
       "noblesResearched": 15,
-      "supportedCanonicalOwnershipPolygons": 0
+      "supportedCanonicalOwnershipPolygons": 0,
+      "courtNoblesResearched": 17,
+      "courtHousesResearched": 7
     },
     "wallConstruction": {
       "value": 10,
       "max": 100
     },
-    "publicationRevision": "origins-dossiers-v3",
+    "publicationRevision": "royal-council-v5",
     "gilneasCrest": "assets/ui/gilneas-royal-shield.svg",
     "enhancedWidth": 5289,
     "enhancedHeight": 6822,
@@ -86,7 +88,7 @@
     "mapRegistration": [
       [
         1.0000714084639792,
-        4.6356373315115434e-7,
+        4.6356373315115434e-07,
         21.829301742553138
       ],
       [
@@ -95,8 +97,8 @@
         -294.74264523091625
       ],
       [
-        8.099890258558749e-8,
-        3.3643335134196704e-8,
+        8.099890258558749e-08,
+        3.3643335134196704e-08,
         1
       ]
     ],
@@ -128,6 +130,14 @@
           2,
           32
         ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/gilneas-royal-symbol.png",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "field": "#131516",
+        "origin": "author",
+        "note": "Existing author-supplied royal device; PNG bytes unchanged. Root meta.gilneasHeraldry, including custom author metadata, remains authoritative."
       }
     },
     {
@@ -142,6 +152,13 @@
         "sources": [
           3
         ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/greymane-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed crown and three short rain strokes; dynastic theme, not canonical Greymane arms."
       }
     },
     {
@@ -156,6 +173,13 @@
         "sources": [
           3
         ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/crowley-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed northern fir over crossed arms; no worgen, rebellion or later liberation-front device."
       }
     },
     {
@@ -170,6 +194,13 @@
         "sources": [
           3
         ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/silverlaine-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed crenellated gate-tower for the keep's prior stewardship; no ghost or wolf device."
       }
     },
     {
@@ -184,6 +215,13 @@
         "sources": [
           3
         ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/godfrey-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed upright military blade over paired guard blades for standing-militia service; no undead or late-pistol iconography."
       }
     },
     {
@@ -198,6 +236,13 @@
         "sources": [
           3
         ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/ashbury-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed trefoil-bowed court key for the family's fidelity to the crown, not canonical Ashbury arms."
       }
     },
     {
@@ -212,6 +257,13 @@
         "sources": [
           3
         ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/marley-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed north-pointing spear/compass with paired boundary marks; no claim to an exact northern estate."
       }
     },
     {
@@ -227,6 +279,13 @@
           3
         ],
         "note": "Титул и земли до стены неизвестны."
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/walden-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed anchor and short wave for an eastern/coastal association; early title, house ownership and court office remain unproven."
       }
     },
     {
@@ -242,6 +301,13 @@
           36,
           37
         ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/dalaran-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "canonical-stylized",
+        "note": "Silver simplification of the actual Warcraft II Dalaran eye: detached arch, central eye, lower band and three rays. Palette/layout treatment is not canonical color or official art."
       }
     },
     {
@@ -256,6 +322,13 @@
         "sources": [
           39
         ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/lordaeron-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "canonical-stylized",
+        "note": "Silver source-derived central Lordaeron L-and-sword from the actual Wowpedia crest; excludes surrounding lion, crossed weapons and original shield frame."
       }
     }
   ],
@@ -313,6 +386,13 @@
           9,
           10
         ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": [
+        "cathedral-quarter",
+        "greymane-court",
+        "merchant-square",
+        "military-district"
       ]
     },
     {
@@ -358,7 +438,9 @@
         [
           5
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "cathedral-quarter",
@@ -405,6 +487,10 @@
         [
           2
         ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": [
+        "lights-dawn-cathedral"
       ]
     },
     {
@@ -452,7 +538,9 @@
         [
           2
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "greymane-court",
@@ -498,7 +586,9 @@
           3,
           8
         ]
-      ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": []
     },
     {
       "id": "merchant-square",
@@ -542,7 +632,9 @@
         [
           9
         ]
-      ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": []
     },
     {
       "id": "military-district",
@@ -588,6 +680,10 @@
           10,
           11
         ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": [
+        "stoneward-prison"
       ]
     },
     {
@@ -634,7 +730,9 @@
           2,
           11
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "keel-harbor",
@@ -679,7 +777,9 @@
         [
           12
         ]
-      ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": []
     },
     {
       "id": "duskhaven",
@@ -732,6 +832,14 @@
           13,
           17
         ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": [
+        "crowley-orchard",
+        "crowley-stable-grounds",
+        "hayward-fishery",
+        "hammond-farmstead",
+        "allen-farmstead"
       ]
     },
     {
@@ -781,7 +889,9 @@
           14,
           15
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "crowley-stable-grounds",
@@ -827,7 +937,9 @@
           14,
           15
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "hayward-fishery",
@@ -871,7 +983,9 @@
         [
           16
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "hammond-farmstead",
@@ -919,7 +1033,9 @@
           17,
           18
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "allen-farmstead",
@@ -965,7 +1081,9 @@
           18,
           17
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "emberstone-village",
@@ -1010,6 +1128,10 @@
         [
           19
         ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": [
+        "emberstone-mine"
       ]
     },
     {
@@ -1056,7 +1178,9 @@
           19,
           20
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "stormglen",
@@ -1106,6 +1230,10 @@
           21,
           22
         ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": [
+        "bradshaw-mill"
       ]
     },
     {
@@ -1154,6 +1282,11 @@
         [
           23
         ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": [
+        "taldoren",
+        "bradshaw-mill"
       ]
     },
     {
@@ -1201,7 +1334,9 @@
           24,
           1
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "bradshaw-mill",
@@ -1247,7 +1382,9 @@
           25,
           21
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "tempests-reach",
@@ -1290,7 +1427,9 @@
         [
           26
         ]
-      ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": []
     },
     {
       "id": "aderics-repose",
@@ -1333,7 +1472,9 @@
         [
           27
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "northgate-woods",
@@ -1376,7 +1517,9 @@
         [
           28
         ]
-      ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": []
     },
     {
       "id": "northgate-river",
@@ -1420,7 +1563,9 @@
         [
           29
         ]
-      ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": []
     },
     {
       "id": "northern-headlands",
@@ -1467,7 +1612,9 @@
           30,
           43
         ]
-      ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": []
     },
     {
       "id": "the-headlands",
@@ -1512,7 +1659,9 @@
         [
           31
         ]
-      ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": []
     },
     {
       "id": "pyrewood",
@@ -1563,7 +1712,9 @@
           2,
           32
         ]
-      ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": []
     },
     {
       "id": "shadowfang",
@@ -1612,7 +1763,9 @@
         [
           33
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "ambermill",
@@ -1660,7 +1813,9 @@
         [
           32
         ]
-      ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": []
     },
     {
       "id": "dalaran-city",
@@ -1708,6 +1863,10 @@
           36,
           37
         ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": [
+        "violet-citadel"
       ]
     },
     {
@@ -1751,7 +1910,9 @@
         [
           38
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "fenris-isle",
@@ -1794,6 +1955,10 @@
         [
           38
         ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": [
+        "fenris-keep"
       ]
     },
     {
@@ -1843,7 +2008,9 @@
           39,
           45
         ]
-      ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": []
     },
     {
       "id": "silverpine",
@@ -1891,6 +2058,13 @@
           40,
           41
         ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": [
+        "pyrewood",
+        "shadowfang",
+        "ambermill",
+        "deep-elem-mine"
       ]
     },
     {
@@ -1932,6 +2106,10 @@
           38,
           36
         ]
+      ],
+      "isLocation": true,
+      "linkedLocationIds": [
+        "fenris-isle"
       ]
     },
     {
@@ -1972,7 +2150,9 @@
           42,
           40
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "galewatch-lighthouse",
@@ -2010,7 +2190,9 @@
         [
           43
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     },
     {
       "id": "violet-citadel",
@@ -2045,7 +2227,9 @@
         [
           44
         ]
-      ]
+      ],
+      "isLocation": false,
+      "linkedLocationIds": []
     }
   ],
   "territories": [
@@ -2830,6 +3014,10 @@
         "relations": [
           3,
           47
+        ],
+        "lifeStatus": [
+          45,
+          46
         ]
       },
       "loreSources": [
@@ -2847,7 +3035,10 @@
         [
           45
         ]
-      ]
+      ],
+      "lifeStatus": "alive",
+      "lifeStatusNote": "Генн лично присутствует среди королей Альянса в послевоенном Нетэргарде; в раннем рассказе обсуждает еще будущую стену. В этом срезе он живой человек, не поздний ворген.",
+      "lifeStatusBasis": "lore"
     },
     {
       "id": "noble-darius",
@@ -2914,6 +3105,10 @@
         "relations": [
           3,
           32
+        ],
+        "lifeStatus": [
+          32,
+          46
         ]
       },
       "loreSources": [
@@ -2928,7 +3123,10 @@
           32,
           46
         ]
-      ]
+      ],
+      "lifeStatus": "alive",
+      "lifeStatusNote": "Дариус засвидетельствован человеком и участником совета во Вторую войну, а затем живым противником изоляции. Поздние мятеж, заключение и проклятие не переносим в срез.",
+      "lifeStatusBasis": "lore"
     },
     {
       "id": "noble-godfrey",
@@ -2979,6 +3177,9 @@
         ],
         "overlord": [
           49
+        ],
+        "lifeStatus": [
+          49
         ]
       },
       "loreSources": [
@@ -2996,7 +3197,10 @@
         [
           49
         ]
-      ]
+      ],
+      "lifeStatus": "alive",
+      "lifeStatusNote": "После окончания Второй войны Годфри лично обсуждает с Генном маршрут будущей стены. Его самоубийство и возвращение в нежить относятся к позднему кризису Гилнеаса.",
+      "lifeStatusBasis": "lore"
     },
     {
       "id": "noble-ashbury",
@@ -3066,6 +3270,10 @@
         "relations": [
           46,
           54
+        ],
+        "lifeStatus": [
+          46,
+          50
         ]
       },
       "loreSources": [
@@ -3080,7 +3288,10 @@
           50,
           46
         ]
-      ]
+      ],
+      "lifeStatus": "alive",
+      "lifeStatusNote": "Барон вырос вместе с Генном и говорит в совете при создании Альянса; после этого засвидетельствован живым до своей гибели в Катаклизме. Здесь вывод о непрерывной жизни опирается на существование до Второй войны, а не на возраст поздней модели.",
+      "lifeStatusBasis": "chronological_inference"
     },
     {
       "id": "noble-marley",
@@ -3134,6 +3345,11 @@
         ],
         "overlord": [
           52
+        ],
+        "lifeStatus": [
+          46,
+          "court-source-8",
+          52
         ]
       },
       "loreSources": [
@@ -3148,7 +3364,10 @@
           46,
           3
         ]
-      ]
+      ],
+      "lifeStatus": "alive",
+      "lifeStatusNote": "Марли назван действующим лордом домена при обсуждении еще не построенной стены и позднее лично участвует в охотах. Ранняя привязка к его домену вместе с более поздней живой сценой дает основание для «Жив», без придуманной даты рождения.",
+      "lifeStatusBasis": "chronological_inference"
     },
     {
       "id": "noble-archibald",
@@ -3206,6 +3425,11 @@
         ],
         "relations": [
           53
+        ],
+        "lifeStatus": [
+          45,
+          49,
+          53
         ]
       },
       "loreSources": [
@@ -3220,7 +3444,10 @@
           53,
           46
         ]
-      ]
+      ],
+      "lifeStatus": "dead",
+      "lifeStatusNote": "Есть явная цепочка: после смерти Арчибальда Генн занял престол; еще до Второй войны Годфри сопровождает уже короля Генна в Лордерон. Следовательно, Арчибальд умер до войны и до среза — не просто потому, что назван предшественником.",
+      "lifeStatusBasis": "chronological_inference"
     },
     {
       "id": "noble-ashbury-first",
@@ -3286,6 +3513,11 @@
         ],
         "relations": [
           54
+        ],
+        "lifeStatus": [
+          "court-source-30",
+          54,
+          46
         ]
       },
       "loreSources": [
@@ -3300,7 +3532,10 @@
           50,
           54
         ]
-      ]
+      ],
+      "lifeStatus": "unknown",
+      "lifeStatusNote": "Лорд Эшбери I засвидетельствован отцом барона и помощником Арчибальда. Современный инфобокс говорит Deceased, но событие смерти и его положение относительно Второй войны/выхода из Альянса отсутствуют. Предыдущее поколение и титул сына не доказывают раннюю смерть.",
+      "lifeStatusBasis": "unknown"
     },
     {
       "id": "noble-walden",
@@ -3350,6 +3585,9 @@
         ],
         "overlordText": [
           55
+        ],
+        "lifeStatus": [
+          55
         ]
       },
       "loreSources": [
@@ -3361,7 +3599,10 @@
           3,
           56
         ]
-      ]
+      ],
+      "lifeStatus": "unknown",
+      "lifeStatusNote": "Уолден подтвержден живым человеком в поздних событиях и погибает при спасении Генна в Катаклизме; рождения или жизни до выхода из Альянса найденные статьи не дают. Поздняя гибель не означает «Мертв» в раннем срезе, но и поздний взрослый лорд сам по себе не доказывает «Жив».",
+      "lifeStatusBasis": "unknown"
     },
     {
       "id": "noble-hewell",
@@ -3409,6 +3650,9 @@
         ],
         "overlordText": [
           57
+        ],
+        "lifeStatus": [
+          57
         ]
       },
       "loreSources": [
@@ -3419,7 +3663,10 @@
           57,
           26
         ]
-      ]
+      ],
+      "lifeStatus": "unknown",
+      "lifeStatusNote": "Хьювелл живой человек рядом с Генном в позднем стартовом сюжете воргенов. Статья не устанавливает его рождение или жизнь во Вторую войну/до выхода из Альянса; ранний возраст не угадываем.",
+      "lifeStatusBasis": "unknown"
     },
     {
       "id": "noble-silverlaine",
@@ -3476,6 +3723,12 @@
         "overlord": [
           3,
           33
+        ],
+        "lifeStatus": [
+          59,
+          "noble-life-source-2",
+          "noble-life-source-3",
+          33
         ]
       },
       "loreSources": [
@@ -3490,7 +3743,10 @@
           3,
           33
         ]
-      ]
+      ],
+      "lifeStatus": "unknown",
+      "lifeStatusNote": "Гибель Сребролена от воргенов Аругала связана с Третьей войной, значит ранний тег «Мертв» неверен. Однако каноническая ранняя сцена/рождение до выхода из Альянса не установлены. Сторонний обзор описывает владение до будущей стены, но смешивает порядок мятежа и закрытия стены и содержит авторские предположения; для строгого раннего статуса это не принято как надежная отдельная каноническая опора.",
+      "lifeStatusBasis": "unknown"
     },
     {
       "id": "noble-longshore",
@@ -3539,6 +3795,11 @@
         ],
         "overlordText": [
           62
+        ],
+        "lifeStatus": [
+          61,
+          62,
+          3
         ]
       },
       "loreSources": [
@@ -3549,7 +3810,10 @@
         [
           62
         ]
-      ]
+      ],
+      "lifeStatus": "unknown",
+      "lifeStatusNote": "Дольноберег свидетельствует о прежнем настоящем баронстве, а каталог описывает гилнеасца, оказавшегося снаружи закрытой стены. Даты получения титула и жизни до начала выхода/строительства не приведены; поздняя жизнь пирата не переносится назад.",
+      "lifeStatusBasis": "unknown"
     },
     {
       "id": "noble-candren",
@@ -3596,6 +3860,9 @@
         ],
         "overlordText": [
           63
+        ],
+        "lifeStatus": [
+          63
         ]
       },
       "loreSources": [
@@ -3605,7 +3872,10 @@
         [
           63
         ]
-      ]
+      ],
+      "lifeStatus": "unknown",
+      "lifeStatusNote": "Кандрен известен живым интендантом Гилнеаса в Дарнассе после изгнания гилнеасцев. Дата рождения/жизнь до выхода из Альянса отсутствует; современное Alive не переносится в ранний срез.",
+      "lifeStatusBasis": "unknown"
     },
     {
       "id": "noble-isiden",
@@ -3660,6 +3930,9 @@
         ],
         "relations": [
           64
+        ],
+        "lifeStatus": [
+          64
         ]
       },
       "loreSources": [
@@ -3672,7 +3945,10 @@
         [
           64
         ]
-      ]
+      ],
+      "lifeStatus": "alive",
+      "lifeStatusNote": "После установления военного положения в Альтераке Исиден бежит в Гилнеас и получает поддержку Генна в послевоенном споре о престолонаследии. Последний засвидетельствованный статус внутри этой фазы — живой претендент. Фраза «с тех пор ничего не слышали» относится к последующей судьбе, не отменяет ранней живой сцены.",
+      "lifeStatusBasis": "lore"
     },
     {
       "id": "noble-tulvan",
@@ -3716,6 +3992,10 @@
         ],
         "overlordText": [
           3
+        ],
+        "lifeStatus": [
+          "court-source-24",
+          65
         ]
       },
       "loreSources": [
@@ -3725,7 +4005,10 @@
         [
           3
         ]
-      ]
+      ],
+      "lifeStatus": "unknown",
+      "lifeStatusNote": "Тулван показан живым бойцом в Горниле Крови в позднем Катаклизме и переходит в воргенский облик. Статья не дает ни рождения, ни живой сцены до выхода из Альянса; его ранний человеческий вариант не превращаем в доказанную жизнь.",
+      "lifeStatusBasis": "unknown"
     },
     {
       "id": "noble-harford",
@@ -3769,6 +4052,10 @@
         ],
         "overlordText": [
           3
+        ],
+        "lifeStatus": [
+          "court-source-25",
+          66
         ]
       },
       "loreSources": [
@@ -3778,7 +4065,10 @@
         [
           3
         ]
-      ]
+      ],
+      "lifeStatus": "unknown",
+      "lifeStatusNote": "Харфорд лично вспоминает плен у Аругала и побег из крепости, затем погибает в стартовом сюжете рыцарей смерти. Это жизнь/смерть после возникновения позднего проклятия, а не дата рождения или жизнь до выхода из Альянса.",
+      "lifeStatusBasis": "unknown"
     },
     {
       "id": "noble-morrison",
@@ -3824,6 +4114,11 @@
         "overlordText": [
           3,
           32
+        ],
+        "lifeStatus": [
+          "court-source-26",
+          67,
+          3
         ]
       },
       "loreSources": [
@@ -3833,7 +4128,10 @@
         [
           3
         ]
-      ]
+      ],
+      "lifeStatus": "unknown",
+      "lifeStatusNote": "Моррисон показан живым главой Пирвудского совета в позднем задании Pyrewood Ambush и позднее убит Отрекшимися. До выхода из Альянса ни назначение, ни рождение, ни живая сцена не датированы; ранний статус остается неизвестным.",
+      "lifeStatusBasis": "unknown"
     },
     {
       "id": "noble-aderic",
@@ -3879,6 +4177,13 @@
         ],
         "overlordText": [
           3
+        ],
+        "lifeStatus": [
+          "court-source-27",
+          68,
+          46,
+          "noble-life-source-1",
+          3
         ]
       },
       "loreSources": [
@@ -3891,7 +4196,1340 @@
         [
           27
         ]
+      ],
+      "lifeStatus": "unknown",
+      "lifeStatusNote": "Адерик определенно умер к поздним событиям у его гробницы. Ранний Royal Aderic Banquet, где встретились Генн и Миа, не описан как похоронный/посмертный пир; гробница не датирована до их брака или до Второй войны. Каталог прямо относит «possibly a long-dead king» к speculation. Совместно эти сведения не доказывают смерть к раннему срезу: «Неизвестно».",
+      "lifeStatusBasis": "unknown"
+    },
+    {
+      "id": "noble-mia",
+      "name": "Миа Седогрив",
+      "englishName": "Mia Greymane",
+      "title": "Королева-супруга Гилнеаса",
+      "description": "Миа Седогрив — супруга короля Генна и мать Лиама и Тесс. Она входит в правящую семью Гилнеаса как королева-супруга. Источники связывают её брак с личным выбором Генна, а не с заранее назначенным династическим союзом.",
+      "shortDescription": "Супруга Генна и королева-супруга, мать Лиама и Тесс.",
+      "house": "greymane",
+      "appearance": "Человек; конкретная внешность для выбранного послевоенного среза не установлена.",
+      "socialStatus": "Королева-супруга · член правящей династии; не суверен и не обычный советник.",
+      "allegiance": "Королевская семья и корона Гилнеаса; личная внешняя партийная ориентация не установлена.",
+      "overlord": null,
+      "overlordText": "Супруга короля Генна, а не доказанный отдельный вассал; личный договор подчинения не указан.",
+      "role": "royal_consort",
+      "biographyFrame": "selected_era",
+      "displayInEarlyCourt": true,
+      "lifeStatus": "alive",
+      "lifeStatusScope": "selected_era",
+      "sources": [
+        "family-source-4",
+        "family-source-2",
+        "family-source-51",
+        "family-source-16",
+        "family-source-50",
+        "family-source-63"
+      ],
+      "fieldSources": {
+        "name": [
+          "family-source-51"
+        ],
+        "englishName": [
+          "family-source-4",
+          "family-source-2",
+          "family-source-51",
+          "family-source-16",
+          "family-source-50",
+          "family-source-63"
+        ],
+        "title": [
+          "family-source-4",
+          "family-source-2",
+          "family-source-51",
+          "family-source-16",
+          "family-source-50",
+          "family-source-63"
+        ],
+        "description": [
+          "family-source-4",
+          "family-source-2",
+          "family-source-51",
+          "family-source-16",
+          "family-source-50",
+          "family-source-63"
+        ],
+        "shortDescription": [
+          "family-source-4",
+          "family-source-2",
+          "family-source-51",
+          "family-source-16",
+          "family-source-50",
+          "family-source-63"
+        ],
+        "house": [
+          "family-source-4",
+          "family-source-2"
+        ],
+        "appearance": [
+          "family-source-4",
+          "family-source-2",
+          "family-source-51",
+          "family-source-16",
+          "family-source-50",
+          "family-source-63"
+        ],
+        "socialStatus": [
+          "family-source-4",
+          "family-source-2",
+          "family-source-51",
+          "family-source-16",
+          "family-source-50",
+          "family-source-63"
+        ],
+        "allegiance": [
+          "family-source-4",
+          "family-source-2",
+          "family-source-51",
+          "family-source-16",
+          "family-source-50",
+          "family-source-63"
+        ],
+        "overlordText": [
+          "family-source-4",
+          "family-source-2",
+          "family-source-51",
+          "family-source-16",
+          "family-source-50",
+          "family-source-63"
+        ],
+        "role": [
+          "family-source-4",
+          "family-source-2",
+          "family-source-51",
+          "family-source-16",
+          "family-source-50",
+          "family-source-63"
+        ],
+        "biographyFrame": [
+          "family-source-4",
+          "family-source-2",
+          "family-source-51",
+          "family-source-16",
+          "family-source-50",
+          "family-source-63"
+        ],
+        "relations": [
+          "family-source-4",
+          "family-source-2",
+          "family-source-51",
+          "family-source-16",
+          "family-source-50",
+          "family-source-63"
+        ],
+        "lifeStatus": [
+          "family-source-16",
+          "family-source-50",
+          "family-source-2"
+        ]
+      },
+      "relations": [
+        {
+          "relation": "spouse",
+          "nobleId": "noble-genn",
+          "name": "Генн Седогрив",
+          "sourceIds": [
+            "family-source-4"
+          ]
+        },
+        {
+          "relation": "child",
+          "nobleId": "noble-liam",
+          "name": "Лиам Седогрив",
+          "sourceIds": [
+            "family-source-2"
+          ]
+        },
+        {
+          "relation": "child",
+          "nobleId": "noble-tess",
+          "name": "Тесс Седогрив",
+          "sourceIds": [
+            "family-source-2"
+          ]
+        },
+        {
+          "relation": "father-in-law",
+          "nobleId": "noble-archibald",
+          "name": "Арчибальд Седогрив",
+          "sourceIds": [
+            "family-source-63"
+          ]
+        }
+      ],
+      "spouse": {
+        "relation": "spouse",
+        "nobleId": "noble-genn",
+        "name": "Генн Седогрив",
+        "sourceIds": [
+          "family-source-4"
+        ]
+      },
+      "confidence": "confirmed",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Mia_Greymane",
+      "periodNote": "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Точная дата брака и рождения неизвестна. Ранний личный земельный титул не доказан. Позднее queen-mother/former consort не переносится назад: в сценарии с Генном на троне она queen consort.",
+      "holdingsNote": "Личных ранних владений эта запись не устанавливает; ownership и география не меняются.",
+      "localization": {
+        "basis": "ru_source",
+        "note": "Официальная русская Элегия прямо даёт «Королева Миа Седогрив»; цитата используется только для имени, не раннего эвакуационного поста.",
+        "sources": [
+          "family-source-51"
+        ]
+      },
+      "canonicality": "canon",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          "family-source-4",
+          "family-source-2",
+          "family-source-51",
+          "family-source-16",
+          "family-source-50",
+          "family-source-63"
+        ],
+        "existenceBasis": "lore",
+        "uncertainties": [
+          "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+          "Точная дата брака и рождения неизвестна. Ранний личный земельный титул не доказан.",
+          "Позднее queen-mother/former consort не переносится назад: в сценарии с Генном на троне она queen consort."
+        ]
+      },
+      "lifeStatusBasis": "lore",
+      "lifeStatusNote": "Состояние только выбранного предвыходного этапа; не современный wiki-инфобокс. Существование в предвыходной фазе засвидетельствовано; точная дата рождения не назначается."
+    },
+    {
+      "id": "noble-liam",
+      "name": "Лиам Седогрив",
+      "englishName": "Liam Greymane",
+      "title": "Королевский сын · исторически известный наследный принц",
+      "description": "Лиам — сын Генна и Миа Седогривов и брат Тесс. В династической истории Гилнеаса он назван наследным принцем. Его рождение не датировано относительно выбранного послевоенного момента, поэтому эта справочная запись не утверждает раннюю взрослую должность или присутствие на заседании.",
+      "shortDescription": "Сын Генна и Миа; будущий наследный принц, ранняя дата существования не установлена.",
+      "house": "greymane",
+      "appearance": "Человек; конкретная внешность для выбранного послевоенного среза не установлена.",
+      "socialStatus": "Королевский сын; наследный титул известен по более поздней истории, ранний возраст неизвестен.",
+      "allegiance": "Правящая семья Гилнеаса; личная партия в выбранную эпоху не установлена.",
+      "overlord": null,
+      "overlordText": "Отец — Генн, король Гилнеаса; родство не считается отдельным ранним вассальным договором.",
+      "role": "royal_heir_reference",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "lifeStatus": "unknown",
+      "lifeStatusScope": "selected_era",
+      "sources": [
+        "family-source-5",
+        "family-source-8",
+        "family-source-17",
+        "family-source-41",
+        "family-source-2",
+        "family-source-9",
+        "family-source-43",
+        "family-source-63",
+        "family-source-51"
+      ],
+      "fieldSources": {
+        "name": [
+          "family-source-9",
+          "family-source-51",
+          "family-source-5"
+        ],
+        "englishName": [
+          "family-source-5",
+          "family-source-8",
+          "family-source-17",
+          "family-source-41",
+          "family-source-2",
+          "family-source-9",
+          "family-source-43",
+          "family-source-63",
+          "family-source-51"
+        ],
+        "title": [
+          "family-source-5",
+          "family-source-8",
+          "family-source-17",
+          "family-source-41",
+          "family-source-2",
+          "family-source-9",
+          "family-source-43",
+          "family-source-63",
+          "family-source-51"
+        ],
+        "description": [
+          "family-source-5",
+          "family-source-8",
+          "family-source-17",
+          "family-source-41",
+          "family-source-2",
+          "family-source-9",
+          "family-source-43",
+          "family-source-63",
+          "family-source-51"
+        ],
+        "shortDescription": [
+          "family-source-5",
+          "family-source-8",
+          "family-source-17",
+          "family-source-41",
+          "family-source-2",
+          "family-source-9",
+          "family-source-43",
+          "family-source-63",
+          "family-source-51"
+        ],
+        "house": [
+          "family-source-5",
+          "family-source-2",
+          "family-source-43"
+        ],
+        "appearance": [
+          "family-source-5",
+          "family-source-8",
+          "family-source-17",
+          "family-source-41",
+          "family-source-2",
+          "family-source-9",
+          "family-source-43",
+          "family-source-63",
+          "family-source-51"
+        ],
+        "socialStatus": [
+          "family-source-5",
+          "family-source-8",
+          "family-source-17",
+          "family-source-41",
+          "family-source-2",
+          "family-source-9",
+          "family-source-43",
+          "family-source-63",
+          "family-source-51"
+        ],
+        "allegiance": [
+          "family-source-5",
+          "family-source-8",
+          "family-source-17",
+          "family-source-41",
+          "family-source-2",
+          "family-source-9",
+          "family-source-43",
+          "family-source-63",
+          "family-source-51"
+        ],
+        "overlordText": [
+          "family-source-5",
+          "family-source-8",
+          "family-source-17",
+          "family-source-41",
+          "family-source-2",
+          "family-source-9",
+          "family-source-43",
+          "family-source-63",
+          "family-source-51"
+        ],
+        "role": [
+          "family-source-5",
+          "family-source-8",
+          "family-source-17",
+          "family-source-41",
+          "family-source-2",
+          "family-source-9",
+          "family-source-43",
+          "family-source-63",
+          "family-source-51"
+        ],
+        "biographyFrame": [
+          "family-source-5",
+          "family-source-8",
+          "family-source-17",
+          "family-source-41",
+          "family-source-2",
+          "family-source-9",
+          "family-source-43",
+          "family-source-63",
+          "family-source-51"
+        ],
+        "relations": [
+          "family-source-5",
+          "family-source-8",
+          "family-source-17",
+          "family-source-41",
+          "family-source-2",
+          "family-source-9",
+          "family-source-43",
+          "family-source-63",
+          "family-source-51"
+        ],
+        "lifeStatus": [
+          "family-source-8",
+          "family-source-17",
+          "family-source-41"
+        ]
+      },
+      "relations": [
+        {
+          "relation": "father",
+          "nobleId": "noble-genn",
+          "name": "Генн Седогрив",
+          "sourceIds": [
+            "family-source-5"
+          ]
+        },
+        {
+          "relation": "mother",
+          "nobleId": "noble-mia",
+          "name": "Миа Седогрив",
+          "sourceIds": [
+            "family-source-2"
+          ]
+        },
+        {
+          "relation": "sibling",
+          "nobleId": "noble-tess",
+          "name": "Тесс Седогрив",
+          "sourceIds": [
+            "family-source-43"
+          ]
+        },
+        {
+          "relation": "grandfather",
+          "nobleId": "noble-archibald",
+          "name": "Арчибальд Седогрив",
+          "sourceIds": [
+            "family-source-63"
+          ]
+        }
+      ],
+      "spouse": null,
+      "confidence": "reconstruction",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Liam_Greymane",
+      "periodNote": "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Даты рождения до выбранного раннего момента нет; сцена подростка уже стоит на построенной стене при Плети. Редакторская заметка going up не даёт точного раннего свидетельства. Поздняя гибель от Сильваны не ранняя смерть: lifeStatus=unknown. Не переносить разногласия с отцом при Плети в довыходной спор. При отдельном подтверждении существования в конкретном сценарии допустим heir reserve 15=5 active+10 dynastic reserve, но текущий inactive имеет строго 0/0.",
+      "holdingsNote": "Личных ранних владений эта запись не устанавливает; ownership и география не меняются.",
+      "localization": {
+        "basis": "ru_source+derived_surname",
+        "note": "Официальная русская история называет «юный принц Лиам»; фамилия Седогрив подтверждена русским именем Миа и семейной связью с Liam Greymane, не выдуманный вариант Graymane.",
+        "sources": [
+          "family-source-9",
+          "family-source-51",
+          "family-source-5"
+        ]
+      },
+      "canonicality": "canon",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          "family-source-5",
+          "family-source-8",
+          "family-source-17",
+          "family-source-41",
+          "family-source-2",
+          "family-source-9",
+          "family-source-43",
+          "family-source-63",
+          "family-source-51"
+        ],
+        "existenceBasis": "unknown",
+        "uncertainties": [
+          "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+          "Даты рождения до выбранного раннего момента нет; сцена подростка уже стоит на построенной стене при Плети. Редакторская заметка going up не даёт точного раннего свидетельства.",
+          "Поздняя гибель от Сильваны не ранняя смерть: lifeStatus=unknown. Не переносить разногласия с отцом при Плети в довыходной спор.",
+          "При отдельном подтверждении существования в конкретном сценарии допустим heir reserve 15=5 active+10 dynastic reserve, но текущий inactive имеет строго 0/0."
+        ]
+      },
+      "lifeStatusBasis": "unknown",
+      "lifeStatusNote": "Состояние только выбранного предвыходного этапа; не современный wiki-инфобокс. Раннее существование не датировано: unknown, а не перенесённая из будущего смерть."
+    },
+    {
+      "id": "noble-tess",
+      "name": "Тесс Седогрив",
+      "englishName": "Tess Greymane",
+      "title": "Юная принцесса Гилнеаса",
+      "description": "Тесс — дочь Генна и Миа Седогривов и сестра Лиама. Она принадлежит к королевской семье Гилнеаса. Её рождение до выхода королевства из Альянса подтверждено ретроспективой; в этом раннем слое она остаётся юной принцессой, без самостоятельной придворной должности.",
+      "shortDescription": "Дочь Генна и Миа, юная принцесса без отдельного раннего голоса.",
+      "house": "greymane",
+      "appearance": "Человек; конкретная внешность для выбранного послевоенного среза не установлена.",
+      "socialStatus": "Юная принцесса · дочь правящего короля; не королева и не наследница вместо живущего в будущем Лиама.",
+      "allegiance": "Королевская семья Гилнеаса; личная ранняя партийная позиция неизвестна.",
+      "overlord": null,
+      "overlordText": "Отец — король Генн; не устанавливается отдельный вассальный или земельный договор.",
+      "role": "royal_princess",
+      "biographyFrame": "selected_era",
+      "displayInEarlyCourt": true,
+      "lifeStatus": "alive",
+      "lifeStatusScope": "selected_era",
+      "sources": [
+        "family-source-43",
+        "family-source-16",
+        "family-source-50",
+        "family-source-2",
+        "family-source-9",
+        "family-source-51"
+      ],
+      "fieldSources": {
+        "name": [
+          "family-source-9",
+          "family-source-51",
+          "family-source-43"
+        ],
+        "englishName": [
+          "family-source-43",
+          "family-source-16",
+          "family-source-50",
+          "family-source-2",
+          "family-source-9",
+          "family-source-51"
+        ],
+        "title": [
+          "family-source-43",
+          "family-source-16",
+          "family-source-50",
+          "family-source-2",
+          "family-source-9",
+          "family-source-51"
+        ],
+        "description": [
+          "family-source-43",
+          "family-source-16",
+          "family-source-50",
+          "family-source-2",
+          "family-source-9",
+          "family-source-51"
+        ],
+        "shortDescription": [
+          "family-source-43",
+          "family-source-16",
+          "family-source-50",
+          "family-source-2",
+          "family-source-9",
+          "family-source-51"
+        ],
+        "house": [
+          "family-source-43",
+          "family-source-2"
+        ],
+        "appearance": [
+          "family-source-43",
+          "family-source-16",
+          "family-source-50",
+          "family-source-2",
+          "family-source-9",
+          "family-source-51"
+        ],
+        "socialStatus": [
+          "family-source-43",
+          "family-source-16",
+          "family-source-50",
+          "family-source-2",
+          "family-source-9",
+          "family-source-51"
+        ],
+        "allegiance": [
+          "family-source-43",
+          "family-source-16",
+          "family-source-50",
+          "family-source-2",
+          "family-source-9",
+          "family-source-51"
+        ],
+        "overlordText": [
+          "family-source-43",
+          "family-source-16",
+          "family-source-50",
+          "family-source-2",
+          "family-source-9",
+          "family-source-51"
+        ],
+        "role": [
+          "family-source-43",
+          "family-source-16",
+          "family-source-50",
+          "family-source-2",
+          "family-source-9",
+          "family-source-51"
+        ],
+        "biographyFrame": [
+          "family-source-43",
+          "family-source-16",
+          "family-source-50",
+          "family-source-2",
+          "family-source-9",
+          "family-source-51"
+        ],
+        "relations": [
+          "family-source-43",
+          "family-source-16",
+          "family-source-50",
+          "family-source-2",
+          "family-source-9",
+          "family-source-51"
+        ],
+        "lifeStatus": [
+          "family-source-16",
+          "family-source-50",
+          "family-source-43"
+        ]
+      },
+      "relations": [
+        {
+          "relation": "father",
+          "nobleId": "noble-genn",
+          "name": "Генн Седогрив",
+          "sourceIds": [
+            "family-source-43"
+          ]
+        },
+        {
+          "relation": "mother",
+          "nobleId": "noble-mia",
+          "name": "Миа Седогрив",
+          "sourceIds": [
+            "family-source-43"
+          ]
+        },
+        {
+          "relation": "sibling",
+          "nobleId": "noble-liam",
+          "name": "Лиам Седогрив",
+          "sourceIds": [
+            "family-source-43"
+          ]
+        },
+        {
+          "relation": "grandfather",
+          "nobleId": "noble-archibald",
+          "name": "Арчибальд Седогрив",
+          "sourceIds": [
+            "family-source-43"
+          ]
+        }
+      ],
+      "spouse": null,
+      "confidence": "confirmed",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Tess_Greymane",
+      "periodNote": "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Живая семейная запись относится к предвыходному послевоенному этапу; она не доказывает рождение к самому первому дню после Второй войны. Календарная дата и точный возраст не назначаются. При смещении сценария раньше её рождения запись должна быть inactive/unknown; birth-before-withdrawal — не birth-immediately-after-war. Ни будущий наследный титул, ни Uncrowned, ни отречение Генна не ранние роли. Детский dynastic bonus=0, только низкий активный резерв 5.",
+      "holdingsNote": "Личных ранних владений эта запись не устанавливает; ownership и география не меняются.",
+      "localization": {
+        "basis": "ru_source+derived_surname",
+        "note": "Официальный русский рассказ называет «дочь Тесс»; фамилия Седогрив связана с прямым Tess Greymane через подтверждённых родителей и русский источник Миа.",
+        "sources": [
+          "family-source-9",
+          "family-source-51",
+          "family-source-43"
+        ]
+      },
+      "canonicality": "canon",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          "family-source-43",
+          "family-source-16",
+          "family-source-50",
+          "family-source-2",
+          "family-source-9",
+          "family-source-51"
+        ],
+        "existenceBasis": "lore",
+        "uncertainties": [
+          "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+          "Живая семейная запись относится к предвыходному послевоенному этапу; она не доказывает рождение к самому первому дню после Второй войны. Календарная дата и точный возраст не назначаются.",
+          "При смещении сценария раньше её рождения запись должна быть inactive/unknown; birth-before-withdrawal — не birth-immediately-after-war.",
+          "Ни будущий наследный титул, ни Uncrowned, ни отречение Генна не ранние роли. Детский dynastic bonus=0, только низкий активный резерв 5."
+        ]
+      },
+      "lifeStatusBasis": "lore",
+      "lifeStatusNote": "Состояние только выбранного предвыходного этапа; не современный wiki-инфобокс. Существование в предвыходной фазе засвидетельствовано; точная дата рождения не назначается."
+    },
+    {
+      "id": "noble-lorna",
+      "name": "Лорна Краули",
+      "englishName": "Lorna Crowley",
+      "title": "Дочь лорда Дариуса Краули",
+      "description": "Лорна Краули — подтверждённая дочь лорда Дариуса и представительница его дворянской семьи. Её рождение и возраст относительно послевоенного среза не установлены. В этой справочной записи ей не приписываются ранние командование, собственный домен или членство в совете.",
+      "shortDescription": "Подтверждённая дочь Дариуса Краули; раннее существование и должность неизвестны.",
+      "house": "crowley",
+      "appearance": "Человек; конкретная внешность для выбранного послевоенного среза не установлена.",
+      "socialStatus": "Дочь гилнеасского лорда; отдельный наследственный титул и ранний возраст не названы.",
+      "allegiance": "Семья Краули и гилнеасское происхождение; партийная принадлежность и ранняя служба не установлены.",
+      "overlord": null,
+      "overlordText": "Отец — Дариус Краули; родство не доказывает отдельный вассальный договор с отцом или Генном.",
+      "role": "noble_family_reference",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "lifeStatus": "unknown",
+      "lifeStatusScope": "selected_era",
+      "sources": [
+        "family-source-57",
+        "family-source-48",
+        "family-source-18",
+        "family-source-3"
+      ],
+      "fieldSources": {
+        "name": [
+          "family-source-48"
+        ],
+        "englishName": [
+          "family-source-57",
+          "family-source-48",
+          "family-source-18",
+          "family-source-3"
+        ],
+        "title": [
+          "family-source-57",
+          "family-source-48",
+          "family-source-18",
+          "family-source-3"
+        ],
+        "description": [
+          "family-source-57",
+          "family-source-48",
+          "family-source-18",
+          "family-source-3"
+        ],
+        "shortDescription": [
+          "family-source-57",
+          "family-source-48",
+          "family-source-18",
+          "family-source-3"
+        ],
+        "house": [
+          "family-source-57",
+          "family-source-3"
+        ],
+        "appearance": [
+          "family-source-57",
+          "family-source-48",
+          "family-source-18",
+          "family-source-3"
+        ],
+        "socialStatus": [
+          "family-source-57",
+          "family-source-48",
+          "family-source-18",
+          "family-source-3"
+        ],
+        "allegiance": [
+          "family-source-57",
+          "family-source-48",
+          "family-source-18",
+          "family-source-3"
+        ],
+        "overlordText": [
+          "family-source-57",
+          "family-source-48",
+          "family-source-18",
+          "family-source-3"
+        ],
+        "role": [
+          "family-source-57",
+          "family-source-48",
+          "family-source-18",
+          "family-source-3"
+        ],
+        "biographyFrame": [
+          "family-source-57",
+          "family-source-48",
+          "family-source-18",
+          "family-source-3"
+        ],
+        "relations": [
+          "family-source-57",
+          "family-source-48",
+          "family-source-18",
+          "family-source-3"
+        ],
+        "lifeStatus": [
+          "family-source-57"
+        ]
+      },
+      "relations": [
+        {
+          "relation": "father",
+          "nobleId": "noble-darius",
+          "name": "Дариус Краули",
+          "sourceIds": [
+            "family-source-57"
+          ]
+        }
+      ],
+      "spouse": null,
+      "confidence": "reconstruction",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lorna_Crowley",
+      "periodNote": "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. До стены не датированы рождение или присутствие; lifeStatus=unknown, active=false. Поздние Northgate Rebellion, командование GLF/Brigade, коневодство и домашняя роза не переносятся в ранний портрет или баллы. Неименованный возможный sibling не идентифицируется с Brother/Morticia/Agent/Elizabeth Crowley. При отдельно подтверждённом раннем существовании допустим малый семейный резерв 3 как новое сценарное правило; нынешний inactive имеет 0/0.",
+      "holdingsNote": "Личных ранних владений эта запись не устанавливает; ownership и география не меняются.",
+      "localization": {
+        "basis": "ruRU_source",
+        "note": "Прочитана полная ruRU-карточка Wowhead NPC 35378, заголовок «Лорна Краули»; имя не берётся из поискового сниппета.",
+        "sources": [
+          "family-source-48"
+        ]
+      },
+      "canonicality": "canon",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          "family-source-57",
+          "family-source-48",
+          "family-source-18",
+          "family-source-3"
+        ],
+        "existenceBasis": "unknown",
+        "uncertainties": [
+          "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+          "До стены не датированы рождение или присутствие; lifeStatus=unknown, active=false.",
+          "Поздние Northgate Rebellion, командование GLF/Brigade, коневодство и домашняя роза не переносятся в ранний портрет или баллы.",
+          "Неименованный возможный sibling не идентифицируется с Brother/Morticia/Agent/Elizabeth Crowley.",
+          "При отдельно подтверждённом раннем существовании допустим малый семейный резерв 3 как новое сценарное правило; нынешний inactive имеет 0/0."
+        ]
+      },
+      "lifeStatusBasis": "unknown",
+      "lifeStatusNote": "Состояние только выбранного предвыходного этапа; не современный wiki-инфобокс. Раннее существование не датировано: unknown, а не перенесённая из будущего смерть."
+    },
+    {
+      "id": "noble-hiram-creed",
+      "name": "Хирам Крид",
+      "englishName": "Hiram Creed",
+      "title": "«Лорд» · спорная историческая личность",
+      "description": "Хирам Крид внесён в каталог под обращением «лорд», однако известен как драконид, выдающий себя за знатного гилнеасца. Подлинное семейство Крид и ранний человеческий носитель этого имени не установлены. Это справочная запись, а не действующий дворянин раннего Гилнеаса.",
+      "shortDescription": "Самозваный гилнеасский «лорд»; драконид, ранняя личность не доказана.",
+      "house": null,
+      "appearance": "Подробный ранний портрет не установлен; человеческий облик не считается доказанной расой или ранней личностью.",
+      "socialStatus": "Неподтверждённый дворянский титул; маскировка драконида, не установленное human noble.",
+      "allegiance": "Ранняя личная служба не установлена; поздняя чёрная стая не назначается фракцией раннего человека.",
+      "overlord": null,
+      "overlordText": "Подлинный ранний сюзерен не установлен; фиктивная маска гилнеасца не создаёт клятву Генну.",
+      "role": "suspected_noble_reference",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "lifeStatus": "unknown",
+      "lifeStatusScope": "selected_era",
+      "sources": [
+        "family-source-76",
+        "family-source-1"
+      ],
+      "fieldSources": {
+        "name": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "englishName": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "title": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "description": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "shortDescription": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "house": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "appearance": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "socialStatus": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "allegiance": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "overlordText": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "role": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "biographyFrame": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "relations": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "lifeStatus": [
+          "family-source-76",
+          "family-source-1"
+        ]
+      },
+      "relations": [],
+      "spouse": null,
+      "confidence": "reconstruction",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lord_Hiram_Creed",
+      "periodNote": "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Не создавать дом creed или человеческого предшественника; имя/маска не доказывают реальную семью. Раннее существование и жизнь неизвестны; поздняя смерть не ранний dead.",
+      "holdingsNote": "Личных ранних владений эта запись не устанавливает; ownership и география не меняются.",
+      "localization": {
+        "basis": "transliteration",
+        "note": "Подтверждённая русская локализация в ограниченном поиске не получена; это явно подписанная транслитерация английского имени.",
+        "sources": [
+          "family-source-76",
+          "family-source-1"
+        ]
+      },
+      "canonicality": "canon",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          "family-source-76",
+          "family-source-1"
+        ],
+        "existenceBasis": "unknown",
+        "uncertainties": [
+          "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+          "Не создавать дом creed или человеческого предшественника; имя/маска не доказывают реальную семью.",
+          "Раннее существование и жизнь неизвестны; поздняя смерть не ранний dead."
+        ]
+      },
+      "lifeStatusBasis": "unknown",
+      "lifeStatusNote": "Состояние только выбранного предвыходного этапа; не современный wiki-инфобокс. Раннее существование не датировано: unknown, а не перенесённая из будущего смерть."
+    },
+    {
+      "id": "noble-woofington",
+      "name": "Лорд Вуфингтон",
+      "englishName": "Lord Woofington",
+      "title": "Почётный «лорд» · историческая справка",
+      "description": "Вуфингтон — мастиф, которому в поздней истории присвоено обращение лорда после безумия жителей Хейвенсвуда. Дата рождения и человеческое дворянство не установлены. Он сохранён в полном каталоге как титулованный зверь, без места в раннем человеческом совете.",
+      "shortDescription": "Титулованный мастиф; не человеческий наследственный дворянин.",
+      "house": null,
+      "appearance": "Подробный ранний портрет не установлен; человеческий облик не считается доказанной расой или ранней личностью.",
+      "socialStatus": "Почётный лорд-мастиф; не человек, не подтверждённый ранний землевладелец.",
+      "allegiance": "Раннее политическое подчинение не установлено.",
+      "overlord": null,
+      "overlordText": "Точная ранняя клятва или сюзерен не названы; позднее lord of Havenswood не право ранней собственности.",
+      "role": "honorary_reference",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "lifeStatus": "unknown",
+      "lifeStatusScope": "selected_era",
+      "sources": [
+        "family-source-20",
+        "family-source-23"
+      ],
+      "fieldSources": {
+        "name": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "englishName": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "title": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "description": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "shortDescription": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "house": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "appearance": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "socialStatus": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "allegiance": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "overlordText": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "role": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "biographyFrame": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "relations": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "lifeStatus": [
+          "family-source-20",
+          "family-source-23"
+        ]
+      },
+      "relations": [],
+      "spouse": null,
+      "confidence": "reconstruction",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lord_Woofington",
+      "periodNote": "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Титул после безумия жителей не переносится до стены; birth/life at cutoff unknown. Не выдавать животное за человека и не добавлять Хейвенсвуд на карту.",
+      "holdingsNote": "Личных ранних владений эта запись не устанавливает; ownership и география не меняются.",
+      "localization": {
+        "basis": "transliteration",
+        "note": "Подтверждённая русская локализация в ограниченном поиске не получена; это явно подписанная транслитерация английского имени.",
+        "sources": [
+          "family-source-20",
+          "family-source-23"
+        ]
+      },
+      "canonicality": "canon",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          "family-source-20",
+          "family-source-23"
+        ],
+        "existenceBasis": "unknown",
+        "uncertainties": [
+          "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+          "Титул после безумия жителей не переносится до стены; birth/life at cutoff unknown.",
+          "Не выдавать животное за человека и не добавлять Хейвенсвуд на карту."
+        ]
+      },
+      "lifeStatusBasis": "unknown",
+      "lifeStatusNote": "Состояние только выбранного предвыходного этапа; не современный wiki-инфобокс. Раннее существование не датировано: unknown, а не перенесённая из будущего смерть."
+    },
+    {
+      "id": "noble-alys-finnsson",
+      "name": "Дама Алис Финнссон",
+      "englishName": "Dame Alys Finnsson",
+      "title": "Обращение «Дама» · недатированная историческая справка",
+      "description": "Алис Финнссон — гилнеасская фигура, связанная в каталоге с обращением Dame. Титул, родной дом и существование при раннем дворе не датированы. Запись сохраняет известное имя, не утверждая до стены придворную должность, владение или позднюю культовую службу.",
+      "shortDescription": "Гилнеасская носительница обращения Dame; ранние титул и жизнь неизвестны.",
+      "house": null,
+      "appearance": "Человеческая внешность для раннего среза не установлена; поздняя форма воргена не датирует раннюю личность.",
+      "socialStatus": "Обращение Dame засвидетельствовано; наследственный ранний дом и рыцарское пожалование не документированы.",
+      "allegiance": "Гилнеасская привязка из каталога; личная ранняя служба неизвестна.",
+      "overlord": null,
+      "overlordText": "Ранний личный сюзерен не назван; поздняя культовая принадлежность не договор с короной.",
+      "role": "undated_noble_reference",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "lifeStatus": "unknown",
+      "lifeStatusScope": "selected_era",
+      "sources": [
+        "family-source-1",
+        "family-source-19"
+      ],
+      "fieldSources": {
+        "name": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "englishName": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "title": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "description": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "shortDescription": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "house": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "appearance": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "socialStatus": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "allegiance": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "overlordText": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "role": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "biographyFrame": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "relations": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "lifeStatus": [
+          "family-source-1",
+          "family-source-19"
+        ]
+      },
+      "relations": [],
+      "spouse": null,
+      "confidence": "reconstruction",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Dame_Alys_Finnsson",
+      "periodNote": "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. В статье встречаются Dame Alys Finnsson и Dame Alyss Finnson: сохраняется каталожное английское имя, варианты перечисляются как spellingVariants, не отдельные лица. Ворген и Сумеречный Молот — поздняя биография, не ранний human-portrait или party. Killable — игровая возможность, не подтверждённая жизнь/смерть раннего среза.",
+      "holdingsNote": "Личных ранних владений эта запись не устанавливает; ownership и география не меняются.",
+      "localization": {
+        "basis": "transliteration",
+        "note": "Подтверждённая русская локализация в ограниченном поиске не получена; это явно подписанная транслитерация английского имени.",
+        "sources": [
+          "family-source-1",
+          "family-source-19"
+        ]
+      },
+      "canonicality": "canon",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          "family-source-1",
+          "family-source-19"
+        ],
+        "existenceBasis": "unknown",
+        "uncertainties": [
+          "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+          "В статье встречаются Dame Alys Finnsson и Dame Alyss Finnson: сохраняется каталожное английское имя, варианты перечисляются как spellingVariants, не отдельные лица.",
+          "Ворген и Сумеречный Молот — поздняя биография, не ранний human-portrait или party.",
+          "Killable — игровая возможность, не подтверждённая жизнь/смерть раннего среза."
+        ]
+      },
+      "lifeStatusBasis": "unknown",
+      "lifeStatusNote": "Состояние только выбранного предвыходного этапа; не современный wiki-инфобокс. Раннее существование не датировано: unknown, а не перенесённая из будущего смерть.",
+      "spellingVariants": [
+        "Dame Alys Finnsson",
+        "Dame Alyss Finnson"
       ]
+    },
+    {
+      "id": "noble-ashmore",
+      "name": "Графиня Эшмор",
+      "englishName": "Countess Ashmore",
+      "title": "Спорная «графиня» · неканоническая справка",
+      "description": "Графиня Эшмор — имя из гилнеасского окружения Hearthstone. Её родословная в этой истории поставлена под сомнение, а сама личность описана как синий дракон. Запись нужна для полноты именованного каталога, но не устанавливает канонического раннего человеческого дворянства.",
+      "shortDescription": "Спорная графиня из Hearthstone; не канонический ранний человеческий дворянин.",
+      "house": null,
+      "appearance": "Подробный ранний портрет не установлен; человеческий облик не считается доказанной расой или ранней личностью.",
+      "socialStatus": "Спорный графский эпитет, неканоническая история Hearthstone; ранний human noble не подтверждён.",
+      "allegiance": "Ранняя каноническая служба не установлена.",
+      "overlord": null,
+      "overlordText": "Сюзерен и ранний дом не установлены; спорная родословная не создаёт дом ashmore.",
+      "role": "noncanon_noble_reference",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "lifeStatus": "unknown",
+      "lifeStatusScope": "selected_era",
+      "sources": [
+        "family-source-15",
+        "family-source-60"
+      ],
+      "fieldSources": {
+        "name": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "englishName": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "title": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "description": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "shortDescription": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "house": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "appearance": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "socialStatus": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "allegiance": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "overlordText": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "role": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "biographyFrame": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "relations": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "lifeStatus": [
+          "family-source-15",
+          "family-source-60"
+        ]
+      },
+      "relations": [],
+      "spouse": null,
+      "confidence": "reconstruction",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Countess_Ashmore",
+      "periodNote": "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Hearthstone-exclusive/non-canon: включена только как маркированная справка. Никаких новых домов, владений, раннего возраста, active seat или баллов.",
+      "holdingsNote": "Личных ранних владений эта запись не устанавливает; ownership и география не меняются.",
+      "localization": {
+        "basis": "transliteration",
+        "note": "Подтверждённая русская локализация в ограниченном поиске не получена; это явно подписанная транслитерация английского имени.",
+        "sources": [
+          "family-source-15",
+          "family-source-60"
+        ]
+      },
+      "canonicality": "hearthstone_noncanon",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          "family-source-15",
+          "family-source-60"
+        ],
+        "existenceBasis": "unknown",
+        "uncertainties": [
+          "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+          "Hearthstone-exclusive/non-canon: включена только как маркированная справка.",
+          "Никаких новых домов, владений, раннего возраста, active seat или баллов."
+        ]
+      },
+      "lifeStatusBasis": "unknown",
+      "lifeStatusNote": "Состояние только выбранного предвыходного этапа; не современный wiki-инфобокс. Раннее существование не датировано: unknown, а не перенесённая из будущего смерть."
+    },
+    {
+      "id": "noble-lady-in-white",
+      "name": "Дама в белом",
+      "englishName": "Lady in White",
+      "title": "Именованный эпитет · неканоническая дворянская справка",
+      "description": "Дама в белом — именованный эпитет гилнеасской дворянки из неканонической истории Hearthstone. Её личное имя, семья и ранняя дата жизни не названы. Справка сохраняет известный образ, не назначая до стены призрака или действующую придворную особу.",
+      "shortDescription": "Именованный образ гилнеасской дворянки в Hearthstone; ранние имя, дом и дата неизвестны.",
+      "house": null,
+      "appearance": "Человеческая внешность до стены не описана; призрачный образ относится только к поздней неканонической истории.",
+      "socialStatus": "Дворянка в собственной истории Hearthstone, но без канонического раннего имени/титула.",
+      "allegiance": "Гилнеасское происхождение в неканонической истории; ранняя служба не подтверждена.",
+      "overlord": null,
+      "overlordText": "Сюзерен и личная семья не названы; эпитет не родословная Седогривов.",
+      "role": "noncanon_noble_reference",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "lifeStatus": "unknown",
+      "lifeStatusScope": "selected_era",
+      "sources": [
+        "family-source-61"
+      ],
+      "fieldSources": {
+        "name": [
+          "family-source-61"
+        ],
+        "englishName": [
+          "family-source-61"
+        ],
+        "title": [
+          "family-source-61"
+        ],
+        "description": [
+          "family-source-61"
+        ],
+        "shortDescription": [
+          "family-source-61"
+        ],
+        "house": [
+          "family-source-61"
+        ],
+        "appearance": [
+          "family-source-61"
+        ],
+        "socialStatus": [
+          "family-source-61"
+        ],
+        "allegiance": [
+          "family-source-61"
+        ],
+        "overlordText": [
+          "family-source-61"
+        ],
+        "role": [
+          "family-source-61"
+        ],
+        "biographyFrame": [
+          "family-source-61"
+        ],
+        "relations": [
+          "family-source-61"
+        ],
+        "lifeStatus": [
+          "family-source-61"
+        ]
+      },
+      "relations": [],
+      "spouse": null,
+      "confidence": "reconstruction",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lady_in_White",
+      "periodNote": "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Не добавляется безымянная придуманная личность: сохраняется только прямо именованный эпитет Lady in White. Hearthstone-exclusive/non-canon; поздняя призрачность не ранняя смерть.",
+      "holdingsNote": "Личных ранних владений эта запись не устанавливает; ownership и география не меняются.",
+      "localization": {
+        "basis": "editorial_translation",
+        "note": "Редакторский перевод именованного английского эпитета, не доказанное ruRU личное имя.",
+        "sources": [
+          "family-source-61"
+        ]
+      },
+      "canonicality": "hearthstone_noncanon",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          "family-source-61"
+        ],
+        "existenceBasis": "unknown",
+        "uncertainties": [
+          "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+          "Не добавляется безымянная придуманная личность: сохраняется только прямо именованный эпитет Lady in White.",
+          "Hearthstone-exclusive/non-canon; поздняя призрачность не ранняя смерть."
+        ]
+      },
+      "lifeStatusBasis": "unknown",
+      "lifeStatusNote": "Состояние только выбранного предвыходного этапа; не современный wiki-инфобокс. Раннее существование не датировано: unknown, а не перенесённая из будущего смерть."
     }
   ],
   "sources": [
@@ -4388,6 +6026,1992 @@
       "canonicalUrl": "https://wowpedia.fandom.com/wiki/File:Gineas.jpg",
       "quote": "Gilneas banner. Artwork by Chris Metzen.",
       "note": "Warcraft II: Tides of Darkness manual, pg. 43; Warcraft II: Battle.net Edition manual, pg. 41. Attribution retained from the file description."
+    },
+    {
+      "id": "court-source-8",
+      "title": "Lord Marley",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Marley",
+      "quote": "King Genn Greymane had originally planned to have the Greymane Wall cut through Marley's domain, but later decided to have it cut through Lord Darius Crowley's domain instead at the recommendation of Lord Godfrey.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    },
+    {
+      "id": "court-source-20",
+      "title": "Lord Geoffery Tulvan - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Geoffery_Tulvan",
+      "quote": "Lord Geoffery Tulvan is a worgen located at the Crucible of Carnage in the Twilight Highlands.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно.",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan"
+    },
+    {
+      "id": "court-source-21",
+      "title": "Lord Harford - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Harford",
+      "quote": "Lord Harford is an Argent Dawn prisoner of the death knights in the Scarlet Enclave.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно.",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford"
+    },
+    {
+      "id": "court-source-22",
+      "title": "Lord Mayor Morrison - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Mayor_Morrison",
+      "quote": "Lord Mayor Morrison is a human and leader of the Pyrewood Council who appears in Pyrewood Village in Silverpine Forest during [15] Pyrewood Ambush.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно.",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison"
+    },
+    {
+      "id": "court-source-23",
+      "title": "Aderic - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Aderic",
+      "quote": "Aderic was a human who was a Gilnean patriarch. He is buried at Aderic's Repose at the top of the hill.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно.",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Aderic"
+    },
+    {
+      "id": "court-source-24",
+      "title": "Lord Geoffery Tulvan",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan",
+      "quote": "Lord Geoffery Tulvan is a worgen located at the Crucible of Carnage in the Twilight Highlands. He is one of the challengers and seeks to become the greatest warrior in the world.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    },
+    {
+      "id": "court-source-25",
+      "title": "Lord Harford",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Harford",
+      "quote": "Remember Gilneas, our beloved home. This world is worth saving.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    },
+    {
+      "id": "court-source-26",
+      "title": "Lord Mayor Morrison",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison",
+      "quote": "Lord Mayor Morrison is a human and leader of the Pyrewood Council who appears in Pyrewood Village in Silverpine Forest during",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    },
+    {
+      "id": "court-source-27",
+      "title": "Aderic",
+      "url": "https://wowpedia.fandom.com/wiki/Aderic",
+      "quote": "Aderic was a human who was a Gilnean patriarch. He is buried at Aderic's Repose at the top of the hill.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    },
+    {
+      "id": "court-source-29",
+      "title": "greymane-enUS",
+      "url": "http://media.blizzard.com/wow/lore/pdfdownload/leader-story/genn-greymane/greymane-enUS.pdf",
+      "quote": "\"Never take a man's hand, Son...\" King Archibald Greymane said, his strong frame now a muddied silhouette against the fading glow of twilight.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    },
+    {
+      "id": "court-source-30",
+      "title": "Lord Ashbury the 1st — Wowpedia (action=render)",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st?action=render",
+      "quote": "Lord Ashbury the 1st was a Gilnean noble and the father of Baron Ashbury. Lord Ashbury helped King Archibald Greymane build Gilneas up to a nation of great power.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    },
+    {
+      "id": "noble-life-source-1",
+      "title": "Patriarch's Blessing - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Patriarch%27s_Blessing",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Patriarch%27s_Blessing",
+      "author": "Blizzard Entertainment (игровой текст); участники Warcraft Wiki, страница, адаптированная из Wowpedia",
+      "sourceType": "secondary_mirror_of_primary_game_text",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/noble-life-evidence/patriarchs-blessing-warcraft-wiki.md",
+      "evidenceSha256": "fd5b3d9ff86763cf1ff3d9308808a5ceda90f302377fffb1239e465c35257054",
+      "note": "Свидетельство для статуса в выбранной эпохе; поздняя смерть и недатированное рождение учитываются раздельно.",
+      "quote": "You've done it,. Even in these times we must honor our dead. \n\nTake these offerings and place them at Aderic's tomb.",
+      "quotes": [
+        "You've done it,. Even in these times we must honor our dead. \n\nTake these offerings and place them at Aderic's tomb."
+      ]
+    },
+    {
+      "id": "noble-life-source-2",
+      "title": "Innkeeper",
+      "url": "https://wowpedia.fandom.com/wiki/Innkeeper",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Innkeeper",
+      "author": "Blizzard Entertainment (игровая реплика); участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia_with_primary_game_text",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/noble-life-evidence/innkeeper-wowpedia.md",
+      "evidenceSha256": "ea118cfad83a52fa5562b3a09294cc00bae7dc911a488c61fed811559ddd80ba",
+      "note": "Свидетельство для статуса в выбранной эпохе; поздняя смерть и недатированное рождение учитываются раздельно.",
+      "quote": "Frustrated by the [Dalaran wizards](/wiki/Kirin_Tor)' lack of progress against the [undead](/wiki/Undead) during the [Third War](/wiki/Third_War), the [Archmage Arugal](/wiki/Arugal) elected to summon the extra-dimensional [worgen](/wiki/Worgen) to bolster his side's diminishing ranks. The wolf-men slaughtered the [Scourge](/wiki/Scourge), then quickly turned on the wizards themselves and laid siege to the keep of the noble, [Baron Silverlaine](/wiki/Baron_Silverlaine). The fort quickly fell into shadow and ruin. Driven mad with guilt, Arugal adopted the worgen as his children and retreated to the newly dubbed 'Shadowfang Keep'.",
+      "quotes": [
+        "Frustrated by the [Dalaran wizards](/wiki/Kirin_Tor)' lack of progress against the [undead](/wiki/Undead) during the [Third War](/wiki/Third_War), the [Archmage Arugal](/wiki/Arugal) elected to summon the extra-dimensional [worgen](/wiki/Worgen) to bolster his side's diminishing ranks. The wolf-men slaughtered the [Scourge](/wiki/Scourge), then quickly turned on the wizards themselves and laid siege to the keep of the noble, [Baron Silverlaine](/wiki/Baron_Silverlaine). The fort quickly fell into shadow and ruin. Driven mad with guilt, Arugal adopted the worgen as his children and retreated to the newly dubbed 'Shadowfang Keep'."
+      ]
+    },
+    {
+      "id": "noble-life-source-3",
+      "title": "Know Your Lore: Shadowfang Keep",
+      "url": "https://www.engadget.com/2010-12-15-know-your-lore-shadowfang-keep.html",
+      "canonicalUrl": "https://www.engadget.com/2010-12-15-know-your-lore-shadowfang-keep.html",
+      "author": "Engadget / серия WoW Insider «Know Your Lore»; индивидуальный автор в извлеченном тексте не установлен",
+      "sourceType": "secondary_editorial_not_canonical_early_scene",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/noble-life-evidence/shadowfang-keep-engadget.md",
+      "evidenceSha256": "2b2b0d9af73e9c05b41fa86acdf130e3e0e0951fe6b0a2e4000d9d089987a182",
+      "note": "Свидетельство для статуса в выбранной эпохе; поздняя смерть и недатированное рождение учитываются раздельно.",
+      "quote": "Yes, before it was a dungeon, Shadowfang Keep was the ancestral home of [Baron Silverlaine](http://www.wowhead.com/npc=3887) , a noble who owed allegiance to Gilneas and whose ancestral lands lay just outside of where the Greymane Wall would be erected. Ruling over the settlers of neaby Pyrewood Village, the Baron seemed a relatively capable leader... until, of course, the coming of the Scourge.",
+      "quotes": [
+        "Yes, before it was a dungeon, Shadowfang Keep was the ancestral home of [Baron Silverlaine](http://www.wowhead.com/npc=3887) , a noble who owed allegiance to Gilneas and whose ancestral lands lay just outside of where the Greymane Wall would be erected. Ruling over the settlers of neaby Pyrewood Village, the Baron seemed a relatively capable leader... until, of course, the coming of the Scourge."
+      ]
+    },
+    {
+      "id": "family-source-1",
+      "citationId": 1,
+      "title": "Nobles of Gilneas",
+      "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+      "quote": "The nobles of Gilneas are the ruling class of the kingdom of Gilneas. Some were slain during the civil war, while others were turned into worgen or Forsaken during the Forsaken invasion. Others remain human in exile from their homeland.[1]",
+      "quotes": [
+        "The nobles of Gilneas are the ruling class of the kingdom of Gilneas. Some were slain during the civil war, while others were turned into worgen or Forsaken during the Forsaken invasion. Others remain human in exile from their homeland.[1]",
+        "| King Archibald Greymane | Deceased | King of Gilneas. Father of Genn. |",
+        "| King Genn Greymane | Alive | King of Gilneas. Son of Archibald. |",
+        "| Lord Ashbury the 1st | Deceased | Councilor of King Archibald Greymane. Father of Baron Ashbury. |",
+        "| Baron Ashbury | Deceased (Undead) | Son of Lord Ashbury the 1st. Former councilor of King Genn Greymane, traitor alongside Godfrey and Walden. Raised as Forsaken, he later followed Godfrey within Shadowfang Keep. Killed on the orders of both factions. |",
+        "| Lord Darius Crowley | Alive | Leader of the rebels during the Northgate Rebellion. Now leader of the Gilneas Liberation Front and the Gilneas Brigade. |",
+        "| Lord Candren | Alive | Gilneas Quartermaster. |",
+        "| Lord Geoffery Tulvan | Killable | Fighter in the Crucible of Carnage. |",
+        "| Lord Harford | Deceased | A former worgen servant of Arugal in Shadowfang Keep who escaped and joined the Argent Dawn. Captured by the Scarlet Crusade and executed by the death knights of Acherus. |",
+        "| Lord Hewell | Alive | Unknown. |",
+        "| Lord Marley | Unknown | Councilor of King Genn Greymane. |",
+        "| Lord Vincent Godfrey | Deceased (Undead) | Former councilor of King Genn Greymane, traitor alongside Ashbury and Walden. Raised as Forsaken, he later betrayed Sylvanas and became the master of Shadowfang Keep. Killed on the orders of both factions. |",
+        "| Lord Walden | Deceased (Undead) | Former councilor of King Genn Greymane, traitor alongside Ashbury and Godfrey. Raised as Forsaken, he later followed Godfrey within Shadowfang Keep. Killed on the orders of both factions. |",
+        "| Lord Mayor Morrison | Deceased | Leader of Pyrewood Council and Arugal's puppet. Killed during an ambush by the Deathstalkers.[7] |",
+        "| Baron Silverlaine | Active (Undead) | Former lord of Shadowfang Keep, an area that held loyalty to Darius Crowley past the Greymane Wall. Slain by Arugal and his worgen and cursed to defend the keep as a ghost. Even after Arugal was slain, the baron's spirit continues to defend his former home. |",
+        "| Baron Longshore[8] | Killable | Captain of the pirate ship Heedless, and one of the Gilneans locked out of Gilneas by the Greymane Wall. Imprisoned by the forces of Theramore on the Merchant Coast. |",
+        "| Aderic | Deceased | Referred to as a \"patriarch\", and has the Royal Aderic Banquet named in his honor.[9] Possibly a long-dead king or nobleman. |",
+        "Given that he was, in truth, a drakonid, it is unknown if there is an actual Creed family that he infiltrated / impersonated into, or if he was the only member.",
+        "- The title used by Alys Finnsson, a Gilnean member of the Twilight's Hammer, of Dame is a part of the British honors system, as a female counterpart to the honorific of 'sir' bestowed upon knights."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Nobles_of_Gilneas.md",
+      "retrievalBasis": "live",
+      "sha256": "7ca95fa0e0df607af11dccd3273d7c5210fbeefa1c7b6ec205e172ed00099b93"
+    },
+    {
+      "id": "family-source-2",
+      "citationId": 2,
+      "title": "Greymane family",
+      "url": "https://wowpedia.fandom.com/wiki/Greymane_family",
+      "quote": "The Greymane family (also known as the Greymane clan)[1] is the ruling line of the kingdom of Gilneas. The family ruled from Greymane Manor and had a Royal Chemist in the form of Krennan Aranas.",
+      "quotes": [
+        "The Greymane family (also known as the Greymane clan)[1] is the ruling line of the kingdom of Gilneas. The family ruled from Greymane Manor and had a Royal Chemist in the form of Krennan Aranas.",
+        "Mia is the wife of Genn and mother of Tess and Liam.[2]",
+        "There are also an unrelated Crispin Greymane dwarf and an Elder Graymane taunka."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Greymane_family.md",
+      "retrievalBasis": "live",
+      "sha256": "41233be153bce64eed65415a3d245ffd5d6db5cc979ed581d9423d0f9750d34a"
+    },
+    {
+      "id": "family-source-3",
+      "citationId": 3,
+      "title": "Crowley",
+      "url": "https://wowpedia.fandom.com/wiki/Crowley",
+      "quote": "Crowley is the name of a notorious noble family of Gilneas. They owned the lands of Pyrewood Village and Ambermill. They also were the owners of Crowley Orchard and Crowley Stable Grounds.",
+      "quotes": [
+        "Crowley is the name of a notorious noble family of Gilneas. They owned the lands of Pyrewood Village and Ambermill. They also were the owners of Crowley Orchard and Crowley Stable Grounds.",
+        "- Brother Crowley - A member of the Scarlet Crusade; unknown if he's part of the family or not.",
+        "- Morticia Crowley - an undead found on Draenor; unknown if she's part of the family or not.",
+        "- Agent Crowley - a human mage; unknown if he's part of the family or not.",
+        "- Elizabeth Crowley - Forsaken priest, unknown if she's part of the family or not.",
+        "| N/A | One of the lords of Gilneas. | Alive |"
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Crowley.md",
+      "retrievalBasis": "live",
+      "sha256": "a0a30840fa9de1ffb62e870bf3c3a3eb0173a49cb60155117bccf1eb3a0a2b1b"
+    },
+    {
+      "id": "family-source-4",
+      "citationId": 4,
+      "title": "Mia Greymane",
+      "url": "https://wowpedia.fandom.com/wiki/Mia_Greymane",
+      "quote": "Mia Greymane is the wife of Genn Greymane and former queen consort of Gilneas.",
+      "quotes": [
+        "Mia Greymane is the wife of Genn Greymane and former queen consort of Gilneas.",
+        "Mia met her future husband Genn at the Royal Aderic Banquet, where he was smitten by her. They later married for love, rather than political reasons.[1][2]",
+        "Genn (husband), Tess (daughter), Liam (son), Archibald (father-in-law)"
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Mia_Greymane.md",
+      "retrievalBasis": "live",
+      "sha256": "a2ac5f82f07b866707e03abb71c7dbfe0118c1baa783f1ac5484da29e798da54"
+    },
+    {
+      "id": "family-source-5",
+      "citationId": 5,
+      "title": "Liam Greymane",
+      "url": "https://wowpedia.fandom.com/wiki/Liam_Greymane",
+      "quote": "Prince Liam Greymane was a member of the royal family of Gilneas, and the son and heir of King Genn Greymane.[1]",
+      "quotes": [
+        "Prince Liam Greymane was a member of the royal family of Gilneas, and the son and heir of King Genn Greymane.[1]"
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Liam_Greymane.md",
+      "retrievalBasis": "live",
+      "sha256": "362307b00e5d419416b8a067ca92c0acd31ffea048ef9c6318c027c3604e7dea"
+    },
+    {
+      "id": "family-source-8",
+      "citationId": 8,
+      "title": "Genn Greymane: Lord of His Pack - Media Gallery - World of Warcraft",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+      "quote": "Genn, a teenage Liam, the captain, and the infamous royal archmage known as Arugal were standing on the ramparts high above the Greymane Wall.",
+      "quotes": [
+        "Genn, a teenage Liam, the captain, and the infamous royal archmage known as Arugal were standing on the ramparts high above the Greymane Wall."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Lord-of-His-Pack-en.md",
+      "retrievalBasis": "live",
+      "sha256": "687c924d3ff0a93e6ddf27c7cd09dd215648dac88767cd3d6fd8fc4da72c6584"
+    },
+    {
+      "id": "family-source-9",
+      "citationId": 9,
+      "title": "Генн Седогрив: Вожак Стаи - Галерея - World of Warcraft",
+      "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+      "quote": "Рядом с кораблем плыли еще несколько эльфийских фрегатов; Генн знал, что на одном из них, на «Свете Элуны», плыли его жена Миа и дочь Тесс. Все, что осталось от его семьи. Как же тяжело было думать о семье, в которой нет больше сына! Эта боль была сильнее любых физических страданий, сильнее тоски по потерянному королевству.",
+      "quotes": [
+        "Рядом с кораблем плыли еще несколько эльфийских фрегатов; Генн знал, что на одном из них, на «Свете Элуны», плыли его жена Миа и дочь Тесс. Все, что осталось от его семьи. Как же тяжело было думать о семье, в которой нет больше сына! Эта боль была сильнее любых физических страданий, сильнее тоски по потерянному королевству.",
+        "Капитан стражи с трудом скрывал свой страх, не в силах отвести взгляда от того, что творилось у подножия Стены Седогрива. Рядом с ним на дозорном укреплении стояли Генн, юный принц Лиам и знаменитый верховный маг, известный как Аругал."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Lord-of-His-Pack-ru.md",
+      "retrievalBasis": "live",
+      "sha256": "d3015ee336bd7690091ca87327ca367dc2f3f0504db281829695a011ab8d0292"
+    },
+    {
+      "id": "family-source-15",
+      "citationId": 15,
+      "title": "Countess Ashmore",
+      "url": "https://wowpedia.fandom.com/wiki/Countess_Ashmore",
+      "quote": "Countess Ashmore is a blue dragon[1] featured in the The Witchwood expansion for Hearthstone.",
+      "quotes": [
+        "Countess Ashmore is a blue dragon[1] featured in the The Witchwood expansion for Hearthstone.",
+        "It is not clear if Ashmore is truly the scion of a forgotten noble family returned home in a time of need, or if she is something much more dangerous.[2]"
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Countess_Ashmore.md",
+      "retrievalBasis": "live",
+      "sha256": "53bfb67cde2623c9a217f6a34a5a34014c0caf0c585a2a002f7b47db901b1957"
+    },
+    {
+      "id": "family-source-16",
+      "citationId": 16,
+      "title": "Tess Greymane",
+      "url": "https://warcraft.wiki.gg/wiki/Tess_Greymane",
+      "quote": "Tess was born to Queen Mia and King Genn before Gilneas left the Alliance of Lordaeron after the Second War.[8]",
+      "quotes": [
+        "Tess was born to Queen Mia and King Genn before Gilneas left the Alliance of Lordaeron after the Second War.[8]"
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Tess_Greymane--wiki-gg.md",
+      "retrievalBasis": "live",
+      "sha256": "95d96c07eca0bd110d1f191c2b23c9a38247a5e6c661b817878e2b3067823528"
+    },
+    {
+      "id": "family-source-17",
+      "citationId": 17,
+      "title": "Liam Greymane",
+      "url": "https://warcraft.wiki.gg/wiki/Liam_Greymane",
+      "quote": "- As Liam was a young teenager during the Greymane Wall going up and the Scourge attacking it; he would have been in his mid-twenties when he died.",
+      "quotes": [
+        "- As Liam was a young teenager during the Greymane Wall going up and the Scourge attacking it; he would have been in his mid-twenties when he died."
+      ],
+      "note": "Редакторская хронологическая прикидка: смешивает строительство и последующую атаку Плети; не доказательство рождения до точного раннего среза.",
+      "evidenceFile": "docs/noble-family-evidence/Liam_Greymane--wiki-gg.md",
+      "retrievalBasis": "live",
+      "sha256": "7820e07aa7365be1b076ccdd14f22b53da353a4d572551913eb961b1b31c5a13"
+    },
+    {
+      "id": "family-source-18",
+      "citationId": 18,
+      "title": "Lorna Crowley",
+      "url": "https://warcraft.wiki.gg/wiki/Lorna_Crowley",
+      "quote": "Darius (father), at least one sibling[1]",
+      "quotes": [
+        "Darius (father), at least one sibling[1]",
+        "Heavens no. This is the peace we--and my children--worked for. I hope they get to live in it."
+      ],
+      "note": "Поздняя множественная форма my children не идентифицирует второго ребёнка; имени для отдельной записи нет.",
+      "evidenceFile": "docs/noble-family-evidence/Lorna_Crowley--wiki-gg.md",
+      "retrievalBasis": "live",
+      "sha256": "231c4e28108f0503adb76045c2c16a6900e4b8c8e8588b1a1c36e8b1954e536e"
+    },
+    {
+      "id": "family-source-19",
+      "citationId": 19,
+      "title": "Dame Alys Finnsson",
+      "url": "https://wowpedia.fandom.com/wiki/Dame_Alys_Finnsson?so=search",
+      "quote": "Dame Alys Finnsson is a worgen, affiliated with the Twilight's Hammer, found in the Twilight Highlands.",
+      "quotes": [
+        "Dame Alys Finnsson is a worgen, affiliated with the Twilight's Hammer, found in the Twilight Highlands.",
+        "| Status | Killable |"
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Dame_Alys_Finnsson--search.md",
+      "retrievalBasis": "live",
+      "sha256": "bea5f30ee578181edeef549e54a0cae95677bbd09baf8cb8f6b70278d3999384",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Dame_Alys_Finnsson"
+    },
+    {
+      "id": "family-source-20",
+      "citationId": 20,
+      "title": "Lord Woofington",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Woofington?so=search",
+      "quote": "Lord Woofington is a mastiff companion.",
+      "quotes": [
+        "Lord Woofington is a mastiff companion.",
+        "Lord Woofington was given his title after the rest of the denizens of Havenswood succumbed to madness."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Lord_Woofington--search.md",
+      "retrievalBasis": "live",
+      "sha256": "79532ab5a2b0e3f0b304d88d46128613ce6089d5644c3337b8f35cc57dabe97c",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Woofington"
+    },
+    {
+      "id": "family-source-23",
+      "citationId": 23,
+      "title": "Lord Woofington — Wayback snapshot 2025-11-18",
+      "url": "https://web.archive.org/web/20251118114028/https://wowpedia.fandom.com/wiki/Lord_Woofington",
+      "quote": "Lord Woofington was given his title after the rest of the denizens of Havenswood succumbed to madness.",
+      "quotes": [
+        "Lord Woofington was given his title after the rest of the denizens of Havenswood succumbed to madness."
+      ],
+      "note": "Снимок Wayback 2025-11-18; используется для сопоставления с новой живой выгрузкой ?so=search, не выдаётся за текущий оригинал.",
+      "evidenceFile": "docs/noble-family-evidence/Lord_Woofington--wayback.txt",
+      "retrievalBasis": "snapshot",
+      "sha256": "cc36b584e11cbecc84414e7391084a4c76c815d1c033e57a55ed3881958329bb",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Woofington",
+      "snapshotTimestamp": "20251118114028"
+    },
+    {
+      "id": "family-source-26",
+      "citationId": 26,
+      "title": "Baron Silverlaine",
+      "url": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+      "quote": "Relative(s)\n Deceased wife",
+      "quotes": [
+        "Relative(s)\n Deceased wife",
+        "Baron Silveraline and his family were killed by the worgen, summoned by Archmage Arugal from the Emerald Dream to aid Gilneans against the Scourge, after they turned on the Gilneans. After the Fourth War, Mathias Shaw reported a common belief that the ghost of Baron Silverlaine still haunts the keep.[1]"
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Baron_Silverlaine.md",
+      "retrievalBasis": "live",
+      "sha256": "b891132eace4ccb8e645f57ac09ce9ae49c07ec77e646283d765a9e36a6b6a22"
+    },
+    {
+      "id": "family-source-28",
+      "citationId": 28,
+      "title": "Magistrate Henry Maleb",
+      "url": "https://wowpedia.fandom.com/wiki/Magistrate_Henry_Maleb",
+      "quote": "Before the Forsaken bombing of the city, he was the human Magistrate of Southshore in the Hillsbrad Foothills.",
+      "quotes": [
+        "Before the Forsaken bombing of the city, he was the human Magistrate of Southshore in the Hillsbrad Foothills.",
+        "He was classified as an aristocrat and a fighter."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Magistrate_Henry_Maleb.md",
+      "retrievalBasis": "live",
+      "sha256": "5b934189f39e021326ad149ec25f6cc0551e80da9ee8a1ad5c6bdeb3bd6eecec"
+    },
+    {
+      "id": "family-source-29",
+      "citationId": 29,
+      "title": "Gilneas Nobleman",
+      "url": "https://wowpedia.fandom.com/wiki/Gilneas_Nobleman",
+      "quote": "The subject of this article or section did not make it out of the [patch 8.3.0](/wiki/Patch_8.3.0)[test realms](/wiki/Public_Test_Realm).",
+      "quotes": [
+        "The subject of this article or section did not make it out of the [patch 8.3.0](/wiki/Patch_8.3.0)[test realms](/wiki/Public_Test_Realm)."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Gilneas_Nobleman.md",
+      "retrievalBasis": "live",
+      "sha256": "8b3628a61d795d73fe020da70aa776f3fcb83a303534b1769fac020301b13ecb"
+    },
+    {
+      "id": "family-source-40",
+      "citationId": 40,
+      "title": "Isiden Perenolde",
+      "url": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+      "quote": "Isiden Perenolde[1] was the nephew of Lord Aiden Perenolde, King of Alterac. When Alterac was placed under martial law by order of King Terenas, Isiden fled to Gilneas, where he hoped to rally support.[2] He was eventually backed by Genn Greymane, Gilneas' king, as the matter of the succession began to heat up.[3]",
+      "quotes": [
+        "Isiden Perenolde[1] was the nephew of Lord Aiden Perenolde, King of Alterac. When Alterac was placed under martial law by order of King Terenas, Isiden fled to Gilneas, where he hoped to rally support.[2] He was eventually backed by Genn Greymane, Gilneas' king, as the matter of the succession began to heat up.[3]"
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Isiden_Perenolde.md",
+      "retrievalBasis": "live",
+      "sha256": "6d3d8c316583bcac6dc956039abb1309c57ad00f1d7f0f060ca6b2d24d3df664"
+    },
+    {
+      "id": "family-source-41",
+      "citationId": 41,
+      "title": "Liam-wowpedia-api",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Liam+Greymane&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "He was killed by Sylvanas Windrunner during the Battle for Gilneas City.",
+      "quotes": [
+        "He was killed by Sylvanas Windrunner during the Battle for Gilneas City."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Liam-wowpedia-api.txt",
+      "retrievalBasis": "live",
+      "sha256": "b732f72ad67d3451bac8575c3bbfb0327b59b9d02f6ed5ba5722f3cc106d6975",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Liam_Greymane"
+    },
+    {
+      "id": "family-source-42",
+      "citationId": 42,
+      "title": "aristocrats-api-02",
+      "url": "https://wowpedia.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AAristocrats&cmlimit=500&format=json&cmcontinue=page%7C53544f524d534f4e472c204252414e4e4f4e0a4252414e4e4f4e2053544f524d534f4e47%7C564363&continue=-%7C%7C",
+      "quote": "\"title\": \"Lord Walden\"",
+      "quotes": [
+        "\"title\": \"Lord Walden\""
+      ],
+      "note": "Категорийный JSON: последние 137 строк; continuation отсутствует.",
+      "evidenceFile": "docs/noble-family-evidence/aristocrats-api-02.json",
+      "retrievalBasis": "live",
+      "sha256": "a76391d2dbc9224e17ef79ab4cfca466bb2669f70d34f1e1731ba7c486294019"
+    },
+    {
+      "id": "family-source-43",
+      "citationId": 43,
+      "title": "Tess-wowpedia-api",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Tess+Greymane&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "Genn & Mia (parents),\n Liam (brother),\n Archibald (grandfather)",
+      "quotes": [
+        "Genn & Mia (parents),\n Liam (brother),\n Archibald (grandfather)",
+        "Tess' life was saved by a potion made by Krennan Aranas; if not for him, she would have died soon after she was born.[2]"
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Tess-wowpedia-api.txt",
+      "retrievalBasis": "live",
+      "sha256": "c2ef1f4d7145068a887931ca80cf3599440a944171b0031f86003fb893b84d1e",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Tess_Greymane"
+    },
+    {
+      "id": "family-source-45",
+      "citationId": 45,
+      "title": "Wowpedia Category:Aristocrats — MediaWiki API batch 1",
+      "url": "https://wowpedia.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AAristocrats&cmlimit=500&format=json",
+      "quote": "\"ns\": 0,\n      \"title\": \"Aristocrat\"",
+      "quotes": [
+        "\"ns\": 0,\n      \"title\": \"Aristocrat\""
+      ],
+      "note": "Категорийный JSON: только discovery, не ранняя должность; 500 строк первой страницы.",
+      "evidenceFile": "docs/noble-family-evidence/aristocrats-api-01-body.json",
+      "retrievalBasis": "live",
+      "sha256": "9bf1a749a739d4c82c0948d081c651a0ee070c92aac31ea6831c28ef223e5fd0"
+    },
+    {
+      "id": "family-source-46",
+      "citationId": 46,
+      "title": "gilneas-category — MediaWiki API",
+      "url": "https://wowpedia.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AGilneas+%28kingdom%29&cmlimit=500&format=json",
+      "quote": "\"title\": \"Lorna Crowley\"",
+      "quotes": [
+        "\"title\": \"Lorna Crowley\""
+      ],
+      "note": "394 строки Category:Gilneas (kingdom), continuation отсутствует.",
+      "evidenceFile": "docs/noble-family-evidence/gilneas-category-api.json",
+      "retrievalBasis": "live",
+      "sha256": "a70dcabef53453ec8f1565c327341a1848364d5d5c143532067918eb84267a9b"
+    },
+    {
+      "id": "family-source-47",
+      "citationId": 47,
+      "title": "gilneas-npc-category — MediaWiki API",
+      "url": "https://wowpedia.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AGilneas+NPCs&cmlimit=500&format=json",
+      "quote": "\"title\": \"Mia Greymane\"",
+      "quotes": [
+        "\"title\": \"Mia Greymane\""
+      ],
+      "note": "92 строки Category:Gilneas NPCs, continuation отсутствует.",
+      "evidenceFile": "docs/noble-family-evidence/gilneas-npc-category-api.json",
+      "retrievalBasis": "live",
+      "sha256": "bdc772bfea929e79e80ff9de70cbc346f22e63163bc61c12e6749fb7fd625423"
+    },
+    {
+      "id": "family-source-48",
+      "citationId": 48,
+      "title": "Лорна Краули",
+      "url": "https://www.wowhead.com/ru/npc=35378/lorna-crowley",
+      "quote": "# Лорна Краули",
+      "quotes": [
+        "# Лорна Краули"
+      ],
+      "note": "ruRU-карточка NPC 35378: доказательство только написания, не раннего возраста.",
+      "evidenceFile": "docs/noble-family-evidence/Lorna_Crowley--ru-wowhead.md",
+      "retrievalBasis": "live",
+      "sha256": "eda5598cd62ae44afe64c36a62bf1a5929e48f7ba903b9844e4df04e40bbb8c4"
+    },
+    {
+      "id": "family-source-50",
+      "citationId": 50,
+      "title": "To Gilneas (Horde)",
+      "url": "https://warcraft.wiki.gg/wiki/To_Gilneas_(Horde)",
+      "quote": "I only know Tess in passing, she was very young when Gilneas left the Alliance after the Second War.",
+      "quotes": [
+        "I only know Tess in passing, she was very young when Gilneas left the Alliance after the Second War."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/To_Gilneas_(Horde)--wiki-gg.md",
+      "retrievalBasis": "live",
+      "sha256": "1d5240ca2ab686e6f022114246f2f66a599598f61feff5fc19dcb9b41d206b15"
+    },
+    {
+      "id": "family-source-51",
+      "citationId": 51,
+      "title": "Элегия - Галерея - World of Warcraft",
+      "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/elegy",
+      "quote": "Королева Миа Седогрив действительно была частой гостьей в Воющем дубе — дарнасском лагере, где жили гилнеасцы. Андуин был о ней очень высокого мнения. Он согласился: вряд ли кто-то мог справиться с задачей Генна лучше, чем эта миниатюрная, волевая женщина с добрым сердцем и острым умом.",
+      "quotes": [
+        "Королева Миа Седогрив действительно была частой гостьей в Воющем дубе — дарнасском лагере, где жили гилнеасцы. Андуин был о ней очень высокого мнения. Он согласился: вряд ли кто-то мог справиться с задачей Генна лучше, чем эта миниатюрная, волевая женщина с добрым сердцем и острым умом."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Elegy-ru.md",
+      "retrievalBasis": "live",
+      "sha256": "ea0d58b55f6dca0ac276e355833294726cb5d728d0978d073c3f612518cf0750"
+    },
+    {
+      "id": "family-source-54",
+      "citationId": 54,
+      "title": "Agent Crowley — Wowpedia MediaWiki API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Agent+Crowley&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "Agent Crowley could be related to other people called Crowley.",
+      "quotes": [
+        "Agent Crowley could be related to other people called Crowley."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Agent_Crowley--api.txt",
+      "retrievalBasis": "live",
+      "sha256": "3886fde7dc2765c6e73ac51de25495a9ae2ec386b65efb9f5f88a5d7ba397b3d",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Agent_Crowley"
+    },
+    {
+      "id": "family-source-57",
+      "citationId": 57,
+      "title": "Lorna Crowley — Wowpedia MediaWiki API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lorna+Crowley&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "Lorna Crowley is the daughter of Lord Darius Crowley, one of the principal leaders during the Northgate Rebellion.",
+      "quotes": [
+        "Lorna Crowley is the daughter of Lord Darius Crowley, one of the principal leaders during the Northgate Rebellion.",
+        "The day of the worgen attack on Gilneas City, Lorna saved a worgen adventurer by shooting Josiah Avery."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Lorna_Crowley--api.txt",
+      "retrievalBasis": "live",
+      "sha256": "faaea4e13343800d0dabe0b8ce761d45afd253b8158b8169470ca3852b3f8875",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lorna_Crowley"
+    },
+    {
+      "id": "family-source-58",
+      "citationId": 58,
+      "title": "Elizabeth Crowley — Wowpedia MediaWiki API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Elizabeth+Crowley&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "This article contains information from the Trading Card Game which is considered non-canon.",
+      "quotes": [
+        "This article contains information from the Trading Card Game which is considered non-canon."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Elizabeth_Crowley--api.txt",
+      "retrievalBasis": "live",
+      "sha256": "995d2c9e484a0006f8f5c2785267457fbe7c64f0dfa0be7224dd27bb7db94665",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Elizabeth_Crowley"
+    },
+    {
+      "id": "family-source-59",
+      "citationId": 59,
+      "title": "Lieutenant Walden — Wowpedia MediaWiki API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lieutenant+Walden&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "He may be related to Lord Walden.",
+      "quotes": [
+        "He may be related to Lord Walden.",
+        "Lieutenant Walden is a human quest giver located in Merchant Square in the worgen starting zone of Gilneas City. He was under Liam Greymane's command to help evacuate the city, but was killed by worgen during their invasion of Gilneas."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Lieutenant_Walden--api.txt",
+      "retrievalBasis": "live",
+      "sha256": "916fd89b70deb9e5e8d4c13245106450d052239dca6a55ef3ae2412e7f372ff7",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lieutenant_Walden"
+    },
+    {
+      "id": "family-source-60",
+      "citationId": 60,
+      "title": "Countess Ashmore — Wowpedia MediaWiki API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Countess+Ashmore&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "This article contains information and lore exclusive to Hearthstone, and is considered non-canon.",
+      "quotes": [
+        "This article contains information and lore exclusive to Hearthstone, and is considered non-canon."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Countess_Ashmore--api.txt",
+      "retrievalBasis": "live",
+      "sha256": "014793bf48f5d5c9acf65d4dd51a192b840c93826eb6f3d648bc16ca9cbbca1e",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Countess_Ashmore"
+    },
+    {
+      "id": "family-source-61",
+      "citationId": 61,
+      "title": "Lady in White — Wowpedia MediaWiki API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lady+in+White&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "In life, the Lady in White was a Gilnean noble woman, who saw the destruction of almost all that she loved during the fall of Gilneas.",
+      "quotes": [
+        "In life, the Lady in White was a Gilnean noble woman, who saw the destruction of almost all that she loved during the fall of Gilneas.",
+        "This article contains information and lore exclusive to Hearthstone, and is considered non-canon.",
+        "As a ghost, she seeks to help the living restore all that was lost.[1]"
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Lady_in_White--api.txt",
+      "retrievalBasis": "live",
+      "sha256": "a69d546536649efb31c5a990ffddbc0810a4577602d817c8161657625614b4ac",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lady_in_White"
+    },
+    {
+      "id": "family-source-63",
+      "citationId": 63,
+      "title": "Archibald Greymane — Wowpedia family audit API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Archibald+Greymane&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "Genn (son), Mia (daughter-in-law), Tess and Liam (grandchildren)",
+      "quotes": [
+        "Genn (son), Mia (daughter-in-law), Tess and Liam (grandchildren)"
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Archibald_Greymane--family-api.txt",
+      "retrievalBasis": "live",
+      "sha256": "48b225bef461e34a98b7ba8bf262869c181b5be2c7b5dd42e3b4a6b2ff24f20f",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Archibald_Greymane"
+    },
+    {
+      "id": "family-source-64",
+      "citationId": 64,
+      "title": "Lord Ashbury the 1st — Wowpedia family audit API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Ashbury+the+1st&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "Lord Ashbury the 1st was a Gilnean noble and the father of Baron Ashbury.",
+      "quotes": [
+        "Lord Ashbury the 1st was a Gilnean noble and the father of Baron Ashbury."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Lord_Ashbury_the_1st--family-api.txt",
+      "retrievalBasis": "live",
+      "sha256": "6cc11776c1d14575d651ce5169f7453c98beb5e49cad29745c001a15538ab71c",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st"
+    },
+    {
+      "id": "family-source-66",
+      "citationId": 66,
+      "title": "Lord Candren — Wowpedia family audit API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Candren&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "Lord Candren is the quartermaster for Gilneas. He is found in Darnassus's Temple Gardens, near the flight master.",
+      "quotes": [
+        "Lord Candren is the quartermaster for Gilneas. He is found in Darnassus's Temple Gardens, near the flight master."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Lord_Candren--family-api.txt",
+      "retrievalBasis": "live",
+      "sha256": "ff85d54c0802bdec519d938f8cbd23a89bfe0e1b0a84c53d04c375ea17826b47",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Candren"
+    },
+    {
+      "id": "family-source-68",
+      "citationId": 68,
+      "title": "Lord Marley — Wowpedia family audit API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Marley&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "Lord Marley was a Gilnean noble.",
+      "quotes": [
+        "Lord Marley was a Gilnean noble."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Lord_Marley--family-api.txt",
+      "retrievalBasis": "live",
+      "sha256": "5ab70b8b0f1619dece619cd64dc5d5263e953b3afbb5a60b65a53c4e2ca5493d",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Marley"
+    },
+    {
+      "id": "family-source-69",
+      "citationId": 69,
+      "title": "Lord Mayor Morrison — Wowpedia family audit API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Mayor+Morrison&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "He may be related to Brambley Morrison and Vinnie Morrison.",
+      "quotes": [
+        "He may be related to Brambley Morrison and Vinnie Morrison."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Lord_Mayor_Morrison--family-api.txt",
+      "retrievalBasis": "live",
+      "sha256": "4b912b405265fc0c72e8507e3af80d246d6782911d2d785e972cb5211da1f465",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison"
+    },
+    {
+      "id": "family-source-71",
+      "citationId": 71,
+      "title": "Lord Vincent Godfrey — Wowpedia family audit API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Vincent+Godfrey&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "Prior to the Second War, Godfrey was among the Gilnean nobles who accompanied King Genn Greymane to Lordaeron to create the Alliance of Lordaeron.",
+      "quotes": [
+        "Prior to the Second War, Godfrey was among the Gilnean nobles who accompanied King Genn Greymane to Lordaeron to create the Alliance of Lordaeron."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Lord_Vincent_Godfrey--family-api.txt",
+      "retrievalBasis": "live",
+      "sha256": "22d6f6a4564be53a5ac044e9501bb190f1bf5a956a3344fbb983fd330cdfdf34",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey"
+    },
+    {
+      "id": "family-source-75",
+      "citationId": 75,
+      "title": "Krennan Aranas — Wowpedia family audit API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Krennan+Aranas&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "quote": "Krennan Aranas is the Royal Chemist of Gilneas. Genn notes him as one of the most powerful chemists in Azeroth, or at least Gilneas.",
+      "quotes": [
+        "Krennan Aranas is the Royal Chemist of Gilneas. Genn notes him as one of the most powerful chemists in Azeroth, or at least Gilneas."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Krennan_Aranas--family-api.txt",
+      "retrievalBasis": "live",
+      "sha256": "34887201f1f300610c578cfbcb64353d2c2b75704980220c8ec3d5b94009a259",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Krennan_Aranas"
+    },
+    {
+      "id": "family-source-76",
+      "citationId": 76,
+      "title": "Lord Hiram Creed — Wowpedia MediaWiki API",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Hiram+Creed&prop=text%7Crevid&format=json",
+      "quote": "Lord Hiram Creed was a black drakonid who disguises themselves as an affluent Gilnean noble.",
+      "quotes": [
+        "Lord Hiram Creed was a black drakonid who disguises themselves as an affluent Gilnean noble.",
+        "Black Prince Wrathion sent his rogue champion who sought to earn his favor to assassinate Creed in his crusade to eliminate all corrupted black dragons on Azeroth.[1] With his death, it is unknown what the fate of the Blackhowl group is."
+      ],
+      "note": "",
+      "evidenceFile": "docs/noble-family-evidence/Lord_Hiram_Creed--api.txt",
+      "retrievalBasis": "live",
+      "sha256": "f5a3cd25ac543a8fc5cbd86b3b06061b05f2147490ad01dd6515515b8ff1fe38",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Hiram_Creed"
     }
-  ]
+  ],
+  "royalCouncil": {
+    "version": 1,
+    "members": [
+      {
+        "id": "council-greymane",
+        "kind": "faction",
+        "refId": "greymane",
+        "party": "royalists",
+        "stance": "support",
+        "advisor": false,
+        "active": true,
+        "note": "Правящий дом отстаивает самостоятельность королевства под руководством Генна. Его курс за стену не означает единогласия всех членов семьи.",
+        "basis": "scenario",
+        "partyBasis": "scenario",
+        "stanceBasis": "scenario",
+        "advisorBasis": "unknown",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          48,
+          3,
+          47
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Дети и супруга Генна не получают автоматических голосов; поздние разногласия Лиама не датируются в этот срез."
+          ],
+          "presenceBasis": "lore",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-genn"
+      },
+      {
+        "id": "council-crowley",
+        "kind": "faction",
+        "refId": "crowley",
+        "party": "internationalists",
+        "stance": "oppose",
+        "advisor": true,
+        "active": true,
+        "note": "Дом Дариуса поддерживает общую безопасность с союзными королевствами и сохранение северных связей. Линия главы — не объявленный семейный устав.",
+        "basis": "scenario",
+        "partyBasis": "scenario",
+        "stanceBasis": "scenario",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          48,
+          32
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не строить дом как нынешнюю организацию мятежников; спор пока политический."
+          ],
+          "presenceBasis": "lore",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-darius"
+      },
+      {
+        "id": "council-silverlaine",
+        "kind": "faction",
+        "refId": "silverlaine",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Северный баронский дом связан с Краули по принятому сценарию, но его самостоятельное отношение к стене остаётся открытым.",
+        "basis": "scenario",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          59,
+          33
+        ],
+        "provenance": {
+          "uncertainties": [
+            "existingParentId=crowley сохранить, но relationBasis=scenario; это не primary fact и не стеновой голос."
+          ],
+          "presenceBasis": "lore",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-silverlaine"
+      },
+      {
+        "id": "council-godfrey",
+        "kind": "faction",
+        "refId": "godfrey",
+        "party": "royalists",
+        "stance": "support",
+        "advisor": true,
+        "active": true,
+        "note": "Дом Годфри следует расчётливой поддержке королевского рубежа. Его глава сначала заботится о торговых потерях, затем поддерживает выгодную горную линию.",
+        "basis": "scenario",
+        "partyBasis": "scenario",
+        "stanceBasis": "scenario",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          46,
+          48
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Поддержка Годфри здесь не означает будущую неизменную верность монарху."
+          ],
+          "presenceBasis": "lore",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-godfrey"
+      },
+      {
+        "id": "council-ashbury",
+        "kind": "faction",
+        "refId": "ashbury",
+        "party": "royalists",
+        "stance": "unknown",
+        "advisor": true,
+        "active": true,
+        "note": "Старый союзный короне дом тяготеет к Генну; сохранение гилнеасских сил подтверждено, а отдельное одобрение стены — нет.",
+        "basis": "scenario",
+        "partyBasis": "scenario",
+        "stanceBasis": "unknown",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          46,
+          50
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не считать нынешний дом единым действующим отцом и сыном; отец — отдельная исключённая историческая запись."
+          ],
+          "presenceBasis": "lore",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-ashbury"
+      },
+      {
+        "id": "council-marley",
+        "kind": "faction",
+        "refId": "marley",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Приграничный дом Марли может поддержать одну из сторон после гарантий о земле и цене рубежа. Его действительное решение неизвестно.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          48,
+          3
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Ни смена маршрута, ни поздняя охота не доказывают голос «за»."
+          ],
+          "presenceBasis": "lore",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-marley"
+      },
+      {
+        "id": "council-walden",
+        "kind": "faction",
+        "refId": "walden",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Дом Уолденов известен по поздней знати; для раннего спора о стене он остаётся возможным, недатированным союзником.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          55
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Нельзя назначать дому раннюю поддержку Годфри или королевского советника по поздней измене."
+          ],
+          "presenceBasis": "scenario",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-walden"
+      },
+      {
+        "id": "council-noble-genn",
+        "kind": "person",
+        "refId": "noble-genn",
+        "party": "royalists",
+        "stance": "support",
+        "advisor": false,
+        "active": true,
+        "note": "Король ставит самостоятельность Гилнеаса выше союзных обязательств и предлагает новый северный рубеж. Выход из Альянса ещё не совершён.",
+        "basis": "lore",
+        "partyBasis": "lore",
+        "stanceBasis": "lore",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          48,
+          45
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Название партии авторское; текущий статус остаётся «король, участник Альянса», не изгнанник или бывший король."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "sovereign"
+        },
+        "influence": {
+          "party": 100,
+          "kingdom": 100
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-darius",
+        "kind": "person",
+        "refId": "noble-darius",
+        "party": "internationalists",
+        "stance": "oppose",
+        "advisor": true,
+        "active": true,
+        "note": "Северный лорд отстаивает общую защиту с соседними королевствами; проект стены угрожает связям и землям его дома. Спор с короной ещё не стал мятежом.",
+        "basis": "lore",
+        "partyBasis": "lore",
+        "stanceBasis": "lore",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": true,
+        "sources": [
+          48,
+          32
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не известно, что именно он уже сказал на авторском этапе 10/100; stance — согласованная с лором стартовая линия, не датированный протокол."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "early_advisor"
+        },
+        "influence": {
+          "party": 94,
+          "kingdom": 84
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-godfrey",
+        "kind": "person",
+        "refId": "noble-godfrey",
+        "party": "royalists",
+        "stance": "support",
+        "advisor": true,
+        "active": true,
+        "note": "Годфри поддерживает горную линию стены, укрепляющую оборону и значение его владений. Расчётливый союзник короля; разрыв торговли сначала вызывает у него сомнения.",
+        "basis": "lore",
+        "partyBasis": "lore",
+        "stanceBasis": "lore",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": true,
+        "sources": [
+          46,
+          48,
+          49
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не изображать безусловным противником всякой торговли с самого начала: его ограниченное участие в Альянсе первоначально служило торговым интересам."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "early_advisor"
+        },
+        "influence": {
+          "party": 85,
+          "kingdom": 80
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-ashbury",
+        "kind": "person",
+        "refId": "noble-ashbury",
+        "party": "royalists",
+        "stance": "unknown",
+        "advisor": true,
+        "active": true,
+        "note": "Давний друг Генна поддерживает бережную к казне политику и малое союзное войско. В королевском лагере правдоподобен, но его отдельное решение о стене не известно.",
+        "basis": "scenario",
+        "partyBasis": "scenario",
+        "stanceBasis": "unknown",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": true,
+        "sources": [
+          46,
+          45,
+          50
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Ограниченная помощь Альянсу не равна одобрению прекращения всей торговли или строительства стены.",
+            "Поздняя измена не меняет его стартовую партийную линию."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "early_advisor"
+        },
+        "influence": {
+          "party": 60,
+          "kingdom": 55
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-marley",
+        "title": "Лорд · владелец приграничной провинции",
+        "kind": "person",
+        "refId": "noble-marley",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Лорд пограничной провинции: его земли рассматриваются для нового рубежа. До решения о маршруте он остаётся возможным союзником; личного голоса за стену или против неё не сохранилось.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          48,
+          3,
+          "court-source-8"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Каталожный титул советника не даёт отдельной даты службы до стены. advisor=false в строгом стартовом срезе; возможна явная сценарная галочка.",
+            "Не выводить голос из совместных поздних охот или выгоды от переноса маршрута."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "potential_ally"
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 30
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-archibald",
+        "kind": "person",
+        "refId": "noble-archibald",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": false,
+        "note": "Прежний король и отец Генна; его учение о самостоятельности принадлежит наследию династии, а не действующему совету.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          45,
+          53,
+          "court-source-29"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "party=neutral — техническая нераспределённость исключённой записи, не политический нейтралитет предка.",
+            "Точная дата смерти не доказана и не нужна для исключения из текущего совета."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "historical_predecessor"
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 0
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-ashbury-first",
+        "kind": "person",
+        "refId": "noble-ashbury-first",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": false,
+        "note": "Лорд Эшбери I — представитель прежнего двора Арчибальда. Верность его семьи короне — историческое наследие, не нынешнее кресло при Генне.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          3,
+          54,
+          "court-source-30"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не называть бароном I и не датировать смерть по текущему инфобоксу.",
+            "advisor=false означает не советник текущего Генна; historicalAdvisorTo=noble-archibald."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "historical_predecessor"
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 0
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-walden",
+        "kind": "person",
+        "refId": "noble-walden",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Гилнеасский лорд из позднего реестра. Для спора о стене его голос неизвестен; возможное приглашение — авторское, без назначения советником.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          55,
+          60
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Нельзя выводить роялизм, поддержку стены или раннее кресло из позднего сотрудничества с Годфри.",
+            "При включении в авторский пул пометить presenceBasis=scenario и votingSeat=false."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 8
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-hewell",
+        "kind": "person",
+        "refId": "noble-hewell",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Лорд Хьювелл может стать союзником короны, но его место в раннем дворе и отношение к стене не известны. Пока не принадлежит ни одной партии.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          57
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Поздний отказ от измены — не доказательство членства в авторских роялистах до стены.",
+            "Не отождествлять Хьювелла с другим именем/новым домом; использовать существующий ID."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 8
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-silverlaine",
+        "kind": "person",
+        "refId": "noble-silverlaine",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Барон хранит северное владение. Связь с домом Краули принята в сценарии, однако она не заменяет его собственного решения о стене.",
+        "basis": "scenario",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          59,
+          60
+        ],
+        "provenance": {
+          "uncertainties": [
+            "В первичном Lord of His Pack не назван ни Сребролен, ни его вассалитет.",
+            "Наличие северной крепости не датирует баронское владение точно до выхода из Альянса.",
+            "Вассальная связь с Краули — принятая авторская конфигурация, а не подтверждённый стеновой голос."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "potential_ally"
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 40
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-longshore",
+        "kind": "person",
+        "refId": "noble-longshore",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Барон Дольноберег — гилнеасец с засвидетельствованным прежним баронским титулом. Когда он получил его и какую позицию занимает при обсуждении стены, не известно.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          61,
+          62
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не приписывать раннюю пиратскую роль или мнение о стене по его поздней судьбе.",
+            "То, что его позднее оставили за стеной, не означает, что ранее он голосовал против."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 8
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-candren",
+        "kind": "person",
+        "refId": "noble-candren",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Лорд Кандрен известен службой гилнеасцам, но его раннее место при дворе и решение о северном рубеже не установлены. Возможный союзник вне партий.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          63
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не поднимать позднего интенданта до советника Генна после Второй войны."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 8
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-isiden",
+        "kind": "person",
+        "refId": "noble-isiden",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Альтеракский претендент ищет поддержки в Гилнеасе. Покровительство Генна подтверждено, но личная партия и взгляд на стену не раскрыты; он возможный гость, не советник короля.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          45,
+          64
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Кредит поддержки направлен от Генна к Исидену; обратную клятву, вассалитет или голос «за стену» источник не даёт.",
+            "Не утверждать, что он приехал именно на 10/100 или оставался до начала работ."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "guest_potential_ally"
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 20
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-tulvan",
+        "kind": "person",
+        "refId": "noble-tulvan",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Лорд Джеффри Тулван — имя из реестра знати; его ранний титул, владения и позиция в споре о стене не известны. Возможный союзник только по условиям сценария.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          "court-source-20",
+          "court-source-24"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не выдавать прозвище «Earl of Evisceration» за доказанное раннее графское владение.",
+            "Не переносить позднюю физическую силу, форму воргена или арену в ранний совет."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 8
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-harford",
+        "kind": "person",
+        "refId": "noble-harford",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Лорд Харфорд считает Гилнеас родиной, но его прежние обязательства и отношение к стене не известны. Предполагаемые северные связи ещё не означают принадлежность партии Краули.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          "court-source-21",
+          "court-source-25"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не назначать ему раннюю службу Аругалу, членство в Серебряном Рассвете, плен или смерть; это будущее относительно выбранного слоя.",
+            "Вассалитет Краули не доказан, и сам по себе не даёт голос против стены."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 8
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-morrison",
+        "kind": "person",
+        "refId": "noble-morrison",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Моррисон известен муниципальной службой Пирвуду; ранняя дата назначения не установлена. Если пригласить его, он может представлять интересы жителей, но его голос о стене неизвестен.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          "court-source-22",
+          "court-source-26"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не назначать наследственный домен, раннее мэрство или кресло королевского советника из муниципального титула.",
+            "Не выводить партию или голос из местоположения Пирвуда."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 8
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-aderic",
+        "kind": "person",
+        "refId": "noble-aderic",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": false,
+        "note": "Адерик — почитаемый патриарх в памяти Гилнеаса. Его имя принадлежит традиции и родословной справке, а не списку голосующих при Генне.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          3,
+          "court-source-23",
+          "court-source-27"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Точная дата смерти и связь с династией Седогривов не установлены.",
+            "Не назначать партию Адерику из совпадения с названием королевского пира."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "historical_memory"
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 0
+        },
+        "influenceBasis": "scenario",
+        "influenceNote": "Сценарная оценка по положению, прямым владениям и роли при дворе; числа не являются данными лора."
+      },
+      {
+        "id": "council-noble-mia",
+        "kind": "person",
+        "refId": "noble-mia",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Супруга Генна и королева-супруга, мать Лиама и Тесс. Семейная связь не означает партийное членство, голос о стене или должность обычного советника. Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Точная дата брака и рождения неизвестна. Ранний личный земельный титул не доказан. Позднее queen-mother/former consort не переносится назад: в сценарии с Генном на троне она queen consort.",
+        "potentialAlly": true,
+        "basis": "scenario",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "votingSeat": false,
+        "provenance": {
+          "presenceBasis": "lore",
+          "rosterRole": "royal_consort",
+          "uncertainties": [
+            "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+            "Точная дата брака и рождения неизвестна. Ранний личный земельный титул не доказан.",
+            "Позднее queen-mother/former consort не переносится назад: в сценарии с Генном на троне она queen consort."
+          ]
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 30
+        },
+        "influenceBasis": "scenario",
+        "influenceRationale": {
+          "basis": "scenario",
+          "methodRef": "docs/council-influence-seed.md",
+          "components": [
+            {
+              "component": "active_scenario_reserve",
+              "score": 5,
+              "reason": "Та же база активной записи, что у текущего seed."
+            },
+            {
+              "component": "contextual_queen_consort_dynastic_weight",
+              "score": 25,
+              "reason": "Новый явный ролевой вес королевы-супруги: семейно-придворное значение ниже подтверждённых советников и суверена; не канонический численный рейтинг и не второй бонус за владения Генна."
+            }
+          ],
+          "partyReason": "neutral → party=0; родство не является партийной принадлежностью.",
+          "kingdomReason": "Сумма только перечисленных ролевых компонентов; без ruler, advisor, militia, владений или бонусов поздней биографии.",
+          "cap": 100,
+          "canonicalNumericRating": false
+        },
+        "sources": [
+          "family-source-4",
+          "family-source-2",
+          "family-source-51",
+          "family-source-16",
+          "family-source-50",
+          "family-source-63"
+        ]
+      },
+      {
+        "id": "council-noble-liam",
+        "kind": "person",
+        "refId": "noble-liam",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": false,
+        "note": "Сын Генна и Миа; будущий наследный принц, ранняя дата существования не установлена. Семейная связь не означает партийное членство, голос о стене или должность обычного советника. Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Даты рождения до выбранного раннего момента нет; сцена подростка уже стоит на построенной стене при Плети. Редакторская заметка going up не даёт точного раннего свидетельства. Поздняя гибель от Сильваны не ранняя смерть: lifeStatus=unknown. Не переносить разногласия с отцом при Плети в довыходной спор. При отдельном подтверждении существования в конкретном сценарии допустим heir reserve 15=5 active+10 dynastic reserve, но текущий inactive имеет строго 0/0.",
+        "potentialAlly": false,
+        "basis": "scenario",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "votingSeat": false,
+        "provenance": {
+          "presenceBasis": "unknown",
+          "rosterRole": "royal_heir_reference",
+          "uncertainties": [
+            "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+            "Даты рождения до выбранного раннего момента нет; сцена подростка уже стоит на построенной стене при Плети. Редакторская заметка going up не даёт точного раннего свидетельства.",
+            "Поздняя гибель от Сильваны не ранняя смерть: lifeStatus=unknown. Не переносить разногласия с отцом при Плети в довыходной спор.",
+            "При отдельном подтверждении существования в конкретном сценарии допустим heir reserve 15=5 active+10 dynastic reserve, но текущий inactive имеет строго 0/0."
+          ]
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 0
+        },
+        "influenceBasis": "scenario",
+        "influenceRationale": {
+          "basis": "scenario",
+          "methodRef": "docs/council-influence-seed.md",
+          "components": [],
+          "partyReason": "neutral → party=0; родство не является партийной принадлежностью.",
+          "kingdomReason": "active=false → 0/0; никаких ранних баллов за будущий титул, смерть, командование или неканоническое наследие.",
+          "cap": 100,
+          "canonicalNumericRating": false
+        },
+        "sources": [
+          "family-source-5",
+          "family-source-8",
+          "family-source-17",
+          "family-source-41",
+          "family-source-2",
+          "family-source-9",
+          "family-source-43",
+          "family-source-63",
+          "family-source-51"
+        ]
+      },
+      {
+        "id": "council-noble-tess",
+        "kind": "person",
+        "refId": "noble-tess",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Дочь Генна и Миа, юная принцесса без отдельного раннего голоса. Семейная связь не означает партийное членство, голос о стене или должность обычного советника. Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Живая семейная запись относится к предвыходному послевоенному этапу; она не доказывает рождение к самому первому дню после Второй войны. Календарная дата и точный возраст не назначаются. При смещении сценария раньше её рождения запись должна быть inactive/unknown; birth-before-withdrawal — не birth-immediately-after-war. Ни будущий наследный титул, ни Uncrowned, ни отречение Генна не ранние роли. Детский dynastic bonus=0, только низкий активный резерв 5.",
+        "potentialAlly": true,
+        "basis": "scenario",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "votingSeat": false,
+        "provenance": {
+          "presenceBasis": "lore",
+          "rosterRole": "royal_princess",
+          "uncertainties": [
+            "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+            "Живая семейная запись относится к предвыходному послевоенному этапу; она не доказывает рождение к самому первому дню после Второй войны. Календарная дата и точный возраст не назначаются.",
+            "При смещении сценария раньше её рождения запись должна быть inactive/unknown; birth-before-withdrawal — не birth-immediately-after-war.",
+            "Ни будущий наследный титул, ни Uncrowned, ни отречение Генна не ранние роли. Детский dynastic bonus=0, только низкий активный резерв 5."
+          ]
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 5
+        },
+        "influenceBasis": "scenario",
+        "influenceRationale": {
+          "basis": "scenario",
+          "methodRef": "docs/council-influence-seed.md",
+          "components": [
+            {
+              "component": "active_scenario_reserve",
+              "score": 5,
+              "reason": "Минимальная доступность семейной записи; нет самостоятельного возраста/кресла/военной роли или повторного балла за королевские земли."
+            }
+          ],
+          "partyReason": "neutral → party=0; родство не является партийной принадлежностью.",
+          "kingdomReason": "Сумма только перечисленных ролевых компонентов; без ruler, advisor, militia, владений или бонусов поздней биографии.",
+          "cap": 100,
+          "canonicalNumericRating": false
+        },
+        "sources": [
+          "family-source-43",
+          "family-source-16",
+          "family-source-50",
+          "family-source-2",
+          "family-source-9",
+          "family-source-51"
+        ]
+      },
+      {
+        "id": "council-noble-lorna",
+        "kind": "person",
+        "refId": "noble-lorna",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": false,
+        "note": "Подтверждённая дочь Дариуса Краули; раннее существование и должность неизвестны. Семейная связь не означает партийное членство, голос о стене или должность обычного советника. Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. До стены не датированы рождение или присутствие; lifeStatus=unknown, active=false. Поздние Northgate Rebellion, командование GLF/Brigade, коневодство и домашняя роза не переносятся в ранний портрет или баллы. Неименованный возможный sibling не идентифицируется с Brother/Morticia/Agent/Elizabeth Crowley. При отдельно подтверждённом раннем существовании допустим малый семейный резерв 3 как новое сценарное правило; нынешний inactive имеет 0/0.",
+        "potentialAlly": false,
+        "basis": "scenario",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "votingSeat": false,
+        "provenance": {
+          "presenceBasis": "unknown",
+          "rosterRole": "noble_family_reference",
+          "uncertainties": [
+            "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+            "До стены не датированы рождение или присутствие; lifeStatus=unknown, active=false.",
+            "Поздние Northgate Rebellion, командование GLF/Brigade, коневодство и домашняя роза не переносятся в ранний портрет или баллы.",
+            "Неименованный возможный sibling не идентифицируется с Brother/Morticia/Agent/Elizabeth Crowley.",
+            "При отдельно подтверждённом раннем существовании допустим малый семейный резерв 3 как новое сценарное правило; нынешний inactive имеет 0/0."
+          ]
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 0
+        },
+        "influenceBasis": "scenario",
+        "influenceRationale": {
+          "basis": "scenario",
+          "methodRef": "docs/council-influence-seed.md",
+          "components": [],
+          "partyReason": "neutral → party=0; родство не является партийной принадлежностью.",
+          "kingdomReason": "active=false → 0/0; никаких ранних баллов за будущий титул, смерть, командование или неканоническое наследие.",
+          "cap": 100,
+          "canonicalNumericRating": false
+        },
+        "sources": [
+          "family-source-57",
+          "family-source-48",
+          "family-source-18",
+          "family-source-3"
+        ]
+      },
+      {
+        "id": "council-noble-hiram-creed",
+        "kind": "person",
+        "refId": "noble-hiram-creed",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": false,
+        "note": "Самозваный гилнеасский «лорд»; драконид, ранняя личность не доказана. Семейная связь не означает партийное членство, голос о стене или должность обычного советника. Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Не создавать дом creed или человеческого предшественника; имя/маска не доказывают реальную семью. Раннее существование и жизнь неизвестны; поздняя смерть не ранний dead.",
+        "potentialAlly": false,
+        "basis": "scenario",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "votingSeat": false,
+        "provenance": {
+          "presenceBasis": "unknown",
+          "rosterRole": "suspected_noble_reference",
+          "uncertainties": [
+            "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+            "Не создавать дом creed или человеческого предшественника; имя/маска не доказывают реальную семью.",
+            "Раннее существование и жизнь неизвестны; поздняя смерть не ранний dead."
+          ]
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 0
+        },
+        "influenceBasis": "scenario",
+        "influenceRationale": {
+          "basis": "scenario",
+          "methodRef": "docs/council-influence-seed.md",
+          "components": [],
+          "partyReason": "neutral → party=0; родство не является партийной принадлежностью.",
+          "kingdomReason": "active=false → 0/0; никаких ранних баллов за будущий титул, смерть, командование или неканоническое наследие.",
+          "cap": 100,
+          "canonicalNumericRating": false
+        },
+        "sources": [
+          "family-source-76",
+          "family-source-1"
+        ]
+      },
+      {
+        "id": "council-noble-woofington",
+        "kind": "person",
+        "refId": "noble-woofington",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": false,
+        "note": "Титулованный мастиф; не человеческий наследственный дворянин. Семейная связь не означает партийное членство, голос о стене или должность обычного советника. Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Титул после безумия жителей не переносится до стены; birth/life at cutoff unknown. Не выдавать животное за человека и не добавлять Хейвенсвуд на карту.",
+        "potentialAlly": false,
+        "basis": "scenario",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "votingSeat": false,
+        "provenance": {
+          "presenceBasis": "unknown",
+          "rosterRole": "honorary_reference",
+          "uncertainties": [
+            "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+            "Титул после безумия жителей не переносится до стены; birth/life at cutoff unknown.",
+            "Не выдавать животное за человека и не добавлять Хейвенсвуд на карту."
+          ]
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 0
+        },
+        "influenceBasis": "scenario",
+        "influenceRationale": {
+          "basis": "scenario",
+          "methodRef": "docs/council-influence-seed.md",
+          "components": [],
+          "partyReason": "neutral → party=0; родство не является партийной принадлежностью.",
+          "kingdomReason": "active=false → 0/0; никаких ранних баллов за будущий титул, смерть, командование или неканоническое наследие.",
+          "cap": 100,
+          "canonicalNumericRating": false
+        },
+        "sources": [
+          "family-source-20",
+          "family-source-23"
+        ]
+      },
+      {
+        "id": "council-noble-alys-finnsson",
+        "kind": "person",
+        "refId": "noble-alys-finnsson",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": false,
+        "note": "Гилнеасская носительница обращения Dame; ранние титул и жизнь неизвестны. Семейная связь не означает партийное членство, голос о стене или должность обычного советника. Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. В статье встречаются Dame Alys Finnsson и Dame Alyss Finnson: сохраняется каталожное английское имя, варианты перечисляются как spellingVariants, не отдельные лица. Ворген и Сумеречный Молот — поздняя биография, не ранний human-portrait или party. Killable — игровая возможность, не подтверждённая жизнь/смерть раннего среза.",
+        "potentialAlly": false,
+        "basis": "scenario",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "votingSeat": false,
+        "provenance": {
+          "presenceBasis": "unknown",
+          "rosterRole": "undated_noble_reference",
+          "uncertainties": [
+            "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+            "В статье встречаются Dame Alys Finnsson и Dame Alyss Finnson: сохраняется каталожное английское имя, варианты перечисляются как spellingVariants, не отдельные лица.",
+            "Ворген и Сумеречный Молот — поздняя биография, не ранний human-portrait или party.",
+            "Killable — игровая возможность, не подтверждённая жизнь/смерть раннего среза."
+          ]
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 0
+        },
+        "influenceBasis": "scenario",
+        "influenceRationale": {
+          "basis": "scenario",
+          "methodRef": "docs/council-influence-seed.md",
+          "components": [],
+          "partyReason": "neutral → party=0; родство не является партийной принадлежностью.",
+          "kingdomReason": "active=false → 0/0; никаких ранних баллов за будущий титул, смерть, командование или неканоническое наследие.",
+          "cap": 100,
+          "canonicalNumericRating": false
+        },
+        "sources": [
+          "family-source-1",
+          "family-source-19"
+        ]
+      },
+      {
+        "id": "council-noble-ashmore",
+        "kind": "person",
+        "refId": "noble-ashmore",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": false,
+        "note": "Спорная графиня из Hearthstone; не канонический ранний человеческий дворянин. Семейная связь не означает партийное членство, голос о стене или должность обычного советника. Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Hearthstone-exclusive/non-canon: включена только как маркированная справка. Никаких новых домов, владений, раннего возраста, active seat или баллов.",
+        "potentialAlly": false,
+        "basis": "scenario",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "votingSeat": false,
+        "provenance": {
+          "presenceBasis": "unknown",
+          "rosterRole": "noncanon_noble_reference",
+          "uncertainties": [
+            "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+            "Hearthstone-exclusive/non-canon: включена только как маркированная справка.",
+            "Никаких новых домов, владений, раннего возраста, active seat или баллов."
+          ]
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 0
+        },
+        "influenceBasis": "scenario",
+        "influenceRationale": {
+          "basis": "scenario",
+          "methodRef": "docs/council-influence-seed.md",
+          "components": [],
+          "partyReason": "neutral → party=0; родство не является партийной принадлежностью.",
+          "kingdomReason": "active=false → 0/0; никаких ранних баллов за будущий титул, смерть, командование или неканоническое наследие.",
+          "cap": 100,
+          "canonicalNumericRating": false
+        },
+        "sources": [
+          "family-source-15",
+          "family-source-60"
+        ]
+      },
+      {
+        "id": "council-noble-lady-in-white",
+        "kind": "person",
+        "refId": "noble-lady-in-white",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": false,
+        "note": "Именованный образ гилнеасской дворянки в Hearthstone; ранние имя, дом и дата неизвестны. Семейная связь не означает партийное членство, голос о стене или должность обычного советника. Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция. Не добавляется безымянная придуманная личность: сохраняется только прямо именованный эпитет Lady in White. Hearthstone-exclusive/non-canon; поздняя призрачность не ранняя смерть.",
+        "potentialAlly": false,
+        "basis": "scenario",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "votingSeat": false,
+        "provenance": {
+          "presenceBasis": "unknown",
+          "rosterRole": "noncanon_noble_reference",
+          "uncertainties": [
+            "Личная партия, позиция о стене и отдельное раннее кресло не засвидетельствованы; neutral/unknown/false — отсутствие данных, не каноническая позиция.",
+            "Не добавляется безымянная придуманная личность: сохраняется только прямо именованный эпитет Lady in White.",
+            "Hearthstone-exclusive/non-canon; поздняя призрачность не ранняя смерть."
+          ]
+        },
+        "influence": {
+          "party": 0,
+          "kingdom": 0
+        },
+        "influenceBasis": "scenario",
+        "influenceRationale": {
+          "basis": "scenario",
+          "methodRef": "docs/council-influence-seed.md",
+          "components": [],
+          "partyReason": "neutral → party=0; родство не является партийной принадлежностью.",
+          "kingdomReason": "active=false → 0/0; никаких ранних баллов за будущий титул, смерть, командование или неканоническое наследие.",
+          "cap": 100,
+          "canonicalNumericRating": false
+        },
+        "sources": [
+          "family-source-61"
+        ]
+      }
+    ],
+    "partyOrganizationsCanonical": false,
+    "scope": "После Второй войны, до выхода Гилнеаса из Альянса и до возведения Стены Седогрива.",
+    "note": "Политические направления названы автором; потенциальные союзники не получают автоматически советническое кресло или голос.",
+    "influence": {
+      "royalists": 235,
+      "internationalists": 84
+    },
+    "influenceBasis": "scenario"
+  }
 }

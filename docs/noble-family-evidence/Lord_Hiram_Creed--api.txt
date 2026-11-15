@@ -1,0 +1,86 @@
+| Hiram Creed
+
+ | 
+
+ | Title | 
+<Warlord of the Blackhowl>
+
+ | Gender | 
+Male
+
+ | Race | 
+Drakonid (Dragonkin)
+
+ | Level | 
+35 Elite
+
+ | Resource | 
+Mana
+
+ | Reaction | 
+Alliance Horde
+
+ | Affiliation(s) | 
+Blackhowl, Black dragonflight, Old Gods' forces (de facto)
+ Supposedly: Gilneas, Alliance
+
+ | Location | 
+Stoneward Prison, Gilneas City, Ruins of Gilneas
+
+ | Status | 
+Deceased (lore),
+ Killable 
+
+Lord Hiram Creed was a black drakonid who disguises themselves as an affluent Gilnean noble. Creed manipulated a group of Gilnean humans and worgen named the Blackhowl who occupied Gilneas City, and secretly infected them with his own draconic blood, which made them stronger but also unwittingly slowly turned them into his unwilling servants. The Blackhowl had apparently repelled numerous Forsaken assaults, as seen in the courtyard of the Stoneward Prison where Creed resided, which was littered with Forsaken corpses. 
+
+Black Prince Wrathion sent his rogue champion who sought to earn his favor to assassinate Creed in his crusade to eliminate all corrupted black dragons on Azeroth.[1] With his death, it is unknown what the fate of the Blackhowl group is.
+
+Abilities[]
+
+ Consuming Darkness — Hurls a ball of dark energy, inflicting shadow damage and creating a zone of consuming darkness on the ground.
+
+ Blackhowl's Will — Deals 18500 to 21500 Shadow damage and drains all energy.
+
+ Blackhowl's Rage — You have hid from Lord Hiram Creed in battle, sending him into a rage, increasing all damage dealt by 100% for 10 sec.
+
+ Shadow Breath — Deals 13875 to 16125 Shadow damage.
+
+Quotes[]
+
+Hiram Creed in his drakonid form
+
+Aggro
+Lord Hiram Creed says: An assassin, eh? Who sent you? Speak, or I will carve the answer from your skull!
+75% Health
+Lord Hiram Creed says: I tire of this disguise. Now we finish this!
+Death
+Lord Hiram Creed says: Who... ordered... this?
+
+Objective of[]
+
+He is to be killed for the quest   [35] Assassinate Creed
+
+Speculation[]
+
+ | 
+
+ | 
+This article or section includes speculation, observations or opinions possibly supported by lore or by Blizzard officials. It should not be taken as representing official lore.
+
+Wrathion and his followers claimed that the Gilneans had no clue of their subversion, so at the time they might've been fighting for the Alliance. However Creed later turned them all into his loyal servants with his draconic blood, and they were also hostile to Alliance rogues sent to kill Creed. Creed also fought the Forsaken within Gilneas. It thus seems that Creed sought to take Gilneas for himself or his flight, turning its inhabitants into his unwilling servants.
+
+Given that Creed holds enough prestige to lead a force into Gilneas City without question and his affluency was not questioned by his followers, he was likely masquerading as a nobleman for a long time to build up that trust, or he has impersonated an actual nobleman.
+
+Patch changes[]
+
+ Patch 4.3.0 (2011-11-29): Added.   
+
+References[]
+
+^   [35] Assassinate Creed
+
+External links[]
+
+Wowhead
+
+WoWDB

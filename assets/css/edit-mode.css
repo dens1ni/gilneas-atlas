@@ -1,0 +1,43 @@
+/* Authoring is an explicit, page-local opt-in; hidden blocks take no space. */
+body:not(.edit-mode) [data-edit-only] { display: none !important; }
+#editor .editing-mode-controls {
+  margin: 0;
+  padding: 0 0 14px;
+  border-bottom: 1px solid var(--royal-line, #393b3b);
+}
+#editor .editing-mode-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin: 0;
+  cursor: pointer;
+  color: var(--royal-ink, #ddd5c2);
+  font-size: 14px;
+  line-height: 1.45;
+}
+#editor #editing-enabled {
+  position: static;
+  width: 20px;
+  height: 20px;
+  min-height: 0;
+  flex: 0 0 20px;
+  margin: 0;
+  padding: 0;
+  accent-color: var(--gold, #c2a575);
+}
+#editor #editing-enabled:focus-visible {
+  outline: 2px solid var(--gold-bright, #e0c493);
+  outline-offset: 3px;
+}
+#editor #editing-mode-status {
+  margin: 6px 0 0 30px;
+  color: var(--royal-muted, #96978d);
+  font-size: 12px;
+  line-height: 1.6;
+}
+body:not(.edit-mode) #editor .editor-section { margin-top: 14px; border-top: 0; }
+body:not(.edit-mode) #dossier .dossier-actions { justify-content: flex-end; }
+body:not(.edit-mode) #dossier .composition-empty { display: none; }
+body:not(.edit-mode) #editor .export-actions { gap: 8px; }

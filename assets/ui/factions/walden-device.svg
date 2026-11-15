@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" width="40" height="44">
+<title>walden device</title>
+<g fill="#9aa8b6" stroke="#343c43" stroke-width=".75" stroke-linejoin="round">
+<path fill-rule="evenodd" d="M20 3A5 5 0 1 1 20 13A5 5 0 1 1 20 3ZM20 6A2 2 0 1 0 20 10A2 2 0 1 0 20 6Z"/>
+<path d="M18 12H22V20H29V23H22V34C28 33 30 29 30 25L36 30 31 29C30 34 26 37 20 39C14 37 10 34 9 29L4 30 10 25C10 29 12 33 18 34V23H11V20H18Z"/>
+<path d="M7 42Q10 40 13 42T20 42T27 42T34 42" fill="none" stroke="#9aa8b6" stroke-width="1.6"/>
+<path d="M20 15V30" fill="none" stroke="#c0c9d1" stroke-width=".7"/>
+</g>
+</svg>

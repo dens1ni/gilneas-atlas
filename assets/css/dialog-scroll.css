@@ -1,0 +1,37 @@
+/* Only these reading dialogs: keep native scrolling out of the title row. */
+:is(#chronicle, #help) {
+  height: fit-content;
+  max-height: calc(var(--app-height, 100dvh) - 24px);
+  padding: 0;
+  overflow: hidden;
+  scrollbar-gutter: auto;
+}
+:is(#chronicle, #help)[open] { display: flex; flex-direction: column; }
+:is(#chronicle, #help) > .dialog-head {
+  flex: 0 0 auto;
+  position: relative;
+  top: auto;
+  margin: 0;
+  min-width: 0;
+}
+:is(#chronicle, #help) > .dialog-head > div { flex: 1; min-width: 0; }
+:is(#chronicle, #help) > .dialog-head h2 { overflow-wrap: anywhere; }
+:is(#chronicle, #help) > .dialog-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #918163 var(--royal-panel, #1a1d1f);
+  scroll-padding-block: 16px;
+}
+#chronicle .chronicle-tabs { flex-wrap: wrap; gap: 4px; }
+#help > .dialog-content > section:last-child { border-bottom: 0; padding-bottom: 0; }
+#chronicle .chronicle-tabs > button { flex: 0 1 auto; }
+:is(#chronicle, #help) > .dialog-content :is(p, dd, blockquote) { overflow-wrap: anywhere; }
+@media (max-width: 760px), (max-height: 540px) {
+  :is(#chronicle, #help) { max-height: calc(var(--app-height, 100dvh) - 16px); }
+}

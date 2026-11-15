@@ -49,6 +49,7 @@ class RevisionReviewRegressions(unittest.TestCase):
         return self.page.evaluate("localStorage.getItem('gilneas-atlas-draft-v1')")
 
     def test_invalid_noble_name_native_import_leaves_live_and_exact_storage_unchanged(self):
+        self.page.locator('#editor-open').click();self.page.locator('label:has(#editing-enabled)').click();self.page.locator('[data-close=editor]').click()
         self.page.evaluate("window.gilneasApp.replaceData(window.gilneasApp.getData())")
         before = self.page.evaluate("window.gilneasApp.getData()")
         raw = json.dumps(before, ensure_ascii=False, indent=3) + "\n"
@@ -69,6 +70,7 @@ class RevisionReviewRegressions(unittest.TestCase):
         self.assertFalse(self.errors, self.errors)
 
     def test_invalid_noble_house_native_import_leaves_live_and_exact_storage_unchanged(self):
+        self.page.locator('#editor-open').click();self.page.locator('label:has(#editing-enabled)').click();self.page.locator('[data-close=editor]').click()
         self.page.evaluate("window.gilneasApp.replaceData(window.gilneasApp.getData())")
         before = self.page.evaluate("window.gilneasApp.getData()")
         raw = json.dumps(before, ensure_ascii=False, indent=3) + "\n"
@@ -89,6 +91,7 @@ class RevisionReviewRegressions(unittest.TestCase):
         self.assertFalse(self.errors, self.errors)
 
     def test_invalid_noble_dossier_text_native_import_leaves_live_and_exact_storage_unchanged(self):
+        self.page.locator('#editor-open').click();self.page.locator('label:has(#editing-enabled)').click();self.page.locator('[data-close=editor]').click()
         self.page.evaluate("window.gilneasApp.replaceData(window.gilneasApp.getData())")
         before = self.page.evaluate("window.gilneasApp.getData()")
         raw = json.dumps(before, ensure_ascii=False, indent=3) + "\n"

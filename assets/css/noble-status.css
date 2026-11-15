@@ -1,0 +1,30 @@
+/* One life-status badge for canonical people, never for house summaries. */
+.noble-life-status {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  gap: 0;
+  padding: 3px 6px;
+  border: 1px solid color-mix(in srgb, currentColor 45%, transparent);
+  border-radius: 2px;
+  background: color-mix(in srgb, currentColor 7%, transparent);
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 1.2;
+  white-space: nowrap;
+  letter-spacing: 0;
+  text-transform: none;
+  vertical-align: middle;
+}
+#location-list .noble-row > span { min-width: 0; }
+#location-list .noble-row-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 7px;
+}
+#location-list .noble-row-name { min-width: 0; overflow-wrap: anywhere; }
+:is(#noble-title, .noble-card h3, #royal-council .council-member-name h5) .noble-life-status {
+  margin-inline-start: 8px;
+}
+#noble-title .noble-life-status { margin-block: 3px; }

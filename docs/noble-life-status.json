@@ -1,0 +1,848 @@
+{
+  "version": 1,
+  "era": "После Второй войны, до выхода Гилнеаса из Альянса Лордерона и до начала возведения Стены Седогрива; ранний человеческий Гилнеас.",
+  "count": 17,
+  "records": [
+    {
+      "nobleId": "noble-genn",
+      "lifeStatus": "alive",
+      "basis": "lore",
+      "note": "Генн лично присутствует среди королей Альянса в послевоенном Нетэргарде; в раннем рассказе обсуждает еще будущую стену. В этом срезе он живой человек, не поздний ворген.",
+      "sourceIds": [
+        45,
+        46
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+          "evidenceFile": "docs/court-evidence/01-early-court-2-Genn-Greymane.md",
+          "quote": "After the Second War, he was present at the meeting with other kings of the Alliance in [Nethergarde Keep](/wiki/Nethergarde_Keep). Greymane complained about the expenses of the keep, though the newly crowned King of Stormwind [Varian Wrynn](/wiki/Varian_Wrynn) pointed out that a price couldn't be put on something as essential as their safety.[22]",
+          "ledgerId": 1,
+          "sourceIds": [
+            45
+          ],
+          "temporalScope": "after_second_war_before_withdrawal",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "353efa230c5d0e3a527a9aa8a6fa154ad24af2a9a42506719d8f079fd286edeb"
+        },
+        {
+          "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "evidenceFile": "docs/court-evidence/01-early-court-0-genn-greymane-lord-of-his-pack.md",
+          "quote": "“You want to wall off our entire nation? Close our borders and end trade with the rest of the Alliance? I… it is a rather large decision, would you not say?”",
+          "ledgerId": 2,
+          "sourceIds": [
+            46
+          ],
+          "temporalScope": "planning_future_wall",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "bd793342c6f1e09227209e05c905a65093e22c7b66ec5273be1c5ade3e289e99"
+        }
+      ],
+      "uncertainties": [
+        "Календарный день внутри выбранной фазы не задан; цифровой прогресс стены не используется как дата."
+      ]
+    },
+    {
+      "nobleId": "noble-darius",
+      "lifeStatus": "alive",
+      "basis": "lore",
+      "note": "Дариус засвидетельствован человеком и участником совета во Вторую войну, а затем живым противником изоляции. Поздние мятеж, заключение и проклятие не переносим в срез.",
+      "sourceIds": [
+        32,
+        46
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "evidenceFile": "docs/court-evidence/01-early-court-3-Darius-Crowley.md",
+          "quote": "At the time of the [Second War](/wiki/Second_War), Lord Crowley was a nobleman whose lands and people were in northern [Gilneas](/wiki/Gilneas_(kingdom)), including some land outside of the border that would later be known as the [Greymane Wall](/wiki/Greymane_Wall). He owned the towns of [Pyrewood Village](/wiki/Pyrewood_Village) and [Ambermill](/wiki/Ambermill). Despite being young and new to the Gilnean council of Lords, his altruistic and charismatic qualities made him loved by the Gilnean people and earned him the respect and friendship of [King Genn Greymane](/wiki/Genn_Greymane). Crowley was one of the nobles who accompanied Greymane to [Capital City](/wiki/Capital_City) to hear of [Stormwind](/wiki/Stormwind_(kingdom))'s fall and [Anduin Lothar](/wiki/Anduin_Lothar) warning about the invading [Orcish Horde](/wiki/Orcish_Horde). Crowley was sympathetic to the Alliance's plight and advised Greymane to send aid to the newly-formed [Alliance](/wiki/Alliance_of_Lordaeron). Greymane agreed out of self-serving reasons but initially offered only token support.[1]",
+          "ledgerId": 3,
+          "sourceIds": [
+            32
+          ],
+          "temporalScope": "explicit_second_war_life",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "094167b201545df6b27ae177027573d9a79a110d5368e633fad10493958e5442"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "evidenceFile": "docs/court-evidence/01-early-court-3-Darius-Crowley.md",
+          "quote": "**Lord Darius Crowley** was once a [Gilnean](/wiki/Gilneas_(kingdom)) nobleman. A pro-[Alliance](/wiki/Alliance_of_Lordaeron) figure, he dissented with King [Genn Greymane](/wiki/Genn_Greymane)'s decision to separate his people with the [Greymane Wall](/wiki/Greymane_Wall). Crowley led the [Northgate Rebellion](/wiki/Northgate_Rebellion) that caused a civil war in [Gilneas](/wiki/Gilneas_peninsula), during which he was imprisoned. When Gilneas was attacked by [worgen](/wiki/Worgen), he was freed and became a worgen himself. Both Crowley and Greymane reconciled and joined forces against the threats Gilneas faced. He now leads the [Gilneas Liberation Front](/wiki/Gilneas_Liberation_Front) which fights against the Forsaken along with the [Bloodfang Pack](/wiki/Bloodfang_Pack) and the [7th Legion](/wiki/7th_Legion). When the [Burning Legion](/wiki/Burning_Legion) returned to assault Azeroth, Darius and his daughter [Lorna](/wiki/Lorna_Crowley) joined Genn on the *[Skyfire](/wiki/The_Skyfire)* as part of his army forces.",
+          "ledgerId": 3,
+          "sourceIds": [
+            32
+          ],
+          "temporalScope": "later_life_with_explicit_earlier_life_bound",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "094167b201545df6b27ae177027573d9a79a110d5368e633fad10493958e5442"
+        },
+        {
+          "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "evidenceFile": "docs/court-evidence/01-early-court-0-genn-greymane-lord-of-his-pack.md",
+          "quote": "“Lord, as you’ve described, the other nations seem eager to assist. If Trollbane, Perenolde, and the rest partake, I do not know how we can rightfully call ourselves neighbors or friends if we do not join with them,” Crowley continued. Genn understood why he was so beloved. His words were spoken with acute vigor. There were no political angles at play -- just a man concerned for his fellow men. Genn respected him no matter how misguided he was. Crowley couldn’t possibly understand the folly of his sympathy, what it could actually lead to. He did not see that his own people, above all else, needed to be accounted for first. He was young and newer among the nobility.",
+          "ledgerId": 2,
+          "sourceIds": [
+            46
+          ],
+          "temporalScope": "early_living_councilor",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "bd793342c6f1e09227209e05c905a65093e22c7b66ec5273be1c5ade3e289e99"
+        }
+      ],
+      "uncertainties": [
+        "Точный день раннего совета и послевоенного спора не датирован."
+      ]
+    },
+    {
+      "nobleId": "noble-godfrey",
+      "lifeStatus": "alive",
+      "basis": "lore",
+      "note": "После окончания Второй войны Годфри лично обсуждает с Генном маршрут будущей стены. Его самоубийство и возвращение в нежить относятся к позднему кризису Гилнеаса.",
+      "sourceIds": [
+        49
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-0-Lord-Vincent-Godfrey.md",
+          "quote": "Following the end of the [Second War](/wiki/Second_War), Genn told Godfrey of his intentions of constructing the [Greymane Wall](/wiki/Greymane_Wall) to seal Gilneas off from the rest of the world. Godfrey pointed out that while Genn was considering building the wall through the lands of [Lord Marley](/wiki/Lord_Marley), constructing it through a mountainous region in Lord Crowley's domain would make for a more secure natural barrier, although doing so would cut off the northern villages of [Ambermill](/wiki/Ambermill) and [Pyrewood](/wiki/Pyrewood_Village). Genn warned that Darius might not take well to having his lands cut off, but Godfrey insisted that it was the best course of action for Gilneas. The fact that this placement of the wall would make Godfrey's own lands the most strategically valuable — as they would form the realm nearest to the wall and would thus be Gilneas' buffer to the outside — did not escape Genn, but he conceded that Godfrey was right, regardless of his personal motives. As Godfrey finished his goblet of wine, he fought the urge to smile.[4]",
+          "ledgerId": 4,
+          "sourceIds": [
+            49
+          ],
+          "temporalScope": "after_second_war_planning_wall",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "2875c8458c4558c5201ca9595a57e155ed701914966d731c2cf999b73543bf88"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-0-Lord-Vincent-Godfrey.md",
+          "quote": "**Lord Vincent Godfrey**[3] is a renegade nobleman from [Gilneas](/wiki/Gilneas_peninsula) who opposed his king, [Genn Greymane](/wiki/Genn_Greymane), after discovering that Genn and many of his people had been afflicted with the [worgen](/wiki/Worgen) curse. After committing suicide rather than acknowledge a worgen as his lord, Godfrey's body was recovered and reanimated by the [Forsaken](/wiki/Forsaken), but after turning on them as well, he fled into the abandoned ruins of [Shadowfang Keep](/wiki/Shadowfang_Keep), where he and his followers remain.",
+          "ledgerId": 4,
+          "sourceIds": [
+            49
+          ],
+          "temporalScope": "late_death_excluded_from_early_status",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "2875c8458c4558c5201ca9595a57e155ed701914966d731c2cf999b73543bf88"
+        }
+      ],
+      "uncertainties": [
+        "Ни современный статус нежити, ни позднее самоубийство не датируют этот ранний срез."
+      ]
+    },
+    {
+      "nobleId": "noble-ashbury",
+      "lifeStatus": "alive",
+      "basis": "chronological_inference",
+      "note": "Барон вырос вместе с Генном и говорит в совете при создании Альянса; после этого засвидетельствован живым до своей гибели в Катаклизме. Здесь вывод о непрерывной жизни опирается на существование до Второй войны, а не на возраст поздней модели.",
+      "sourceIds": [
+        46,
+        50
+      ],
+      "evidence": [
+        {
+          "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "evidenceFile": "docs/court-evidence/01-early-court-0-genn-greymane-lord-of-his-pack.md",
+          "quote": "“It is a path that does have merit, my lord,” Baron Ashbury added. Ashbury was one of Genn’s most trusted friends. Genn had grown up with him; his father, Lord Ashbury the 1st, had helped Archibald build the nation up, and Archibald had always told Genn to trust in the Ashburys’ fidelity to the crown.",
+          "ledgerId": 2,
+          "sourceIds": [
+            46
+          ],
+          "temporalScope": "life_before_second_war",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "bd793342c6f1e09227209e05c905a65093e22c7b66ec5273be1c5ade3e289e99"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-1-Baron-Ashbury.md",
+          "quote": "He and [Genn](/wiki/Genn) grew up together, and he was once one of the king's most trusted friends. He was present in the [Capital City](/wiki/Capital_City) to create the [Alliance of Lordaeron](/wiki/Alliance_of_Lordaeron) and agreed with [Lord Godfrey](/wiki/Lord_Godfrey), to send only a token army. He participated in the hunts with Genn, [Lord Marley](/wiki/Lord_Marley) and Godfrey in the [Blackwald](/wiki/Blackwald).[1]",
+          "ledgerId": 5,
+          "sourceIds": [
+            50
+          ],
+          "temporalScope": "life_before_second_war_and_later_hunts",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "c5bcf590325b867088e658aa4d3826c488ba8689778b93be94f9e8080addda1f"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-1-Baron-Ashbury.md",
+          "quote": "He joined with Lord [Vincent Godfrey](/wiki/Vincent_Godfrey) to turn [Genn Greymane](/wiki/Genn_Greymane) over to the [Forsaken](/wiki/Forsaken) in exchange for an end to hostilities. Along with his ally, [Lord Walden](/wiki/Lord_Walden), Ashbury was slain by Gilnean [worgen](/wiki/Worgen) who fought to save their King. Godfrey, Ashbury, and Walden were all raised in undeath by the Forsaken and served them for a time. After Godfrey betrayed the Forsaken by slaying [Sylvanas Windrunner](/wiki/Sylvanas_Windrunner), Ashbury fled with his master into nearby [Shadowfang Keep](/wiki/Shadowfang_Keep).",
+          "ledgerId": 5,
+          "sourceIds": [
+            50
+          ],
+          "temporalScope": "cataclysm_death_not_early_death",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "c5bcf590325b867088e658aa4d3826c488ba8689778b93be94f9e8080addda1f"
+        }
+      ],
+      "uncertainties": [
+        "Отдельная послевоенная сцена именно барона перед выходом из Альянса не найдена; вывод хронологический, не свидетельство о его голосовании по стене."
+      ]
+    },
+    {
+      "nobleId": "noble-marley",
+      "lifeStatus": "alive",
+      "basis": "chronological_inference",
+      "note": "Марли назван действующим лордом домена при обсуждении еще не построенной стены и позднее лично участвует в охотах. Ранняя привязка к его домену вместе с более поздней живой сценой дает основание для «Жив», без придуманной даты рождения.",
+      "sourceIds": [
+        46,
+        "court-source-8",
+        52
+      ],
+      "evidence": [
+        {
+          "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "evidenceFile": "docs/court-evidence/01-early-court-0-genn-greymane-lord-of-his-pack.md",
+          "quote": "“On this map it seems you are suggesting the possibility of Lord Marley’s realm…. But look at the terrain, my liege…. We have this mountainous region right here. What a grand hold that would make, with mountains on either side that would create a secure natural barrier.”",
+          "ledgerId": 2,
+          "sourceIds": [
+            46
+          ],
+          "temporalScope": "named_current_lord_at_wall_planning",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "bd793342c6f1e09227209e05c905a65093e22c7b66ec5273be1c5ade3e289e99"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Marley",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Marley",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-2-Lord-Marley.md",
+          "quote": "**Lord Marley** was a [Gilnean](/wiki/Gilneas_(kingdom)) noble. King [Genn Greymane](/wiki/Genn_Greymane) had originally planned to have the [Greymane Wall](/wiki/Greymane_Wall) cut through Marley's domain, but later decided to have it cut through [Lord Darius Crowley](/wiki/Lord_Darius_Crowley)'s domain instead at the recommendation of [Lord Godfrey](/wiki/Lord_Godfrey).[1] He participated in the secret worgen hunts with King Greymane, Lord Godfrey, [Baron Ashbury](/wiki/Baron_Ashbury), and a few other nobles in the [Blackwald](/wiki/Blackwald) during full moons.",
+          "ledgerId": 6,
+          "sourceIds": [
+            "court-source-8",
+            52
+          ],
+          "temporalScope": "wall_planning_and_later_living_hunts",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "8399d8f0fc501763cedff2546857c7642c726b7215d7402ef0382ae122a51cff"
+        }
+      ],
+      "uncertainties": [
+        "Сцена планирования не показывает отдельное выступление Марли; не выводить из статуса его место, партию или голос в совете."
+      ]
+    },
+    {
+      "nobleId": "noble-archibald",
+      "lifeStatus": "dead",
+      "basis": "chronological_inference",
+      "note": "Есть явная цепочка: после смерти Арчибальда Генн занял престол; еще до Второй войны Годфри сопровождает уже короля Генна в Лордерон. Следовательно, Арчибальд умер до войны и до среза — не просто потому, что назван предшественником.",
+      "sourceIds": [
+        45,
+        49,
+        53
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+          "evidenceFile": "docs/court-evidence/01-early-court-2-Genn-Greymane.md",
+          "quote": "After Archibald's death, Genn took the throne and led Gilneas much like his father had.",
+          "ledgerId": 1,
+          "sourceIds": [
+            45
+          ],
+          "temporalScope": "death_before_genn_accession",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "353efa230c5d0e3a527a9aa8a6fa154ad24af2a9a42506719d8f079fd286edeb"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-0-Lord-Vincent-Godfrey.md",
+          "quote": "Prior to the [Second War](/wiki/Second_War), Godfrey was among the [Gilnean](/wiki/Gilneas_(kingdom)) nobles who accompanied King [Genn Greymane](/wiki/Genn_Greymane) to [Lordaeron](/wiki/Lordaeron) to create the [Alliance of Lordaeron](/wiki/Alliance_of_Lordaeron).",
+          "ledgerId": 4,
+          "sourceIds": [
+            49
+          ],
+          "temporalScope": "genn_already_king_before_second_war",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "2875c8458c4558c5201ca9595a57e155ed701914966d731c2cf999b73543bf88"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Archibald_Greymane",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Archibald_Greymane",
+          "evidenceFile": "docs/court-evidence/04-reference-nobles-0-Archibald-Greymane.md",
+          "quote": "Archibald Greymane was the king of Gilneas and the father of Genn Greymane. Under his rule, Gilneas prospered.",
+          "ledgerId": 7,
+          "sourceIds": [
+            53
+          ],
+          "temporalScope": "identity_only_not_death_timing",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "4bf454365817b17633d3ffeb60374a9343daf0889fbc318b4696ec3a5c96fec5"
+        }
+      ],
+      "uncertainties": [
+        "Точный календарный год и причина смерти не установлены; предполагаемое погребение в Адериковом Покое не используется как доказательство."
+      ]
+    },
+    {
+      "nobleId": "noble-ashbury-first",
+      "lifeStatus": "unknown",
+      "basis": "unknown",
+      "note": "Лорд Эшбери I засвидетельствован отцом барона и помощником Арчибальда. Современный инфобокс говорит Deceased, но событие смерти и его положение относительно Второй войны/выхода из Альянса отсутствуют. Предыдущее поколение и титул сына не доказывают раннюю смерть.",
+      "sourceIds": [
+        "court-source-30",
+        54,
+        46
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st?action=render",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st?action=render",
+          "evidenceFile": "docs/court-evidence/11-ashbury-original-retry-0-Lord-Ashbury-the-1st-action-render.md",
+          "quote": "**Lord Ashbury the 1st** was a [Gilnean](https://wowpedia.fandom.com/wiki/Gilneas_(kingdom)) noble and the father of [Baron Ashbury](https://wowpedia.fandom.com/wiki/Baron_Ashbury). Lord Ashbury helped King [Archibald Greymane](https://wowpedia.fandom.com/wiki/Archibald_Greymane) build Gilneas up to a nation of great power. King Archibald always told his son [Prince Genn](https://wowpedia.fandom.com/wiki/Genn_Greymane) to trust in the Ashburys’ fidelity to the crown because of the accomplishments of Lord Ashbury.[1]",
+          "ledgerId": 8,
+          "sourceIds": [
+            "court-source-30",
+            54
+          ],
+          "temporalScope": "undated_life_in_previous_reign",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "ae208ade036694c20163a763f09c4d5201107d257903b7a6a33c71b7c8c2c50c"
+        },
+        {
+          "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "evidenceFile": "docs/court-evidence/01-early-court-0-genn-greymane-lord-of-his-pack.md",
+          "quote": "“It is a path that does have merit, my lord,” Baron Ashbury added. Ashbury was one of Genn’s most trusted friends. Genn had grown up with him; his father, Lord Ashbury the 1st, had helped Archibald build the nation up, and Archibald had always told Genn to trust in the Ashburys’ fidelity to the crown.",
+          "ledgerId": 2,
+          "sourceIds": [
+            46
+          ],
+          "temporalScope": "past_service_not_death",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "bd793342c6f1e09227209e05c905a65093e22c7b66ec5273be1c5ade3e289e99"
+        }
+      ],
+      "uncertainties": [
+        "Не найдены дата/событие смерти, раннее погребение или формулировка о службе до самой смерти.",
+        "Не считать нумерацию I, прошлую службу или живого взрослого сына доказательством смерти к срезу."
+      ]
+    },
+    {
+      "nobleId": "noble-walden",
+      "lifeStatus": "unknown",
+      "basis": "unknown",
+      "note": "Уолден подтвержден живым человеком в поздних событиях и погибает при спасении Генна в Катаклизме; рождения или жизни до выхода из Альянса найденные статьи не дают. Поздняя гибель не означает «Мертв» в раннем срезе, но и поздний взрослый лорд сам по себе не доказывает «Жив».",
+      "sourceIds": [
+        55
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-3-Lord-Walden.md",
+          "quote": "**Lord Walden** was a [human](/wiki/Human) nobleman from eastern [Gilneas](/wiki/Gilneas_peninsula).",
+          "ledgerId": 9,
+          "sourceIds": [
+            55
+          ],
+          "temporalScope": "undated_human_identity",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "a6d4dbce3bdfa8661ef6feeb1ea85b1a93a6c7a85d0aa7abf7fe025e64fafe1c"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-3-Lord-Walden.md",
+          "quote": "He joined with Lord [Vincent Godfrey](/wiki/Vincent_Godfrey) to turn [Genn Greymane](/wiki/Genn_Greymane) over to the [Forsaken](/wiki/Forsaken) in exchange for an end to hostilities. Along with his ally, [Baron Ashbury](/wiki/Baron_Ashbury), Walden was slain by Gilnean [worgen](/wiki/Worgen) who fought to save their King. Godfrey, Ashbury and Walden were all raised in undeath by the Forsaken and served them for a time. After Godfrey betrayed the Forsaken by slaying [Sylvanas Windrunner](/wiki/Sylvanas_Windrunner), Walden fled with his master into nearby [Shadowfang Keep](/wiki/Shadowfang_Keep).",
+          "ledgerId": 9,
+          "sourceIds": [
+            55
+          ],
+          "temporalScope": "cataclysm_life_and_death_only",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "a6d4dbce3bdfa8661ef6feeb1ea85b1a93a6c7a85d0aa7abf7fe025e64fafe1c"
+        }
+      ],
+      "uncertainties": [
+        "Не установлены рождение или ранняя живая сцена до выхода из Альянса.",
+        "Поздний человеческий облик не используется для угадывания возраста."
+      ]
+    },
+    {
+      "nobleId": "noble-hewell",
+      "lifeStatus": "unknown",
+      "basis": "unknown",
+      "note": "Хьювелл живой человек рядом с Генном в позднем стартовом сюжете воргенов. Статья не устанавливает его рождение или жизнь во Вторую войну/до выхода из Альянса; ранний возраст не угадываем.",
+      "sourceIds": [
+        57
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Hewell",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Hewell",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-4-Lord-Hewell.md",
+          "quote": "**Lord Hewell** is a nobleman of [Gilneas](/wiki/Gilneas_peninsula) who can be found at [Tempest's Reach](/wiki/Tempest%27s_Reach) during the [worgen starting experience](/wiki/Worgen_starting_experience). Though the eastern lords ([Lord Walden](/wiki/Lord_Walden) and [Baron Ashbury](/wiki/Baron_Ashbury)) took part in [Lord Godfrey](/wiki/Lord_Godfrey)'s plan to take [King Genn Greymane](/wiki/King_Genn_Greymane) captive in order to bargain with the [Forsaken](/wiki/Forsaken), Hewell refused to betray his king. Instead he remained by Greymane's side until [Krennan Aranas](/wiki/Krennan_Aranas) sent an [adventurer](/wiki/Adventurer) to help.",
+          "ledgerId": 10,
+          "sourceIds": [
+            57
+          ],
+          "temporalScope": "late_worgen_starting_experience_only",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "33b6361a9e18114e6fcba311ed812865be35c59d304a02fbeb0f2a2499818200"
+        }
+      ],
+      "uncertainties": [
+        "Его взрослая поздняя модель и поздняя верность королю не являются свидетельством рождения до среза."
+      ]
+    },
+    {
+      "nobleId": "noble-silverlaine",
+      "lifeStatus": "unknown",
+      "basis": "unknown",
+      "note": "Гибель Сребролена от воргенов Аругала связана с Третьей войной, значит ранний тег «Мертв» неверен. Однако каноническая ранняя сцена/рождение до выхода из Альянса не установлены. Сторонний обзор описывает владение до будущей стены, но смешивает порядок мятежа и закрытия стены и содержит авторские предположения; для строгого раннего статуса это не принято как надежная отдельная каноническая опора.",
+      "sourceIds": [
+        59,
+        "noble-life-source-2",
+        "noble-life-source-3",
+        33
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+          "evidenceFile": "docs/court-evidence/03-northern-claims-0-Baron-Silverlaine.md",
+          "quote": "Baron Silveraline and his family were killed by the [worgen](/wiki/Worgen), summoned by [Archmage Arugal](/wiki/Archmage_Arugal) from the [Emerald Dream](/wiki/Emerald_Dream) to aid [Gilneans](/wiki/Gilneas_(kingdom)) against the [Scourge](/wiki/Scourge), after they turned on the Gilneans. After the [Fourth War](/wiki/Fourth_War), [Mathias Shaw](/wiki/Mathias_Shaw) reported a common belief that the ghost of Baron Silverlaine still haunts the keep.[1]",
+          "ledgerId": 11,
+          "sourceIds": [
+            59
+          ],
+          "temporalScope": "late_arugal_scourge_death",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "34a096553965ccf6b355888b0c749bc0cc77eb5b5900a8b24be3e6e632552035"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Innkeeper",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Innkeeper",
+          "evidenceFile": "docs/noble-life-evidence/innkeeper-wowpedia.md",
+          "quote": "Frustrated by the [Dalaran wizards](/wiki/Kirin_Tor)' lack of progress against the [undead](/wiki/Undead) during the [Third War](/wiki/Third_War), the [Archmage Arugal](/wiki/Arugal) elected to summon the extra-dimensional [worgen](/wiki/Worgen) to bolster his side's diminishing ranks. The wolf-men slaughtered the [Scourge](/wiki/Scourge), then quickly turned on the wizards themselves and laid siege to the keep of the noble, [Baron Silverlaine](/wiki/Baron_Silverlaine). The fort quickly fell into shadow and ruin. Driven mad with guilt, Arugal adopted the worgen as his children and retreated to the newly dubbed 'Shadowfang Keep'.",
+          "ledgerId": 23,
+          "sourceIds": [
+            "noble-life-source-2"
+          ],
+          "temporalScope": "explicit_third_war_attack",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "ea118cfad83a52fa5562b3a09294cc00bae7dc911a488c61fed811559ddd80ba"
+        },
+        {
+          "url": "https://www.engadget.com/2010-12-15-know-your-lore-shadowfang-keep.html",
+          "canonicalUrl": "https://www.engadget.com/2010-12-15-know-your-lore-shadowfang-keep.html",
+          "evidenceFile": "docs/noble-life-evidence/shadowfang-keep-engadget.md",
+          "quote": "Yes, before it was a dungeon, Shadowfang Keep was the ancestral home of [Baron Silverlaine](http://www.wowhead.com/npc=3887) , a noble who owed allegiance to Gilneas and whose ancestral lands lay just outside of where the Greymane Wall would be erected. Ruling over the settlers of neaby Pyrewood Village, the Baron seemed a relatively capable leader... until, of course, the coming of the Scourge.",
+          "ledgerId": 24,
+          "sourceIds": [
+            "noble-life-source-3"
+          ],
+          "temporalScope": "editorial_pre_wall_reading_not_adopted",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "2b2b0d9af73e9c05b41fa86acdf130e3e0e0951fe6b0a2e4000d9d089987a182"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+          "evidenceFile": "docs/court-evidence/03-northern-claims-1-Shadowfang-Keep.md",
+          "quote": "When the [Scourge](/wiki/Scourge) washed over Lordaeron, the Gilnean Archmage, [Arugal](/wiki/Arugal), investigated the research of the mage [Ur](/wiki/Ur). With the sorcerer's knowledge, Arugal summoned the [worgen](/wiki/Worgen) with the blessings of [Genn Greymane](/wiki/Genn_Greymane)[5] and against the advice of the [Kirin Tor](/wiki/Kirin_Tor).[6] The worgen successfully turned the tide against the Scourge, but became uncontrollable, attacking the [Gilnean military](/wiki/Gilnean_military). After this, Arugal's worgen ran rampant through Silverpine, eventually overwhelming the keep, killing Baron Silverlaine and his family. Distraught and broken, Arugal accepted the worgen as his [children](/wiki/Son_of_Arugal) and retreated into the keep and named the place Shadowfang Keep.[1] Communing with [Alpha Prime](/wiki/Alpha_Prime), he became a key servant of the [Wolf Cult](/wiki/Wolf_Cult), converting the humans of Silverpine into worgen, namely the [Moonrage](/wiki/Moonrage) and [Shadowfang packs](/wiki/Shadowfang_pack). Protected by his worgen minions as well as the ghosts of the fallen Baron and his household, Arugal served his master in converting most of the forest's remaining denizens to the curse, with locations such as [Deep Elem Mine](/wiki/Deep_Elem_Mine) falling as well as Pyrewood.[7]",
+          "ledgerId": 12,
+          "sourceIds": [
+            33
+          ],
+          "temporalScope": "late_death_and_context",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "7e979ff18da8b1df6c0871795521eb1e4375eb25a1b83fb3163b89b7c4576592"
+        }
+      ],
+      "uncertainties": [
+        "Надежная нижняя граница жизни до выхода из Альянса не найдена; поздняя дата гибели дает только верхнюю жизненную границу.",
+        "Обзор Engadget допускает раннюю жизнь; его можно принять лишь как отдельно обозначенную авторскую реконструкцию, не как доказанный early scene.",
+        "Статус не отменяет существующее авторское владение и вассалитет: они в этой задаче не меняются."
+      ]
+    },
+    {
+      "nobleId": "noble-longshore",
+      "lifeStatus": "unknown",
+      "basis": "unknown",
+      "note": "Дольноберег свидетельствует о прежнем настоящем баронстве, а каталог описывает гилнеасца, оказавшегося снаружи закрытой стены. Даты получения титула и жизни до начала выхода/строительства не приведены; поздняя жизнь пирата не переносится назад.",
+      "sourceIds": [
+        61,
+        62,
+        3
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Baron_Longshore",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Longshore",
+          "evidenceFile": "docs/court-evidence/03-northern-claims-2-Baron-Longshore.md",
+          "quote": "**Baron Longshore** is the former captain of the *[Heedless](https://wowpedia.fandom.com/wiki/Heedless)*, a ship in the [pirate](https://wowpedia.fandom.com/wiki/Pirate) fleet of the [Southsea Freebooters](https://wowpedia.fandom.com/wiki/Southsea_Freebooters), and hails from [Gilneas](https://wowpedia.fandom.com/wiki/Gilneas_peninsula).[1] He is located on the [Merchant Coast](https://wowpedia.fandom.com/wiki/Merchant_Coast) in the [Northern Barrens](https://wowpedia.fandom.com/wiki/Northern_Barrens).",
+          "ledgerId": 13,
+          "sourceIds": [
+            61
+          ],
+          "temporalScope": "late_pirate_life",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "d5be8a8524b16a4030bfd3c00559a990143968d2f70b0725eeeab02c4304ebd0"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/The_Baron%27s_Demands",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/The_Baron%27s_Demands",
+          "evidenceFile": "docs/court-evidence/03-northern-claims-3-The-Baron-27s-Demands.md",
+          "quote": "Oh, me word is good, friend. I used ta be a real Baron, ye know.",
+          "ledgerId": 14,
+          "sourceIds": [
+            62
+          ],
+          "temporalScope": "undated_former_baron_title",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "668e2a5e9c030c18e2d0ada1e09ed3e78a90dfa75927c2760771511abd5fad7d"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "quote": "| [Baron Longshore](/wiki/Baron_Longshore)[8] | Killable | Captain of the pirate ship *[Heedless](/wiki/Heedless)*, and one of the Gilneans locked out of Gilneas by the [Greymane Wall](/wiki/Greymane_Wall). Imprisoned by the forces of [Theramore](/wiki/Theramore) on the [Merchant Coast](/wiki/Merchant_Coast). |",
+          "ledgerId": 21,
+          "sourceIds": [
+            3
+          ],
+          "temporalScope": "at_or_after_wall_exclusion_not_before_withdrawal",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "b51e1fa6fe627ecde46727554b3c6df0b2d5445b6f0e64089558ba1df209f3b5"
+        }
+      ],
+      "uncertainties": [
+        "«Был бароном» не датирует титул до выхода из Альянса.",
+        "Жизнь к закрытию уже построенной стены не устанавливает жизнь на более раннем срезе до начала строительства."
+      ]
+    },
+    {
+      "nobleId": "noble-candren",
+      "lifeStatus": "unknown",
+      "basis": "unknown",
+      "note": "Кандрен известен живым интендантом Гилнеаса в Дарнассе после изгнания гилнеасцев. Дата рождения/жизнь до выхода из Альянса отсутствует; современное Alive не переносится в ранний срез.",
+      "sourceIds": [
+        63
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Candren",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Candren",
+          "evidenceFile": "docs/court-evidence/04-reference-nobles-2-Lord-Candren.md",
+          "quote": "Lord Candren is the quartermaster for Gilneas. He is found in Darnassus's Temple Gardens, near the flight master.",
+          "ledgerId": 15,
+          "sourceIds": [
+            63
+          ],
+          "temporalScope": "late_darnassus_office_only",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "237b9bbe3eccb0cd0b75708b65494443285ebaac4a8ed37e60314a9542c7e3d8"
+        }
+      ],
+      "uncertainties": [
+        "Не установлены ни ранняя живая сцена, ни рождение до среза."
+      ]
+    },
+    {
+      "nobleId": "noble-isiden",
+      "lifeStatus": "alive",
+      "basis": "lore",
+      "note": "После установления военного положения в Альтераке Исиден бежит в Гилнеас и получает поддержку Генна в послевоенном споре о престолонаследии. Последний засвидетельствованный статус внутри этой фазы — живой претендент. Фраза «с тех пор ничего не слышали» относится к последующей судьбе, не отменяет ранней живой сцены.",
+      "sourceIds": [
+        64
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+          "evidenceFile": "docs/court-evidence/03-northern-claims-4-Isiden-Perenolde.md",
+          "quote": "**Isiden Perenolde**[1] was the nephew of Lord [Aiden Perenolde](/wiki/Aiden_Perenolde), King of [Alterac](/wiki/Alterac_(kingdom)). When Alterac was placed under martial law by order of King [Terenas](/wiki/Terenas_Menethil_II), Isiden fled to [Gilneas](/wiki/Gilneas_peninsula), where he hoped to rally support.[2] He was eventually backed by [Genn Greymane](/wiki/Genn_Greymane), [Gilneas](/wiki/Gilneas_(kingdom))' king, as the matter of the succession began to heat up.[3]",
+          "ledgerId": 16,
+          "sourceIds": [
+            64
+          ],
+          "temporalScope": "post_second_war_alterac_succession",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "ad314349963b0bd044ad024966d52cc8602c613d6ccfa34e63afe987d88f411f"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+          "evidenceFile": "docs/court-evidence/03-northern-claims-4-Isiden-Perenolde.md",
+          "quote": "Nothing has been heard from Isiden since then and his status is unknown.",
+          "ledgerId": 16,
+          "sourceIds": [
+            64
+          ],
+          "temporalScope": "later_fate_unknown_not_early_unknown",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "ad314349963b0bd044ad024966d52cc8602c613d6ccfa34e63afe987d88f411f"
+        }
+      ],
+      "uncertainties": [
+        "Календарная дата внутри послевоенного альтеракского спора не дана; нельзя продлевать живой статус до поздних эпох.",
+        "Не отождествлять с предполагаемым рыцарем смерти Baron Perenolde: сама статья помечает это speculation."
+      ]
+    },
+    {
+      "nobleId": "noble-tulvan",
+      "lifeStatus": "unknown",
+      "basis": "unknown",
+      "note": "Тулван показан живым бойцом в Горниле Крови в позднем Катаклизме и переходит в воргенский облик. Статья не дает ни рождения, ни живой сцены до выхода из Альянса; его ранний человеческий вариант не превращаем в доказанную жизнь.",
+      "sourceIds": [
+        "court-source-24",
+        65
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan",
+          "evidenceFile": "docs/court-evidence/08-preferred-retries-0-Lord-Geoffery-Tulvan.md",
+          "quote": "**Lord Geoffery Tulvan** is a [worgen](/wiki/Worgen) located at the [Crucible of Carnage](/wiki/Crucible_of_Carnage) in the [Twilight Highlands](/wiki/Twilight_Highlands). He is one of the challengers and seeks to become the greatest warrior in the world. He is strong enough to lift his own carriage. Once he turns, he is known as **Lord Geoffery Wildwolf**.",
+          "ledgerId": 17,
+          "sourceIds": [
+            "court-source-24",
+            65
+          ],
+          "temporalScope": "late_crucible_of_carnage_only",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "96323ae3662b9ff1782a548b0efa1ccc66d43eaf7b639663dfb6f25bd3166efd"
+        }
+      ],
+      "uncertainties": [
+        "Дата рождения и ранняя жизнь не установлены; поздний взрослый боец мог родиться после среза."
+      ]
+    },
+    {
+      "nobleId": "noble-harford",
+      "lifeStatus": "unknown",
+      "basis": "unknown",
+      "note": "Харфорд лично вспоминает плен у Аругала и побег из крепости, затем погибает в стартовом сюжете рыцарей смерти. Это жизнь/смерть после возникновения позднего проклятия, а не дата рождения или жизнь до выхода из Альянса.",
+      "sourceIds": [
+        "court-source-25",
+        66
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Harford",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford",
+          "evidenceFile": "docs/court-evidence/08-preferred-retries-1-Lord-Harford.md",
+          "quote": "- You don't remember me? We were both servants of [Arugal](https://wowpedia.fandom.com/wiki/Arugal) back in [Silverpine Forest](https://wowpedia.fandom.com/wiki/Silverpine_Forest). We put up with his merciless torture for ages. It was you who saved me on that fateful night when we escaped [Shadowfang Keep](https://wowpedia.fandom.com/wiki/Shadowfang_Keep).",
+          "ledgerId": 18,
+          "sourceIds": [
+            "court-source-25",
+            66
+          ],
+          "temporalScope": "late_arugal_imprisonment",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "6bab1d15c22b804956389544a8eb6ae55f960bffc87758e190942d8b779966b4"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Harford",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford",
+          "evidenceFile": "docs/court-evidence/08-preferred-retries-1-Lord-Harford.md",
+          "quote": "- There... There's no more time for me. I'm done for. Finish me off, <name>. Do it or they'll kill us both. <Name>... Remember [Gilneas](https://wowpedia.fandom.com/wiki/Gilneas_peninsula), our beloved home. This world is worth saving.",
+          "ledgerId": 18,
+          "sourceIds": [
+            "court-source-25",
+            66
+          ],
+          "temporalScope": "late_death_knight_execution",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "6bab1d15c22b804956389544a8eb6ae55f960bffc87758e190942d8b779966b4"
+        }
+      ],
+      "uncertainties": [
+        "«For ages» в реплике о пытках не переводится в календарные годы и не доказывает рождение до среза.",
+        "Поздний статус Deceased не является ранней смертью."
+      ]
+    },
+    {
+      "nobleId": "noble-morrison",
+      "lifeStatus": "unknown",
+      "basis": "unknown",
+      "note": "Моррисон показан живым главой Пирвудского совета в позднем задании Pyrewood Ambush и позднее убит Отрекшимися. До выхода из Альянса ни назначение, ни рождение, ни живая сцена не датированы; ранний статус остается неизвестным.",
+      "sourceIds": [
+        "court-source-26",
+        67,
+        3
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison",
+          "evidenceFile": "docs/court-evidence/08-preferred-retries-2-Lord-Mayor-Morrison.md",
+          "quote": "**Lord Mayor Morrison** is a [human](https://wowpedia.fandom.com/wiki/Human) and leader of the [Pyrewood Council](https://wowpedia.fandom.com/wiki/Pyrewood_Council) who appears in [Pyrewood Village](https://wowpedia.fandom.com/wiki/Pyrewood_Village) in [Silverpine Forest](https://wowpedia.fandom.com/wiki/Silverpine_Forest_(Classic)) during ![H](https://static.wikia.nocookie.net/wowpedia/images/c/c4/Horde_15.png/revision/latest?cb=20201010153315) [15] [Pyrewood Ambush](https://wowpedia.fandom.com/wiki/Pyrewood_Ambush).",
+          "ledgerId": 19,
+          "sourceIds": [
+            "court-source-26",
+            67
+          ],
+          "temporalScope": "classic_pyrewood_ambush_life",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "e9a4d88df480a35fa82dd01b912381bb249ebaa2f89ee6dd82c29a84f1b57ef9"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "quote": "| [Lord Mayor Morrison](/wiki/Lord_Mayor_Morrison) | Deceased | Leader of [Pyrewood Council](/wiki/Pyrewood_Council) and [Arugal](/wiki/Arugal)'s puppet. Killed during an ambush by the [Deathstalkers](/wiki/Deathstalkers).[7] |",
+          "ledgerId": 21,
+          "sourceIds": [
+            3
+          ],
+          "temporalScope": "late_forsaken_assassination_only",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "b51e1fa6fe627ecde46727554b3c6df0b2d5445b6f0e64089558ba1df209f3b5"
+        }
+      ],
+      "uncertainties": [
+        "Не превращать позднюю смерть или титул Lord Mayor в доказательство жизни/смерти после Второй войны до стены."
+      ]
+    },
+    {
+      "nobleId": "noble-aderic",
+      "lifeStatus": "unknown",
+      "basis": "unknown",
+      "note": "Адерик определенно умер к поздним событиям у его гробницы. Ранний Royal Aderic Banquet, где встретились Генн и Миа, не описан как похоронный/посмертный пир; гробница не датирована до их брака или до Второй войны. Каталог прямо относит «possibly a long-dead king» к speculation. Совместно эти сведения не доказывают смерть к раннему срезу: «Неизвестно».",
+      "sourceIds": [
+        "court-source-27",
+        68,
+        46,
+        "noble-life-source-1",
+        3
+      ],
+      "evidence": [
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Aderic",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Aderic",
+          "evidenceFile": "docs/court-evidence/08-preferred-retries-3-Aderic.md",
+          "quote": "**Aderic** was a [human](/wiki/Human) who was a [Gilnean](/wiki/Gilneas_(kingdom)) patriarch. He is buried at [Aderic's Repose](/wiki/Aderic%27s_Repose) at the top of the hill.",
+          "ledgerId": 20,
+          "sourceIds": [
+            "court-source-27",
+            68
+          ],
+          "temporalScope": "burial_known_by_cataclysm_only",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "398861a111a88549396fcfba858397eeaf6469156aba8589beb1e6dcc7a8b5f7"
+        },
+        {
+          "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "evidenceFile": "docs/court-evidence/01-early-court-0-genn-greymane-lord-of-his-pack.md",
+          "quote": "It was the smile that had made him fall in love with her all those years ago when they had first met at the Royal Aderic Banquet.",
+          "ledgerId": 2,
+          "sourceIds": [
+            46
+          ],
+          "temporalScope": "earlier_banquet_not_explicitly_posthumous",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "bd793342c6f1e09227209e05c905a65093e22c7b66ec5273be1c5ade3e289e99"
+        },
+        {
+          "url": "https://warcraft.wiki.gg/wiki/Patriarch%27s_Blessing",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Patriarch%27s_Blessing",
+          "evidenceFile": "docs/noble-life-evidence/patriarchs-blessing-warcraft-wiki.md",
+          "quote": "You've done it,. Even in these times we must honor our dead. \n\nTake these offerings and place them at Aderic's tomb.",
+          "ledgerId": 22,
+          "sourceIds": [
+            "noble-life-source-1"
+          ],
+          "temporalScope": "late_explicit_dead_and_tomb",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "fd5b3d9ff86763cf1ff3d9308808a5ceda90f302377fffb1239e465c35257054"
+        },
+        {
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "quote": "| [Aderic](/wiki/Aderic) | Deceased | Referred to as a \"patriarch\", and has the Royal Aderic Banquet named in his honor.[9] Possibly a long-dead king or nobleman. |",
+          "ledgerId": 21,
+          "sourceIds": [
+            3
+          ],
+          "temporalScope": "explicit_speculation_not_death_date",
+          "quoteVerifiedExact": true,
+          "evidenceSha256": "b51e1fa6fe627ecde46727554b3c6df0b2d5445b6f0e64089558ba1df209f3b5"
+        }
+      ],
+      "uncertainties": [
+        "Не найдены ранняя гробница, дата смерти или прямое описание пира как посмертного поминовения.",
+        "Пир в честь человека возможен при его жизни; существование поздней гробницы нельзя датировать временем раннего пира.",
+        "Родство со Седогривами и королевский титул не установлены; этот аудит их не назначает."
+      ]
+    }
+  ],
+  "newSources": [
+    {
+      "id": "noble-life-source-1",
+      "title": "Patriarch's Blessing - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Patriarch%27s_Blessing",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Patriarch%27s_Blessing",
+      "author": "Blizzard Entertainment (игровой текст); участники Warcraft Wiki, страница, адаптированная из Wowpedia",
+      "sourceType": "secondary_mirror_of_primary_game_text",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/noble-life-evidence/patriarchs-blessing-warcraft-wiki.md",
+      "evidenceSha256": "fd5b3d9ff86763cf1ff3d9308808a5ceda90f302377fffb1239e465c35257054",
+      "note": "Новая исследовательская ссылка; добавление в atlas.sources и fieldSources выполняет родительский агент, этот аудит данные не меняет.",
+      "quote": "You've done it,. Even in these times we must honor our dead. \n\nTake these offerings and place them at Aderic's tomb.",
+      "quotes": [
+        "You've done it,. Even in these times we must honor our dead. \n\nTake these offerings and place them at Aderic's tomb."
+      ],
+      "quoteVerifiedExact": true
+    },
+    {
+      "id": "noble-life-source-2",
+      "title": "Innkeeper",
+      "url": "https://wowpedia.fandom.com/wiki/Innkeeper",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Innkeeper",
+      "author": "Blizzard Entertainment (игровая реплика); участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia_with_primary_game_text",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/noble-life-evidence/innkeeper-wowpedia.md",
+      "evidenceSha256": "ea118cfad83a52fa5562b3a09294cc00bae7dc911a488c61fed811559ddd80ba",
+      "note": "Новая исследовательская ссылка; добавление в atlas.sources и fieldSources выполняет родительский агент, этот аудит данные не меняет.",
+      "quote": "Frustrated by the [Dalaran wizards](/wiki/Kirin_Tor)' lack of progress against the [undead](/wiki/Undead) during the [Third War](/wiki/Third_War), the [Archmage Arugal](/wiki/Arugal) elected to summon the extra-dimensional [worgen](/wiki/Worgen) to bolster his side's diminishing ranks. The wolf-men slaughtered the [Scourge](/wiki/Scourge), then quickly turned on the wizards themselves and laid siege to the keep of the noble, [Baron Silverlaine](/wiki/Baron_Silverlaine). The fort quickly fell into shadow and ruin. Driven mad with guilt, Arugal adopted the worgen as his children and retreated to the newly dubbed 'Shadowfang Keep'.",
+      "quotes": [
+        "Frustrated by the [Dalaran wizards](/wiki/Kirin_Tor)' lack of progress against the [undead](/wiki/Undead) during the [Third War](/wiki/Third_War), the [Archmage Arugal](/wiki/Arugal) elected to summon the extra-dimensional [worgen](/wiki/Worgen) to bolster his side's diminishing ranks. The wolf-men slaughtered the [Scourge](/wiki/Scourge), then quickly turned on the wizards themselves and laid siege to the keep of the noble, [Baron Silverlaine](/wiki/Baron_Silverlaine). The fort quickly fell into shadow and ruin. Driven mad with guilt, Arugal adopted the worgen as his children and retreated to the newly dubbed 'Shadowfang Keep'."
+      ],
+      "quoteVerifiedExact": true
+    },
+    {
+      "id": "noble-life-source-3",
+      "title": "Know Your Lore: Shadowfang Keep",
+      "url": "https://www.engadget.com/2010-12-15-know-your-lore-shadowfang-keep.html",
+      "canonicalUrl": "https://www.engadget.com/2010-12-15-know-your-lore-shadowfang-keep.html",
+      "author": "Engadget / серия WoW Insider «Know Your Lore»; индивидуальный автор в извлеченном тексте не установлен",
+      "sourceType": "secondary_editorial_not_canonical_early_scene",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/noble-life-evidence/shadowfang-keep-engadget.md",
+      "evidenceSha256": "2b2b0d9af73e9c05b41fa86acdf130e3e0e0951fe6b0a2e4000d9d089987a182",
+      "note": "Новая исследовательская ссылка; добавление в atlas.sources и fieldSources выполняет родительский агент, этот аудит данные не меняет.",
+      "quote": "Yes, before it was a dungeon, Shadowfang Keep was the ancestral home of [Baron Silverlaine](http://www.wowhead.com/npc=3887) , a noble who owed allegiance to Gilneas and whose ancestral lands lay just outside of where the Greymane Wall would be erected. Ruling over the settlers of neaby Pyrewood Village, the Baron seemed a relatively capable leader... until, of course, the coming of the Scourge.",
+      "quotes": [
+        "Yes, before it was a dungeon, Shadowfang Keep was the ancestral home of [Baron Silverlaine](http://www.wowhead.com/npc=3887) , a noble who owed allegiance to Gilneas and whose ancestral lands lay just outside of where the Greymane Wall would be erected. Ruling over the settlers of neaby Pyrewood Village, the Baron seemed a relatively capable leader... until, of course, the coming of the Scourge."
+      ],
+      "quoteVerifiedExact": true
+    }
+  ],
+  "counts": {
+    "alive": 6,
+    "dead": 1,
+    "unknown": 10
+  }
+}

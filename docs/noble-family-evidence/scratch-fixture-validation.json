@@ -1,0 +1,87 @@
+{
+  "basis": "scratch-only fixture; production/data not written",
+  "normalizeData": "passed",
+  "originalNobleCount": 17,
+  "fixtureNobleCount": 26,
+  "originalSourceCount": 83,
+  "addedSourceCount": 41,
+  "fixtureSourceCount": 124,
+  "addedCouncilCount": 9,
+  "original17PreservedExact": true,
+  "mapFactionsTerritoriesPreservedExact": true,
+  "profiles": [
+    {
+      "id": "noble-mia",
+      "lifeStatus": "alive",
+      "holdings": 0,
+      "isSovereign": false,
+      "suzerain": null,
+      "sourceCount": 6
+    },
+    {
+      "id": "noble-liam",
+      "lifeStatus": "unknown",
+      "holdings": 0,
+      "isSovereign": false,
+      "suzerain": null,
+      "sourceCount": 9
+    },
+    {
+      "id": "noble-tess",
+      "lifeStatus": "alive",
+      "holdings": 0,
+      "isSovereign": false,
+      "suzerain": null,
+      "sourceCount": 6
+    },
+    {
+      "id": "noble-lorna",
+      "lifeStatus": "unknown",
+      "holdings": 0,
+      "isSovereign": false,
+      "suzerain": null,
+      "sourceCount": 4
+    },
+    {
+      "id": "noble-hiram-creed",
+      "lifeStatus": "unknown",
+      "holdings": 0,
+      "isSovereign": false,
+      "suzerain": null,
+      "sourceCount": 2
+    },
+    {
+      "id": "noble-woofington",
+      "lifeStatus": "unknown",
+      "holdings": 0,
+      "isSovereign": false,
+      "suzerain": null,
+      "sourceCount": 2
+    },
+    {
+      "id": "noble-alys-finnsson",
+      "lifeStatus": "unknown",
+      "holdings": 0,
+      "isSovereign": false,
+      "suzerain": null,
+      "sourceCount": 2
+    },
+    {
+      "id": "noble-ashmore",
+      "lifeStatus": "unknown",
+      "holdings": 0,
+      "isSovereign": false,
+      "suzerain": null,
+      "sourceCount": 2
+    },
+    {
+      "id": "noble-lady-in-white",
+      "lifeStatus": "unknown",
+      "holdings": 0,
+      "isSovereign": false,
+      "suzerain": null,
+      "sourceCount": 1
+    }
+  ],
+  "fileBytesUntouched": true
+}

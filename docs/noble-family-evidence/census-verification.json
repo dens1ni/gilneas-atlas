@@ -1,0 +1,140 @@
+{
+  "passed": true,
+  "hardCounts": {
+    "candidateCount": 38,
+    "includedCount": 26,
+    "excludedCount": 12,
+    "existingCount": 17,
+    "additionCount": 9,
+    "catalogNamedRows": 22,
+    "catalogNamedRowsCovered": 22,
+    "catalogTriviaNamedAddition": 1,
+    "newActiveCount": 2,
+    "newInactiveCount": 7,
+    "newConfirmedEarlyAdvisors": 0,
+    "newVotingSeats": 0,
+    "newLifeAlive": 2,
+    "newLifeUnknown": 7,
+    "newLifeDead": 0,
+    "categoryUniqueEntries": 637,
+    "categoryArticleCount": 630,
+    "categorySubcategoryCount": 7,
+    "gilneasCategoryCount": 394,
+    "gilneasAristocratIntersectionCount": 24,
+    "usedSourceCount": 41,
+    "quoteAssertionCount": 81
+  },
+  "checks": {
+    "evidenceLinks": 123,
+    "usedSources": 41,
+    "relations": 13,
+    "newFullRecords": 9
+  },
+  "quoteFailures": [],
+  "citationExitCode": 0,
+  "citationErrors": [],
+  "citationWarnings": [
+    "stats: 200 prose sentence(s), 117 with declared provenance (58%) — 117 cited, 0 marked [unverified] (a sentence may be both); 41 distinct source(s) cited, 41 in ledger (41 with evidence quotes)"
+  ],
+  "newIds": [
+    "noble-mia",
+    "noble-liam",
+    "noble-tess",
+    "noble-lorna",
+    "noble-hiram-creed",
+    "noble-woofington",
+    "noble-alys-finnsson",
+    "noble-ashmore",
+    "noble-lady-in-white"
+  ],
+  "productionWrites": false,
+  "fixture": {
+    "basis": "scratch-only fixture; production/data not written",
+    "normalizeData": "passed",
+    "originalNobleCount": 17,
+    "fixtureNobleCount": 26,
+    "originalSourceCount": 83,
+    "addedSourceCount": 41,
+    "fixtureSourceCount": 124,
+    "addedCouncilCount": 9,
+    "original17PreservedExact": true,
+    "mapFactionsTerritoriesPreservedExact": true,
+    "profiles": [
+      {
+        "id": "noble-mia",
+        "lifeStatus": "alive",
+        "holdings": 0,
+        "isSovereign": false,
+        "suzerain": null,
+        "sourceCount": 6
+      },
+      {
+        "id": "noble-liam",
+        "lifeStatus": "unknown",
+        "holdings": 0,
+        "isSovereign": false,
+        "suzerain": null,
+        "sourceCount": 9
+      },
+      {
+        "id": "noble-tess",
+        "lifeStatus": "alive",
+        "holdings": 0,
+        "isSovereign": false,
+        "suzerain": null,
+        "sourceCount": 6
+      },
+      {
+        "id": "noble-lorna",
+        "lifeStatus": "unknown",
+        "holdings": 0,
+        "isSovereign": false,
+        "suzerain": null,
+        "sourceCount": 4
+      },
+      {
+        "id": "noble-hiram-creed",
+        "lifeStatus": "unknown",
+        "holdings": 0,
+        "isSovereign": false,
+        "suzerain": null,
+        "sourceCount": 2
+      },
+      {
+        "id": "noble-woofington",
+        "lifeStatus": "unknown",
+        "holdings": 0,
+        "isSovereign": false,
+        "suzerain": null,
+        "sourceCount": 2
+      },
+      {
+        "id": "noble-alys-finnsson",
+        "lifeStatus": "unknown",
+        "holdings": 0,
+        "isSovereign": false,
+        "suzerain": null,
+        "sourceCount": 2
+      },
+      {
+        "id": "noble-ashmore",
+        "lifeStatus": "unknown",
+        "holdings": 0,
+        "isSovereign": false,
+        "suzerain": null,
+        "sourceCount": 2
+      },
+      {
+        "id": "noble-lady-in-white",
+        "lifeStatus": "unknown",
+        "holdings": 0,
+        "isSovereign": false,
+        "suzerain": null,
+        "sourceCount": 1
+      }
+    ],
+    "fileBytesUntouched": true
+  },
+  "atlasCurrentSha256": "ea5db3dac4e4098a2e4eab2bab7a4d9718ffa18b14a2796f28e96e7ad30a50b7",
+  "mapsCoordinatesBaselinesPreserved": true
+}

@@ -1,0 +1,470 @@
+{
+  "url": "https://wowpedia.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AGilneas+NPCs&cmlimit=500&format=json",
+  "body": {
+    "batchcomplete": "",
+    "query": {
+      "categorymembers": [
+        {
+          "pageid": 241713,
+          "ns": 0,
+          "title": "Gilneas NPCs"
+        },
+        {
+          "pageid": 306278,
+          "ns": 0,
+          "title": "Marie Allen"
+        },
+        {
+          "pageid": 312493,
+          "ns": 0,
+          "title": "Sister Almyra"
+        },
+        {
+          "pageid": 241628,
+          "ns": 0,
+          "title": "Krennan Aranas"
+        },
+        {
+          "pageid": 241638,
+          "ns": 0,
+          "title": "Gwen Armstead"
+        },
+        {
+          "pageid": 306280,
+          "ns": 0,
+          "title": "Willa Arnes"
+        },
+        {
+          "pageid": 290911,
+          "ns": 0,
+          "title": "Ashley"
+        },
+        {
+          "pageid": 314567,
+          "ns": 0,
+          "title": "Captain Asther"
+        },
+        {
+          "pageid": 325105,
+          "ns": 0,
+          "title": "Amelia Atherton"
+        },
+        {
+          "pageid": 332815,
+          "ns": 0,
+          "title": "Attack Mastiff"
+        },
+        {
+          "pageid": 321821,
+          "ns": 0,
+          "title": "Baron (NPC)"
+        },
+        {
+          "pageid": 280961,
+          "ns": 0,
+          "title": "Huntsman Blake"
+        },
+        {
+          "pageid": 325199,
+          "ns": 0,
+          "title": "Whilsey Bottomtooth"
+        },
+        {
+          "pageid": 325103,
+          "ns": 0,
+          "title": "Samantha Buckley"
+        },
+        {
+          "pageid": 325099,
+          "ns": 0,
+          "title": "Captive Worgen"
+        },
+        {
+          "pageid": 328139,
+          "ns": 0,
+          "title": "Captured Riding Bat"
+        },
+        {
+          "pageid": 302637,
+          "ns": 0,
+          "title": "Celestine of the Harvest"
+        },
+        {
+          "pageid": 279324,
+          "ns": 0,
+          "title": "Chance the Cat"
+        },
+        {
+          "pageid": 325106,
+          "ns": 0,
+          "title": "Fielding Chesterhill"
+        },
+        {
+          "pageid": 282153,
+          "ns": 0,
+          "title": "Sergeant Cleese"
+        },
+        {
+          "pageid": 381092,
+          "ns": 0,
+          "title": "Fenegan Cobbler"
+        },
+        {
+          "pageid": 325154,
+          "ns": 0,
+          "title": "Crash Survivor"
+        },
+        {
+          "pageid": 247114,
+          "ns": 0,
+          "title": "Darius Crowley"
+        },
+        {
+          "pageid": 280012,
+          "ns": 0,
+          "title": "Lorna Crowley"
+        },
+        {
+          "pageid": 290910,
+          "ns": 0,
+          "title": "Cynthia"
+        },
+        {
+          "pageid": 325098,
+          "ns": 0,
+          "title": "Vitus Darkwalker"
+        },
+        {
+          "pageid": 295056,
+          "ns": 0,
+          "title": "Jack \"All-Trades\" Derrington"
+        },
+        {
+          "pageid": 615374,
+          "ns": 0,
+          "title": "Docile Sheep"
+        },
+        {
+          "pageid": 325121,
+          "ns": 0,
+          "title": "Drowning Watchman"
+        },
+        {
+          "pageid": 325198,
+          "ns": 0,
+          "title": "Duskhaven Survivor"
+        },
+        {
+          "pageid": 325100,
+          "ns": 0,
+          "title": "Duskhaven Villager"
+        },
+        {
+          "pageid": 295187,
+          "ns": 0,
+          "title": "Duskhaven Watchman"
+        },
+        {
+          "pageid": 325148,
+          "ns": 0,
+          "title": "Enslaved Villager"
+        },
+        {
+          "pageid": 315753,
+          "ns": 0,
+          "title": "Feral Watcher"
+        },
+        {
+          "pageid": 315743,
+          "ns": 0,
+          "title": "Feral Worgen"
+        },
+        {
+          "pageid": 325141,
+          "ns": 0,
+          "title": "Forsaken Catapult (Gilneas)"
+        },
+        {
+          "pageid": 637900,
+          "ns": 0,
+          "title": "Forsaken Soldier"
+        },
+        {
+          "pageid": 332817,
+          "ns": 0,
+          "title": "Gilnean Mastiff"
+        },
+        {
+          "pageid": 310807,
+          "ns": 0,
+          "title": "Gilnean Militia"
+        },
+        {
+          "pageid": 529748,
+          "ns": 0,
+          "title": "Gilnean Sharpshooter"
+        },
+        {
+          "pageid": 642673,
+          "ns": 0,
+          "title": "Gilnean Steed"
+        },
+        {
+          "pageid": 295728,
+          "ns": 0,
+          "title": "Gilnean Survivor"
+        },
+        {
+          "pageid": 326935,
+          "ns": 0,
+          "title": "Glaive Thrower (Gilneas)"
+        },
+        {
+          "pageid": 241632,
+          "ns": 0,
+          "title": "Lord Vincent Godfrey"
+        },
+        {
+          "pageid": 16645,
+          "ns": 0,
+          "title": "Genn Greymane"
+        },
+        {
+          "pageid": 241637,
+          "ns": 0,
+          "title": "Liam Greymane"
+        },
+        {
+          "pageid": 280960,
+          "ns": 0,
+          "title": "Mia Greymane"
+        },
+        {
+          "pageid": 280800,
+          "ns": 0,
+          "title": "Tess Greymane"
+        },
+        {
+          "pageid": 290916,
+          "ns": 0,
+          "title": "Melinda Hammond"
+        },
+        {
+          "pageid": 325161,
+          "ns": 0,
+          "title": "Ron Hayward"
+        },
+        {
+          "pageid": 290907,
+          "ns": 0,
+          "title": "Sebastian Hayward"
+        },
+        {
+          "pageid": 325164,
+          "ns": 0,
+          "title": "Tim Hayward"
+        },
+        {
+          "pageid": 325163,
+          "ns": 0,
+          "title": "Trent Hayward"
+        },
+        {
+          "pageid": 325162,
+          "ns": 0,
+          "title": "Walt Hayward"
+        },
+        {
+          "pageid": 295083,
+          "ns": 0,
+          "title": "Lord Hewell"
+        },
+        {
+          "pageid": 624505,
+          "ns": 0,
+          "title": "Hippogryph (Gilneas)"
+        },
+        {
+          "pageid": 619344,
+          "ns": 0,
+          "title": "Horse (NPC)"
+        },
+        {
+          "pageid": 290630,
+          "ns": 0,
+          "title": "James"
+        },
+        {
+          "pageid": 298804,
+          "ns": 0,
+          "title": "Koroth the Hillbreaker"
+        },
+        {
+          "pageid": 295188,
+          "ns": 0,
+          "title": "Loren the Fence"
+        },
+        {
+          "pageid": 295078,
+          "ns": 0,
+          "title": "Marcus"
+        },
+        {
+          "pageid": 280013,
+          "ns": 0,
+          "title": "Tobias Mistmantle"
+        },
+        {
+          "pageid": 310922,
+          "ns": 0,
+          "title": "Chris Moller"
+        },
+        {
+          "pageid": 326789,
+          "ns": 0,
+          "title": "Mountain Horse (NPC)"
+        },
+        {
+          "pageid": 325181,
+          "ns": 0,
+          "title": "Karen Murray"
+        },
+        {
+          "pageid": 325177,
+          "ns": 0,
+          "title": "Night Elf Sentinel (Gilneas)"
+        },
+        {
+          "pageid": 306140,
+          "ns": 0,
+          "title": "Admiral Nightwind"
+        },
+        {
+          "pageid": 618857,
+          "ns": 0,
+          "title": "Ogre Ambusher"
+        },
+        {
+          "pageid": 295189,
+          "ns": 0,
+          "title": "Mary Oxworth"
+        },
+        {
+          "pageid": 325104,
+          "ns": 0,
+          "title": "Slain Watchman"
+        },
+        {
+          "pageid": 351025,
+          "ns": 0,
+          "title": "Snake (critter)"
+        },
+        {
+          "pageid": 325107,
+          "ns": 0,
+          "title": "Myriam Spellwaker"
+        },
+        {
+          "pageid": 327925,
+          "ns": 0,
+          "title": "Stagecoach Carriage"
+        },
+        {
+          "pageid": 763530,
+          "ns": 0,
+          "title": "Stagecoach Horse"
+        },
+        {
+          "pageid": 294812,
+          "ns": 0,
+          "title": "Belysra Starbreeze"
+        },
+        {
+          "pageid": 286274,
+          "ns": 0,
+          "title": "Vassandra Stormclaw"
+        },
+        {
+          "pageid": 642661,
+          "ns": 0,
+          "title": "Stormglen Defender"
+        },
+        {
+          "pageid": 555108,
+          "ns": 0,
+          "title": "Stormglen Mastiff"
+        },
+        {
+          "pageid": 642664,
+          "ns": 0,
+          "title": "Stormglen Villager"
+        },
+        {
+          "pageid": 680768,
+          "ns": 0,
+          "title": "Stout Mountain Horse"
+        },
+        {
+          "pageid": 286276,
+          "ns": 0,
+          "title": "Lyros Swiftwind"
+        },
+        {
+          "pageid": 295130,
+          "ns": 0,
+          "title": "Benjamin Sykes"
+        },
+        {
+          "pageid": 315745,
+          "ns": 0,
+          "title": "Tal'doren Tracker"
+        },
+        {
+          "pageid": 286249,
+          "ns": 0,
+          "title": "Talran of the Wild"
+        },
+        {
+          "pageid": 647719,
+          "ns": 0,
+          "title": "Tempest's Reach Watchman"
+        },
+        {
+          "pageid": 325172,
+          "ns": 0,
+          "title": "Towering Ancient"
+        },
+        {
+          "pageid": 763556,
+          "ns": 0,
+          "title": "Unconscious Watchman"
+        },
+        {
+          "pageid": 290904,
+          "ns": 0,
+          "title": "Grandma Wahl"
+        },
+        {
+          "pageid": 295146,
+          "ns": 0,
+          "title": "Gerard Walthorn"
+        },
+        {
+          "pageid": 295081,
+          "ns": 0,
+          "title": "Magda Whitewall"
+        },
+        {
+          "pageid": 328658,
+          "ns": 0,
+          "title": "Worgen Warrior"
+        },
+        {
+          "pageid": 288561,
+          "ns": 14,
+          "title": "Category:Gilneas City NPCs"
+        }
+      ]
+    }
+  }
+}

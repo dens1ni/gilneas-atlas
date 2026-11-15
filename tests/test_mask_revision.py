@@ -120,7 +120,15 @@ class MaskRevision(unittest.TestCase):
         self.assertEqual(self.stored(page), raw)
         return snapshot, raw, self.eligibility(page, snapshot)
 
+    def enable_editing(self, page):
+        if not page.locator('#editing-enabled').is_checked():
+            if not page.locator('#editor').evaluate('element => element.open'):
+                page.locator('#editor-open').click()
+            page.locator('label:has(#editing-enabled)').click()
+            page.locator('[data-close=editor]').click()
+
     def native_import(self, page, snapshot, name='mask-revision.json'):
+        self.enable_editing(page)
         if not page.locator('#editor').evaluate('element => element.open'):
             page.locator('#editor-open').click()
         page.locator('#import-json').set_input_files({
@@ -194,6 +202,7 @@ class MaskRevision(unittest.TestCase):
         self.assert_grid(active['territoryGrid'], self.real_grid(fresh, old), 'Fallback old raster')
         self.assertEqual(self.stored(fallback), raw, 'Startup preserves exact original draft string')
         self.assertEqual(fallback.evaluate('window.maskRevisionStorageWrites'), [], 'No startup migration writes')
+        self.enable_editing(fallback)
         fallback.locator('#editor-open').click()
         fallback.locator('#draft-reset').click()
         fallback.locator('#confirm-yes').click()
@@ -278,6 +287,7 @@ class MaskRevision(unittest.TestCase):
         self.assertTrue(expected_old[0], 'Old active mask is ready despite failed baseline preload')
         self.assertEqual([before['meta']['width'], before['meta']['height']], [3247, 4860])
         self.assertEqual(page.evaluate('window.maskRevisionStorageWrites'), [])
+        self.enable_editing(page)
         page.locator('#editor-open').click()
         page.locator('#draft-reset').click()
         page.locator('#confirm-yes').click()
@@ -301,6 +311,7 @@ class MaskRevision(unittest.TestCase):
     def test_05_uncached_synchronous_commit_rejects_before_state_or_storage(self):
         page = self.boot()
         before, raw, expected_eligibility = self.exact_live_draft(page)
+        self.enable_editing(page)
         for with_grid in (True, False):
             with self.subTest(author_grid=with_grid):
                 incoming = json.loads(json.dumps(before))

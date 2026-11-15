@@ -1,0 +1,248 @@
+/* Council-only geometry; use royal-windows.css surfaces and shared controls. */
+#royal-council {
+  width: min(1160px, calc(100vw - 24px));
+  max-width: calc(100vw - 24px);
+  height: fit-content;
+  max-height: calc(var(--app-height, 100dvh) - 24px);
+  padding: 0;
+  overflow: hidden;
+  scrollbar-gutter: auto;
+}
+#royal-council[open] { display: flex; flex-direction: column; }
+#royal-council [hidden] { display: none !important; }
+#royal-council > .dialog-head { flex: none; }
+#royal-council .council-body {
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  padding: 16px 20px 22px;
+}
+#royal-council :is(h3, h4, h5, p) { margin: 0; }
+#royal-council .council-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+#royal-council .council-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 8px 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+#royal-council .council-filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+#royal-council .council-filters > label {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+#royal-council .council-check input {
+  position: static;
+  width: 20px;
+  height: 20px;
+  flex: none;
+  margin: 0;
+  accent-color: var(--gold, #c2a575);
+}
+#royal-council .council-influence {
+  min-width: 0;
+  margin-bottom: 16px;
+  padding: 16px;
+  border: 1px solid var(--royal-line, #393b3b);
+  background: var(--royal-panel, #1a1d1f);
+}
+#royal-council .council-influence-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+#royal-council .council-influence-head > h3 { font-size: 18px; font-weight: normal; }
+#royal-council .council-influence-form { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--royal-line, #393b3b); }
+#royal-council .council-influence-labels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 12px 0 10px;
+}
+#royal-council .council-influence-label { min-width: 0; }
+#royal-council .council-influence-label[data-party=royalists] { color: var(--council-royalist-color, #9aa8b6); }
+#royal-council .council-influence-label[data-party=internationalists] { color: var(--council-internationalist-color, #639096); text-align: right; }
+#royal-council .council-influence-name { font-size: 14px; font-weight: normal; overflow-wrap: anywhere; }
+#royal-council .council-influence-values {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px 10px;
+  margin-top: 6px;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+#royal-council .council-influence-label[data-party=internationalists] .council-influence-values { justify-content: flex-end; }
+#royal-council .council-influence-points { min-width: 0; overflow-wrap: anywhere; }
+#royal-council .council-influence-percent { font-size: 12px; white-space: nowrap; color: var(--royal-ink, #ddd5c2); }
+#royal-council .council-influence-bar {
+  display: flex;
+  min-width: 0;
+  height: 14px;
+  border: 1px solid var(--royal-line, #393b3b);
+  background: var(--royal-control, #26282a);
+  overflow: hidden;
+}
+#royal-council .council-influence-bar > span { height: 100%; flex: none; min-width: 0; }
+#royal-council #council-influence-royalists { background: var(--council-royalist-color, #9aa8b6); }
+#royal-council #council-influence-internationalists { background: var(--council-internationalist-color, #639096); }
+#royal-council .council-influence-message { margin-top: 10px; font-size: 12px; line-height: 1.5; color: var(--royal-muted, #96978d); }
+#royal-council .council-rosters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+#royal-council .council-party {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--royal-line, #393b3b);
+  background: var(--royal-panel, #1a1d1f);
+  overflow-wrap: anywhere;
+}
+#royal-council .council-party[data-party=neutral] { grid-column: 1 / -1; }
+#royal-council .council-rosters:not([data-party-filter=all]) > .council-party { grid-column: 1 / -1; }
+#royal-council .council-party > h3 {
+  font-size: 21px;
+  color: var(--royal-ink, #ddd5c2);
+}
+#royal-council .council-leader {
+  color: var(--royal-muted, #96978d);
+  font-size: 13px;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+#royal-council :is(.council-house-list, .council-person-list) { margin-top: 16px; }
+#royal-council :is(.council-house-list, .council-person-list) > h4 {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--royal-line, #393b3b);
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--gold, #c2a575);
+}
+#royal-council .council-empty {
+  padding: 12px 0;
+  color: var(--royal-muted, #96978d);
+  font-size: 12px;
+}
+#royal-council .council-member {
+  min-width: 0;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--royal-line, #393b3b);
+  overflow-wrap: anywhere;
+}
+#royal-council .council-member:last-child { border-bottom: 0; padding-bottom: 0; }
+#royal-council .council-member-identity { display: flex; align-items: start; gap: 12px; }
+#royal-council .council-member-identity .faction-shield { width: 36px; height: 44px; flex: none; }
+#royal-council .council-member-name { min-width: 0; }
+#royal-council .council-member-name h5 { font-size: 16px; font-weight: normal; line-height: 1.35; }
+#royal-council :is(.council-member-title, .council-member-house) { font-size: 12px; color: var(--royal-muted, #96978d); margin-top: 4px; }
+#royal-council .council-advisor-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 5px 8px;
+  background: #302e27;
+  border: 1px solid #8c7450;
+  color: #e1c794;
+  font-size: 12px;
+}
+#royal-council .council-member-badges { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+#royal-council :is(.council-party-badge, .council-potential-badge, .council-inactive-badge) {
+  font-size: 11px;
+  border: 1px solid var(--royal-line, #393b3b);
+  color: var(--royal-muted, #96978d);
+  padding: 4px 7px;
+}
+#royal-council .council-stance { font-size: 12px; line-height: 1.5; }
+#royal-council .stance-support { color: #abd0a9; }
+#royal-council .stance-oppose { color: #e9b3ae; }
+#royal-council .stance-unknown { color: var(--royal-muted, #96978d); }
+#royal-council .council-person-ratings { display: grid; gap: 10px; margin-top: 12px; min-width: 0; }
+#royal-council .council-person-rating { display: grid; gap: 5px; min-width: 0; }
+#royal-council .council-rating-caption { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; font-size: 12px; }
+#royal-council .council-rating-value { flex: none; color: var(--royal-ink, #ddd5c2); font-variant-numeric: tabular-nums; }
+#royal-council .council-person-rating progress {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 8px;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background: var(--royal-control, #26282a);
+  color: var(--council-rating-color, #96978d);
+  accent-color: var(--council-rating-color, #96978d);
+}
+#royal-council .council-person-rating progress::-webkit-progress-bar { background: var(--royal-control, #26282a); }
+#royal-council .council-person-rating progress::-webkit-progress-value { background: var(--council-rating-color, #96978d); }
+#royal-council .council-person-rating progress::-moz-progress-bar { background: var(--council-rating-color, #96978d); }
+#royal-council .council-rating-unknown { font-size: 11px; line-height: 1.5; color: var(--royal-muted, #96978d); }
+#royal-council .council-note { margin-top: 8px; font-size: 12px; line-height: 1.65; white-space: pre-wrap; }
+#royal-council .council-source-links { display: grid; gap: 5px; margin: 10px 0; font-size: 11px; }
+#royal-council .council-source-links a { color: var(--gold-bright, #e0c493); overflow-wrap: anywhere; }
+#royal-council .council-member > button { margin: 10px 5px 0 0; }
+#royal-council .council-history {
+  margin-top: 20px;
+  border: 1px solid var(--royal-line, #393b3b);
+  padding: 16px;
+  overflow-wrap: anywhere;
+}
+#royal-council .council-history > h3 { font-size: 17px; font-weight: normal; color: var(--royal-muted, #96978d); }
+#royal-council .council-form {
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid #8c7450;
+  border-radius: 2px;
+}
+#royal-council .council-form > h3 { margin-bottom: 14px; font-size: 18px; font-weight: normal; }
+#royal-council .council-form-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+#royal-council .council-form-fields > label { min-width: 0; font-size: 12px; line-height: 1.5; }
+#royal-council .council-form-fields > label:not(.council-check) { display: grid; gap: 6px; }
+#royal-council .council-form-fields > label:has(textarea) { grid-column: 1 / -1; }
+#royal-council .council-person-influence-hint { grid-column: 1 / -1; font-size: 12px; line-height: 1.5; color: var(--royal-muted, #96978d); }
+#royal-council :is(input:not([type=checkbox]), select, textarea) {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  font: inherit;
+  background: var(--royal-control, #26282a);
+  color: var(--royal-ink, #ddd5c2);
+  border: 1px solid var(--royal-control-line, #605b4c);
+  border-radius: 2px;
+  padding: 10px 12px;
+}
+#royal-council textarea { resize: vertical; min-height: 90px; max-height: 240px; }
+#royal-council .council-form-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+#royal-council .council-form-error { color: #e9b3ae; margin-top: 12px; overflow-wrap: anywhere; }
+#royal-council :is(button, input, textarea, select, a):focus-visible { outline: 2px solid var(--gold-bright, #e0c493); outline-offset: 3px; }
+@media (max-width: 760px) {
+  #royal-council { width: calc(100vw - 16px); max-width: calc(100vw - 16px); max-height: calc(var(--app-height, 100dvh) - 16px); }
+  #royal-council .council-body { padding: 12px; }
+  #royal-council .council-rosters { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  #royal-council .council-party[data-party=neutral] { grid-column: auto; }
+  #royal-council :is(.council-party, .council-form, .council-history, .council-influence) { padding: 12px; }
+  #royal-council .council-influence-values { font-size: 13px; }
+  #royal-council .council-form-fields { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  #royal-council .council-filters { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  #royal-council .council-form-actions > button { flex: 1 1 120px; }
+}
+@media (max-height: 540px) and (orientation: landscape) {
+  #royal-council { max-height: calc(var(--app-height, 100dvh) - 16px); }
+  #royal-council > .dialog-head { padding: 6px 14px; min-height: 58px; }
+  #royal-council .council-body { padding: 10px 14px; }
+}

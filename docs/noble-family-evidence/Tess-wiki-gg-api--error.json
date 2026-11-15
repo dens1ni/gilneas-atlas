@@ -1,0 +1,5 @@
+{
+  "url": "https://warcraft.wiki.gg/api.php?action=parse&page=Tess+Greymane&prop=text%7Crevid%7Cdisplaytitle&format=json",
+  "error": "HTTP Error 403: Forbidden",
+  "file": "Tess-wiki-gg-api--error.json"
+}

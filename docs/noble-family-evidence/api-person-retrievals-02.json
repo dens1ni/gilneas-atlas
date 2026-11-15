@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://warcraft.wiki.gg/api.php?action=parse&page=To+Gilneas+%28Horde%29&prop=text%7Crevid&format=json",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://warcraft.wiki.gg/api.php?action=parse&page=Liam+Greymane&prop=text%7Crevid&format=json",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Hiram+Creed&prop=text%7Crevid&format=json",
+    "keys": [
+      "parse"
+    ],
+    "length": 3029,
+    "title": "Lord Hiram Creed"
+  }
+]

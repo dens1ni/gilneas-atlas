@@ -1,4 +1,6 @@
-export function initChronicle(getData) {
+import { createNobleLifeStatusTag } from './noble-life-status.mjs';
+
+export function initChronicle(getData, {onOpenCouncil} = {}) {
   const $=id=>document.getElementById(id);
   let tab='history';
   function el(tag,text='',className='') {
@@ -6,11 +8,13 @@ export function initChronicle(getData) {
   }
   function sourceLinks(container,ids) {
     const sources=getData().sources||[];
+    const wrapper=el('div','','chronicle-source-links');
     for(const id of ids||[]) {
       const s=sources.find(s=>s.id===id);
       if(!s||!/^https?:\/\//i.test(s.url))continue;
-      const a=el('a',`[${s.id}] ${s.title}`);a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';container.append(a,el('br'));
+      const a=el('a',`[${s.id}] ${s.title}`);a.href=s.url;a.target='_blank';a.rel='noopener noreferrer';wrapper.append(a,el('br'));
     }
+    if(wrapper.childNodes.length)container.append(wrapper);
   }
   function render() {
     const body=$('chronicle-content'),data=getData();body.replaceChildren();
@@ -23,6 +27,7 @@ export function initChronicle(getData) {
     } else if(tab==='nobles') {
       for(const noble of data.nobles||[]) {
         const name=el('h3',noble.name),button=el('button','Открыть досье','iron-button');button.type='button';button.dataset.nobleId=noble.id;button.onclick=()=>window.gilneasApp?.nobleDossier?.open(noble.id);
+        name.append(createNobleLifeStatusTag(noble));
         const node=el('section','','noble-card');node.id='noble-'+noble.id;node.append(name,el('span',noble.title||'','eyebrow'),el('p',noble.description||''),button);
         sourceLinks(node,noble.sources);body.append(node);
       }
@@ -43,10 +48,14 @@ export function initChronicle(getData) {
     $('chronicle').showModal();$('chronicle').focus();
     if(id)requestAnimationFrame(()=>{
       const node=document.getElementById((tab==='nobles'?'noble-':'source-')+id);
-      if(node)$('chronicle').scrollTop=node.offsetTop-110;
+      if(node){
+        const body=$('chronicle').querySelector('.dialog-content');
+        body.scrollTop+=node.getBoundingClientRect().top-body.getBoundingClientRect().top-16;
+      }
     });
   }
   for(const key of ['history','nobles','sources'])$('chronicle-'+key).onclick=()=>{tab=key;render();};
+  if($('chronicle-council'))$('chronicle-council').onclick=()=>onOpenCouncil?.();
   $('chronicle-open').onclick=()=>open();
   return {open,render};
 }

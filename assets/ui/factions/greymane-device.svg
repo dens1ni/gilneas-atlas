@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" width="40" height="44">
+<title>greymane device</title>
+<g fill="#9aa8b6" stroke="#343c43" stroke-width=".75" stroke-linejoin="round">
+<path d="M5 12 12 17 20 7 28 17 35 12 31 26H9Z"/>
+<path d="M9 28H31V31H9Z"/>
+<path d="M12 35H15V40H12ZM18.5 35H21.5V42H18.5ZM25 35H28V40H25Z"/>
+<path d="M12 24H28" fill="none" stroke="#c0c9d1" stroke-width=".7"/>
+</g>
+</svg>

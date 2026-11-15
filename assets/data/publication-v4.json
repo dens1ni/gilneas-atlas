@@ -1,0 +1,5238 @@
+{
+  "version": 1,
+  "meta": {
+    "width": 3526,
+    "height": 4548,
+    "image": "assets/maps/gilneas-origins-enhanced.webp",
+    "mist": "assets/maps/origins-inactive-mist.webp",
+    "inactiveMask": "assets/maps/origins-inactive-mask.png",
+    "era": "Человеческий Гилнеас после Второй войны · открытые северные владения",
+    "labels": [
+      {
+        "x": 1970,
+        "y": 2810,
+        "text": "Гилнеас",
+        "size": 15
+      },
+      {
+        "x": 2152,
+        "y": 805,
+        "text": "Серебряный бор",
+        "size": 12
+      },
+      {
+        "x": 2990,
+        "y": 820,
+        "text": "Лордамер",
+        "size": 10
+      }
+    ],
+    "chronicle": [
+      {
+        "title": "Двор Гилнеаса",
+        "text": "Генн Седогрив правит королевством, опираясь на совет влиятельных лордов. Краули выступает за общую защиту людских земель, а Годфри и Эшбери предпочитают беречь силы страны.",
+        "sources": [
+          32,
+          45,
+          49,
+          50
+        ]
+      },
+      {
+        "title": "Северные владения",
+        "text": "Деревня Погребальных Костров и Янтарная мельница принадлежат Дариусу Краули. Лесные дороги связывают эти земли с полуостровом и гилнеасской столицей.",
+        "sources": [
+          2,
+          32,
+          35
+        ]
+      },
+      {
+        "title": "Королевская граница",
+        "text": "На совете обсуждают новый каменный рубеж на севере. Годфри указывает на горные преграды; Генну предстоит решить, где пройдёт линия, затрагивающая земли Марли и Краули.",
+        "sources": [
+          46,
+          49,
+          52
+        ]
+      },
+      {
+        "title": "Королевства у Лордамера",
+        "text": "У берегов большого озера стоит Даларан — наземный город магов Кирин-Тора. На острове Фенриса возвышается лордеронская крепость, а северный двор Теренаса остаётся средоточием Альянса.",
+        "sources": [
+          36,
+          37,
+          38,
+          39,
+          41
+        ]
+      }
+    ],
+    "sourceMethod": "Wowpedia primary; Blizzard corroboration; names verified separately against ruRU client data. No coordinates or unknown private estates derived from wiki speculation.",
+    "researchCounts": {
+      "locationsResearched": 69,
+      "noblesResearched": 15,
+      "supportedCanonicalOwnershipPolygons": 0,
+      "courtNoblesResearched": 17,
+      "courtHousesResearched": 7
+    },
+    "wallConstruction": {
+      "value": 10,
+      "max": 100
+    },
+    "publicationRevision": "royal-council-v4",
+    "gilneasCrest": "assets/ui/gilneas-royal-shield.svg",
+    "enhancedWidth": 5289,
+    "enhancedHeight": 6822,
+    "mapRevision": "origins-map-v3",
+    "mapRegistration": [
+      [
+        1.0000714084639792,
+        4.6356373315115434e-07,
+        21.829301742553138
+      ],
+      [
+        0.00029746699753263394,
+        1.0003107079022746,
+        -294.74264523091625
+      ],
+      [
+        8.099890258558749e-08,
+        3.3643335134196704e-08,
+        1
+      ]
+    ],
+    "homeBounds": {
+      "x": 450,
+      "y": 2180,
+      "width": 2480,
+      "height": 2140
+    },
+    "gilneasHeraldry": {
+      "symbol": "assets/ui/gilneas-royal-symbol.png",
+      "field": "#131516",
+      "edge": "#65707b",
+      "device": "#9aa8b6",
+      "source": "user-supplied royal banner"
+    }
+  },
+  "factions": [
+    {
+      "id": "gilneas",
+      "name": "Королевство Гилнеас",
+      "color": "#9aa8b6",
+      "parent": null,
+      "ruler": "Генн Седогрив",
+      "description": "Человеческое королевство на западном полуострове; ещё член Альянса Лордерона.",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          2,
+          32
+        ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/gilneas-royal-symbol.png",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "field": "#131516",
+        "origin": "author",
+        "note": "Existing author-supplied royal device; PNG bytes unchanged. Root meta.gilneasHeraldry, including custom author metadata, remains authoritative."
+      }
+    },
+    {
+      "id": "greymane",
+      "name": "Дом Седогривов",
+      "color": "#c49b60",
+      "parent": "gilneas",
+      "ruler": "Генн Седогрив",
+      "description": "Правящая династия Гилнеаса, чей двор объединяет столицу и западную королевскую резиденцию.",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          3
+        ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/greymane-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed crown and three short rain strokes; dynastic theme, not canonical Greymane arms."
+      }
+    },
+    {
+      "id": "crowley",
+      "name": "Дом Краули",
+      "color": "#639096",
+      "parent": "gilneas",
+      "ruler": "Дариус Краули",
+      "description": "Северный дом Дариуса Краули; Пирвуд и Янтарная мельница входят в его земли.",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          3
+        ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/crowley-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed northern fir over crossed arms; no worgen, rebellion or later liberation-front device."
+      }
+    },
+    {
+      "id": "silverlaine",
+      "name": "Дом Сребролена",
+      "color": "#93a798",
+      "parent": "crowley",
+      "ruler": "Барон Сребролен",
+      "description": "Баронский дом северных земель Гилнеаса. Его крепость над Пирвудом подчинена дому Краули.",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          3
+        ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/silverlaine-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed crenellated gate-tower for the keep's prior stewardship; no ghost or wolf device."
+      }
+    },
+    {
+      "id": "godfrey",
+      "name": "Дом Годфри",
+      "color": "#8e789b",
+      "parent": "gilneas",
+      "ruler": "Винсент Годфри",
+      "description": "Дом королевского советника Винсента Годфри и связанное с ним придворное окружение.",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          3
+        ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/godfrey-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed upright military blade over paired guard blades for standing-militia service; no undead or late-pistol iconography."
+      }
+    },
+    {
+      "id": "ashbury",
+      "name": "Дом Эшбери",
+      "color": "#b47869",
+      "parent": "gilneas",
+      "ruler": "Барон Эшбери",
+      "description": "Дом Эшбери, из поколения в поколение связанный со службой короне Седогривов.",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          3
+        ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/ashbury-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed trefoil-bowed court key for the family's fidelity to the crown, not canonical Ashbury arms."
+      }
+    },
+    {
+      "id": "marley",
+      "name": "Дом Марли",
+      "color": "#9b9d68",
+      "parent": "gilneas",
+      "ruler": "Лорд Марли",
+      "description": "Дом королевского советника Марли, владеющего провинцией у северных рубежей.",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          3
+        ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/marley-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed north-pointing spear/compass with paired boundary marks; no claim to an exact northern estate."
+      }
+    },
+    {
+      "id": "walden",
+      "name": "Дом Уолденов",
+      "color": "#91836e",
+      "parent": "gilneas",
+      "ruler": "",
+      "description": "Дом гилнеасской знати, связанный с восточными прибрежными землями.",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          3
+        ],
+        "note": "Титул и земли до стены неизвестны."
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/walden-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed anchor and short wave for an eastern/coastal association; early title, house ownership and court office remain unproven."
+      }
+    },
+    {
+      "id": "dalaran",
+      "name": "Королевство Даларан",
+      "color": "#aa85c4",
+      "parent": null,
+      "ruler": "Совет Шести · Антонидас",
+      "description": "Магократия Кирин-Тора; наземная столица на берегу Лордамера.",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          36,
+          37
+        ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/dalaran-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "canonical-stylized",
+        "note": "Silver simplification of the actual Warcraft II Dalaran eye: detached arch, central eye, lower band and three rays. Palette/layout treatment is not canonical color or official art."
+      }
+    },
+    {
+      "id": "lordaeron",
+      "name": "Королевство Лордерон",
+      "color": "#7592b2",
+      "parent": null,
+      "ruler": "Теренас Менетил II",
+      "description": "Северное человеческое королевство и центр Альянса Лордерона.",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          39
+        ]
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/lordaeron-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "canonical-stylized",
+        "note": "Silver source-derived central Lordaeron L-and-sword from the actual Wowpedia crest; excludes surrounding lion, crossed weapons and original shield frame."
+      }
+    }
+  ],
+  "locations": [
+    {
+      "id": "gilneas-city",
+      "name": "Город Гилнеас",
+      "x": 1795,
+      "y": 3050,
+      "type": "city",
+      "capital": true,
+      "faction": "greymane",
+      "owner": "Генн Седогрив",
+      "description": "Город Гилнеас — столица королевства Седогривов в сердце полуострова. Узкие мощеные улицы проходят между тесно стоящими готическими домами, а над четырьмя кварталами возвышается Собор Рассвета. Здесь сосредоточены королевская власть, торговля и военная жизнь страны.",
+      "objects": [],
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "chronology": "Древняя столица подтверждена; конкретная четырехквартальная планировка показана источником поздней эпохи, не имеет отдельной довоенной даты.",
+        "note": "",
+        "historicalAffiliation": "unknown",
+        "ownerStatus": "confirmed",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "subtitle": "Столица человеческого королевства",
+      "englishName": "Gilneas City",
+      "aliases": [
+        "Город Гилнеас",
+        "Ruins of Gilneas City (только позднее название)"
+      ],
+      "shortDescription": "Столица Седогривов с мощеными улицами и Собором Рассвета.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Gilneas_City",
+      "sources": [
+        1,
+        2,
+        3,
+        9,
+        10
+      ],
+      "loreSources": [
+        [
+          1,
+          2
+        ],
+        [
+          1
+        ],
+        [
+          1,
+          9,
+          10
+        ]
+      ]
+    },
+    {
+      "id": "greymane-manor",
+      "name": "Поместье Седогрива",
+      "x": 808,
+      "y": 3042,
+      "type": "estate",
+      "positionConfidence": "reconstruction",
+      "faction": "greymane",
+      "owner": "",
+      "description": "Поместье Седогрива возвышается в холмах западного Гилнеаса. Это просторная резиденция королевской семьи, обращенная к прибрежным землям Темной Гавани. Высокое положение отделяет двор от шумных улиц столицы и морских низин.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          5,
+          4
+        ],
+        "chronology": "Каноническое поместье Седогрива; владение подтверждено в позднем источнике, но возраст здания до стены не указан. pre_wall_owner=unknown именно потому, что точная эпоха не доказана.",
+        "note": "Каноническое поместье Седогрива; владение подтверждено в позднем источнике, но возраст здания до стены не указан. pre_wall_owner=unknown именно потому, что точная эпоха не доказана.",
+        "historicalAffiliation": "Genn Greymane and family / Генн Седогрив и его семья",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Greymane Manor",
+      "aliases": [
+        "Поместье Седогрива"
+      ],
+      "shortDescription": "Королевская резиденция в западных холмах над прибрежными землями.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Greymane_Manor",
+      "sources": [
+        3,
+        5
+      ],
+      "loreSources": [
+        [
+          5
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ]
+      ]
+    },
+    {
+      "id": "cathedral-quarter",
+      "name": "Соборный квартал",
+      "x": 1685,
+      "y": 3005,
+      "type": "district",
+      "faction": "greymane",
+      "owner": "",
+      "description": "Соборный квартал занимает северо-западную часть города Гилнеаса. Перед входом в Собор Рассвета раскинулась парковая часть столицы, связанная улицами с Торговой площадью и Площадью Седогрива. Здесь городская жизнь соседствует с духовенством и верой в Святой Свет.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          6,
+          1,
+          4
+        ],
+        "chronology": "Канонический квартал, но его существование и название именно до стены отдельно не датированы. Допустим в реконструкции старого города; не считать прямым довоенным свидетельством.",
+        "note": "Канонический квартал, но его существование и название именно до стены отдельно не датированы. Допустим в реконструкции старого города; не считать прямым довоенным свидетельством.",
+        "historicalAffiliation": "Kingdom of Gilneas / поздняя планировка столицы",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Cathedral Quarter",
+      "aliases": [
+        "Соборный квартал"
+      ],
+      "shortDescription": "Северо-западный квартал с парком перед Собором Рассвета.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Cathedral_Quarter",
+      "sources": [
+        2,
+        6,
+        7
+      ],
+      "loreSources": [
+        [
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "id": "lights-dawn-cathedral",
+      "name": "Собор Рассвета",
+      "x": 1708,
+      "y": 2930,
+      "type": "landmark",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Собор Рассвета — огромный храм Святого Света в центре города Гилнеаса. Его вход обращен к Соборному кварталу, а само здание служит главным ориентиром городской планировки. Под его сводами духовенство хранит веру гилнеасской столицы.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          7,
+          4
+        ],
+        "chronology": "Здание достоверно известно до Катаклизма, но дата строительства до стены не установлена; не сочинять строительство при Арчибальде по RP-вики.",
+        "note": "Здание достоверно известно до Катаклизма, но дата строительства до стены не установлена; не сочинять строительство при Арчибальде по RP-вики.",
+        "historicalAffiliation": "Gilnean clergy of the Church of the Holy Light / гилнеасское духовенство",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Light's Dawn Cathedral",
+      "aliases": [
+        "Собор Света Рассвета"
+      ],
+      "shortDescription": "Главный храм Святого Света в центре Гилнеаса.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Light%27s_Dawn_Cathedral",
+      "sources": [
+        1,
+        2,
+        7
+      ],
+      "loreSources": [
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "id": "greymane-court",
+      "name": "Площадь Седогрива",
+      "x": 1685,
+      "y": 3170,
+      "type": "district",
+      "faction": "greymane",
+      "owner": "",
+      "description": "Площадь Седогрива образует юго-западный квартал столицы. На восток отсюда ведут улицы Военного квартала, на север — Соборного. Имя правящей семьи вписано в повседневную географию королевского города.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          8,
+          1,
+          4
+        ],
+        "chronology": "Канонический квартал, но его существование и название именно до стены отдельно не датированы. Допустим в реконструкции старого города; не считать прямым довоенным свидетельством.",
+        "note": "Канонический квартал, но его существование и название именно до стены отдельно не датированы. Допустим в реконструкции старого города; не считать прямым довоенным свидетельством.",
+        "historicalAffiliation": "Kingdom of Gilneas / поздняя планировка столицы",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Greymane Court",
+      "aliases": [
+        "Двор Седогрива"
+      ],
+      "shortDescription": "Юго-западный квартал между Соборным и Военным кварталами.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Greymane_Court",
+      "sources": [
+        3,
+        8
+      ],
+      "loreSources": [
+        [
+          8
+        ],
+        [
+          8
+        ],
+        [
+          3,
+          8
+        ]
+      ]
+    },
+    {
+      "id": "merchant-square",
+      "name": "Торговая площадь",
+      "x": 1925,
+      "y": 2945,
+      "type": "district",
+      "faction": "greymane",
+      "owner": "",
+      "description": "Торговая площадь занимает северо-восток города Гилнеаса. Ее улицы соединяются с Соборным кварталом на западе и Военным кварталом на юге. Торговое сердце столицы обращено к дороге на северо-восток, ведущей к почтовой станции.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          9,
+          1,
+          4
+        ],
+        "chronology": "Канонический квартал, но его существование и название именно до стены отдельно не датированы. Допустим в реконструкции старого города; не считать прямым довоенным свидетельством.",
+        "note": "Канонический квартал, но его существование и название именно до стены отдельно не датированы. Допустим в реконструкции старого города; не считать прямым довоенным свидетельством.",
+        "historicalAffiliation": "Kingdom of Gilneas / поздняя планировка столицы",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Merchant Square",
+      "aliases": [
+        "Площадь торговцев"
+      ],
+      "shortDescription": "Северо-восточный торговый квартал у дороги к почтовой станции.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Merchant_Square",
+      "sources": [
+        9
+      ],
+      "loreSources": [
+        [
+          9
+        ],
+        [
+          9
+        ],
+        [
+          9
+        ]
+      ]
+    },
+    {
+      "id": "military-district",
+      "name": "Военный квартал",
+      "x": 1920,
+      "y": 3180,
+      "type": "district",
+      "faction": "greymane",
+      "owner": "",
+      "description": "Военный квартал расположен в юго-восточной части города Гилнеаса. Он связан с Торговой площадью на севере и Площадью Седогрива на западе. Среди его главных сооружений — укрепленный комплекс Каменной тюрьмы, напоминающий о власти короны и охране городского порядка.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          10,
+          1,
+          4
+        ],
+        "chronology": "Канонический квартал, но его существование и название именно до стены отдельно не датированы. Допустим в реконструкции старого города; не считать прямым довоенным свидетельством.",
+        "note": "Канонический квартал, но его существование и название именно до стены отдельно не датированы. Допустим в реконструкции старого города; не считать прямым довоенным свидетельством.",
+        "historicalAffiliation": "Kingdom of Gilneas / поздняя планировка столицы",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Military District",
+      "aliases": [
+        "Военный квартал"
+      ],
+      "shortDescription": "Юго-восточный квартал столицы с укрепленной Каменной тюрьмой.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Military_District",
+      "sources": [
+        10,
+        11
+      ],
+      "loreSources": [
+        [
+          10
+        ],
+        [
+          10
+        ],
+        [
+          10,
+          11
+        ]
+      ]
+    },
+    {
+      "id": "stoneward-prison",
+      "name": "Каменная тюрьма",
+      "x": 1822,
+      "y": 3207,
+      "type": "fortress",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Каменная тюрьма — укрепленный тюремный комплекс в Военном квартале Гилнеаса. Ее внутренний двор отделен от улиц столицы крепкими стенами. Здесь государственная власть принимает суровый облик заключения и наказания.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          11,
+          4
+        ],
+        "chronology": "Дата основания неизвестна. Краули не должен быть пленником: его восстание произошло после стены.",
+        "note": "Дата основания неизвестна. Краули не должен быть пленником: его восстание произошло после стены.",
+        "historicalAffiliation": "Kingdom of Gilneas",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Stoneward Prison",
+      "aliases": [
+        "Тюрьма Каменная Стража",
+        "Gilneas City Prison"
+      ],
+      "shortDescription": "Укрепленная городская тюрьма в Военном квартале.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Stoneward_Prison",
+      "sources": [
+        2,
+        11
+      ],
+      "loreSources": [
+        [
+          11
+        ],
+        [
+          11
+        ],
+        [
+          2,
+          11
+        ]
+      ]
+    },
+    {
+      "id": "keel-harbor",
+      "name": "Килевая гавань",
+      "x": 1221,
+      "y": 2780,
+      "type": "harbor",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Килевая гавань — небольшой порт в центральной части Гилнеаса, к западу от столицы. Поселение обращено к морю, а причалы связывают его с судоходством у берегов полуострова. Среди холмистых земель это один из выходов города к воде.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          12,
+          4
+        ],
+        "chronology": "Правильное русское имя — Килевая гавань, не Килеватая. Управление лордом Годфри из RP-статей не подтверждено. Дата основания до стены неизвестна.",
+        "note": "Правильное русское имя — Килевая гавань, не Килеватая. Управление лордом Годфри из RP-статей не подтверждено. Дата основания до стены неизвестна.",
+        "historicalAffiliation": "Kingdom of Gilneas / Королевство Гилнеас",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Keel Harbor",
+      "aliases": [
+        "Килевая гавань",
+        "Килевая Гавань",
+        "Килеватая гавань (неверный вариант)"
+      ],
+      "shortDescription": "Небольшой порт к западу от города Гилнеаса.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Keel_Harbor",
+      "sources": [
+        12
+      ],
+      "loreSources": [
+        [
+          12
+        ],
+        [
+          12
+        ],
+        [
+          12
+        ]
+      ]
+    },
+    {
+      "id": "duskhaven",
+      "name": "Темная Гавань",
+      "x": 791,
+      "y": 3442,
+      "type": "settlement",
+      "positionConfidence": "reconstruction",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Темная Гавань лежит на юго-западном побережье Гилнеаса. Над городом поднимаются западные холмы с королевским поместьем, а рядом раскинулись сады и сельские хозяйства. Здесь морское побережье встречается с повседневной жизнью земледельческого края.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          13,
+          4
+        ],
+        "chronology": "Темная Гавань и Duskhaven/Даскхейвен — ОДИН город, не две точки. Достоверно до Катаклизма; до стены отдельного подтверждения нет.",
+        "note": "Темная Гавань и Duskhaven/Даскхейвен — ОДИН город, не две точки. Достоверно до Катаклизма; до стены отдельного подтверждения нет.",
+        "historicalAffiliation": "Kingdom of Gilneas; Mayor Gwen Armstead / Гвен Армстед",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Duskhaven",
+      "aliases": [
+        "Сумеречная гавань",
+        "Даскхейвен",
+        "Темная гавань",
+        "Тёмная Гавань"
+      ],
+      "shortDescription": "Прибрежный город под западными холмами Гилнеаса.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Duskhaven",
+      "sources": [
+        3,
+        13,
+        14,
+        17
+      ],
+      "loreSources": [
+        [
+          13
+        ],
+        [
+          3,
+          14,
+          17
+        ],
+        [
+          13,
+          17
+        ]
+      ]
+    },
+    {
+      "id": "crowley-orchard",
+      "name": "Сад Краули",
+      "x": 832,
+      "y": 3602,
+      "type": "estate",
+      "positionConfidence": "reconstruction",
+      "faction": "crowley",
+      "owner": "",
+      "description": "Сад Краули — яблоневый сад южнее Темной Гавани, в юго-западных землях Гилнеаса. Дом и плодовые деревья составляют сельское хозяйство семьи Краули. Восточнее лежат ее конюшни, связывающие сад с соседним хозяйственным участком.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          14,
+          4
+        ],
+        "chronology": "Канонический объект семьи — яблоневый сад с домом. Точное довоенное основание неизвестно; не подменять его вымышленным Crowley Manor.",
+        "note": "Канонический объект семьи — яблоневый сад с домом. Точное довоенное основание неизвестно; не подменять его вымышленным Crowley Manor.",
+        "historicalAffiliation": "Crowley family / семья Краули",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Crowley Orchard",
+      "aliases": [
+        "Сады Краули",
+        "сад/усадьба Краули"
+      ],
+      "shortDescription": "Яблоневый сад семьи Краули рядом с Темной Гаванью.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Crowley_Orchard",
+      "sources": [
+        3,
+        14,
+        15
+      ],
+      "loreSources": [
+        [
+          14
+        ],
+        [
+          14,
+          3
+        ],
+        [
+          14,
+          15
+        ]
+      ]
+    },
+    {
+      "id": "crowley-stable-grounds",
+      "name": "Конюшни Краули",
+      "x": 941,
+      "y": 3599,
+      "type": "estate",
+      "positionConfidence": "reconstruction",
+      "faction": "crowley",
+      "owner": "",
+      "description": "Конюшни Краули занимают обширный участок к востоку от семейного яблоневого сада. Здесь держат горных лошадей среди сельских земель юго-западного Гилнеаса. Соседство с садом объединяет эти места в хозяйственное окружение семьи Краули.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          15,
+          4
+        ],
+        "chronology": "Достоверные конюшни; дата до стены неизвестна.",
+        "note": "Достоверные конюшни; дата до стены неизвестна.",
+        "historicalAffiliation": "Crowley family / семья Краули",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Crowley Stable Grounds",
+      "aliases": [
+        "Конюшни Краули"
+      ],
+      "shortDescription": "Обширные конюшенные земли к востоку от Сада Краули.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Crowley_Stable_Grounds",
+      "sources": [
+        14,
+        15
+      ],
+      "loreSources": [
+        [
+          15
+        ],
+        [
+          15
+        ],
+        [
+          14,
+          15
+        ]
+      ]
+    },
+    {
+      "id": "hayward-fishery",
+      "name": "Рыбное хозяйство Хейварда",
+      "x": 738,
+      "y": 3557,
+      "type": "harbor",
+      "positionConfidence": "reconstruction",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Рыбное хозяйство Хейварда расположено на небольшом острове у юго-западного побережья Гилнеаса. Рыбацкий промысел обращен к прибрежным водам, отделяющим остров от сельских земель Темной Гавани. Здесь жизнь полуострова связана с морем и работой рыболовных судов.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          16,
+          4
+        ],
+        "chronology": "Достоверное рыбацкое хозяйство; до стены дата неизвестна.",
+        "note": "Достоверное рыбацкое хозяйство; до стены дата неизвестна.",
+        "historicalAffiliation": "Hayward brothers: Sebastian, Ron, Trent, Walt, Tim",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Hayward Fishery",
+      "aliases": [
+        "Рыбный промысел Хейварда"
+      ],
+      "shortDescription": "Островной рыбный промысел у юго-западного побережья.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Hayward_Fishery",
+      "sources": [
+        16
+      ],
+      "loreSources": [
+        [
+          16
+        ],
+        [
+          16
+        ],
+        [
+          16
+        ]
+      ]
+    },
+    {
+      "id": "hammond-farmstead",
+      "name": "Ферма Хэммондов",
+      "x": 820,
+      "y": 3273,
+      "type": "estate",
+      "positionConfidence": "reconstruction",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Ферма Хэммондов находится на склоне к западу от Темной Гавани, в юго-западном Гилнеасе. Ее поля связаны с выращиванием кукурузы, а южнее лежит соседняя Ферма Аллена. Этот уголок побережья соединяет пахотную землю и животноводческие хозяйства.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          17,
+          4
+        ],
+        "chronology": "Хэммонд/Хаммонд — это семья и ферма, НЕ отдельный город. Дата до стены неизвестна.",
+        "note": "Хэммонд/Хаммонд — это семья и ферма, НЕ отдельный город. Дата до стены неизвестна.",
+        "historicalAffiliation": "Melinda Hammond / Мелинда Хэммонд",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Hammond Farmstead",
+      "aliases": [
+        "Ферма Хаммонда",
+        "Хэммонд",
+        "Хаммонд"
+      ],
+      "shortDescription": "Кукурузные поля к западу от Темной Гавани, рядом с Фермой Аллена.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Hammond_Farmstead",
+      "sources": [
+        17,
+        18
+      ],
+      "loreSources": [
+        [
+          17
+        ],
+        [
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ]
+    },
+    {
+      "id": "allen-farmstead",
+      "name": "Ферма Аллена",
+      "x": 910,
+      "y": 3382,
+      "type": "estate",
+      "positionConfidence": "reconstruction",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Ферма Аллена лежит ниже Темной Гавани, к западу от города и по соседству с Фермой Хэммондов. Ее хозяйство связано с разведением лошадей, овец и гилнеасских мастифов. Среди прибрежных сельских земель это животноводческий участок, дополняющий соседние кукурузные поля.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          18,
+          4
+        ],
+        "chronology": "Разводят лошадей и овец; довоенный владелец unknown.",
+        "note": "Разводят лошадей и овец; довоенный владелец unknown.",
+        "historicalAffiliation": "Marie Allen (seemingly) / Мари Аллен (в статье предположительно)",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Allen Farmstead",
+      "aliases": [
+        "Ферма Аллена"
+      ],
+      "shortDescription": "Животноводческая ферма у Темной Гавани с лошадьми, овцами и мастифами.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Allen_Farmstead",
+      "sources": [
+        17,
+        18
+      ],
+      "loreSources": [
+        [
+          18
+        ],
+        [
+          18
+        ],
+        [
+          18,
+          17
+        ]
+      ]
+    },
+    {
+      "id": "emberstone-village",
+      "name": "Деревня Тлеющего Угля",
+      "x": 2213,
+      "y": 2615,
+      "type": "settlement",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Деревня Тлеющего Угля стоит у Реки Северных врат в северо-восточном Гилнеасе. Неподалеку находится одноименная шахта, связывающая поселение с горными выработками. Речная долина помещает деревню между лесистым севером полуострова и его восточными возвышенностями.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          19,
+          4
+        ],
+        "chronology": "Не назначать Годфри или Краули владельцем по соседству. До стены не датирована.",
+        "note": "Не назначать Годфри или Краули владельцем по соседству. До стены не датирована.",
+        "historicalAffiliation": "Kingdom of Gilneas; landowner unknown",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Emberstone Village",
+      "aliases": [
+        "Деревня Углестон"
+      ],
+      "shortDescription": "Северо-восточная деревня на Реке Северных врат рядом с шахтой.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Emberstone_Village",
+      "sources": [
+        19,
+        20
+      ],
+      "loreSources": [
+        [
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19
+        ]
+      ]
+    },
+    {
+      "id": "emberstone-mine",
+      "name": "Шахта Тлеющего Угля",
+      "x": 2263,
+      "y": 2663,
+      "type": "mine",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Шахта Тлеющего Угля находится в северо-восточной части Гилнеаса, рядом с одноименной деревней. Ее подземные выработки составляют горнопромышленный участок этого края. Поселение и шахта образуют тесно связанные точки в долине Реки Северных врат.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          20,
+          4
+        ],
+        "chronology": "До стены не датирована. Уголь в Wowpedia лишь presumably, не подтвержденный материал.",
+        "note": "До стены не датирована. Уголь в Wowpedia лишь presumably, не подтвержденный материал.",
+        "historicalAffiliation": "Kingdom of Gilneas; owner unknown",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Emberstone Mine",
+      "aliases": [
+        "Шахта Углестон"
+      ],
+      "shortDescription": "Шахтные выработки рядом с Деревней Тлеющего Угля.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Emberstone_Mine",
+      "sources": [
+        19,
+        20
+      ],
+      "loreSources": [
+        [
+          20,
+          19
+        ],
+        [
+          20
+        ],
+        [
+          19,
+          20
+        ]
+      ]
+    },
+    {
+      "id": "stormglen",
+      "name": "Грозовой Перевал",
+      "x": 1856,
+      "y": 3882,
+      "type": "settlement",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Грозовой Перевал — небольшая рыбацкая деревня на южной опушке Черной дубравы. За ее домами начинается лес, а жизнь поселения обращена к прибрежным водам. Деревня соединяет морской промысел с дорогами южного Гилнеаса.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          21,
+          22,
+          4
+        ],
+        "chronology": "Канонический русский вариант — Грозовой Перевал. Дата поселения до стены неизвестна.",
+        "note": "Канонический русский вариант — Грозовой Перевал. Дата поселения до стены неизвестна.",
+        "historicalAffiliation": "Kingdom of Gilneas / Королевство Гилнеас",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Stormglen Village",
+      "aliases": [
+        "Деревня Штормглен",
+        "Stormglen",
+        "Штормглен (транслитерация)"
+      ],
+      "shortDescription": "Рыбацкая деревня на южной опушке Черной дубравы.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Stormglen_Village",
+      "sources": [
+        21,
+        22
+      ],
+      "loreSources": [
+        [
+          21,
+          22
+        ],
+        [
+          21,
+          22
+        ],
+        [
+          21,
+          22
+        ]
+      ]
+    },
+    {
+      "id": "blackwald",
+      "name": "Черная дубрава",
+      "x": 1799,
+      "y": 3622,
+      "type": "forest",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Черная дубрава раскинулась южнее города Гилнеаса и севернее Грозового Перевала. В восточной части леса стоит древнее дерево Тал'дорен, а на южной опушке находится Мельница Брэдшоу. Лес образует широкий зеленый пояс между столицей и южными поселениями.",
+      "objects": [],
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          23,
+          4,
+          46,
+          50
+        ],
+        "chronology": "Лес оставлять без банши, культа и активной колонии ночных эльфов. Довоенная топонимия не датирована.",
+        "note": "",
+        "historicalAffiliation": "unknown",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Blackwald",
+      "aliases": [
+        "Чёрный лес"
+      ],
+      "shortDescription": "Южный лесной пояс Гилнеаса с Тал'дореном и Мельницей Брэдшоу.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Blackwald",
+      "sources": [
+        23,
+        24,
+        25
+      ],
+      "loreSources": [
+        [
+          23
+        ],
+        [
+          24,
+          25
+        ],
+        [
+          23
+        ]
+      ]
+    },
+    {
+      "id": "taldoren",
+      "name": "Тал'дорен",
+      "x": 2057,
+      "y": 3500,
+      "type": "forest",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Тал'дорен — древнее дерево в восточной части Черной дубравы. Его имя означает «дикий дом» и обозначает уединенное место среди южных лесов Гилнеаса. Природный облик этого уголка резко отличается от каменных улиц королевской столицы.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          24,
+          4
+        ],
+        "chronology": "Древность дерева заявлена, но физический древний дом/тюрьма Друидов Стаи прямо оспаривается в Discrepancies Wowpedia. НЕ подтвержденное поселение ночных эльфов. Daral'nir — аналог в Изумрудном Сне, не вторая точка карты.",
+        "note": "Древность дерева заявлена, но физический древний дом/тюрьма Друидов Стаи прямо оспаривается в Discrepancies Wowpedia. НЕ подтвержденное поселение ночных эльфов. Daral'nir — аналог в Изумрудном Сне, не вторая точка карты.",
+        "historicalAffiliation": "unknown",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Tal'doren",
+      "aliases": [
+        "Тал’дорен",
+        "Талдорен",
+        "the wild home"
+      ],
+      "shortDescription": "Древнее дерево и «дикий дом» в восточной Черной дубраве.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Tal%27doren",
+      "sources": [
+        1,
+        24
+      ],
+      "loreSources": [
+        [
+          24
+        ],
+        [
+          24
+        ],
+        [
+          24,
+          1
+        ]
+      ]
+    },
+    {
+      "id": "bradshaw-mill",
+      "name": "Мельница Брэдшоу",
+      "x": 1844,
+      "y": 3796,
+      "type": "estate",
+      "positionConfidence": "reconstruction",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Мельница Брэдшоу находится на юге Черной дубравы, севернее Грозового Перевала. Это хозяйственное строение у лесной опушки, связанное с сельскими землями южного Гилнеаса. Ее положение отмечает переход от густого леса к окрестностям деревни.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          25,
+          4
+        ],
+        "chronology": "Возраст и время разрушения unknown. Рабочая мельница до стены — реконструкция, не доказанный факт.",
+        "note": "Возраст и время разрушения unknown. Рабочая мельница до стены — реконструкция, не доказанный факт.",
+        "historicalAffiliation": "Bradshaw / Брэдшоу",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Bradshaw Mill",
+      "aliases": [
+        "Мельница Брэдшоу"
+      ],
+      "shortDescription": "Мельница на южной опушке Черной дубравы над Грозовым Перевалом.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Bradshaw_Mill",
+      "sources": [
+        21,
+        25
+      ],
+      "loreSources": [
+        [
+          25
+        ],
+        [
+          25
+        ],
+        [
+          25,
+          21
+        ]
+      ]
+    },
+    {
+      "id": "tempests-reach",
+      "name": "Предел бури",
+      "x": 2290,
+      "y": 3250,
+      "type": "landmark",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Предел бури — прибрежное поселение с маяком на востоке Гилнеаса. Дома стоят на возвышенности над морем, а под скалами лежит каменистый берег. Маяк отмечает этот участок побережья и связывает поселение с морскими путями полуострова.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          26,
+          4
+        ],
+        "chronology": "Каноническое поселение с маяком. Присутствие Эшбери/Уолдена в квесте не доказывает их владение. Дата до стены неизвестна.",
+        "note": "Каноническое поселение с маяком. Присутствие Эшбери/Уолдена в квесте не доказывает их владение. Дата до стены неизвестна.",
+        "historicalAffiliation": "Kingdom of Gilneas; landowner unknown",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Tempest's Reach",
+      "aliases": [
+        "Предел Бури"
+      ],
+      "shortDescription": "Восточное поселение на скалах с собственным маяком.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Tempest%27s_Reach",
+      "sources": [
+        26
+      ],
+      "loreSources": [
+        [
+          26
+        ],
+        [
+          26
+        ],
+        [
+          26
+        ]
+      ]
+    },
+    {
+      "id": "aderics-repose",
+      "name": "Покой Адерика",
+      "x": 1420,
+      "y": 3106,
+      "type": "landmark",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Покой Адерика — кладбище к западу от города Гилнеаса, неподалеку от Килевой гавани. В его центре поднимается мемориальный холм с гробницей Адерика, почитаемого патриарха гилнеасцев. Здесь память о предках соседствует с тихими окраинами королевской столицы.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          27,
+          4
+        ],
+        "chronology": "Предки подразумевают прошлое, но дата до стены не установлена. Адерик не подтвержден как король.",
+        "note": "Предки подразумевают прошлое, но дата до стены не установлена. Адерик не подтвержден как король.",
+        "historicalAffiliation": "unknown",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Aderic's Repose",
+      "aliases": [
+        "Покой Адерика"
+      ],
+      "shortDescription": "Кладбище западнее столицы с мемориальным холмом и гробницей Адерика.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Aderic%27s_Repose",
+      "sources": [
+        27
+      ],
+      "loreSources": [
+        [
+          27
+        ],
+        [
+          27
+        ],
+        [
+          27
+        ]
+      ]
+    },
+    {
+      "id": "northgate-woods",
+      "name": "Лес Северных врат",
+      "x": 1993,
+      "y": 2621,
+      "type": "forest",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Лес Северных врат лежит к северу от города Гилнеаса. Река Северных врат ограничивает его с востока, а дорога из столицы проходит вдоль западной стороны. Лесистый участок занимает пространство между городом и северными землями полуострова.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          28,
+          4
+        ],
+        "chronology": "Не показывать действующую стену; слово wall в позднем описании лишь будущий ориентир.",
+        "note": "Не показывать действующую стену; слово wall в позднем описании лишь будущий ориентир.",
+        "historicalAffiliation": "unknown",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Northgate Woods",
+      "aliases": [
+        "Лес Северных ворот"
+      ],
+      "shortDescription": "Северный лес между рекой и дорогой из столицы.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Northgate_Woods",
+      "sources": [
+        28
+      ],
+      "loreSources": [
+        [
+          28
+        ],
+        [
+          28
+        ],
+        [
+          28
+        ]
+      ]
+    },
+    {
+      "id": "northgate-river",
+      "name": "Река Северных врат",
+      "x": 2066,
+      "y": 2620,
+      "type": "landmark",
+      "faction": null,
+      "owner": "",
+      "description": "Река Северных врат проходит по Гилнеасскому полуострову от северных лесов мимо Деревни Тлеющего Угля. Она огибает город Гилнеас и земли Покоя Адерика. К морю река выходит через узкий проход между каменистыми мысами.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          29,
+          4
+        ],
+        "chronology": "Wowpedia network_error; извлечено зеркало с обеими URL. Водопад у будущей стены относится к поздней географии, не к довоенному сооружению.",
+        "note": "Wowpedia network_error; извлечено зеркало с обеими URL. Водопад у будущей стены относится к поздней географии, не к довоенному сооружению.",
+        "historicalAffiliation": "unknown",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU",
+        "affiliationStatus": "unknown"
+      },
+      "englishName": "Northgate River",
+      "aliases": [
+        "Река Северных ворот"
+      ],
+      "shortDescription": "Река северного Гилнеаса, огибающая столицу и впадающая в море между мысами.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Northgate_River",
+      "sources": [
+        29
+      ],
+      "loreSources": [
+        [
+          29
+        ],
+        [
+          29
+        ],
+        [
+          29
+        ]
+      ]
+    },
+    {
+      "id": "northern-headlands",
+      "name": "Северный каменистый мыс",
+      "x": 1500,
+      "y": 2435,
+      "type": "landmark",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Северный каменистый мыс занимает высокие земли северо-западного Гилнеаса. Горный рельеф этого края образует естественные рубежи на подступах к полуострову. На западе возвышенности обращены к морю и соседнему Каменистому мысу.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          30,
+          4
+        ],
+        "chronology": "Природный ориентир, не довоенная военная база. Разбросанные руины отдельно не датированы.",
+        "note": "Природный ориентир, не довоенная военная база. Разбросанные руины отдельно не датированы.",
+        "historicalAffiliation": "unknown",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Northern Headlands",
+      "aliases": [
+        "Северные нагорья"
+      ],
+      "shortDescription": "Северо-западные возвышенности с естественными горными рубежами.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Northern_Headlands",
+      "sources": [
+        30,
+        43,
+        46
+      ],
+      "loreSources": [
+        [
+          30
+        ],
+        [
+          30,
+          46
+        ],
+        [
+          30,
+          43
+        ]
+      ]
+    },
+    {
+      "id": "the-headlands",
+      "name": "Каменистый мыс",
+      "x": 990,
+      "y": 2580,
+      "type": "landmark",
+      "faction": "gilneas",
+      "owner": "",
+      "description": "Каменистый мыс — обширные прибрежные земли к северо-западу от Килевой гавани. Он образует западную сторону морского выхода Реки Северных врат, напротив северного мыса. Рельеф этих берегов отделяет открытое море от внутренних земель Гилнеаса.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          31,
+          4
+        ],
+        "chronology": "Каменные руины поздней игровой зоны не считать довоенными без датировки.",
+        "note": "Каменные руины поздней игровой зоны не считать довоенными без датировки.",
+        "historicalAffiliation": "unknown",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Headlands",
+      "aliases": [
+        "Западные мысы"
+      ],
+      "shortDescription": "Западный прибрежный мыс у морского выхода Реки Северных врат.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Headlands",
+      "sources": [
+        29,
+        31
+      ],
+      "loreSources": [
+        [
+          31
+        ],
+        [
+          29,
+          31
+        ],
+        [
+          31
+        ]
+      ]
+    },
+    {
+      "id": "pyrewood",
+      "name": "Деревня Погребальных Костров",
+      "x": 1800,
+      "y": 1895,
+      "type": "settlement",
+      "faction": "crowley",
+      "owner": "Дариус Краули",
+      "description": "Деревня Погребальных Костров лежит в южном Серебряном бору, у подножия крепости на высоком утесе. Это одно из северных владений Дариуса Краули, связанное с Янтарной мельницей общей принадлежностью дому. Дороги отсюда ведут в остальные гилнеасские земли через лесной край.",
+      "objects": [],
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          32,
+          4
+        ],
+        "chronology": "Живая гилнеасская деревня, часть довоенного северного домена Краули. Не окрашивать как Лордерон только потому, что современная зона — Серебряный бор.",
+        "note": "",
+        "historicalAffiliation": "unknown",
+        "ownerStatus": "confirmed",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "subtitle": "Деревня Погребальных Костров",
+      "englishName": "Pyrewood Village",
+      "aliases": [
+        "Пирвуд",
+        "Pyrewood",
+        "Пирвуд (транслитерация)"
+      ],
+      "shortDescription": "Северная деревня дома Краули под крепостью барона Сребролена.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Pyrewood_Village",
+      "sources": [
+        2,
+        32,
+        33,
+        40
+      ],
+      "loreSources": [
+        [
+          33,
+          40
+        ],
+        [
+          32
+        ],
+        [
+          2,
+          32
+        ]
+      ]
+    },
+    {
+      "id": "shadowfang",
+      "name": "Крепость над Пирвудом",
+      "x": 1675,
+      "y": 1725,
+      "type": "fortress",
+      "faction": "silverlaine",
+      "owner": "Барон Сребролен",
+      "description": "Крепость над Пирвудом стоит на высоком утесе над Деревней Погребальных Костров, в южном Серебряном бору. Ее хозяин, барон Сребролен, хранит местное владение под властью дома Краули. Каменный замок возвышается над деревней и северными подступами к Гилнеасу.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          33,
+          34
+        ],
+        "chronology": "Человеческий замок и местное господство барона подтверждены; мастера Стилвелл жили здесь до Третьей войны. Точный год основания до стены unknown. Название Silverlaine Keep появляется только в более позднем уточнении зеркала с ссылкой на новый сценарий; Wowpedia непосредственно дает нейтральное «keep of Baron Silverlaine» и переименование Аругалом. Поэтому для карты безопаснее «Замок барона Сильверлейна». Сильверлейн — рабочая транслитерация, русская локализация NPC не извлечена.",
+        "note": "Сребролен — позднее засвидетельствованный хозяин; точная довоенная дата неизвестна. Название «Тёмный Клык» позднее. Вассальная связь с Краули сохранена как сценарная реконструкция вторичного свидетельства.",
+        "historicalAffiliation": "Kingdom of Gilneas / Королевство Гилнеас; Baron Silverlaine, subordinate to Crowley family / барон Сильверлейн, подчиненный дому Краули; точная дата до стены отдельно не подтверждена",
+        "ownerStatus": "unknown"
+      },
+      "subtitle": "Баронская крепость",
+      "englishName": "Silverlaine Keep",
+      "aliases": [
+        "Крепость над Пирвудом",
+        "Shadowfang Keep",
+        "Крепость Темного Клыка (позднее название)"
+      ],
+      "shortDescription": "Замок барона Сребролена, вассала дома Краули, над Пирвудом.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+      "sources": [
+        3,
+        33,
+        59
+      ],
+      "loreSources": [
+        [
+          33
+        ],
+        [
+          33,
+          59,
+          3
+        ],
+        [
+          33
+        ]
+      ]
+    },
+    {
+      "id": "ambermill",
+      "name": "Янтарная мельница",
+      "x": 2498,
+      "y": 1648,
+      "type": "settlement",
+      "faction": "crowley",
+      "owner": "Дариус Краули",
+      "description": "Янтарная мельница — гилнеасское поселение в Серебряном бору, немного юго-западнее озера Лордамер. Городок служит заготовке древесины среди обширных лесов. Вместе с Деревней Погребальных Костров он входит в северные владения Дариуса Краули.",
+      "objects": [],
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          32,
+          35,
+          4
+        ],
+        "chronology": "Довоенный гилнеасский лесозаготовительный город. Гарнизон Кирин-Тора и контроль Даларана относятся к поздним событиям, не к периоду до стены.",
+        "note": "",
+        "historicalAffiliation": "unknown",
+        "ownerStatus": "confirmed",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "subtitle": "Ambermill",
+      "englishName": "Ambermill",
+      "aliases": [
+        "Янтарная мельница",
+        "Amber Mill",
+        "Эмбермилл (транслитерация)"
+      ],
+      "shortDescription": "Лесозаготовительный городок дома Краули юго-западнее Лордамера.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Ambermill",
+      "sources": [
+        32,
+        35
+      ],
+      "loreSources": [
+        [
+          35
+        ],
+        [
+          35
+        ],
+        [
+          32
+        ]
+      ]
+    },
+    {
+      "id": "dalaran-city",
+      "name": "Даларан",
+      "x": 3020,
+      "y": 1428,
+      "type": "city",
+      "capital": true,
+      "faction": "dalaran",
+      "owner": "Совет Шести · Антонидас",
+      "description": "Даларан — город магов у берегов озера Лордамер и столица магократии Кирин-Тора. Его древняя история начинается с магов Арати, основавших здесь город-государство. Совет Шести управляет городом, а Антонидас представляет Даларан среди государей Альянса Лордерона.",
+      "objects": [],
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          36,
+          37,
+          4
+        ],
+        "chronology": "Действующий наземный город магов, не кратер. Во Вторую войну пострадал от Орды и восстанавливался — не смешивать с руинами Третьей войны.",
+        "note": "",
+        "historicalAffiliation": "unknown",
+        "ownerStatus": "confirmed",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "subtitle": "Столица магократии · Совет Шести",
+      "englishName": "Dalaran",
+      "aliases": [
+        "Даларан"
+      ],
+      "shortDescription": "Наземная столица Кирин-Тора у Лордамера под властью Совета Шести.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Dalaran",
+      "sources": [
+        36,
+        37
+      ],
+      "loreSources": [
+        [
+          36
+        ],
+        [
+          36
+        ],
+        [
+          36,
+          37
+        ]
+      ]
+    },
+    {
+      "id": "fenris-keep",
+      "name": "Крепость Фенриса",
+      "x": 2600,
+      "y": 575,
+      "type": "fortress",
+      "faction": "lordaeron",
+      "owner": "",
+      "description": "Крепость Фенриса стоит на острове в центре озера Лордамер. Она служит военным форпостом королевства Лордерон среди озерных вод и островов. Ее положение делает крепость заметным опорным пунктом этого внутреннего водоема.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          38,
+          4
+        ],
+        "chronology": "Действующая людская крепость, не руины. До Плети принадлежала Лордерону, но точный год строительства и имя богатого лорда неизвестны.",
+        "note": "Действующая людская крепость, не руины. До Плети принадлежала Лордерону, но точный год строительства и имя богатого лорда неизвестны.",
+        "historicalAffiliation": "Kingdom of Lordaeron / крепость Лордерона до Плети",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Fenris Keep",
+      "aliases": [
+        "Крепость Фенрис"
+      ],
+      "shortDescription": "Островная крепость и военный форпост Лордерона на Лордамере.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Fenris_Keep",
+      "sources": [
+        38
+      ],
+      "loreSources": [
+        [
+          38
+        ],
+        [
+          38
+        ],
+        [
+          38
+        ]
+      ]
+    },
+    {
+      "id": "fenris-isle",
+      "name": "Остров Фенриса",
+      "x": 2646,
+      "y": 835,
+      "type": "landmark",
+      "faction": "lordaeron",
+      "owner": "",
+      "description": "Остров Фенриса — большой остров в центре озера Лордамер. Вместе с соседними Рассветными островами он образует разомкнутое кольцо суши среди воды. На острове находится Крепость Фенриса, военный форпост Лордерона.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          38,
+          4
+        ],
+        "chronology": "Довоенный людской военный домен Лордерона подтвержден ретроспективой; собственник не назван. Не ставить под дом Краули только из-за его позднего участия.",
+        "note": "Довоенный людской военный домен Лордерона подтвержден ретроспективой; собственник не назван. Не ставить под дом Краули только из-за его позднего участия.",
+        "historicalAffiliation": "Kingdom of Lordaeron / Королевство Лордерон (до Плети; отдельная дата до стены unknown); unknown; точная дата до стены отдельно не подтверждена",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Fenris Isle",
+      "aliases": [
+        "Остров Фенрис"
+      ],
+      "shortDescription": "Большой остров посреди Лордамера с лордеронской крепостью.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Fenris_Isle",
+      "sources": [
+        38
+      ],
+      "loreSources": [
+        [
+          38
+        ],
+        [
+          38
+        ],
+        [
+          38
+        ]
+      ]
+    },
+    {
+      "id": "lordaeron-city",
+      "name": "Столица Лордерона",
+      "x": 3110,
+      "y": 80,
+      "type": "city",
+      "capital": true,
+      "faction": "lordaeron",
+      "owner": "Теренас Менетил II",
+      "description": "Столица Лордерона — королевский город Теренаса Менетила II и средоточие северного человеческого королевства. Здесь собрались правители людских держав, когда известие о падении Штормграда привело к созданию Альянса Лордерона. Королевский двор остается одним из главных мест, где решается общая судьба союзных королевств.",
+      "objects": [],
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          39
+        ],
+        "chronology": "Действующая столица Теренаса. Не Руины Лордерона и не столица Отрекшихся.",
+        "note": "",
+        "historicalAffiliation": "unknown",
+        "ownerStatus": "confirmed"
+      },
+      "subtitle": "Королевский двор Теренаса Менетила II",
+      "englishName": "Capital City",
+      "aliases": [
+        "Столица Лордерона",
+        "Lordaeron City",
+        "Lordaeron"
+      ],
+      "shortDescription": "Королевская столица Теренаса и место рождения Альянса Лордерона.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Capital_City",
+      "sources": [
+        39,
+        45,
+        46
+      ],
+      "loreSources": [
+        [
+          39
+        ],
+        [
+          45,
+          46
+        ],
+        [
+          39,
+          45
+        ]
+      ]
+    },
+    {
+      "id": "silverpine",
+      "name": "Серебряный бор",
+      "x": 2152,
+      "y": 806,
+      "type": "forest",
+      "faction": "lordaeron",
+      "owner": "",
+      "description": "Серебряный бор — обширный древний лес вдоль сурового западного побережья Лордерона. Его южные земли с Деревней Погребальных Костров и Янтарной мельницей принадлежат Гилнеасу и входят во владения Дариуса Краули. Лесной край соединяет северные королевства дорогами между поселениями и берегами Лордамера.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          40,
+          32,
+          4
+        ],
+        "chronology": "Весь Серебряный бор нельзя отдавать Лордерону: юг исторически Гилнеас. Точные довоенные границы требуют карты.",
+        "note": "Весь Серебряный бор нельзя отдавать Лордерону: юг исторически Гилнеас. Точные довоенные границы требуют карты.",
+        "historicalAffiliation": "mixed: Kingdom of Gilneas (south), Kingdom of Lordaeron (north); exact border unknown; unknown; точная дата до стены отдельно не подтверждена",
+        "ownerStatus": "unknown",
+        "nameStatus": "canonical_client_ruRU"
+      },
+      "englishName": "Silverpine Forest",
+      "aliases": [
+        "Серебряный бор"
+      ],
+      "shortDescription": "Древний западный лес, чей юг включает гилнеасские владения Краули.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Silverpine_Forest",
+      "sources": [
+        32,
+        40,
+        41
+      ],
+      "loreSources": [
+        [
+          40
+        ],
+        [
+          40,
+          32
+        ],
+        [
+          40,
+          41
+        ]
+      ]
+    },
+    {
+      "id": "lordamere-lake",
+      "name": "Озеро Лордамер",
+      "x": 2864,
+      "y": 875,
+      "type": "landmark",
+      "faction": null,
+      "owner": "",
+      "englishName": "Lordamere Lake",
+      "description": "Озеро Лордамер — один из крупнейших внутренних водоемов Восточных королевств. Его воды лежат между землями Лордерона, Даларана и Альтерака. В центре озера поднимается Остров Фенриса, а у берегов стоит наземный город магов Даларан.",
+      "objects": [],
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          41
+        ],
+        "note": "Озеро и окружение королевств до стены. Не назначать все озеро единому владельцу по игровой принадлежности подзоны.",
+        "ownerStatus": "unknown",
+        "chronology": "Озеро и окружение королевств до стены. Не назначать все озеро единому владельцу по игровой принадлежности подзоны.",
+        "affiliationStatus": "unknown"
+      },
+      "shortDescription": "Большое озеро между Лордероном, Далараном и Альтераком.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lordamere_Lake",
+      "sources": [
+        36,
+        38,
+        41
+      ],
+      "loreSources": [
+        [
+          41
+        ],
+        [
+          41
+        ],
+        [
+          38,
+          36
+        ]
+      ]
+    },
+    {
+      "id": "deep-elem-mine",
+      "name": "Серебряный рудник",
+      "x": 2411,
+      "y": 1266,
+      "type": "mine",
+      "positionConfidence": "reconstruction",
+      "faction": "lordaeron",
+      "owner": "",
+      "englishName": "Deep Elem Mine",
+      "description": "Серебряный рудник находится в средней части Серебряного бора. Шахтные выработки выделяют среди лесных земель участок горного промысла. Его положение связывает рудник с внутренней частью лесного края, вдали от прибрежных гаваней.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          42
+        ],
+        "note": "Серебряный рудник существовал до воргенского захвата, но до стены не датирован. Домен Марли/Краули здесь в Nobles — предположение, не твердая собственность.",
+        "ownerStatus": "unknown",
+        "chronology": "Серебряный рудник существовал до воргенского захвата, но до стены не датирован. Домен Марли/Краули здесь в Nobles — предположение, не твердая собственность."
+      },
+      "shortDescription": "Шахтный участок в средней части Серебряного бора.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Deep_Elem_Mine",
+      "sources": [
+        40,
+        42
+      ],
+      "loreSources": [
+        [
+          42
+        ],
+        [
+          42
+        ],
+        [
+          42,
+          40
+        ]
+      ]
+    },
+    {
+      "id": "galewatch-lighthouse",
+      "name": "Штормовой маяк",
+      "x": 1099,
+      "y": 2203,
+      "type": "landmark",
+      "positionConfidence": "reconstruction",
+      "faction": "gilneas",
+      "owner": "",
+      "englishName": "Galewatch Lighthouse",
+      "description": "Штормовой маяк расположен на большом скалистом острове в самой северной части Гилнеаса. Он стоит северо-западнее Северного каменистого мыса и северо-восточнее Каменистого мыса. Длинная извилистая тропа поднимается от небольшого пляжа к вершине острова и башне маяка.",
+      "objects": [],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          43
+        ],
+        "note": "Штормовой маяк — отдельный северный маяк, НЕ маяк Предела бури. Дата строительства до стены неизвестна.",
+        "ownerStatus": "unknown",
+        "chronology": "Штормовой маяк — отдельный северный маяк, НЕ маяк Предела бури. Дата строительства до стены неизвестна."
+      },
+      "shortDescription": "Островной маяк на крайнем севере Гилнеаса между двумя мысами.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Galewatch_Lighthouse",
+      "sources": [
+        43
+      ],
+      "loreSources": [
+        [
+          43
+        ],
+        [
+          43
+        ],
+        [
+          43
+        ]
+      ]
+    },
+    {
+      "id": "violet-citadel",
+      "name": "Аметистовая цитадель",
+      "x": 2977,
+      "y": 1337,
+      "type": "fortress",
+      "faction": "dalaran",
+      "owner": "Кирин-Тор",
+      "description": "Аметистовая цитадель — главная крепость Даларана и средоточие ученого мира Кирин-Тора. Ее высокая башня поднимается в сердце города над большими залами, исследовательскими лабораториями и библиотеками заклинаний. Под цитаделью расположены хранилища, связанные с древней историей магов и их могущественными артефактами.",
+      "objects": [],
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          44,
+          36
+        ],
+        "note": "Расположение на городской виньетке условное; сам древний объект подтверждён."
+      },
+      "shortDescription": "Главная крепость Кирин-Тора с лабораториями, библиотеками и хранилищами.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Violet_Citadel",
+      "sources": [
+        44
+      ],
+      "loreSources": [
+        [
+          44
+        ],
+        [
+          44
+        ],
+        [
+          44
+        ]
+      ]
+    }
+  ],
+  "territories": [
+    {
+      "id": "gilneas-south",
+      "name": "Земли короны Гилнеаса",
+      "faction": "gilneas",
+      "points": [
+        [
+          1601.6089482126242,
+          2106.033475502084
+        ],
+        [
+          1861.5303298632518,
+          2166.0669398999153
+        ],
+        [
+          2051.458017462258,
+          2316.087957605846
+        ],
+        [
+          2241.379442811857,
+          2446.103730202481
+        ],
+        [
+          2341.320858551335,
+          2696.0986406460165
+        ],
+        [
+          2501.2411765043753,
+          2846.098317219985
+        ],
+        [
+          2591.1734001925843,
+          3166.0692733149403
+        ],
+        [
+          2481.203422808409,
+          3406.0360807376805
+        ],
+        [
+          2231.2930080279652,
+          3656.0017506770864
+        ],
+        [
+          2071.334089728134,
+          4005.9584983388995
+        ],
+        [
+          1771.445344360697,
+          4065.959851386663
+        ],
+        [
+          1531.5404518320736,
+          3805.9899386125917
+        ],
+        [
+          1271.627732921764,
+          3536.0055557033793
+        ],
+        [
+          1301.6310735964169,
+          3276.0142159072393
+        ],
+        [
+          1441.6054082113592,
+          3026.025264898094
+        ],
+        [
+          1511.5950390011872,
+          2846.0320654190364
+        ],
+        [
+          1411.6323028914499,
+          2626.024464075982
+        ],
+        [
+          1481.6269836637118,
+          2366.026598362328
+        ]
+      ],
+      "provenance": {
+        "confidence": "reconstruction",
+        "note": "Сценарный контур Гилнеаса, не канонический кадастр; земли короны и домов внутри сохраняют самостоятельные цвета.",
+        "sources": [
+          2,
+          32
+        ]
+      }
+    },
+    {
+      "id": "crowley-north",
+      "name": "Северные владения Краули",
+      "faction": "crowley",
+      "points": [
+        [
+          1571.6519937790263,
+          1435.9920879180672
+        ],
+        [
+          1791.5971569617084,
+          1406.0300789673036
+        ],
+        [
+          2081.5073483180704,
+          1456.0851882967418
+        ],
+        [
+          2351.411131762498,
+          1496.1341588963612
+        ],
+        [
+          2571.3202520642817,
+          1566.1723180575912
+        ],
+        [
+          2591.2912958469815,
+          1806.170738303307
+        ],
+        [
+          2491.3113724549967,
+          2056.1483309348373
+        ],
+        [
+          2221.406356665829,
+          2186.110379020285
+        ],
+        [
+          2041.4614784347968,
+          2316.0868592178635
+        ],
+        [
+          1861.5303298632518,
+          2166.0669398999153
+        ],
+        [
+          1601.6089482126242,
+          2106.033475502084
+        ],
+        [
+          1531.6410255768906,
+          1836.0122089636322
+        ]
+      ],
+      "provenance": {
+        "confidence": "reconstruction",
+        "note": "Пирвуд и Янтарная мельница подтверждены как владения Дариуса Краули; точная граница остальных северных угодий восстановлена для сценария.",
+        "sources": [
+          32,
+          35
+        ]
+      }
+    },
+    {
+      "id": "greymane-city-land",
+      "name": "Коронный округ столицы",
+      "faction": "greymane",
+      "points": [
+        [
+          1561.5835749351693,
+          2796.036098489057
+        ],
+        [
+          1821.5061619631267,
+          2766.055514557508
+        ],
+        [
+          2051.4210081337733,
+          2856.0676497557133
+        ],
+        [
+          2181.359788633306,
+          3026.0640018751947
+        ],
+        [
+          2121.364576039367,
+          3286.0396410522003
+        ],
+        [
+          1921.4318081762392,
+          3406.0239982859903
+        ],
+        [
+          1671.5179321472124,
+          3396.0192205617814
+        ],
+        [
+          1501.5787874106916,
+          3226.0225271677486
+        ],
+        [
+          1471.59815566316,
+          3006.0272266999264
+        ]
+      ],
+      "provenance": {
+        "confidence": "reconstruction",
+        "note": "Область столицы внутри суверенного Гилнеаса; цвет правящей династии, не обычный вассальный договор.",
+        "sources": [
+          2,
+          32
+        ]
+      }
+    },
+    {
+      "id": "greymane-west-land",
+      "name": "Западные коронные земли",
+      "faction": "greymane",
+      "points": [
+        [
+          700,
+          2950
+        ],
+        [
+          790,
+          2890
+        ],
+        [
+          910,
+          2960
+        ],
+        [
+          1030,
+          3100
+        ],
+        [
+          970,
+          3240
+        ],
+        [
+          820,
+          3310
+        ],
+        [
+          670,
+          3180
+        ]
+      ],
+      "provenance": {
+        "confidence": "reconstruction",
+        "note": "Приблизительная картографическая область поместья Седогрива на западных холмах.",
+        "sources": [
+          2,
+          32
+        ]
+      }
+    },
+    {
+      "id": "crowley-south-land",
+      "name": "Сады и конюшни Краули",
+      "faction": "crowley",
+      "points": [
+        [
+          775,
+          3500
+        ],
+        [
+          930,
+          3490
+        ],
+        [
+          1025,
+          3570
+        ],
+        [
+          1010,
+          3650
+        ],
+        [
+          895,
+          3720
+        ],
+        [
+          780,
+          3660
+        ],
+        [
+          720,
+          3560
+        ]
+      ],
+      "provenance": {
+        "confidence": "reconstruction",
+        "note": "Сценарная реконструкция юго-западных хозяйств семьи Краули; точная довоенная геометрия не установлена.",
+        "sources": [
+          32,
+          35
+        ]
+      }
+    },
+    {
+      "id": "lordaeron-silverpine",
+      "name": "Лордеронский Серебряный бор",
+      "faction": "lordaeron",
+      "points": [
+        [
+          1591.7113926392578,
+          225.8532734949011
+        ],
+        [
+          1861.6571248053863,
+          125.91464609966911
+        ],
+        [
+          2221.5496733479854,
+          256.032309591041
+        ],
+        [
+          2391.4730602790223,
+          536.1023548323128
+        ],
+        [
+          2471.4203736669942,
+          836.1395317102334
+        ],
+        [
+          2601.348907310039,
+          1096.1763659234705
+        ],
+        [
+          2571.3202520642817,
+          1566.1723180575912
+        ],
+        [
+          2351.411131762498,
+          1496.1341588963612
+        ],
+        [
+          2081.5073483180704,
+          1456.0851882967418
+        ],
+        [
+          1791.5971569617084,
+          1406.0300789673036
+        ],
+        [
+          1571.6519937790263,
+          1435.9920879180672
+        ],
+        [
+          1481.6867274884303,
+          1155.9490918813547
+        ],
+        [
+          1451.7124705390538,
+          755.8947194134819
+        ]
+      ],
+      "provenance": {
+        "confidence": "reconstruction",
+        "note": "Северный бор объединён под Лордероном; частные владельцы участков неизвестны для эпохи.",
+        "sources": [
+          2,
+          32
+        ]
+      }
+    },
+    {
+      "id": "lordaeron-fenris",
+      "name": "Остров Фенрис",
+      "faction": "lordaeron",
+      "points": [
+        [
+          2471.450959621501,
+          466.11786894355595
+        ],
+        [
+          2651.3875098669987,
+          436.162883220037
+        ],
+        [
+          2821.3090947271085,
+          556.2123109244932
+        ],
+        [
+          2891.261441154758,
+          746.2346363999297
+        ],
+        [
+          2801.283557828104,
+          916.2166609646072
+        ],
+        [
+          2641.3506557414103,
+          896.1803967872993
+        ],
+        [
+          2481.4208640547067,
+          786.1394798647041
+        ],
+        [
+          2411.4589272820044,
+          626.1135650957735
+        ]
+      ],
+      "provenance": {
+        "confidence": "reconstruction",
+        "note": "Военный форпост Лордерона на острове; контур показан условно.",
+        "sources": [
+          38
+        ]
+      }
+    },
+    {
+      "id": "dalaran-lordamere",
+      "name": "Даларанские земли у Лордамера",
+      "faction": "dalaran",
+      "points": [
+        [
+          2650,
+          1300
+        ],
+        [
+          2760,
+          1230
+        ],
+        [
+          2870,
+          1130
+        ],
+        [
+          2950,
+          1140
+        ],
+        [
+          3005,
+          1210
+        ],
+        [
+          3110,
+          1190
+        ],
+        [
+          3270,
+          1090
+        ],
+        [
+          3410,
+          1150
+        ],
+        [
+          3430,
+          1330
+        ],
+        [
+          3370,
+          1450
+        ],
+        [
+          3365,
+          1570
+        ],
+        [
+          3250,
+          1730
+        ],
+        [
+          3100,
+          1795
+        ],
+        [
+          2940,
+          1775
+        ],
+        [
+          2780,
+          1690
+        ],
+        [
+          2680,
+          1540
+        ]
+      ],
+      "provenance": {
+        "confidence": "reconstruction",
+        "note": "Наземный Даларан и условная область влияния; Янтарная мельница остаётся собственностью Краули, а не переносится к Кирин-Тору.",
+        "sources": [
+          36,
+          37
+        ]
+      }
+    },
+    {
+      "id": "lordaeron-capital",
+      "name": "Столичный округ Лордерона",
+      "faction": "lordaeron",
+      "points": [
+        [
+          2825,
+          0
+        ],
+        [
+          3435,
+          0
+        ],
+        [
+          3435,
+          260
+        ],
+        [
+          3210,
+          390
+        ],
+        [
+          2950,
+          300
+        ],
+        [
+          2775,
+          90
+        ]
+      ],
+      "provenance": {
+        "confidence": "reconstruction",
+        "note": "Видимый край столичного округа; остальная территория за пределами этой карты.",
+        "sources": [
+          2,
+          32
+        ]
+      }
+    },
+    {
+      "id": "gilneas-western-coast",
+      "name": "Западные земли Гилнеаса",
+      "faction": "gilneas",
+      "points": [
+        [
+          640,
+          2910
+        ],
+        [
+          850,
+          2810
+        ],
+        [
+          1050,
+          3030
+        ],
+        [
+          1240,
+          3270
+        ],
+        [
+          1170,
+          3500
+        ],
+        [
+          1050,
+          3740
+        ],
+        [
+          790,
+          3730
+        ],
+        [
+          590,
+          3540
+        ],
+        [
+          560,
+          3310
+        ]
+      ],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          2,
+          32
+        ],
+        "note": "Сценарное влияние короны вокруг целой Темной Гавани и западных владений на новой авторской карте."
+      }
+    },
+    {
+      "id": "gilneas-headlands",
+      "name": "Западный каменистый мыс",
+      "faction": "gilneas",
+      "points": [
+        [
+          900,
+          2470
+        ],
+        [
+          1040,
+          2430
+        ],
+        [
+          1140,
+          2550
+        ],
+        [
+          1100,
+          2690
+        ],
+        [
+          965,
+          2725
+        ],
+        [
+          880,
+          2610
+        ]
+      ],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          2,
+          32
+        ],
+        "note": "Сценарный контур западного мыса в пределах новой карты."
+      }
+    },
+    {
+      "id": "gilneas-galewatch-island",
+      "name": "Остров Штормового маяка",
+      "faction": "gilneas",
+      "points": [
+        [
+          1015,
+          2110
+        ],
+        [
+          1120,
+          2085
+        ],
+        [
+          1190,
+          2200
+        ],
+        [
+          1170,
+          2320
+        ],
+        [
+          1060,
+          2325
+        ],
+        [
+          1005,
+          2215
+        ]
+      ],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          2,
+          32
+        ],
+        "note": "Сценарный контур острова; объект маяка размещён по видимой северной башне."
+      }
+    },
+    {
+      "id": "silverlaine-castle-lands",
+      "name": "Баронская крепость и окрестности",
+      "faction": "silverlaine",
+      "points": [
+        [
+          1555,
+          1640
+        ],
+        [
+          1650,
+          1595
+        ],
+        [
+          1780,
+          1655
+        ],
+        [
+          1840,
+          1775
+        ],
+        [
+          1750,
+          1850
+        ],
+        [
+          1610,
+          1815
+        ],
+        [
+          1535,
+          1735
+        ]
+      ],
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          32,
+          35
+        ],
+        "note": "Сценарная земля младшего вассала дома Краули вокруг крепости барона Сребролена."
+      }
+    }
+  ],
+  "nobles": [
+    {
+      "id": "noble-genn",
+      "name": "Генн Седогрив",
+      "englishName": "Genn Greymane",
+      "title": "Король Гилнеаса",
+      "description": "Генн Седогрив правит Гилнеасом как наследник королевской династии. Воспитанный Арчибальдом в уверенности, что страна должна опираться на собственные силы, он осторожно относится к союзам и расходам ради соседей. Во Вторую войну Генн присоединился к Альянсу Лордерона, ограничив помощь небольшим войском. После победы забота о гилнеасской казне и самостоятельности королевства остается в центре его политики.",
+      "periodNote": "Показывать человеком, не воргеном; не добавлять позднее изгнание, отречение или титул бывшего короля в иммерсивный текст.",
+      "sources": [
+        45,
+        46,
+        47,
+        3
+      ],
+      "house": "greymane",
+      "confidence": "confirmed",
+      "role": "court",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          45,
+          46,
+          47
+        ]
+      },
+      "shortDescription": "Король Гилнеаса, ставящий самостоятельность страны и ее казну на первое место.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+      "appearance": "Человек; исторические сцены источника не дают подробного портрета для этой эпохи.",
+      "socialStatus": "Король Гилнеаса · глава правящей династии Седогривов.",
+      "allegiance": "Корона Гилнеаса; участник Альянса Лордерона.",
+      "overlord": null,
+      "overlordText": "Суверенный король; личного сюзерена нет.",
+      "biographyFrame": "selected_era",
+      "displayInEarlyCourt": true,
+      "spouse": {
+        "name": "Миа Седогрив",
+        "sourceIds": [
+          3,
+          47
+        ]
+      },
+      "relations": [
+        {
+          "relation": "father",
+          "name": "Арчибальд Седогрив",
+          "nobleId": "noble-archibald",
+          "sourceIds": [
+            3,
+            45
+          ]
+        },
+        {
+          "relation": "child",
+          "name": "Лиам Седогрив",
+          "sourceIds": [
+            3,
+            47
+          ]
+        },
+        {
+          "relation": "child",
+          "name": "Тесс Седогрив",
+          "sourceIds": [
+            3,
+            47
+          ]
+        }
+      ],
+      "fieldSources": {
+        "appearance": [
+          45,
+          46
+        ],
+        "socialStatus": [
+          45,
+          47
+        ],
+        "allegiance": [
+          45
+        ],
+        "overlordText": [
+          3
+        ],
+        "spouse": [
+          3,
+          47
+        ],
+        "relations": [
+          3,
+          47
+        ]
+      },
+      "loreSources": [
+        [
+          45,
+          47
+        ],
+        [
+          45,
+          46
+        ],
+        [
+          45
+        ],
+        [
+          45
+        ]
+      ]
+    },
+    {
+      "id": "noble-darius",
+      "name": "Дариус Краули",
+      "englishName": "Darius Crowley",
+      "title": "Лорд · глава северного дома",
+      "description": "Дариус Краули — влиятельный лорд северного Гилнеаса, чьи земли включают Деревню Погребальных Костров и Янтарную мельницу. Молодой участник королевского совета, он заслужил уважение Генна и любовь гилнеасцев открытостью и заботой о людях. При создании Альянса Дариус выступал за помощь соседним королевствам, видя в совместной защите залог будущего Гилнеаса.",
+      "periodNote": "В первичном тексте нет герцогского/графского титула, точных границ или подтвержденных младших вассалов. До Второй войны привязка именно этих поселений менее надежна: явно названы во Вторую войну/перед решением о стене.",
+      "sources": [
+        32,
+        46,
+        48,
+        3
+      ],
+      "house": "crowley",
+      "confidence": "confirmed",
+      "role": "court",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          32,
+          46,
+          48
+        ]
+      },
+      "shortDescription": "Северный лорд, владелец Пирвуда и Янтарной мельницы, сторонник общего союза.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+      "appearance": "Человек, моложе Генна; особые черты лица и телосложение в этой сцене не описаны.",
+      "socialStatus": "Лорд Гилнеаса · глава дома Краули · участник королевского совета.",
+      "allegiance": "Генн Седогрив и корона Гилнеаса; сторонник Альянса Лордерона.",
+      "overlord": {
+        "id": "noble-genn",
+        "name": "Генн Седогрив",
+        "relation": "Король Гилнеаса"
+      },
+      "overlordText": "Сюзерен — Генн Седогрив, король Гилнеаса.",
+      "biographyFrame": "selected_era",
+      "displayInEarlyCourt": true,
+      "spouse": null,
+      "relations": [
+        {
+          "relation": "child",
+          "name": "Лорна Краули",
+          "sourceIds": [
+            3,
+            32
+          ]
+        }
+      ],
+      "fieldSources": {
+        "appearance": [
+          46
+        ],
+        "socialStatus": [
+          32
+        ],
+        "allegiance": [
+          32,
+          46
+        ],
+        "overlord": [
+          32
+        ],
+        "relations": [
+          3,
+          32
+        ]
+      },
+      "loreSources": [
+        [
+          32
+        ],
+        [
+          32,
+          46
+        ],
+        [
+          32,
+          46
+        ]
+      ]
+    },
+    {
+      "id": "noble-godfrey",
+      "name": "Винсент Годфри",
+      "englishName": "Vincent Godfrey",
+      "title": "Лорд · королевский советник",
+      "description": "Винсент Годфри — королевский советник и командир постоянного гилнеасского ополчения. На совещании об Альянсе он предложил послать лишь небольшое войско, сохранив торговые связи без большого военного бремени. В послевоенных обсуждениях северной границы Годфри отстаивает линию естественных горных рубежей, одновременно усиливающую значение его собственных земель. Генн ценит его расчетливый совет, но следит за амбициями лорда.",
+      "periodNote": "Не выдавать Северные мысы, лес Северных врат или Тлеющий Камень за доказанный удел Годфри. Shadowfang — поздний захват, не раннее наследственное владение.",
+      "sources": [
+        49,
+        46
+      ],
+      "house": "godfrey",
+      "confidence": "confirmed",
+      "role": "court",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          49,
+          46
+        ]
+      },
+      "shortDescription": "Расчетливый советник Генна и командир постоянного ополчения.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Vincent_Godfrey",
+      "appearance": "Человек; источник не описывает особые черты внешности для этой эпохи.",
+      "socialStatus": "Лорд Гилнеаса · королевский советник · командир постоянного ополчения.",
+      "allegiance": "Генн Седогрив и корона Гилнеаса.",
+      "overlord": {
+        "id": "noble-genn",
+        "name": "Генн Седогрив",
+        "relation": "Король Гилнеаса"
+      },
+      "overlordText": "Сюзерен — Генн Седогрив, король Гилнеаса.",
+      "biographyFrame": "selected_era",
+      "displayInEarlyCourt": true,
+      "spouse": null,
+      "relations": [],
+      "fieldSources": {
+        "appearance": [
+          49
+        ],
+        "socialStatus": [
+          49,
+          46
+        ],
+        "allegiance": [
+          49
+        ],
+        "overlord": [
+          49
+        ]
+      },
+      "loreSources": [
+        [
+          49,
+          46
+        ],
+        [
+          49
+        ],
+        [
+          49,
+          46
+        ],
+        [
+          49
+        ]
+      ]
+    },
+    {
+      "id": "noble-ashbury",
+      "name": "Барон Эшбери",
+      "englishName": "Baron Ashbury",
+      "title": "Барон · королевский советник",
+      "description": "Барон Эшбери вырос вместе с Генном и остается одним из доверенных людей короля. Его семья связана с короной со времен Арчибальда: отец барона помогал прежнему монарху укреплять могущество Гилнеаса. При создании Альянса Эшбери поддержал предложение Годфри об ограниченной военной помощи, предпочитая беречь силы страны и сохранять отношения с соседями.",
+      "periodNote": "Титул барона подтвержден до стены; определение eastern lord известно лишь из позднего задания. Не строить восточную границу и не утверждать наследование того же баронства от отца: у отца титул Lord.",
+      "sources": [
+        50,
+        46,
+        51,
+        3,
+        54
+      ],
+      "house": "ashbury",
+      "confidence": "confirmed",
+      "role": "court",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          50,
+          46,
+          51
+        ]
+      },
+      "shortDescription": "Давний друг Генна и барон из семьи, служившей короне еще при Арчибальде.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+      "appearance": "Человек; отдельный портрет этой эпохи в источнике отсутствует.",
+      "socialStatus": "Барон Гилнеаса · королевский советник.",
+      "allegiance": "Генн Седогрив и корона Гилнеаса.",
+      "overlord": {
+        "id": "noble-genn",
+        "name": "Генн Седогрив",
+        "relation": "Король Гилнеаса"
+      },
+      "overlordText": "Сюзерен — Генн Седогрив, король Гилнеаса.",
+      "biographyFrame": "selected_era",
+      "displayInEarlyCourt": true,
+      "spouse": null,
+      "relations": [
+        {
+          "relation": "father",
+          "name": "Лорд Эшбери I",
+          "nobleId": "noble-ashbury-first",
+          "sourceIds": [
+            46,
+            54
+          ]
+        }
+      ],
+      "fieldSources": {
+        "appearance": [
+          50
+        ],
+        "socialStatus": [
+          50,
+          3
+        ],
+        "allegiance": [
+          50,
+          46
+        ],
+        "overlord": [
+          50
+        ],
+        "relations": [
+          46,
+          54
+        ]
+      },
+      "loreSources": [
+        [
+          50
+        ],
+        [
+          46,
+          54
+        ],
+        [
+          50,
+          46
+        ]
+      ]
+    },
+    {
+      "id": "noble-marley",
+      "name": "Лорд Марли",
+      "englishName": "Lord Marley",
+      "title": "Лорд · королевский советник",
+      "description": "Лорд Марли входит в круг гилнеасской знати, советующей Генну Седогриву. Его провинция у северных границ стала одним из вариантов при обсуждении нового защитного рубежа. Недостаток удобных естественных преград заставил короля предпочесть горный участок земель Краули.",
+      "periodNote": "Нельзя назначить Марли Янтарную мельницу или район шахты Deep Elem: это предположения редакторов вики. Слово realm не делает Марли королем. Статья/историческая сцена привязана к планированию стены; для среза до Второй войны не показывать без нового свидетельства.",
+      "sources": [
+        52,
+        46,
+        3
+      ],
+      "house": "marley",
+      "confidence": "confirmed",
+      "role": "court",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          52,
+          46,
+          3
+        ]
+      },
+      "shortDescription": "Королевский советник, чьи приграничные земли обсуждались при выборе рубежа.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lord_Marley",
+      "appearance": "Человек; источник не сообщает конкретных черт внешности.",
+      "socialStatus": "Лорд Гилнеаса · королевский советник · владелец приграничной провинции.",
+      "allegiance": "Генн Седогрив и корона Гилнеаса.",
+      "overlord": {
+        "id": "noble-genn",
+        "name": "Генн Седогрив",
+        "relation": "Король Гилнеаса"
+      },
+      "overlordText": "Сюзерен — Генн Седогрив; подчинение дому Краули не подтверждено.",
+      "biographyFrame": "selected_era",
+      "displayInEarlyCourt": true,
+      "spouse": null,
+      "relations": [],
+      "fieldSources": {
+        "appearance": [
+          52
+        ],
+        "socialStatus": [
+          3,
+          52
+        ],
+        "allegiance": [
+          3,
+          52
+        ],
+        "overlord": [
+          52
+        ]
+      },
+      "loreSources": [
+        [
+          3
+        ],
+        [
+          52,
+          46
+        ],
+        [
+          46,
+          3
+        ]
+      ]
+    },
+    {
+      "id": "noble-archibald",
+      "name": "Арчибальд Седогрив",
+      "englishName": "Archibald Greymane",
+      "title": "Прежний король Гилнеаса",
+      "description": "Арчибальд Седогрив — прежний король Гилнеаса и отец Генна. В годы его правления страна процветала и обрела промышленную мощь, на которую опирается нынешняя корона. Арчибальд учил сына рассчитывать на себя и видеть в просьбе о помощи слабость; это наследие по-прежнему влияет на решения Генна.",
+      "periodNote": "Разместить в родословной/прошлом, не как действующего владельца при Генне; дата смерти не установлена.",
+      "sources": [
+        53,
+        46
+      ],
+      "house": null,
+      "confidence": "confirmed",
+      "role": "predecessor",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          53,
+          46
+        ]
+      },
+      "shortDescription": "Прежний король и отец Генна, укрепивший промышленное могущество Гилнеаса.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Archibald_Greymane",
+      "appearance": "Крепко сложенный человек; другие особые черты источник не описывает.",
+      "socialStatus": "Прежний король Гилнеаса · предшественник Генна.",
+      "allegiance": "Королевская династия Седогривов и Гилнеас.",
+      "overlord": null,
+      "overlordText": "В свое царствование — суверенный король; не действующий вассал при Генне.",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "spouse": null,
+      "relations": [
+        {
+          "relation": "child",
+          "name": "Генн Седогрив",
+          "nobleId": "noble-genn",
+          "sourceIds": [
+            53
+          ]
+        }
+      ],
+      "fieldSources": {
+        "appearance": [
+          46
+        ],
+        "socialStatus": [
+          53
+        ],
+        "allegiance": [
+          53
+        ],
+        "overlordText": [
+          53
+        ],
+        "relations": [
+          53
+        ]
+      },
+      "loreSources": [
+        [
+          53
+        ],
+        [
+          53,
+          46
+        ],
+        [
+          53,
+          46
+        ]
+      ]
+    },
+    {
+      "id": "noble-ashbury-first",
+      "name": "Лорд Эшбери I",
+      "englishName": "Lord Ashbury the 1st",
+      "title": "Советник Арчибальда · отец барона Эшбери",
+      "description": "Лорд Эшбери I служил Арчибальду Седогриву и помогал ему превращать Гилнеас в могущественную державу. Его заслуги сделали верность семьи Эшбери частью доверия между знатью и короной. Сын лорда, барон Эшбери, вырос рядом с Генном и продолжил присутствие семьи в окружении Седогривов.",
+      "periodNote": "Не называть бароном Эшбери I, не утверждать, что сын автоматически унаследовал этот же титул; действующая жизнь отца во Вторую войну не доказана.",
+      "sources": [
+        46,
+        54,
+        3,
+        50
+      ],
+      "house": null,
+      "confidence": "confirmed",
+      "role": "predecessor",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          46,
+          54
+        ]
+      },
+      "shortDescription": "Советник Арчибальда и отец барона Эшбери, укреплявший Гилнеас.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st",
+      "appearance": "Источник не сообщает конкретных черт внешности.",
+      "socialStatus": "Лорд Гилнеаса · советник Арчибальда · представитель предыдущего поколения знати.",
+      "allegiance": "Арчибальд Седогрив и корона Гилнеаса.",
+      "overlord": {
+        "id": "noble-archibald",
+        "name": "Арчибальд Седогрив",
+        "relation": "Исторический монарх"
+      },
+      "overlordText": "В засвидетельствованной службе — Арчибальд Седогрив.",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "spouse": null,
+      "relations": [
+        {
+          "relation": "child",
+          "name": "Барон Эшбери",
+          "nobleId": "noble-ashbury",
+          "sourceIds": [
+            54,
+            46
+          ]
+        }
+      ],
+      "fieldSources": {
+        "appearance": [
+          54
+        ],
+        "socialStatus": [
+          3,
+          54
+        ],
+        "allegiance": [
+          54
+        ],
+        "overlord": [
+          54
+        ],
+        "relations": [
+          54
+        ]
+      },
+      "loreSources": [
+        [
+          54,
+          46
+        ],
+        [
+          54
+        ],
+        [
+          50,
+          54
+        ]
+      ]
+    },
+    {
+      "id": "noble-walden",
+      "name": "Лорд Уолден",
+      "englishName": "Lord Walden",
+      "title": "Лорд восточного Гилнеаса",
+      "description": "Лорд Уолден принадлежал к дворянству восточного Гилнеаса и был связан с королевским советом. Семья Уолденов известна своим прибрежным домом в южных землях королевства.",
+      "periodNote": "Уолден/Вальден — один английский Lord Walden; не создавать два дома. Присутствие в доме Tempest’s Reach не устанавливает владельца этого дома.",
+      "sources": [
+        55,
+        51,
+        56,
+        3
+      ],
+      "house": "walden",
+      "confidence": "reconstruction",
+      "role": "historical_reference",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          55,
+          51,
+          56,
+          3
+        ]
+      },
+      "shortDescription": "Восточный гилнеасский дворянин из исторического реестра знати.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+      "appearance": "В человеческом облике носил цилиндр и дворянский костюм; портрет выбранной эпохи не описан.",
+      "socialStatus": "Лорд восточного Гилнеаса · историческая справочная запись.",
+      "allegiance": "Гилнеас; личная служба в выбранном послевоенном совете не установлена.",
+      "overlord": null,
+      "overlordText": "Точный сюзерен и договор службы для выбранной эпохи не установлены.",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "spouse": null,
+      "relations": [],
+      "fieldSources": {
+        "appearance": [
+          55
+        ],
+        "socialStatus": [
+          55
+        ],
+        "allegiance": [
+          55
+        ],
+        "overlordText": [
+          55
+        ]
+      },
+      "loreSources": [
+        [
+          55,
+          3
+        ],
+        [
+          3,
+          56
+        ]
+      ]
+    },
+    {
+      "id": "noble-hewell",
+      "name": "Лорд Хьювелл",
+      "englishName": "Lord Hewell",
+      "title": "Лорд Гилнеаса",
+      "description": "Лорд Хьювелл — гилнеасский дворянин, сохранивший личную верность Генну Седогриву. Его имя связано с Пределом бури, прибрежным поселением на востоке королевства.",
+      "periodNote": "Проверенная русская локализация — Хьювелл/Хьювел; не отождествлять автоматически с пользовательским Хьюбертом. Реплика о manor после возвращения Гилнеаса не доказывает довоенный удел.",
+      "sources": [
+        57,
+        58,
+        3,
+        26
+      ],
+      "house": null,
+      "confidence": "reconstruction",
+      "role": "historical_reference",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          57,
+          58
+        ]
+      },
+      "shortDescription": "Гилнеасский дворянин, известный личной верностью Генну.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lord_Hewell",
+      "appearance": "Источник не сообщает конкретных черт человеческой внешности.",
+      "socialStatus": "Лорд Гилнеаса · историческая справочная запись.",
+      "allegiance": "Гилнеас и Генн Седогрив; верность засвидетельствована в биографии.",
+      "overlord": null,
+      "overlordText": "Королевская связь с Генном засвидетельствована; ранний вассальный договор не описан.",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "spouse": null,
+      "relations": [],
+      "fieldSources": {
+        "appearance": [
+          57
+        ],
+        "socialStatus": [
+          57
+        ],
+        "allegiance": [
+          57
+        ],
+        "overlordText": [
+          57
+        ]
+      },
+      "loreSources": [
+        [
+          57
+        ],
+        [
+          57,
+          26
+        ]
+      ]
+    },
+    {
+      "id": "noble-silverlaine",
+      "name": "Барон Сребролен",
+      "englishName": "Baron Silverlaine",
+      "title": "Барон · вассал дома Краули",
+      "description": "Барон Сребролен владеет каменной крепостью над Деревней Погребальных Костров. Его замок возвышается на утесе в южном Серебряном бору, у северных подступов к Гилнеасу. Барон хранит местное владение как вассал дома Краули и подчиняется Дариусу Краули.",
+      "periodNote": "Вассалитет Краули указан вторичной вики как вывод; первичный рассказ Lord of His Pack не называет Сребролена или крепость. Каталог прямо включает верность области Краули; сохранено как вторичное утверждение, но первичный рассказ такого имени или цепочки не содержит.",
+      "sources": [
+        59,
+        60,
+        33,
+        3
+      ],
+      "house": "silverlaine",
+      "confidence": "reconstruction",
+      "role": "scenario_vassal",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          59,
+          60,
+          33,
+          3
+        ]
+      },
+      "shortDescription": "Хозяин крепости над Пирвудом и вассал Дариуса Краули.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+      "appearance": "Человек; источник не дает конкретного портрета барона при жизни.",
+      "socialStatus": "Барон · владелец крепости над Пирвудом · вассал дома Краули.",
+      "allegiance": "Дом Краули и корона Гилнеаса.",
+      "overlord": {
+        "id": "noble-darius",
+        "name": "Дариус Краули",
+        "relation": "Сюзерен барона в пользовательском сценарии"
+      },
+      "overlordText": "Сюзерен — Дариус Краули, глава дома Краули.",
+      "biographyFrame": "selected_era",
+      "displayInEarlyCourt": false,
+      "spouse": null,
+      "relations": [],
+      "fieldSources": {
+        "appearance": [
+          59
+        ],
+        "socialStatus": [
+          59,
+          3
+        ],
+        "allegiance": [
+          3,
+          33
+        ],
+        "overlord": [
+          3,
+          33
+        ]
+      },
+      "loreSources": [
+        [
+          59,
+          33
+        ],
+        [
+          33
+        ],
+        [
+          3,
+          33
+        ]
+      ]
+    },
+    {
+      "id": "noble-longshore",
+      "name": "Барон Дольноберег",
+      "englishName": "Baron Longshore",
+      "title": "Гилнеасский барон",
+      "description": "Барон Дольноберег — уроженец Гилнеаса, носивший прежде настоящий баронский титул. Титул сохранился в его имени и личном свидетельстве о прежнем дворянском положении.",
+      "periodNote": "Не считать его только поздним неподтвержденным гилнеассцем: связь с исключением за стеной есть в каталоге. Но титул до выхода из Альянса, баронский участок и наследование не датированы.",
+      "sources": [
+        61,
+        62,
+        3
+      ],
+      "house": null,
+      "confidence": "reconstruction",
+      "role": "historical_barony_reference",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          61,
+          62,
+          3
+        ]
+      },
+      "shortDescription": "Уроженец Гилнеаса с историческим свидетельством о настоящем баронском титуле.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Baron_Longshore",
+      "appearance": "Источник не дает конкретного портрета для выбранной эпохи.",
+      "socialStatus": "Барон по историческому личному свидетельству · справочная запись.",
+      "allegiance": "Происхождение — Гилнеас; личная служба короне в выбранную эпоху не установлена.",
+      "overlord": null,
+      "overlordText": "Сюзерен для времени баронства не назван.",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "spouse": null,
+      "relations": [],
+      "fieldSources": {
+        "appearance": [
+          61
+        ],
+        "socialStatus": [
+          62
+        ],
+        "allegiance": [
+          61,
+          3
+        ],
+        "overlordText": [
+          62
+        ]
+      },
+      "loreSources": [
+        [
+          61,
+          62
+        ],
+        [
+          62
+        ]
+      ]
+    },
+    {
+      "id": "noble-candren",
+      "name": "Лорд Кандрен",
+      "englishName": "Lord Candren",
+      "title": "Лорд Гилнеаса",
+      "description": "Лорд Кандрен — гилнеасский дворянин, известный интендантской службой. Его дело связано со снабжением гилнеасцев и сохранением связи людей с родным королевством.",
+      "periodNote": "Точная площадь, межевые рубежи, дата получения титула и передача титула по наследству не установлены.",
+      "sources": [
+        63,
+        3
+      ],
+      "house": null,
+      "confidence": "reconstruction",
+      "role": "historical_reference",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          63,
+          3
+        ]
+      },
+      "shortDescription": "Гилнеасский лорд, известный интендантской службой своему народу.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lord_Candren",
+      "appearance": "Человек; конкретные черты внешности в источнике не описаны.",
+      "socialStatus": "Лорд Гилнеаса · историческая справочная запись.",
+      "allegiance": "Гилнеас; служба гилнеасцам засвидетельствована биографией.",
+      "overlord": null,
+      "overlordText": "Личный сюзерен и ранний договор службы не указаны.",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "spouse": null,
+      "relations": [],
+      "fieldSources": {
+        "appearance": [
+          63
+        ],
+        "socialStatus": [
+          3,
+          63
+        ],
+        "allegiance": [
+          63
+        ],
+        "overlordText": [
+          63
+        ]
+      },
+      "loreSources": [
+        [
+          63
+        ],
+        [
+          63
+        ]
+      ]
+    },
+    {
+      "id": "noble-isiden",
+      "name": "Исиден Перенольд",
+      "englishName": "Isiden Perenolde",
+      "title": "Альтеракский претендент · гость Гилнеаса",
+      "description": "Исиден Перенольд — племянник короля Айдена и претендент на престол Альтерака. После введения Теренасом военного положения в его родном королевстве он нашел убежище в Гилнеасе. Генн Седогрив поддержал его притязания, превратив спор о наследовании в важный вопрос послевоенных отношений человеческих держав.",
+      "periodNote": "Подходит как гость королевства в послевоенном срезе ДО стены; конкретная усадьба, остался ли после стены, и современная судьба неизвестны.",
+      "sources": [
+        64
+      ],
+      "house": null,
+      "confidence": "confirmed",
+      "role": "guest",
+      "provenance": {
+        "confidence": "confirmed",
+        "sources": [
+          64
+        ]
+      },
+      "shortDescription": "Альтеракский претендент, нашедший убежище и поддержку Генна в Гилнеасе.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+      "appearance": "Источник не сообщает конкретных черт внешности.",
+      "socialStatus": "Альтеракский династический претендент · гость и политический подопечный Гилнеаса.",
+      "allegiance": "Притязания дома Перенольдов на Альтерак; покровительство Генна Седогрива.",
+      "overlord": null,
+      "overlordText": "Покровитель — Генн Седогрив; гилнеасский вассальный титул не засвидетельствован.",
+      "biographyFrame": "guest_in_selected_era",
+      "displayInEarlyCourt": false,
+      "spouse": null,
+      "relations": [
+        {
+          "relation": "uncle",
+          "name": "Айден Перенольд",
+          "sourceIds": [
+            64
+          ]
+        }
+      ],
+      "fieldSources": {
+        "appearance": [
+          64
+        ],
+        "socialStatus": [
+          64
+        ],
+        "allegiance": [
+          64
+        ],
+        "overlordText": [
+          64
+        ],
+        "relations": [
+          64
+        ]
+      },
+      "loreSources": [
+        [
+          64
+        ],
+        [
+          64
+        ],
+        [
+          64
+        ]
+      ]
+    },
+    {
+      "id": "noble-tulvan",
+      "name": "Лорд Джеффри Тулван",
+      "title": "Гилнеасский лорд",
+      "description": "Лорд Джеффри Тулван — представитель гилнеасской аристократии и воин. Его имя связано с семьей Тулванов, которую перечень знати относит к носителям графского титула.",
+      "sources": [
+        3,
+        65
+      ],
+      "house": null,
+      "confidence": "reconstruction",
+      "periodNote": "Не названа дата получения титула; территориальную точку не назначаем.",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          3
+        ]
+      },
+      "shortDescription": "Гилнеасский аристократ из исторического реестра семьи Тулванов.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan?action=render",
+      "appearance": "Источник не описывает человеческую внешность для выбранной эпохи.",
+      "socialStatus": "Лорд Гилнеаса; графский титул указан в исторической записи семьи.",
+      "allegiance": "Гилнеас; ранняя придворная служба не установлена.",
+      "overlord": null,
+      "overlordText": "Личный сюзерен в выбранную эпоху не назван.",
+      "role": "historical_reference",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "spouse": null,
+      "relations": [],
+      "fieldSources": {
+        "appearance": [
+          3
+        ],
+        "socialStatus": [
+          3
+        ],
+        "allegiance": [
+          3
+        ],
+        "overlordText": [
+          3
+        ]
+      },
+      "loreSources": [
+        [
+          3
+        ],
+        [
+          3
+        ]
+      ]
+    },
+    {
+      "id": "noble-harford",
+      "name": "Лорд Харфорд",
+      "title": "Лорд Гилнеаса",
+      "description": "Лорд Харфорд — гилнеасец, чья биография связана с Серебряным бором и крепостью над Пирвудом. Среди этих северных земель сохранилось имя лорда, считавшего Гилнеас своей родиной.",
+      "sources": [
+        3,
+        66
+      ],
+      "house": null,
+      "confidence": "reconstruction",
+      "periodNote": "Предположение о вассалитете Краули сохраняется как гипотеза, не как готовое владение.",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          3
+        ]
+      },
+      "shortDescription": "Гилнеасский лорд из исторической справки о северных землях.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford?action=render",
+      "appearance": "Источник не дает конкретного описания человеческой внешности.",
+      "socialStatus": "Лорд Гилнеаса · историческая справочная запись.",
+      "allegiance": "Гилнеас по происхождению; личная ранняя служба не установлена.",
+      "overlord": null,
+      "overlordText": "Сюзерен не установлен; вассалитет Краули не принимается как доказанный факт.",
+      "role": "historical_reference",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "spouse": null,
+      "relations": [],
+      "fieldSources": {
+        "appearance": [
+          3
+        ],
+        "socialStatus": [
+          3
+        ],
+        "allegiance": [
+          3
+        ],
+        "overlordText": [
+          3
+        ]
+      },
+      "loreSources": [
+        [
+          3
+        ],
+        [
+          3
+        ]
+      ]
+    },
+    {
+      "id": "noble-morrison",
+      "name": "Лорд-мэр Моррисон",
+      "title": "Лорд-мэр Пирвуда",
+      "description": "Лорд-мэр Моррисон возглавлял совет Деревни Погребальных Костров. Его титул связан с управлением поселением и муниципальной властью, отличающейся от наследственного земельного домена.",
+      "sources": [
+        3,
+        32,
+        67
+      ],
+      "house": null,
+      "confidence": "reconstruction",
+      "periodNote": "Нельзя автоматически назначать его мэром до стены; землевладелец Пирвуда в этом слое — Дариус Краули.",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          3
+        ]
+      },
+      "shortDescription": "Исторический глава совета Пирвуда с муниципальным титулом лорда-мэра.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison?action=render",
+      "appearance": "Человек; источник не сообщает конкретных черт внешности.",
+      "socialStatus": "Лорд-мэр Пирвуда · муниципальная должность · историческая справка.",
+      "allegiance": "Совет Деревни Погребальных Костров; личная ранняя служба не установлена.",
+      "overlord": null,
+      "overlordText": "Сюзерен или договор службы до стены не указан; владелец Пирвуда — Дариус Краули.",
+      "role": "historical_reference",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "spouse": null,
+      "relations": [],
+      "fieldSources": {
+        "appearance": [
+          3
+        ],
+        "socialStatus": [
+          3
+        ],
+        "allegiance": [
+          3
+        ],
+        "overlordText": [
+          3,
+          32
+        ]
+      },
+      "loreSources": [
+        [
+          3
+        ],
+        [
+          3
+        ]
+      ]
+    },
+    {
+      "id": "noble-aderic",
+      "name": "Адерик",
+      "title": "Гилнеасский патриарх",
+      "description": "Адерик почитается в Гилнеасе как патриарх, чье имя сохраняет королевская традиция. В его честь назван королевский пир, на котором встретились Генн и Миа Седогрив. Его гробница венчает мемориальный холм в Покое Адерика, связывая память о предках с жизнью столицы.",
+      "sources": [
+        3,
+        27,
+        46,
+        68
+      ],
+      "house": null,
+      "confidence": "reconstruction",
+      "periodNote": "Гипотеза о древнем короле или лорде не подтверждена; статус «патриарх» не равен монаршему титулу.",
+      "provenance": {
+        "confidence": "reconstruction",
+        "sources": [
+          3
+        ]
+      },
+      "shortDescription": "Гилнеасский патриарх, увековеченный королевским пиром и гробницей.",
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Aderic?action=render",
+      "appearance": "Источник не сообщает конкретных черт внешности.",
+      "socialStatus": "Почитаемый патриарх Гилнеаса · историческая фигура, без установленного монаршего титула.",
+      "allegiance": "Гилнеасская традиция памяти о предках.",
+      "overlord": null,
+      "overlordText": "Сюзерен и принадлежность к правящей династии не установлены.",
+      "role": "predecessor_memory",
+      "biographyFrame": "historical_reference",
+      "displayInEarlyCourt": false,
+      "spouse": null,
+      "relations": [],
+      "fieldSources": {
+        "appearance": [
+          3
+        ],
+        "socialStatus": [
+          3
+        ],
+        "allegiance": [
+          3
+        ],
+        "overlordText": [
+          3
+        ]
+      },
+      "loreSources": [
+        [
+          3
+        ],
+        [
+          46
+        ],
+        [
+          27
+        ]
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "title": "Gilneas City",
+      "url": "https://wowpedia.fandom.com/wiki/Gilneas_City",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Gilneas_City",
+      "quote": "Gilneas City (or the Ruins of Gilneas City[3] and simply Gilneas) was the capital city of the kingdom of Gilneas located in the peninsula of the same name."
+    },
+    {
+      "id": 2,
+      "title": "Gilneas (kingdom) — Wowpedia (action=render)",
+      "url": "https://wowpedia.fandom.com/wiki/Gilneas_(kingdom)?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Gilneas_(kingdom)",
+      "quote": "By the start of the Second War Gilneas had become recognized as a significant entity in the political landscape of Lordaeron."
+    },
+    {
+      "id": 3,
+      "title": "Nobles of Gilneas",
+      "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+      "quote": "The Greymane family rules over all of Gilneas."
+    },
+    {
+      "id": 4,
+      "title": "Игровая локализация ruRU · AreaTable",
+      "url": "https://wago.tools/db2/AreaTable/csv?build=4.4.2.60895&locale=ruRU",
+      "canonicalUrl": "https://wago.tools/db2/AreaTable/csv?build=4.4.2.60895&locale=ruRU",
+      "quote": "4755,GilneasCity,Гилнеас,654,0,3057,0,0,564,675,906,0,0,811,0,0,0,13,-1,0,0,0,1572864,256,0,0,0,0",
+      "note": "Игровая локализация: подтверждает написание имени, не довоенную датировку."
+    },
+    {
+      "id": 5,
+      "title": "Greymane Manor",
+      "url": "https://wowpedia.fandom.com/wiki/Greymane_Manor",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Greymane_Manor",
+      "quote": "Greymane Manor is a palatial estate high in the hills of western Gilneas, owned by Genn Greymane and his family."
+    },
+    {
+      "id": 6,
+      "title": "Cathedral Quarter - Wowpedia - Your wiki guide to the World of Warcraft",
+      "url": "https://wowpedia.fandom.com/wiki/Cathedral_Quarter",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Cathedral_Quarter",
+      "quote": "Cathedral Quarter is the northwestern section of Gilneas City , and is the location of the Light's Dawn Cathedral ."
+    },
+    {
+      "id": 7,
+      "title": "Light's Dawn Cathedral - Wowpedia - Your wiki guide to the World of Warcraft",
+      "url": "https://wowpedia.fandom.com/wiki/Light%27s_Dawn_Cathedral",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Light%27s_Dawn_Cathedral",
+      "quote": "Light's Dawn Cathedral is a massive building located in the center of Gilneas City ."
+    },
+    {
+      "id": 8,
+      "title": "Greymane Court - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Greymane_Court",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Greymane_Court",
+      "quote": "The Greymane Court is the southwestern section of Gilneas City.",
+      "note": "Зеркало Warcraft Wiki; основной оригинал — Wowpedia."
+    },
+    {
+      "id": 9,
+      "title": "Merchant Square - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Merchant_Square",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Merchant_Square",
+      "quote": "The Merchant Square is the northeastern section of Gilneas City.",
+      "note": "Зеркало Warcraft Wiki; основной оригинал — Wowpedia."
+    },
+    {
+      "id": 10,
+      "title": "Military District - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Military_District",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Military_District",
+      "quote": "The Military District is the southeastern section of Gilneas City and was apparently focused on the Gilnean military.",
+      "note": "Зеркало Warcraft Wiki; основной оригинал — Wowpedia."
+    },
+    {
+      "id": 11,
+      "title": "Stoneward Prison - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Stoneward_Prison",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Stoneward_Prison",
+      "quote": "The Stoneward Prison (or Gilneas City Prison ) [1] is a fortified prison complex located in the Military District of Gilneas City .",
+      "note": "Зеркало Warcraft Wiki; основной оригинал — Wowpedia."
+    },
+    {
+      "id": 12,
+      "title": "Keel Harbor",
+      "url": "https://wowpedia.fandom.com/wiki/Keel_Harbor",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Keel_Harbor",
+      "quote": "Keel Harbor is a small harbor in central Gilneas, west of Gilneas City."
+    },
+    {
+      "id": 13,
+      "title": "Duskhaven",
+      "url": "https://wowpedia.fandom.com/wiki/Duskhaven",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Duskhaven",
+      "quote": "Duskhaven was a town located along the southwestern coast of Gilneas."
+    },
+    {
+      "id": 14,
+      "title": "Crowley Orchard",
+      "url": "https://wowpedia.fandom.com/wiki/Crowley_Orchard",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Crowley_Orchard",
+      "quote": "Crowley Orchard was an apple orchard located south and very close to the town of Duskhaven in southwestern Gilneas."
+    },
+    {
+      "id": 15,
+      "title": "Crowley Stable Grounds - Wowpedia - Your wiki guide to the World of Warcraft",
+      "url": "https://wowpedia.fandom.com/wiki/Crowley_Stable_Grounds",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Crowley_Stable_Grounds",
+      "quote": "The Crowley Stable Grounds was an extensive area located east of the Crowley Orchard in Gilneas ."
+    },
+    {
+      "id": 16,
+      "title": "Hayward Fishery",
+      "url": "https://wowpedia.fandom.com/wiki/Hayward_Fishery",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Hayward_Fishery",
+      "quote": "Hayward Fishery was formerly a small single island prior the Cataclysm."
+    },
+    {
+      "id": 17,
+      "title": "Hammond Farmstead",
+      "url": "https://wowpedia.fandom.com/wiki/Hammond_Farmstead",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Hammond_Farmstead",
+      "quote": "Hammond Farmstead was a farm located west and downhill of Duskhaven, in southwestern Gilneas."
+    },
+    {
+      "id": 18,
+      "title": "Allen Farmstead",
+      "url": "https://wowpedia.fandom.com/wiki/Allen_Farmstead",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Allen_Farmstead",
+      "quote": "Allen Farmstead was a livestock farm located west of and downhill from Duskhaven, and is next door to the Hammond Farmstead, in southwestern Gilneas."
+    },
+    {
+      "id": 19,
+      "title": "Emberstone Village",
+      "url": "https://wowpedia.fandom.com/wiki/Emberstone_Village",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Emberstone_Village",
+      "quote": "Emberstone Village is a village along the Northgate River in northeastern Gilneas."
+    },
+    {
+      "id": 20,
+      "title": "Emberstone Mine",
+      "url": "https://wowpedia.fandom.com/wiki/Emberstone_Mine",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Emberstone_Mine",
+      "quote": "Emberstone Mine is a mine in northeastern Gilneas."
+    },
+    {
+      "id": 21,
+      "title": "Stormglen Village",
+      "url": "https://wowpedia.fandom.com/wiki/Stormglen_Village",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Stormglen_Village",
+      "quote": "Stormglen Village is a small village located in the southern edge of the Blackwald in Gilneas."
+    },
+    {
+      "id": 22,
+      "title": "Грозовой Перевал",
+      "url": "https://www.wowhead.com/ru/quest=24483/%D0%B3%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D0%BE%D0%B9-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%B0%D0%BB",
+      "canonicalUrl": "https://www.wowhead.com/ru/quest=24483/%D0%B3%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D0%BE%D0%B9-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%B0%D0%BB",
+      "quote": "Разведчики доложили, что в этой рыбацкой деревне мы сможем отдохнуть и пополнить припасы."
+    },
+    {
+      "id": 23,
+      "title": "Blackwald - Wowpedia - Your wiki guide to the World of Warcraft",
+      "url": "https://wowpedia.fandom.com/wiki/Blackwald",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Blackwald",
+      "quote": "The Blackwald is a forest in southern Gilneas , located south of Gilneas City and north of Stormglen Village ."
+    },
+    {
+      "id": 24,
+      "title": "Tal'doren",
+      "url": "https://wowpedia.fandom.com/wiki/Tal%27doren",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Tal%27doren",
+      "quote": "Tal'doren, also known as \"the wild home\", is located in the eastern section of the Blackwald in southern Gilneas."
+    },
+    {
+      "id": 25,
+      "title": "Bradshaw Mill",
+      "url": "https://wowpedia.fandom.com/wiki/Bradshaw_Mill",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Bradshaw_Mill",
+      "quote": "The Bradshaw Mill is a ruined and abandoned mill located in the southern part of the Blackwald, north of Stormglen Village in Gilneas."
+    },
+    {
+      "id": 26,
+      "title": "Tempest's Reach",
+      "url": "https://wowpedia.fandom.com/wiki/Tempest%27s_Reach",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Tempest%27s_Reach",
+      "quote": "Tempest's Reach is a village and lighthouse on the eastern coast of Gilneas."
+    },
+    {
+      "id": 27,
+      "title": "Aderic's Repose",
+      "url": "https://wowpedia.fandom.com/wiki/Aderic%27s_Repose",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Aderic%27s_Repose",
+      "quote": "Aderic's Repose is a cemetery in Gilneas located outside of the city to the west, not far from Keel Harbor to the north."
+    },
+    {
+      "id": 28,
+      "title": "Northgate Woods - Wowpedia - Your wiki guide to the World of Warcraft",
+      "url": "https://wowpedia.fandom.com/wiki/Northgate_Woods",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Northgate_Woods",
+      "quote": "The Northgate Woods is a forested area in Gilneas , located north of Gilneas City and south of the Greymane Wall ."
+    },
+    {
+      "id": 29,
+      "title": "Northgate River",
+      "url": "https://warcraft.wiki.gg/wiki/Northgate_River",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Northgate_River",
+      "quote": "Northgate River is a river found on the Gilnean peninsula.",
+      "note": "Зеркало Warcraft Wiki; основной оригинал — Wowpedia."
+    },
+    {
+      "id": 30,
+      "title": "Northern Headlands",
+      "url": "https://wowpedia.fandom.com/wiki/Northern_Headlands",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Northern_Headlands",
+      "quote": "The Northern Headlands is a region running along the Greymane Wall in northwestern Gilneas."
+    },
+    {
+      "id": 31,
+      "title": "Headlands",
+      "url": "https://wowpedia.fandom.com/wiki/Headlands",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Headlands",
+      "quote": "The Headlands is a big area of Gilneas located northwest of Keel Harbor."
+    },
+    {
+      "id": 32,
+      "title": "Darius Crowley",
+      "url": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+      "quote": "He owned the towns of Pyrewood Village and Ambermill."
+    },
+    {
+      "id": 33,
+      "title": "Shadowfang Keep",
+      "url": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+      "quote": "It was the home to the lords of Pyrewood Village, who answered to Darius Crowley's family.[4] The lord of the castle was Baron Silverlaine and his forces were led by Commander Springvale, a paladin of the Silver Hand."
+    },
+    {
+      "id": 34,
+      "title": "Shadowfang Keep",
+      "url": "https://warcraft.wiki.gg/wiki/Shadowfang_Keep",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+      "quote": "Shadowfang Keep, originally named Silverlaine Keep,[1] is a haunted keep not far from the borders of Gilneas in southern Silverpine Forest, on a high bluff overlooking Pyrewood Village.",
+      "note": "Зеркало Warcraft Wiki; основной оригинал — Wowpedia."
+    },
+    {
+      "id": 35,
+      "title": "Ambermill - Wowpedia - Your wiki guide to the World of Warcraft",
+      "url": "https://wowpedia.fandom.com/wiki/Ambermill",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Ambermill",
+      "quote": "Prior to the advent of the Third War , Ambermill was a relatively unimportant site in the Silverpine Forest and was mainly used for lumber harvesting, but"
+    },
+    {
+      "id": 36,
+      "title": "Dalaran (kingdom) — Wowpedia (action=render)",
+      "url": "https://wowpedia.fandom.com/wiki/Dalaran_(kingdom)?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Dalaran_(kingdom)",
+      "quote": "Dalaran, officially the Magocracy of Dalaran,[5] is a small, magocratic nation founded originally as a city-state by Arathi magi near the coast of Lordamere Lake in Lordaeron."
+    },
+    {
+      "id": 37,
+      "title": "Antonidas",
+      "url": "https://wowpedia.fandom.com/wiki/Antonidas",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Antonidas",
+      "quote": "During the Second War, he pledged loyalty to the Alliance of Lordaeron on behalf of Dalaran, in the war against the orcs."
+    },
+    {
+      "id": 38,
+      "title": "Fenris Isle",
+      "url": "https://wowpedia.fandom.com/wiki/Fenris_Isle",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Fenris_Isle",
+      "quote": "Fenris Isle was once home to a thriving military outpost of the kingdom of Lordaeron called Fenris Keep."
+    },
+    {
+      "id": 39,
+      "title": "Capital City",
+      "url": "https://wowpedia.fandom.com/wiki/Capital_City",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Capital_City",
+      "quote": "Capital City[1][2][3][4][5][6][7] or simply Lordaeron City[8] and Lordaeron[9][10] was the capital city of the Kingdom of Lordaeron."
+    },
+    {
+      "id": 40,
+      "title": "Silverpine Forest - Wowpedia - Your wiki guide to the World of Warcraft",
+      "url": "https://wowpedia.fandom.com/wiki/Silverpine_Forest",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Silverpine_Forest",
+      "quote": "is a vast, ancient forest that runs along Lordaeron 's rugged western coast."
+    },
+    {
+      "id": 41,
+      "title": "Lordamere Lake",
+      "url": "https://wowpedia.fandom.com/wiki/Lordamere_Lake",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lordamere_Lake",
+      "quote": "Lordamere Lake (or Lake Lordamere)[1] is one of the largest lakes in the Eastern Kingdoms, rivaled only by Darrowmere Lake to the east."
+    },
+    {
+      "id": 42,
+      "title": "Deep Elem Mine",
+      "url": "https://wowpedia.fandom.com/wiki/Deep_Elem_Mine",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Deep_Elem_Mine",
+      "quote": "The Deep Elem Mine is a mine in the middle of Silverpine Forest.[56, 46]"
+    },
+    {
+      "id": 43,
+      "title": "Galewatch Lighthouse",
+      "url": "https://wowpedia.fandom.com/wiki/Galewatch_Lighthouse",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Galewatch_Lighthouse",
+      "quote": "is a lighthouse situated on a large rocky island in the furthest northern reaches of Gilneas."
+    },
+    {
+      "id": 44,
+      "title": "Violet Citadel",
+      "url": "https://wowpedia.fandom.com/wiki/Violet_Citadel",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Violet_Citadel",
+      "quote": "The Violet Citadel (or the Violet Tower)[1][2] is the main fortress of Dalaran which housed/houses the Eye of Dalaran, Chamber of Air, research laboratories and great spell libraries of the Kirin Tor — the mage class of Dalaran."
+    },
+    {
+      "id": 45,
+      "title": "Genn Greymane - Wowpedia - Your wiki guide to the World of Warcraft",
+      "url": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+      "quote": "During the Second War, Greymane met with the other human leaders at Capital City to hear of Stormwind's fall at the hands of the orcish Horde. Greymane joined the other human leaders in forming the Alliance of Lordaeron to counter the Horde threat, but due to his pride, he offered only token support.[5]"
+    },
+    {
+      "id": 46,
+      "title": "Genn Greymane: Lord of His Pack - World of Warcraft",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+      "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+      "quote": "Genn and several of the most influential Gilnean nobles had made the trip"
+    },
+    {
+      "id": 47,
+      "title": "Greymane family",
+      "url": "https://wowpedia.fandom.com/wiki/Greymane_family",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Greymane_family",
+      "quote": "The Greymane family (also known as the Greymane clan)[1] is the ruling line of the kingdom of Gilneas). The family ruled from Greymane Manor and had a Royal Chemist in the form of Krennan Aranas."
+    },
+    {
+      "id": 48,
+      "title": "Blizzard · Вожак стаи (русский текст)",
+      "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+      "canonicalUrl": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+      "quote": "— И чтобы включить его в состав стены, придется отрезать часть земель лорда Краули. Как минимум деревню Погребальных Костров и Янтарную мельницу."
+    },
+    {
+      "id": 49,
+      "title": "Lord Vincent Godfrey",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Vincent_Godfrey",
+      "quote": "Prior to the Second War, Godfrey was among the Gilnean) nobles who accompanied King Genn Greymane to Lordaeron to create the Alliance of Lordaeron."
+    },
+    {
+      "id": 50,
+      "title": "Baron Ashbury",
+      "url": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+      "quote": "He and Genn grew up together, and he was once one of the king's most trusted friends. He was present in the Capital City to create the Alliance of Lordaeron and agreed with Lord Godfrey, to send only a token army."
+    },
+    {
+      "id": 51,
+      "title": "Betrayal at Tempest's Reach",
+      "url": "https://wowpedia.fandom.com/wiki/Betrayal_at_Tempest%27s_Reach",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Betrayal_at_Tempest%27s_Reach",
+      "quote": "He managed to convince two of the eastern lords to go with his plan. The fool seems to think he can strike a deal with the Forsaken by turning Greymane over to them."
+    },
+    {
+      "id": 52,
+      "title": "Lord Marley",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Marley?mobileaction=toggle_view_mobile",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Marley",
+      "quote": "Lord Marley was a Gilnean) noble. King Genn Greymane had originally planned to have the Greymane Wall cut through Marley's domain, but later decided to have it cut through Lord Darius Crowley's domain instead at the recommendation of Lord Godfrey.[1]"
+    },
+    {
+      "id": 53,
+      "title": "Archibald Greymane",
+      "url": "https://wowpedia.fandom.com/wiki/Archibald_Greymane",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Archibald_Greymane",
+      "quote": "Archibald Greymane was the king of Gilneas and the father of Genn Greymane. Under his rule, Gilneas prospered. His views on asking for help were that it was for the weak.[2] He passed this onto his son Genn, who became very stubborn, refusing any sort of aid until the Fall of Gilneas, where he began to finally move past this view."
+    },
+    {
+      "id": 54,
+      "title": "Lord Ashbury the 1st",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Ashbury_the_1st",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st",
+      "quote": "Lord Ashbury the 1st was a Gilnean noble and the father of Baron Ashbury. Lord Ashbury helped King Archibald Greymane build Gilneas up to a nation of great power. King Archibald always told his son Prince Genn to trust in the Ashburys’ fidelity to the crown because of the accomplishments of Lord Ashbury. [1]",
+      "note": "Зеркало Warcraft Wiki; основной оригинал — Wowpedia."
+    },
+    {
+      "id": 55,
+      "title": "Lord Walden",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+      "quote": "Lord Walden was a human nobleman from eastern Gilneas."
+    },
+    {
+      "id": 56,
+      "title": "Leader of the Pack (quest)",
+      "url": "https://warcraft.wiki.gg/wiki/Leader_of_the_Pack_(quest)",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Leader_of_the_Pack_(quest)",
+      "quote": "One of Sylvanas' handpicked dark rangers is overseeing the battlefront from the Walden house near the shore. Take this whistle and use it when you're close to her.",
+      "note": "Зеркало Warcraft Wiki; основной оригинал — Wowpedia."
+    },
+    {
+      "id": 57,
+      "title": "Lord Hewell - Wowpedia - Your wiki guide to the World of Warcraft",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Hewell",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Hewell",
+      "quote": "Lord Hewell is a nobleman of Gilneas who can be found at Tempest's Reach during the worgen starting experience. Though the eastern lords (Lord Walden and Baron Ashbury) took part in Lord Godfrey's plan to take King Genn Greymane captive in order to bargain with the Forsaken, Hewell refused to betray his king. Instead he remained by Greymane's side until Krennan Aranas sent an adventurer to help."
+    },
+    {
+      "id": 58,
+      "title": "Атака с фланга - Задание - World of Warcraft",
+      "url": "https://www.wowhead.com/ru/quest=24677/%D0%B0%D1%82%D0%B0%D0%BA%D0%B0-%D1%81-%D1%84%D0%BB%D0%B0%D0%BD%D0%B3%D0%B0",
+      "canonicalUrl": "https://www.wowhead.com/ru/quest=24677/%D0%B0%D1%82%D0%B0%D0%BA%D0%B0-%D1%81-%D1%84%D0%BB%D0%B0%D0%BD%D0%B3%D0%B0",
+      "quote": "Поговорите с лордом Хьювелом, чтобы он отправил вас на почтовую станцию, где вас ждет Лорна Краули.",
+      "note": "Игровая локализация: подтверждает написание имени, не довоенную датировку."
+    },
+    {
+      "id": 59,
+      "title": "Baron Silverlaine - Wowpedia - Your wiki guide to the World of Warcraft",
+      "url": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+      "quote": "Baron Silverlaine was master of the keep before it fell to Arugal's worgen."
+    },
+    {
+      "id": 60,
+      "title": "Unveiling Cataclysm Classic Zones, Dungeons, and PvP Season 9",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24095666/unveiling-cataclysm-classic-zones-dungeons-and-pvp-season-9",
+      "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/news/24095666/unveiling-cataclysm-classic-zones-dungeons-and-pvp-season-9",
+      "quote": "Baron Silverlaine was master of the keep before it fell to Arugal’s worgen."
+    },
+    {
+      "id": 61,
+      "title": "Baron Longshore",
+      "url": "https://wowpedia.fandom.com/wiki/Baron_Longshore",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Longshore",
+      "quote": "Baron Longshore is the former captain of the Heedless , a ship in the pirate fleet of the Southsea Freebooters , and hails from Gilneas .\n[1] He is located on the Merchant Coast in the Northern Barrens ."
+    },
+    {
+      "id": 62,
+      "title": "The Baron's Demands",
+      "url": "https://wowpedia.fandom.com/wiki/The_Baron%27s_Demands",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/The_Baron%27s_Demands",
+      "quote": "Oh, me word is good, friend. I used ta be a real Baron, ye know."
+    },
+    {
+      "id": 63,
+      "title": "Lord Candren",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Candren",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Candren",
+      "quote": "Lord Candren is the quartermaster for Gilneas). He is found in Darnassus's Temple Gardens, near the flight master."
+    },
+    {
+      "id": 64,
+      "title": "Isiden Perenolde",
+      "url": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+      "quote": "Isiden Perenolde[1] was the nephew of Lord Aiden Perenolde, King of Alterac. When Alterac was placed under martial law by order of King Terenas, Isiden fled to Gilneas, where he hoped to rally support.[2] He was eventually backed by Genn Greymane, Gilneas' king, as the matter of the succession began to heat up.[3]"
+    },
+    {
+      "id": 65,
+      "title": "Лорд Джеффри Тулван · Wowpedia",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan?action=render",
+      "quote": "Lord Geoffery Tulvan is a worgen located at the Crucible of Carnage in the Twilight Highlands. He is one of the challengers and seeks to become the greatest warrior in the world. He is strong enough to lift his own carriage. Once he turns, he is known as Lord Geoffery Wildwolf."
+    },
+    {
+      "id": 66,
+      "title": "Лорд Харфорд · Wowpedia",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Harford?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford?action=render",
+      "quote": "- There... There's no more time for me. I'm done for. Finish me off, <name>. Do it or they'll kill us both. <Name>... Remember Gilneas, our beloved home. This world is worth saving."
+    },
+    {
+      "id": 67,
+      "title": "Лорд-мэр Моррисон · Wowpedia",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison?action=render",
+      "quote": "Lord Mayor Morrison is a human and leader of the Pyrewood Council who appears in Pyrewood Village in Silverpine Forest during !H [15] Pyrewood Ambush."
+    },
+    {
+      "id": 68,
+      "title": "Адерик · Wowpedia",
+      "url": "https://wowpedia.fandom.com/wiki/Aderic?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Aderic?action=render",
+      "quote": "Aderic was a human who was a Gilnean patriarch. He is buried at Aderic's Repose at the top of the hill. When the Gilneans retreated from Gilneas City through the Undertaker's Pass and into the Repose, they disturbed the graves of their ancestors, forcing their spirits to rise from their graves. Krennan Aranas sought his blessing by offering and placing the Blessed Offerings on his grave in hopes of calming the risen Gilnean spirits. He appears to have accepted the offer as the spirits returned to the grave.[1]"
+    },
+    {
+      "id": 69,
+      "title": "Старое знамя Гилнеаса · Warcraft II",
+      "url": "https://wowpedia.fandom.com/wiki/File:Gineas.jpg?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/File:Gineas.jpg",
+      "quote": "Gilneas banner. Artwork by Chris Metzen.",
+      "note": "Warcraft II: Tides of Darkness manual, pg. 43; Warcraft II: Battle.net Edition manual, pg. 41. Attribution retained from the file description."
+    },
+    {
+      "id": "court-source-8",
+      "title": "Lord Marley",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Marley",
+      "quote": "King Genn Greymane had originally planned to have the Greymane Wall cut through Marley's domain, but later decided to have it cut through Lord Darius Crowley's domain instead at the recommendation of Lord Godfrey.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    },
+    {
+      "id": "court-source-20",
+      "title": "Lord Geoffery Tulvan - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Geoffery_Tulvan",
+      "quote": "Lord Geoffery Tulvan is a worgen located at the Crucible of Carnage in the Twilight Highlands.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно.",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan"
+    },
+    {
+      "id": "court-source-21",
+      "title": "Lord Harford - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Harford",
+      "quote": "Lord Harford is an Argent Dawn prisoner of the death knights in the Scarlet Enclave.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно.",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford"
+    },
+    {
+      "id": "court-source-22",
+      "title": "Lord Mayor Morrison - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Mayor_Morrison",
+      "quote": "Lord Mayor Morrison is a human and leader of the Pyrewood Council who appears in Pyrewood Village in Silverpine Forest during [15] Pyrewood Ambush.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно.",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison"
+    },
+    {
+      "id": "court-source-23",
+      "title": "Aderic - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "url": "https://warcraft.wiki.gg/wiki/Aderic",
+      "quote": "Aderic was a human who was a Gilnean patriarch. He is buried at Aderic's Repose at the top of the hill.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно.",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Aderic"
+    },
+    {
+      "id": "court-source-24",
+      "title": "Lord Geoffery Tulvan",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan",
+      "quote": "Lord Geoffery Tulvan is a worgen located at the Crucible of Carnage in the Twilight Highlands. He is one of the challengers and seeks to become the greatest warrior in the world.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    },
+    {
+      "id": "court-source-25",
+      "title": "Lord Harford",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Harford",
+      "quote": "Remember Gilneas, our beloved home. This world is worth saving.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    },
+    {
+      "id": "court-source-26",
+      "title": "Lord Mayor Morrison",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison",
+      "quote": "Lord Mayor Morrison is a human and leader of the Pyrewood Council who appears in Pyrewood Village in Silverpine Forest during",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    },
+    {
+      "id": "court-source-27",
+      "title": "Aderic",
+      "url": "https://wowpedia.fandom.com/wiki/Aderic",
+      "quote": "Aderic was a human who was a Gilnean patriarch. He is buried at Aderic's Repose at the top of the hill.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    },
+    {
+      "id": "court-source-29",
+      "title": "greymane-enUS",
+      "url": "http://media.blizzard.com/wow/lore/pdfdownload/leader-story/genn-greymane/greymane-enUS.pdf",
+      "quote": "\"Never take a man's hand, Son...\" King Archibald Greymane said, his strong frame now a muddied silhouette against the fading glow of twilight.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    },
+    {
+      "id": "court-source-30",
+      "title": "Lord Ashbury the 1st — Wowpedia (action=render)",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st?action=render",
+      "quote": "Lord Ashbury the 1st was a Gilnean noble and the father of Baron Ashbury. Lord Ashbury helped King Archibald Greymane build Gilneas up to a nation of great power.",
+      "note": "Свидетельство для политического реестра; ранняя роль и поздний контекст рассматриваются раздельно."
+    }
+  ],
+  "royalCouncil": {
+    "version": 1,
+    "members": [
+      {
+        "id": "council-greymane",
+        "kind": "faction",
+        "refId": "greymane",
+        "party": "royalists",
+        "stance": "support",
+        "advisor": false,
+        "active": true,
+        "note": "Правящий дом отстаивает самостоятельность королевства под руководством Генна. Его курс за стену не означает единогласия всех членов семьи.",
+        "basis": "scenario",
+        "partyBasis": "scenario",
+        "stanceBasis": "scenario",
+        "advisorBasis": "unknown",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          48,
+          3,
+          47
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Дети и супруга Генна не получают автоматических голосов; поздние разногласия Лиама не датируются в этот срез."
+          ],
+          "presenceBasis": "lore",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-genn"
+      },
+      {
+        "id": "council-crowley",
+        "kind": "faction",
+        "refId": "crowley",
+        "party": "internationalists",
+        "stance": "oppose",
+        "advisor": true,
+        "active": true,
+        "note": "Дом Дариуса поддерживает общую безопасность с союзными королевствами и сохранение северных связей. Линия главы — не объявленный семейный устав.",
+        "basis": "scenario",
+        "partyBasis": "scenario",
+        "stanceBasis": "scenario",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          48,
+          32
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не строить дом как нынешнюю организацию мятежников; спор пока политический."
+          ],
+          "presenceBasis": "lore",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-darius"
+      },
+      {
+        "id": "council-silverlaine",
+        "kind": "faction",
+        "refId": "silverlaine",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Северный баронский дом связан с Краули по принятому сценарию, но его самостоятельное отношение к стене остаётся открытым.",
+        "basis": "scenario",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          59,
+          33
+        ],
+        "provenance": {
+          "uncertainties": [
+            "existingParentId=crowley сохранить, но relationBasis=scenario; это не primary fact и не стеновой голос."
+          ],
+          "presenceBasis": "lore",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-silverlaine"
+      },
+      {
+        "id": "council-godfrey",
+        "kind": "faction",
+        "refId": "godfrey",
+        "party": "royalists",
+        "stance": "support",
+        "advisor": true,
+        "active": true,
+        "note": "Дом Годфри следует расчётливой поддержке королевского рубежа. Его глава сначала заботится о торговых потерях, затем поддерживает выгодную горную линию.",
+        "basis": "scenario",
+        "partyBasis": "scenario",
+        "stanceBasis": "scenario",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          46,
+          48
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Поддержка Годфри здесь не означает будущую неизменную верность монарху."
+          ],
+          "presenceBasis": "lore",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-godfrey"
+      },
+      {
+        "id": "council-ashbury",
+        "kind": "faction",
+        "refId": "ashbury",
+        "party": "royalists",
+        "stance": "unknown",
+        "advisor": true,
+        "active": true,
+        "note": "Старый союзный короне дом тяготеет к Генну; сохранение гилнеасских сил подтверждено, а отдельное одобрение стены — нет.",
+        "basis": "scenario",
+        "partyBasis": "scenario",
+        "stanceBasis": "unknown",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          46,
+          50
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не считать нынешний дом единым действующим отцом и сыном; отец — отдельная исключённая историческая запись."
+          ],
+          "presenceBasis": "lore",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-ashbury"
+      },
+      {
+        "id": "council-marley",
+        "kind": "faction",
+        "refId": "marley",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Приграничный дом Марли может поддержать одну из сторон после гарантий о земле и цене рубежа. Его действительное решение неизвестно.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          48,
+          3
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Ни смена маршрута, ни поздняя охота не доказывают голос «за»."
+          ],
+          "presenceBasis": "lore",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-marley"
+      },
+      {
+        "id": "council-walden",
+        "kind": "faction",
+        "refId": "walden",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Дом Уолденов известен по поздней знати; для раннего спора о стене он остаётся возможным, недатированным союзником.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          55
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Нельзя назначать дому раннюю поддержку Годфри или королевского советника по поздней измене."
+          ],
+          "presenceBasis": "scenario",
+          "aggregateFromLeader": true
+        },
+        "representativeId": "noble-walden"
+      },
+      {
+        "id": "council-noble-genn",
+        "kind": "person",
+        "refId": "noble-genn",
+        "party": "royalists",
+        "stance": "support",
+        "advisor": false,
+        "active": true,
+        "note": "Король ставит самостоятельность Гилнеаса выше союзных обязательств и предлагает новый северный рубеж. Выход из Альянса ещё не совершён.",
+        "basis": "lore",
+        "partyBasis": "lore",
+        "stanceBasis": "lore",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          48,
+          45
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Название партии авторское; текущий статус остаётся «король, участник Альянса», не изгнанник или бывший король."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "sovereign"
+        }
+      },
+      {
+        "id": "council-noble-darius",
+        "kind": "person",
+        "refId": "noble-darius",
+        "party": "internationalists",
+        "stance": "oppose",
+        "advisor": true,
+        "active": true,
+        "note": "Северный лорд отстаивает общую защиту с соседними королевствами; проект стены угрожает связям и землям его дома. Спор с короной ещё не стал мятежом.",
+        "basis": "lore",
+        "partyBasis": "lore",
+        "stanceBasis": "lore",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": true,
+        "sources": [
+          48,
+          32
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не известно, что именно он уже сказал на авторском этапе 10/100; stance — согласованная с лором стартовая линия, не датированный протокол."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "early_advisor"
+        }
+      },
+      {
+        "id": "council-noble-godfrey",
+        "kind": "person",
+        "refId": "noble-godfrey",
+        "party": "royalists",
+        "stance": "support",
+        "advisor": true,
+        "active": true,
+        "note": "Годфри поддерживает горную линию стены, укрепляющую оборону и значение его владений. Расчётливый союзник короля; разрыв торговли сначала вызывает у него сомнения.",
+        "basis": "lore",
+        "partyBasis": "lore",
+        "stanceBasis": "lore",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": true,
+        "sources": [
+          46,
+          48,
+          49
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не изображать безусловным противником всякой торговли с самого начала: его ограниченное участие в Альянсе первоначально служило торговым интересам."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "early_advisor"
+        }
+      },
+      {
+        "id": "council-noble-ashbury",
+        "kind": "person",
+        "refId": "noble-ashbury",
+        "party": "royalists",
+        "stance": "unknown",
+        "advisor": true,
+        "active": true,
+        "note": "Давний друг Генна поддерживает бережную к казне политику и малое союзное войско. В королевском лагере правдоподобен, но его отдельное решение о стене не известно.",
+        "basis": "scenario",
+        "partyBasis": "scenario",
+        "stanceBasis": "unknown",
+        "advisorBasis": "lore",
+        "potentialAlly": false,
+        "votingSeat": true,
+        "sources": [
+          46,
+          45,
+          50
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Ограниченная помощь Альянсу не равна одобрению прекращения всей торговли или строительства стены.",
+            "Поздняя измена не меняет его стартовую партийную линию."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "early_advisor"
+        }
+      },
+      {
+        "id": "council-noble-marley",
+        "title": "Лорд · владелец приграничной провинции",
+        "kind": "person",
+        "refId": "noble-marley",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Лорд пограничной провинции: его земли рассматриваются для нового рубежа. До решения о маршруте он остаётся возможным союзником; личного голоса за стену или против неё не сохранилось.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          48,
+          3,
+          "court-source-8"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Каталожный титул советника не даёт отдельной даты службы до стены. advisor=false в строгом стартовом срезе; возможна явная сценарная галочка.",
+            "Не выводить голос из совместных поздних охот или выгоды от переноса маршрута."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "potential_ally"
+        }
+      },
+      {
+        "id": "council-noble-archibald",
+        "kind": "person",
+        "refId": "noble-archibald",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": false,
+        "note": "Прежний король и отец Генна; его учение о самостоятельности принадлежит наследию династии, а не действующему совету.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          45,
+          53,
+          "court-source-29"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "party=neutral — техническая нераспределённость исключённой записи, не политический нейтралитет предка.",
+            "Точная дата смерти не доказана и не нужна для исключения из текущего совета."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "historical_predecessor"
+        }
+      },
+      {
+        "id": "council-noble-ashbury-first",
+        "kind": "person",
+        "refId": "noble-ashbury-first",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": false,
+        "note": "Лорд Эшбери I — представитель прежнего двора Арчибальда. Верность его семьи короне — историческое наследие, не нынешнее кресло при Генне.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          3,
+          54,
+          "court-source-30"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не называть бароном I и не датировать смерть по текущему инфобоксу.",
+            "advisor=false означает не советник текущего Генна; historicalAdvisorTo=noble-archibald."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "historical_predecessor"
+        }
+      },
+      {
+        "id": "council-noble-walden",
+        "kind": "person",
+        "refId": "noble-walden",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Гилнеасский лорд из позднего реестра. Для спора о стене его голос неизвестен; возможное приглашение — авторское, без назначения советником.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          55,
+          60
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Нельзя выводить роялизм, поддержку стены или раннее кресло из позднего сотрудничества с Годфри.",
+            "При включении в авторский пул пометить presenceBasis=scenario и votingSeat=false."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        }
+      },
+      {
+        "id": "council-noble-hewell",
+        "kind": "person",
+        "refId": "noble-hewell",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Лорд Хьювелл может стать союзником короны, но его место в раннем дворе и отношение к стене не известны. Пока не принадлежит ни одной партии.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          57
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Поздний отказ от измены — не доказательство членства в авторских роялистах до стены.",
+            "Не отождествлять Хьювелла с другим именем/новым домом; использовать существующий ID."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        }
+      },
+      {
+        "id": "council-noble-silverlaine",
+        "kind": "person",
+        "refId": "noble-silverlaine",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Барон хранит северное владение. Связь с домом Краули принята в сценарии, однако она не заменяет его собственного решения о стене.",
+        "basis": "scenario",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          59,
+          60
+        ],
+        "provenance": {
+          "uncertainties": [
+            "В первичном Lord of His Pack не назван ни Сребролен, ни его вассалитет.",
+            "Наличие северной крепости не датирует баронское владение точно до выхода из Альянса.",
+            "Вассальная связь с Краули — принятая авторская конфигурация, а не подтверждённый стеновой голос."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "potential_ally"
+        }
+      },
+      {
+        "id": "council-noble-longshore",
+        "kind": "person",
+        "refId": "noble-longshore",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Барон Дольноберег — гилнеасец с засвидетельствованным прежним баронским титулом. Когда он получил его и какую позицию занимает при обсуждении стены, не известно.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          61,
+          62
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не приписывать раннюю пиратскую роль или мнение о стене по его поздней судьбе.",
+            "То, что его позднее оставили за стеной, не означает, что ранее он голосовал против."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        }
+      },
+      {
+        "id": "council-noble-candren",
+        "kind": "person",
+        "refId": "noble-candren",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Лорд Кандрен известен службой гилнеасцам, но его раннее место при дворе и решение о северном рубеже не установлены. Возможный союзник вне партий.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          63
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не поднимать позднего интенданта до советника Генна после Второй войны."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        }
+      },
+      {
+        "id": "council-noble-isiden",
+        "kind": "person",
+        "refId": "noble-isiden",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Альтеракский претендент ищет поддержки в Гилнеасе. Покровительство Генна подтверждено, но личная партия и взгляд на стену не раскрыты; он возможный гость, не советник короля.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          45,
+          64
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Кредит поддержки направлен от Генна к Исидену; обратную клятву, вассалитет или голос «за стену» источник не даёт.",
+            "Не утверждать, что он приехал именно на 10/100 или оставался до начала работ."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "guest_potential_ally"
+        }
+      },
+      {
+        "id": "council-noble-tulvan",
+        "kind": "person",
+        "refId": "noble-tulvan",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Лорд Джеффри Тулван — имя из реестра знати; его ранний титул, владения и позиция в споре о стене не известны. Возможный союзник только по условиям сценария.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          "court-source-20",
+          "court-source-24"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не выдавать прозвище «Earl of Evisceration» за доказанное раннее графское владение.",
+            "Не переносить позднюю физическую силу, форму воргена или арену в ранний совет."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        }
+      },
+      {
+        "id": "council-noble-harford",
+        "kind": "person",
+        "refId": "noble-harford",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Лорд Харфорд считает Гилнеас родиной, но его прежние обязательства и отношение к стене не известны. Предполагаемые северные связи ещё не означают принадлежность партии Краули.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          "court-source-21",
+          "court-source-25"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не назначать ему раннюю службу Аругалу, членство в Серебряном Рассвете, плен или смерть; это будущее относительно выбранного слоя.",
+            "Вассалитет Краули не доказан, и сам по себе не даёт голос против стены."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        }
+      },
+      {
+        "id": "council-noble-morrison",
+        "kind": "person",
+        "refId": "noble-morrison",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": true,
+        "note": "Моррисон известен муниципальной службой Пирвуду; ранняя дата назначения не установлена. Если пригласить его, он может представлять интересы жителей, но его голос о стене неизвестен.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": true,
+        "votingSeat": false,
+        "sources": [
+          3,
+          "court-source-22",
+          "court-source-26"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Не назначать наследственный домен, раннее мэрство или кресло королевского советника из муниципального титула.",
+            "Не выводить партию или голос из местоположения Пирвуда."
+          ],
+          "presenceBasis": "scenario",
+          "rosterRole": "optional_potential_ally"
+        }
+      },
+      {
+        "id": "council-noble-aderic",
+        "kind": "person",
+        "refId": "noble-aderic",
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "active": false,
+        "note": "Адерик — почитаемый патриарх в памяти Гилнеаса. Его имя принадлежит традиции и родословной справке, а не списку голосующих при Генне.",
+        "basis": "unknown",
+        "partyBasis": "unknown",
+        "stanceBasis": "unknown",
+        "advisorBasis": "unknown",
+        "potentialAlly": false,
+        "votingSeat": false,
+        "sources": [
+          3,
+          "court-source-23",
+          "court-source-27"
+        ],
+        "provenance": {
+          "uncertainties": [
+            "Точная дата смерти и связь с династией Седогривов не установлены.",
+            "Не назначать партию Адерику из совпадения с названием королевского пира."
+          ],
+          "presenceBasis": "lore",
+          "rosterRole": "historical_memory"
+        }
+      }
+    ],
+    "partyOrganizationsCanonical": false,
+    "scope": "После Второй войны, до выхода Гилнеаса из Альянса и до возведения Стены Седогрива.",
+    "note": "Политические направления названы автором; потенциальные союзники не получают автоматически советническое кресло или голос."
+  }
+}

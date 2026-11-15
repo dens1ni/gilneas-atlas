@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "phase": "Human Gilneas after the Second War, still in the Alliance, before secession, the Greymane Wall, and the worgen curse.",
+  "shape": "M1 1H59V46.4L30 71 1 46.4Z",
+  "viewBox": "0 0 60 72",
+  "deviceBox": { "x": 10, "y": 8, "width": 40, "height": 44 },
+  "rootSha256": "0aaeb453e3475503e9260f33b5dce1158bc087138a01cf07e7018f2b2d9798c3",
+  "factions": [
+    {
+      "id": "gilneas",
+      "fieldColor": "#9aa8b6",
+      "heraldry": {
+        "symbol": "assets/ui/gilneas-royal-symbol.png",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "field": "#131516",
+        "origin": "author",
+        "note": "Existing author-supplied royal device; PNG bytes unchanged. Root meta.gilneasHeraldry, including custom author metadata, remains authoritative."
+      },
+      "origin": "author",
+      "note": "Use the provided royal image, not a redraw or a claim to historical canonical arms. The graphite shield field is the existing royal treatment; the faction/marker color stays #9aa8b6.",
+      "sourceUrls": [],
+      "sourceFiles": ["assets/ui/gilneas-royal-symbol.png"],
+      "evidence": { "device": "author-supplied-existing", "chronology": "not a canonical-armorial claim" }
+    },
+    {
+      "id": "greymane",
+      "fieldColor": "#c49b60",
+      "heraldry": {
+        "symbol": "assets/ui/factions/greymane-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed crown and three short rain strokes; dynastic theme, not canonical Greymane arms."
+      },
+      "origin": "author",
+      "note": "Restrained crown for the reigning dynasty. Rain strokes are invented regional decoration, not a sourced family symbol and not derived from the story's later Cataclysm sea scenes.",
+      "sourceUrls": ["https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack"],
+      "sourceFiles": ["/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-lord-of-his-pack.md"],
+      "evidence": { "dynasty": "primary-retrospective-early-scene", "device": "author-designed" }
+    },
+    {
+      "id": "crowley",
+      "fieldColor": "#639096",
+      "heraldry": {
+        "symbol": "assets/ui/factions/crowley-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed northern fir over crossed arms; no worgen, rebellion or later liberation-front device."
+      },
+      "origin": "author",
+      "note": "Northern holdings at Pyrewood and Ambermill and Crowley's advocacy of aid are attested in Second-War scenes. The fir and crossed arms are restrained visual interpretation, not recorded house heraldry.",
+      "sourceUrls": ["https://wowpedia.fandom.com/wiki/Darius_Crowley", "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack"],
+      "sourceFiles": ["/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-darius.md", "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-lord-of-his-pack.md"],
+      "evidence": { "holdings": "early-scene-attested", "service": "early-scene-attested", "device": "author-designed" }
+    },
+    {
+      "id": "silverlaine",
+      "fieldColor": "#93a798",
+      "heraldry": {
+        "symbol": "assets/ui/factions/silverlaine-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed crenellated gate-tower for the keep's prior stewardship; no ghost or wolf device."
+      },
+      "origin": "author",
+      "note": "The Adventure Guide explicitly names Silverlaine as master before Arugal's takeover. Castle stewardship inspires the tower. This is not canonical arms and does not prove ownership dates before the wall or a primary-source vassal chain to Crowley.",
+      "sourceUrls": ["https://wowpedia.fandom.com/wiki/Baron_Silverlaine"],
+      "sourceFiles": ["/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-silverlaine.md"],
+      "evidence": { "stewardship": "retrospective-pre-takeover", "earlyTitleAndChain": "not-established-by-device", "device": "author-designed" }
+    },
+    {
+      "id": "godfrey",
+      "fieldColor": "#8e789b",
+      "heraldry": {
+        "symbol": "assets/ui/factions/godfrey-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed upright military blade over paired guard blades for standing-militia service; no undead or late-pistol iconography."
+      },
+      "origin": "author",
+      "note": "Godfrey commands the standing militia in the story's pre-Second-War council scene. Arms express that office without assigning any later seized keep, invented territorial domain, or undead allegiance.",
+      "sourceUrls": ["https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack", "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey"],
+      "sourceFiles": ["/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-lord-of-his-pack.md", "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-lore-lord-vincent-godfrey.json"],
+      "evidence": { "office": "primary-retrospective-early-scene", "device": "author-designed" }
+    },
+    {
+      "id": "ashbury",
+      "fieldColor": "#b47869",
+      "heraldry": {
+        "symbol": "assets/ui/factions/ashbury-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed trefoil-bowed court key for the family's fidelity to the crown, not canonical Ashbury arms."
+      },
+      "origin": "author",
+      "note": "Archibald's trust in the Ashburys' fidelity and the son's friendship with Genn are attested in the early council scene. The key is invented; it does not imply a named hereditary office, eastern holding, same-title inheritance or later undead association.",
+      "sourceUrls": ["https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack", "https://wowpedia.fandom.com/wiki/Baron_Ashbury"],
+      "sourceFiles": ["/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-lord-of-his-pack.md", "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-ashbury.md"],
+      "evidence": { "courtFidelity": "primary-retrospective-early-scene", "device": "author-designed" }
+    },
+    {
+      "id": "marley",
+      "fieldColor": "#9b9d68",
+      "heraldry": {
+        "symbol": "assets/ui/factions/marley-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed north-pointing spear/compass with paired boundary marks; no claim to an exact northern estate."
+      },
+      "origin": "author",
+      "note": "Marley's domain is discussed as a prospective wall route in the postwar planning scene. North-pointing guard imagery is interpretation only; it does not assign Ambermill, Deep Elem, a royal title, or a fort that the source does not establish.",
+      "sourceUrls": ["https://wowpedia.fandom.com/wiki/Lord_Marley", "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack"],
+      "sourceFiles": ["/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-marley.md", "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-lord-of-his-pack.md"],
+      "evidence": { "borderDomain": "primary-retrospective-wall-planning", "boundaries": "not-established", "device": "author-designed" }
+    },
+    {
+      "id": "walden",
+      "fieldColor": "#91836e",
+      "heraldry": {
+        "symbol": "assets/ui/factions/walden-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "author",
+        "note": "Author-designed anchor and short wave for an eastern/coastal association; early title, house ownership and court office remain unproven."
+      },
+      "origin": "author",
+      "note": "Eastern origin is in Walden's biography; a later Cataclysm quest mentions a Walden house near the shore. The anchor is a scenario motif, not canonical arms, and neither later evidence establishes ownership, coast boundaries, a fleet or a court seat in this pre-wall phase.",
+      "sourceUrls": ["https://wowpedia.fandom.com/wiki/Lord_Walden", "https://wowpedia.fandom.com/wiki/Leader_of_the_Pack_(quest)"],
+      "sourceFiles": ["/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-lore-lord-walden.json", "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-lore-leader-of-the-pack-(quest).json"],
+      "evidence": { "easternOrigin": "later-biography", "coastalHouse": "later-Cataclysm-quest-only", "earlyOwnershipAndTitle": "not-established", "device": "author-designed" }
+    },
+    {
+      "id": "dalaran",
+      "fieldColor": "#aa85c4",
+      "heraldry": {
+        "symbol": "assets/ui/factions/dalaran-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "canonical-stylized",
+        "note": "Silver simplification of the actual Warcraft II Dalaran eye: detached arch, central eye, lower band and three rays. Palette/layout treatment is not canonical color or official art."
+      },
+      "origin": "canonical-stylized",
+      "note": "Wowpedia File:Dalaran-flag.jpg attributes the banner to Chris Metzen and the Warcraft II manuals, pages 44/42. The device follows that early main-universe eye, cross-checked against actual Kirin Tor in-game banners. It is not the Warcraft-film Eye. Original retrieved bytes are retained; the CDN delivered WebP despite the .jpg URL.",
+      "sourceUrls": ["https://wowpedia.fandom.com/wiki/File:Dalaran-flag.jpg", "https://wowpedia.fandom.com/wiki/Kirin_Tor", "https://wowpedia.fandom.com/wiki/File:Kirin_Tor_banner.jpg"],
+      "sourceFiles": ["/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-source-dalaran-wc2-original.jpg", "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-imageinfo-dalaran-flag.json", "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-file-dalaran-flag-jpg.json", "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-source-kirin-tor-banner-original.jpg"],
+      "evidence": { "device": "canonical-source-derived-stylization", "periodBasis": "Warcraft-II-manual", "silverPalette": "author-treatment", "notUsed": "film-eye-and-template-icon" },
+      "retrieval": {
+        "downloadUrl": "https://static.wikia.nocookie.net/wowpedia/images/2/22/Dalaran-flag.jpg/revision/latest?cb=20051003202314",
+        "httpStatus": 200,
+        "contentType": "image/webp",
+        "sha256": "e9d3510b1fc3be672c3552d4fbdaa63eddb8250f54d695497bb27b23a3b15f8d",
+        "mediaWikiOriginalSha1": "70c96013fff1ba2746f93160831ac356324e831f"
+      }
+    },
+    {
+      "id": "lordaeron",
+      "fieldColor": "#7592b2",
+      "heraldry": {
+        "symbol": "assets/ui/factions/lordaeron-device.svg",
+        "edge": "#65707b",
+        "device": "#9aa8b6",
+        "origin": "canonical-stylized",
+        "note": "Silver source-derived central Lordaeron L-and-sword from the actual Wowpedia crest; excludes surrounding lion, crossed weapons and original shield frame."
+      },
+      "origin": "canonical-stylized",
+      "note": "The Lordaeron article captions File:Human_Crest.jpg as its crest; that file attributes the Icon of Courage/Warcraft III wallpaper to Samwise Didier. The central device was extracted from that actual image and simplified, not replaced with a font L. Warcraft II's real Lordaeron banner supplies an early sigil cross-check. Silver palette and the atlas shield are author treatment. The CDN delivered WebP despite the .jpg URL, and delivered bytes are retained exactly.",
+      "sourceUrls": ["https://wowpedia.fandom.com/wiki/File:Human_Crest.jpg", "https://wowpedia.fandom.com/wiki/Lordaeron_(kingdom)", "https://wowpedia.fandom.com/wiki/File:Lordaeron-flag.jpg"],
+      "sourceFiles": ["/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-source-lordaeron-crest-original.jpg", "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-imageinfo.json", "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-file-human-crest-jpg.json", "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/heraldry-source-lordaeron-original.jpg"],
+      "evidence": { "device": "canonical-source-derived-stylization", "periodCrossCheck": "Warcraft-II-manual", "silverPalette": "author-treatment" },
+      "retrieval": {
+        "downloadUrl": "https://static.wikia.nocookie.net/wowpedia/images/2/29/Human_Crest.jpg/revision/latest?cb=20170416140745",
+        "httpStatus": 200,
+        "contentType": "image/webp",
+        "sha256": "2131c72b8e387d5509d5e4127b49add0960c7dd53c14129e575ff13c86cdc8ef",
+        "mediaWikiOriginalSha1": "c9533d4080a1b734cfa0abd14eeffaa9e10f82b7"
+      }
+    }
+  ],
+  "assets": [
+    "assets/ui/gilneas-royal-symbol.png",
+    "assets/ui/factions/greymane-device.svg",
+    "assets/ui/factions/crowley-device.svg",
+    "assets/ui/factions/silverlaine-device.svg",
+    "assets/ui/factions/godfrey-device.svg",
+    "assets/ui/factions/ashbury-device.svg",
+    "assets/ui/factions/marley-device.svg",
+    "assets/ui/factions/walden-device.svg",
+    "assets/ui/factions/dalaran-device.svg",
+    "assets/ui/factions/lordaeron-device.svg"
+  ]
+}

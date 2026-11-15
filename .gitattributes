@@ -1,0 +1,5 @@
+# Raw external research captures retain the exact retrieved whitespace.
+# Keep normal whitespace checks enabled for code and authored documentation.
+docs/court-evidence/** -whitespace
+docs/noble-family-evidence/** -whitespace
+docs/noble-life-evidence/** -whitespace

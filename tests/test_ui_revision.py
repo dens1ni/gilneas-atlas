@@ -90,6 +90,7 @@ class UIRevisionTest(unittest.TestCase):
     def boot(self, fixture=None, remove_reconstruction_control=False, delegate_territories=False):
         self.page.goto(self.url + '/index.html', wait_until='networkidle')
         self.page.evaluate("""async options => {
+            document.body.classList.add('edit-mode');
             if (options.removeControl) {
                 const control = document.querySelector('#show-reconstructions');
                 (control?.closest('label') || control)?.remove();
@@ -298,7 +299,8 @@ class UIRevisionTest(unittest.TestCase):
             self.assertEqual(badge.evaluate('node => node.style.color'), 'var(--object-color)')
         inherited = self.page.locator('.object-card[data-object-id="test-inherited-object"]')
         inherited.locator('summary').click()
-        self.assertIn(owner, inherited.locator('.object-ownership').text_content())
+        self.assertEqual(inherited.locator('summary .object-owner-badge').text_content(), owner)
+        self.assertEqual(inherited.locator('.object-ownership').count(), 0, 'Affiliation appears once, in the collapsed summary')
         self.assertEqual(inherited.locator('.modifier.bonus').text_content(), '+2 тестовых единицы')
         self.assertEqual(inherited.locator('.modifier.penalty').text_content(), '−1 тестовая единица')
         self.assertNotEqual(inherited.locator('.modifier.bonus').evaluate('node => getComputedStyle(node).color'),
@@ -371,7 +373,7 @@ class UIRevisionTest(unittest.TestCase):
         self.assertEqual(self.page.locator('#dossier').evaluate('node => node.style.getPropertyValue("--dossier-faction-color")'), '#b39467')
         self.assert_clean()
 
-    def test_11_gilneas_subject_dossiers_use_faction_shields_with_the_supplied_device(self):
+    def test_11_new_subject_factions_without_heraldry_stay_plain_without_borrowing_the_royal_device(self):
         fixture = copy.deepcopy(FIXTURE)
         fixture['meta']['gilneasHeraldry'] = {'symbol':'assets/ui/gilneas-royal-symbol.png','field':'#131516','edge':'#65707b','device':'#9aa8b6'}
         self.boot(fixture)
@@ -380,7 +382,7 @@ class UIRevisionTest(unittest.TestCase):
         self.assertEqual(shield.count(), 1, 'dossier uses the simple shield, not a full banner image')
         faction = next(row for row in fixture['factions'] if row['id']==fixture['locations'][2]['faction'])
         self.assertEqual(shield.locator('.shield-field').get_attribute('fill'), faction['color'])
-        self.assertEqual(shield.locator('.shield-device').get_attribute('href'), fixture['meta']['gilneasHeraldry']['symbol'])
+        self.assertEqual(shield.locator('.shield-device').count(), 0, 'A test-only new house must not borrow the sovereign device')
         self.assertEqual(self.page.locator('#dossier-seal img').count(), 0)
         self.select('test-other-place')
         self.assertEqual(self.page.locator('#dossier-seal .faction-shield').count(), 1)
@@ -573,7 +575,7 @@ class UIRevisionTest(unittest.TestCase):
         self.select('test-crown-place')
         unknown = self.page.locator('.object-card[data-object-id="test-unknown-inherited"]')
         self.assertEqual(unknown.locator('.object-faction-badge').text_content(), 'Принадлежность не установлена')
-        self.assertIn('Принадлежность не установлена', unknown.locator('.object-ownership').text_content())
+        self.assertEqual(unknown.locator('.object-ownership').count(), 0, 'Keep the unknown affiliation only in the summary badge')
         independent = self.page.locator('.object-card[data-object-id="test-explicit-independent"]')
         self.assertEqual(independent.locator('.object-faction-badge').text_content(), 'Независимый объект')
         self.assertEqual(unknown.evaluate('node => node.style.getPropertyValue("--object-color")'), '#b39467')
@@ -609,16 +611,24 @@ class UIRevisionTest(unittest.TestCase):
             self.assertAlmostEqual(point[1], location['y'], delta=0.02)
         self.assert_clean()
 
-    def test_22_gilneas_root_badges_use_the_supplied_crest_but_subject_houses_keep_their_identity(self):
+    def test_22_registry_shields_use_the_supplied_royal_device_without_lending_it_to_new_houses(self):
         fixture = copy.deepcopy(FIXTURE)
         fixture['meta']['gilneasCrest'] = 'assets/ui/rose.svg'
+        fixture['meta']['gilneasHeraldry'] = {'symbol':'assets/ui/gilneas-royal-symbol.png','field':'#131516','edge':'#65707b','device':'#9aa8b6'}
         self.boot(fixture)
-        root_crest = self.page.locator('.faction-tree[data-faction-id="gilneas"] > summary .faction-crest')
-        self.assertEqual(root_crest.count(), 1)
-        self.assertEqual(root_crest.get_attribute('src'), fixture['meta']['gilneasCrest'])
-        self.assertEqual(self.page.locator('.faction-row[data-faction-id="gilneas"] .faction-crest').count(), 1)
-        self.assertEqual(self.page.locator('.faction-tree[data-faction-id="test-house"] > summary .faction-crest').count(), 0)
-        self.assertEqual(self.page.locator('.faction-row[data-faction-id="test-house"] .faction-crest').count(), 0)
+        before = self.page.evaluate('JSON.stringify(window.fixtureData)')
+        for selector in ['.faction-tree[data-faction-id="gilneas"] > summary .faction-shield', '.faction-row[data-faction-id="gilneas"] > .faction-shield']:
+            shield = self.page.locator(selector)
+            self.assertEqual(shield.count(), 1)
+            self.assertEqual(shield.locator('.shield-field').get_attribute('fill'), '#131516')
+            self.assertEqual(shield.locator('.shield-device').get_attribute('href'), fixture['meta']['gilneasHeraldry']['symbol'])
+        for selector in ['.faction-tree[data-faction-id="test-house"] > summary .faction-shield', '.faction-row[data-faction-id="test-house"] > .faction-shield']:
+            shield = self.page.locator(selector)
+            self.assertEqual(shield.count(), 1)
+            self.assertEqual(shield.locator('.shield-field').get_attribute('fill'), '#639096')
+            self.assertEqual(shield.locator('.shield-device').count(), 0, 'A test-only house has no assigned device')
+        self.assertEqual(self.page.locator('.faction-crest').count(), 0, 'Registry identities use the preserved shield, not a full image card')
+        self.assertEqual(self.page.evaluate('JSON.stringify(window.fixtureData)'), before)
         self.assert_clean()
 
 

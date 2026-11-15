@@ -1,0 +1,61 @@
+| Lord Hewell
+
+ | 
+
+ | Gender | 
+Male
+
+ | Race | 
+Human (Humanoid)
+
+ | Level | 
+1-30
+
+ | Resource | 
+Mana
+
+ | Reaction | 
+Alliance
+
+ | Affiliation(s) | 
+Gilneas
+
+ | Occupation | 
+Noble
+
+ | Location | 
+Tempest's Reach, Gilneas[78.2, 72.0]
+
+Lord Hewell is a nobleman of Gilneas who can be found at Tempest's Reach during the worgen starting experience. Though the eastern lords (Lord Walden and Baron Ashbury) took part in Lord Godfrey's plan to take King Genn Greymane captive in order to bargain with the Forsaken, Hewell refused to betray his king. Instead he remained by Greymane's side until Krennan Aranas sent an adventurer to help.
+
+Contents
+
+1 Objective of
+
+2 Quotes
+
+3 Patch changes
+
+4 External links
+
+Objective of[]
+
+  [1-30] Flank the Forsaken: Speak to Lord Hewell to obtain a ride to the Livery Outpost (optional)
+
+Quotes[]
+
+Gossip
+
+It is not the time to turn against one another, <name>.
+
+ I need a horse.
+
+Patch changes[]
+
+ Patch 4.0.3a (2010-11-23): Added.   
+
+External links[]
+
+Wowhead
+
+WoWDB

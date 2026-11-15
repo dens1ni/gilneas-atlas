@@ -1,5 +1,6 @@
 import { deriveNobleProfile } from './noble-profile.mjs';
 import { createFactionShield } from './heraldry.mjs';
+import { createNobleLifeStatusTag } from './noble-life-status.mjs';
 
 const colorOf=faction=>/^#[0-9a-f]{6}$/i.test(faction?.color||'')?faction.color:'#af9568';
 const httpUrl=value=>{try{const url=new URL(value);return ['http:','https:'].includes(url.protocol)?url.href:null;}catch{return null;}};
@@ -17,6 +18,7 @@ export function initNobleDossier(ctx){
     dialog.style.setProperty('--noble-color',colorOf(profile.house));
     $('noble-name').textContent=profile.name;
     $('noble-title').textContent=profile.title||'';
+    $('noble-title').append(createNobleLifeStatusTag(profile));
     $('noble-house').textContent=profile.house?.name||'Королевский архив';
     $('noble-house').style.color=colorOf(profile.house);
     $('noble-social-status').textContent=profile.socialStatus;

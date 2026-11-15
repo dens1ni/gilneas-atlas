@@ -78,6 +78,7 @@ class RoyalWindows(unittest.TestCase):
         self.data = copy.deepcopy(data if data is not None else test_snapshot())
         self.page.goto(self.url + '/index.html', wait_until='networkidle')
         self.page.evaluate("""async data => {
+            document.body.classList.add('edit-mode');
             // Parent owns index.html. Add the actual CSS, never a CSS mock.
             if (!document.querySelector('link[href$="royal-windows.css"]') && data.loadRoyalCSS) {
                 const sheet = document.createElement('link'); sheet.rel = 'stylesheet';
@@ -167,13 +168,13 @@ class RoyalWindows(unittest.TestCase):
             while parent and parent['id'] not in chain:
                 chain.add(parent['id'])
                 parent = factions.get(parent.get('parent'))
-            is_gilneas = 'gilneas' in chain
-            self.assertEqual(shield.locator('image.shield-device').count(), int(is_gilneas), location['id'])
-            if is_gilneas:
-                self.assertEqual(shield.locator('.shield-field').get_attribute('stroke'), data['meta']['gilneasHeraldry']['edge'])
-                self.assertEqual(shield.locator('image').get_attribute('href'), data['meta']['gilneasHeraldry']['symbol'])
+            heraldry = data['meta']['gilneasHeraldry'] if location.get('faction') == 'gilneas' else faction.get('heraldry') if faction else None
+            self.assertEqual(shield.locator('image.shield-device').count(), int(bool(heraldry)), location['id'])
+            if heraldry:
+                self.assertEqual(shield.locator('.shield-field').get_attribute('stroke'), heraldry['edge'])
+                self.assertEqual(shield.locator('image').get_attribute('href'), heraldry['symbol'])
             self.assertEqual(shield.locator('.shield-field').get_attribute('d'), SHAPE)
-            observed.append({'id': location['id'], 'faction': location.get('faction'), 'field': expected, 'device': is_gilneas})
+            observed.append({'id': location['id'], 'faction': location.get('faction'), 'field': expected, 'device': bool(heraldry)})
         after_glyphs = self.page.locator('#markers .map-marker').evaluate_all("""nodes => nodes.map(node => ({
             id: node.dataset.locationId, path: node.querySelector('svg path').getAttribute('d'),
             viewBox: node.querySelector('svg').getAttribute('viewBox'), left: node.style.left, top: node.style.top,
@@ -185,7 +186,7 @@ class RoyalWindows(unittest.TestCase):
         self.assertEqual(before, self.page.evaluate('JSON.stringify(window.fixtureData)'))
         (ARTIFACTS / 'all-location-shields.json').write_text(json.dumps(observed, ensure_ascii=False, indent=2))
         self.assert_clean()
-    def test_03_nested_cards_show_effective_faction_shields_and_keep_native_actions(self):
+    def test_03_nested_cards_show_type_icons_effective_affiliation_and_keep_native_actions(self):
         data = test_snapshot()
         location = data['locations'][0]
         location['faction'] = 'crowley'
@@ -204,12 +205,12 @@ class RoyalWindows(unittest.TestCase):
         factions = {f['id']: f for f in data['factions']}
         for item, faction_id in zip(location['objects'], expected):
             card = self.page.locator(f'#dossier-objects [data-object-id="{item["id"]}"]')
-            shield = card.locator('.object-icon .faction-shield')
-            self.assertEqual(shield.count(), 1, 'Nested cards must replace the building/resource glyph with the same shield')
-            field = data['meta']['gilneasHeraldry']['field'] if faction_id == 'gilneas' else factions[faction_id]['color'] if faction_id else '#87918d'
-            self.assertEqual(shield.get_attribute('data-color'), field)
-            self.assertEqual(shield.locator('.shield-field').get_attribute('d'), SHAPE)
-            self.assertEqual(shield.locator('.shield-device').count(), int(faction_id in ['crowley', 'silverlaine', 'gilneas']))
+            symbol = card.locator('.object-icon svg')
+            self.assertEqual(symbol.count(), 1, 'Nested cards use the requested type icon, not a coat of arms')
+            self.assertEqual(symbol.get_attribute('viewBox'), '0 0 24 24')
+            self.assertEqual(card.locator('.object-icon .faction-shield').count(), 0)
+            self.assertEqual(card.locator('.object-faction-badge').inner_text(), factions[faction_id]['name'] if faction_id else 'Независимый объект')
+            self.assertEqual(card.locator('.object-ownership').count(), 0)
         card = self.page.locator('#dossier-objects [data-object-id="test-inherit"]')
         card.locator('summary').click()
         self.assertTrue(card.evaluate('e => e.open'))
@@ -253,7 +254,7 @@ class RoyalWindows(unittest.TestCase):
                 '//example.org/crest.png', 'https://example.org/crest.html', 'file:///etc/passwd.png',
                 'https://name:password@example.org/crest.png', 'assets/ui/crest.png\\\\evil', ' assets/ui/crest.png'];
             const rejected = unsafe.map(symbol => {
-                const snapshot = structuredClone(window.fixtureData); snapshot.meta.gilneasHeraldry.symbol = symbol;
+                const snapshot = structuredClone(window.fixtureData); snapshot.factions.find(f=>f.id==='crowley').heraldry.symbol = symbol;
                 return createFactionShield(snapshot, 'crowley').querySelectorAll('image').length;
             });
             const snapshot = structuredClone(window.fixtureData);
@@ -312,7 +313,13 @@ class RoyalWindows(unittest.TestCase):
             dossier_buttons = self.page.locator('#dossier .dossier-head button').evaluate_all("""nodes => nodes.map(e => {
                 const r=e.getBoundingClientRect(),c=getComputedStyle(e); return {width:r.width,height:r.height,
                     background:c.backgroundColor,image:c.backgroundImage,border:c.borderColor,color:c.color,radius:c.borderRadius}; })""")
-            self.assertEqual(dossier_buttons, [buttons[0], buttons[0]], 'Close/fold controls must have identical winning geometry and styles')
+            self.assertEqual(dossier_buttons[0], dossier_buttons[1], 'Compact fold and close remain exact peers')
+            touch_sheet=size['width']<=760 or size['width']<=1050 and size['height']<=540
+            target=44 if touch_sheet else 32
+            self.assertEqual([dossier_buttons[0]['width'],dossier_buttons[0]['height']],[target,target], 'Only the dossier header is compact; mobile retains a 44px hit target')
+            if touch_sheet:
+                visible=self.page.locator('#dossier-fold').evaluate('e=>{const c=getComputedStyle(e,"::before");return [c.width,c.height];}')
+                self.assertEqual(visible,['32px','32px'])
             self.page.locator('#dossier-close').click()
             self.assertTrue(self.page.locator('#dossier').is_hidden())
             self.page.evaluate("window.ui.setPanel('navigation',true)")
@@ -347,7 +354,7 @@ class RoyalWindows(unittest.TestCase):
             return {card:style('.object-card'),description:style('#dossier-description'),title:style('#dossier-title'),
                 owner:style('#dossier-owner'),label:style('#dossier-faction'),badge:style('.object-faction-badge'),
                 bonus:style('.modifier.bonus'),penalty:style('.modifier.penalty'),seal:style('#dossier-seal'),
-                shield:style('#dossier-seal .faction-shield'),objectShield:style('.object-icon .faction-shield'),
+                shield:style('#dossier-seal .faction-shield'),objectIcon:style('.object-icon svg'),
                 pseudo:getComputedStyle(document.querySelector('#dossier-seal'),'::after').content};
         }""")
         self.evidence('07-dossier-colors')
@@ -361,7 +368,7 @@ class RoyalWindows(unittest.TestCase):
         self.assertEqual(styles['seal']['clip'], 'none', 'The wax rosette clip must not cut the five-sided shield')
         self.assertIn(styles['pseudo'], ['none', 'normal'], 'Remove the wax-seal circular ornament')
         self.assertEqual([styles['shield']['width'], styles['shield']['height']], [58, 65])
-        self.assertEqual([styles['objectShield']['width'], styles['objectShield']['height']], [25, 30])
+        self.assertEqual([styles['objectIcon']['width'], styles['objectIcon']['height']], [21, 21], 'Restore the established type glyph inside its unchanged 25px slot')
         self.page.evaluate("window.nobleUI.open('noble-darius')")
         noble_styles = self.page.evaluate("""() => {
             const style=s=>{const c=getComputedStyle(document.querySelector(s));return {color:c.color,bg:c.backgroundColor,image:c.backgroundImage};};
@@ -476,8 +483,8 @@ class RoyalWindows(unittest.TestCase):
         self.assertEqual(styles['editor'],styles['nav'])
         self.assertEqual(styles['nobleEyebrow'],styles['navEyebrow'])
         self.assertEqual(styles['dossierEyebrow'],styles['navEyebrow'])
-        icon_boxes=self.page.locator('#nav-close svg,#noble-dossier .dialog-head button svg,#dossier-fold svg').evaluate_all('nodes=>nodes.map(e=>{const c=getComputedStyle(e);return [c.width,c.height]})')
-        self.assertEqual(icon_boxes,[['19px','19px']]*3)
+        icon_boxes=self.page.evaluate('''() => ['#nav-close svg','#noble-dossier .dialog-head button svg','#dossier-fold svg'].map(selector=>{const c=getComputedStyle(document.querySelector(selector));return [c.width,c.height];})''')
+        self.assertEqual(icon_boxes,[['19px','19px'],['19px','19px'],['16px','16px']], 'Only the compact dossier header icon shrinks')
         self.evidence('11-header-typography')
         self.assert_clean()
     def test_12_native_scroll_cards_and_camera_rail_remain_reachable_without_overlap(self):

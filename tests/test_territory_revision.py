@@ -61,6 +61,7 @@ class TerritoryRevision(unittest.TestCase):
         else:
             self.page.goto(self.url + '/index.html', wait_until='networkidle')
         self.page.evaluate("""async () => {
+            document.body.classList.add('edit-mode');
             window.territoryBootError = null;
             try {
                 const M = await import('./assets/js/model.mjs');
@@ -307,7 +308,7 @@ class TerritoryRevision(unittest.TestCase):
         self.page.evaluate('boundaries.whenReady()')
         original = self.page.evaluate('state.territoryGrid')
         self.page.evaluate("window.pathBefore = document.querySelector('#boundary-vector > path'); window.callsBefore = boundaries.getPerformance().geometryCalls")
-        self.page.locator('#faction-list [data-faction-id="  test-house  "]').evaluate('node => node.click()')
+        self.page.locator('#faction-list .faction-row[data-faction-id="  test-house  "]').evaluate('node => node.click()')
         self.page.evaluate('boundaries.render()')
         self.assertTrue(self.page.evaluate('window.pathBefore === document.querySelector("#boundary-vector > path")'))
         self.assertEqual(self.page.evaluate('boundaries.getPerformance().geometryCalls'), self.page.evaluate('callsBefore'))

@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "createdAtUtc": "2026-11-14T23:03:28.673948+00:00",
+  "retrievals": [
+    {
+      "url": "https://wowpedia.fandom.com/wiki/Aderic%27s_Repose",
+      "title": "Aderic's Repose - Wowpedia - Your wiki guide to the World of Warcraft",
+      "error": null,
+      "contentCharacters": 2524,
+      "rawContentSha256": "069c40986c7f6b5ad9829e1f12b425e07d6f863f58c135dbea39f2720ee6e42c"
+    },
+    {
+      "url": "https://wowpedia.fandom.com/wiki/Mia_Greymane",
+      "title": "Mia Greymane - Wowpedia - Your wiki guide to the World of Warcraft",
+      "error": null,
+      "contentCharacters": 1808,
+      "rawContentSha256": "41722e54471e6abbf46df282968e2a03af8fa8722de4052b871ee15a58913727"
+    },
+    {
+      "url": "https://wowpedia.fandom.com/wiki/Patriarch%27s_Blessing",
+      "title": "",
+      "error": "HTTP 403 from origin",
+      "contentCharacters": 0,
+      "rawContentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "url": "https://wowpedia.fandom.com/wiki/Innkeeper",
+      "title": "Innkeeper",
+      "error": null,
+      "contentCharacters": 17400,
+      "rawContentSha256": "f7db6bec6df3506605cc9eadec64d8767b4bde0c9890a9907bc0f05bfb7c6371"
+    },
+    {
+      "url": "https://wowpedia.fandom.com/wiki/Archibald_Greymane",
+      "title": "Archibald Greymane",
+      "error": null,
+      "contentCharacters": 2027,
+      "rawContentSha256": "d21929b001468a1055946818a1ac186a74d623477a1299547302a685b28685fa"
+    },
+    {
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st?action=render",
+      "title": "References",
+      "error": null,
+      "contentCharacters": 1110,
+      "rawContentSha256": "ae208ade036694c20163a763f09c4d5201107d257903b7a6a33c71b7c8c2c50c"
+    },
+    {
+      "url": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+      "title": "Shadowfang Keep - Wowpedia - Your wiki guide to the World of Warcraft",
+      "error": null,
+      "contentCharacters": 15505,
+      "rawContentSha256": "ee5b896b0017de5aa5e75ec7d6238ab36e08a4d03b3d8d387375ae373f75d492"
+    },
+    {
+      "url": "https://www.engadget.com/2010-12-15-know-your-lore-shadowfang-keep.html",
+      "title": "Know Your Lore: Shadowfang Keep",
+      "error": null,
+      "contentCharacters": 9377,
+      "rawContentSha256": "4257257f9a86cdf9e45f3d6ed8d36a6c958f971ffdc4a11e790493c9b738629e"
+    },
+    {
+      "url": "https://wowpedia.fandom.com/wiki/Gilneas_(kingdom)?action=render",
+      "title": "",
+      "error": "network_error",
+      "contentCharacters": 0,
+      "rawContentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "url": "https://wowpedia.fandom.com/wiki/Patriarch%27s_Blessing?action=render",
+      "title": "",
+      "error": "HTTP 403 from origin",
+      "contentCharacters": 0,
+      "rawContentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "url": "https://warcraft.wiki.gg/wiki/Patriarch%27s_Blessing",
+      "title": "Patriarch's Blessing - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "error": null,
+      "contentCharacters": 2761,
+      "rawContentSha256": "c55cb79db2024dcee31e29066f20eed2acca4eb11cc74b7cb66338507618fd43"
+    },
+    {
+      "url": "https://wowpedia.fandom.com/wiki/Third_War?action=render",
+      "title": "",
+      "error": "HTTP 403 from origin",
+      "contentCharacters": 0,
+      "rawContentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "archiveRecovery": {
+    "url": "https://wowpedia.fandom.com/wiki/Patriarch%27s_Blessing",
+    "recovered": false,
+    "tool": "blocked-page-recovery/scripts/recover_page.py",
+    "exitCode": 1
+  },
+  "note": "Поисковые аннотации и RP/fanfic-страницы не используются как evidence; сохраненные цитаты относятся только к фактически извлеченному тексту."
+}

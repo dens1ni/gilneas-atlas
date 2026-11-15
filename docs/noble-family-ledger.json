@@ -1,0 +1,875 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+      "title": "Nobles of Gilneas",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "The nobles of Gilneas are the ruling class of the kingdom of Gilneas. Some were slain during the civil war, while others were turned into worgen or Forsaken during the Forsaken invasion. Others remain human in exile from their homeland.[1]",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| King Archibald Greymane | Deceased | King of Gilneas. Father of Genn. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| King Genn Greymane | Alive | King of Gilneas. Son of Archibald. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Lord Ashbury the 1st | Deceased | Councilor of King Archibald Greymane. Father of Baron Ashbury. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Baron Ashbury | Deceased (Undead) | Son of Lord Ashbury the 1st. Former councilor of King Genn Greymane, traitor alongside Godfrey and Walden. Raised as Forsaken, he later followed Godfrey within Shadowfang Keep. Killed on the orders of both factions. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Lord Darius Crowley | Alive | Leader of the rebels during the Northgate Rebellion. Now leader of the Gilneas Liberation Front and the Gilneas Brigade. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Lord Candren | Alive | Gilneas Quartermaster. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Lord Geoffery Tulvan | Killable | Fighter in the Crucible of Carnage. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Lord Harford | Deceased | A former worgen servant of Arugal in Shadowfang Keep who escaped and joined the Argent Dawn. Captured by the Scarlet Crusade and executed by the death knights of Acherus. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Lord Hewell | Alive | Unknown. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Lord Marley | Unknown | Councilor of King Genn Greymane. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Lord Vincent Godfrey | Deceased (Undead) | Former councilor of King Genn Greymane, traitor alongside Ashbury and Walden. Raised as Forsaken, he later betrayed Sylvanas and became the master of Shadowfang Keep. Killed on the orders of both factions. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Lord Walden | Deceased (Undead) | Former councilor of King Genn Greymane, traitor alongside Ashbury and Godfrey. Raised as Forsaken, he later followed Godfrey within Shadowfang Keep. Killed on the orders of both factions. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Lord Mayor Morrison | Deceased | Leader of Pyrewood Council and Arugal's puppet. Killed during an ambush by the Deathstalkers.[7] |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Baron Silverlaine | Active (Undead) | Former lord of Shadowfang Keep, an area that held loyalty to Darius Crowley past the Greymane Wall. Slain by Arugal and his worgen and cursed to defend the keep as a ghost. Even after Arugal was slain, the baron's spirit continues to defend his former home. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Baron Longshore[8] | Killable | Captain of the pirate ship Heedless, and one of the Gilneans locked out of Gilneas by the Greymane Wall. Imprisoned by the forces of Theramore on the Merchant Coast. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Aderic | Deceased | Referred to as a \"patriarch\", and has the Royal Aderic Banquet named in his honor.[9] Possibly a long-dead king or nobleman. |",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Given that he was, in truth, a drakonid, it is unknown if there is an actual Creed family that he infiltrated / impersonated into, or if he was the only member.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "- The title used by Alys Finnsson, a Gilnean member of the Twilight's Hammer, of Dame is a part of the British honors system, as a female counterpart to the honorific of 'sir' bestowed upon knights.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "url": "https://wowpedia.fandom.com/wiki/Greymane_family",
+      "title": "Greymane family",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "The Greymane family (also known as the Greymane clan)[1] is the ruling line of the kingdom of Gilneas. The family ruled from Greymane Manor and had a Royal Chemist in the form of Krennan Aranas.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Mia is the wife of Genn and mother of Tess and Liam.[2]",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "There are also an unrelated Crispin Greymane dwarf and an Elder Graymane taunka.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "url": "https://wowpedia.fandom.com/wiki/Crowley",
+      "title": "Crowley",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Crowley is the name of a notorious noble family of Gilneas. They owned the lands of Pyrewood Village and Ambermill. They also were the owners of Crowley Orchard and Crowley Stable Grounds.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "- Brother Crowley - A member of the Scarlet Crusade; unknown if he's part of the family or not.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "- Morticia Crowley - an undead found on Draenor; unknown if she's part of the family or not.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "- Agent Crowley - a human mage; unknown if he's part of the family or not.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "- Elizabeth Crowley - Forsaken priest, unknown if she's part of the family or not.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| N/A | One of the lords of Gilneas. | Alive |",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "url": "https://wowpedia.fandom.com/wiki/Mia_Greymane",
+      "title": "Mia Greymane",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Mia Greymane is the wife of Genn Greymane and former queen consort of Gilneas.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Mia met her future husband Genn at the Royal Aderic Banquet, where he was smitten by her. They later married for love, rather than political reasons.[1][2]",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Genn (husband), Tess (daughter), Liam (son), Archibald (father-in-law)",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "url": "https://wowpedia.fandom.com/wiki/Liam_Greymane",
+      "title": "Liam Greymane",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Prince Liam Greymane was a member of the royal family of Gilneas, and the son and heir of King Genn Greymane.[1]",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "url": "https://wowpedia.fandom.com/wiki/Tess_Greymane",
+      "title": "Tess Greymane",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 7,
+      "url": "https://wowpedia.fandom.com/wiki/Lorna_Crowley",
+      "title": "Lorna Crowley",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 8,
+      "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+      "title": "Genn Greymane: Lord of His Pack - Media Gallery - World of Warcraft",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Genn, a teenage Liam, the captain, and the infamous royal archmage known as Arugal were standing on the ramparts high above the Greymane Wall.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+      "title": "Генн Седогрив: Вожак Стаи - Галерея - World of Warcraft",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Рядом с кораблем плыли еще несколько эльфийских фрегатов; Генн знал, что на одном из них, на «Свете Элуны», плыли его жена Миа и дочь Тесс. Все, что осталось от его семьи. Как же тяжело было думать о семье, в которой нет больше сына! Эта боль была сильнее любых физических страданий, сильнее тоски по потерянному королевству.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Капитан стражи с трудом скрывал свой страх, не в силах отвести взгляда от того, что творилось у подножия Стены Седогрива. Рядом с ним на дозорном укреплении стояли Генн, юный принц Лиам и знаменитый верховный маг, известный как Аругал.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Hiram_Creed",
+      "title": "Lord Hiram Creed",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 11,
+      "url": "https://wowpedia.fandom.com/wiki/Category:Aristocrats",
+      "title": "Aristocrats",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 12,
+      "url": "https://wowpedia.fandom.com/wiki/Category:Aristocrats?pagefrom=Grendel%0ALady+Grendel",
+      "title": "Aristocrats",
+      "accessed": "2026-11-15",
+      "retrievalStatus": "rejected_or_incomplete",
+      "note": "Не используется для лора: challenge, redirect-only или навигация без статьи; см. retrieval-quality-audit.json."
+    },
+    {
+      "id": 13,
+      "url": "https://wowpedia.fandom.com/wiki/List_of_aristocracy?action=render",
+      "title": "Contents",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 14,
+      "url": "https://wowpedia.fandom.com/wiki/Category:Gilneas_NPCs",
+      "title": "Gilneas NPCs",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 15,
+      "url": "https://wowpedia.fandom.com/wiki/Countess_Ashmore",
+      "title": "Countess Ashmore",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Countess Ashmore is a blue dragon[1] featured in the The Witchwood expansion for Hearthstone.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "It is not clear if Ashmore is truly the scion of a forgotten noble family returned home in a time of need, or if she is something much more dangerous.[2]",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "url": "https://warcraft.wiki.gg/wiki/Tess_Greymane",
+      "title": "Tess Greymane",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Tess was born to Queen Mia and King Genn before Gilneas left the Alliance of Lordaeron after the Second War.[8]",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "url": "https://warcraft.wiki.gg/wiki/Liam_Greymane",
+      "title": "Liam Greymane",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "- As Liam was a young teenager during the Greymane Wall going up and the Scourge attacking it; he would have been in his mid-twenties when he died.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "url": "https://warcraft.wiki.gg/wiki/Lorna_Crowley",
+      "title": "Lorna Crowley",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Darius (father), at least one sibling[1]",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Heavens no. This is the peace we--and my children--worked for. I hope they get to live in it.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "url": "https://wowpedia.fandom.com/wiki/Dame_Alys_Finnsson?so=search",
+      "title": "Dame Alys Finnsson",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Dame Alys Finnsson is a worgen, affiliated with the Twilight's Hammer, found in the Twilight Highlands.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "| Status | Killable |",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Woofington?so=search",
+      "title": "Lord Woofington",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Lord Woofington is a mastiff companion.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Lord Woofington was given his title after the rest of the denizens of Havenswood succumbed to madness.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "url": "https://wowpedia.fandom.com/wiki/Category:Aristocrats?pagefrom=H",
+      "title": "Aristocrats",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 22,
+      "url": "https://wowpedia.fandom.com/wiki/Category:Aristocrats?pagefrom=S",
+      "title": "Aristocrats",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 23,
+      "url": "https://web.archive.org/web/20251118114028/https://wowpedia.fandom.com/wiki/Lord_Woofington",
+      "title": "Lord Woofington — Wayback snapshot 2025-11-18",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Lord Woofington was given his title after the rest of the denizens of Havenswood succumbed to madness.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "url": "https://wowpedia.fandom.com/wiki/Category:Aristocrats?pagefrom=G",
+      "title": "Aristocrats",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 25,
+      "url": "https://wowpedia.fandom.com/wiki/Category:Aristocrats?pagefrom=N",
+      "title": "Aristocrats",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 26,
+      "url": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+      "title": "Baron Silverlaine",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Relative(s)\n Deceased wife",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Baron Silveraline and his family were killed by the worgen, summoned by Archmage Arugal from the Emerald Dream to aid Gilneans against the Scourge, after they turned on the Gilneans. After the Fourth War, Mathias Shaw reported a common belief that the ghost of Baron Silverlaine still haunts the keep.[1]",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "url": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+      "title": "Darius Crowley",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 28,
+      "url": "https://wowpedia.fandom.com/wiki/Magistrate_Henry_Maleb",
+      "title": "Magistrate Henry Maleb",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Before the Forsaken bombing of the city, he was the human Magistrate of Southshore in the Hillsbrad Foothills.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "He was classified as an aristocrat and a fighter.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "url": "https://wowpedia.fandom.com/wiki/Gilneas_Nobleman",
+      "title": "Gilneas Nobleman",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "The subject of this article or section did not make it out of the [patch 8.3.0](/wiki/Patch_8.3.0)[test realms](/wiki/Public_Test_Realm).",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "url": "https://wowpedia.fandom.com/wiki/Brother_Crowley",
+      "title": "Brother Crowley - Wowpedia - Your wiki guide to the World of Warcraft",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 31,
+      "url": "https://wowpedia.fandom.com/wiki/Morticia_Crowley",
+      "title": "Morticia Crowley - Wowpedia - Your wiki guide to the World of Warcraft",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 32,
+      "url": "https://wowpedia.fandom.com/wiki/Agent_Crowley",
+      "title": "Client Challenge",
+      "accessed": "2026-11-15",
+      "retrievalStatus": "rejected_or_incomplete",
+      "note": "Не используется для лора: challenge, redirect-only или навигация без статьи; см. retrieval-quality-audit.json."
+    },
+    {
+      "id": 33,
+      "url": "https://wowpedia.fandom.com/wiki/Crispin_Greymane",
+      "title": "Crispin Greymane",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 34,
+      "url": "https://wowpedia.fandom.com/wiki/Elder_Graymane",
+      "title": "Elder Graymane",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 35,
+      "url": "https://wowpedia.fandom.com/wiki/Genn_Greymane?action=render",
+      "title": "Contents",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 36,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+      "title": "Lord Walden",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 37,
+      "url": "https://warcraft.wiki.gg/wiki/Calia_Menethil",
+      "title": "Calia Menethil",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 38,
+      "url": "https://wowpedia.fandom.com/wiki/Calia_Menethil?action=render",
+      "title": "Contents",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 39,
+      "url": "https://warcraft.wiki.gg/wiki/File:Chronicle3_Genn_and_Liam.jpg",
+      "title": "File:Chronicle3 Genn and Liam.jpg",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 40,
+      "url": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+      "title": "Isiden Perenolde",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Isiden Perenolde[1] was the nephew of Lord Aiden Perenolde, King of Alterac. When Alterac was placed under martial law by order of King Terenas, Isiden fled to Gilneas, where he hoped to rally support.[2] He was eventually backed by Genn Greymane, Gilneas' king, as the matter of the succession began to heat up.[3]",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Liam+Greymane&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Liam-wowpedia-api",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "He was killed by Sylvanas Windrunner during the Battle for Gilneas City.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "url": "https://wowpedia.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AAristocrats&cmlimit=500&format=json&cmcontinue=page%7C53544f524d534f4e472c204252414e4e4f4e0a4252414e4e4f4e2053544f524d534f4e47%7C564363&continue=-%7C%7C",
+      "title": "aristocrats-api-02",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "\"title\": \"Lord Walden\"",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Tess+Greymane&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Tess-wowpedia-api",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Genn & Mia (parents),\n Liam (brother),\n Archibald (grandfather)",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Tess' life was saved by a potion made by Krennan Aranas; if not for him, she would have died soon after she was born.[2]",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Mia+Greymane&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Mia-wowpedia-api",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 45,
+      "url": "https://wowpedia.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AAristocrats&cmlimit=500&format=json",
+      "title": "Wowpedia Category:Aristocrats — MediaWiki API batch 1",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "\"ns\": 0,\n      \"title\": \"Aristocrat\"",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "url": "https://wowpedia.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AGilneas+%28kingdom%29&cmlimit=500&format=json",
+      "title": "gilneas-category — MediaWiki API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "\"title\": \"Lorna Crowley\"",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "url": "https://wowpedia.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AGilneas+NPCs&cmlimit=500&format=json",
+      "title": "gilneas-npc-category — MediaWiki API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "\"title\": \"Mia Greymane\"",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "url": "https://www.wowhead.com/ru/npc=35378/lorna-crowley",
+      "title": "Лорна Краули",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "# Лорна Краули",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "url": "https://wowpedia.fandom.com/wiki/Lady_in_White",
+      "title": "Lady in White - Wowpedia - Your wiki guide to the World of Warcraft",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 50,
+      "url": "https://warcraft.wiki.gg/wiki/To_Gilneas_(Horde)",
+      "title": "To Gilneas (Horde)",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "I only know Tess in passing, she was very young when Gilneas left the Alliance after the Second War.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/elegy",
+      "title": "Элегия - Галерея - World of Warcraft",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Королева Миа Седогрив действительно была частой гостьей в Воющем дубе — дарнасском лагере, где жили гилнеасцы. Андуин был о ней очень высокого мнения. Он согласился: вряд ли кто-то мог справиться с задачей Генна лучше, чем эта миниатюрная, волевая женщина с добрым сердцем и острым умом.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "url": "https://wowpedia.fandom.com/wiki/The_Baron%27s_Demands",
+      "title": "The Baron's Demands",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 53,
+      "url": "https://wowpedia.fandom.com/wiki/Lieutenant_Walden",
+      "title": "Lieutenant Walden",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 54,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Agent+Crowley&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Agent Crowley — Wowpedia MediaWiki API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Agent Crowley could be related to other people called Crowley.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Hiram+Creed&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Hiram Creed — Wowpedia MediaWiki API",
+      "accessed": "2026-11-15",
+      "retrievalStatus": "rejected_or_incomplete",
+      "note": "Не используется для лора: challenge, redirect-only или навигация без статьи; см. retrieval-quality-audit.json."
+    },
+    {
+      "id": 56,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Walden&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Lord Walden — Wowpedia MediaWiki API",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 57,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lorna+Crowley&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Lorna Crowley — Wowpedia MediaWiki API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Lorna Crowley is the daughter of Lord Darius Crowley, one of the principal leaders during the Northgate Rebellion.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "The day of the worgen attack on Gilneas City, Lorna saved a worgen adventurer by shooting Josiah Avery.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Elizabeth+Crowley&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Elizabeth Crowley — Wowpedia MediaWiki API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "This article contains information from the Trading Card Game which is considered non-canon.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lieutenant+Walden&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Lieutenant Walden — Wowpedia MediaWiki API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "He may be related to Lord Walden.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Lieutenant Walden is a human quest giver located in Merchant Square in the worgen starting zone of Gilneas City. He was under Liam Greymane's command to help evacuate the city, but was killed by worgen during their invasion of Gilneas.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Countess+Ashmore&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Countess Ashmore — Wowpedia MediaWiki API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "This article contains information and lore exclusive to Hearthstone, and is considered non-canon.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lady+in+White&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Lady in White — Wowpedia MediaWiki API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "In life, the Lady in White was a Gilnean noble woman, who saw the destruction of almost all that she loved during the fall of Gilneas.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "This article contains information and lore exclusive to Hearthstone, and is considered non-canon.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "As a ghost, she seeks to help the living restore all that was lost.[1]",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Geoffery+Tulvan&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Lord Geoffery Tulvan — Wowpedia family audit API",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 63,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Archibald+Greymane&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Archibald Greymane — Wowpedia family audit API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Genn (son), Mia (daughter-in-law), Tess and Liam (grandchildren)",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Ashbury+the+1st&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Lord Ashbury the 1st — Wowpedia family audit API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Lord Ashbury the 1st was a Gilnean noble and the father of Baron Ashbury.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Baron+Ashbury&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Baron Ashbury — Wowpedia family audit API",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 66,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Candren&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Lord Candren — Wowpedia family audit API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Lord Candren is the quartermaster for Gilneas. He is found in Darnassus's Temple Gardens, near the flight master.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Harford&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Lord Harford — Wowpedia family audit API",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 68,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Marley&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Lord Marley — Wowpedia family audit API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Lord Marley was a Gilnean noble.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Mayor+Morrison&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Lord Mayor Morrison — Wowpedia family audit API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "He may be related to Brambley Morrison and Vinnie Morrison.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Hewell&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Lord Hewell — Wowpedia family audit API",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 71,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Vincent+Godfrey&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Lord Vincent Godfrey — Wowpedia family audit API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Prior to the Second War, Godfrey was among the Gilnean nobles who accompanied King Genn Greymane to Lordaeron to create the Alliance of Lordaeron.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Baron+Longshore&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Baron Longshore — Wowpedia family audit API",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 73,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Aderic&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Aderic — Wowpedia family audit API",
+      "accessed": "2026-11-15"
+    },
+    {
+      "id": 74,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Silverlaine+Thorne&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Silverlaine Thorne — Wowpedia family audit API",
+      "accessed": "2026-11-15",
+      "retrievalStatus": "rejected_or_incomplete",
+      "note": "Не используется для лора: challenge, redirect-only или навигация без статьи; см. retrieval-quality-audit.json."
+    },
+    {
+      "id": 75,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Krennan+Aranas&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "title": "Krennan Aranas — Wowpedia family audit API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Krennan Aranas is the Royal Chemist of Gilneas. Genn notes him as one of the most powerful chemists in Azeroth, or at least Gilneas.",
+          "added": "2026-11-15"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Hiram+Creed&prop=text%7Crevid&format=json",
+      "title": "Lord Hiram Creed — Wowpedia MediaWiki API",
+      "accessed": "2026-11-15",
+      "quotes": [
+        {
+          "text": "Lord Hiram Creed was a black drakonid who disguises themselves as an affluent Gilnean noble.",
+          "added": "2026-11-15"
+        },
+        {
+          "text": "Black Prince Wrathion sent his rogue champion who sought to earn his favor to assassinate Creed in his crusade to eliminate all corrupted black dragons on Azeroth.[1] With his death, it is unknown what the fate of the Blackhowl group is.",
+          "added": "2026-11-15"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3787 @@
+{
+  "schemaVersion": 1,
+  "sourceMap": [
+    {
+      "ledgerId": 1,
+      "atlasSourceId": 46
+    },
+    {
+      "ledgerId": 2,
+      "atlasSourceId": 48
+    },
+    {
+      "ledgerId": 3,
+      "atlasSourceId": 45
+    },
+    {
+      "ledgerId": 4,
+      "atlasSourceId": 32
+    },
+    {
+      "ledgerId": 5,
+      "atlasSourceId": 3
+    },
+    {
+      "ledgerId": 6,
+      "atlasSourceId": 49
+    },
+    {
+      "ledgerId": 7,
+      "atlasSourceId": 50
+    },
+    {
+      "ledgerId": 8,
+      "atlasSourceId": "court-source-8"
+    },
+    {
+      "ledgerId": 9,
+      "atlasSourceId": 55
+    },
+    {
+      "ledgerId": 10,
+      "atlasSourceId": 57
+    },
+    {
+      "ledgerId": 11,
+      "atlasSourceId": 59
+    },
+    {
+      "ledgerId": 12,
+      "atlasSourceId": 33
+    },
+    {
+      "ledgerId": 13,
+      "atlasSourceId": 61
+    },
+    {
+      "ledgerId": 14,
+      "atlasSourceId": 62
+    },
+    {
+      "ledgerId": 15,
+      "atlasSourceId": 64
+    },
+    {
+      "ledgerId": 16,
+      "atlasSourceId": 53
+    },
+    {
+      "ledgerId": 17,
+      "atlasSourceId": 63
+    },
+    {
+      "ledgerId": 18,
+      "atlasSourceId": 47
+    },
+    {
+      "ledgerId": 19,
+      "atlasSourceId": 54
+    },
+    {
+      "ledgerId": 20,
+      "atlasSourceId": "court-source-20"
+    },
+    {
+      "ledgerId": 21,
+      "atlasSourceId": "court-source-21"
+    },
+    {
+      "ledgerId": 22,
+      "atlasSourceId": "court-source-22"
+    },
+    {
+      "ledgerId": 23,
+      "atlasSourceId": "court-source-23"
+    },
+    {
+      "ledgerId": 24,
+      "atlasSourceId": "court-source-24"
+    },
+    {
+      "ledgerId": 25,
+      "atlasSourceId": "court-source-25"
+    },
+    {
+      "ledgerId": 26,
+      "atlasSourceId": "court-source-26"
+    },
+    {
+      "ledgerId": 27,
+      "atlasSourceId": "court-source-27"
+    },
+    {
+      "ledgerId": 28,
+      "atlasSourceId": 60
+    },
+    {
+      "ledgerId": 29,
+      "atlasSourceId": "court-source-29"
+    },
+    {
+      "ledgerId": 30,
+      "atlasSourceId": "court-source-30"
+    }
+  ],
+  "scope": {
+    "repository": "/Users/daniil_si/gilneas-atlas",
+    "inputFile": "/Users/daniil_si/gilneas-atlas/assets/data/atlas.json",
+    "writes": "Только собственные politics-research.json/.md, politics-ledger.json и politics-evidence/. Код, данные, публикации, Git и деплой не изменяются.",
+    "selectedEra": "После Второй войны, до выхода Гилнеаса из Альянса и до возведения Стены Седогрива. Обсуждение проекта стены допускается; строительство и поздние последствия ещё не произошли.",
+    "scenarioProgress": {
+      "value": 10,
+      "max": 100
+    },
+    "progressMeaning": "Авторский показатель 10/100, не календарная дата и не доказательство физически построенной стены.",
+    "exactCalendarDate": null
+  },
+  "guardrails": [
+    "Не назначать Дариусу текущий статус мятежника, заключённого или воргена; его позднее несогласие лишь ретроспективное подтверждение политической линии.",
+    "Не переносить позднюю измену/нежить Годфри, Эшбери и Уолдена в выбранный совет.",
+    "Не переносить позднюю личную верность Хьювелла на его голос о стене.",
+    "Не считать Сребролена сторонником Краули в вопросе стены автоматически: вассалитет здесь авторская конфигурация, а голос неизвестен.",
+    "Не выводить сторону Харфорда/Моррисона из предполагаемого вассалитета или соседства с Пирвудом.",
+    "Не считать позднюю должность Кандрена доказанной ранней придворной службой.",
+    "Не объявлять Адерика королём/Седогривом и не назначать предков живыми советниками.",
+    "Не выдумывать даты смерти, получения титула или появления при дворе."
+  ],
+  "knownLimitations": [
+    {
+      "type": "scope",
+      "noteRu": "Точный календарный год не назначен. Приоритет — ранняя сцена после Второй войны и до фактического строительства; 10/100 — показатель сценария."
+    },
+    {
+      "type": "primary_partial_extraction",
+      "noteRu": "Английская HTML-выдержка Blizzard начинается с середины раннего разговора, а web_extract официального PDF возвращал только начало. Полный PDF скачан и извлечён отдельно; сцена сравнима с русской HTML-версией."
+    },
+    {
+      "type": "blocked_preferred_pages",
+      "noteRu": "Wowpedia для Ashbury I и нескольких action=render страниц первоначально вернул 403/network_error. Извлечены атрибутированные зеркала Warcraft Wiki; затем удалось заново извлечь Wowpedia для всех личностей. Не выдавать зеркало за прочитанный оригинал.",
+      "recoveries": [
+        {
+          "failedPreferredUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st",
+          "failure": "HTTP 403 from origin",
+          "preferredLaterRecoveredUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st?action=render"
+        },
+        {
+          "failedPreferredUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan?action=render",
+          "failure": "HTTP 403 from origin",
+          "preferredLaterRecoveredUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan"
+        },
+        {
+          "failedPreferredUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford?action=render",
+          "failure": "HTTP 403 from origin",
+          "preferredLaterRecoveredUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford"
+        },
+        {
+          "failedPreferredUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison?action=render",
+          "failure": "network_error",
+          "preferredLaterRecoveredUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison"
+        },
+        {
+          "failedPreferredUrl": "https://wowpedia.fandom.com/wiki/Aderic?action=render",
+          "failure": "network_error",
+          "preferredLaterRecoveredUrl": "https://wowpedia.fandom.com/wiki/Aderic"
+        }
+      ]
+    },
+    {
+      "type": "tls",
+      "noteRu": "HTTPS media.blizzard.com не прошёл проверку имени сертификата; отключение проверки TLS не использовано. Официальный найденный HTTP URL PDF вернул 200, файл сохранён."
+    },
+    {
+      "type": "advisor_marley",
+      "noteRu": "Каталог называет Марли советником Генна без даты, но ранняя сцена лишь упоминает его домен. В строгом списке advisor=false, includeDefault=true как потенциальный союзник. Автор может отдельно разрешить реконструированное кресло, не называя его доказанным назначением."
+    },
+    {
+      "type": "ashbury_wall_vote",
+      "noteRu": "Барон Эшбери засвидетельствован как ранний советник и друг короля, согласившийся с малым союзным войском. Его отдельная поддержка стены не обнаружена; party=royalists имеет basis=scenario, stance=unknown."
+    },
+    {
+      "type": "non_independent_mirrors",
+      "noteRu": "Зеркала и оригинальная вики не независимые свидетельства. Решающие ранние позиции Генна/Краули/Годфри проверены по рассказу Blizzard."
+    },
+    {
+      "type": "markdown_quote_matcher",
+      "noteRu": "Одна цитата с Markdown-ссылкой, содержащей title и скобки в URL, не прошла упрощённое удаление разметки. Сохранена буквальная форма соответствующего фрагмента извлечённого текста; итоговая проверка всех цитат прошла."
+    }
+  ],
+  "verification": {
+    "inputNobleCount": 17,
+    "researchedNobleCount": 17,
+    "exactNobleIds": [
+      "noble-genn",
+      "noble-darius",
+      "noble-godfrey",
+      "noble-ashbury",
+      "noble-marley",
+      "noble-archibald",
+      "noble-ashbury-first",
+      "noble-walden",
+      "noble-hewell",
+      "noble-silverlaine",
+      "noble-longshore",
+      "noble-candren",
+      "noble-isiden",
+      "noble-tulvan",
+      "noble-harford",
+      "noble-morrison",
+      "noble-aderic"
+    ],
+    "inputHouseCount": 7,
+    "researchedHouseCount": 7,
+    "exactHouseIds": [
+      "greymane",
+      "crowley",
+      "silverlaine",
+      "godfrey",
+      "ashbury",
+      "marley",
+      "walden"
+    ],
+    "totalRecords": 24,
+    "nobleIdsExactMatch": true,
+    "houseIdsExactMatch": true,
+    "duplicateIds": [],
+    "allRequiredFieldsPresent": true,
+    "advisorCount": 3,
+    "advisorIds": [
+      "noble-darius",
+      "noble-godfrey",
+      "noble-ashbury"
+    ],
+    "defaultNobleCount": 7,
+    "defaultNobleIds": [
+      "noble-genn",
+      "noble-darius",
+      "noble-godfrey",
+      "noble-ashbury",
+      "noble-marley",
+      "noble-silverlaine",
+      "noble-isiden"
+    ],
+    "defaultPotentialAllyIds": [
+      "noble-marley",
+      "noble-silverlaine",
+      "noble-isiden"
+    ],
+    "optionalPotentialAllyCount": 7,
+    "defaultHouseCount": 6,
+    "historicalExcludedCount": 3,
+    "partyCountsIndividuals": {
+      "royalists": 3,
+      "internationalists": 1,
+      "neutral": 13
+    },
+    "stanceCountsIndividuals": {
+      "support": 2,
+      "oppose": 1,
+      "unknown": 14
+    },
+    "partyCountsHouses": {
+      "royalists": 3,
+      "internationalists": 1,
+      "neutral": 3
+    },
+    "retrievedSourceCount": 30,
+    "evidenceChecks": 66,
+    "uniqueQuotesVerified": 52,
+    "sourcesWithVerifiedQuotes": 30,
+    "repoWritesPerformed": false,
+    "commitsPerformed": false,
+    "deployPerformed": false,
+    "browserAppRun": false,
+    "citationVerification": {
+      "status": "passed",
+      "exitCode": 0,
+      "evidenceRequired": true,
+      "minimumCoverage": 0.5,
+      "actualReportedCoverage": "68%",
+      "sourceCount": 30,
+      "toolOutputFile": "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/politics-evidence/20-final-report-citation-verification.json"
+    },
+    "quoteVerifierResultFile": "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/politics-evidence/21-final-data-verification.json"
+  },
+  "nobles": [
+    {
+      "id": "noble-genn",
+      "name": "Генн Седогрив",
+      "englishName": "Genn Greymane",
+      "existingHouseId": "greymane",
+      "existingSourceIds": [
+        45,
+        46,
+        47,
+        3
+      ],
+      "party": "royalists",
+      "stance": "support",
+      "basis": "lore",
+      "partyBasis": "lore",
+      "stanceBasis": "lore",
+      "advisor": false,
+      "advisorBasis": "lore",
+      "advisorReason": "Сам монарх, не свой советник.",
+      "includeDefault": true,
+      "includeDefaultReason": "Действующий король и автор проекта; в списке как глава, не как советник.",
+      "rosterRole": "sovereign",
+      "presenceBasis": "lore",
+      "votingSeat": false,
+      "potentialAlly": false,
+      "noteRu": "Король ставит самостоятельность Гилнеаса выше союзных обязательств и предлагает новый северный рубеж. Выход из Альянса ещё не совершён.",
+      "uncertainties": [
+        "Название партии авторское; текущий статус остаётся «король, участник Альянса», не изгнанник или бывший король."
+      ],
+      "scenarioSuggestion": null,
+      "evidence": [
+        {
+          "ledgerId": 2,
+          "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "title": "Генн Седогрив: Вожак Стаи - Галерея - World of Warcraft",
+          "claim": "Генн решает возвести стену по горному рубежу; это ранняя сцена планирования, не состоявшееся строительство.",
+          "field": "stance",
+          "scope": "wall_planning_retrospective",
+          "quote": "— Мы построим стену, идущую через горы, и земли Северных врат обеспечат нашу безопасность. Все правильно. Что же до лорда Краули… Дариусу придется смириться.",
+          "evidenceFile": "docs/court-evidence/01-early-court-1-genn-greymane-lord-of-his-pack.md",
+          "existingSourceIds": [
+            48
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              48
+            ],
+            "canonicalUrlMatch": [
+              48
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 3,
+          "url": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+          "title": "Genn Greymane",
+          "claim": "Послевоенный контекст до изоляции: споры о расходах на общую безопасность.",
+          "field": "party",
+          "scope": "after_second_war",
+          "quote": "After the Second War, he was present at the meeting with other kings of the Alliance in Nethergarde Keep. Greymane complained about the expenses of the keep, though the newly crowned King of Stormwind Varian Wrynn pointed out that a price couldn't be put on something as essential as their safety.",
+          "evidenceFile": "docs/court-evidence/01-early-court-2-Genn-Greymane.md",
+          "existingSourceIds": [
+            45
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              45
+            ],
+            "canonicalUrlMatch": [
+              45
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        45,
+        48
+      ],
+      "ledgerIdsToCite": [
+        2,
+        3
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-darius",
+      "name": "Дариус Краули",
+      "englishName": "Darius Crowley",
+      "existingHouseId": "crowley",
+      "existingSourceIds": [
+        32,
+        46,
+        48,
+        3
+      ],
+      "party": "internationalists",
+      "stance": "oppose",
+      "basis": "lore",
+      "partyBasis": "lore",
+      "stanceBasis": "lore",
+      "advisor": true,
+      "advisorBasis": "lore",
+      "advisorReason": "Подтверждённая ранняя служба/совет Генну.",
+      "includeDefault": true,
+      "includeDefaultReason": "Состав раннего совета и проальянсовая линия засвидетельствованы до стены.",
+      "rosterRole": "early_advisor",
+      "presenceBasis": "lore",
+      "votingSeat": true,
+      "potentialAlly": false,
+      "noteRu": "Северный лорд отстаивает общую защиту с соседними королевствами; проект стены угрожает связям и землям его дома. Спор с короной ещё не стал мятежом.",
+      "uncertainties": [
+        "Не известно, что именно он уже сказал на авторском этапе 10/100; stance — согласованная с лором стартовая линия, не датированный протокол."
+      ],
+      "scenarioSuggestion": null,
+      "evidence": [
+        {
+          "ledgerId": 2,
+          "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "title": "Генн Седогрив: Вожак Стаи - Галерея - World of Warcraft",
+          "claim": "Краули открыто защищает участие в общем союзе.",
+          "field": "party",
+          "scope": "alliance_foundation_retrospective",
+          "quote": "— Но господин, другие народы стремятся к объединению, — настаивал Краули. — Если Троллебой, Перенольд и прочие примкнут к Альянсу, как можем мы оставаться в стороне и продолжать называть себя друзьями и соседями?",
+          "evidenceFile": "docs/court-evidence/01-early-court-1-genn-greymane-lord-of-his-pack.md",
+          "existingSourceIds": [
+            48
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              48
+            ],
+            "canonicalUrlMatch": [
+              48
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 4,
+          "url": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "title": "Darius Crowley",
+          "claim": "Ранняя членская роль в совете прямо указана.",
+          "field": "advisor",
+          "scope": "alliance_foundation_retrospective",
+          "quote": "Despite being young and new to the Gilnean council of Lords, his altruistic and charismatic qualities made him loved by the Gilnean people and earned him the respect and friendship of King Genn Greymane.",
+          "evidenceFile": "docs/court-evidence/01-early-court-3-Darius-Crowley.md",
+          "existingSourceIds": [
+            32
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              32
+            ],
+            "canonicalUrlMatch": [
+              32
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 4,
+          "url": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "title": "Darius Crowley",
+          "claim": "Ретроспектива подтверждает несогласие со стеной; будущий мятеж не используется как текущая роль.",
+          "field": "stance",
+          "scope": "retrospective_stance_only_not_current_event",
+          "quote": "A pro-Alliance figure, he dissented with King Genn Greymane's decision to separate his people with the Greymane Wall.",
+          "evidenceFile": "docs/court-evidence/01-early-court-3-Darius-Crowley.md",
+          "existingSourceIds": [
+            32
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              32
+            ],
+            "canonicalUrlMatch": [
+              32
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        32,
+        48
+      ],
+      "ledgerIdsToCite": [
+        2,
+        4
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-godfrey",
+      "name": "Винсент Годфри",
+      "englishName": "Vincent Godfrey",
+      "existingHouseId": "godfrey",
+      "existingSourceIds": [
+        49,
+        46
+      ],
+      "party": "royalists",
+      "stance": "support",
+      "basis": "lore",
+      "partyBasis": "lore",
+      "stanceBasis": "lore",
+      "advisor": true,
+      "advisorBasis": "lore",
+      "advisorReason": "Подтверждённая ранняя служба/совет Генну.",
+      "includeDefault": true,
+      "includeDefaultReason": "Прямо советует Генну до Второй войны и при планировании стены.",
+      "rosterRole": "early_advisor",
+      "presenceBasis": "lore",
+      "votingSeat": true,
+      "potentialAlly": false,
+      "noteRu": "Годфри поддерживает горную линию стены, укрепляющую оборону и значение его владений. Расчётливый союзник короля; разрыв торговли сначала вызывает у него сомнения.",
+      "uncertainties": [
+        "Не изображать безусловным противником всякой торговли с самого начала: его ограниченное участие в Альянсе первоначально служило торговым интересам."
+      ],
+      "scenarioSuggestion": null,
+      "evidence": [
+        {
+          "ledgerId": 1,
+          "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "title": "Genn Greymane: Lord of His Pack - Media Gallery - World of Warcraft",
+          "claim": "Годфри сначала предупреждает о масштабе прекращения торговли.",
+          "field": "party",
+          "scope": "wall_planning_retrospective",
+          "quote": "“You want to wall off our entire nation? Close our borders and end trade with the rest of the Alliance? I… it is a rather large decision, would you not say?”",
+          "evidenceFile": "docs/court-evidence/01-early-court-0-genn-greymane-lord-of-his-pack.md",
+          "existingSourceIds": [
+            46
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              46
+            ],
+            "canonicalUrlMatch": [
+              46
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 2,
+          "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "title": "Генн Седогрив: Вожак Стаи - Галерея - World of Warcraft",
+          "claim": "После оговорок Годфри одобряет курс и предлагает созвать совет.",
+          "field": "stance",
+          "scope": "wall_planning_retrospective",
+          "quote": "— Надо созвать совет дворянства, — сказал он, вставая из кресла. — Мы идем верным путем, мой повелитель, хотя, возможно, он полон подводных камней.",
+          "evidenceFile": "docs/court-evidence/01-early-court-1-genn-greymane-lord-of-his-pack.md",
+          "existingSourceIds": [
+            48
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              48
+            ],
+            "canonicalUrlMatch": [
+              48
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 1,
+          "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "title": "Genn Greymane: Lord of His Pack - Media Gallery - World of Warcraft",
+          "claim": "Его ранний совет королю и командование постоянным ополчением прямо засвидетельствованы.",
+          "field": "advisor",
+          "scope": "alliance_foundation_retrospective",
+          "quote": "His name was Godfrey. Genn trusted his counsel but was always suspicious about his ambitions. Godfrey’s notion was not motivated by empathy as Crowley’s was. It was a smart political play that ensured notoriety for Godfrey, the commander of that standing militia.",
+          "evidenceFile": "docs/court-evidence/01-early-court-0-genn-greymane-lord-of-his-pack.md",
+          "existingSourceIds": [
+            46
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              46
+            ],
+            "canonicalUrlMatch": [
+              46
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 6,
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey",
+          "title": "Lord Vincent Godfrey",
+          "claim": "Ранний контекст рекомендации стены; не переносить позднюю измену.",
+          "field": "stance",
+          "scope": "wall_planning_retrospective",
+          "quote": "Genn warned that Darius might not take well to having his lands cut off, but Godfrey insisted that it was the best course of action for Gilneas.",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-0-Lord-Vincent-Godfrey.md",
+          "existingSourceIds": [
+            49
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              49
+            ],
+            "canonicalUrlMatch": [],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        46,
+        48,
+        49
+      ],
+      "ledgerIdsToCite": [
+        1,
+        2,
+        6
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-ashbury",
+      "name": "Барон Эшбери",
+      "englishName": "Baron Ashbury",
+      "existingHouseId": "ashbury",
+      "existingSourceIds": [
+        50,
+        46,
+        51,
+        3,
+        54
+      ],
+      "party": "royalists",
+      "stance": "unknown",
+      "basis": "scenario",
+      "partyBasis": "scenario",
+      "stanceBasis": "unknown",
+      "advisor": true,
+      "advisorBasis": "lore",
+      "advisorReason": "Подтверждённая ранняя служба/совет Генну.",
+      "includeDefault": true,
+      "includeDefaultReason": "Ранняя придворная служба подтверждена; сторона роялистов — осторожная реконструкция личной близости и раннего совета.",
+      "rosterRole": "early_advisor",
+      "presenceBasis": "lore",
+      "votingSeat": true,
+      "potentialAlly": false,
+      "noteRu": "Давний друг Генна поддерживает бережную к казне политику и малое союзное войско. В королевском лагере правдоподобен, но его отдельное решение о стене не известно.",
+      "uncertainties": [
+        "Ограниченная помощь Альянсу не равна одобрению прекращения всей торговли или строительства стены.",
+        "Поздняя измена не меняет его стартовую партийную линию."
+      ],
+      "scenarioSuggestion": {
+        "party": "royalists",
+        "stance": "unknown",
+        "reasonRu": "Сохранять благосклонность к короне, но не считать автоматическим голосом «за». Можно дать игроку склонить его по условиям торговли и цены строительства."
+      },
+      "evidence": [
+        {
+          "ledgerId": 1,
+          "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "title": "Genn Greymane: Lord of His Pack - Media Gallery - World of Warcraft",
+          "claim": "Ранняя близость к королю и семейная верность короне.",
+          "field": "party",
+          "scope": "alliance_foundation_retrospective",
+          "quote": "“It is a path that does have merit, my lord,” Baron Ashbury added. Ashbury was one of Genn’s most trusted friends. Genn had grown up with him; his father, Lord Ashbury the 1st, had helped Archibald build the nation up, and Archibald had always told Genn to trust in the Ashburys’ fidelity to the crown.",
+          "evidenceFile": "docs/court-evidence/01-early-court-0-genn-greymane-lord-of-his-pack.md",
+          "existingSourceIds": [
+            46
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              46
+            ],
+            "canonicalUrlMatch": [
+              46
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 7,
+          "url": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+          "title": "Baron Ashbury",
+          "claim": "Ранний конкретный совет: ограниченная армия, а не голосование о стене.",
+          "field": "advisor",
+          "scope": "alliance_foundation_retrospective",
+          "quote": "He was present in the Capital City to create the Alliance of Lordaeron and agreed with Lord Godfrey, to send only a token army.",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-1-Baron-Ashbury.md",
+          "existingSourceIds": [
+            50
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              50
+            ],
+            "canonicalUrlMatch": [
+              50
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 3,
+          "url": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+          "title": "Genn Greymane",
+          "claim": "Эшбери в группе раннего совета.",
+          "field": "advisor",
+          "scope": "alliance_foundation_retrospective",
+          "quote": "Accompanied by a group of nobles including Baron Ashbury, Lord Vincent Godfrey, and Lord Darius Crowley, the youngest and newest of the council of lords, Greymane listened to the plight of Anduin Lothar regarding the fall of Stormwind and the threat of the orcish Horde.",
+          "evidenceFile": "docs/court-evidence/01-early-court-2-Genn-Greymane.md",
+          "existingSourceIds": [
+            45
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              45
+            ],
+            "canonicalUrlMatch": [
+              45
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        45,
+        46,
+        50
+      ],
+      "ledgerIdsToCite": [
+        1,
+        3,
+        7
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-marley",
+      "name": "Лорд Марли",
+      "englishName": "Lord Marley",
+      "existingHouseId": "marley",
+      "existingSourceIds": [
+        52,
+        46,
+        3
+      ],
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorBasis": "unknown",
+      "advisorReason": "Ранняя должность советника Генна не подтверждена; отсутствие галочки не утверждает, что службы никогда не было.",
+      "includeDefault": true,
+      "includeDefaultReason": "Существование лорда и его домена подтверждено сценой планирования. Включать как потенциального союзника, не как подтверждённого раннего советника.",
+      "rosterRole": "potential_ally",
+      "presenceBasis": "lore",
+      "votingSeat": false,
+      "potentialAlly": true,
+      "noteRu": "Лорд пограничной провинции: его земли рассматриваются для нового рубежа. До решения о маршруте он остаётся возможным союзником; личного голоса за стену или против неё не сохранилось.",
+      "uncertainties": [
+        "Каталожный титул советника не даёт отдельной даты службы до стены. advisor=false в строгом стартовом срезе; возможна явная сценарная галочка.",
+        "Не выводить голос из совместных поздних охот или выгоды от переноса маршрута."
+      ],
+      "scenarioSuggestion": {
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "reasonRu": "Марли можно склонять гарантиями земли и компенсации; обязательное назначение советником требует авторской оговорки."
+      },
+      "evidence": [
+        {
+          "ledgerId": 2,
+          "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "title": "Генн Седогрив: Вожак Стаи - Галерея - World of Warcraft",
+          "claim": "Дом Марли существует в момент планирования; рассказ не приводит его собственного выступления.",
+          "field": "presence",
+          "scope": "wall_planning_retrospective",
+          "quote": "— Судя по этим наброскам, вы планируете затронуть владения лорда Марли… Но взгляните и сюда — здесь начинается горная цепь, идеальное природное заграждение…",
+          "evidenceFile": "docs/court-evidence/01-early-court-1-genn-greymane-lord-of-his-pack.md",
+          "existingSourceIds": [
+            48
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              48
+            ],
+            "canonicalUrlMatch": [
+              48
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 8,
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Marley",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Marley",
+          "title": "Lord Marley",
+          "claim": "Смена рассматриваемого домена не доказывает личную партийную позицию Марли.",
+          "field": "stance",
+          "scope": "wall_planning_retrospective",
+          "quote": "King Genn Greymane had originally planned to have the Greymane Wall cut through Marley's domain, but later decided to have it cut through Lord Darius Crowley's domain instead at the recommendation of Lord Godfrey.",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-2-Lord-Marley.md",
+          "existingSourceIds": [],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [],
+            "canonicalUrlMatch": [
+              52
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Общий каталог называет его советником Генна, но не датирует раннее назначение.",
+          "field": "advisor",
+          "scope": "undated_catalogue_not_early_appointment",
+          "quote": "Councilor of King Genn Greymane.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        3,
+        48,
+        52
+      ],
+      "ledgerIdsToCite": [
+        2,
+        5,
+        8
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-archibald",
+      "name": "Арчибальд Седогрив",
+      "englishName": "Archibald Greymane",
+      "existingHouseId": null,
+      "existingSourceIds": [
+        53,
+        46
+      ],
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorBasis": "unknown",
+      "advisorReason": "Ранняя должность советника Генна не подтверждена; отсутствие галочки не утверждает, что службы никогда не было.",
+      "includeDefault": false,
+      "includeDefaultReason": "Предшественник Генна, не живой участник нынешнего совета; календарная дата смерти не назначается.",
+      "rosterRole": "historical_predecessor",
+      "presenceBasis": "lore",
+      "votingSeat": false,
+      "potentialAlly": false,
+      "noteRu": "Прежний король и отец Генна; его учение о самостоятельности принадлежит наследию династии, а не действующему совету.",
+      "uncertainties": [
+        "party=neutral — техническая нераспределённость исключённой записи, не политический нейтралитет предка.",
+        "Точная дата смерти не доказана и не нужна для исключения из текущего совета."
+      ],
+      "scenarioSuggestion": null,
+      "evidence": [
+        {
+          "ledgerId": 16,
+          "url": "https://wowpedia.fandom.com/wiki/Archibald_Greymane",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Archibald_Greymane",
+          "title": "Archibald Greymane",
+          "claim": "Арчибальд — король прошлого и отец Генна.",
+          "field": "presence",
+          "scope": "historical_predecessor",
+          "quote": "Archibald Greymane was the king of Gilneas and the father of Genn Greymane. Under his rule, Gilneas prospered.",
+          "evidenceFile": "docs/court-evidence/04-reference-nobles-0-Archibald-Greymane.md",
+          "existingSourceIds": [
+            53
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              53
+            ],
+            "canonicalUrlMatch": [
+              53
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 3,
+          "url": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+          "title": "Genn Greymane",
+          "claim": "В ранней биографии Генн наследует трон после смерти Арчибальда.",
+          "field": "presence",
+          "scope": "historical_predecessor",
+          "quote": "After Archibald's death, Genn took the throne and led Gilneas much like his father had.",
+          "evidenceFile": "docs/court-evidence/01-early-court-2-Genn-Greymane.md",
+          "existingSourceIds": [
+            45
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              45
+            ],
+            "canonicalUrlMatch": [
+              45
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 29,
+          "url": "http://media.blizzard.com/wow/lore/pdfdownload/leader-story/genn-greymane/greymane-enUS.pdf",
+          "canonicalUrl": "http://media.blizzard.com/wow/lore/pdfdownload/leader-story/genn-greymane/greymane-enUS.pdf",
+          "title": "greymane-enUS",
+          "claim": "Исторический источник самостоятельной политической традиции; это не позиция на не существовавшем ещё голосовании.",
+          "field": "historical_context",
+          "scope": "genn_childhood_retrospective",
+          "quote": "\"Never take a man's hand, Son...\" King Archibald Greymane said, his strong frame now a muddied silhouette against the fading glow of twilight.",
+          "evidenceFile": "docs/court-evidence/greymane-enUS-full-extracted.md",
+          "existingSourceIds": [],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [],
+            "canonicalUrlMatch": [],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "historicalAdvisorTo": null,
+      "sourceIdsToCite": [
+        45,
+        53
+      ],
+      "ledgerIdsToCite": [
+        3,
+        16,
+        29
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-ashbury-first",
+      "name": "Лорд Эшбери I",
+      "englishName": "Lord Ashbury the 1st",
+      "existingHouseId": null,
+      "existingSourceIds": [
+        46,
+        54,
+        3,
+        50
+      ],
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorBasis": "unknown",
+      "advisorReason": "Ранняя должность советника Генна не подтверждена; отсутствие галочки не утверждает, что службы никогда не было.",
+      "includeDefault": false,
+      "includeDefaultReason": "Засвидетельствован как отец барона и советник прошлого монарха; присутствие/служба при Генне после Второй войны не установлены.",
+      "rosterRole": "historical_predecessor",
+      "presenceBasis": "lore",
+      "votingSeat": false,
+      "potentialAlly": false,
+      "noteRu": "Лорд Эшбери I — представитель прежнего двора Арчибальда. Верность его семьи короне — историческое наследие, не нынешнее кресло при Генне.",
+      "uncertainties": [
+        "Не называть бароном I и не датировать смерть по текущему инфобоксу.",
+        "advisor=false означает не советник текущего Генна; historicalAdvisorTo=noble-archibald."
+      ],
+      "scenarioSuggestion": null,
+      "evidence": [
+        {
+          "ledgerId": 30,
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st?action=render",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st?action=render",
+          "title": "References",
+          "claim": "Служба прежнему королю и поколение отца барона.",
+          "field": "presence",
+          "scope": "historical_predecessor",
+          "quote": "Lord Ashbury the 1st was a Gilnean noble and the father of Baron Ashbury. Lord Ashbury helped King Archibald Greymane build Gilneas up to a nation of great power.",
+          "evidenceFile": "docs/court-evidence/11-ashbury-original-retry-0-Lord-Ashbury-the-1st-action-render.md",
+          "existingSourceIds": [],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [],
+            "canonicalUrlMatch": [],
+            "samePageDifferentView": [
+              54
+            ]
+          }
+        },
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Каталог относит должность к Арчибальду, не к Генну.",
+          "field": "advisor",
+          "scope": "historical_predecessor",
+          "quote": "Councilor of King Archibald Greymane. Father of Baron Ashbury.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 19,
+          "url": "https://warcraft.wiki.gg/wiki/Lord_Ashbury_the_1st",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st",
+          "title": "Lord Ashbury the 1st - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+          "claim": "Зеркало независимо подтверждает формулировку службы (та же производная вики, не независимый первичный источник).",
+          "field": "historical_context",
+          "scope": "historical_predecessor",
+          "quote": "King Archibald always told his son Prince Genn to trust in the Ashburys’ fidelity to the crown because of the accomplishments of Lord Ashbury.",
+          "evidenceFile": "docs/court-evidence/06-blocked-mirrors-0-Lord-Ashbury-the-1st.md",
+          "existingSourceIds": [
+            54
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              54
+            ],
+            "canonicalUrlMatch": [
+              54
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "historicalAdvisorTo": "noble-archibald",
+      "sourceIdsToCite": [
+        3,
+        54
+      ],
+      "ledgerIdsToCite": [
+        5,
+        19,
+        30
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-walden",
+      "name": "Лорд Уолден",
+      "englishName": "Lord Walden",
+      "existingHouseId": "walden",
+      "existingSourceIds": [
+        55,
+        51,
+        56,
+        3
+      ],
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorBasis": "unknown",
+      "advisorReason": "Ранняя должность советника Генна не подтверждена; отсутствие галочки не утверждает, что службы никогда не было.",
+      "includeDefault": false,
+      "includeDefaultReason": "Лорд и служба королевскому совету известны позднее; ранний титул, присутствие и назначение в выбранной фазе не датированы.",
+      "rosterRole": "optional_potential_ally",
+      "presenceBasis": "scenario",
+      "votingSeat": false,
+      "potentialAlly": true,
+      "noteRu": "Гилнеасский лорд из позднего реестра. Для спора о стене его голос неизвестен; возможное приглашение — авторское, без назначения советником.",
+      "uncertainties": [
+        "Нельзя выводить роялизм, поддержку стены или раннее кресло из позднего сотрудничества с Годфри.",
+        "При включении в авторский пул пометить presenceBasis=scenario и votingSeat=false."
+      ],
+      "scenarioSuggestion": {
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "includeOptional": true,
+        "reasonRu": "Допустим как недатированный потенциальный союзник, а не доказанный ранний советник."
+      },
+      "evidence": [
+        {
+          "ledgerId": 9,
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+          "title": "Lord Walden",
+          "claim": "Засвидетельствованная личность и происхождение не устанавливают присутствие до стены.",
+          "field": "presence",
+          "scope": "later_identity_only",
+          "quote": "Lord Walden was a human nobleman from eastern Gilneas.",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-3-Lord-Walden.md",
+          "existingSourceIds": [
+            55
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              55
+            ],
+            "canonicalUrlMatch": [
+              55
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Каталог говорит о бывшем советнике без даты раннего назначения.",
+          "field": "advisor",
+          "scope": "later_context_not_current_alignment",
+          "quote": "Former councilor of King Genn Greymane, traitor alongside Ashbury and Godfrey.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 28,
+          "url": "https://worldofwarcraft.blizzard.com/en-us/news/24095666/unveiling-cataclysm-classic-zones-dungeons-and-pvp-season-9",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/news/24095666/unveiling-cataclysm-classic-zones-dungeons-and-pvp-season-9",
+          "title": "Unveiling Cataclysm Classic Zones, Dungeons, and PvP Season 9",
+          "claim": "Официальный журнал привязывает характеристику «правая рука Годфри» к позднему сюжету, не раннему совету.",
+          "field": "scope_guard",
+          "scope": "later_context_not_current_alignment",
+          "quote": "Godfrey’s right-hand man, the arrogant Lord Walden vowed to pay any price, including death, to serve his compatriot.",
+          "evidenceFile": "docs/court-evidence/08-preferred-retries-4-unveiling-cataclysm-classic-zones-dungeons-and-pvp-season-9.md",
+          "existingSourceIds": [
+            60
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              60
+            ],
+            "canonicalUrlMatch": [
+              60
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        3,
+        55,
+        60
+      ],
+      "ledgerIdsToCite": [
+        5,
+        9,
+        28
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-hewell",
+      "name": "Лорд Хьювелл",
+      "englishName": "Lord Hewell",
+      "existingHouseId": null,
+      "existingSourceIds": [
+        57,
+        58,
+        3,
+        26
+      ],
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorBasis": "unknown",
+      "advisorReason": "Ранняя должность советника Генна не подтверждена; отсутствие галочки не утверждает, что службы никогда не было.",
+      "includeDefault": false,
+      "includeDefaultReason": "Прямое свидетельство личной верности Генну относится к более поздней кризисной сцене; ранняя служба не установлена.",
+      "rosterRole": "optional_potential_ally",
+      "presenceBasis": "scenario",
+      "votingSeat": false,
+      "potentialAlly": true,
+      "noteRu": "Лорд Хьювелл может стать союзником короны, но его место в раннем дворе и отношение к стене не известны. Пока не принадлежит ни одной партии.",
+      "uncertainties": [
+        "Поздний отказ от измены — не доказательство членства в авторских роялистах до стены.",
+        "Не отождествлять Хьювелла с другим именем/новым домом; использовать существующий ID."
+      ],
+      "scenarioSuggestion": {
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "includeOptional": true,
+        "reasonRu": "Сценарный нейтральный гость; королю правдоподобно искать его поддержки, но не назначать автоматически."
+      },
+      "evidence": [
+        {
+          "ledgerId": 10,
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Hewell",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Hewell",
+          "title": "Lord Hewell",
+          "claim": "Личность и происхождение известны из позднего стартового опыта, не сцены после Второй войны.",
+          "field": "presence",
+          "scope": "later_identity_only",
+          "quote": "Lord Hewell is a nobleman of Gilneas who can be found at Tempest's Reach during the worgen starting experience.",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-4-Lord-Hewell.md",
+          "existingSourceIds": [
+            57
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              57
+            ],
+            "canonicalUrlMatch": [
+              57
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 10,
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Hewell",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Hewell",
+          "title": "Lord Hewell",
+          "claim": "Поздняя личная верность не доказывает голосование о стене.",
+          "field": "scope_guard",
+          "scope": "later_context_not_current_alignment",
+          "quote": "Hewell refused to betray his king. Instead he remained by Greymane's side until Krennan Aranas sent an adventurer to help.",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-4-Lord-Hewell.md",
+          "existingSourceIds": [
+            57
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              57
+            ],
+            "canonicalUrlMatch": [
+              57
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        57
+      ],
+      "ledgerIdsToCite": [
+        10
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-silverlaine",
+      "name": "Барон Сребролен",
+      "englishName": "Baron Silverlaine",
+      "existingHouseId": "silverlaine",
+      "existingSourceIds": [
+        59,
+        60,
+        33,
+        3
+      ],
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "scenario",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorBasis": "unknown",
+      "advisorReason": "Ранняя должность советника Генна не подтверждена; отсутствие галочки не утверждает, что службы никогда не было.",
+      "includeDefault": true,
+      "includeDefaultReason": "Включить как специально оговорённого сценарного вассала/потенциального союзника, без кресла королевского советника и без автоматического голоса Краули.",
+      "rosterRole": "potential_ally",
+      "presenceBasis": "scenario",
+      "votingSeat": false,
+      "potentialAlly": true,
+      "noteRu": "Барон хранит северное владение. Связь с домом Краули принята в сценарии, однако она не заменяет его собственного решения о стене.",
+      "uncertainties": [
+        "В первичном Lord of His Pack не назван ни Сребролен, ни его вассалитет.",
+        "Наличие северной крепости не датирует баронское владение точно до выхода из Альянса.",
+        "Вассальная связь с Краули — принятая авторская конфигурация, а не подтверждённый стеновой голос."
+      ],
+      "scenarioSuggestion": {
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "scenarioOverlordId": "noble-darius",
+        "reasonRu": "При желании игрок может склонить барона к интернационалистам защитой северных земель; это новое авторское решение, не восстановленный канон."
+      },
+      "evidence": [
+        {
+          "ledgerId": 11,
+          "url": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+          "title": "Baron Silverlaine",
+          "claim": "Ретроспектива подтверждает, что барон владел крепостью до её позднего падения; отдельной даты до стены нет.",
+          "field": "presence",
+          "scope": "retrospective_identity_pre_third_war_not_exact_pre_wall",
+          "quote": "Baron Silverlaine was master of the keep before it fell to Arugal's worgen.",
+          "evidenceFile": "docs/court-evidence/03-northern-claims-0-Baron-Silverlaine.md",
+          "existingSourceIds": [
+            59
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              59
+            ],
+            "canonicalUrlMatch": [
+              59
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 28,
+          "url": "https://worldofwarcraft.blizzard.com/en-us/news/24095666/unveiling-cataclysm-classic-zones-dungeons-and-pvp-season-9",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/news/24095666/unveiling-cataclysm-classic-zones-dungeons-and-pvp-season-9",
+          "title": "Unveiling Cataclysm Classic Zones, Dungeons, and PvP Season 9",
+          "claim": "Первичный официальный журнал подтверждает владение, но не вассальную цепь или стеновое голосование.",
+          "field": "presence",
+          "scope": "retrospective_identity_pre_third_war_not_exact_pre_wall",
+          "quote": "Baron Silverlaine was master of the keep before it fell to Arugal’s worgen.",
+          "evidenceFile": "docs/court-evidence/08-preferred-retries-4-unveiling-cataclysm-classic-zones-dungeons-and-pvp-season-9.md",
+          "existingSourceIds": [
+            60
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              60
+            ],
+            "canonicalUrlMatch": [
+              60
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Каталог формулирует вассалитет как вывод из владений Краули; это не поимённая первичная сцена.",
+          "field": "scope_guard",
+          "scope": "secondary_derived_relation_not_primary_fact",
+          "quote": "The Crowley family ruled over the lands that constituted both Pyrewood Village (and as a result, Shadowfang Keep) and Ambermill,[4] making Baron Silverlaine a vassal of theirs as a result.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        3,
+        59,
+        60
+      ],
+      "ledgerIdsToCite": [
+        5,
+        11,
+        28
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-longshore",
+      "name": "Барон Дольноберег",
+      "englishName": "Baron Longshore",
+      "existingHouseId": null,
+      "existingSourceIds": [
+        61,
+        62,
+        3
+      ],
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorBasis": "unknown",
+      "advisorReason": "Ранняя должность советника Генна не подтверждена; отсутствие галочки не утверждает, что службы никогда не было.",
+      "includeDefault": false,
+      "includeDefaultReason": "Позднее личное свидетельство не датирует баронство и нахождение при раннем дворе; оставить в факультативном пуле нейтралов.",
+      "rosterRole": "optional_potential_ally",
+      "presenceBasis": "scenario",
+      "votingSeat": false,
+      "potentialAlly": true,
+      "noteRu": "Барон Дольноберег — гилнеасец с засвидетельствованным прежним баронским титулом. Когда он получил его и какую позицию занимает при обсуждении стены, не известно.",
+      "uncertainties": [
+        "Не приписывать раннюю пиратскую роль или мнение о стене по его поздней судьбе.",
+        "То, что его позднее оставили за стеной, не означает, что ранее он голосовал против."
+      ],
+      "scenarioSuggestion": {
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "includeOptional": true,
+        "reasonRu": "Сценарное приглашение возможно, но раннее баронство, приезд и голос остаются авторскими допущениями."
+      },
+      "evidence": [
+        {
+          "ledgerId": 14,
+          "url": "https://wowpedia.fandom.com/wiki/The_Baron%27s_Demands",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/The_Baron%27s_Demands",
+          "title": "The Baron's Demands",
+          "claim": "Барон лично говорит о настоящем прежнем титуле, но без ранней даты.",
+          "field": "presence",
+          "scope": "later_personal_testimony_undated_title",
+          "quote": "Oh, me word is good, friend. I used ta be a real Baron, ye know.",
+          "evidenceFile": "docs/court-evidence/03-northern-claims-3-The-Baron-27s-Demands.md",
+          "existingSourceIds": [
+            62
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              62
+            ],
+            "canonicalUrlMatch": [
+              62
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Каталог связывает его с отрезанными стеной гилнеасцами, но не приводит прежнего голоса по стене.",
+          "field": "scope_guard",
+          "scope": "later_context_not_current_alignment",
+          "quote": "Captain of the pirate ship Heedless, and one of the Gilneans locked out of Gilneas by the Greymane Wall.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 13,
+          "url": "https://wowpedia.fandom.com/wiki/Baron_Longshore",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Longshore",
+          "title": "Baron Longshore",
+          "claim": "Происхождение из Гилнеаса известно; поздняя пиратская биография не применяется к выбранному совету.",
+          "field": "presence",
+          "scope": "later_identity_only",
+          "quote": "Baron Longshore is the former captain of the Heedless, a ship in the pirate fleet of the Southsea Freebooters, and hails from Gilneas.",
+          "evidenceFile": "docs/court-evidence/03-northern-claims-2-Baron-Longshore.md",
+          "existingSourceIds": [
+            61
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              61
+            ],
+            "canonicalUrlMatch": [
+              61
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        3,
+        61,
+        62
+      ],
+      "ledgerIdsToCite": [
+        5,
+        13,
+        14
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-candren",
+      "name": "Лорд Кандрен",
+      "englishName": "Lord Candren",
+      "existingHouseId": null,
+      "existingSourceIds": [
+        63,
+        3
+      ],
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorBasis": "unknown",
+      "advisorReason": "Ранняя должность советника Генна не подтверждена; отсутствие галочки не утверждает, что службы никогда не было.",
+      "includeDefault": false,
+      "includeDefaultReason": "Личная статья подтверждает позднюю интендантскую службу; ни ранней должности, ни политической стороны не найдено.",
+      "rosterRole": "optional_potential_ally",
+      "presenceBasis": "scenario",
+      "votingSeat": false,
+      "potentialAlly": true,
+      "noteRu": "Лорд Кандрен известен службой гилнеасцам, но его раннее место при дворе и решение о северном рубеже не установлены. Возможный союзник вне партий.",
+      "uncertainties": [
+        "Не поднимать позднего интенданта до советника Генна после Второй войны."
+      ],
+      "scenarioSuggestion": {
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "includeOptional": true,
+        "reasonRu": "Только явно авторский потенциальный союзник; не назначать раннюю интендантскую должность без источника."
+      },
+      "evidence": [
+        {
+          "ledgerId": 17,
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Candren",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Candren",
+          "title": "Lord Candren",
+          "claim": "Должность известна из позднего контекста Дарнаса, не из раннего совета.",
+          "field": "presence",
+          "scope": "later_identity_only",
+          "quote": "Lord Candren is the quartermaster for Gilneas. He is found in Darnassus's Temple Gardens, near the flight master.",
+          "evidenceFile": "docs/court-evidence/04-reference-nobles-2-Lord-Candren.md",
+          "existingSourceIds": [
+            63
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              63
+            ],
+            "canonicalUrlMatch": [
+              63
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Каталог прямо признаёт неизвестность земель семьи; нельзя создавать из них политическую роль.",
+          "field": "scope_guard",
+          "scope": "undated_catalogue",
+          "quote": "The lands of the Tulvans and Candrens are entirely unknown with no allusions to any potential regions, though the Tulvans are stated to be 'earls'.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        3,
+        63
+      ],
+      "ledgerIdsToCite": [
+        5,
+        17
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-isiden",
+      "name": "Исиден Перенольд",
+      "englishName": "Isiden Perenolde",
+      "existingHouseId": null,
+      "existingSourceIds": [
+        64
+      ],
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorBasis": "unknown",
+      "advisorReason": "Ранняя должность советника Генна не подтверждена; отсутствие галочки не утверждает, что службы никогда не было.",
+      "includeDefault": true,
+      "includeDefaultReason": "Гость послевоенного Гилнеаса и покровительство Генна подтверждены; включить как возможного союзника без гилнеасского кресла.",
+      "rosterRole": "guest_potential_ally",
+      "presenceBasis": "lore",
+      "votingSeat": false,
+      "potentialAlly": true,
+      "noteRu": "Альтеракский претендент ищет поддержки в Гилнеасе. Покровительство Генна подтверждено, но личная партия и взгляд на стену не раскрыты; он возможный гость, не советник короля.",
+      "uncertainties": [
+        "Кредит поддержки направлен от Генна к Исидену; обратную клятву, вассалитет или голос «за стену» источник не даёт.",
+        "Не утверждать, что он приехал именно на 10/100 или оставался до начала работ."
+      ],
+      "scenarioSuggestion": {
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "possibleParty": "royalists",
+        "possiblePartyBasis": "scenario",
+        "reasonRu": "Роялистская симпатия возможна за королевское покровительство, но активная внешняя претензия также не совместима с автоматическим изоляционизмом."
+      },
+      "evidence": [
+        {
+          "ledgerId": 15,
+          "url": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+          "title": "Isiden Perenolde",
+          "claim": "Присутствие в Гилнеасе и помощь короля в споре о наследовании.",
+          "field": "presence",
+          "scope": "post_second_war_succession",
+          "quote": "When Alterac was placed under martial law by order of King Terenas, Isiden fled to Gilneas, where he hoped to rally support.[2] He was eventually backed by Genn Greymane, Gilneas' king, as the matter of the succession began to heat up.",
+          "evidenceFile": "docs/court-evidence/03-northern-claims-4-Isiden-Perenolde.md",
+          "existingSourceIds": [
+            64
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              64
+            ],
+            "canonicalUrlMatch": [
+              64
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 3,
+          "url": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+          "title": "Genn Greymane",
+          "claim": "Поддержка короля означает династическую политику, не позицию Исидена в споре о стене.",
+          "field": "scope_guard",
+          "scope": "post_second_war_succession",
+          "quote": "He supported the claim of Lord Perenolde's nephew, Isiden, to Alterac's throne. A base in Alterac would give Gilneas access to resources the southern kingdom did not have, and the excuse to send its mighty ships across the Great Sea.",
+          "evidenceFile": "docs/court-evidence/01-early-court-2-Genn-Greymane.md",
+          "existingSourceIds": [
+            45
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              45
+            ],
+            "canonicalUrlMatch": [
+              45
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 15,
+          "url": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+          "title": "Isiden Perenolde",
+          "claim": "Точная длительность пребывания и дальнейшая судьба не установлены.",
+          "field": "scope_guard",
+          "scope": "undated_later_status_not_assigned_currently",
+          "quote": "Nothing has been heard from Isiden since then and his status is unknown.",
+          "evidenceFile": "docs/court-evidence/03-northern-claims-4-Isiden-Perenolde.md",
+          "existingSourceIds": [
+            64
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              64
+            ],
+            "canonicalUrlMatch": [
+              64
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        45,
+        64
+      ],
+      "ledgerIdsToCite": [
+        3,
+        15
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-tulvan",
+      "name": "Лорд Джеффри Тулван",
+      "englishName": null,
+      "existingHouseId": null,
+      "existingSourceIds": [
+        3,
+        65
+      ],
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorBasis": "unknown",
+      "advisorReason": "Ранняя должность советника Генна не подтверждена; отсутствие галочки не утверждает, что службы никогда не было.",
+      "includeDefault": false,
+      "includeDefaultReason": "Засвидетельствован поздним воинским эпизодом; ранняя жизнь и придворная служба не установлены.",
+      "rosterRole": "optional_potential_ally",
+      "presenceBasis": "scenario",
+      "votingSeat": false,
+      "potentialAlly": true,
+      "noteRu": "Лорд Джеффри Тулван — имя из реестра знати; его ранний титул, владения и позиция в споре о стене не известны. Возможный союзник только по условиям сценария.",
+      "uncertainties": [
+        "Не выдавать прозвище «Earl of Evisceration» за доказанное раннее графское владение.",
+        "Не переносить позднюю физическую силу, форму воргена или арену в ранний совет."
+      ],
+      "scenarioSuggestion": {
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "includeOptional": true,
+        "reasonRu": "Доступен как явно авторская, недатированная ранняя версия личности."
+      },
+      "evidence": [
+        {
+          "ledgerId": 24,
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan",
+          "title": "Lord Geoffery Tulvan",
+          "claim": "Статья ограничена поздним эпизодом; он не используется как текущая роль.",
+          "field": "scope_guard",
+          "scope": "later_identity_only",
+          "quote": "Lord Geoffery Tulvan is a worgen located at the Crucible of Carnage in the Twilight Highlands. He is one of the challengers and seeks to become the greatest warrior in the world.",
+          "evidenceFile": "docs/court-evidence/08-preferred-retries-0-Lord-Geoffery-Tulvan.md",
+          "existingSourceIds": [],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [],
+            "canonicalUrlMatch": [],
+            "samePageDifferentView": [
+              65
+            ]
+          }
+        },
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Домен семьи и привязка к ранним землям неизвестны.",
+          "field": "presence",
+          "scope": "undated_catalogue",
+          "quote": "The lands of the Tulvans and Candrens are entirely unknown with no allusions to any potential regions, though the Tulvans are stated to be 'earls'.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 20,
+          "url": "https://warcraft.wiki.gg/wiki/Lord_Geoffery_Tulvan",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan",
+          "title": "Lord Geoffery Tulvan - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+          "claim": "Зеркало содержит тот же поздний эпизод, ранней политической позиции не добавляет.",
+          "field": "scope_guard",
+          "scope": "later_identity_only",
+          "quote": "Lord Geoffery Tulvan is a worgen located at the Crucible of Carnage in the Twilight Highlands.",
+          "evidenceFile": "docs/court-evidence/06-blocked-mirrors-1-Lord-Geoffery-Tulvan.md",
+          "existingSourceIds": [],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [],
+            "canonicalUrlMatch": [],
+            "samePageDifferentView": [
+              65
+            ]
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        3,
+        65
+      ],
+      "ledgerIdsToCite": [
+        5,
+        20,
+        24
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-harford",
+      "name": "Лорд Харфорд",
+      "englishName": null,
+      "existingHouseId": null,
+      "existingSourceIds": [
+        3,
+        66
+      ],
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorBasis": "unknown",
+      "advisorReason": "Ранняя должность советника Генна не подтверждена; отсутствие галочки не утверждает, что службы никогда не было.",
+      "includeDefault": false,
+      "includeDefaultReason": "Связь с Гилнеасом и Серебряным бором подтверждена поздним свидетельством; ранняя служба и дата титула неизвестны.",
+      "rosterRole": "optional_potential_ally",
+      "presenceBasis": "scenario",
+      "votingSeat": false,
+      "potentialAlly": true,
+      "noteRu": "Лорд Харфорд считает Гилнеас родиной, но его прежние обязательства и отношение к стене не известны. Предполагаемые северные связи ещё не означают принадлежность партии Краули.",
+      "uncertainties": [
+        "Не назначать ему раннюю службу Аругалу, членство в Серебряном Рассвете, плен или смерть; это будущее относительно выбранного слоя.",
+        "Вассалитет Краули не доказан, и сам по себе не даёт голос против стены."
+      ],
+      "scenarioSuggestion": {
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "includeOptional": true,
+        "reasonRu": "При желании создать авторскую человеческую раннюю версию, не утверждая реальное кресло или вассалитет."
+      },
+      "evidence": [
+        {
+          "ledgerId": 25,
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Harford",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford",
+          "title": "Lord Harford",
+          "claim": "Прямая поздняя реплика подтверждает родину, не партийный голос.",
+          "field": "presence",
+          "scope": "later_identity_only",
+          "quote": "Remember Gilneas, our beloved home. This world is worth saving.",
+          "evidenceFile": "docs/court-evidence/08-preferred-retries-1-Lord-Harford.md",
+          "existingSourceIds": [],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [],
+            "canonicalUrlMatch": [],
+            "samePageDifferentView": [
+              66
+            ]
+          }
+        },
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Каталог прямо маркирует связь с Краули вероятностным выводом.",
+          "field": "scope_guard",
+          "scope": "secondary_derived_relation_not_primary_fact",
+          "quote": "Lord Harford was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 21,
+          "url": "https://warcraft.wiki.gg/wiki/Lord_Harford",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford",
+          "title": "Lord Harford - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+          "claim": "Тот же поздний контекст не подтверждает раннее членство в совете.",
+          "field": "scope_guard",
+          "scope": "later_context_not_current_alignment",
+          "quote": "Lord Harford is an Argent Dawn prisoner of the death knights in the Scarlet Enclave.",
+          "evidenceFile": "docs/court-evidence/06-blocked-mirrors-2-Lord-Harford.md",
+          "existingSourceIds": [],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [],
+            "canonicalUrlMatch": [],
+            "samePageDifferentView": [
+              66
+            ]
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        3,
+        66
+      ],
+      "ledgerIdsToCite": [
+        5,
+        21,
+        25
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-morrison",
+      "name": "Лорд-мэр Моррисон",
+      "englishName": null,
+      "existingHouseId": null,
+      "existingSourceIds": [
+        3,
+        32,
+        67
+      ],
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorBasis": "unknown",
+      "advisorReason": "Ранняя должность советника Генна не подтверждена; отсутствие галочки не утверждает, что службы никогда не было.",
+      "includeDefault": false,
+      "includeDefaultReason": "Поздняя статья доказывает руководство местным советом, а не раннюю придворную должность; оставлять факультативным гостем.",
+      "rosterRole": "optional_potential_ally",
+      "presenceBasis": "scenario",
+      "votingSeat": false,
+      "potentialAlly": true,
+      "noteRu": "Моррисон известен муниципальной службой Пирвуду; ранняя дата назначения не установлена. Если пригласить его, он может представлять интересы жителей, но его голос о стене неизвестен.",
+      "uncertainties": [
+        "Не назначать наследственный домен, раннее мэрство или кресло королевского советника из муниципального титула.",
+        "Не выводить партию или голос из местоположения Пирвуда."
+      ],
+      "scenarioSuggestion": {
+        "party": "neutral",
+        "stance": "unknown",
+        "advisor": false,
+        "includeOptional": true,
+        "reasonRu": "В качестве авторского представителя жителей — возможен, но с отдельной оговоркой о недатированной муниципальной службе."
+      },
+      "evidence": [
+        {
+          "ledgerId": 26,
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison",
+          "title": "Lord Mayor Morrison",
+          "claim": "Муниципальная должность засвидетельствована в поздней игровой сцене.",
+          "field": "presence",
+          "scope": "later_identity_only",
+          "quote": "Lord Mayor Morrison is a human and leader of the Pyrewood Council who appears in Pyrewood Village in Silverpine Forest during",
+          "evidenceFile": "docs/court-evidence/08-preferred-retries-2-Lord-Mayor-Morrison.md",
+          "existingSourceIds": [],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [],
+            "canonicalUrlMatch": [],
+            "samePageDifferentView": [
+              67
+            ]
+          }
+        },
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Каталожный вывод о подчинении Краули не является доказанным ранним вассалитетом.",
+          "field": "scope_guard",
+          "scope": "secondary_derived_relation_not_primary_fact",
+          "quote": "Lord Mayor Morrison was also the mayor of Pyrewood, placing him implicitly under Crowley's service.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 22,
+          "url": "https://warcraft.wiki.gg/wiki/Lord_Mayor_Morrison",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison",
+          "title": "Lord Mayor Morrison - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+          "claim": "Зеркало прямо подтверждает именно местный совет.",
+          "field": "presence",
+          "scope": "later_identity_only",
+          "quote": "Lord Mayor Morrison is a human and leader of the Pyrewood Council who appears in Pyrewood Village in Silverpine Forest during [15] Pyrewood Ambush.",
+          "evidenceFile": "docs/court-evidence/06-blocked-mirrors-3-Lord-Mayor-Morrison.md",
+          "existingSourceIds": [],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [],
+            "canonicalUrlMatch": [],
+            "samePageDifferentView": [
+              67
+            ]
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        3,
+        67
+      ],
+      "ledgerIdsToCite": [
+        5,
+        22,
+        26
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "noble-aderic",
+      "name": "Адерик",
+      "englishName": null,
+      "existingHouseId": null,
+      "existingSourceIds": [
+        3,
+        27,
+        46,
+        68
+      ],
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorBasis": "unknown",
+      "advisorReason": "Ранняя должность советника Генна не подтверждена; отсутствие галочки не утверждает, что службы никогда не было.",
+      "includeDefault": false,
+      "includeDefaultReason": "Предок/мемориальная фигура; нет основания представлять действующим человеком, королём или советником текущего двора.",
+      "rosterRole": "historical_memory",
+      "presenceBasis": "lore",
+      "votingSeat": false,
+      "potentialAlly": false,
+      "noteRu": "Адерик — почитаемый патриарх в памяти Гилнеаса. Его имя принадлежит традиции и родословной справке, а не списку голосующих при Генне.",
+      "uncertainties": [
+        "Точная дата смерти и связь с династией Седогривов не установлены.",
+        "Не назначать партию Адерику из совпадения с названием королевского пира."
+      ],
+      "scenarioSuggestion": null,
+      "evidence": [
+        {
+          "ledgerId": 27,
+          "url": "https://wowpedia.fandom.com/wiki/Aderic",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Aderic",
+          "title": "Aderic",
+          "claim": "Подтверждены патриарх и захоронение, не монарший титул.",
+          "field": "presence",
+          "scope": "historical_memory",
+          "quote": "Aderic was a human who was a Gilnean patriarch. He is buried at Aderic's Repose at the top of the hill.",
+          "evidenceFile": "docs/court-evidence/08-preferred-retries-3-Aderic.md",
+          "existingSourceIds": [],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [],
+            "canonicalUrlMatch": [],
+            "samePageDifferentView": [
+              68
+            ]
+          }
+        },
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Сам каталог отделяет его в спекулятивный раздел; царский/дворянский титул — предположение.",
+          "field": "scope_guard",
+          "scope": "explicit_speculation_not_primary_fact",
+          "quote": "Referred to as a \"patriarch\", and has the Royal Aderic Banquet named in his honor.[9] Possibly a long-dead king or nobleman.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 23,
+          "url": "https://warcraft.wiki.gg/wiki/Aderic",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Aderic",
+          "title": "Aderic - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+          "claim": "Зеркало не даёт иной ранней роли.",
+          "field": "presence",
+          "scope": "historical_memory",
+          "quote": "Aderic was a human who was a Gilnean patriarch. He is buried at Aderic's Repose at the top of the hill.",
+          "evidenceFile": "docs/court-evidence/06-blocked-mirrors-4-Aderic.md",
+          "existingSourceIds": [],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [],
+            "canonicalUrlMatch": [],
+            "samePageDifferentView": [
+              68
+            ]
+          }
+        }
+      ],
+      "sourceIdsToCite": [
+        3,
+        68
+      ],
+      "ledgerIdsToCite": [
+        5,
+        23,
+        27
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    }
+  ],
+  "houses": [
+    {
+      "id": "greymane",
+      "name": "Дом Седогривов",
+      "existingParentId": "gilneas",
+      "leaderNobleId": "noble-genn",
+      "party": "royalists",
+      "stance": "support",
+      "basis": "scenario",
+      "partyBasis": "scenario",
+      "stanceBasis": "scenario",
+      "advisor": false,
+      "advisorMeaning": "Дому не присваивается отдельный королевский советник.",
+      "advisorBasis": "unknown",
+      "includeDefault": true,
+      "includeDefaultReason": "Правящая династия текущего монарха; отображение политики Генна на дом — авторская агрегация.",
+      "votingSeat": false,
+      "aggregateFromLeader": true,
+      "potentialAlly": false,
+      "noteRu": "Правящий дом отстаивает самостоятельность королевства под руководством Генна. Его курс за стену не означает единогласия всех членов семьи.",
+      "uncertainties": [
+        "Дети и супруга Генна не получают автоматических голосов; поздние разногласия Лиама не датируются в этот срез."
+      ],
+      "evidence": [
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Седогривы — правящий род; это не формальная партия.",
+          "field": "presence",
+          "scope": "dynasty_identity",
+          "quote": "The Greymane family rules over all of Gilneas.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 2,
+          "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "title": "Генн Седогрив: Вожак Стаи - Галерея - World of Warcraft",
+          "claim": "Генн предлагает строительство; домашняя политика показана через главу.",
+          "field": "stance",
+          "scope": "wall_planning_retrospective",
+          "quote": "— Мы построим стену, идущую через горы, и земли Северных врат обеспечат нашу безопасность. Все правильно. Что же до лорда Краули… Дариусу придется смириться.",
+          "evidenceFile": "docs/court-evidence/01-early-court-1-genn-greymane-lord-of-his-pack.md",
+          "existingSourceIds": [
+            48
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              48
+            ],
+            "canonicalUrlMatch": [
+              48
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 18,
+          "url": "https://wowpedia.fandom.com/wiki/Greymane_family",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Greymane_family",
+          "title": "Greymane family - Wowpedia - Your wiki guide to the World of Warcraft",
+          "claim": "Семейная страница подтверждает именно правящую линию, а не политическую организацию.",
+          "field": "presence",
+          "scope": "dynasty_identity",
+          "quote": "is the ruling line",
+          "evidenceFile": "docs/court-evidence/05-municipal-ancestor-house-0-Greymane-family.md",
+          "existingSourceIds": [
+            47
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              47
+            ],
+            "canonicalUrlMatch": [
+              47
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "existingSourceIds": [
+        3
+      ],
+      "sourceIdsToCite": [
+        3,
+        47,
+        48
+      ],
+      "ledgerIdsToCite": [
+        2,
+        5,
+        18
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "crowley",
+      "name": "Дом Краули",
+      "existingParentId": "gilneas",
+      "leaderNobleId": "noble-darius",
+      "party": "internationalists",
+      "stance": "oppose",
+      "basis": "scenario",
+      "partyBasis": "scenario",
+      "stanceBasis": "scenario",
+      "advisor": true,
+      "advisorMeaning": "Дом представлен подтверждённым ранним советником Генна; это не наследственная должность и не голос дома.",
+      "advisorBasis": "lore",
+      "includeDefault": true,
+      "includeDefaultReason": "Дом главы проальянсового направления и подтверждённого раннего советника.",
+      "votingSeat": false,
+      "aggregateFromLeader": true,
+      "potentialAlly": false,
+      "noteRu": "Дом Дариуса поддерживает общую безопасность с союзными королевствами и сохранение северных связей. Линия главы — не объявленный семейный устав.",
+      "uncertainties": [
+        "Не строить дом как нынешнюю организацию мятежников; спор пока политический."
+      ],
+      "evidence": [
+        {
+          "ledgerId": 4,
+          "url": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "title": "Darius Crowley",
+          "claim": "Владения главы включают оба северных поселения.",
+          "field": "presence",
+          "scope": "second_war_retrospective",
+          "quote": "He owned the towns of Pyrewood Village and Ambermill.",
+          "evidenceFile": "docs/court-evidence/01-early-court-3-Darius-Crowley.md",
+          "existingSourceIds": [
+            32
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              32
+            ],
+            "canonicalUrlMatch": [
+              32
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 2,
+          "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "title": "Генн Седогрив: Вожак Стаи - Галерея - World of Warcraft",
+          "claim": "Проальянсовая позиция главы.",
+          "field": "party",
+          "scope": "alliance_foundation_retrospective",
+          "quote": "— Но господин, другие народы стремятся к объединению, — настаивал Краули. — Если Троллебой, Перенольд и прочие примкнут к Альянсу, как можем мы оставаться в стороне и продолжать называть себя друзьями и соседями?",
+          "evidenceFile": "docs/court-evidence/01-early-court-1-genn-greymane-lord-of-his-pack.md",
+          "existingSourceIds": [
+            48
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              48
+            ],
+            "canonicalUrlMatch": [
+              48
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 4,
+          "url": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "title": "Darius Crowley",
+          "claim": "Несогласие главы со стеной ретроспективно подтверждено.",
+          "field": "stance",
+          "scope": "retrospective_stance_only_not_current_event",
+          "quote": "A pro-Alliance figure, he dissented with King Genn Greymane's decision to separate his people with the Greymane Wall.",
+          "evidenceFile": "docs/court-evidence/01-early-court-3-Darius-Crowley.md",
+          "existingSourceIds": [
+            32
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              32
+            ],
+            "canonicalUrlMatch": [
+              32
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "existingSourceIds": [
+        3
+      ],
+      "sourceIdsToCite": [
+        32,
+        48
+      ],
+      "ledgerIdsToCite": [
+        2,
+        4
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "silverlaine",
+      "name": "Дом Сребролена",
+      "existingParentId": "crowley",
+      "leaderNobleId": "noble-silverlaine",
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "scenario",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorMeaning": "Дому не присваивается отдельный королевский советник.",
+      "advisorBasis": "unknown",
+      "includeDefault": true,
+      "includeDefaultReason": "Все семь существующих домов исследованы; включить как сценарного потенциального союзника, не как автоматическую фракцию интернационалистов.",
+      "votingSeat": false,
+      "aggregateFromLeader": true,
+      "potentialAlly": true,
+      "noteRu": "Северный баронский дом связан с Краули по принятому сценарию, но его самостоятельное отношение к стене остаётся открытым.",
+      "uncertainties": [
+        "existingParentId=crowley сохранить, но relationBasis=scenario; это не primary fact и не стеновой голос."
+      ],
+      "evidence": [
+        {
+          "ledgerId": 11,
+          "url": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+          "title": "Baron Silverlaine",
+          "claim": "Баронская личность и прежнее владение крепостью.",
+          "field": "presence",
+          "scope": "retrospective_identity_pre_third_war_not_exact_pre_wall",
+          "quote": "Baron Silverlaine was master of the keep before it fell to Arugal's worgen.",
+          "evidenceFile": "docs/court-evidence/03-northern-claims-0-Baron-Silverlaine.md",
+          "existingSourceIds": [
+            59
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              59
+            ],
+            "canonicalUrlMatch": [
+              59
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 12,
+          "url": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+          "title": "Shadowfang Keep",
+          "claim": "Факт прошлого господства барона отделён от вассальной цепи.",
+          "field": "presence",
+          "scope": "retrospective_identity_pre_third_war_not_exact_pre_wall",
+          "quote": "The lord of the castle was Baron Silverlaine and his forces were led by Commander Springvale, a paladin of the Silver Hand.",
+          "evidenceFile": "docs/court-evidence/03-northern-claims-1-Shadowfang-Keep.md",
+          "existingSourceIds": [
+            33
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              33
+            ],
+            "canonicalUrlMatch": [
+              33,
+              34
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Вассалитет в каталоге выведен из географии, принят только как авторская конфигурация.",
+          "field": "scope_guard",
+          "scope": "secondary_derived_relation_not_primary_fact",
+          "quote": "The Crowley family ruled over the lands that constituted both Pyrewood Village (and as a result, Shadowfang Keep) and Ambermill,[4] making Baron Silverlaine a vassal of theirs as a result.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "existingSourceIds": [
+        3
+      ],
+      "relationBasis": "scenario",
+      "sourceIdsToCite": [
+        3,
+        33,
+        34,
+        59
+      ],
+      "ledgerIdsToCite": [
+        5,
+        11,
+        12
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "godfrey",
+      "name": "Дом Годфри",
+      "existingParentId": "gilneas",
+      "leaderNobleId": "noble-godfrey",
+      "party": "royalists",
+      "stance": "support",
+      "basis": "scenario",
+      "partyBasis": "scenario",
+      "stanceBasis": "scenario",
+      "advisor": true,
+      "advisorMeaning": "Дом представлен подтверждённым ранним советником Генна; это не наследственная должность и не голос дома.",
+      "advisorBasis": "lore",
+      "includeDefault": true,
+      "includeDefaultReason": "Линия подтверждённого раннего советника; домашняя агрегация сценарная.",
+      "votingSeat": false,
+      "aggregateFromLeader": true,
+      "potentialAlly": false,
+      "noteRu": "Дом Годфри следует расчётливой поддержке королевского рубежа. Его глава сначала заботится о торговых потерях, затем поддерживает выгодную горную линию.",
+      "uncertainties": [
+        "Поддержка Годфри здесь не означает будущую неизменную верность монарху."
+      ],
+      "evidence": [
+        {
+          "ledgerId": 1,
+          "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "title": "Genn Greymane: Lord of His Pack - Media Gallery - World of Warcraft",
+          "claim": "Первоначальный торговый прагматизм главы.",
+          "field": "party",
+          "scope": "wall_planning_retrospective",
+          "quote": "“You want to wall off our entire nation? Close our borders and end trade with the rest of the Alliance? I… it is a rather large decision, would you not say?”",
+          "evidenceFile": "docs/court-evidence/01-early-court-0-genn-greymane-lord-of-his-pack.md",
+          "existingSourceIds": [
+            46
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              46
+            ],
+            "canonicalUrlMatch": [
+              46
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 2,
+          "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "title": "Генн Седогрив: Вожак Стаи - Галерея - World of Warcraft",
+          "claim": "Прямое согласие с курсом после выбора направления.",
+          "field": "stance",
+          "scope": "wall_planning_retrospective",
+          "quote": "— Надо созвать совет дворянства, — сказал он, вставая из кресла. — Мы идем верным путем, мой повелитель, хотя, возможно, он полон подводных камней.",
+          "evidenceFile": "docs/court-evidence/01-early-court-1-genn-greymane-lord-of-his-pack.md",
+          "existingSourceIds": [
+            48
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              48
+            ],
+            "canonicalUrlMatch": [
+              48
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "existingSourceIds": [
+        3
+      ],
+      "sourceIdsToCite": [
+        46,
+        48
+      ],
+      "ledgerIdsToCite": [
+        1,
+        2
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "ashbury",
+      "name": "Дом Эшбери",
+      "existingParentId": "gilneas",
+      "leaderNobleId": "noble-ashbury",
+      "party": "royalists",
+      "stance": "unknown",
+      "basis": "scenario",
+      "partyBasis": "scenario",
+      "stanceBasis": "unknown",
+      "advisor": true,
+      "advisorMeaning": "Дом представлен подтверждённым ранним советником Генна; это не наследственная должность и не голос дома.",
+      "advisorBasis": "lore",
+      "includeDefault": true,
+      "includeDefaultReason": "Ранняя верность семье Седогривов и совет барона засвидетельствованы; партийная линия реконструирована сдержанно.",
+      "votingSeat": false,
+      "aggregateFromLeader": true,
+      "potentialAlly": false,
+      "noteRu": "Старый союзный короне дом тяготеет к Генну; сохранение гилнеасских сил подтверждено, а отдельное одобрение стены — нет.",
+      "uncertainties": [
+        "Не считать нынешний дом единым действующим отцом и сыном; отец — отдельная исключённая историческая запись."
+      ],
+      "evidence": [
+        {
+          "ledgerId": 1,
+          "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+          "title": "Genn Greymane: Lord of His Pack - Media Gallery - World of Warcraft",
+          "claim": "Семейная верность короне и ранний совет барона.",
+          "field": "party",
+          "scope": "alliance_foundation_retrospective",
+          "quote": "“It is a path that does have merit, my lord,” Baron Ashbury added. Ashbury was one of Genn’s most trusted friends. Genn had grown up with him; his father, Lord Ashbury the 1st, had helped Archibald build the nation up, and Archibald had always told Genn to trust in the Ashburys’ fidelity to the crown.",
+          "evidenceFile": "docs/court-evidence/01-early-court-0-genn-greymane-lord-of-his-pack.md",
+          "existingSourceIds": [
+            46
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              46
+            ],
+            "canonicalUrlMatch": [
+              46
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 7,
+          "url": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+          "title": "Baron Ashbury",
+          "claim": "Подтверждено ограниченное войско, а не прямая поддержка стены.",
+          "field": "stance",
+          "scope": "alliance_foundation_retrospective",
+          "quote": "He was present in the Capital City to create the Alliance of Lordaeron and agreed with Lord Godfrey, to send only a token army.",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-1-Baron-Ashbury.md",
+          "existingSourceIds": [
+            50
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              50
+            ],
+            "canonicalUrlMatch": [
+              50
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "existingSourceIds": [
+        3
+      ],
+      "sourceIdsToCite": [
+        46,
+        50
+      ],
+      "ledgerIdsToCite": [
+        1,
+        7
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "marley",
+      "name": "Дом Марли",
+      "existingParentId": "gilneas",
+      "leaderNobleId": "noble-marley",
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorMeaning": "Дому не присваивается отдельный королевский советник.",
+      "advisorBasis": "unknown",
+      "includeDefault": true,
+      "includeDefaultReason": "Дом/домен существует в сцене планирования; рано не назначать ни сторону, ни отдельного советника.",
+      "votingSeat": false,
+      "aggregateFromLeader": true,
+      "potentialAlly": true,
+      "noteRu": "Приграничный дом Марли может поддержать одну из сторон после гарантий о земле и цене рубежа. Его действительное решение неизвестно.",
+      "uncertainties": [
+        "Ни смена маршрута, ни поздняя охота не доказывают голос «за»."
+      ],
+      "evidence": [
+        {
+          "ledgerId": 2,
+          "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "canonicalUrl": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+          "title": "Генн Седогрив: Вожак Стаи - Галерея - World of Warcraft",
+          "claim": "Дом назван в текущей фазе планирования.",
+          "field": "presence",
+          "scope": "wall_planning_retrospective",
+          "quote": "— Судя по этим наброскам, вы планируете затронуть владения лорда Марли… Но взгляните и сюда — здесь начинается горная цепь, идеальное природное заграждение…",
+          "evidenceFile": "docs/court-evidence/01-early-court-1-genn-greymane-lord-of-his-pack.md",
+          "existingSourceIds": [
+            48
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              48
+            ],
+            "canonicalUrlMatch": [
+              48
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Каталог связывает Марли с советом, но не датирует раннюю службу.",
+          "field": "advisor",
+          "scope": "undated_catalogue_not_early_appointment",
+          "quote": "Councilor of King Genn Greymane.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "existingSourceIds": [
+        3
+      ],
+      "sourceIdsToCite": [
+        3,
+        48
+      ],
+      "ledgerIdsToCite": [
+        2,
+        5
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    },
+    {
+      "id": "walden",
+      "name": "Дом Уолденов",
+      "existingParentId": "gilneas",
+      "leaderNobleId": "noble-walden",
+      "party": "neutral",
+      "stance": "unknown",
+      "basis": "unknown",
+      "partyBasis": "unknown",
+      "stanceBasis": "unknown",
+      "advisor": false,
+      "advisorMeaning": "Дому не присваивается отдельный королевский советник.",
+      "advisorBasis": "unknown",
+      "includeDefault": false,
+      "includeDefaultReason": "На панели изученных домов показывать справочно; включение в ранние переговоры только через явную авторскую конфигурацию.",
+      "votingSeat": false,
+      "aggregateFromLeader": true,
+      "potentialAlly": true,
+      "noteRu": "Дом Уолденов известен по поздней знати; для раннего спора о стене он остаётся возможным, недатированным союзником.",
+      "uncertainties": [
+        "Нельзя назначать дому раннюю поддержку Годфри или королевского советника по поздней измене."
+      ],
+      "evidence": [
+        {
+          "ledgerId": 9,
+          "url": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+          "title": "Lord Walden",
+          "claim": "Идентичность главы известна позднее, не до стены.",
+          "field": "presence",
+          "scope": "later_identity_only",
+          "quote": "Lord Walden was a human nobleman from eastern Gilneas.",
+          "evidenceFile": "docs/court-evidence/02-core-nobles-3-Lord-Walden.md",
+          "existingSourceIds": [
+            55
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              55
+            ],
+            "canonicalUrlMatch": [
+              55
+            ],
+            "samePageDifferentView": []
+          }
+        },
+        {
+          "ledgerId": 5,
+          "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+          "title": "Nobles of Gilneas",
+          "claim": "Семья и дома засвидетельствованы поздней географией.",
+          "field": "presence",
+          "scope": "later_family_identity_not_early_presence",
+          "quote": "This area of Gilneas has since sunk outside of the manor, but once held cottages for the Crowley[2] and the Walden families.",
+          "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+          "existingSourceIds": [
+            3
+          ],
+          "existingSourceMatches": {
+            "exactRetrievedUrl": [
+              3
+            ],
+            "canonicalUrlMatch": [
+              3
+            ],
+            "samePageDifferentView": []
+          }
+        }
+      ],
+      "existingSourceIds": [
+        3
+      ],
+      "sourceIdsToCite": [
+        3,
+        55
+      ],
+      "ledgerIdsToCite": [
+        5,
+        9
+      ],
+      "ledgerIdsAreAtlasSourceIds": false,
+      "partyIsFormalCanonical": false,
+      "includeDefaultGrantsVotingSeat": false
+    }
+  ],
+  "sourceRegistry": [
+    {
+      "ledgerId": 1,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+      "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+      "title": "Genn Greymane: Lord of His Pack - Media Gallery - World of Warcraft",
+      "author": "James Waugh / Blizzard Entertainment",
+      "sourceType": "primary_blizzard",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/01-early-court-0-genn-greymane-lord-of-his-pack.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          46
+        ],
+        "canonicalUrlMatch": [
+          46
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        46
+      ],
+      "quoteCount": 3,
+      "quotes": [
+        "“You want to wall off our entire nation? Close our borders and end trade with the rest of the Alliance? I… it is a rather large decision, would you not say?”",
+        "His name was Godfrey. Genn trusted his counsel but was always suspicious about his ambitions. Godfrey’s notion was not motivated by empathy as Crowley’s was. It was a smart political play that ensured notoriety for Godfrey, the commander of that standing militia.",
+        "“It is a path that does have merit, my lord,” Baron Ashbury added. Ashbury was one of Genn’s most trusted friends. Genn had grown up with him; his father, Lord Ashbury the 1st, had helped Archibald build the nation up, and Archibald had always told Genn to trust in the Ashburys’ fidelity to the crown."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Genn Greymane: Lord of His Pack - Media Gallery - World of Warcraft"
+    },
+    {
+      "ledgerId": 2,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+      "canonicalUrl": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+      "title": "Генн Седогрив: Вожак Стаи - Галерея - World of Warcraft",
+      "author": "James Waugh / Blizzard Entertainment",
+      "sourceType": "primary_blizzard",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/01-early-court-1-genn-greymane-lord-of-his-pack.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          48
+        ],
+        "canonicalUrlMatch": [
+          48
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        48
+      ],
+      "quoteCount": 4,
+      "quotes": [
+        "— Мы построим стену, идущую через горы, и земли Северных врат обеспечат нашу безопасность. Все правильно. Что же до лорда Краули… Дариусу придется смириться.",
+        "— Но господин, другие народы стремятся к объединению, — настаивал Краули. — Если Троллебой, Перенольд и прочие примкнут к Альянсу, как можем мы оставаться в стороне и продолжать называть себя друзьями и соседями?",
+        "— Надо созвать совет дворянства, — сказал он, вставая из кресла. — Мы идем верным путем, мой повелитель, хотя, возможно, он полон подводных камней.",
+        "— Судя по этим наброскам, вы планируете затронуть владения лорда Марли… Но взгляните и сюда — здесь начинается горная цепь, идеальное природное заграждение…"
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Генн Седогрив: Вожак Стаи - Галерея - World of Warcraft"
+    },
+    {
+      "ledgerId": 3,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+      "title": "Genn Greymane",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/01-early-court-2-Genn-Greymane.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          45
+        ],
+        "canonicalUrlMatch": [
+          45
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        45
+      ],
+      "quoteCount": 4,
+      "quotes": [
+        "After the Second War, he was present at the meeting with other kings of the Alliance in Nethergarde Keep. Greymane complained about the expenses of the keep, though the newly crowned King of Stormwind Varian Wrynn pointed out that a price couldn't be put on something as essential as their safety.",
+        "Accompanied by a group of nobles including Baron Ashbury, Lord Vincent Godfrey, and Lord Darius Crowley, the youngest and newest of the council of lords, Greymane listened to the plight of Anduin Lothar regarding the fall of Stormwind and the threat of the orcish Horde.",
+        "After Archibald's death, Genn took the throne and led Gilneas much like his father had.",
+        "He supported the claim of Lord Perenolde's nephew, Isiden, to Alterac's throne. A base in Alterac would give Gilneas access to resources the southern kingdom did not have, and the excuse to send its mighty ships across the Great Sea."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Genn Greymane"
+    },
+    {
+      "ledgerId": 4,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+      "title": "Darius Crowley",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/01-early-court-3-Darius-Crowley.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          32
+        ],
+        "canonicalUrlMatch": [
+          32
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        32
+      ],
+      "quoteCount": 3,
+      "quotes": [
+        "Despite being young and new to the Gilnean council of Lords, his altruistic and charismatic qualities made him loved by the Gilnean people and earned him the respect and friendship of King Genn Greymane.",
+        "A pro-Alliance figure, he dissented with King Genn Greymane's decision to separate his people with the Greymane Wall.",
+        "He owned the towns of Pyrewood Village and Ambermill."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Darius Crowley"
+    },
+    {
+      "ledgerId": 5,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+      "title": "Nobles of Gilneas",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/01-early-court-4-Nobles-of-Gilneas.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          3
+        ],
+        "canonicalUrlMatch": [
+          3
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        3
+      ],
+      "quoteCount": 11,
+      "quotes": [
+        "Councilor of King Genn Greymane.",
+        "Councilor of King Archibald Greymane. Father of Baron Ashbury.",
+        "Former councilor of King Genn Greymane, traitor alongside Ashbury and Godfrey.",
+        "The Crowley family ruled over the lands that constituted both Pyrewood Village (and as a result, Shadowfang Keep) and Ambermill,[4] making Baron Silverlaine a vassal of theirs as a result.",
+        "Captain of the pirate ship Heedless, and one of the Gilneans locked out of Gilneas by the Greymane Wall.",
+        "The lands of the Tulvans and Candrens are entirely unknown with no allusions to any potential regions, though the Tulvans are stated to be 'earls'.",
+        "Lord Harford was also noted as a servant of Arugal and from beyond the wall, meaning he was likely one of Crowley's vassals as well.",
+        "Lord Mayor Morrison was also the mayor of Pyrewood, placing him implicitly under Crowley's service.",
+        "Referred to as a \"patriarch\", and has the Royal Aderic Banquet named in his honor.[9] Possibly a long-dead king or nobleman.",
+        "The Greymane family rules over all of Gilneas.",
+        "This area of Gilneas has since sunk outside of the manor, but once held cottages for the Crowley[2] and the Walden families."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Nobles of Gilneas"
+    },
+    {
+      "ledgerId": 6,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey",
+      "title": "Lord Vincent Godfrey",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/02-core-nobles-0-Lord-Vincent-Godfrey.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          49
+        ],
+        "canonicalUrlMatch": [],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        49
+      ],
+      "quoteCount": 1,
+      "quotes": [
+        "Genn warned that Darius might not take well to having his lands cut off, but Godfrey insisted that it was the best course of action for Gilneas."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Lord Vincent Godfrey"
+    },
+    {
+      "ledgerId": 7,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+      "title": "Baron Ashbury",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/02-core-nobles-1-Baron-Ashbury.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          50
+        ],
+        "canonicalUrlMatch": [
+          50
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        50
+      ],
+      "quoteCount": 1,
+      "quotes": [
+        "He was present in the Capital City to create the Alliance of Lordaeron and agreed with Lord Godfrey, to send only a token army."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Baron Ashbury"
+    },
+    {
+      "ledgerId": 8,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Marley",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Marley",
+      "title": "Lord Marley",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/02-core-nobles-2-Lord-Marley.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [],
+        "canonicalUrlMatch": [
+          52
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [],
+      "quoteCount": 1,
+      "quotes": [
+        "King Genn Greymane had originally planned to have the Greymane Wall cut through Marley's domain, but later decided to have it cut through Lord Darius Crowley's domain instead at the recommendation of Lord Godfrey."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Lord Marley"
+    },
+    {
+      "ledgerId": 9,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+      "title": "Lord Walden",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/02-core-nobles-3-Lord-Walden.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          55
+        ],
+        "canonicalUrlMatch": [
+          55
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        55
+      ],
+      "quoteCount": 1,
+      "quotes": [
+        "Lord Walden was a human nobleman from eastern Gilneas."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Lord Walden"
+    },
+    {
+      "ledgerId": 10,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Hewell",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Hewell",
+      "title": "Lord Hewell",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/02-core-nobles-4-Lord-Hewell.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          57
+        ],
+        "canonicalUrlMatch": [
+          57
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        57
+      ],
+      "quoteCount": 2,
+      "quotes": [
+        "Lord Hewell is a nobleman of Gilneas who can be found at Tempest's Reach during the worgen starting experience.",
+        "Hewell refused to betray his king. Instead he remained by Greymane's side until Krennan Aranas sent an adventurer to help."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Lord Hewell"
+    },
+    {
+      "ledgerId": 11,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+      "title": "Baron Silverlaine",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/03-northern-claims-0-Baron-Silverlaine.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          59
+        ],
+        "canonicalUrlMatch": [
+          59
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        59
+      ],
+      "quoteCount": 1,
+      "quotes": [
+        "Baron Silverlaine was master of the keep before it fell to Arugal's worgen."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Baron Silverlaine"
+    },
+    {
+      "ledgerId": 12,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+      "title": "Shadowfang Keep",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/03-northern-claims-1-Shadowfang-Keep.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          33
+        ],
+        "canonicalUrlMatch": [
+          33,
+          34
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        33
+      ],
+      "quoteCount": 1,
+      "quotes": [
+        "The lord of the castle was Baron Silverlaine and his forces were led by Commander Springvale, a paladin of the Silver Hand."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Shadowfang Keep"
+    },
+    {
+      "ledgerId": 13,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Baron_Longshore",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Longshore",
+      "title": "Baron Longshore",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/03-northern-claims-2-Baron-Longshore.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          61
+        ],
+        "canonicalUrlMatch": [
+          61
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        61
+      ],
+      "quoteCount": 1,
+      "quotes": [
+        "Baron Longshore is the former captain of the Heedless, a ship in the pirate fleet of the Southsea Freebooters, and hails from Gilneas."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Baron Longshore"
+    },
+    {
+      "ledgerId": 14,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/The_Baron%27s_Demands",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/The_Baron%27s_Demands",
+      "title": "The Baron's Demands",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/03-northern-claims-3-The-Baron-27s-Demands.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          62
+        ],
+        "canonicalUrlMatch": [
+          62
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        62
+      ],
+      "quoteCount": 1,
+      "quotes": [
+        "Oh, me word is good, friend. I used ta be a real Baron, ye know."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "The Baron's Demands"
+    },
+    {
+      "ledgerId": 15,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+      "title": "Isiden Perenolde",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/03-northern-claims-4-Isiden-Perenolde.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          64
+        ],
+        "canonicalUrlMatch": [
+          64
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        64
+      ],
+      "quoteCount": 2,
+      "quotes": [
+        "When Alterac was placed under martial law by order of King Terenas, Isiden fled to Gilneas, where he hoped to rally support.[2] He was eventually backed by Genn Greymane, Gilneas' king, as the matter of the succession began to heat up.",
+        "Nothing has been heard from Isiden since then and his status is unknown."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Isiden Perenolde"
+    },
+    {
+      "ledgerId": 16,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Archibald_Greymane",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Archibald_Greymane",
+      "title": "Archibald Greymane",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/04-reference-nobles-0-Archibald-Greymane.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          53
+        ],
+        "canonicalUrlMatch": [
+          53
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        53
+      ],
+      "quoteCount": 1,
+      "quotes": [
+        "Archibald Greymane was the king of Gilneas and the father of Genn Greymane. Under his rule, Gilneas prospered."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Archibald Greymane"
+    },
+    {
+      "ledgerId": 17,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Candren",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Candren",
+      "title": "Lord Candren",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/04-reference-nobles-2-Lord-Candren.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          63
+        ],
+        "canonicalUrlMatch": [
+          63
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        63
+      ],
+      "quoteCount": 1,
+      "quotes": [
+        "Lord Candren is the quartermaster for Gilneas. He is found in Darnassus's Temple Gardens, near the flight master."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Lord Candren"
+    },
+    {
+      "ledgerId": 18,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Greymane_family",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Greymane_family",
+      "title": "Greymane family - Wowpedia - Your wiki guide to the World of Warcraft",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/05-municipal-ancestor-house-0-Greymane-family.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          47
+        ],
+        "canonicalUrlMatch": [
+          47
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        47
+      ],
+      "quoteCount": 1,
+      "quotes": [
+        "is the ruling line"
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Greymane family - Wowpedia - Your wiki guide to the World of Warcraft"
+    },
+    {
+      "ledgerId": 19,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Ashbury_the_1st",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st",
+      "title": "Lord Ashbury the 1st - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "author": "Участники Warcraft Wiki; страница, адаптированная из Wowpedia",
+      "sourceType": "secondary_mirror",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/06-blocked-mirrors-0-Lord-Ashbury-the-1st.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          54
+        ],
+        "canonicalUrlMatch": [
+          54
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        54
+      ],
+      "quoteCount": 1,
+      "quotes": [
+        "King Archibald always told his son Prince Genn to trust in the Ashburys’ fidelity to the crown because of the accomplishments of Lord Ashbury."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": {
+        "failedPreferredUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st",
+        "failure": "HTTP 403 from origin",
+        "preferredLaterRecoveredUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st?action=render"
+      },
+      "displayTitle": "Lord Ashbury the 1st - Warcraft Wiki - Your wiki guide to the World of Warcraft"
+    },
+    {
+      "ledgerId": 20,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Geoffery_Tulvan",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan",
+      "title": "Lord Geoffery Tulvan - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "author": "Участники Warcraft Wiki; страница, адаптированная из Wowpedia",
+      "sourceType": "secondary_mirror",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/06-blocked-mirrors-1-Lord-Geoffery-Tulvan.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [],
+        "canonicalUrlMatch": [],
+        "samePageDifferentView": [
+          65
+        ]
+      },
+      "existingSourceIds": [],
+      "quoteCount": 1,
+      "quotes": [
+        "Lord Geoffery Tulvan is a worgen located at the Crucible of Carnage in the Twilight Highlands."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": {
+        "failedPreferredUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan?action=render",
+        "failure": "HTTP 403 from origin",
+        "preferredLaterRecoveredUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan"
+      },
+      "displayTitle": "Lord Geoffery Tulvan - Warcraft Wiki - Your wiki guide to the World of Warcraft"
+    },
+    {
+      "ledgerId": 21,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Harford",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford",
+      "title": "Lord Harford - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "author": "Участники Warcraft Wiki; страница, адаптированная из Wowpedia",
+      "sourceType": "secondary_mirror",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/06-blocked-mirrors-2-Lord-Harford.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [],
+        "canonicalUrlMatch": [],
+        "samePageDifferentView": [
+          66
+        ]
+      },
+      "existingSourceIds": [],
+      "quoteCount": 1,
+      "quotes": [
+        "Lord Harford is an Argent Dawn prisoner of the death knights in the Scarlet Enclave."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": {
+        "failedPreferredUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford?action=render",
+        "failure": "HTTP 403 from origin",
+        "preferredLaterRecoveredUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford"
+      },
+      "displayTitle": "Lord Harford - Warcraft Wiki - Your wiki guide to the World of Warcraft"
+    },
+    {
+      "ledgerId": 22,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Mayor_Morrison",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison",
+      "title": "Lord Mayor Morrison - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "author": "Участники Warcraft Wiki; страница, адаптированная из Wowpedia",
+      "sourceType": "secondary_mirror",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/06-blocked-mirrors-3-Lord-Mayor-Morrison.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [],
+        "canonicalUrlMatch": [],
+        "samePageDifferentView": [
+          67
+        ]
+      },
+      "existingSourceIds": [],
+      "quoteCount": 1,
+      "quotes": [
+        "Lord Mayor Morrison is a human and leader of the Pyrewood Council who appears in Pyrewood Village in Silverpine Forest during [15] Pyrewood Ambush."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": {
+        "failedPreferredUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison?action=render",
+        "failure": "network_error",
+        "preferredLaterRecoveredUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison"
+      },
+      "displayTitle": "Lord Mayor Morrison - Warcraft Wiki - Your wiki guide to the World of Warcraft"
+    },
+    {
+      "ledgerId": 23,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://warcraft.wiki.gg/wiki/Aderic",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Aderic",
+      "title": "Aderic - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+      "author": "Участники Warcraft Wiki; страница, адаптированная из Wowpedia",
+      "sourceType": "secondary_mirror",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/06-blocked-mirrors-4-Aderic.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [],
+        "canonicalUrlMatch": [],
+        "samePageDifferentView": [
+          68
+        ]
+      },
+      "existingSourceIds": [],
+      "quoteCount": 1,
+      "quotes": [
+        "Aderic was a human who was a Gilnean patriarch. He is buried at Aderic's Repose at the top of the hill."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": {
+        "failedPreferredUrl": "https://wowpedia.fandom.com/wiki/Aderic?action=render",
+        "failure": "network_error",
+        "preferredLaterRecoveredUrl": "https://wowpedia.fandom.com/wiki/Aderic"
+      },
+      "displayTitle": "Aderic - Warcraft Wiki - Your wiki guide to the World of Warcraft"
+    },
+    {
+      "ledgerId": 24,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan",
+      "title": "Lord Geoffery Tulvan",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/08-preferred-retries-0-Lord-Geoffery-Tulvan.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [],
+        "canonicalUrlMatch": [],
+        "samePageDifferentView": [
+          65
+        ]
+      },
+      "existingSourceIds": [],
+      "quoteCount": 1,
+      "quotes": [
+        "Lord Geoffery Tulvan is a worgen located at the Crucible of Carnage in the Twilight Highlands. He is one of the challengers and seeks to become the greatest warrior in the world."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Lord Geoffery Tulvan"
+    },
+    {
+      "ledgerId": 25,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Harford",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford",
+      "title": "Lord Harford",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/08-preferred-retries-1-Lord-Harford.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [],
+        "canonicalUrlMatch": [],
+        "samePageDifferentView": [
+          66
+        ]
+      },
+      "existingSourceIds": [],
+      "quoteCount": 1,
+      "quotes": [
+        "Remember Gilneas, our beloved home. This world is worth saving."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Lord Harford"
+    },
+    {
+      "ledgerId": 26,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison",
+      "title": "Lord Mayor Morrison",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/08-preferred-retries-2-Lord-Mayor-Morrison.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [],
+        "canonicalUrlMatch": [],
+        "samePageDifferentView": [
+          67
+        ]
+      },
+      "existingSourceIds": [],
+      "quoteCount": 1,
+      "quotes": [
+        "Lord Mayor Morrison is a human and leader of the Pyrewood Council who appears in Pyrewood Village in Silverpine Forest during"
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Lord Mayor Morrison"
+    },
+    {
+      "ledgerId": 27,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Aderic",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Aderic",
+      "title": "Aderic",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/08-preferred-retries-3-Aderic.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [],
+        "canonicalUrlMatch": [],
+        "samePageDifferentView": [
+          68
+        ]
+      },
+      "existingSourceIds": [],
+      "quoteCount": 1,
+      "quotes": [
+        "Aderic was a human who was a Gilnean patriarch. He is buried at Aderic's Repose at the top of the hill."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Aderic"
+    },
+    {
+      "ledgerId": 28,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24095666/unveiling-cataclysm-classic-zones-dungeons-and-pvp-season-9",
+      "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/news/24095666/unveiling-cataclysm-classic-zones-dungeons-and-pvp-season-9",
+      "title": "Unveiling Cataclysm Classic Zones, Dungeons, and PvP Season 9",
+      "author": "Blizzard Entertainment",
+      "sourceType": "primary_blizzard",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/08-preferred-retries-4-unveiling-cataclysm-classic-zones-dungeons-and-pvp-season-9.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [
+          60
+        ],
+        "canonicalUrlMatch": [
+          60
+        ],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [
+        60
+      ],
+      "quoteCount": 2,
+      "quotes": [
+        "Godfrey’s right-hand man, the arrogant Lord Walden vowed to pay any price, including death, to serve his compatriot.",
+        "Baron Silverlaine was master of the keep before it fell to Arugal’s worgen."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Unveiling Cataclysm Classic Zones, Dungeons, and PvP Season 9"
+    },
+    {
+      "ledgerId": 29,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "http://media.blizzard.com/wow/lore/pdfdownload/leader-story/genn-greymane/greymane-enUS.pdf",
+      "canonicalUrl": "http://media.blizzard.com/wow/lore/pdfdownload/leader-story/genn-greymane/greymane-enUS.pdf",
+      "title": "greymane-enUS",
+      "author": "James Waugh / Blizzard Entertainment",
+      "sourceType": "primary_blizzard",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/10-primary-pdf-0-greymane-enUS-pdf.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [],
+        "canonicalUrlMatch": [],
+        "samePageDifferentView": []
+      },
+      "existingSourceIds": [],
+      "quoteCount": 1,
+      "quotes": [
+        "\"Never take a man's hand, Son...\" King Archibald Greymane said, his strong frame now a muddied silhouette against the fading glow of twilight."
+      ],
+      "retrievalProvenance": "Официальный PDF получен по указанному HTTP URL после ошибки TLS на HTTPS. Текст web_extract был обрезан; полный текст извлечён из сохранённого PDF через read_file. Автор текста — James Waugh; техническое поле PDF Author=klopez не литературное авторство.",
+      "mirrorRecovery": null,
+      "fullEvidenceFile": "docs/court-evidence/greymane-enUS-full-extracted.md",
+      "binaryEvidenceFile": "/Users/daniil_si/.hermes/cache/scratch/gilneas-court/politics-evidence/greymane-enUS.pdf",
+      "displayTitle": "greymane-enUS"
+    },
+    {
+      "ledgerId": 30,
+      "ledgerIdNamespace": "politics-local-citation-only",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st?action=render",
+      "title": "References",
+      "author": "Участники Wowpedia",
+      "sourceType": "secondary_preferred_wowpedia",
+      "accessed": "2026-11-14",
+      "evidenceFile": "docs/court-evidence/11-ashbury-original-retry-0-Lord-Ashbury-the-1st-action-render.md",
+      "existingSourceMatches": {
+        "exactRetrievedUrl": [],
+        "canonicalUrlMatch": [],
+        "samePageDifferentView": [
+          54
+        ]
+      },
+      "existingSourceIds": [],
+      "quoteCount": 1,
+      "quotes": [
+        "Lord Ashbury the 1st was a Gilnean noble and the father of Baron Ashbury. Lord Ashbury helped King Archibald Greymane build Gilneas up to a nation of great power."
+      ],
+      "retrievalProvenance": "Фактически извлечённая публикация; сохранён её текст, не поисковая аннотация.",
+      "mirrorRecovery": null,
+      "displayTitle": "Lord Ashbury the 1st — Wowpedia (action=render)"
+    }
+  ]
+}

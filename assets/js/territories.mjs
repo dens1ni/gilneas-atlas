@@ -1,6 +1,7 @@
 import { normalizeData, factionMembers, sovereignOf } from './model.mjs';
 import { validate, generate, paint, cellPoint, MIN_RADIUS, MAX_RADIUS } from './territory-engine.mjs';
 import { geometryAsync, paths } from './smooth-territories.mjs';
+import { isEditingEnabled } from './edit-mode.mjs';
 export { prepareTerritoryGrid } from './territory-data.mjs';
 
 const NS = 'http://www.w3.org/2000/svg';
@@ -17,6 +18,7 @@ const sameGrid = (a, b) => a && b && a.width === b.width && a.height === b.heigh
  * Prepare the snapshot explicitly after loading its inactive mask, before init.
  */
 export function initTerritories(context) {
+  const editingEnabled = () => context.isEditingEnabled?.() ?? isEditingEnabled();
   const { getData, replaceData, ui, canPlace = () => true, toast = () => {} } = context;
   if (typeof getData !== 'function' || typeof replaceData !== 'function' || !ui?.toMap || !ui?.setMapInteraction)
     throw Error('Редактор границ требует getData, replaceData и API камеры UI.');
@@ -26,6 +28,7 @@ export function initTerritories(context) {
   const panel = document.createElement('aside');
   panel.id = 'boundary-tools';
   panel.className = 'iron-panel boundary-tools';
+  panel.setAttribute('data-edit-only', '');
   panel.hidden = true;
   panel.setAttribute('aria-label', 'Редактор границ держав');
   panel.innerHTML = '<header class="panel-head"><div><span class="eyebrow">ГРАНИЦЫ ДЕРЖАВ</span><h2>Картографическая кисть</h2></div><button id="boundary-close" type="button" class="square" aria-label="Закрыть инструменты">×</button></header><div class="boundary-body"><p>Кисть заменяет владельца участка, ластик оставляет незанятые земли. Alt / Command — камера. Два пальца — масштаб и перемещение.</p><label for="boundary-faction">Фракция</label><select id="boundary-faction"></select><label for="boundary-mode">Инструмент</label><select id="boundary-mode"><option value="paint">Кисть территории</option><option value="erase">Ластик</option><option value="camera">Камера</option></select><label for="boundary-brush">Радиус кисти, единицы карты</label><input id="boundary-brush" type="range" min="8" max="220" value="48"><label for="boundary-radius">Радиус автограниц</label><input id="boundary-radius" type="number" min="40" max="600" value="260"><button id="boundary-generate" type="button" class="brass-button">Перестроить по локациям</button><div class="boundary-actions"><button id="boundary-undo" type="button" class="iron-button" disabled>↶ Отмена</button><button id="boundary-redo" type="button" class="iron-button" disabled>↷ Повтор</button></div><button id="boundary-clear" type="button" class="iron-button">Очистить границы</button><button id="boundary-save" type="button" class="brass-button">Сохранить границы</button><small id="boundary-status" role="status" aria-live="polite"></small></div>';
@@ -183,6 +186,7 @@ export function initTerritories(context) {
     return new Promise((resolve, reject) => waiters.push({ resolve, reject }));
   }
   function commitLayer(next, message) {
+    if (!editingEnabled()) throw Error('Включите режим редактирования в Редакторе атласа.');
     const normalized = normalizeData({ ...getData(), territoryGrid: validate(next, getData().factions, getData().meta) });
     syncing = true;
     try { replaceData(normalized); } finally { syncing = false; }
@@ -212,6 +216,7 @@ export function initTerritories(context) {
     performanceInfo.brushHandlerMaxMs = Math.max(performanceInfo.brushHandlerMaxMs, performance.now() - start);
   }
   function pointerDown(event) {
+    if (!editingEnabled()) return;
     if (handingOffTouch || touchPan.size) return;
     if (!editing || event.button !== 0 || event.altKey || event.metaKey || $('mode').value === 'camera' || !view.contains(event.target)) return;
     if (stroke && event.pointerType === 'touch' && stroke.pointerType === 'touch' && event.pointerId !== stroke.id) {
@@ -274,6 +279,7 @@ export function initTerritories(context) {
     if (editing && $('mode').value !== 'camera' && !event.altKey && !event.metaKey && view.contains(event.target)) swallow(event);
   }
   function open() {
+    if (!editingEnabled()) return;
     syncData();
     document.querySelectorAll('dialog[open]').forEach(dialog => dialog.close());
     for (const name of ['navigation', 'layers', 'dossier']) ui.setPanel(name, false);
@@ -307,11 +313,13 @@ export function initTerritories(context) {
     undo.push(previous); if (undo.length > 30) undo.shift(); redo.length = 0; historyButtons();
   }
   $('clear').addEventListener('click', () => {
+    if (!editingEnabled()) return;
     if (stroke || !confirm('Очистить все границы? Действие можно отменить.')) return;
     try { editGrid({ ...layer, cells: new Array(layer.cells.length).fill(0) }, 'Границы очищены'); }
     catch (error) { status(error.message); toast(error.message); }
   });
   $('generate').addEventListener('click', () => {
+    if (!editingEnabled()) return;
     if (stroke) return;
     const radius = Number($('radius').value);
     if (!Number.isFinite(radius) || radius < MIN_RADIUS || radius > MAX_RADIUS) {
@@ -324,6 +332,7 @@ export function initTerritories(context) {
     } catch (error) { status(error.message); toast(error.message); }
   });
   $('save').addEventListener('click', () => {
+    if (!editingEnabled()) return;
     if (stroke) return;
     try { commitLayer(layer, 'Границы сохранены в локальном черновике'); }
     catch (error) { status(error.message); toast(error.message); }
@@ -334,6 +343,8 @@ export function initTerritories(context) {
   const cancelOnBlur = () => { if (stroke) endStroke(null, true); cursor.setAttribute('visibility', 'hidden'); };
   const cancelWhenHidden = () => { if (document.hidden) cancelOnBlur(); };
   window.addEventListener('blur', cancelOnBlur);
+  const cancelOnModeChange = event => { if (!event.detail?.enabled && editing) close(); };
+  window.addEventListener('gilneas-edit-mode-changed', cancelOnModeChange);
   document.addEventListener('visibilitychange', cancelWhenHidden);
   render();
   return { render, open, close, whenReady, get ready() { return whenReady(); }, getGrid: () => copy(layer),
@@ -341,6 +352,7 @@ export function initTerritories(context) {
       close(); disposed = true; if (scheduled) cancelAnimationFrame(scheduled);
       for (const [name, handler] of listeners) document.removeEventListener(name, handler, true);
       window.removeEventListener('blur', cancelOnBlur);
+      window.removeEventListener('gilneas-edit-mode-changed', cancelOnModeChange);
       document.removeEventListener('visibilitychange', cancelWhenHidden);
       panel.remove(); vector.remove(); preview.remove(); settleReady(Error('Редактор закрыт.'));
     } };

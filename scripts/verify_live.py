@@ -40,10 +40,16 @@ with sync_playwright() as p:
     page.on('response', lambda response: failed.append({'url': response.url, 'status': response.status}) if response.status >= 400 else None)
     page.goto(base, wait_until='networkidle', timeout=120000)
     page.wait_for_function('window.gilneasApp?.ready', timeout=60000)
+    page.wait_for_function("document.getElementById('base-map').complete && document.getElementById('base-map').naturalWidth > 0", polling=100, timeout=60000)
     baseline = page.evaluate('window.gilneasApp.getData()')
     assert len(baseline['locations']) == 39
-    assert len(baseline['nobles']) == 17
-    assert len(baseline['sources']) == 69
+    assert len(baseline['nobles']) == 26
+    assert len(baseline['sources']) == 124
+    assert baseline['meta']['publicationRevision'] == 'royal-council-v5'
+    assert len(baseline['royalCouncil']['members']) == 33
+    assert not page.locator('#editing-enabled').is_checked()
+    assert page.locator('#dossier-edit').is_hidden()
+    assert page.evaluate("localStorage.getItem('gilneas-atlas-draft-v1')") is None
     assert len(baseline['territoryGrid']['cells']) == 62985
     assert page.locator('#wall-progress').get_attribute('value') == '10'
     assert page.locator('#wall-progress').get_attribute('max') == '100'
@@ -57,6 +63,9 @@ with sync_playwright() as p:
     assert page.locator('#base-map').evaluate('e=>[e.naturalWidth,e.naturalHeight]') == [5289, 6822]
     assert all(not location['objects'] for location in baseline['locations'])
     page.screenshot(path=str(out / 'live-desktop.png'), full_page=True)
+    page.locator('#editor-open').click()
+    page.locator('label:has(#editing-enabled)').click()
+    page.locator('[data-close=editor]').click()
     page.locator('#search').fill('Янтарная')
     page.locator('button.location-row[data-location-id=ambermill]').click()
     assert page.locator('#dossier-owner').inner_text() == 'Дариус Краули'
@@ -74,12 +83,16 @@ with sync_playwright() as p:
     page.reload(wait_until='networkidle')
     page.wait_for_function('window.gilneasApp?.ready')
     assert page.evaluate('window.gilneasApp.getData()') == snapshot
+    assert not page.locator('#editing-enabled').is_checked(), 'Reload must start in view-only mode even with a saved draft'
     page.evaluate("window.gilneasApp.selectId('ambermill')")
     page.wait_for_timeout(550)
     page.screenshot(path=str(out / 'live-dossier.png'), full_page=True)
     stored = page.evaluate("localStorage.getItem('gilneas-atlas-draft-v1')")
     invalid = json.loads(json.dumps(snapshot))
     invalid['meta']['labels'] = {}
+    page.locator('#editor-open').click()
+    page.locator('label:has(#editing-enabled)').click()
+    page.locator('[data-close=editor]').click()
     message = page.evaluate("""async data=>{try{await window.gilneasApp.importSnapshot(new File([JSON.stringify(data)],'invalid.json',{type:'application/json'}));return null}catch(e){return e.message}}""", invalid)
     assert message, 'Invalid metadata must fail validation'
     assert page.evaluate('window.gilneasApp.getData()') == snapshot
@@ -116,7 +129,8 @@ with sync_playwright() as p:
     assert 'Генн Седогрив' in page.locator('#noble-suzerain').inner_text()
     assert 'Крепость над Пирвудом' in page.locator('#noble-holdings').inner_text()
     assert page.locator('#noble-crest .faction-shield').count() == 1
-    assert page.locator('#noble-crest .shield-device').get_attribute('href').endswith('gilneas-royal-symbol.png')
+    crowley = next(faction for faction in baseline['factions'] if faction['id'] == 'crowley')
+    assert page.locator('#noble-crest .shield-device').get_attribute('href') == crowley['heraldry']['symbol']
     assert page.locator('#noble-dossier').evaluate('e=>getComputedStyle(e).backgroundColor') == page.locator('#navigation').evaluate('e=>getComputedStyle(e).backgroundColor')
     page.screenshot(path=str(out/'live-noble.png'),full_page=True)
     page.mouse.click(2,2)
@@ -132,6 +146,6 @@ with sync_playwright() as p:
     context.close()
     browser.close()
 
-result = {'url': base, 'byte_matches': verified, 'catalogue': {'locations': 39, 'nobles': 17, 'sources': 69}, 'image_size': [5289, 6822], 'tests': {'editor_bonus_penalty': 'passed', 'hover': 'passed', 'tree': 'passed', 'noble_modal': 'passed', 'naitroud_boundaries': 'passed', 'wall_progress': 'passed', 'reload': 'passed', 'invalid_import_atomicity': 'passed', 'browser_zip_export': 'passed', 'reset': 'passed', 'mobile': 'passed'}, 'page_errors': errors, 'http_errors': failed, 'console_errors': console_errors}
+result = {'url': base, 'byte_matches': verified, 'catalogue': {'locations': len(baseline['locations']), 'nobles': len(baseline['nobles']), 'sources': len(baseline['sources']), 'council_members': len(baseline['royalCouncil']['members'])}, 'image_size': [5289, 6822], 'tests': {'editor_bonus_penalty': 'passed', 'hover': 'passed', 'tree': 'passed', 'noble_modal': 'passed', 'naitroud_boundaries': 'passed', 'wall_progress': 'passed', 'reload': 'passed', 'invalid_import_atomicity': 'passed', 'browser_zip_export': 'passed', 'reset': 'passed', 'mobile': 'passed'}, 'page_errors': errors, 'http_errors': failed, 'console_errors': console_errors}
 (out / 'live-verification.json').write_text(json.dumps(result, ensure_ascii=False, indent=2))
 print(json.dumps(result, ensure_ascii=False, indent=2))

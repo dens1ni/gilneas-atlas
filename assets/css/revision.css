@@ -12,8 +12,10 @@
 #location-list .faction-tree>summary .chevron{grid-column:4;grid-row:1}
 #location-list .faction-children{margin-left:9px;padding-left:7px;border-left:1px solid #6a7e7244}
 #location-list .registry-category{padding:3px 0 6px}
-#location-list .registry-category>summary{min-height:31px;padding:4px 5px;font-size:10px;color:#b2aa90;letter-spacing:.2px;justify-content:space-between}
-#location-list .registry-category>summary .chevron{height:11px;width:11px}
+#location-list .registry-category>summary{display:grid;grid-template-columns:minmax(0,1fr) 32px 11px;column-gap:7px;align-items:center;min-height:31px;padding:4px 5px;font-size:10px;color:#b2aa90;letter-spacing:.2px}
+#location-list .registry-category>summary .category-name{min-width:0;grid-column:1;grid-row:1}
+#location-list .registry-category>summary .category-count{grid-column:2;grid-row:1;text-align:right;font-variant-numeric:tabular-nums}
+#location-list .registry-category>summary .chevron{height:11px;width:11px;grid-column:3;grid-row:1}
 #location-list .location-row{padding:8px 5px 8px 21px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:5px;min-height:44px}
 #location-list .location-row:before{left:6px}
 #location-list .location-row .row-name{font-size:12px;line-height:1.65;min-width:0;overflow-wrap:anywhere}

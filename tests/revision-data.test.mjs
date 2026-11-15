@@ -20,8 +20,16 @@ test('every existing location retains source-linked immersive lore and receives 
 });
 
 test('every registered noble gets historical description appearance social status and a source-backed allegiance',async()=>{
-  const [current,original]=await Promise.all([json('atlas.json'),json('publication-v1.json')]);assert.equal(current.nobles.length,17);assert.deepEqual(current.nobles.map(n=>n.id),original.nobles.map(n=>n.id));
-  for(const noble of current.nobles){assert.ok(noble.description?.length,noble.id);assert.ok(noble.appearance?.length,noble.id);assert.ok(noble.socialStatus?.length,noble.id);assert.ok(noble.allegiance?.length||noble.overlord?.length,noble.id);assert.ok(noble.sources.length,noble.id);assert.doesNotMatch(noble.description,/реконструкц|не назнач|не перенос|в текущем слое/i,noble.id);}
+  const [current,original]=await Promise.all([json('atlas.json'),json('publication-v1.json')]);
+  const census=JSON.parse(await readFile(new URL('../docs/noble-family-census.json',import.meta.url),'utf8'));
+  assert.equal(current.nobles.length,original.nobles.length+census.additions.length);
+  assert.deepEqual(current.nobles.slice(0,original.nobles.length).map(n=>n.id),original.nobles.map(n=>n.id));
+  assert.deepEqual(current.nobles.slice(original.nobles.length).map(n=>n.id),census.additions.map(a=>a.noble.id));
+  for(const noble of current.nobles){
+    assert.ok(noble.description?.length,noble.id);assert.ok(noble.appearance?.length,noble.id);assert.ok(noble.socialStatus?.length,noble.id);assert.ok(noble.allegiance?.length||noble.overlord?.length,noble.id);assert.ok(noble.sources.length,noble.id);
+    if(original.nobles.some(row=>row.id===noble.id))assert.doesNotMatch(noble.description,/реконструкц|не назнач|не перенос|в текущем слое/i,noble.id);
+    else assert.deepEqual(noble,census.additions.find(a=>a.noble.id===noble.id).noble,'New archival references retain their reviewed chronological and canonicality caveats');
+  }
   assert.equal(current.factions.find(f=>f.id==='silverlaine').parent,'crowley');assert.equal(current.factions.find(f=>f.id==='silverlaine').ruler,'Барон Сребролен');
-  assert.equal(current.meta.wallConstruction.value,10);assert.equal(current.meta.wallConstruction.max,100);assert.equal(current.meta.publicationRevision,'origins-dossiers-v3');
+  assert.equal(current.meta.wallConstruction.value,10);assert.equal(current.meta.wallConstruction.max,100);assert.equal(current.meta.publicationRevision,'royal-council-v5');
 });

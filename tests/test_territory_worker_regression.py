@@ -65,6 +65,7 @@ class TerritoryWorkerRegression(unittest.TestCase):
     def boot(self):
         self.page.goto(self.url + '/index.html', wait_until='networkidle')
         self.page.evaluate("""async () => {
+            document.body.classList.add('edit-mode');
             const M = await import('./assets/js/model.mjs');
             const S = await import('./assets/js/smooth-territories.mjs');
             const T = await import('./assets/js/territories.mjs');

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" width="40" height="44">
+<title>dalaran device</title>
+<g fill="#9aa8b6" stroke="#343c43" stroke-width=".75" stroke-linejoin="round">
+<path d="M5 10C11 6 15 4 20 4C25 4 30 7 34 10L35 8 36 12C33 14 31 11 28 10C22 6 16 6 10 10C7 13 4 14 4 10Z"/>
+<path fill-rule="evenodd" d="M16 12C16 9 24 9 24 12C24 16 16 16 16 12ZM18 12C18 10.5 22 10.5 22 12C22 14 18 14 18 12Z"/>
+<path d="M19 11 21 10.5 21.5 12 19.5 13.5 18.5 12.5Z"/>
+<path d="M8 15Q20 19 32 15L32 17 29 19 28 21 26 20 26 19 22 20 21 22 19 22 18 20 14 19 13 21 11 20 11 18 8 17Z"/>
+<path d="M11 23 14 24 12 29 10 30 11 32 8 36 7 30 9 29ZM19 24H22L22 32 24 35 23 37 25 37 20 42 15 37 17 36 16 34 18 32ZM27 24 29 23 31 27 33 30 32 32 35 35 34 38 32 35 29 34 30 32 28 32Z"/>
+<path d="M20 26V32" fill="none" stroke="#c0c9d1" stroke-width=".7"/>
+</g>
+</svg>

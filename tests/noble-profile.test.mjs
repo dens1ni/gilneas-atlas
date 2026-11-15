@@ -24,6 +24,16 @@ test('sovereign is not his own vassal and independent objects are not inherited 
   assert.deepEqual(baron.holdings.map(h=>h.id),['keep','guild']);
 });
 
+test('profile includes exact status field evidence without changing author citation arrays or assigning family holdings',()=>{
+  const data=fixture();
+  data.nobles.push({id:'queen',name:'Тестовая королева',house:'greymane',sources:[1],lifeStatus:'unknown',fieldSources:{lifeStatus:['life-evidence']},relations:[{relation:'spouse',nobleId:'genn'}]});
+  data.sources.push({id:'life-evidence',title:'Свидетельство статуса',url:'https://example.invalid/life'});
+  const before=structuredClone(data),profile=deriveNobleProfile(data,'queen');
+  assert.deepEqual(profile.sources.map(source=>source.id),[1,'life-evidence']);
+  assert.deepEqual(profile.holdings,[],'Dynastic membership does not confer the king’s private holdings or his vassals');
+  assert.deepEqual(data,before);
+});
+
 test('unknown appearance and guest allegiance remain explicit without invented property or titles',()=>{
   const data=fixture(),guest=deriveNobleProfile(data,'guest');
   assert.equal(guest.house,null);assert.equal(guest.suzerain,null);assert.equal(guest.isSovereign,false);

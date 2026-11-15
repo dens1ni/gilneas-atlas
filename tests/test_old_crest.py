@@ -30,23 +30,26 @@ class OldCrest(unittest.TestCase):
                 self.assertEqual(page.locator('link[rel=icon]').get_attribute('href'), SHIELD)
                 self.assertEqual(page.locator('link[rel=icon]').get_attribute('type'), 'image/svg+xml')
                 self.assertEqual(page.evaluate('window.gilneasApp.getData().meta.gilneasCrest'), SHIELD)
-                for selector in ['.brand img', '.registry-footer img', '#mobile-home img', '#map-home img',
-                                 '#faction-list .faction-row[data-faction-id=gilneas] img',
-                                 '#location-list .faction-tree[data-faction-id=gilneas] .group-heading img']:
+                for selector in ['.brand img', '.registry-footer img', '#mobile-home img', '#map-home img']:
                     image = page.locator(selector).first
                     self.assertEqual(image.get_attribute('src'), SHIELD, selector)
                     self.assertEqual(image.evaluate('e=>getComputedStyle(e).backgroundColor'), 'rgba(0, 0, 0, 0)', selector)
                     self.assertEqual(image.evaluate('e=>getComputedStyle(e).borderTopWidth'), '0px', selector)
                     self.assertEqual(image.evaluate('e=>e.complete&&e.naturalWidth>0'), True, selector)
+                for selector in ['#faction-list .faction-row[data-faction-id=gilneas] .faction-shield',
+                                 '#location-list .faction-tree[data-faction-id=gilneas] .group-heading .faction-shield']:
+                    shield = page.locator(selector).first
+                    self.assertEqual(shield.locator('.shield-device').get_attribute('href'), 'assets/ui/gilneas-royal-symbol.png')
+                    self.assertEqual(shield.locator('.shield-field').get_attribute('fill'), '#131516')
                 page.evaluate("window.gilneasApp.selectId('gilneas-city')")
                 seal = page.locator('#dossier-seal .faction-shield')
                 self.assertEqual(seal.get_attribute('data-faction-id'), 'greymane')
-                self.assertEqual(seal.locator('.shield-device').get_attribute('href'), 'assets/ui/gilneas-royal-symbol.png')
+                self.assertEqual(seal.locator('.shield-device').get_attribute('href'), 'assets/ui/factions/greymane-device.svg')
                 self.assertEqual(seal.locator('.shield-field').get_attribute('fill'), '#c49b60')
                 page.evaluate("window.gilneasApp.nobleDossier.open('noble-darius')")
                 self.assertTrue(page.locator('#noble-crest').is_visible())
                 self.assertEqual(page.locator('#noble-crest .faction-shield').get_attribute('data-faction-id'), 'crowley')
-                self.assertEqual(page.locator('#noble-crest .shield-device').get_attribute('href'), 'assets/ui/gilneas-royal-symbol.png')
+                self.assertEqual(page.locator('#noble-crest .shield-device').get_attribute('href'), 'assets/ui/factions/crowley-device.svg')
                 self.assertEqual(page.locator('#noble-crest').evaluate('e=>getComputedStyle(e).backgroundColor'), 'rgba(0, 0, 0, 0)')
                 self.assertGreater(page.locator('.paper-rule [data-icon=rose]').count(), 0)
                 self.assertEqual(page.locator('img[src*=gilneas-human-banner]').count(), 0)

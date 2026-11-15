@@ -1,0 +1,1142 @@
+{
+  "version": 1,
+  "auditedCount": 39,
+  "records": [
+    {
+      "id": "gilneas-city",
+      "isLocation": true,
+      "linkedLocationIds": [
+        "cathedral-quarter",
+        "greymane-court",
+        "merchant-square",
+        "military-district"
+      ],
+      "basis": "existing-description",
+      "note": "Столица с четырьмя отдельными кварталами: полезный городской контейнер. Ссылки ведут только к кварталам; собор и тюрьма остаются на следующем уровне, без повторения всех потомков. Довоенная датировка поздней планировки из provenance не усиливается.[1]"
+    },
+    {
+      "id": "greymane-manor",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Отдельная королевская резиденция, не город или широкий регион. Вид на Темную Гавань и положение над ней не означают нахождение внутри duskhaven; связь не добавляется. Нынешние тип, владелец и inline-данные не меняются.[5]"
+    },
+    {
+      "id": "cathedral-quarter",
+      "isLocation": true,
+      "linkedLocationIds": [
+        "lights-dawn-cathedral"
+      ],
+      "basis": "existing-description",
+      "note": "Самостоятельный городской квартал, а не здание. Собор прямо указан как расположенный здесь; допускается ссылка на lights-dawn-cathedral с другой непосредственной фракцией. Соседние кварталы не превращаются в дочерние.[6]"
+    },
+    {
+      "id": "lights-dawn-cathedral",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Отдельный храмовый объект, остающийся обычной точкой со своими inline-данными. Вход со стороны квартала не делает храм контейнером других кварталов; входящая ссылка cathedral-quarter достаточна.[7]"
+    },
+    {
+      "id": "greymane-court",
+      "isLocation": true,
+      "linkedLocationIds": [],
+      "basis": "existing-description",
+      "note": "Несмотря на слово «Площадь», это юго-западный городской квартал. Контейнер может быть пустым: среди текущих ID нет отдельного дома или подземного прохода. Связь дорогой с соседним кварталом либо внешним кладбищем не означает вложенность.[8]"
+    },
+    {
+      "id": "merchant-square",
+      "isLocation": true,
+      "linkedLocationIds": [],
+      "basis": "existing-description",
+      "note": "Северо-восточный квартал столицы, а не одиночное торговое строение. Может оставаться пустым контейнером; упомянутая почтовая станция не имеет отдельной записи среди текущих ID, поэтому цель не создается.[9]"
+    },
+    {
+      "id": "military-district",
+      "isLocation": true,
+      "linkedLocationIds": [
+        "stoneward-prison"
+      ],
+      "basis": "user",
+      "note": "Квартал-контейнер по прямому запросу пользователя; stoneward-prison прямо помещена сюда и существующими описаниями. Навигационная ссылка не меняет раздельные faction=greymane и faction=gilneas, владельцев или эффекты.[10][11]"
+    },
+    {
+      "id": "stoneward-prison",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Отдельный укрепленный тюремный комплекс, не широкий район. Остается обычной точкой и целью military-district; заключенные, двор, эффекты или новые ресурсы не сочиняются. Дата основания из provenance остается неизвестной.[11]"
+    },
+    {
+      "id": "keel-harbor",
+      "isLocation": true,
+      "linkedLocationIds": [],
+      "basis": "existing-description",
+      "note": "Описание называет портовое поселение: контейнер допустим даже без нанесенных внутренних объектов. Западнее столицы не значит внутри gilneas-city; близость aderics-repose не дает дочерней ссылки.[12]"
+    },
+    {
+      "id": "duskhaven",
+      "isLocation": true,
+      "linkedLocationIds": [
+        "crowley-orchard",
+        "crowley-stable-grounds",
+        "hayward-fishery",
+        "hammond-farmstead",
+        "allen-farmstead"
+      ],
+      "basis": "user",
+      "note": "Город-контейнер со сценарным сельским и прибрежным окружением по запросу автора: существующие фермы, рыбное хозяйство, сад и конюшни. Это не утверждение городских границ или собственности. greymane-manor исключено; сад и конюшни не объявляются городской собственностью.[13][14][15]"
+    },
+    {
+      "id": "crowley-orchard",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Яблоневый сад с домом — отдельный хозяйственный объект, а не вымышленное поместье или широкий населенный регион. Конюшни описаны восточнее, не внутри сада; обе реальные точки можно открыть из сценарного окружения duskhaven, не вкладывая их друг в друга.[14][15]"
+    },
+    {
+      "id": "crowley-stable-grounds",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Конюшенный хозяйственный участок остается обычной точкой, хотя описание говорит об обширной площади. Нет самостоятельного населенного/лесного региона или нанесенных дочерних ID. Ссылка из duskhaven — авторская навигация по окружению, не доказательство муниципальных конюшен.[15]"
+    },
+    {
+      "id": "hayward-fishery",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Отдельное рыбное хозяйство на прибрежном острове, несмотря на нынешний type=harbor. Остается обычным хозяйственным объектом; пользовательская ссылка duskhaven не превращает остров в городскую землю и не назначает частного владельца.[16]"
+    },
+    {
+      "id": "hammond-farmstead",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Ферма, а не отдельный город: это прямо оговорено в provenance. Ссылка из duskhaven сохраняет навигацию по авторскому сценарию; соседняя allen-farmstead не становится вложенной, запасы кукурузы и бонусы не добавляются.[17]"
+    },
+    {
+      "id": "allen-farmstead",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Отдельная животноводческая ферма со своими inline-данными. Положение ниже и западнее duskhaven оправдывает запрошенную сценарную навигацию, но не кадастр; соседняя ферма не становится дочерней. Предположительное имя хозяина не переносится в owner.[18]"
+    },
+    {
+      "id": "emberstone-village",
+      "isLocation": true,
+      "linkedLocationIds": [
+        "emberstone-mine"
+      ],
+      "basis": "user",
+      "note": "Именованная деревня-контейнер; emberstone-mine связывается по прямому указанию пользователя и существующей связи одноименных точек. Ссылка означает сценарную навигацию, не доказанную границу деревни, владельца шахты или добываемый материал.[19][20]"
+    },
+    {
+      "id": "emberstone-mine",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Обычный шахтный объект и цель emberstone-village. Самостоятельным регионом не объявляется; предположительный уголь, запасы, принудительный труд поздней эпохи и новые эффекты не добавляются.[20]"
+    },
+    {
+      "id": "stormglen",
+      "isLocation": true,
+      "linkedLocationIds": [
+        "bradshaw-mill"
+      ],
+      "basis": "user",
+      "note": "Именованная рыбацкая деревня, а не горный перевал как одиночный объект. bradshaw-mill добавлена по указанию автора как сценарная навигация к мельнице севернее деревни; ее нахождение внутри деревни или частное владение не утверждается.[21][25]"
+    },
+    {
+      "id": "blackwald",
+      "isLocation": true,
+      "linkedLocationIds": [
+        "taldoren",
+        "bradshaw-mill"
+      ],
+      "basis": "user",
+      "note": "Широкий лесной регион. Пользователь явно запросил taldoren; bradshaw-mill также прямо находится в южной части леса по существующему описанию. Связи не добавляют ночных эльфов, культ, лагеря или владельцев; пограничная stormglen не объявляется внутренним объектом автоматически.[23][24][25]"
+    },
+    {
+      "id": "taldoren",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Описание называет древнее дерево и природный ориентир «дикий дом», а не отдельный широкий лес. Рекомендована обычная точка; нынешний type=forest сохранен буквально, возможная трактовка отдельной рощей отмечена как неоднозначная. Никакого поселения, строений или второй точки в Изумрудном Сне не создается.[24]"
+    },
+    {
+      "id": "bradshaw-mill",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Одиночное хозяйственное строение. Имеет две оправданные входящие ссылки: географическую blackwald и авторскую сценарную stormglen; это одна каноническая запись, не две мельницы. Рабочее состояние до стены и частное владение не выводятся из навигации.[25]"
+    },
+    {
+      "id": "tempests-reach",
+      "isLocation": true,
+      "linkedLocationIds": [],
+      "basis": "existing-description",
+      "note": "Описание прямо называет прибрежное поселение с домами и собственным маяком: контейнер допустим при сохраненном type=landmark. Отдельного ID этого маяка нет; galewatch-lighthouse является другим северным маяком и не подставляется вместо отсутствующей цели.[26][43]"
+    },
+    {
+      "id": "aderics-repose",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Отдельный кладбищенско-мемориальный объект со своими inline-данными. Гробница, ворота и дома упомянуты в сохраненном лоре, но отдельных текущих ID не имеют; они не создаются. «К западу от города» и близость гавани не доказывают вложенность в город или порт.[27]"
+    },
+    {
+      "id": "northgate-woods",
+      "isLocation": true,
+      "linkedLocationIds": [],
+      "basis": "existing-description",
+      "note": "Именованный лесной регион, допускающий пустой контейнер. Нынешнее описание дает реку как восточную границу, а не нанесенный объект внутри леса; деревня у реки также не помещается сюда по догадке. Будущая стена не добавляется.[28]"
+    },
+    {
+      "id": "northgate-river",
+      "isLocation": true,
+      "linkedLocationIds": [],
+      "basis": "existing-description",
+      "note": "Именованный протяженный природный регион, а не отдельное строение; рекомендован пустой контейнер при неизменном type=landmark. «Мимо» деревни и «огибает» город/кладбище не означает, что они внутри реки. Явный faction=null сохраняется.[29]"
+    },
+    {
+      "id": "northern-headlands",
+      "isLocation": true,
+      "linkedLocationIds": [],
+      "basis": "existing-description",
+      "note": "Широкие именованные северо-западные возвышенности; контейнер допустим даже без целей. Северный островной маяк находится северо-западнее, не внутри мыса. Позднее квестовое расширение зоны на northgate-woods не переносится в выбранную эпоху.[30][43]"
+    },
+    {
+      "id": "the-headlands",
+      "isLocation": true,
+      "linkedLocationIds": [],
+      "basis": "existing-description",
+      "note": "Описание прямо называет обширные прибрежные земли. Пустой регион-контейнер сохраняет текущий type=landmark; соседняя гавань, другой мыс, устье и отдельный островной маяк не вкладываются только по направлению или близости.[31]"
+    },
+    {
+      "id": "pyrewood",
+      "isLocation": true,
+      "linkedLocationIds": [],
+      "basis": "existing-description",
+      "note": "Деревня — самостоятельный населенный контейнер, пока без доказанных внутренних нанесенных объектов. shadowfang стоит на утесе над деревней: связь правителей и обзор с высоты не доказывают размещение внутри деревни. Общий дом с ambermill не создает географическую вложенность.[32][33][40]"
+    },
+    {
+      "id": "shadowfang",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Обычная крепость, географически находящаяся в южном Серебряном бору. Достаточна входящая ссылка silverpine; ссылка pyrewood не выводится из власти местных лордов или положения над деревней. Буквальное имя, хозяин и вассальная оговорка сохраняются.[33]"
+    },
+    {
+      "id": "ambermill",
+      "isLocation": true,
+      "linkedLocationIds": [],
+      "basis": "existing-description",
+      "note": "Несмотря на имя «Янтарная мельница», тексты прямо описывают человеческий городок/поселение, поэтому это контейнер. Нет отдельного текущего ID лесопилки или ресурса древесины; такие объекты не создаются. Поздний гарнизон не дает дочерней ссылки dalaran-city.[35]"
+    },
+    {
+      "id": "dalaran-city",
+      "isLocation": true,
+      "linkedLocationIds": [
+        "violet-citadel"
+      ],
+      "basis": "existing-description",
+      "note": "Наземный город-контейнер; violet-citadel прямо названа главной крепостью в сердце города. Перечисленные лаборатории, библиотеки и хранилища не получают вымышленных ID или эффектов; поздний перенос города не применяется.[36][44]"
+    },
+    {
+      "id": "fenris-keep",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Обычная островная крепость с собственными inline-данными. Входящая ссылка fenris-isle описывает размещение, а не новую частную собственность; неизвестный богатый лорд не заполняется. Прямая дублирующая ссылка озеро→крепость не нужна.[38]"
+    },
+    {
+      "id": "fenris-isle",
+      "isLocation": true,
+      "linkedLocationIds": [
+        "fenris-keep"
+      ],
+      "basis": "existing-description",
+      "note": "Большой именованный остров — географический контейнер; fenris-keep прямо размещена на нем. Достаточен родитель lordamere-lake; условное причисление острова к игровой зоне silverpine не используется как доказательство внутри леса.[38]"
+    },
+    {
+      "id": "lordaeron-city",
+      "isLocation": true,
+      "linkedLocationIds": [],
+      "basis": "existing-description",
+      "note": "Самостоятельная действующая столица — допустимый пустой контейнер. Среди нынешних ID нет отдельного дворца или городского квартала; дворовые события и общая фракция не превращают другие лордеронские точки в объекты внутри столицы.[39]"
+    },
+    {
+      "id": "silverpine",
+      "isLocation": true,
+      "linkedLocationIds": [
+        "pyrewood",
+        "shadowfang",
+        "ambermill",
+        "deep-elem-mine"
+      ],
+      "basis": "existing-description",
+      "note": "Обширный лес-контейнер для pyrewood, shadowfang, ambermill и deep-elem-mine: все прямо описаны как находящиеся в лесу. Разные фракции и сценарные границы не ограничивают навигацию и не меняются. Остров Фенриса оставлен под озером, без механического включения всей современной игровой зоны.[40]"
+    },
+    {
+      "id": "lordamere-lake",
+      "isLocation": true,
+      "linkedLocationIds": [
+        "fenris-isle"
+      ],
+      "basis": "existing-description",
+      "note": "Широкий именованный водоем-контейнер; fenris-isle прямо расположена в центре озера. Крепость доступна через остров; dalaran-city у берега и соседние королевства не объявляются внутри озера. Явный faction=null остается неизменным.[38][41]"
+    },
+    {
+      "id": "deep-elem-mine",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Обычная шахтная точка в средней части Серебряного бора; сохраняет собственные inline-данные. Ссылка silverpine не устанавливает материал, объем добычи, владельца или домен Марли/Краули по соседству.[42]"
+    },
+    {
+      "id": "galewatch-lighthouse",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Отдельный маяк на северном скалистом острове — обычная точка, не маяк tempests-reach. Направления относительно двух мысов не доказывают вложенность ни в один мыс; отдельный островной контейнер без текущего ID не создается.[43]"
+    },
+    {
+      "id": "violet-citadel",
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "basis": "none",
+      "note": "Обычная главная крепость Даларана; входящая ссылка dalaran-city достаточна. Библиотеки, лаборатории, магические хранилища и артефакты остаются буквальным лором/inline-контекстом, без новых целей, ресурсов или эффектов.[44]"
+    }
+  ],
+  "links": [
+    {
+      "from": "gilneas-city",
+      "to": "cathedral-quarter",
+      "basis": "existing-description",
+      "note": "Сам квартал прямо описан как северо-западная часть города; это географическая вложенность, не назначение частного хозяина.[6]"
+    },
+    {
+      "from": "gilneas-city",
+      "to": "greymane-court",
+      "basis": "existing-description",
+      "note": "Описание квартала прямо называет его юго-западной частью столицы. Ссылка относится к существующему кварталу, не к королевской резиденции.[8]"
+    },
+    {
+      "from": "gilneas-city",
+      "to": "merchant-square",
+      "basis": "existing-description",
+      "note": "Описание Торговой площади прямо относит ее к северо-восточной части города.[9]"
+    },
+    {
+      "from": "gilneas-city",
+      "to": "military-district",
+      "basis": "existing-description",
+      "note": "Военный квартал прямо расположен в юго-восточной части города; дочерняя тюрьма открывается уже из квартала.[10]"
+    },
+    {
+      "from": "cathedral-quarter",
+      "to": "lights-dawn-cathedral",
+      "basis": "existing-description",
+      "note": "Сохраненный источник квартала прямо говорит «is the location of the Light's Dawn Cathedral». Разные непосредственные фракции квартала и собора допустимы и не наследуются через эту ссылку.[6][7]"
+    },
+    {
+      "from": "military-district",
+      "to": "stoneward-prison",
+      "basis": "user",
+      "note": "Прямое указание пользователя; оба существующих описания дополнительно помещают укрепленный тюремный комплекс в этот квартал. Сценарная навигация не меняет фракцию, владельца или эффекты цели.[10][11]"
+    },
+    {
+      "from": "duskhaven",
+      "to": "crowley-orchard",
+      "basis": "user",
+      "note": "Указание автора включить документированные сады в окружение Темной Гавани; описание и сохраненный источник называют яблоневый сад непосредственно южнее города. Это сценарное окружение, не доказательство нахождения внутри городской границы или городской собственности.[14]"
+    },
+    {
+      "from": "duskhaven",
+      "to": "crowley-stable-grounds",
+      "basis": "user",
+      "note": "Указание автора включить документированные конюшенные точки; реальные описания помещают конюшни восточнее Сада Краули и связывают их в сельское окружение. Ссылка принимается только как авторская сценарная навигация; нахождение внутри duskhaven и тождество городским конюшням не доказаны.[14][15]"
+    },
+    {
+      "from": "duskhaven",
+      "to": "hayward-fishery",
+      "basis": "user",
+      "note": "Точная связь задана пользователем. Рыбное хозяйство находится на отдельном прибрежном острове; это сценарная ссылка из окружения города, не доказательство муниципальной земли или владения островом.[16]"
+    },
+    {
+      "from": "duskhaven",
+      "to": "hammond-farmstead",
+      "basis": "user",
+      "note": "Точная связь задана пользователем; существующее описание помещает ферму на склоне западнее города. Ссылка отражает сценарное сельское окружение, не канонический городской кадастр.[17]"
+    },
+    {
+      "from": "duskhaven",
+      "to": "allen-farmstead",
+      "basis": "user",
+      "note": "Точная связь задана пользователем; описание прямо связывает ферму с сельскими землями западнее и ниже Темной Гавани. Это навигация по сценарию, не присвоение фермы городу или его владельцу.[18]"
+    },
+    {
+      "from": "emberstone-village",
+      "to": "emberstone-mine",
+      "basis": "user",
+      "note": "Точная связь задана пользователем; существующие описания связывают одноименные деревню и близлежащую шахту. Это авторская сценарная навигация, не доказательство границ, права собственности или добычи угля.[19][20]"
+    },
+    {
+      "from": "stormglen",
+      "to": "bradshaw-mill",
+      "basis": "user",
+      "note": "Точная связь задана пользователем. Мельница документирована севернее деревни в южной части blackwald; ссылка отражает сценарное окружение, не нахождение мельницы внутри деревни.[21][25]"
+    },
+    {
+      "from": "blackwald",
+      "to": "taldoren",
+      "basis": "user",
+      "note": "Точная связь задана пользователем; дерево прямо расположено в восточной части леса по текущему описанию и сохраненному источнику. Авторская навигация не подтверждает спорную древнюю колонию, постройки или собственность.[24]"
+    },
+    {
+      "from": "blackwald",
+      "to": "bradshaw-mill",
+      "basis": "existing-description",
+      "note": "Текущие описания обоих мест прямо помещают мельницу в южную часть Черной дубравы. Второй родитель stormglen имеет другую, явно авторскую навигационную основу; ID мельницы единственный.[25]"
+    },
+    {
+      "from": "dalaran-city",
+      "to": "violet-citadel",
+      "basis": "existing-description",
+      "note": "Описание цели прямо называет главную крепость Даларана в сердце города. Условность позиции на городской виньетке остается в provenance, координата не корректируется.[44]"
+    },
+    {
+      "from": "fenris-isle",
+      "to": "fenris-keep",
+      "basis": "existing-description",
+      "note": "Описание острова прямо говорит, что крепость находится на нем; отдельная крепость остается собственной канонической точкой, не inline-копией.[38]"
+    },
+    {
+      "from": "silverpine",
+      "to": "pyrewood",
+      "basis": "existing-description",
+      "note": "Оба текущих описания прямо помещают деревню в южный Серебряный бор. Лесной родитель с faction=lordaeron не меняет faction=crowley у деревни.[40]"
+    },
+    {
+      "from": "silverpine",
+      "to": "shadowfang",
+      "basis": "existing-description",
+      "note": "Описание крепости прямо помещает ее в южный Серебряный бор; связь не опирается на близость маркеров или вассалитет. faction=silverlaine и имя цели сохраняются.[33]"
+    },
+    {
+      "from": "silverpine",
+      "to": "ambermill",
+      "basis": "existing-description",
+      "note": "Поселение прямо находится в Серебряном бору по текущему описанию и сохраненной статье. Ссылка географическая, не передача поселения из дома Краули Лордерону или Даларану.[35]"
+    },
+    {
+      "from": "silverpine",
+      "to": "deep-elem-mine",
+      "basis": "existing-description",
+      "note": "Текущий текст прямо помещает рудник в среднюю часть леса. Никакой домен, частный владелец или материал добычи из этой связи не выводится.[42]"
+    },
+    {
+      "from": "lordamere-lake",
+      "to": "fenris-isle",
+      "basis": "existing-description",
+      "note": "Остров прямо расположен в центре озера. Крепость не дублируется на уровне озера, а прибрежный dalaran-city не принимается за объект внутри воды.[38][41]"
+    }
+  ],
+  "preservation": {
+    "scope": "read-only audit; recommendations only, no application integration",
+    "allowedNewFiles": [
+      "docs/location-links-review.json",
+      "docs/location-links-review.md"
+    ],
+    "localSource": {
+      "path": "assets/data/atlas.json",
+      "publicationRevision": "royal-council-v4",
+      "sha256Before": "632c6623f4b16216fda80ff278de8b6670ee75fad8fd0bcc47fb767edc6ffaca",
+      "sha256After": "632c6623f4b16216fda80ff278de8b6670ee75fad8fd0bcc47fb767edc6ffaca",
+      "unchanged": true,
+      "counts": {
+        "locations": 39,
+        "nobles": 17,
+        "factions": 10,
+        "territories": 13,
+        "sources": 80
+      }
+    },
+    "publishedBaseline": {
+      "localPath": "assets/data/publication-v3.json",
+      "sha256Before": "f83035c0fb7ee85666b4af46c39ca67300b9cf41caef093fde540260bcedd66c",
+      "sha256After": "f83035c0fb7ee85666b4af46c39ca67300b9cf41caef093fde540260bcedd66c",
+      "unchanged": true,
+      "matchesLiveProductionData": true
+    },
+    "production": {
+      "baseUrl": "https://dens1ni.github.io/gilneas-atlas/",
+      "access": "HTTP GET only; no browser/editor/localStorage, POST, commit or deploy",
+      "checkedFiles": [
+        {
+          "path": "assets/data/atlas.json",
+          "url": "https://dens1ni.github.io/gilneas-atlas/assets/data/atlas.json",
+          "statusBefore": 200,
+          "statusAfter": 200,
+          "sha256Before": "f83035c0fb7ee85666b4af46c39ca67300b9cf41caef093fde540260bcedd66c",
+          "sha256After": "f83035c0fb7ee85666b4af46c39ca67300b9cf41caef093fde540260bcedd66c",
+          "unchanged": true
+        },
+        {
+          "path": "assets/runtime-manifest.json",
+          "url": "https://dens1ni.github.io/gilneas-atlas/assets/runtime-manifest.json",
+          "statusBefore": 200,
+          "statusAfter": 200,
+          "sha256Before": "986adadf67a916045cc1ca367d98539c4729e4ed28f602bfe63955563df7c603",
+          "sha256After": "986adadf67a916045cc1ca367d98539c4729e4ed28f602bfe63955563df7c603",
+          "unchanged": true
+        },
+        {
+          "path": "index.html",
+          "url": "https://dens1ni.github.io/gilneas-atlas/index.html",
+          "statusBefore": 200,
+          "statusAfter": 200,
+          "sha256Before": "3eb1410189fd48d70f6cbcfe9fc12c1aa89f8ce9e2d2b7a11f87a74076f7e1ab",
+          "sha256After": "3eb1410189fd48d70f6cbcfe9fc12c1aa89f8ce9e2d2b7a11f87a74076f7e1ab",
+          "unchanged": true
+        }
+      ],
+      "counts": {
+        "locations": 39,
+        "nobles": 17,
+        "factions": 10,
+        "territories": 13,
+        "sources": 69
+      },
+      "all39FullLocationRecordsEqualToCurrentLocalSource": true,
+      "note": "Локальный royal-council-v4 имеет 80 источников; действующая публикация — прежняя основа с 69 источниками. Файлы целиком различаются, но все 39 полных записей locations совпадают; версия v4 не объявляется опубликованной."
+    },
+    "sourceRegistry": {
+      "count": 80,
+      "sha256Before": "249839d6d6ff9c31d6c7bd147c203c581b6be3770f5bb8d39ca74189ade7da46",
+      "sha256After": "249839d6d6ff9c31d6c7bd147c203c581b6be3770f5bb8d39ca74189ade7da46",
+      "serialization": "UTF-8 json.dumps(sources, ensure_ascii=False, separators=(\",\",\":\"))",
+      "unchanged": true,
+      "exactIdsUrlsQuotesPreserved": true
+    },
+    "locationRecords": {
+      "count": 39,
+      "compactJsonSha256Before": "40ac7ab54a77d5caefe2df9e3acb8b3f1c8f28a16d2f97a0e4d5a899d9481978",
+      "compactJsonSha256After": "40ac7ab54a77d5caefe2df9e3acb8b3f1c8f28a16d2f97a0e4d5a899d9481978",
+      "unchangedFields": [
+        "id",
+        "name",
+        "englishName",
+        "aliases",
+        "type",
+        "x",
+        "y",
+        "faction",
+        "owner",
+        "description",
+        "shortDescription",
+        "objects",
+        "sources",
+        "loreSources",
+        "provenance"
+      ],
+      "sourceOrderPreserved": true,
+      "noProductionIsLocationOrLinkedLocationIdsWerePersisted": true,
+      "existingInlineObjectsCount": 0,
+      "noInlineObjectsAddedCopiedMovedOrMigrated": true
+    },
+    "associationPolicy": {
+      "meaning": "geographical/content navigation, not faction, private ownership or canonical cadastre",
+      "basisForRecords": "user = positive container requested in user associations; existing-description = positive broad place role supported by existing descriptions; none = ordinary-point classification, not absence of lore. Edge basis is stated independently in links.",
+      "userSpecifiedLinks": "author scenario navigation, even when outside canonical city/settlement boundaries; not cadastral evidence",
+      "crossFactionReferencesAllowed": true,
+      "explicitNullFactionsPreserved": true,
+      "multipleParentsAllowed": true,
+      "multipleParentTargetIds": [
+        "bradshaw-mill"
+      ],
+      "nearestDistanceInferenceUsed": false,
+      "vagueNeighborProseAloneUsed": false,
+      "syntheticTargetsResourcesEffectsOwnersAdded": false,
+      "noEveryDescendantDuplicationAtEachParent": true
+    },
+    "auditChecks": {
+      "auditedCount": 39,
+      "uniqueRecordIds": 39,
+      "completeCurrentIdCoverage": true,
+      "exactCurrentIdOrder": true,
+      "isLocationCount": 22,
+      "ordinaryPointCount": 17,
+      "uniqueDirectedLinks": 22,
+      "linksByBasis": {
+        "existing-description": 13,
+        "user": 9
+      },
+      "mandatoryUserLinksRequested": 7,
+      "mandatoryUserLinksPresent": 7,
+      "mandatoryUserLinksAllBasisUser": true,
+      "allLinkEndpointsAreActualCurrentIds": true,
+      "allLinkSourcesAreContainers": true,
+      "recordLinkProjectionMatchesLinksArray": true,
+      "selfLinks": 0,
+      "cycles": 0,
+      "emptyContainerIds": [
+        "greymane-court",
+        "merchant-square",
+        "keel-harbor",
+        "tempests-reach",
+        "northgate-woods",
+        "northgate-river",
+        "northern-headlands",
+        "the-headlands",
+        "pyrewood",
+        "ambermill",
+        "lordaeron-city"
+      ]
+    },
+    "evidenceReview": {
+      "mode": "existing author descriptions, provenance and saved supporting excerpts; no external lore research",
+      "filesRead": [
+        "assets/data/atlas.json",
+        "docs/revision-lore-evidence.json",
+        "docs/source-verification.json",
+        "docs/source-verification-result.json",
+        "docs/lore-scope.md",
+        "docs/revision-lore.md",
+        "docs/revision-period.md",
+        "docs/revision-source-map.json",
+        "docs/court-contract.md",
+        "docs/map-publication.md"
+      ],
+      "archivedLocationCount": 39,
+      "archivedExcerptCount": 97,
+      "excerptsReadAndMatched": 97,
+      "savedEvidenceFilesRead": 45,
+      "missingSavedEvidenceFiles": 0,
+      "matchingMethod": "verbatim text with whitespace/case/Markdown normalization; balanced-parenthesis Markdown links handled without changing excerpts or URLs",
+      "quoteCheckFailures": 0,
+      "sourceNumbering": "Exact existing numeric atlas.sources[].id, no renumbering and no new source registry entries",
+      "sourceReferences": [
+        {
+          "id": 1,
+          "title": "Gilneas City",
+          "url": "https://wowpedia.fandom.com/wiki/Gilneas_City",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Gilneas_City",
+          "evidenceRecordIds": [
+            "gilneas-city",
+            "lights-dawn-cathedral",
+            "taldoren"
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Greymane Manor",
+          "url": "https://wowpedia.fandom.com/wiki/Greymane_Manor",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Greymane_Manor",
+          "evidenceRecordIds": [
+            "greymane-manor"
+          ]
+        },
+        {
+          "id": 6,
+          "title": "Cathedral Quarter - Wowpedia - Your wiki guide to the World of Warcraft",
+          "url": "https://wowpedia.fandom.com/wiki/Cathedral_Quarter",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Cathedral_Quarter",
+          "evidenceRecordIds": [
+            "cathedral-quarter"
+          ]
+        },
+        {
+          "id": 7,
+          "title": "Light's Dawn Cathedral - Wowpedia - Your wiki guide to the World of Warcraft",
+          "url": "https://wowpedia.fandom.com/wiki/Light%27s_Dawn_Cathedral",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Light%27s_Dawn_Cathedral",
+          "evidenceRecordIds": [
+            "cathedral-quarter",
+            "lights-dawn-cathedral"
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Greymane Court - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+          "url": "https://warcraft.wiki.gg/wiki/Greymane_Court",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Greymane_Court",
+          "evidenceRecordIds": [
+            "greymane-court"
+          ]
+        },
+        {
+          "id": 9,
+          "title": "Merchant Square - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+          "url": "https://warcraft.wiki.gg/wiki/Merchant_Square",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Merchant_Square",
+          "evidenceRecordIds": [
+            "gilneas-city",
+            "merchant-square"
+          ]
+        },
+        {
+          "id": 10,
+          "title": "Military District - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+          "url": "https://warcraft.wiki.gg/wiki/Military_District",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Military_District",
+          "evidenceRecordIds": [
+            "gilneas-city",
+            "military-district"
+          ]
+        },
+        {
+          "id": 11,
+          "title": "Stoneward Prison - Warcraft Wiki - Your wiki guide to the World of Warcraft",
+          "url": "https://warcraft.wiki.gg/wiki/Stoneward_Prison",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Stoneward_Prison",
+          "evidenceRecordIds": [
+            "military-district",
+            "stoneward-prison"
+          ]
+        },
+        {
+          "id": 12,
+          "title": "Keel Harbor",
+          "url": "https://wowpedia.fandom.com/wiki/Keel_Harbor",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Keel_Harbor",
+          "evidenceRecordIds": [
+            "keel-harbor"
+          ]
+        },
+        {
+          "id": 13,
+          "title": "Duskhaven",
+          "url": "https://wowpedia.fandom.com/wiki/Duskhaven",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Duskhaven",
+          "evidenceRecordIds": [
+            "duskhaven"
+          ]
+        },
+        {
+          "id": 14,
+          "title": "Crowley Orchard",
+          "url": "https://wowpedia.fandom.com/wiki/Crowley_Orchard",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Crowley_Orchard",
+          "evidenceRecordIds": [
+            "duskhaven",
+            "crowley-orchard",
+            "crowley-stable-grounds"
+          ]
+        },
+        {
+          "id": 15,
+          "title": "Crowley Stable Grounds - Wowpedia - Your wiki guide to the World of Warcraft",
+          "url": "https://wowpedia.fandom.com/wiki/Crowley_Stable_Grounds",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Crowley_Stable_Grounds",
+          "evidenceRecordIds": [
+            "crowley-orchard",
+            "crowley-stable-grounds"
+          ]
+        },
+        {
+          "id": 16,
+          "title": "Hayward Fishery",
+          "url": "https://wowpedia.fandom.com/wiki/Hayward_Fishery",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Hayward_Fishery",
+          "evidenceRecordIds": [
+            "hayward-fishery"
+          ]
+        },
+        {
+          "id": 17,
+          "title": "Hammond Farmstead",
+          "url": "https://wowpedia.fandom.com/wiki/Hammond_Farmstead",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Hammond_Farmstead",
+          "evidenceRecordIds": [
+            "duskhaven",
+            "hammond-farmstead",
+            "allen-farmstead"
+          ]
+        },
+        {
+          "id": 18,
+          "title": "Allen Farmstead",
+          "url": "https://wowpedia.fandom.com/wiki/Allen_Farmstead",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Allen_Farmstead",
+          "evidenceRecordIds": [
+            "hammond-farmstead",
+            "allen-farmstead"
+          ]
+        },
+        {
+          "id": 19,
+          "title": "Emberstone Village",
+          "url": "https://wowpedia.fandom.com/wiki/Emberstone_Village",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Emberstone_Village",
+          "evidenceRecordIds": [
+            "emberstone-village",
+            "emberstone-mine"
+          ]
+        },
+        {
+          "id": 20,
+          "title": "Emberstone Mine",
+          "url": "https://wowpedia.fandom.com/wiki/Emberstone_Mine",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Emberstone_Mine",
+          "evidenceRecordIds": [
+            "emberstone-village",
+            "emberstone-mine"
+          ]
+        },
+        {
+          "id": 21,
+          "title": "Stormglen Village",
+          "url": "https://wowpedia.fandom.com/wiki/Stormglen_Village",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Stormglen_Village",
+          "evidenceRecordIds": [
+            "stormglen",
+            "bradshaw-mill"
+          ]
+        },
+        {
+          "id": 23,
+          "title": "Blackwald - Wowpedia - Your wiki guide to the World of Warcraft",
+          "url": "https://wowpedia.fandom.com/wiki/Blackwald",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Blackwald",
+          "evidenceRecordIds": [
+            "blackwald"
+          ]
+        },
+        {
+          "id": 24,
+          "title": "Tal'doren",
+          "url": "https://wowpedia.fandom.com/wiki/Tal%27doren",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Tal%27doren",
+          "evidenceRecordIds": [
+            "blackwald",
+            "taldoren"
+          ]
+        },
+        {
+          "id": 25,
+          "title": "Bradshaw Mill",
+          "url": "https://wowpedia.fandom.com/wiki/Bradshaw_Mill",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Bradshaw_Mill",
+          "evidenceRecordIds": [
+            "blackwald",
+            "bradshaw-mill"
+          ]
+        },
+        {
+          "id": 26,
+          "title": "Tempest's Reach",
+          "url": "https://wowpedia.fandom.com/wiki/Tempest%27s_Reach",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Tempest%27s_Reach",
+          "evidenceRecordIds": [
+            "tempests-reach"
+          ]
+        },
+        {
+          "id": 27,
+          "title": "Aderic's Repose",
+          "url": "https://wowpedia.fandom.com/wiki/Aderic%27s_Repose",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Aderic%27s_Repose",
+          "evidenceRecordIds": [
+            "aderics-repose"
+          ]
+        },
+        {
+          "id": 28,
+          "title": "Northgate Woods - Wowpedia - Your wiki guide to the World of Warcraft",
+          "url": "https://wowpedia.fandom.com/wiki/Northgate_Woods",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Northgate_Woods",
+          "evidenceRecordIds": [
+            "northgate-woods"
+          ]
+        },
+        {
+          "id": 29,
+          "title": "Northgate River",
+          "url": "https://warcraft.wiki.gg/wiki/Northgate_River",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Northgate_River",
+          "evidenceRecordIds": [
+            "northgate-river",
+            "the-headlands"
+          ]
+        },
+        {
+          "id": 30,
+          "title": "Northern Headlands",
+          "url": "https://wowpedia.fandom.com/wiki/Northern_Headlands",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Northern_Headlands",
+          "evidenceRecordIds": [
+            "northern-headlands"
+          ]
+        },
+        {
+          "id": 31,
+          "title": "Headlands",
+          "url": "https://wowpedia.fandom.com/wiki/Headlands",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Headlands",
+          "evidenceRecordIds": [
+            "the-headlands"
+          ]
+        },
+        {
+          "id": 32,
+          "title": "Darius Crowley",
+          "url": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+          "evidenceRecordIds": [
+            "pyrewood",
+            "ambermill",
+            "silverpine"
+          ]
+        },
+        {
+          "id": 33,
+          "title": "Shadowfang Keep",
+          "url": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+          "evidenceRecordIds": [
+            "pyrewood",
+            "shadowfang"
+          ]
+        },
+        {
+          "id": 35,
+          "title": "Ambermill - Wowpedia - Your wiki guide to the World of Warcraft",
+          "url": "https://wowpedia.fandom.com/wiki/Ambermill",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Ambermill",
+          "evidenceRecordIds": [
+            "ambermill"
+          ]
+        },
+        {
+          "id": 36,
+          "title": "Dalaran (kingdom) — Wowpedia (action=render)",
+          "url": "https://wowpedia.fandom.com/wiki/Dalaran_(kingdom)?action=render",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Dalaran_(kingdom)",
+          "evidenceRecordIds": [
+            "dalaran-city",
+            "lordamere-lake"
+          ]
+        },
+        {
+          "id": 38,
+          "title": "Fenris Isle",
+          "url": "https://wowpedia.fandom.com/wiki/Fenris_Isle",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Fenris_Isle",
+          "evidenceRecordIds": [
+            "fenris-keep",
+            "fenris-isle",
+            "lordamere-lake"
+          ]
+        },
+        {
+          "id": 39,
+          "title": "Capital City",
+          "url": "https://wowpedia.fandom.com/wiki/Capital_City",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Capital_City",
+          "evidenceRecordIds": [
+            "lordaeron-city"
+          ]
+        },
+        {
+          "id": 40,
+          "title": "Silverpine Forest - Wowpedia - Your wiki guide to the World of Warcraft",
+          "url": "https://wowpedia.fandom.com/wiki/Silverpine_Forest",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Silverpine_Forest",
+          "evidenceRecordIds": [
+            "pyrewood",
+            "silverpine",
+            "deep-elem-mine"
+          ]
+        },
+        {
+          "id": 41,
+          "title": "Lordamere Lake",
+          "url": "https://wowpedia.fandom.com/wiki/Lordamere_Lake",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lordamere_Lake",
+          "evidenceRecordIds": [
+            "silverpine",
+            "lordamere-lake"
+          ]
+        },
+        {
+          "id": 42,
+          "title": "Deep Elem Mine",
+          "url": "https://wowpedia.fandom.com/wiki/Deep_Elem_Mine",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Deep_Elem_Mine",
+          "evidenceRecordIds": [
+            "deep-elem-mine"
+          ]
+        },
+        {
+          "id": 43,
+          "title": "Galewatch Lighthouse",
+          "url": "https://wowpedia.fandom.com/wiki/Galewatch_Lighthouse",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Galewatch_Lighthouse",
+          "evidenceRecordIds": [
+            "northern-headlands",
+            "galewatch-lighthouse"
+          ]
+        },
+        {
+          "id": 44,
+          "title": "Violet Citadel",
+          "url": "https://wowpedia.fandom.com/wiki/Violet_Citadel",
+          "canonicalUrl": "https://wowpedia.fandom.com/wiki/Violet_Citadel",
+          "evidenceRecordIds": [
+            "violet-citadel"
+          ]
+        }
+      ],
+      "citationVerifierLimitation": "Встроенный URL-regex sources.py обрезает закрывающую скобку в сохраненном Dalaran_(kingdom)?action=render. Проверка Sources выполняется с исправленным regex только в памяти; исходный URL и файл skill не меняются. Не утверждается, что неизмененный stock CLI прошел этот случай."
+    },
+    "localProtectedFileComparison": {
+      "fileCount": 165,
+      "unchangedFileCount": 159,
+      "observedConcurrentChanges": [
+        {
+          "path": "assets/css/court-ui.css",
+          "sha256Before": "fb37b87ba24be9f3c864bf36bd58419f0bacd86e9882067ad6546626f111f117",
+          "sha256After": "82de8c2dda0a59a35356d5c73452f4d03ac49e0ca688ecf1d2343b91c984f37d"
+        },
+        {
+          "path": "assets/js/draft-publication.mjs",
+          "sha256Before": "0338e73077a4e5e7f19fd866281dd26b80a1e303a9063acee9c689c4f577113e",
+          "sha256After": "73bde61d5a314d85d022f454c9ce9abe9486621defbd27cb594182f0a861a00e"
+        },
+        {
+          "path": "assets/js/model.mjs",
+          "sha256Before": "f88e300da95657faeff9522608a1f96ff2e27c6c62bedba05721a3eb886c1b58",
+          "sha256After": "e783680df81ab43430502a479733986b8afb20f0105966de7199cddb61937d6a"
+        },
+        {
+          "path": "assets/runtime-manifest.json",
+          "sha256Before": "bd0b12f54c96bd77ba4ebe014dfaae474f2d6ab683bc621267e96868880de050",
+          "sha256After": "0e91e4aa6164acbdb5efb7ec032bc9922b4679604e589d6846b960e650e529fa"
+        },
+        {
+          "path": "docs/court-contract.md",
+          "sha256Before": "2d3185706a87a08e18acab482a13980d81e4718b345d257173fbea412e90834e",
+          "sha256After": "3985777b36a75016bd83a4c4aafe9d553583b154d875e9d96d1ead39b5aacda3"
+        },
+        {
+          "path": "tests/location-links-engine.test.mjs",
+          "sha256Before": "15dd608b4b533b1c2aafedbae7cc36dec1d511066fa33c32dce0935b22f03541",
+          "sha256After": "b2105c51fc06aeb3311c519d06b582837842a53836e6e7b86b778a863a9773f7"
+        }
+      ],
+      "note": "В общем репозитории параллельно идет интеграция родителя. Указаны реально обнаруженные отличия; этот аудит не пишет модули, данные, тесты или manifest и не откатывает чужие правки. Не заявляется неизменность всего рабочего дерева."
+    },
+    "ambiguousOrUnrepresentedCases": [
+      {
+        "ids": [
+          "taldoren"
+        ],
+        "disposition": "ordinary-point",
+        "note": "Сохраненный type=forest расходится с описанием единственного древнего дерева. Выбрано isLocation=false; отдельная роща-контейнер потребовала бы явного авторского решения. Древнее поселение или постройки источниками не доказываются.[24]"
+      },
+      {
+        "ids": [
+          "duskhaven",
+          "crowley-orchard",
+          "crowley-stable-grounds"
+        ],
+        "disposition": "author-scenario-links-only",
+        "note": "Сад и конюшни включены по запросу об окружающих хозяйственных точках, с basis=user. Описания доказывают сад южнее города и конюшни восточнее сада, но не муниципальное размещение/собственность. Не считать их городскими конюшнями; в обычном каноническом аудите без авторского указания эти ссылки не были бы доказанной вложенностью.[14][15]"
+      },
+      {
+        "ids": [
+          "duskhaven",
+          "hayward-fishery",
+          "hammond-farmstead",
+          "allen-farmstead"
+        ],
+        "disposition": "mandatory-author-scenario-links-only",
+        "note": "Три точные связи обязательны по запросу; фермы лежат ниже/западнее, рыбное хозяйство — на острове. Это окружение сценария, не подтвержденный кадастр и не наследование городского владельца.[16][17][18]"
+      },
+      {
+        "ids": [
+          "duskhaven",
+          "greymane-manor"
+        ],
+        "disposition": "no-link",
+        "note": "Поместье возвышается над прибрежными землями/городом; нахождение внутри duskhaven не подтверждено. Ссылка исключена, несмотря на вид с высоты и королевскую семью.[5]"
+      },
+      {
+        "ids": [
+          "tempests-reach",
+          "galewatch-lighthouse"
+        ],
+        "disposition": "no-link-no-synthetic-target",
+        "note": "У поселения есть собственный маяк в лоре, но его отдельного ID в текущем каталоге нет. galewatch-lighthouse — другой северный островной маяк; никакой подмены, новой цели, владельца или эффекта не добавлено.[26][43]"
+      },
+      {
+        "ids": [
+          "pyrewood",
+          "shadowfang"
+        ],
+        "disposition": "no-village-parent-link",
+        "note": "Крепость находится на утесе над деревней, а ее лорды связаны с деревней политически. Это не доказывает географическое нахождение внутри деревни. Достаточна прямая документированная ссылка silverpine→shadowfang.[33]"
+      },
+      {
+        "ids": [
+          "blackwald",
+          "stormglen"
+        ],
+        "disposition": "boundary-case-no-extra-link",
+        "note": "stormglen описана на южной опушке; архив говорит «in the southern edge», а описание самого леса — севернее деревни. Для краткой иерархии не добавлена спорная пограничная связь лес→деревня. При явном авторском включении опушки возможен второй родитель без изменения записи.[21][23]"
+      },
+      {
+        "ids": [
+          "blackwald",
+          "stormglen",
+          "bradshaw-mill"
+        ],
+        "disposition": "one-target-two-justified-parents",
+        "note": "Мельница прямо находится в южной части леса (basis=existing-description); автор отдельно указал навигацию из деревни (basis=user). У bradshaw-mill одна запись и две ссылки, не дубликаты объектов и не доказательство работы мельницы до стены.[25]"
+      },
+      {
+        "ids": [
+          "northgate-woods",
+          "northgate-river",
+          "emberstone-village"
+        ],
+        "disposition": "no-boundary-or-passing-links",
+        "note": "Описание леса дает реку как восточную границу; архивный речной текст говорит о пересечении леса. Деревня стоит у реки, а река проходит мимо нее. Не превращать границу или маршрут в размещение деревни/реки внутри контейнера без дополнительного авторского решения.[19][28][29]"
+      },
+      {
+        "ids": [
+          "silverpine",
+          "fenris-isle",
+          "lordamere-lake"
+        ],
+        "disposition": "lake-parent-preferred",
+        "note": "Остров точно расположен в озере; его «generally considered» принадлежность к Silverpine в архиве — классификация широкой игровой зоны. Предпочтен конкретный географический родитель lordamere-lake, не предполагаемое нахождение суши внутри леса; крепость доступна через остров.[38]"
+      },
+      {
+        "ids": [
+          "lordamere-lake",
+          "dalaran-city"
+        ],
+        "disposition": "no-shore-as-inside-link",
+        "note": "Город стоит у берегов озера, не внутри него. Для города есть собственная полезная связь violet-citadel; озеро не дублирует прибрежные города или всех потомков острова.[36][38][41]"
+      },
+      {
+        "ids": [
+          "merchant-square",
+          "greymane-court",
+          "aderics-repose",
+          "violet-citadel"
+        ],
+        "disposition": "missing-current-target-ids-no-new-records",
+        "note": "Почтовая станция, дом/подземный проход, гробница и внутренние библиотеки/лаборатории упомянуты в лоре, но не имеют отдельных записей среди 39 текущих ID. Новые цели и inline-объекты не создаются; отсутствие ссылки не отрицает упомянутую постройку.[9][27][44]"
+      }
+    ],
+    "commitOrDeploymentPerformed": false,
+    "verificationWindowUtc": {
+      "before": "2026-11-14T21:45:27.793881+00:00",
+      "after": "2026-11-14T22:02:32.391319+00:00"
+    }
+  }
+}

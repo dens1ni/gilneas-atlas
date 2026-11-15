@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" width="40" height="44">
+<title>ashbury device</title>
+<g fill="#9aa8b6" stroke="#343c43" stroke-width=".75" stroke-linejoin="round">
+<path fill-rule="evenodd" d="M20 4C14 4 13 9 15 12C9 11 8 19 13 21C15 22 17 21 18 20V39H28V34H23V30H28V26H23V20C27 24 33 20 32 15C31 11 28 11 25 12C27 8 25 4 20 4ZM20 9A3 3 0 1 0 20 15A3 3 0 1 0 20 9Z"/>
+<path d="M19 24V36" fill="none" stroke="#c0c9d1" stroke-width=".7"/>
+</g>
+</svg>

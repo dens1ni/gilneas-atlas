@@ -131,7 +131,7 @@
         }
       ]
     },
-    "publicationRevision": "authored-estates-v8",
+    "publicationRevision": "authored-estates-v9",
     "gilneasCrest": "assets/ui/gilneas-royal-shield.svg",
     "enhancedWidth": 5289,
     "enhancedHeight": 6822,
@@ -1593,7 +1593,10 @@
         "location-76bf7c1a-fcd2-4dfc-9013-26b909b4732f",
         "location-60382f79-7237-4492-a95b-749b4f290d9b",
         "ferry-duskhaven",
-        "location-54cebe0e-8a63-43c7-86d2-b85f6edf2732"
+        "location-54cebe0e-8a63-43c7-86d2-b85f6edf2732",
+        "location-mereldar-church-orphanage",
+        "location-duskhaven-duelist-club",
+        "location-duskhaven-powder-and-ash"
       ]
     },
     {
@@ -7699,6 +7702,153 @@
             "precision": "visual centre estimate"
           },
           "mechanics": "ownership-only faction bonus; no activation criterion"
+        }
+      }
+    },
+    {
+      "id": "location-mereldar-church-orphanage",
+      "name": "Церковный приют имени святой Мерельдар",
+      "x": 796.67,
+      "y": 3356.67,
+      "type": "building",
+      "faction": "gilneas",
+      "owner": "Церковь Тёмной Гавани",
+      "description": "За мостом, справа от дороги в Тёмную Гавань, стоит церковный приют имени святой Мерельдар. Здесь находят кров дети, оставшиеся без семьи: служители заботятся о них, учат грамоте и помогают освоить простое ремесло. По вечерам в общей комнате зажигают лампы, а у дверей принимают одежду и хлеб, принесённые соседями. Имя Мерельдар напоминает воспитателям о милосердии и надежде Света.",
+      "shortDescription": "Детский приют под попечением церкви Тёмной Гавани.",
+      "objects": [
+        {
+          "id": "object-bca45efc-fba5-5bfb-95c9-11054bc6406e",
+          "type": "building",
+          "name": "Учебная комната приюта",
+          "description": "В светлой комнате воспитатели учат детей грамоте, счёту и бережному отношению к соседям. На полках стоят переписанные вручную книги и лежат простые учебные дощечки.",
+          "owner": "Церковь Тёмной Гавани",
+          "modifiers": [
+            {
+              "id": "modifier-d98b2ba1-88ee-5118-b0e6-4a7258fea7d3",
+              "kind": "bonus",
+              "text": "+1 к проверкам Мудрости (Проницательность) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "sources": [],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "first building on image-right after northern bridge into Duskhaven; visual centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-duskhaven-duelist-club",
+      "name": "Клуб дуэлянтов",
+      "x": 833.11,
+      "y": 3464.67,
+      "type": "building",
+      "faction": "gilneas",
+      "owner": "Королевство Гилнеас",
+      "description": "В здании выше паба «Медный Пёс» собираются дуэлянты Тёмной Гавани. Здесь разбирают спорные вызовы, учат держать дистанцию и упражняются с учебными клинками под присмотром распорядителя. По стенам развешены старые рапиры и правила поединков; перед встречей противники называют секундантов, чтобы честь не обернулась бессмысленной расправой.",
+      "shortDescription": "Клуб поединков и фехтовальной выучки над пабом «Медный Пёс».",
+      "objects": [
+        {
+          "id": "object-1ab9b601-8630-5889-b420-f8b6bc4820d3",
+          "name": "Фехтовальный зал",
+          "type": "building",
+          "description": "В просторном зале размечены дорожки для учебных схваток. Наставники следят за стойкой, темпом и точностью движения клинка.",
+          "owner": "Королевство Гилнеас",
+          "modifiers": [
+            {
+              "id": "modifier-42b6c0d7-44ed-53fa-8c27-72e88454c10f",
+              "kind": "bonus",
+              "text": "+1 к броскам атаки оружием ближнего боя всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "visible roof immediately above Copper Dog pub; visual centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-duskhaven-powder-and-ash",
+      "name": "Оружейная лавка «Порох и Пепел»",
+      "x": 755,
+      "y": 3462.5,
+      "type": "workshop",
+      "faction": "gilneas",
+      "owner": "Королевство Гилнеас",
+      "description": "В длинном доме у западного края центрального квартала Тёмной Гавани работает оружейная лавка «Порох и Пепел». На стойках выставлены клинки и охотничьи ружья, а за прилавком мастер принимает оружие на осмотр и починку. Здесь говорят вполголоса: рядом с тонкой металлической стружкой хранят закрытые пороховые ящики, и неосторожного гостя прежде всего просят погасить трубку.",
+      "shortDescription": "Оружейная торговля и мастерская в длинном доме центрального квартала.",
+      "objects": [
+        {
+          "id": "object-bb49616e-306c-5091-bc6b-4db619954de3",
+          "type": "building",
+          "name": "Верстак оружейного мастера",
+          "description": "Мастер тщательно подгоняет детали оружия, осматривает замки и учит помощников замечать износ металла. Порох держат в отдельных закрытых ящиках вдали от огня.",
+          "owner": "Королевство Гилнеас",
+          "modifiers": [
+            {
+              "id": "modifier-04209c17-77d7-58d8-911a-a05945ad186f",
+              "kind": "bonus",
+              "text": "+1 к проверкам Интеллекта (Расследование) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "user-confirmed long building on western edge of central Duskhaven district; minimap comparison and visual centre estimate"
         }
       }
     }

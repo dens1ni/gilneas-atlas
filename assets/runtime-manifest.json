@@ -94,5 +94,6 @@
   "assets/ui/factions/candren-device.svg",
   "assets/js/realm-territory-layout.mjs",
   "assets/maps/origins-realm-landmask.png",
-  "assets/data/publication-v8.json"
+  "assets/data/publication-v8.json",
+  "assets/data/publication-v9.json"
 ]

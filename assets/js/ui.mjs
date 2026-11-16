@@ -256,7 +256,7 @@ export function initUI(context) {
     const location = data().locations.find(item => item.id === id);
     if (!location) return;
     const area = availableRect();
-    const scale = Math.max(camera.scale, 0.65);
+    const scale = 1;
     flyTo({ x: area.x + area.width / 2 - location.x * scale,
       y: area.y + area.height / 2 - location.y * scale, scale }, animate);
   }

@@ -1,0 +1,20 @@
+/* View-only layer: above mist (3), below markers (5). */
+#ferry-routes {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 4;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: .64;
+}
+#ferry-routes * {
+  pointer-events: none;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 5 7;
+}
+#ferry-routes .ferry-route-halo { stroke: #17282d; stroke-width: 3.5; }
+#ferry-routes .ferry-route-line { stroke: #a7c9ce; stroke-width: 1.8; }

@@ -4,6 +4,8 @@ import { validateRoyalCouncil } from './royal-council.mjs';
 import { validateWallConstruction } from './wall-progress.mjs';
 import { validateNobleLifeStatus } from './noble-life-status.mjs';
 import { validateLocationLinks } from './location-links.mjs';
+import { validateFerryNetwork } from './ferry-routes.mjs';
+import { validateObjectCondition } from './object-condition.mjs';
 
 const clone = (value, ancestors = new Set(), path = 'snapshot') => {
   if (value && typeof value === 'object') {
@@ -151,6 +153,9 @@ export function removeLocation(data, id) {
     next.locations = next.locations.filter(l => l.id !== id);
     for (const location of next.locations) {
       if (Object.hasOwn(location, 'linkedLocationIds')) location.linkedLocationIds = location.linkedLocationIds.filter(targetId => targetId !== id);
+    }
+    if (Object.hasOwn(next.meta, 'ferryNetwork')) {
+      next.meta.ferryNetwork.routes = next.meta.ferryNetwork.routes.filter(route => route.fromLocationId !== id && route.toLocationId !== id);
     }
   });
 }
@@ -435,5 +440,7 @@ export function normalizeData(raw) {
     }
     if (Object.hasOwn(t, 'name')) t.name = text(t.name, 160);
   });
+  validateFerryNetwork(data, {claim});
+  data.locations.forEach(location => { validateObjectCondition(location); location.objects.forEach(validateObjectCondition); });
   return data;
 }

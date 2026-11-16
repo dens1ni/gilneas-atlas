@@ -1,0 +1,19 @@
+{
+  "revision": "authored-estates-v6",
+  "locations": 86,
+  "factions": 16,
+  "objects": 98,
+  "nobles": 26,
+  "council": 33,
+  "sources": 135,
+  "wall": {
+    "base": 0,
+    "value": 10,
+    "max": 100,
+    "event": "Приказ Короны",
+    "stickyJournalProgress": true
+  },
+  "boundaries": "full-sovereign-domain with internal immediate-house areas, shared ancestor unions, raster land mask",
+  "supersedesHistoricalAudit": "authored-estates-data-audit.json records an earlier development snapshot, not current counts",
+  "verification": "final execution pending"
+}

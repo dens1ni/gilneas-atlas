@@ -1,7 +1,10 @@
 /* Last-loaded, narrowly scoped court interaction corrections. */
 #region-labels { display: none; }
 /* Vertical-only heraldry: an auto Y axis otherwise makes X scrollable too. */
-#layers { overflow-x: hidden; overflow-y: auto; }
+#layers { overflow-x: hidden; overflow-y: auto; bottom: 140px; max-height: calc(100% - 162px); }
+@media (max-width:760px), (max-height:540px) {
+  #layers { right: 70px; width: calc(100vw - 78px); max-width: 318px; max-height: calc(var(--app-height, 100dvh) - var(--header) - var(--dock) - 88px); }
+}
 #layer-body, #faction-list { min-width: 0; }
 #faction-list .faction-row :is(.faction-name, .faction-parent) {
   min-width: 0;

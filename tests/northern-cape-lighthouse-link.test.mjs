@@ -1,0 +1,31 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {normalizeData} from '../assets/js/model.mjs';
+import {resolveLocationLinks,validateLocationLinks} from '../assets/js/location-links.mjs';
+const read=name=>JSON.parse(fs.readFileSync(new URL(`../assets/data/${name}`,import.meta.url),'utf8'));
+
+test('Storm Lighthouse is the canonical child of the distinct Northern Headlands',()=>{
+ const data=read('atlas.json');
+ const parent=data.locations.find(location=>location.id==='northern-headlands');
+ const child=data.locations.find(location=>location.id==='galewatch-lighthouse');
+ assert.equal(parent.name,'Северный каменистый мыс');
+ assert.equal(child.name,'Штормовой маяк');
+ assert.equal(parent.isLocation,true);
+ assert.deepEqual(parent.linkedLocationIds,['galewatch-lighthouse','location-df0aa1e2-31ba-43fa-b6b0-84c7733f625a'],'Keep the lighthouse beside the later explicitly linked Gray Ford village');
+ assert.equal(parent.type,'landmark');
+ assert.equal(child.type,'lighthouse');
+ assert.deepEqual([parent.x,parent.y],[1500,2435]);
+ assert.deepEqual([child.x,child.y],[1131,2203]);
+ assert.equal(parent.faction,'gilneas');
+ assert.equal(child.faction,'gilneas','A geographical link does not transfer ownership');
+ assert.equal(parent.owner,'');
+ assert.equal(child.owner,'');
+ assert.strictEqual(resolveLocationLinks(data,parent.id).children[0],child,'Resolve the original marker, not a copied own object');
+ assert.deepEqual(resolveLocationLinks(data,child.id).parents.map(location=>location.id),['northern-headlands']);
+ assert.ok(!data.locations.find(location=>location.id==='the-headlands').linkedLocationIds.includes(child.id),'Do not attach it to House Raft\'s separate cape');
+ assert.equal(data.locations.filter(location=>location.id===child.id).length,1);
+ assert.equal(validateLocationLinks(data),true);
+ assert.deepEqual(normalizeData(data),data);
+ assert.deepEqual(data,read('publication-v6.json'));
+});

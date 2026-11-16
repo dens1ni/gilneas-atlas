@@ -1,0 +1,84 @@
+For other uses, see Leader of the Pack (disambiguation).
+Leader of the Pack
+Start
+Lord Godfrey[29.0, 63.9]
+End
+Lord Godfrey[29.0, 63.9]
+Level
+1-30
+Category
+Gilneas
+Race
+Worgen
+Experience
+512
+Reputation
++150 Gilneas
+Rewards
+[Leader's Boots]
+or [Dark Ranger's Vest]
+or [Dark Ranger's Hauberk]1
+Previous
+[1-30] Unleash the Beast, [1-30] Two By Sea, [1-30] Save the Children!
+Next
+[1-30] As the Land Shatters
+Leader of the Pack
+Level: 1-30
+Lord Godfrey[29.0, 63.9]
+Lord Godfrey[29.0, 63.9]
+XP: 512
+Rep: +150 Gilneas
+Rewards:
+[Leader's Boots]
+or [Dark Ranger's Vest]
+or [Dark Ranger's Hauberk]
+1
+Contents
+1 Objectives
+2 Description
+3 Rewards
+4 Progress
+5 Completion
+6 Notes
+7 Progression
+8 Patch changes
+9 External links
+Objectives[]
+Use the Mastiff Whistle to help you slay Dark Ranger Thyala.
+Dark Ranger Thyala slain [23.5, 67.5]
+[Mastiff Whistle] (provided)
+Description[]
+Excellent work so far, <name>. Our scouts have identified the leader of the Forsaken ground assault.
+One of Sylvanas' handpicked dark rangers is overseeing the battlefront from the Walden house near the shore. Take this whistle and use it when you're close to her.
+I'll have my men let loose our attack mastiffs to take her down. Be careful, <name>. You don't want to engage her alone.
+Rewards[]
+You will be able to choose one of these rewards:
+[Leader's Boots]
+[Dark Ranger's Vest]
+[Dark Ranger's Hauberk]
+You also will receive: 1
+Progress[]
+Is it done yet, <name>?
+Completion[]
+You did it, <name>. That should take the wind out of their sails.
+Notes[]
+Exit the cellar and follow the road south. Thyala is a level 7 elite dark ranger with 685 health astride a warhorse. Use the mastiff whistle to kill her.
+Complete the quest and players are advanced to phase 3:
+Melinda Hammond says: What's happening?!
+Lord Godfrey yells: Hold your positions, men!
+Progression[]
+[1-30] Last Chance at Humanity
+[1-30] Among Humans Again
+[1-30] In Need of Ingredients
+[1-30] Invasion
+[1-30] Kill or Be Killed
+[1-30] Hold the Line / [1-30] You Can't Take 'Em Alone
+[1-30] Holding Steady
+[1-30] The Allens' Storm Cellar
+[1-30] Unleash the Beast / [1-30] Two By Sea / [1-30] Save the Children!
+[1-30] Leader of the Pack
+Patch changes[]
+Patch 4.0.3a (2010-11-23): Added.
+External links[]
+Wowhead
+WoWDB

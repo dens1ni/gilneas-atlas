@@ -9,7 +9,7 @@ class DraftPublication(unittest.TestCase):
  def test_legacy_full_snapshot_keeps_objects_and_positions_but_adopts_unchanged_lore(self):
   old=json.loads((ROOT/'assets/data/publication-v1.json').read_text()) if (ROOT/'assets/data/publication-v1.json').exists() else json.loads((ROOT/'assets/data/atlas.json').read_text())
   loc=next(l for l in old['locations'] if l['id']=='gilneas-city');old_x=loc['x'];loc['x']+=12;loc['objects'].append({'id':'author-forge','type':'building','name':'Авторская кузница','description':'Мой текст','owner':'','modifiers':[{'id':'author-bonus','kind':'bonus','text':'+5 к снабжению'}]})
-  release=json.loads((ROOT/'assets/data/atlas.json').read_text());next(l for l in release['locations'] if l['id']=='gilneas-city')['description']='Проверка новой публикации';release['meta']['publicationRevision']='faction-dossiers-v2-test';release['meta']['gilneasCrest']='assets/ui/rose.svg'
+  release=json.loads((ROOT/'assets/data/publication-v5.json').read_text());next(l for l in release['locations'] if l['id']=='gilneas-city')['description']='Проверка новой публикации';release['meta']['publicationRevision']='faction-dossiers-v2-test';release['meta']['gilneasCrest']='assets/ui/rose.svg'
   server=http.server.ThreadingHTTPServer(('127.0.0.1',0),functools.partial(Quiet,directory=str(ROOT)));threading.Thread(target=server.serve_forever,daemon=True).start()
   try:
    with sync_playwright() as p:

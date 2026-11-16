@@ -16,6 +16,2018 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[1]
 ARTIFACTS = Path('/Users/daniil_si/.hermes/cache/scratch/gilneas-ui-revision-evidence')
 ATLAS = json.loads((ROOT / 'assets/data/atlas.json').read_text())
+
+# Frozen expectation is independent of the live atlas and never routed into
+# production/bootstrap integration tests. New own objects are parent-owned.
+CURRENT_ATLAS_FIXTURE = json.loads(r'''
+{
+  "label": "Frozen authorv6 canonical UI fixture including House Raft and the three requested ferry docks; independent expected typed ID sets",
+  "locations": [
+    {
+      "id": "gilneas-city",
+      "name": "Город Гилнеас",
+      "type": "city",
+      "faction": "greymane",
+      "sources": [
+        1,
+        2,
+        3,
+        9,
+        10
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Gilneas_City",
+      "provenance": {
+        "sources": [
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    {
+      "id": "greymane-manor",
+      "name": "Поместье Седогрива",
+      "type": "estate",
+      "faction": "greymane",
+      "sources": [
+        3,
+        5
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Greymane_Manor",
+      "provenance": {
+        "sources": [
+          5,
+          4
+        ]
+      }
+    },
+    {
+      "id": "cathedral-quarter",
+      "name": "Соборный квартал",
+      "type": "district",
+      "faction": "greymane",
+      "sources": [
+        2,
+        6,
+        7
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Cathedral_Quarter",
+      "provenance": {
+        "sources": [
+          6,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "id": "lights-dawn-cathedral",
+      "name": "Собор Рассвета",
+      "type": "church",
+      "faction": "gilneas",
+      "sources": [
+        1,
+        2,
+        7
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Light%27s_Dawn_Cathedral",
+      "provenance": {
+        "sources": [
+          7,
+          4
+        ]
+      }
+    },
+    {
+      "id": "greymane-court",
+      "name": "Площадь Седогрива",
+      "type": "district",
+      "faction": "greymane",
+      "sources": [
+        3,
+        8
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Greymane_Court",
+      "provenance": {
+        "sources": [
+          8,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "id": "merchant-square",
+      "name": "Торговая площадь",
+      "type": "district",
+      "faction": "greymane",
+      "sources": [
+        9
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Merchant_Square",
+      "provenance": {
+        "sources": [
+          9,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "id": "military-district",
+      "name": "Военный квартал",
+      "type": "district",
+      "faction": "greymane",
+      "sources": [
+        10,
+        11
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Military_District",
+      "provenance": {
+        "sources": [
+          10,
+          1,
+          4
+        ]
+      }
+    },
+    {
+      "id": "stoneward-prison",
+      "name": "Каменная тюрьма",
+      "type": "fortress",
+      "faction": "gilneas",
+      "sources": [
+        2,
+        11
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Stoneward_Prison",
+      "provenance": {
+        "sources": [
+          11,
+          4
+        ]
+      }
+    },
+    {
+      "id": "keel-harbor",
+      "name": "Килевая гавань",
+      "type": "harbor",
+      "faction": "raft",
+      "sources": [
+        12
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Keel_Harbor",
+      "provenance": {
+        "sources": [
+          12,
+          4
+        ]
+      }
+    },
+    {
+      "id": "duskhaven",
+      "name": "Темная Гавань",
+      "type": "city",
+      "faction": "gilneas",
+      "sources": [
+        3,
+        13,
+        14,
+        17
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Duskhaven",
+      "provenance": {
+        "sources": [
+          13,
+          4
+        ]
+      }
+    },
+    {
+      "id": "hayward-fishery",
+      "name": "Рыбное хозяйство Хейварда",
+      "type": "fishery",
+      "faction": "gilneas",
+      "sources": [
+        16
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Hayward_Fishery",
+      "provenance": {
+        "sources": [
+          16,
+          4
+        ]
+      }
+    },
+    {
+      "id": "hammond-farmstead",
+      "name": "Ферма Хэммондов",
+      "type": "farm",
+      "faction": "gilneas",
+      "sources": [
+        17,
+        18
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Hammond_Farmstead",
+      "provenance": {
+        "sources": [
+          17,
+          4
+        ]
+      }
+    },
+    {
+      "id": "allen-farmstead",
+      "name": "Ферма Аллена",
+      "type": "farm",
+      "faction": "gilneas",
+      "sources": [
+        17,
+        18
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Allen_Farmstead",
+      "provenance": {
+        "sources": [
+          18,
+          4
+        ]
+      }
+    },
+    {
+      "id": "emberstone-village",
+      "name": "Деревня Тлеющего Угля",
+      "type": "settlement",
+      "faction": "gilneas",
+      "sources": [
+        19,
+        20
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Emberstone_Village",
+      "provenance": {
+        "sources": [
+          19,
+          4
+        ]
+      }
+    },
+    {
+      "id": "emberstone-mine",
+      "name": "Шахта Тлеющего Угля",
+      "type": "mine",
+      "faction": "gilneas",
+      "sources": [
+        19,
+        20
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Emberstone_Mine",
+      "provenance": {
+        "sources": [
+          20,
+          4
+        ]
+      }
+    },
+    {
+      "id": "stormglen",
+      "name": "Грозовой Перевал",
+      "type": "settlement",
+      "faction": "gilneas",
+      "sources": [
+        21,
+        22
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Stormglen_Village",
+      "provenance": {
+        "sources": [
+          21,
+          22,
+          4
+        ]
+      }
+    },
+    {
+      "id": "blackwald",
+      "name": "Черная дубрава",
+      "type": "forest",
+      "faction": "harvest-witches",
+      "sources": [
+        23,
+        24,
+        25
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Blackwald",
+      "provenance": {
+        "sources": [
+          23,
+          4,
+          46,
+          50
+        ]
+      }
+    },
+    {
+      "id": "taldoren",
+      "name": "Тал'дорен",
+      "type": "forest",
+      "faction": "harvest-witches",
+      "sources": [
+        1,
+        24
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Tal%27doren",
+      "provenance": {
+        "sources": [
+          24,
+          4
+        ]
+      }
+    },
+    {
+      "id": "bradshaw-mill",
+      "name": "Мельница Брэдшоу",
+      "type": "mill",
+      "faction": "gilneas",
+      "sources": [
+        21,
+        25
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Bradshaw_Mill",
+      "provenance": {
+        "sources": [
+          25,
+          4
+        ]
+      }
+    },
+    {
+      "id": "tempests-reach",
+      "name": "Предел бури",
+      "type": "settlement",
+      "faction": "walden",
+      "sources": [
+        26
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Tempest%27s_Reach",
+      "provenance": {
+        "sources": [
+          26,
+          4
+        ]
+      }
+    },
+    {
+      "id": "aderics-repose",
+      "name": "Покой Адерика",
+      "type": "cemetery",
+      "faction": "raft",
+      "sources": [
+        27
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Aderic%27s_Repose",
+      "provenance": {
+        "sources": [
+          27,
+          4
+        ]
+      }
+    },
+    {
+      "id": "northgate-woods",
+      "name": "Лес Северных врат",
+      "type": "forest",
+      "faction": "gilneas",
+      "sources": [
+        28
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Northgate_Woods",
+      "provenance": {
+        "sources": [
+          28,
+          4
+        ]
+      }
+    },
+    {
+      "id": "northern-headlands",
+      "name": "Северный каменистый мыс",
+      "type": "landmark",
+      "faction": "gilneas",
+      "sources": [
+        30,
+        43,
+        46
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Northern_Headlands",
+      "provenance": {
+        "sources": [
+          30,
+          4
+        ]
+      }
+    },
+    {
+      "id": "the-headlands",
+      "name": "Каменистый мыс",
+      "type": "forest",
+      "faction": "raft",
+      "sources": [
+        29,
+        31
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Headlands",
+      "provenance": {
+        "sources": [
+          31,
+          4
+        ]
+      }
+    },
+    {
+      "id": "pyrewood",
+      "name": "Деревня Погребальных Костров",
+      "type": "settlement",
+      "faction": "crowley",
+      "sources": [
+        2,
+        32,
+        33,
+        40
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Pyrewood_Village",
+      "provenance": {
+        "sources": [
+          32,
+          4
+        ]
+      }
+    },
+    {
+      "id": "shadowfang",
+      "name": "Крепость Пирвуд",
+      "type": "fortress",
+      "faction": "silverlaine",
+      "sources": [
+        3,
+        33,
+        59
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+      "provenance": {
+        "sources": [
+          33,
+          34
+        ]
+      }
+    },
+    {
+      "id": "ambermill",
+      "name": "Янтарная мельница",
+      "type": "settlement",
+      "faction": "crowley",
+      "sources": [
+        32,
+        35
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Ambermill",
+      "provenance": {
+        "sources": [
+          32,
+          35,
+          4
+        ]
+      }
+    },
+    {
+      "id": "dalaran-city",
+      "name": "Даларан",
+      "type": "city",
+      "faction": "dalaran",
+      "sources": [
+        36,
+        37
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Dalaran",
+      "provenance": {
+        "sources": [
+          36,
+          37,
+          4
+        ]
+      }
+    },
+    {
+      "id": "fenris-keep",
+      "name": "Крепость Фенриса",
+      "type": "fortress",
+      "faction": "lordaeron",
+      "sources": [
+        38
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Fenris_Keep",
+      "provenance": {
+        "sources": [
+          38,
+          4
+        ]
+      }
+    },
+    {
+      "id": "fenris-isle",
+      "name": "Остров Фенриса",
+      "type": "landmark",
+      "faction": "lordaeron",
+      "sources": [
+        38
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Fenris_Isle",
+      "provenance": {
+        "sources": [
+          38,
+          4
+        ]
+      }
+    },
+    {
+      "id": "lordaeron-city",
+      "name": "Столица Лордерона",
+      "type": "city",
+      "faction": "lordaeron",
+      "sources": [
+        39,
+        45,
+        46
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Capital_City",
+      "provenance": {
+        "sources": [
+          39
+        ]
+      }
+    },
+    {
+      "id": "silverpine",
+      "name": "Серебряный бор",
+      "type": "forest",
+      "faction": "lordaeron",
+      "sources": [
+        32,
+        40,
+        41
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Silverpine_Forest",
+      "provenance": {
+        "sources": [
+          40,
+          32,
+          4
+        ]
+      }
+    },
+    {
+      "id": "lordamere-lake",
+      "name": "Озеро Лордамер",
+      "type": "landmark",
+      "faction": null,
+      "sources": [
+        36,
+        38,
+        41
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lordamere_Lake",
+      "provenance": {
+        "sources": [
+          41
+        ]
+      }
+    },
+    {
+      "id": "deep-elem-mine",
+      "name": "Серебряный рудник",
+      "type": "mine",
+      "faction": "lordaeron",
+      "sources": [
+        40,
+        42
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Deep_Elem_Mine",
+      "provenance": {
+        "sources": [
+          42
+        ]
+      }
+    },
+    {
+      "id": "galewatch-lighthouse",
+      "name": "Штормовой маяк",
+      "type": "lighthouse",
+      "faction": "gilneas",
+      "sources": [
+        43
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Galewatch_Lighthouse",
+      "provenance": {
+        "sources": [
+          43
+        ]
+      }
+    },
+    {
+      "id": "violet-citadel",
+      "name": "Аметистовая цитадель",
+      "type": "fortress",
+      "faction": "dalaran",
+      "sources": [
+        44
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Violet_Citadel",
+      "provenance": {
+        "sources": [
+          44,
+          36
+        ]
+      }
+    },
+    {
+      "id": "location-df0aa1e2-31ba-43fa-b6b0-84c7733f625a",
+      "name": "Деревня Серый Брод",
+      "type": "settlement",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-ff52d2ed-f36b-4aba-8eac-7de87c8c76d7",
+      "name": "Храм Владыки Глубин",
+      "type": "church",
+      "faction": "tidesages",
+      "sources": [
+        "source-lore-tidesages-wowpedia",
+        "source-lore-tidesage-legends-wowpedia",
+        "source-lore-kul-tiras-founding-wowpedia",
+        "source-lore-kul-tiras-settlers-wowpedia"
+      ],
+      "provenance": {
+        "sources": [
+          "source-lore-tidesages-wowpedia",
+          "source-lore-tidesage-legends-wowpedia",
+          "source-lore-kul-tiras-founding-wowpedia",
+          "source-lore-kul-tiras-settlers-wowpedia"
+        ]
+      }
+    },
+    {
+      "id": "location-fb88bb30-c639-4f75-a142-92445555a772",
+      "name": "Деревня Мшистые Кровли",
+      "type": "settlement",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-4f29a377-1080-4a49-b400-026ff4c7c589",
+      "name": "Ипподром",
+      "type": "stable",
+      "faction": "walden",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-9020653f-e319-4959-854d-9669422e14cc",
+      "name": "Поместье Дома Вальден",
+      "type": "estate",
+      "faction": "walden",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-e8c8f59c-83ac-49ff-819f-9708a9734ff1",
+      "name": "Маяк Звёздного Порядка",
+      "type": "lighthouse",
+      "faction": "walden",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-52d50172-b218-4b6b-be09-eccd9fb419ce",
+      "name": "Поместье Дома Эшбери",
+      "type": "estate",
+      "faction": "ashbury",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-b415ddf5-f12a-4421-829f-e8723bdaa1d4",
+      "name": "Кладбище Черной Дубравы",
+      "type": "cemetery",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-a4bf5eb0-1154-4519-9400-f17ced83a1d9",
+      "name": "Дом смотрителя кладбища",
+      "type": "building",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-75988492-6f32-4e29-9058-ef9d73e1746d",
+      "name": "Дом травника",
+      "type": "building",
+      "faction": "harvest-witches",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-5187131a-bb77-4e98-948d-ddd4247781f2",
+      "name": "Туманные Топи",
+      "type": "landmark",
+      "faction": "harvest-witches",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-8288bc4e-bb08-45d9-ace3-bc878fe7e8ba",
+      "name": "Дом егеря",
+      "type": "building",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-54cebe0e-8a63-43c7-86d2-b85f6edf2732",
+      "name": "Дом егеря",
+      "type": "building",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-544521a1-babb-4fea-af73-6ebb91c476e0",
+      "name": "Дом смотрителя",
+      "type": "building",
+      "faction": "raft",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-8ee04e39-6c00-4b0b-9bcf-17de4fddb9bb",
+      "name": "Церковь Темной Гавани",
+      "type": "church",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-3325cfda-47a7-4e3d-9cac-3797f4dbaa9d",
+      "name": "Маяк Темной Гавани",
+      "type": "lighthouse",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-17511ea5-f77c-4d83-a187-ee2da7acbf21",
+      "name": "Лечебница Тихий Холм",
+      "type": "hospital",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-426acd7a-5f00-48c0-a6aa-1de9ce3ac2fc",
+      "name": "Портовый район",
+      "type": "harbor",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-ecbf79ff-610a-4bde-8d16-a437954ed7a4",
+      "name": "Казарма стражи",
+      "type": "barracks",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-f2adc0b4-c081-404a-a546-16ca52d028aa",
+      "name": "Городской рынок",
+      "type": "market",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-94b0bb4b-f058-4b9d-9ec3-eb3fdb02b21f",
+      "name": "Городская ратуша",
+      "type": "building",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-3cfcf216-6753-4b1a-bd43-3adc40bd96f0",
+      "name": "Паб Медный Пес",
+      "type": "inn",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-18f52fa5-7ee8-467f-81a1-d8d8ec11929f",
+      "name": "Алкогольная мануфактура",
+      "type": "workshop",
+      "faction": "evermont",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-76bf7c1a-fcd2-4dfc-9013-26b909b4732f",
+      "name": "Поместье Дома Эвермонт",
+      "type": "estate",
+      "faction": "evermont",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-60382f79-7237-4492-a95b-749b4f290d9b",
+      "name": "Поместье Краули",
+      "type": "estate",
+      "faction": "crowley",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-883f0f53-ba1a-44a5-bd8e-60b2d5d8cc22",
+      "name": "Дом для прислуги",
+      "type": "building",
+      "faction": "crowley",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-ea37cf4e-63d7-48d1-bb38-c5a465f16f3a",
+      "name": "Конюшни Краули",
+      "type": "stable",
+      "faction": "crowley",
+      "provenance": {
+        "sources": [
+          15,
+          "family-source-3",
+          14
+        ]
+      },
+      "sources": [
+        15,
+        "family-source-3",
+        14
+      ],
+      "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Crowley_Stable_Grounds"
+    },
+    {
+      "id": "location-6f6350b7-e0d4-49f0-b333-a807c0003842",
+      "name": "Конюшни поместья Эвермонт",
+      "type": "stable",
+      "faction": "evermont",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-d62d4e06-bb2d-48dc-8f59-fcbe0641f652",
+      "name": "Псарня поместья Эвермонт",
+      "type": "building",
+      "faction": "evermont",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-d3cda392-00e2-4afd-8cb4-09e8330221a6",
+      "name": "Домик прислуги поместья Эвермонт",
+      "type": "building",
+      "faction": "evermont",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-6e3bbad5-4890-4ae0-b8cc-1a3fa97535a4",
+      "name": "Постоялый двор",
+      "type": "inn",
+      "faction": null,
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "ambermill-town-hall",
+      "name": "Ратуша Янтарной мельницы",
+      "type": "building",
+      "faction": "crowley",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "ambermill-westbank-farm",
+      "name": "Ферма Янтарный Колос",
+      "type": "farm",
+      "faction": "crowley",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "ambermill-firrow-farm",
+      "name": "Ферма Вересковый Двор",
+      "type": "farm",
+      "faction": "crowley",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "ambermill-moorfield-farm",
+      "name": "Ферма Тёплая Борозда",
+      "type": "farm",
+      "faction": "crowley",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-raft-estate",
+      "name": "Поместье Дома Рафт",
+      "type": "estate",
+      "faction": "raft",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "ferry-duskhaven",
+      "name": "Паромщик Темной Гавани",
+      "type": "ferry",
+      "faction": "gilneas",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "ferry-keel-harbor",
+      "name": "Паромщик Килевой гавани",
+      "type": "ferry",
+      "faction": "raft",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "ferry-stormglen",
+      "name": "Паромщик под Грозовым Перевалом",
+      "type": "ferry",
+      "faction": "gilneas",
+      "provenance": {
+        "sources": []
+      }
+    },
+    {
+      "id": "location-gray-ford-godfrey-estate",
+      "name": "Поместье Годфри у Серого Брода",
+      "type": "estate",
+      "faction": "godfrey",
+      "provenance": {
+        "confidence": "custom",
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalEvidence": false,
+          "conditionBasis": "user described one intact and two burned houses on the supplied raster",
+          "placement": "visual original-raster anchor; not measured world coordinates",
+          "ownership": {
+            "basis": "explicit-user-authorized-scenario-inference",
+            "canonicalEarlyCadastre": false
+          }
+        },
+        "sources": []
+      }
+    },
+    {
+      "id": "location-gray-ford-north-burned-house",
+      "name": "Северное пепелище Серого Брода",
+      "type": "building",
+      "faction": "godfrey",
+      "provenance": {
+        "confidence": "custom",
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalEvidence": false,
+          "conditionBasis": "user described one intact and two burned houses on the supplied raster",
+          "placement": "visual original-raster anchor; not measured world coordinates",
+          "ownership": {
+            "basis": "explicit-user-authorized-scenario-inference",
+            "canonicalEarlyCadastre": false
+          }
+        },
+        "sources": []
+      }
+    },
+    {
+      "id": "location-gray-ford-east-burned-house",
+      "name": "Восточное пепелище Серого Брода",
+      "type": "building",
+      "faction": "godfrey",
+      "provenance": {
+        "confidence": "custom",
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalEvidence": false,
+          "conditionBasis": "user described one intact and two burned houses on the supplied raster",
+          "placement": "visual original-raster anchor; not measured world coordinates",
+          "ownership": {
+            "basis": "explicit-user-authorized-scenario-inference",
+            "canonicalEarlyCadastre": false
+          }
+        },
+        "sources": []
+      }
+    },
+    {
+      "id": "location-merchant-cloth-shop",
+      "name": "Лавка суконщика «Серый Бархат»",
+      "type": "market",
+      "faction": "greymane",
+      "provenance": {
+        "confidence": "custom",
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalEvidence": false,
+          "placement": "existing building roof or garden in the supplied raster; use is scenario-authored"
+        },
+        "sources": []
+      }
+    },
+    {
+      "id": "location-merchant-herbal-shop",
+      "name": "Травная лавка «Вереск и Воск»",
+      "type": "market",
+      "faction": "greymane",
+      "provenance": {
+        "confidence": "custom",
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalEvidence": false,
+          "placement": "existing building roof or garden in the supplied raster; use is scenario-authored"
+        },
+        "sources": []
+      }
+    },
+    {
+      "id": "location-merchant-ironware-shop",
+      "name": "Скобяная лавка «Медный Ключ»",
+      "type": "market",
+      "faction": "greymane",
+      "provenance": {
+        "confidence": "custom",
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalEvidence": false,
+          "placement": "existing building roof or garden in the supplied raster; use is scenario-authored"
+        },
+        "sources": []
+      }
+    },
+    {
+      "id": "location-military-forge",
+      "name": "Кузница «Королевская Искра»",
+      "type": "forge",
+      "faction": "greymane",
+      "provenance": {
+        "confidence": "custom",
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalEvidence": false,
+          "placement": "existing building roof or garden in the supplied raster; use is scenario-authored"
+        },
+        "sources": []
+      }
+    },
+    {
+      "id": "location-military-barracks",
+      "name": "Казармы «Каменный Караул»",
+      "type": "barracks",
+      "faction": "greymane",
+      "provenance": {
+        "confidence": "custom",
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalEvidence": false,
+          "placement": "existing building roof or garden in the supplied raster; use is scenario-authored"
+        },
+        "sources": []
+      }
+    },
+    {
+      "id": "location-greymane-record-office",
+      "name": "Палата городских книг",
+      "type": "building",
+      "faction": "greymane",
+      "provenance": {
+        "confidence": "custom",
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalEvidence": false,
+          "placement": "existing building roof or garden in the supplied raster; use is scenario-authored"
+        },
+        "sources": []
+      }
+    },
+    {
+      "id": "location-greymane-post-office",
+      "name": "Дом королевской почты",
+      "type": "building",
+      "faction": "greymane",
+      "provenance": {
+        "confidence": "custom",
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalEvidence": false,
+          "placement": "existing building roof or garden in the supplied raster; use is scenario-authored"
+        },
+        "sources": []
+      }
+    },
+    {
+      "id": "location-cathedral-rose-park",
+      "name": "Парк «Тихие Розы»",
+      "type": "garden",
+      "faction": "greymane",
+      "provenance": {
+        "confidence": "custom",
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalEvidence": false,
+          "placement": "existing building roof or garden in the supplied raster; use is scenario-authored"
+        },
+        "sources": []
+      }
+    }
+  ],
+  "factions": [
+    {
+      "id": "gilneas",
+      "parent": null
+    },
+    {
+      "id": "greymane",
+      "parent": "gilneas"
+    },
+    {
+      "id": "crowley",
+      "parent": "gilneas"
+    },
+    {
+      "id": "silverlaine",
+      "parent": "crowley"
+    },
+    {
+      "id": "godfrey",
+      "parent": "gilneas"
+    },
+    {
+      "id": "ashbury",
+      "parent": "gilneas"
+    },
+    {
+      "id": "marley",
+      "parent": "gilneas"
+    },
+    {
+      "id": "walden",
+      "parent": "gilneas"
+    },
+    {
+      "id": "dalaran",
+      "parent": null
+    },
+    {
+      "id": "lordaeron",
+      "parent": null
+    },
+    {
+      "id": "evermont",
+      "parent": "gilneas"
+    },
+    {
+      "id": "harvest-witches",
+      "parent": "gilneas"
+    },
+    {
+      "id": "tidesages",
+      "parent": "gilneas"
+    },
+    {
+      "id": "raft",
+      "parent": "gilneas"
+    }
+  ],
+  "nobles": [
+    {
+      "id": "noble-genn"
+    },
+    {
+      "id": "noble-darius"
+    },
+    {
+      "id": "noble-godfrey"
+    },
+    {
+      "id": "noble-ashbury"
+    },
+    {
+      "id": "noble-marley"
+    },
+    {
+      "id": "noble-archibald"
+    },
+    {
+      "id": "noble-ashbury-first"
+    },
+    {
+      "id": "noble-walden"
+    },
+    {
+      "id": "noble-hewell"
+    },
+    {
+      "id": "noble-silverlaine"
+    },
+    {
+      "id": "noble-longshore"
+    },
+    {
+      "id": "noble-candren"
+    },
+    {
+      "id": "noble-isiden"
+    },
+    {
+      "id": "noble-tulvan"
+    },
+    {
+      "id": "noble-harford"
+    },
+    {
+      "id": "noble-morrison"
+    },
+    {
+      "id": "noble-aderic"
+    },
+    {
+      "id": "noble-mia"
+    },
+    {
+      "id": "noble-liam"
+    },
+    {
+      "id": "noble-tess"
+    },
+    {
+      "id": "noble-lorna"
+    },
+    {
+      "id": "noble-hiram-creed"
+    },
+    {
+      "id": "noble-woofington"
+    },
+    {
+      "id": "noble-alys-finnsson"
+    },
+    {
+      "id": "noble-ashmore"
+    },
+    {
+      "id": "noble-lady-in-white"
+    }
+  ],
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://wowpedia.fandom.com/wiki/Gilneas_City",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Gilneas_City"
+    },
+    {
+      "id": 2,
+      "url": "https://wowpedia.fandom.com/wiki/Gilneas_(kingdom)?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Gilneas_(kingdom)"
+    },
+    {
+      "id": 3,
+      "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas"
+    },
+    {
+      "id": 4,
+      "url": "https://wago.tools/db2/AreaTable/csv?build=4.4.2.60895&locale=ruRU",
+      "canonicalUrl": "https://wago.tools/db2/AreaTable/csv?build=4.4.2.60895&locale=ruRU"
+    },
+    {
+      "id": 5,
+      "url": "https://wowpedia.fandom.com/wiki/Greymane_Manor",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Greymane_Manor"
+    },
+    {
+      "id": 6,
+      "url": "https://wowpedia.fandom.com/wiki/Cathedral_Quarter",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Cathedral_Quarter"
+    },
+    {
+      "id": 7,
+      "url": "https://wowpedia.fandom.com/wiki/Light%27s_Dawn_Cathedral",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Light%27s_Dawn_Cathedral"
+    },
+    {
+      "id": 8,
+      "url": "https://warcraft.wiki.gg/wiki/Greymane_Court",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Greymane_Court"
+    },
+    {
+      "id": 9,
+      "url": "https://warcraft.wiki.gg/wiki/Merchant_Square",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Merchant_Square"
+    },
+    {
+      "id": 10,
+      "url": "https://warcraft.wiki.gg/wiki/Military_District",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Military_District"
+    },
+    {
+      "id": 11,
+      "url": "https://warcraft.wiki.gg/wiki/Stoneward_Prison",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Stoneward_Prison"
+    },
+    {
+      "id": 12,
+      "url": "https://wowpedia.fandom.com/wiki/Keel_Harbor",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Keel_Harbor"
+    },
+    {
+      "id": 13,
+      "url": "https://wowpedia.fandom.com/wiki/Duskhaven",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Duskhaven"
+    },
+    {
+      "id": 14,
+      "url": "https://wowpedia.fandom.com/wiki/Crowley_Orchard",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Crowley_Orchard"
+    },
+    {
+      "id": 15,
+      "url": "https://wowpedia.fandom.com/wiki/Crowley_Stable_Grounds",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Crowley_Stable_Grounds"
+    },
+    {
+      "id": 16,
+      "url": "https://wowpedia.fandom.com/wiki/Hayward_Fishery",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Hayward_Fishery"
+    },
+    {
+      "id": 17,
+      "url": "https://wowpedia.fandom.com/wiki/Hammond_Farmstead",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Hammond_Farmstead"
+    },
+    {
+      "id": 18,
+      "url": "https://wowpedia.fandom.com/wiki/Allen_Farmstead",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Allen_Farmstead"
+    },
+    {
+      "id": 19,
+      "url": "https://wowpedia.fandom.com/wiki/Emberstone_Village",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Emberstone_Village"
+    },
+    {
+      "id": 20,
+      "url": "https://wowpedia.fandom.com/wiki/Emberstone_Mine",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Emberstone_Mine"
+    },
+    {
+      "id": 21,
+      "url": "https://wowpedia.fandom.com/wiki/Stormglen_Village",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Stormglen_Village"
+    },
+    {
+      "id": 22,
+      "url": "https://www.wowhead.com/ru/quest=24483/%D0%B3%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D0%BE%D0%B9-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%B0%D0%BB",
+      "canonicalUrl": "https://www.wowhead.com/ru/quest=24483/%D0%B3%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D0%BE%D0%B9-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%B0%D0%BB"
+    },
+    {
+      "id": 23,
+      "url": "https://wowpedia.fandom.com/wiki/Blackwald",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Blackwald"
+    },
+    {
+      "id": 24,
+      "url": "https://wowpedia.fandom.com/wiki/Tal%27doren",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Tal%27doren"
+    },
+    {
+      "id": 25,
+      "url": "https://wowpedia.fandom.com/wiki/Bradshaw_Mill",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Bradshaw_Mill"
+    },
+    {
+      "id": 26,
+      "url": "https://wowpedia.fandom.com/wiki/Tempest%27s_Reach",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Tempest%27s_Reach"
+    },
+    {
+      "id": 27,
+      "url": "https://wowpedia.fandom.com/wiki/Aderic%27s_Repose",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Aderic%27s_Repose"
+    },
+    {
+      "id": 28,
+      "url": "https://wowpedia.fandom.com/wiki/Northgate_Woods",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Northgate_Woods"
+    },
+    {
+      "id": 29,
+      "url": "https://warcraft.wiki.gg/wiki/Northgate_River",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Northgate_River"
+    },
+    {
+      "id": 30,
+      "url": "https://wowpedia.fandom.com/wiki/Northern_Headlands",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Northern_Headlands"
+    },
+    {
+      "id": 31,
+      "url": "https://wowpedia.fandom.com/wiki/Headlands",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Headlands"
+    },
+    {
+      "id": 32,
+      "url": "https://wowpedia.fandom.com/wiki/Darius_Crowley",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Darius_Crowley"
+    },
+    {
+      "id": 33,
+      "url": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep"
+    },
+    {
+      "id": 34,
+      "url": "https://warcraft.wiki.gg/wiki/Shadowfang_Keep",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Shadowfang_Keep"
+    },
+    {
+      "id": 35,
+      "url": "https://wowpedia.fandom.com/wiki/Ambermill",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Ambermill"
+    },
+    {
+      "id": 36,
+      "url": "https://wowpedia.fandom.com/wiki/Dalaran_(kingdom)?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Dalaran_(kingdom)"
+    },
+    {
+      "id": 37,
+      "url": "https://wowpedia.fandom.com/wiki/Antonidas",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Antonidas"
+    },
+    {
+      "id": 38,
+      "url": "https://wowpedia.fandom.com/wiki/Fenris_Isle",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Fenris_Isle"
+    },
+    {
+      "id": 39,
+      "url": "https://wowpedia.fandom.com/wiki/Capital_City",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Capital_City"
+    },
+    {
+      "id": 40,
+      "url": "https://wowpedia.fandom.com/wiki/Silverpine_Forest",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Silverpine_Forest"
+    },
+    {
+      "id": 41,
+      "url": "https://wowpedia.fandom.com/wiki/Lordamere_Lake",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lordamere_Lake"
+    },
+    {
+      "id": 42,
+      "url": "https://wowpedia.fandom.com/wiki/Deep_Elem_Mine",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Deep_Elem_Mine"
+    },
+    {
+      "id": 43,
+      "url": "https://wowpedia.fandom.com/wiki/Galewatch_Lighthouse",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Galewatch_Lighthouse"
+    },
+    {
+      "id": 44,
+      "url": "https://wowpedia.fandom.com/wiki/Violet_Citadel",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Violet_Citadel"
+    },
+    {
+      "id": 45,
+      "url": "https://wowpedia.fandom.com/wiki/Genn_Greymane",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Genn_Greymane"
+    },
+    {
+      "id": 46,
+      "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack",
+      "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack"
+    },
+    {
+      "id": 47,
+      "url": "https://wowpedia.fandom.com/wiki/Greymane_family",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Greymane_family"
+    },
+    {
+      "id": 48,
+      "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack",
+      "canonicalUrl": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack"
+    },
+    {
+      "id": 49,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Vincent_Godfrey"
+    },
+    {
+      "id": 50,
+      "url": "https://wowpedia.fandom.com/wiki/Baron_Ashbury",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Ashbury"
+    },
+    {
+      "id": 51,
+      "url": "https://wowpedia.fandom.com/wiki/Betrayal_at_Tempest%27s_Reach",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Betrayal_at_Tempest%27s_Reach"
+    },
+    {
+      "id": 52,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Marley?mobileaction=toggle_view_mobile",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Marley"
+    },
+    {
+      "id": 53,
+      "url": "https://wowpedia.fandom.com/wiki/Archibald_Greymane",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Archibald_Greymane"
+    },
+    {
+      "id": 54,
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Ashbury_the_1st",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st"
+    },
+    {
+      "id": 55,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Walden"
+    },
+    {
+      "id": 56,
+      "url": "https://warcraft.wiki.gg/wiki/Leader_of_the_Pack_(quest)",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Leader_of_the_Pack_(quest)"
+    },
+    {
+      "id": 57,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Hewell",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Hewell"
+    },
+    {
+      "id": 58,
+      "url": "https://www.wowhead.com/ru/quest=24677/%D0%B0%D1%82%D0%B0%D0%BA%D0%B0-%D1%81-%D1%84%D0%BB%D0%B0%D0%BD%D0%B3%D0%B0",
+      "canonicalUrl": "https://www.wowhead.com/ru/quest=24677/%D0%B0%D1%82%D0%B0%D0%BA%D0%B0-%D1%81-%D1%84%D0%BB%D0%B0%D0%BD%D0%B3%D0%B0"
+    },
+    {
+      "id": 59,
+      "url": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine"
+    },
+    {
+      "id": 60,
+      "url": "https://worldofwarcraft.blizzard.com/en-us/news/24095666/unveiling-cataclysm-classic-zones-dungeons-and-pvp-season-9",
+      "canonicalUrl": "https://worldofwarcraft.blizzard.com/en-us/news/24095666/unveiling-cataclysm-classic-zones-dungeons-and-pvp-season-9"
+    },
+    {
+      "id": 61,
+      "url": "https://wowpedia.fandom.com/wiki/Baron_Longshore",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Baron_Longshore"
+    },
+    {
+      "id": 62,
+      "url": "https://wowpedia.fandom.com/wiki/The_Baron%27s_Demands",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/The_Baron%27s_Demands"
+    },
+    {
+      "id": 63,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Candren",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Candren"
+    },
+    {
+      "id": 64,
+      "url": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde"
+    },
+    {
+      "id": 65,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan?action=render"
+    },
+    {
+      "id": 66,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Harford?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford?action=render"
+    },
+    {
+      "id": 67,
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison?action=render"
+    },
+    {
+      "id": 68,
+      "url": "https://wowpedia.fandom.com/wiki/Aderic?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Aderic?action=render"
+    },
+    {
+      "id": 69,
+      "url": "https://wowpedia.fandom.com/wiki/File:Gineas.jpg?action=render",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/File:Gineas.jpg"
+    },
+    {
+      "id": "court-source-8",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Marley"
+    },
+    {
+      "id": "court-source-20",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Geoffery_Tulvan",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan"
+    },
+    {
+      "id": "court-source-21",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Harford",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford"
+    },
+    {
+      "id": "court-source-22",
+      "url": "https://warcraft.wiki.gg/wiki/Lord_Mayor_Morrison",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison"
+    },
+    {
+      "id": "court-source-23",
+      "url": "https://warcraft.wiki.gg/wiki/Aderic",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Aderic"
+    },
+    {
+      "id": "court-source-24",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Geoffery_Tulvan"
+    },
+    {
+      "id": "court-source-25",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Harford"
+    },
+    {
+      "id": "court-source-26",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison"
+    },
+    {
+      "id": "court-source-27",
+      "url": "https://wowpedia.fandom.com/wiki/Aderic"
+    },
+    {
+      "id": "court-source-29",
+      "url": "http://media.blizzard.com/wow/lore/pdfdownload/leader-story/genn-greymane/greymane-enUS.pdf"
+    },
+    {
+      "id": "court-source-30",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st?action=render"
+    },
+    {
+      "id": "noble-life-source-1",
+      "url": "https://warcraft.wiki.gg/wiki/Patriarch%27s_Blessing",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Patriarch%27s_Blessing"
+    },
+    {
+      "id": "noble-life-source-2",
+      "url": "https://wowpedia.fandom.com/wiki/Innkeeper",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Innkeeper"
+    },
+    {
+      "id": "noble-life-source-3",
+      "url": "https://www.engadget.com/2010-12-15-know-your-lore-shadowfang-keep.html",
+      "canonicalUrl": "https://www.engadget.com/2010-12-15-know-your-lore-shadowfang-keep.html"
+    },
+    {
+      "id": "family-source-1",
+      "url": "https://wowpedia.fandom.com/wiki/Nobles_of_Gilneas"
+    },
+    {
+      "id": "family-source-2",
+      "url": "https://wowpedia.fandom.com/wiki/Greymane_family"
+    },
+    {
+      "id": "family-source-3",
+      "url": "https://wowpedia.fandom.com/wiki/Crowley"
+    },
+    {
+      "id": "family-source-4",
+      "url": "https://wowpedia.fandom.com/wiki/Mia_Greymane"
+    },
+    {
+      "id": "family-source-5",
+      "url": "https://wowpedia.fandom.com/wiki/Liam_Greymane"
+    },
+    {
+      "id": "family-source-8",
+      "url": "https://worldofwarcraft.blizzard.com/en-us/media/short-story/genn-greymane-lord-of-his-pack"
+    },
+    {
+      "id": "family-source-9",
+      "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/genn-greymane-lord-of-his-pack"
+    },
+    {
+      "id": "family-source-15",
+      "url": "https://wowpedia.fandom.com/wiki/Countess_Ashmore"
+    },
+    {
+      "id": "family-source-16",
+      "url": "https://warcraft.wiki.gg/wiki/Tess_Greymane"
+    },
+    {
+      "id": "family-source-17",
+      "url": "https://warcraft.wiki.gg/wiki/Liam_Greymane"
+    },
+    {
+      "id": "family-source-18",
+      "url": "https://warcraft.wiki.gg/wiki/Lorna_Crowley"
+    },
+    {
+      "id": "family-source-19",
+      "url": "https://wowpedia.fandom.com/wiki/Dame_Alys_Finnsson?so=search",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Dame_Alys_Finnsson"
+    },
+    {
+      "id": "family-source-20",
+      "url": "https://wowpedia.fandom.com/wiki/Lord_Woofington?so=search",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Woofington"
+    },
+    {
+      "id": "family-source-23",
+      "url": "https://web.archive.org/web/20251118114028/https://wowpedia.fandom.com/wiki/Lord_Woofington",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Woofington"
+    },
+    {
+      "id": "family-source-26",
+      "url": "https://wowpedia.fandom.com/wiki/Baron_Silverlaine"
+    },
+    {
+      "id": "family-source-28",
+      "url": "https://wowpedia.fandom.com/wiki/Magistrate_Henry_Maleb"
+    },
+    {
+      "id": "family-source-29",
+      "url": "https://wowpedia.fandom.com/wiki/Gilneas_Nobleman"
+    },
+    {
+      "id": "family-source-40",
+      "url": "https://wowpedia.fandom.com/wiki/Isiden_Perenolde"
+    },
+    {
+      "id": "family-source-41",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Liam+Greymane&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Liam_Greymane"
+    },
+    {
+      "id": "family-source-42",
+      "url": "https://wowpedia.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AAristocrats&cmlimit=500&format=json&cmcontinue=page%7C53544f524d534f4e472c204252414e4e4f4e0a4252414e4e4f4e2053544f524d534f4e47%7C564363&continue=-%7C%7C"
+    },
+    {
+      "id": "family-source-43",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Tess+Greymane&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Tess_Greymane"
+    },
+    {
+      "id": "family-source-45",
+      "url": "https://wowpedia.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AAristocrats&cmlimit=500&format=json"
+    },
+    {
+      "id": "family-source-46",
+      "url": "https://wowpedia.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AGilneas+%28kingdom%29&cmlimit=500&format=json"
+    },
+    {
+      "id": "family-source-47",
+      "url": "https://wowpedia.fandom.com/api.php?action=query&list=categorymembers&cmtitle=Category%3AGilneas+NPCs&cmlimit=500&format=json"
+    },
+    {
+      "id": "family-source-48",
+      "url": "https://www.wowhead.com/ru/npc=35378/lorna-crowley"
+    },
+    {
+      "id": "family-source-50",
+      "url": "https://warcraft.wiki.gg/wiki/To_Gilneas_(Horde)"
+    },
+    {
+      "id": "family-source-51",
+      "url": "https://worldofwarcraft.blizzard.com/ru-ru/media/short-story/elegy"
+    },
+    {
+      "id": "family-source-54",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Agent+Crowley&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Agent_Crowley"
+    },
+    {
+      "id": "family-source-57",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lorna+Crowley&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lorna_Crowley"
+    },
+    {
+      "id": "family-source-58",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Elizabeth+Crowley&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Elizabeth_Crowley"
+    },
+    {
+      "id": "family-source-59",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lieutenant+Walden&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lieutenant_Walden"
+    },
+    {
+      "id": "family-source-60",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Countess+Ashmore&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Countess_Ashmore"
+    },
+    {
+      "id": "family-source-61",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lady+in+White&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lady_in_White"
+    },
+    {
+      "id": "family-source-63",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Archibald+Greymane&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Archibald_Greymane"
+    },
+    {
+      "id": "family-source-64",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Ashbury+the+1st&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Ashbury_the_1st"
+    },
+    {
+      "id": "family-source-66",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Candren&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Candren"
+    },
+    {
+      "id": "family-source-68",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Marley&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Marley"
+    },
+    {
+      "id": "family-source-69",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Mayor+Morrison&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Mayor_Morrison"
+    },
+    {
+      "id": "family-source-71",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Vincent+Godfrey&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Vincent_Godfrey"
+    },
+    {
+      "id": "family-source-75",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Krennan+Aranas&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Krennan_Aranas"
+    },
+    {
+      "id": "family-source-76",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Hiram+Creed&prop=text%7Crevid&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Hiram_Creed"
+    },
+    {
+      "id": "source-lore-harvest-witches-wowpedia",
+      "url": "https://wowpedia.fandom.com/wiki/Harvest-witch",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Harvest-witch"
+    },
+    {
+      "id": "source-lore-kul-tiras-founding-wowpedia",
+      "url": "https://wowpedia.fandom.com/wiki/Kul_Tiras_(kingdom)",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Kul_Tiras_(kingdom)"
+    },
+    {
+      "id": "source-lore-tides-blessing-wowpedia",
+      "url": "https://wowpedia.fandom.com/wiki/Blessing_of_the_Tides",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Blessing_of_the_Tides"
+    },
+    {
+      "id": "source-lore-walden-wowpedia-api",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Walden&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Walden"
+    },
+    {
+      "id": "source-lore-walden-house-wowpedia-api",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Leader+of+the+Pack+%28quest%29&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Leader_of_the_Pack_(quest)"
+    },
+    {
+      "id": "source-lore-tidesages-wowpedia",
+      "url": "https://wowpedia.fandom.com/wiki/Tidesages",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Tidesages"
+    },
+    {
+      "id": "source-lore-tidesage-legends-wowpedia",
+      "url": "https://wowpedia.fandom.com/wiki/Legends_of_the_Tidesages",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Legends_of_the_Tidesages"
+    },
+    {
+      "id": "source-lore-kul-tiras-settlers-wowpedia",
+      "url": "https://wowpedia.fandom.com/wiki/Kul_Tiras",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Kul_Tiras"
+    },
+    {
+      "id": "source-lore-cdev3-blizzplanet",
+      "url": "https://www.blizzplanet.com/blog/comments/ask-creative-development-round-iii",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Ask_CDev"
+    },
+    {
+      "id": "source-lore-harvest-witches-warcraftwiki",
+      "url": "https://warcraft.wiki.gg/wiki/Harvest-witch",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Harvest-witch"
+    },
+    {
+      "id": "source-lore-harvest-famine-wowpedia-api",
+      "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Moonfire+%28worgen%29&prop=text%7Crevid%7Cdisplaytitle&format=json",
+      "canonicalUrl": "https://wowpedia.fandom.com/wiki/Moonfire_(worgen)"
+    }
+  ]
+}
+''')
+EXPECTED_LOCATION_IDS = tuple(row['id'] for row in CURRENT_ATLAS_FIXTURE['locations'])
+EXPECTED_LOCATIONS = {row['id']: row for row in CURRENT_ATLAS_FIXTURE['locations']}
+AUTHOR_SEED = json.loads((Path(__file__).resolve().parents[1] / 'assets/data/publication-author-v5.json').read_text())
+
+
+def typed_id(value):
+    return (type(value).__name__, value)
+
+
+def assert_current_canonical_collections(case, snapshot):
+    for collection in ('locations', 'factions', 'nobles', 'sources'):
+        expected = [typed_id(row['id']) for row in CURRENT_ATLAS_FIXTURE[collection]]
+        actual = [typed_id(row['id']) for row in snapshot[collection]]
+        case.assertEqual(len(actual), len(expected), collection)
+        case.assertEqual(sorted(actual), sorted(expected), collection + ' exact typed canonical IDs')
+        case.assertEqual(len(set(actual)), len(actual), collection + ' unique IDs')
+    # All original source records, including types, quotes and extras, survive.
+    case.assertEqual(snapshot['sources'][:len(AUTHOR_SEED['sources'])], AUTHOR_SEED['sources'])
+
+
+def expected_citations(record):
+    """Exact available canonical evidence, with no fallback/synthetic source."""
+    ledger = {typed_id(source['id']): (index, source)
+              for index, source in enumerate(CURRENT_ATLAS_FIXTURE['sources'], 1)}
+    seen = set()
+    result = []
+    for source_id in [*record.get('provenance', {}).get('sources', []), *record.get('sources', [])]:
+        key = typed_id(source_id)
+        if key in seen:
+            continue
+        seen.add(key)
+        if key not in ledger:
+            continue  # Missing author references legitimately have no citation.
+        index, source = ledger[key]
+        href = next((source[k] for k in ('url', 'canonicalUrl')
+                     if isinstance(source.get(k), str) and source[k].lower().startswith(('http://', 'https://'))), None)
+        number = source_id if type(source_id) is int else index
+        result.append({'id': str(source_id), 'href': href, 'number': number})
+    return result
 FIXTURE = {
     'version': 1,
     'meta': {'width': 3247, 'height': 4860,
@@ -88,6 +2100,10 @@ class UIRevisionTest(unittest.TestCase):
         self.context.close()
 
     def boot(self, fixture=None, remove_reconstruction_control=False, delegate_territories=False):
+        snapshot = copy.deepcopy(fixture if fixture is not None else FIXTURE)
+        # Labelled, full test-only snapshot route, installed before initial boot.
+        self.page.route('**/assets/data/atlas.json', lambda route: route.fulfill(
+            status=200, content_type='application/json', body=json.dumps(snapshot)))
         self.page.goto(self.url + '/index.html', wait_until='networkidle')
         self.page.evaluate("""async options => {
             document.body.classList.add('edit-mode');
@@ -95,7 +2111,7 @@ class UIRevisionTest(unittest.TestCase):
                 const control = document.querySelector('#show-reconstructions');
                 (control?.closest('label') || control)?.remove();
             }
-            window.fixtureData = options.data;
+            window.fixtureData = await (await fetch('./assets/data/atlas.json')).json();
             window.fixtureSelected = null;
             window.calls = [];
             window.territoryCalls = [];
@@ -117,8 +2133,7 @@ class UIRevisionTest(unittest.TestCase):
             }
             const { initUI } = await import('./assets/js/ui.mjs');
             window.ui = initUI(context);
-        }""", {'data': copy.deepcopy(fixture if fixture is not None else FIXTURE),
-                 'removeControl': remove_reconstruction_control, 'delegateTerritories': delegate_territories})
+        }""", {'removeControl': remove_reconstruction_control, 'delegateTerritories': delegate_territories})
         self.page.wait_for_function("document.querySelector('#base-map').complete && document.querySelector('#base-map').naturalWidth > 0", polling=50)
         self.page.mouse.move(2, 2)
 
@@ -134,6 +2149,30 @@ class UIRevisionTest(unittest.TestCase):
 
     def assert_clean(self):
         self.assertEqual(self.errors, [])
+
+    def test_00_frozen_authorv6_fixture_has_the_complete_approved_canonical_sets(self):
+        self.assertEqual(len(EXPECTED_LOCATION_IDS), 86, 'explicit authorv6 plus Raft, ferry docks, three Gray Ford houses and eight capital pins, not a dynamic release count')
+        self.assertEqual(len(set(EXPECTED_LOCATION_IDS)), 86)
+        self.assertEqual(len(CURRENT_ATLAS_FIXTURE['factions']), 14)
+        self.assertEqual(len(AUTHOR_SEED['locations']), 67)
+        self.assertEqual(set(EXPECTED_LOCATION_IDS), {row['id'] for row in AUTHOR_SEED['locations']} | {
+            'ambermill-town-hall', 'ambermill-westbank-farm', 'ambermill-firrow-farm', 'ambermill-moorfield-farm', 'location-raft-estate', 'ferry-duskhaven', 'ferry-keel-harbor', 'ferry-stormglen', 'location-gray-ford-godfrey-estate', 'location-gray-ford-north-burned-house', 'location-gray-ford-east-burned-house', 'location-merchant-cloth-shop', 'location-merchant-herbal-shop', 'location-merchant-ironware-shop', 'location-military-forge', 'location-military-barracks', 'location-greymane-record-office', 'location-greymane-post-office', 'location-cathedral-rose-park'})
+        assert_current_canonical_collections(self, ATLAS)
+
+    def test_12b_labelled_empty_full_snapshot_keeps_zero_objects_and_empty_walden_gates(self):
+        fixture = copy.deepcopy(FIXTURE)
+        fixture['meta']['testFixture'] = 'Test-only empty objects / empty Walden full snapshot'
+        fixture['factions'].append({'id': 'walden', 'name': 'Тестовый пустой Вальден',
+                                    'parent': 'gilneas', 'color': '#91836e'})
+        self.boot(fixture)
+        before = self.page.evaluate('JSON.stringify(window.fixtureData)')
+        stored = self.page.evaluate('localStorage.getItem("gilneas-atlas-draft-v1")')
+        self.assertEqual(self.page.locator('.registry-category[data-category-id="objects"]').count(), 0, 'exclude empty categories')
+        self.assertEqual(self.page.locator('#location-list details.faction-tree[data-faction-id="walden"]').count(), 0, 'exclude empty groups')
+        self.assertEqual(sorted(self.location_ids()), sorted(row['id'] for row in fixture['locations']))
+        self.assertEqual(self.page.evaluate('JSON.stringify(window.fixtureData)'), before)
+        self.assertEqual(self.page.evaluate('localStorage.getItem("gilneas-atlas-draft-v1")'), stored)
+        self.assert_clean()
 
     def test_01_native_hover_is_literal_safe_and_shows_immediate_faction_and_sovereign(self):
         fixture = copy.deepcopy(FIXTURE)
@@ -392,7 +2431,11 @@ class UIRevisionTest(unittest.TestCase):
     def test_12_real_atlas_navigation_is_nested_and_every_canonical_location_occurs_once(self):
         self.boot(ATLAS)
         source_ids = sorted(location['id'] for location in ATLAS['locations'])
-        self.assertEqual(len(source_ids), 39)
+        assert_current_canonical_collections(self, ATLAS)
+        self.assertEqual(len(source_ids), len(EXPECTED_LOCATION_IDS))
+        self.assertEqual(source_ids, sorted(EXPECTED_LOCATION_IDS))
+        before = self.page.evaluate('JSON.stringify(window.fixtureData)')
+        stored = self.page.evaluate('localStorage.getItem("gilneas-atlas-draft-v1")')
         self.assertEqual(sorted(self.location_ids()), source_ids)
         self.assertEqual(len(set(self.location_ids())), len(source_ids))
         hierarchy = self.page.evaluate("""() => {
@@ -416,8 +2459,40 @@ class UIRevisionTest(unittest.TestCase):
             return False
         for group, faction_id in [('rootCount', 'gilneas'), ('houseCount', 'crowley'), ('juniorCount', 'silverlaine')]:
             self.assertEqual(hierarchy[group], str(sum(within(location.get('faction'), faction_id) for location in ATLAS['locations'])))
-        self.assertEqual(self.page.locator('.registry-category[data-category-id="objects"]').count(), 0, 'exclude empty categories')
-        self.assertEqual(self.page.locator('#location-list details.faction-tree[data-faction-id="walden"]').count(), 0, 'exclude empty groups')
+        # Independently derive every nonempty category from the actual current
+        # baseline (including future parent-integrated own objects), not v5.
+        expected_categories = {}
+        for location in ATLAS['locations']:
+            faction_id = location.get('faction')
+            unknown = location.get('provenance', {}).get('affiliationStatus') == 'unknown' or (
+                faction_id is None and location.get('provenance', {}).get('confidence') == 'reconstruction'
+                and location.get('provenance', {}).get('affiliationStatus') != 'independent')
+            group = faction_id or ('unknown' if unknown else 'independent')
+            expected_categories.setdefault((group, 'locations'), []).append(location['id'])
+            for obj in location.get('objects', []):
+                if 'faction' in obj:
+                    expected_categories.setdefault((obj['faction'] or 'independent', 'objects'), []).append(
+                        location['id'] + '/' + obj['id'])
+        categories = self.page.locator('#location-list .registry-category').evaluate_all("""nodes => nodes.map(node => {
+            const group = node.closest('.faction-tree');
+            return {group: group.dataset.factionId || group.dataset.affiliation, kind: node.dataset.categoryId,
+                count: node.querySelector(':scope > summary .category-count').textContent,
+                ids: [...node.querySelectorAll(':scope > button')].map(row => row.dataset.objectId
+                    ? row.dataset.locationId + '/' + row.dataset.objectId : row.dataset.locationId)};
+        })""")
+        self.assertEqual(sorted((row['group'], row['kind']) for row in categories), sorted(expected_categories))
+        for row in categories:
+            expected = expected_categories[(row['group'], row['kind'])]
+            self.assertEqual(row['count'], str(len(expected)))
+            self.assertEqual(sorted(row['ids']), sorted(expected))
+        self.assertEqual(self.page.locator('.registry-category[data-category-id="objects"]').count(),
+                         sum(kind == 'objects' for _, kind in expected_categories))
+        walden_present = any(within(location.get('faction'), 'walden') for location in ATLAS['locations']) or any(
+            'faction' in obj and within(obj['faction'], 'walden')
+            for location in ATLAS['locations'] for obj in location.get('objects', []))
+        self.assertEqual(self.page.locator('#location-list details.faction-tree[data-faction-id="walden"]').count(), int(walden_present))
+        self.assertEqual(self.page.evaluate('JSON.stringify(window.fixtureData)'), before)
+        self.assertEqual(self.page.evaluate('localStorage.getItem("gilneas-atlas-draft-v1")'), stored)
         self.assert_clean()
 
     def test_13_explicit_object_affiliations_get_separate_rows_counts_and_canonical_selection(self):

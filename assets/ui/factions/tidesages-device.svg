@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" width="40" height="44">
+<title>Знак Жрецов Моря</title>
+<g fill="#9aa8b6" stroke="#343c43" stroke-width=".75" stroke-linejoin="round" paint-order="stroke fill">
+<path d="M16 6 20 2 24 6V21H16ZM17 9H23V17H17Z"/>
+<path d="M10 21C15 18 18 18 23 21S31 24 35 21V25C30 28 26 27 21 25S14 22 10 25Z"/>
+<path d="M5 28C10 25 14 25 19 28S28 31 35 28V32C29 35 24 34 18 32S10 30 5 33Z"/>
+<path d="M5 36C11 33 15 34 21 36S29 38 35 35V39C29 42 24 41 19 39S10 37 5 40Z"/>
+</g>
+</svg>

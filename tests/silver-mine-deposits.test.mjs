@@ -1,0 +1,32 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {effectiveFaction,normalizeData,serializeSnapshot,deserializeSnapshot} from '../assets/js/model.mjs';
+const read=name=>JSON.parse(fs.readFileSync(new URL(`../assets/data/${name}`,import.meta.url),'utf8'));
+
+test('Silver Mine contains its own silver deposits without replacing the assay yard or inventing reserves',()=>{
+ const data=read('atlas.json'),mine=data.locations.find(location=>location.id==='deep-elem-mine');
+ assert.ok(mine);assert.equal(mine.name,'Серебряный рудник');
+ const silver=mine.objects.find(object=>object.id==='object-deep-elem-silver-deposits');
+ assert.ok(silver,'Add the requested silver deposits to the existing mine');
+ assert.equal(silver.name,'Месторождения серебра');
+ assert.equal(silver.type,'resource');
+ assert.match(silver.description,/серебр/iu);
+ assert.match(silver.description,/жил|руд/iu);
+ assert.equal(silver.owner,'');
+ assert.equal(Object.hasOwn(silver,'faction'),false);
+ assert.equal(Object.hasOwn(silver,'amount'),false,'No finite or infinite reserve was specified');
+ assert.equal(effectiveFaction(mine,silver),'lordaeron');
+ assert.deepEqual(silver.rules,{edition:'dnd5e',homebrew:true,mode:'faction-ownership',activation:'ownership',scope:'faction',appliesTo:'all-members',stacking:'additive',bonusValue:1});
+ assert.deepEqual(silver.modifiers,[{id:'modifier-deep-elem-silver-deposits-bonus',kind:'bonus',text:'+1 к проверкам Интеллекта (Природа) всей фракции.'}]);
+ assert.equal(silver.provenance.authorScenario.basis,'explicit-user-authorship');
+ assert.equal(silver.provenance.authorScenario.canonicalEvidence,false);
+ assert.equal(silver.provenance.authorScenario.mineral,'silver');
+ assert.deepEqual(mine.objects.map(object=>object.id),['object-391326bb-4b22-5b76-9271-adb1d8e12d18',silver.id]);
+ assert.equal(mine.faction,'lordaeron');assert.equal(mine.owner,'');
+ assert.deepEqual([mine.x,mine.y],[2411,1266]);
+ assert.equal(mine.type,'mine');assert.equal(mine.isLocation,false);
+ assert.deepEqual(normalizeData(data),data);
+ assert.deepEqual(data,read('publication-v6.json'));
+ assert.deepEqual(deserializeSnapshot(serializeSnapshot(data)),data);
+});

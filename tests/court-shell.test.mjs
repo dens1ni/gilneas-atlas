@@ -34,7 +34,9 @@ test('wall track is a keyboard-operable history action without changing legacy p
   const html=await readFile(new URL('index.html',root),'utf8');
   assert.ok(/<button[^>]*id="wall-history-open"[^>]*type="button"/.test(html));
   assert.ok(html.includes('aria-haspopup="dialog"'));
-  assert.ok(html.includes('id="wall-progress" value="10" max="100"'));
+  const published=JSON.parse(await readFile(new URL('assets/data/atlas.json',root),'utf8'));
+  const track=published.meta.wallConstruction;
+  assert.ok(html.includes(`id="wall-progress" value="${track.value}" max="${track.max}"`));
 });
 
 test('runtime export retains the exact Origins publication baseline for local-draft migration',async()=>{

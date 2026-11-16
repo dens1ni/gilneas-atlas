@@ -1,0 +1,142 @@
+{
+  "noble-candren": {
+    "id": "noble-candren",
+    "name": "Лорд Кандрен",
+    "englishName": "Lord Candren",
+    "title": "Лорд Гилнеаса",
+    "description": "Лорд Кандрен держит Серый Брод, переправу и поместье над дорогой. После пожара он направляет людей разбирать пепелища и собирать уцелевшие припасы под крышей поместного двора. В книгах его писаря рядом с податями появились просьбы погорельцев и расходы на временный кров.",
+    "periodNote": "Назначение владений и управление в этой эпохе заданы автором; дата рождения и ранняя жизнь в источниках не установлены.",
+    "sources": [
+      63,
+      3
+    ],
+    "house": "candren",
+    "confidence": "reconstruction",
+    "role": "scenario_steward",
+    "provenance": {
+      "confidence": "reconstruction",
+      "sources": [
+        63,
+        3
+      ],
+      "authorScenario": {
+        "ownership": {
+          "basis": "explicit-user-authorship",
+          "canonicalEarlyCadastre": false
+        },
+        "earlyPresence": "user-authored stewardship; canonical life status remains unknown",
+        "politics": "no inferred party, wall stance or Council seat"
+      }
+    },
+    "shortDescription": "Хозяин Серого Брода и уцелевшего поместья, занятый помощью погорельцам.",
+    "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lord_Candren",
+    "appearance": "Человек; конкретные черты внешности в источнике не описаны.",
+    "socialStatus": "Лорд Гилнеаса · глава Дома Кандрен",
+    "allegiance": "Корона Гилнеаса; Дом Кандрен",
+    "overlord": null,
+    "overlordText": "Подданный короля Генна Седогрива.",
+    "biographyFrame": "author_scenario",
+    "displayInEarlyCourt": true,
+    "spouse": null,
+    "relations": [],
+    "fieldSources": {
+      "appearance": [
+        63
+      ],
+      "socialStatus": [
+        3,
+        63
+      ],
+      "allegiance": [
+        63
+      ],
+      "overlordText": [
+        63
+      ],
+      "lifeStatus": [
+        63
+      ]
+    },
+    "loreSources": [
+      [
+        63
+      ],
+      [
+        63
+      ]
+    ],
+    "lifeStatus": "unknown",
+    "lifeStatusNote": "Кандрен известен живым интендантом Гилнеаса в Дарнассе после изгнания гилнеасцев. Дата рождения/жизнь до выхода из Альянса отсутствует; современное Alive не переносится в ранний срез.",
+    "lifeStatusBasis": "unknown",
+    "holdingsNote": "Деревня Серый Брод, уцелевшее поместье и два погоревших дома у переправы."
+  },
+  "noble-harford": {
+    "id": "noble-harford",
+    "name": "Лорд Харфорд",
+    "title": "Лорд Гилнеаса",
+    "description": "Лорд Харфорд ведает Лесом Северных врат и Мшистыми Кровлями. Его егеря знают сырые дороги и сторожат лесные развилки; деревенские ловчие добывают дичь и берегут угодья от беспорядочных капканов. Харфорд принимает донесения у сторожки и следит, чтобы обозы проходили на север без задержек.",
+    "sources": [
+      3,
+      66
+    ],
+    "house": "harford",
+    "confidence": "reconstruction",
+    "periodNote": "Назначение владений и управление в этой эпохе заданы автором; дата рождения и ранняя жизнь в источниках не установлены.",
+    "provenance": {
+      "confidence": "reconstruction",
+      "sources": [
+        3
+      ],
+      "authorScenario": {
+        "ownership": {
+          "basis": "explicit-user-authorship",
+          "canonicalEarlyCadastre": false
+        },
+        "earlyPresence": "user-authored stewardship; canonical life status remains unknown",
+        "politics": "no inferred party, wall stance or Council seat"
+      }
+    },
+    "shortDescription": "Хозяин лесных угодий Северных врат и охотничьей деревни Мшистые Кровли.",
+    "wowpediaUrl": "https://wowpedia.fandom.com/wiki/Lord_Harford?action=render",
+    "appearance": "Источник не дает конкретного описания человеческой внешности.",
+    "socialStatus": "Лорд Гилнеаса · глава Дома Харфорд",
+    "allegiance": "Корона Гилнеаса; Дом Харфорд",
+    "overlord": null,
+    "overlordText": "Подданный короля Генна Седогрива.",
+    "role": "scenario_steward",
+    "biographyFrame": "author_scenario",
+    "displayInEarlyCourt": true,
+    "spouse": null,
+    "relations": [],
+    "fieldSources": {
+      "appearance": [
+        3
+      ],
+      "socialStatus": [
+        3
+      ],
+      "allegiance": [
+        3
+      ],
+      "overlordText": [
+        3
+      ],
+      "lifeStatus": [
+        "court-source-25",
+        66
+      ]
+    },
+    "loreSources": [
+      [
+        3
+      ],
+      [
+        3
+      ]
+    ],
+    "lifeStatus": "unknown",
+    "lifeStatusNote": "Харфорд лично вспоминает плен у Аругала и побег из крепости, затем погибает в стартовом сюжете рыцарей смерти. Это жизнь/смерть после возникновения позднего проклятия, а не дата рождения или жизнь до выхода из Альянса.",
+    "lifeStatusBasis": "unknown",
+    "holdingsNote": "Лес Северных врат и охотничья деревня Мшистые Кровли."
+  }
+}

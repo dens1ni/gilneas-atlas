@@ -1,0 +1,48 @@
+{
+  "id": "wall-event-f885cf03-ff4a-46aa-b195-436b5f0d9622",
+  "name": "Приказ Короны",
+  "description": "Король Генн Седогрив приказал возвести северный оборонительный рубеж; путь будущей Стены ещё обсуждают. Знать гадает, чьи земли окажутся снаружи, но Краули уверен: Даларан не позволит подвести рубеж так близко, чтобы защитить Янтарную мельницу. О выходе из Альянса король не говорит, хотя при дворе понимают, что Стена охладит отношения с союзниками.",
+  "delta": 10,
+  "effects": [
+    {
+      "id": "wall-effect-41062aa4-57e0-432e-bb14-271105d98679",
+      "kind": "bonus",
+      "text": "Гилнеас укрепляет оборону и суверенитет."
+    },
+    {
+      "id": "wall-effect-dddd320f-d761-4c83-89fe-908683e840fd",
+      "kind": "penalty",
+      "text": "Недовольная знать объединяется в Интернационалистов, выступающих против Стены Седогрива."
+    }
+  ],
+  "sources": [
+    45,
+    32,
+    48
+  ],
+  "provenance": {
+    "confidence": "scenario",
+    "authorScenario": {
+      "basis": "explicit-user-authorship",
+      "allianceWithdrawal": "not-announced-in-current-scenario",
+      "dalaranConstraint": {
+        "canonicalEvidence": false,
+        "basis": "explicit-user-authorship",
+        "statement": "Crowley expects Dalaran to oppose a wall close enough to protect Ambermill"
+      },
+      "internationalists": {
+        "canonicalNameConfirmed": false,
+        "basis": "author-named opposition arising from the wall order"
+      }
+    },
+    "loreBasis": {
+      "sources": [
+        45,
+        32,
+        48
+      ],
+      "confirmed": "Genn orders the wall; a mountain route can leave Pyrewood and Ambermill outside; Crowley favors Alliance ties and opposes isolation",
+      "chronologyCaveat": "Wowpedia relates the wall plan to withdrawal. This scenario places the public order before any announced withdrawal and does not present the Dalaran condition as verified canon."
+    }
+  }
+}

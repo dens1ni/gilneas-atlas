@@ -1,0 +1,1936 @@
+{
+  "state": "parent-data-audited; release verification pending",
+  "archiveSHA256": "0efd9c6eae95b6fa30e4569ec0203ffdc246bcfcf6cb7dd06cbf3bc4589059b5",
+  "counts": {
+    "locations": 71,
+    "factions": 13,
+    "nobles": 26,
+    "sources": 135,
+    "territories": 13
+  },
+  "objectCount": 71,
+  "existingObjects": 2,
+  "newObjects": 69,
+  "modifierCount": 142,
+  "authorGridPreserved": true,
+  "authorWallPreserved": true,
+  "originalSourceCount": 124,
+  "appendedSources": 11,
+  "sourcesProof": "docs/authored-estates-new-sources.json",
+  "places": [
+    {
+      "id": "gilneas-city",
+      "name": "Город Гилнеас",
+      "oldType": "city",
+      "chosenType": "city",
+      "rpDescription": "В городе Гилнеас колёса повозок гремят по мокрой мостовой, а дым домашних очагов стелется между высокими каменными домами. Под звон Собора Рассвета открываются лавки, сменяется стража и оглашаются королевские распоряжения. По открытым дорогам в столицу везут лес, зерно и вести из северных владений.",
+      "shortDescription": "Королевская столица с мокрыми мостовыми, лавками и колокольным звоном.",
+      "typeReason": "Столица с несколькими городскими кварталами.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "greymane",
+      "childIds": [
+        "cathedral-quarter",
+        "greymane-court",
+        "merchant-square",
+        "military-district"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-088c48a5-ccc7-52e4-af6a-878eaa7f84a1"
+      ],
+      "modifierIds": [
+        "modifier-aff58f5c-fc5c-5a1c-b93c-c7d4e9b2adb9",
+        "modifier-149ddd60-5040-5ee9-96d7-84f394096df8"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "greymane-manor",
+      "name": "Поместье Седогрива",
+      "oldType": "estate",
+      "chosenType": "estate",
+      "rpDescription": "За оградой Поместья Седогрива шумят деревья, и дождь темнит камень королевской резиденции. У ворот принимают посыльных, во дворе готовят экипажи, а перед приездом семьи Седогривов слуги растапливают камины в жилых покоях. Здесь разговоры ведут тише, чем на столичных площадях.",
+      "shortDescription": "Загородная резиденция Седогривов с ограждённым двором и жилыми покоями.",
+      "typeReason": "Королевская усадьба с хозяйственным двором.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "greymane",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-e8ac47d9-4c77-556a-a216-0f2e82ad8b2e"
+      ],
+      "modifierIds": [
+        "modifier-5f45fe4c-a40c-5259-aae5-8a59b8dfbd53",
+        "modifier-9e137e3c-53f4-5279-96ed-539ffe5f9b97"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "cathedral-quarter",
+      "name": "Соборный квартал",
+      "oldType": "district",
+      "chosenType": "district",
+      "rpDescription": "В Соборном квартале звон колоколов слышен даже сквозь дождь, а возле церковных дверей пахнет воском и мокрыми плащами. По садовым дорожкам идут прихожане; у стен нищие ждут милостыни после службы. Лавочники придерживают ставни, когда процессия выходит на улицу.",
+      "shortDescription": "Квартал прихожан и духовенства возле Собора Рассвета.",
+      "typeReason": "Часть столицы, объединяющая улицы вокруг собора.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "greymane",
+      "childIds": [
+        "lights-dawn-cathedral"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-fc1af1de-c455-5cfe-ad93-da3de70e4b64"
+      ],
+      "modifierIds": [
+        "modifier-702151c2-5598-5441-80c1-7afd13c899fd",
+        "modifier-998ccb2b-bcd3-5e6e-a8da-9e59def6c61c"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "lights-dawn-cathedral",
+      "name": "Собор Рассвета",
+      "oldType": "church",
+      "chosenType": "church",
+      "rpDescription": "Под сводами Собора Рассвета горят свечи Святому Свету, и шаги отдаются гулким эхом между скамьями. Сюда приходят на венчания, отпевания и молитвы за тех, кто не вернулся с войны. В дождливые дни у входа оставляют мокрые шляпы, прежде чем пройти к алтарю.",
+      "shortDescription": "Главный храм Святого Света, где молятся и провожают умерших.",
+      "typeReason": "Храм с богослужебной и приходской жизнью.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-fc9d78e5-570d-594f-9801-e22abb6a04a8"
+      ],
+      "modifierIds": [
+        "modifier-56bb0267-9fde-50da-b035-077f83a89823",
+        "modifier-f0a9a4ec-ac5a-5e0f-9a74-6b5659a2cf11"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "greymane-court",
+      "name": "Площадь Седогрива",
+      "oldType": "district",
+      "chosenType": "district",
+      "rpDescription": "На Площади Седогрива дождевая вода собирается в щелях мостовой под вывесками и выступающими карнизами. У места для королевских объявлений толпятся горожане, а после чтения указов площадь снова занимают прохожие и разносчики. Имя Седогривов здесь произносят и с почтением, и вполголоса за разговором о податях.",
+      "shortDescription": "Столичный квартал вокруг площади королевских объявлений.",
+      "typeReason": "Площадь даёт имя окружающему городскому кварталу.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "greymane",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-25cca3e4-9a71-5b62-aea7-5ed1f1609d88"
+      ],
+      "modifierIds": [
+        "modifier-ada5500f-2df9-52c5-9a8d-de009a90b446",
+        "modifier-b21575c8-f460-58e7-b418-7507b6033ce1"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "merchant-square",
+      "name": "Торговая площадь",
+      "oldType": "district",
+      "chosenType": "district",
+      "rpDescription": "На Торговой площади пахнет свежим хлебом, мокрой шерстью и пряностями из привозных мешков. Торговцы прячут товар под навесами и спорят о цене так громко, что голоса перекрывают стук тележных колёс. К вечеру приказчики сверяют весы и пересчитывают монету, пока покупатели торгуются за остатки дневного привоза.",
+      "shortDescription": "Торговый квартал столицы с лавками, весами и крытыми прилавками.",
+      "typeReason": "Торговая площадь и примыкающие улицы столицы.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "greymane",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-23bf797a-692a-5bf0-b0a1-a96af0d9927e"
+      ],
+      "modifierIds": [
+        "modifier-e94bf510-2109-5307-8354-a236fef31590",
+        "modifier-ffc4c194-f517-56b9-950a-9d7833489e5a"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "military-district",
+      "name": "Военный квартал",
+      "oldType": "district",
+      "chosenType": "district",
+      "rpDescription": "В Военном квартале утро начинается со строевых команд и лязга оружия на учебных дворах. Из мастерских тянет горячим железом, а у казарменных дверей сушат промокшее обмундирование. Возле Каменной тюрьмы прохожие уступают дорогу конвою и не задерживаются у ворот.",
+      "shortDescription": "Квартал казарм, оружейных мастерских и Каменной тюрьмы.",
+      "typeReason": "Военная часть столицы с несколькими отдельными зданиями.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "greymane",
+      "childIds": [
+        "stoneward-prison"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-d505a97b-c97d-5790-be8d-f82077bb9ec4"
+      ],
+      "modifierIds": [
+        "modifier-aba45063-7517-5595-8f7f-1e3444819229",
+        "modifier-ac037d4c-7676-5022-a730-177fb549856f"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "stoneward-prison",
+      "name": "Каменная тюрьма",
+      "oldType": "fortress",
+      "chosenType": "fortress",
+      "rpDescription": "За толстыми стенами Каменной тюрьмы слышны поворот ключей и окрики надзирателей. Сырая кладка удерживает холод даже тогда, когда в караульном помещении топят печь. Родные заключённых передают узлы у ворот, а писарь заносит каждую разрешённую передачу в книгу.",
+      "shortDescription": "Городская тюрьма с охраняемыми воротами и закрытым внутренним двором.",
+      "typeReason": "A stone secure prison keeps the fortified walls glyph.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-9ff7377b-97c7-5788-9b5a-3502a802df44"
+      ],
+      "modifierIds": [
+        "modifier-267c333b-2ff2-5c7f-8e3d-362b194fbb62",
+        "modifier-5690937d-9cd6-5153-973a-ead461ee63f1"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "keel-harbor",
+      "name": "Килевая гавань",
+      "oldType": "harbor",
+      "chosenType": "harbor",
+      "rpDescription": "У причалов Килевой гавани скрипят канаты, и ветер приносит запах соли и корабельной смолы. Грузчики перекатывают бочки на сходни, пока рыбаки латают сети под навесами. Перед выходом судна кормчий расспрашивает вернувшиеся команды о ветре и состоянии прибрежных вод.",
+      "shortDescription": "Морская гавань с грузовыми причалами и рыбацкими судами.",
+      "typeReason": "Причалы и обслуживание морского судоходства.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-615d7db9-f059-5a2c-ac86-da84d3c7ab00"
+      ],
+      "modifierIds": [
+        "modifier-dcd3d2d3-b08b-5e8f-b278-d97470aa1cc9",
+        "modifier-f1b836b6-2eea-522f-ba93-09c860ffe424"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "duskhaven",
+      "name": "Темная Гавань",
+      "oldType": "city",
+      "chosenType": "city",
+      "rpDescription": "Темная Гавань просыпается под крики чаек и стук молотков с портовых стапелей. Влажный морской воздух проникает на рынок и в жилые улицы, где к вечеру закрывают ставни от ветра. Городские дела разбирают в ратуше, а у пабных столов обсуждают цены на улов и корабли, пришедшие с грузом.",
+      "shortDescription": "Прибрежный город с портом, рынком, ратушей и жилыми улицами.",
+      "typeReason": "Город с именованными районами и муниципальными учреждениями.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [
+        "hayward-fishery",
+        "hammond-farmstead",
+        "allen-farmstead",
+        "location-426acd7a-5f00-48c0-a6aa-1de9ce3ac2fc",
+        "location-ecbf79ff-610a-4bde-8d16-a437954ed7a4",
+        "location-f2adc0b4-c081-404a-a546-16ca52d028aa",
+        "location-94b0bb4b-f058-4b9d-9ec3-eb3fdb02b21f",
+        "location-3cfcf216-6753-4b1a-bd43-3adc40bd96f0",
+        "location-18f52fa5-7ee8-467f-81a1-d8d8ec11929f",
+        "location-8ee04e39-6c00-4b0b-9bcf-17de4fddb9bb",
+        "location-3325cfda-47a7-4e3d-9cac-3797f4dbaa9d",
+        "location-17511ea5-f77c-4d83-a187-ee2da7acbf21",
+        "location-6e3bbad5-4890-4ae0-b8cc-1a3fa97535a4",
+        "location-76bf7c1a-fcd2-4dfc-9013-26b909b4732f",
+        "location-60382f79-7237-4492-a95b-749b4f290d9b"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-e64d2499-1bc8-5cf6-b227-bd7817aabc54"
+      ],
+      "modifierIds": [
+        "modifier-bcb0c897-7169-533d-8f1d-b43df6b2bb91",
+        "modifier-bb7a75cf-ab19-587e-9586-137749e4711c"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "hayward-fishery",
+      "name": "Рыбное хозяйство Хейварда",
+      "oldType": "harbor",
+      "chosenType": "fishery",
+      "rpDescription": "В Рыбном хозяйстве Хейварда у причала сушат сети, а под навесами солят рыбу в бочках. После удачного выхода суда возвращаются тяжёлыми от улова; в непогоду лодки остаются на привязи, и работники чинят снасти. Покупатели приходят рано, пока свежую рыбу не разобрали для городских лавок.",
+      "shortDescription": "Рыбацкий промысел с лодками, сетями и засолкой сезонного улова.",
+      "typeReason": "Approved functional override",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-25bc4b21-0c71-4572-b8fb-c59ad604a411"
+      ],
+      "modifierIds": [
+        "modifier-c614a153-3e0d-4f9f-a356-0190acdbf737",
+        "modifier-a9f85b7f-b8c1-53d2-8744-b5762783fc32"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "hammond-farmstead",
+      "name": "Ферма Хэммондов",
+      "oldType": "farm",
+      "chosenType": "farm",
+      "rpDescription": "На Ферме Хэммондов кукурузные стебли шуршат под ветром, а после дождя земля липнет к сапогам у амбарных дверей. Во время уборки початки перебирают под крышей и просушивают перед закладкой на хранение. Возчики ждут, пока подсохнет дорога, чтобы не увязнуть с полным грузом.",
+      "shortDescription": "Кукурузная ферма с амбарами и двором для погрузки урожая.",
+      "typeReason": "Пахотное хозяйство без приписывания частного сюзерена.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-0b2d5ef5-f534-5b00-a690-5e7d52a6e29f"
+      ],
+      "modifierIds": [
+        "modifier-60be9827-a390-581f-97fd-cd6909023b08",
+        "modifier-fd60e1a4-9f24-5c4c-aa03-0442e77ef952"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "allen-farmstead",
+      "name": "Ферма Аллена",
+      "oldType": "farm",
+      "chosenType": "farm",
+      "rpDescription": "На Ферме Аллена пасутся овцы и лошади, а у хозяйственного двора отзываются лаем мастифы. В сараях пахнет сеном и овечьей шерстью; после дождя работников прежде всего заботят сухая подстилка и целые изгороди. Весной здесь заняты молодняком, а ко времени стрижки шерсть развешивают под навесами.",
+      "shortDescription": "Животноводческая ферма с лошадьми, овцами и мастифами.",
+      "typeReason": "Сельское животноводческое хозяйство.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-efa73eb8-58ae-52d6-b3ff-43e386cb2685"
+      ],
+      "modifierIds": [
+        "modifier-2ef0b95f-e8f7-5b91-ade9-33397218c3ec",
+        "modifier-a0eee722-fdfc-5df0-b220-c394f0bf0f89"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "emberstone-village",
+      "name": "Деревня Тлеющего Угля",
+      "oldType": "settlement",
+      "chosenType": "settlement",
+      "rpDescription": "В Деревне Тлеющего Угля у дверей оставляют запылённые рабочие сапоги, а повозки из шахты уступают дорогу деревенскому скоту. Дождь быстро превращает колеи в чёрную жижу, и хозяйки сушат бельё ближе к очагам. Вечером семьи ждут возвращения смены и узнают новости за общей трапезой.",
+      "shortDescription": "Рабочая деревня, связанная повседневным трудом с одноимённой шахтой.",
+      "typeReason": "Деревенское поселение при горном промысле.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [
+        "emberstone-mine"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-043cd8bc-00a8-57c7-9ab5-bd58cb000164"
+      ],
+      "modifierIds": [
+        "modifier-4b242ad3-1a22-52d6-bbea-bf8f6a1bf892",
+        "modifier-997df9cd-936e-5103-a743-3542ecd4f307"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "emberstone-mine",
+      "name": "Шахта Тлеющего Угля",
+      "oldType": "mine",
+      "chosenType": "mine",
+      "rpDescription": "У входа в Шахту Тлеющего Угля пахнет мокрой породой и маслом шахтёрских ламп. Рабочие проверяют крепи и вывозят добычу на тележках, пока наверху перебирают изношенные инструменты. Перед спуском старший смены пересчитывает людей, а после сильных дождей велит осмотреть стоки.",
+      "shortDescription": "Действующие шахтные выработки с крепями, лампами и вывозом добычи.",
+      "typeReason": "Подземная добыча без утверждения состава руды.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-2cd23821-608a-534c-9d26-125f4dd6fba5"
+      ],
+      "modifierIds": [
+        "modifier-36ac8ead-c005-5703-9b2a-77c2d355cd7a",
+        "modifier-370bd68f-bc41-5471-b404-937bc9f9e169"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "stormglen",
+      "name": "Грозовой Перевал",
+      "oldType": "city",
+      "chosenType": "settlement",
+      "rpDescription": "В Грозовом Перевале рыбацкие сети висят возле домов, и ветер гонит морскую сырость к лесной опушке. Лодки выходят по погоде, а оставшиеся на берегу чинят снасти и сушат одежду у очагов. За дровами ходят в Черную дубраву, стараясь вернуться до того, как туман скроет тропу.",
+      "shortDescription": "Рыбацкая деревня у лесной опушки с лодками и сушильными навесами.",
+      "typeReason": "Рыбацкая деревня, а не крупный город.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [
+        "bradshaw-mill"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-bd700b0d-f796-5ceb-bfa4-c0cd6802c643"
+      ],
+      "modifierIds": [
+        "modifier-b3e9ec4a-1f47-54f5-8be7-519a508d615e",
+        "modifier-5aa8fd38-2862-5629-a758-8a0160a59cbf"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "blackwald",
+      "name": "Черная дубрава",
+      "oldType": "forest",
+      "chosenType": "forest",
+      "rpDescription": "В Черной дубраве густые кроны задерживают свет, и мокрые листья пружинят под ногами. Дровосеки держатся знакомых троп, а Ведьмы Урожая собирают травы, оставляя нетронутыми молодые побеги. У старых деревьев крестьяне иногда кладут горсть зерна перед посевом и говорят, что лес любит бережливых гостей.",
+      "shortDescription": "Сырой старый лес с рабочими тропами и обычаями Ведьм Урожая.",
+      "typeReason": "Лесной край с доступными местным жителям обычаями.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "harvest-witches",
+      "childIds": [
+        "taldoren",
+        "bradshaw-mill",
+        "location-b415ddf5-f12a-4421-829f-e8723bdaa1d4",
+        "location-75988492-6f32-4e29-9058-ef9d73e1746d"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-d43f7879-23db-59bb-a8c5-50a8e58ef805"
+      ],
+      "modifierIds": [
+        "modifier-e704069c-56ee-5bcb-8672-9f25f4052826",
+        "modifier-7de4346e-57a0-5d9e-852d-5c7e12c3e622"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "taldoren",
+      "name": "Тал'дорен",
+      "oldType": "forest",
+      "chosenType": "forest",
+      "rpDescription": "Тал'дорен стоит среди древних деревьев Черной дубравы, широко раскинув ветви над влажной землёй. Ведьмы Урожая приходят сюда с семенами и первыми колосьями, а местные стараются не рубить живые ветви вокруг рощи. Под кронами говорят негромко, и даже в ветреную погоду здесь слышно, как капли падают с листьев.",
+      "shortDescription": "Древняя роща вокруг Тал'дорена, почитаемая в земледельческих обычаях.",
+      "typeReason": "Роща с древним деревом и местными обрядами урожая.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "harvest-witches",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-435950d1-e1a9-566d-af0d-54a5997d197c"
+      ],
+      "modifierIds": [
+        "modifier-24346a4f-688f-55f4-84bd-e72850b8a71d",
+        "modifier-321c7feb-8f0d-5fc1-bbbc-ebd8f7fe89aa"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "bradshaw-mill",
+      "name": "Мельница Брэдшоу",
+      "oldType": "farm",
+      "chosenType": "mill",
+      "rpDescription": "У Мельницы Брэдшоу мешки с зерном ставят на доски, чтобы они не отсырели от земли. Внутри гудят жернова, и мучная пыль оседает на рукавах мельника. Возчики дожидаются своей очереди у лесной опушки, обсуждая, сколько муки достанется с нынешнего помола.",
+      "shortDescription": "Рабочая мельница у лесной опушки, куда привозят зерно на помол.",
+      "typeReason": "Approved functional override",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-115a3599-65f9-587e-85c6-6b8a8c23e72a"
+      ],
+      "modifierIds": [
+        "modifier-7e7cac35-250b-583c-9b58-ec0a661fa527",
+        "modifier-608bc3ff-b0e1-5608-9bc7-62ede2e24bed"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "tempests-reach",
+      "name": "Предел бури",
+      "oldType": "settlement",
+      "chosenType": "settlement",
+      "rpDescription": "В Пределе бури дома принимают на себя морской ветер, и на оконном стекле остаётся солёный налёт. Маячный огонь помогает судам распознать берег в сумерках, а жители крепят ставни перед непогодой. В поселении знают людей лорда Вальдена и часто судят о погоде по тому, как шумит море под скалами.",
+      "shortDescription": "Прибрежное поселение дома Вальден с маячным огнём над скалами.",
+      "typeReason": "Прибрежное поселение в указанном владении дома Вальден.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "walden",
+      "childIds": [
+        "location-9020653f-e319-4959-854d-9669422e14cc",
+        "location-e8c8f59c-83ac-49ff-819f-9708a9734ff1",
+        "location-4f29a377-1080-4a49-b400-026ff4c7c589"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-5a0c8ae3-25b3-55e5-a56e-ef86393f5f42"
+      ],
+      "modifierIds": [
+        "modifier-7787c747-118f-53d3-a7be-cdf3e9864b47",
+        "modifier-c511da55-b9b8-515b-8d87-f1a486a4b061"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "aderics-repose",
+      "name": "Покой Адерика",
+      "oldType": "landmark",
+      "chosenType": "cemetery",
+      "rpDescription": "В Покое Адерика дождь темнит надгробия, и между могилами пахнет влажной травой. К гробнице Адерика, почитаемого патриарха гилнеасцев, приносят цветы и свечи, а семейные участки содержат в порядке перед днями поминовения. Смотритель просит не ездить по дорожкам верхом и закрывает ворота к ночи.",
+      "shortDescription": "Кладбище с гробницей Адерика и ухоженными семейными могилами.",
+      "typeReason": "Кладбище с уже существующей гробницей Адерика.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-c9942c46-4400-47d9-92e7-8defa7ba9cf4"
+      ],
+      "modifierIds": [
+        "modifier-b452f86b-d0e7-4f0d-8221-4123d7d49d16",
+        "modifier-86287c92-9513-5a34-a31d-995252d0f3fc"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "northgate-woods",
+      "name": "Лес Северных врат",
+      "oldType": "forest",
+      "chosenType": "forest",
+      "rpDescription": "В Лесу Северных врат туман цепляется за стволы, а дождевые капли долго падают с ветвей после прояснения. По лесным дорогам идут обозы и посыльные, направляющиеся между столицей и северными владениями. Путники держатся накатанного пути: под мхом хватает корней и сырых ложбин.",
+      "shortDescription": "Лес на пути между столицей и открытыми северными владениями.",
+      "typeReason": "Лес с действующими дорогами без закрытого пограничного рубежа.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-6595f6c4-aa31-5835-a2fb-4022d25263de"
+      ],
+      "modifierIds": [
+        "modifier-c4c1efc1-384f-554a-b55e-c4893c2a5790",
+        "modifier-aa405ffa-92dc-53d2-8a43-6d5704b3c140"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "northern-headlands",
+      "name": "Северный каменистый мыс",
+      "oldType": "landmark",
+      "chosenType": "landmark",
+      "rpDescription": "На Северном каменистом мысе ветер свистит в расщелинах и пригибает редкую жёсткую траву. После дождя каменные тропы становятся скользкими, и проводники ведут вьючных лошадей за повод. С высоких участков смотрят на море, но в туман дальние ориентиры исчезают один за другим.",
+      "shortDescription": "Ветреные каменные возвышенности с узкими тропами и морскими видами.",
+      "typeReason": "Природный каменистый мыс, не военное поселение.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-5011915a-882c-5639-85c6-63d35b5b38d7"
+      ],
+      "modifierIds": [
+        "modifier-2265c80f-875e-5438-8d51-403b1099bf81",
+        "modifier-3a59c245-cb70-5453-93ee-5e48642b8851"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "the-headlands",
+      "name": "Каменистый мыс",
+      "oldType": "landmark",
+      "chosenType": "landmark",
+      "rpDescription": "Каменистый мыс обрывается к морю уступами, на которых после прилива остаются соль и клочья водорослей. Рыбаки различают знакомые скалы по очертаниям, когда берег ещё не укрылся туманом. На открытой земле мало укрытий, и путники пережидают шквалы в складках рельефа.",
+      "shortDescription": "Открытый морской мыс со скальными уступами и следами прилива.",
+      "typeReason": "Естественный прибрежный ориентир.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-82efd1c7-6ac1-59c8-af08-1a3a63c29372"
+      ],
+      "modifierIds": [
+        "modifier-3eb0473f-6d8f-586d-94ea-90b64444a055",
+        "modifier-87e38cbb-4e0b-5865-8439-a20aef7af933"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "pyrewood",
+      "name": "Деревня Погребальных Костров",
+      "oldType": "settlement",
+      "chosenType": "settlement",
+      "rpDescription": "В Деревне Погребальных Костров дым очагов смешивается с запахом сырого леса, а над домами видна баронская крепость. Деревня входит во владения Дариуса Краули, и по открытым дорогам отсюда отправляют возы в другие земли Гилнеаса. У колодца обсуждают лесные работы и вести, которые привозят проезжие.",
+      "shortDescription": "Жилая деревня дома Краули под баронской крепостью.",
+      "typeReason": "Действующее деревенское поселение в северных владениях Краули.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "crowley",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-9fbdf528-e278-5f96-877e-d37f62c5b725"
+      ],
+      "modifierIds": [
+        "modifier-49d940b4-16b3-561c-89b9-ba2a42d41be6",
+        "modifier-15ca1306-546e-51a7-b800-41c59f1cf51e"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "shadowfang",
+      "name": "Крепость над Пирвудом",
+      "oldType": "fortress",
+      "chosenType": "fortress",
+      "rpDescription": "Крепость над Пирвудом держит ворота под караулом барона Сребролена, служащего дому Краули. Во дворе пахнет кузнечным углём и мокрой кожей сбруи, а на стенах ветер треплет плащи дозорных. Деревенские возы поднимаются к воротам с припасами, пока привратник сверяет поручения прибывших.",
+      "shortDescription": "Каменный замок барона Сребролена с караулом и хозяйственным двором.",
+      "typeReason": "Баронский укреплённый замок с гарнизоном.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "silverlaine",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-f39cfd70-6d46-5a09-be3c-34824e4b6277"
+      ],
+      "modifierIds": [
+        "modifier-a9feb244-9c11-5de8-a62d-86da512f2157",
+        "modifier-23003bf4-a997-5bb6-8e26-cd487a4176f2"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "ambermill",
+      "name": "Янтарная мельница",
+      "oldType": "settlement",
+      "chosenType": "settlement",
+      "rpDescription": "В Янтарной мельнице пахнет свежими досками и древесной смолой, а пилы слышны раньше, чем показываются первые дома. Рабочие складывают лес так, чтобы дождь не погубил заготовленное, и грузят повозки для дорог Гилнеаса. Городок принадлежит Дариусу Краули; возле рабочих дворов кормятся возчики и лесорубы.",
+      "shortDescription": "Лесозаготовительный городок дома Краули с пильными дворами.",
+      "typeReason": "Поселение при лесозаготовках, не отдельная мельница-здание.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "crowley",
+      "childIds": [
+        "ambermill-town-hall",
+        "ambermill-westbank-farm",
+        "ambermill-firrow-farm",
+        "ambermill-moorfield-farm"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-e2e354ea-36c8-5a9b-a461-036349e80b5b"
+      ],
+      "modifierIds": [
+        "modifier-f595c756-f873-5ac2-8a9e-adab9cb5fe89",
+        "modifier-87b8b21b-0c13-5e0a-8718-10a03c52a840"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "dalaran-city",
+      "name": "Даларан",
+      "oldType": "city",
+      "chosenType": "city",
+      "rpDescription": "Даларан стоит на земле у Лордамера, и к его воротам подходят торговые повозки и ученики магов. В городе Кирин-Тора правит Совет Шести, а над улицами поднимаются башни с освещёнными окнами библиотек. У книжных лавок пахнет чернилами и переплётной кожей; приезжим советуют сперва спросить дорогу, а уже потом стучать в незнакомые двери.",
+      "shortDescription": "Город Кирин-Тора у Лордамера под властью Совета Шести.",
+      "typeReason": "Самостоятельная наземная столица Даларана, не владение Гилнеаса.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "dalaran",
+      "childIds": [
+        "violet-citadel"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-cdfb9c95-6260-52fe-9d58-6e479de9f147"
+      ],
+      "modifierIds": [
+        "modifier-415ec0c7-27cb-591b-af38-8dcccfdf8349",
+        "modifier-d6ab0bfe-25c2-5672-91f4-7d39662b2a80"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "fenris-keep",
+      "name": "Крепость Фенриса",
+      "oldType": "fortress",
+      "chosenType": "fortress",
+      "rpDescription": "В Крепости Фенриса лордеронский караул смотрит с каменных стен на озёрные воды. Снабженческие лодки привозят припасы, и у пристани солдаты помогают выгружать бочки на мокрые доски. В ненастье огни караульных помещений видны сквозь туман раньше самих ворот.",
+      "shortDescription": "Действующая островная крепость Лордерона с озёрным снабжением.",
+      "typeReason": "Лордеронская крепость без назначения гилнеасского владельца.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "lordaeron",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-b4e0aca6-85bd-56b8-ae74-02fa9bd0dc85"
+      ],
+      "modifierIds": [
+        "modifier-7dc6e2cd-0ef2-5023-948f-f6db52aced96",
+        "modifier-b07b7ff1-1672-55e1-ba0e-80bcac23a63b"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "fenris-isle",
+      "name": "Остров Фенриса",
+      "oldType": "landmark",
+      "chosenType": "landmark",
+      "rpDescription": "У Острова Фенриса лодки покачиваются на озёрной зыби, а над береговой травой кричат птицы. Дороги острова ведут к крепости Лордерона, куда доставляют припасы с материка. При густом тумане лодочники ждут у пристани, чтобы не потерять знакомые ориентиры на воде.",
+      "shortDescription": "Остров Лордамера с лордеронской крепостью и лодочными пристанями.",
+      "typeReason": "Остров как отдельный природный участок вокруг крепости.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "lordaeron",
+      "childIds": [
+        "fenris-keep"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-b1f68b18-b3cb-58dd-88e1-64aea88b0003"
+      ],
+      "modifierIds": [
+        "modifier-9b0707ca-501d-545d-a1bb-303c337259aa",
+        "modifier-bdab1c74-a1fc-5ab9-a0fc-f811ea45f1e9"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "lordaeron-city",
+      "name": "Столица Лордерона",
+      "oldType": "city",
+      "chosenType": "city",
+      "rpDescription": "В Столице Лордерона над людными улицами возвышаются стены королевского дворца Теренаса Менетила II. К воротам прибывают купцы и посланники союзных королевств, а на площадях оглашают распоряжения двора. После дождя камень блестит под копытами, и у постоялых дворов спорят о торговле, податях и оставленных войной долгах.",
+      "shortDescription": "Живая королевская столица Теренаса с дворцом и приезжими посланниками.",
+      "typeReason": "Столица самостоятельного королевства Лордерон.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "lordaeron",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-51fd146a-dfcf-5982-8078-49638240157d"
+      ],
+      "modifierIds": [
+        "modifier-ca61bb5e-a065-53c6-8dfa-a413e2cf54f1",
+        "modifier-e69a6a7a-52d6-5eea-84ad-d94dd49fe894"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "silverpine",
+      "name": "Серебряный бор",
+      "oldType": "forest",
+      "chosenType": "forest",
+      "rpDescription": "Серебряный бор тянется сырыми лесными дорогами между людскими поселениями, и в его хвое долго держится туман. Возчики узнают постоялые дворы по дыму, а лесорубы отмечают безопасные проходы через мокрые низины. В гилнеасской части лесного края лежат Деревня Погребальных Костров и Янтарная мельница, владения Дариуса Краули.",
+      "shortDescription": "Обширный лесной край с дорогами Лордерона и владениями Краули.",
+      "typeReason": "Лесной регион, не целиком частный или гилнеасский домен.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "lordaeron",
+      "childIds": [
+        "pyrewood",
+        "shadowfang",
+        "ambermill",
+        "deep-elem-mine"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-700a50aa-846e-5886-b68d-66eabe0df707"
+      ],
+      "modifierIds": [
+        "modifier-932126a9-b8ce-5f44-86f5-497dde015dca",
+        "modifier-5de96c31-4a21-52b4-8991-c140c74e5225"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "lordamere-lake",
+      "name": "Озеро Лордамер",
+      "oldType": "landmark",
+      "chosenType": "landmark",
+      "rpDescription": "Над Озером Лордамер по утрам лежит туман, и лодочники прислушиваются к плеску у камышовых берегов. На воде виден Остров Фенриса, а у озера стоит Даларан, куда прибывают по сухопутным дорогам. Рыбаки знают, как быстро здесь меняется ветер, и возвращаются к пристаням прежде, чем волна начнёт захлёстывать борта.",
+      "shortDescription": "Большое озеро с рыбными промыслами, островами и береговым Далараном.",
+      "typeReason": "Общий природный водоём без единого частного владельца.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [
+        "fenris-isle"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-6f5e7f65-8e10-55d2-b44e-717088d02bfd"
+      ],
+      "modifierIds": [
+        "modifier-1d4a5911-088a-5a25-935b-ae84a6387d95",
+        "modifier-588556a8-247a-5acc-938d-c5cb4848c76a"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "deep-elem-mine",
+      "name": "Серебряный рудник",
+      "oldType": "mine",
+      "chosenType": "mine",
+      "rpDescription": "У Серебряного рудника рабочая тропа выходит из леса к навесам с инструментами и штабелям крепёжного леса. Из выработок тянет холодной сыростью, а на площадке гремят тележки с добытой породой. После ливней шахтёры проверяют водоотвод, прежде чем отправить следующую смену под землю.",
+      "shortDescription": "Лесной рудник с подземными выработками и площадкой вывоза породы.",
+      "typeReason": "Горный промысел Серебряного бора без нового частного владельца.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "lordaeron",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-391326bb-4b22-5b76-9271-adb1d8e12d18"
+      ],
+      "modifierIds": [
+        "modifier-aed52291-06d9-5d0d-8f03-d67591f6fd52",
+        "modifier-fda28dd8-545b-5e37-9dad-25140f93f0d4"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "galewatch-lighthouse",
+      "name": "Штормовой маяк",
+      "oldType": "landmark",
+      "chosenType": "lighthouse",
+      "rpDescription": "На скалистом острове Штормовой маяк поднимает огонь над морем, помогая кормчим распознать опасный берег. Смотритель очищает стекло от соли и запасает топливо, пока тропа к пристани ещё проходима. В сильный ветер дверь башни открывают с усилием, а припасы приходится ждать до спокойной воды.",
+      "shortDescription": "Островной сигнальный маяк с запасами топлива и тропой к пристани.",
+      "typeReason": "Approved functional override",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "gilneas",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-f3378274-7313-5ec8-9cf4-e15927cb2280"
+      ],
+      "modifierIds": [
+        "modifier-18410a08-9131-5fca-b59a-07d22863ae10",
+        "modifier-9a3b4907-cd7b-5e82-87f6-4d75e5e7d8f2"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "violet-citadel",
+      "name": "Аметистовая цитадель",
+      "oldType": "fortress",
+      "chosenType": "fortress",
+      "rpDescription": "В Аметистовой цитадели посетителей встречают служители Кирин-Тора и спрашивают о цели приезда. За открытыми дверями слышны шаги переписчиков, а в приёмных пахнет воском и свежими чернилами. Ученики приносят книги по поручениям наставников, пока посыльные ждут ответов для городских учреждений.",
+      "shortDescription": "Цитадель Кирин-Тора с приёмными и работой учёных магов.",
+      "typeReason": "Главная цитадель Даларана; закрытые хранилища не описываются.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "dalaran",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-3cd7e69c-131b-576a-acf2-1ea95df1642f"
+      ],
+      "modifierIds": [
+        "modifier-5e4a7c91-d5ab-572c-bcba-9845522c33a5",
+        "modifier-0cd3de69-e284-51c5-876c-89c0af7e5832"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-df0aa1e2-31ba-43fa-b6b0-84c7733f625a",
+      "name": "Деревня Серый Брод",
+      "oldType": "settlement",
+      "chosenType": "settlement",
+      "rpDescription": "В Деревне Серый Брод у порогов сушат грязные сапоги, а возле тележных колёс оставляют жерди для тяжёлой дороги. После дождя жители расспрашивают проходящих о воде на переправах, прежде чем отправить воз с товаром. Вечером над низкими крышами поднимается печной дым, и хозяева загоняют птицу во дворы.",
+      "shortDescription": "Деревня Серый Брод с дорожными возами и дворами под низкими крышами.",
+      "typeReason": "Деревня; предложенное имя — Деревня Серый Брод.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-7ac73f00-0fa5-54ae-9ebe-f5d98ea87718"
+      ],
+      "modifierIds": [
+        "modifier-e00f26b7-8d26-5123-8931-1787005f34cc",
+        "modifier-c7508c0d-e925-55c8-9cd4-d61b2f80479c"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-ff52d2ed-f36b-4aba-8eac-7de87c8c76d7",
+      "name": "Храм Владыки Глубин",
+      "oldType": "church",
+      "chosenType": "church",
+      "rpDescription": "Храм Владыки Глубин заложили приезжие жрецы с Кул-Тираса ещё в те дни, когда остров был колонией Гилнеаса. Под каменными сводами пахнет солью и лампадным маслом; моряки приносят сюда раковины и обеты Матери Приливов. Перед отплытием жрецы благословляют команды и суда, а в непогоду оставляют огонь для тех, кто ищет берег.",
+      "shortDescription": "Морской храм, где Жрецы Моря благословляют уходящих в плавание.",
+      "typeReason": "Открытый храм моряков; история основания передаётся как предание.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "tidesages",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-40a11f37-3135-51fd-b8d8-f68becb26315"
+      ],
+      "modifierIds": [
+        "modifier-e446c96d-1e58-5e68-90ed-e06de681454e",
+        "modifier-3fa9e420-af87-5368-bbcb-94ce0ba8742e"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-fb88bb30-c639-4f75-a142-92445555a772",
+      "name": "Деревня Мшистые Кровли",
+      "oldType": "settlement",
+      "chosenType": "settlement",
+      "rpDescription": "В Деревне Мшистые Кровли сырость зеленит старую черепицу, и жители каждую осень прочищают желоба над дверями. Под навесами хранят дрова, а во дворах чинят телеги и перебирают припасы на зиму. В дождь соседи передают новости через изгороди, не выходя далеко от домашних очагов.",
+      "shortDescription": "Деревня Мшистые Кровли с сырыми крышами и хозяйственными дворами.",
+      "typeReason": "Деревня; предложенное имя — Деревня Мшистые Кровли.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-fd65f111-b104-5c40-ad6a-690e67e8123a"
+      ],
+      "modifierIds": [
+        "modifier-4321cb13-0526-5270-bfdc-9a22084562fe",
+        "modifier-75fa0a86-e333-5d79-8e2a-4c3e1f2e786c"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-4f29a377-1080-4a49-b400-026ff4c7c589",
+      "name": "Ипподром",
+      "oldType": "stable",
+      "chosenType": "stable",
+      "rpDescription": "На Ипподроме дома Вальден проводят скачки и конные поединки, отделяя зрителей от дорожки крепкой оградой. Перед заездами конюхи проверяют подпруги, а распорядители следят, чтобы мокрый грунт не подвёл лошадей. В праздничные дни здесь пахнет кожей седла и горячим угощением из торговых лотков.",
+      "shortDescription": "Ограждённое поле дома Вальден для скачек и конных поединков.",
+      "typeReason": "The existing equine/stable glyph is more informative for an equestrian track than a generic landmark shield.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "walden",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-5072fed6-b3c0-500c-898a-5f9e709e2689"
+      ],
+      "modifierIds": [
+        "modifier-cfdef0b1-0183-5fe4-bd48-19a3bb8182fb",
+        "modifier-031bef31-75e8-53c8-9a70-79526078b728"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-9020653f-e319-4959-854d-9669422e14cc",
+      "name": "Поместье Дома Вальден",
+      "oldType": "estate",
+      "chosenType": "estate",
+      "rpDescription": "В Поместье Дома Вальден у ворот принимают посетителей лорда Вальдена, а экипажи разворачиваются на утрамбованном дворе. Морская сырость быстро портит металл, и слуги регулярно протирают петли и фонари. Перед скачками из дома отправляют распоряжения на ипподром, а гостей усаживают у растопленных каминов.",
+      "shortDescription": "Резиденция лорда Вальдена с приёмным домом и экипажным двором.",
+      "typeReason": "Именованное поместье дома Вальден.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "walden",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-386043c4-f204-5820-83ed-bae571f85eed"
+      ],
+      "modifierIds": [
+        "modifier-3b5e8711-19aa-5e23-acd7-d8bf300262f4",
+        "modifier-9d78f259-66bc-50d0-a18e-d212b1e55e81"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-e8c8f59c-83ac-49ff-819f-9708a9734ff1",
+      "name": "Южный маяк",
+      "oldType": "building",
+      "chosenType": "lighthouse",
+      "rpDescription": "Южный маяк зажигает огонь для судов, идущих вдоль берега владений дома Вальден. Смотритель держит запас топлива в сухом помещении и очищает фонарь от солёного налёта. Когда море шумит особенно сильно, припасы поднимают в башню заранее, не дожидаясь непогоды.",
+      "shortDescription": "Береговой маяк дома Вальден, обозначающий морской путь огнём.",
+      "typeReason": "Approved functional override",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "walden",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-8280e8da-2f21-5bd7-835d-eb53263d0c3a"
+      ],
+      "modifierIds": [
+        "modifier-c4cb130f-f81b-52a3-9173-6e7c17acc941",
+        "modifier-2249695d-19e8-599c-b8c6-760bee03aa7f"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-52d50172-b218-4b6b-be09-eccd9fb419ce",
+      "name": "Поместье Дома Эшбери",
+      "oldType": "estate",
+      "chosenType": "estate",
+      "rpDescription": "У Поместья Дома Эшбери ровно подстриженные посадки окружают каменный жилой дом. В ненастье посетители стряхивают воду с плащей под навесом, пока слуга узнаёт, ждут ли их в доме. Из хозяйственного двора доносятся стук поленьев и звон посуды, приготовленной для господского стола.",
+      "shortDescription": "Усадьба дома Эшбери с жилым домом и хозяйственным двором.",
+      "typeReason": "Поместье указанного дома Эшбери.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "ashbury",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-0dcee6bd-08ae-51eb-9c7c-69b13e1a9ef5"
+      ],
+      "modifierIds": [
+        "modifier-b8253a16-3008-5c25-94de-59a88f96d262",
+        "modifier-a562dd0a-d7bc-54c9-8c7e-cec10d12604f"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-b415ddf5-f12a-4421-829f-e8723bdaa1d4",
+      "name": "Кладбище Черной Дубравы",
+      "oldType": "cemetery",
+      "chosenType": "cemetery",
+      "rpDescription": "На Кладбище Черной Дубравы корни деревьев подступают к оградам, и смотритель расчищает дорожки от опавших ветвей. Мох темнит старые камни, а после дождя у могил задерживается лесной запах. Семьи приносят цветы в дни поминовения и поправляют ограды, прежде чем уйти домой.",
+      "shortDescription": "Лесное кладбище с семейными могилами и расчищенными дорожками.",
+      "typeReason": "Место погребения с уходом за могилами.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [
+        "location-a4bf5eb0-1154-4519-9400-f17ced83a1d9"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-1d95a594-726b-5857-882a-d2f81bfaaac1"
+      ],
+      "modifierIds": [
+        "modifier-67b1f625-3482-5f46-b190-eeba6cf8054b",
+        "modifier-4c821b2e-8dce-525c-aa24-d67a0998f379"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-a4bf5eb0-1154-4519-9400-f17ced83a1d9",
+      "name": "Дом смотрителя кладбища",
+      "oldType": "building",
+      "chosenType": "building",
+      "rpDescription": "В Доме смотрителя кладбища возле двери стоят лопаты и метла, а над печью сушатся рабочие рукавицы. Смотритель хранит ключи от ворот и записывает сведения о захоронениях в толстую книгу. Сюда приходят договориться об уходе за могилой или узнать, где лежат родные.",
+      "shortDescription": "Дом кладбищенского смотрителя с ключами, инструментами и книгой захоронений.",
+      "typeReason": "Жильё и рабочее помещение кладбищенского служителя.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-5cb97e6a-a6d9-5c0a-8467-a02e9812417d"
+      ],
+      "modifierIds": [
+        "modifier-6c916eaa-7be3-53bf-b2d7-a927c2d92ceb",
+        "modifier-08d71807-b1aa-5e0a-9975-f1f105709f6e"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-75988492-6f32-4e29-9058-ef9d73e1746d",
+      "name": "Дом травника",
+      "oldType": "building",
+      "chosenType": "building",
+      "rpDescription": "Под потолком Дома травника висят пучки сушёных растений, и тёплый воздух пахнет горькими листьями. Здесь Ведьмы Урожая перебирают сборы, готовят настои и объясняют крестьянам, какие травы оставить на семена. Посетители ждут у стола, пока хозяин дома отмеряет сушёные корни на маленьких весах.",
+      "shortDescription": "Дом травника, где Ведьмы Урожая сушат сборы и готовят настои.",
+      "typeReason": "Дом с травническим ремеслом, связанный с Ведьмами Урожая.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "harvest-witches",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-411e0d66-6b09-52cf-b2f8-a0c4df4ce754"
+      ],
+      "modifierIds": [
+        "modifier-b098cf58-ff8e-59bf-93ae-f10e7e1747ea",
+        "modifier-9a4ef829-91c6-5419-80e7-acaf7389b6b7"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-5187131a-bb77-4e98-948d-ddd4247781f2",
+      "name": "Туманные Топи",
+      "oldType": "landmark",
+      "chosenType": "landmark",
+      "rpDescription": "В Туманных Топях вода скрывается под травой, и туман стирает различие между тропой и мокрой низиной. Ведьмы Урожая собирают здесь болотные растения, прощупывая дорогу посохами и отмечая надёжные проходы. Местные не спешат сходить со знакомого пути: сапог, застрявший в вязкой земле, легко оставить без хозяина.",
+      "shortDescription": "Туманные заболоченные земли с травными сборами и немногими сухими проходами.",
+      "typeReason": "Природные топи, используемые для сбора растений.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "harvest-witches",
+      "childIds": [
+        "location-75988492-6f32-4e29-9058-ef9d73e1746d"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-51faea2e-ab1e-549b-9bd4-b680e1329603"
+      ],
+      "modifierIds": [
+        "modifier-62d33988-6f8a-5568-ac06-8993e5ad3d24",
+        "modifier-09ee1471-c558-5dc7-b112-04565d6b9199"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-8288bc4e-bb08-45d9-ace3-bc878fe7e8ba",
+      "name": "Дом егеря",
+      "oldType": "building",
+      "chosenType": "building",
+      "rpDescription": "У Дома егеря на жердях сушатся плащи, а в сенях пахнет кожей и дымом. Егерь следит за лесными тропами, замечает следы браконьеров и предупреждает путников о размытых проходах. Возвращаясь из обхода, он сперва чистит сапоги и проверяет, хватит ли сухих дров на ночь.",
+      "shortDescription": "Жильё лесного егеря с инструментами для обходов и ухода за тропами.",
+      "typeReason": "Один жилой служебный дом.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-5688cc78-368c-50ec-bc97-97c71204837a"
+      ],
+      "modifierIds": [
+        "modifier-48b2af08-181d-5dda-b0ff-3e8a156efa06",
+        "modifier-75588520-b866-52c3-99a0-08cf988026a2"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-54cebe0e-8a63-43c7-86d2-b85f6edf2732",
+      "name": "Дом егеря",
+      "oldType": "settlement",
+      "chosenType": "building",
+      "rpDescription": "Возле Дома егеря собраны жерди для починки оград, и под крышей хранят связки сухого хвороста. Хозяин обходит окрестные угодья и объясняет приезжим, где после дождей дорога становится ненадёжной. За небольшим столом он чинит ремни и записывает замеченные следы зверя.",
+      "shortDescription": "Отдельный егерский дом для лесных обходов и хозяйственного ухода.",
+      "typeReason": "Егерский дом, а не отдельное поселение.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-7ffbbca0-82d9-5b7f-a039-fefdfa50f8ba"
+      ],
+      "modifierIds": [
+        "modifier-234e39ed-8ac6-5311-805c-d76ad3035ca1",
+        "modifier-0cc25fa3-b571-5f66-9666-b63a5f02d6da"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-544521a1-babb-4fea-af73-6ebb91c476e0",
+      "name": "Дом смотрителя",
+      "oldType": "building",
+      "chosenType": "building",
+      "rpDescription": "В Доме смотрителя у Покоя Адерика у стены стоят садовые инструменты, а на крюке возле двери висят ключи. Здесь можно узнать дорогу к семейным могилам и оставить просьбу поправить ограду. По вечерам смотритель стряхивает с одежды землю и заносит в книгу сделанную за день работу.",
+      "shortDescription": "Дом смотрителя у Покоя Адерика, куда обращаются по уходу за могилами.",
+      "typeReason": "Служебный дом возле кладбищенского участка.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-520bb55d-c929-50e1-b58e-3daa60f97b3e"
+      ],
+      "modifierIds": [
+        "modifier-979f69a4-a952-5d0a-97a0-30837ac08b16",
+        "modifier-e91a2e72-d967-5cc3-8746-62878b3eadb5"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-8ee04e39-6c00-4b0b-9bcf-17de4fddb9bb",
+      "name": "Церковь Темной Гавани",
+      "oldType": "church",
+      "chosenType": "church",
+      "rpDescription": "В Церкви Темной Гавани молятся Святому Свету за близких и за команды, ушедшие в море. Влажные плащи оставляют у входа, чтобы не нести воду к скамьям и свечам. После службы прихожане задерживаются у дверей, расспрашивая соседей о больных и нуждающихся.",
+      "shortDescription": "Приходская церковь Темной Гавани с молитвами за горожан и моряков.",
+      "typeReason": "Городской храм Святого Света.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-922b291f-c9c3-5365-bb16-361341397e7b"
+      ],
+      "modifierIds": [
+        "modifier-71edd4e7-b883-52c1-8e5b-fd9d59885fe1",
+        "modifier-b0928b0f-777f-598a-b4c3-eb6d60c14c0e"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-3325cfda-47a7-4e3d-9cac-3797f4dbaa9d",
+      "name": "Маяк Темной Гавани",
+      "oldType": "building",
+      "chosenType": "lighthouse",
+      "rpDescription": "Маяк Темной Гавани показывает подход к городскому берегу огнём над тёмной водой. Смотритель проверяет фонарь ещё до сумерек и стирает соль со стекла после сильного ветра. Моряки высматривают этот свет, когда возвращаются с промысла или ведут судно к порту в ненастье.",
+      "shortDescription": "Городской маяк, помогающий судам находить подход к Темной Гавани.",
+      "typeReason": "Approved functional override",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-7f6642b0-27bc-58d1-a09e-7892cb2b41cb"
+      ],
+      "modifierIds": [
+        "modifier-dab09315-d181-5e23-89a3-6496ef89a40f",
+        "modifier-50331210-33af-5252-8a52-6dc2c94d7b94"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-17511ea5-f77c-4d83-a187-ee2da7acbf21",
+      "name": "Лечебница Тихий Холм",
+      "oldType": "settlement",
+      "chosenType": "hospital",
+      "rpDescription": "В Лечебнице Тихий Холм принимают людей, измученных душевными болезнями, бессонницей и тяжёлыми переживаниями. В комнатах пахнет чистым бельём и травными настоями, а во время отдыха больных посетителей просят говорить тихо. Родные оставляют передачи у служителя и договариваются с лекарем о следующем посещении.",
+      "shortDescription": "Лечебница для душевнобольных с тихими палатами и приёмом родственников.",
+      "typeReason": "Approved functional override",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-f30ce177-812a-509d-8987-dc6e4573d771"
+      ],
+      "modifierIds": [
+        "modifier-978e4dc6-0952-57b1-bba7-305df3df2759",
+        "modifier-52a9b7f7-0047-5096-a033-f06ad4e9d8b1"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-426acd7a-5f00-48c0-a6aa-1de9ce3ac2fc",
+      "name": "Портовый район",
+      "oldType": "shipyard",
+      "chosenType": "harbor",
+      "rpDescription": "В Портовом районе Темной Гавани суда стоят у причалов, а на стапелях плотники подгоняют обшивку новых кораблей. Воздух пахнет смолой и сырым деревом; между складами грузчики катят бочки, обходя натянутые канаты. При смене прилива команды проверяют швартовы, и разговоры приходится вести поверх стука молотков.",
+      "shortDescription": "Портовый район Темной Гавани с причалами, складами и судостроением.",
+      "typeReason": "A port district needs its maritime anchor rather than a generic city block glyph.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-66f92425-d5cd-5739-8145-8d934dc1eee2"
+      ],
+      "modifierIds": [
+        "modifier-c8d9a079-8e0e-5734-a771-587f45589655",
+        "modifier-51b2a617-3b9a-53f0-8877-ebd343a0a0db"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-ecbf79ff-610a-4bde-8d16-a437954ed7a4",
+      "name": "Казарма стражи",
+      "oldType": "building",
+      "chosenType": "barracks",
+      "rpDescription": "В Казарме стражи Темной Гавани патрульные сушат плащи и принимают распоряжения перед обходом улиц. У дверей горожане заявляют о кражах, драках и потерянном имуществе. Писарь заносит жалобы в книгу, пока во дворе сменяют караул и проверяют фонари для ночной службы.",
+      "shortDescription": "Казарма городской стражи с патрулями и приёмом жалоб жителей.",
+      "typeReason": "Approved functional override",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-fd66d57f-f5e1-5fb2-a6f9-de2169c98459"
+      ],
+      "modifierIds": [
+        "modifier-0d6fc9c0-ae77-529d-8812-22f71b7be64d",
+        "modifier-8bf8d7f8-c2eb-5896-b037-ca458db6ff96"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-f2adc0b4-c081-404a-a546-16ca52d028aa",
+      "name": "Городской рынок",
+      "oldType": "settlement",
+      "chosenType": "market",
+      "rpDescription": "На Городском рынке Темной Гавани рядом с корзинами рыбы выставляют овощи, шерсть и привезённую муку. От мороси прилавки закрывают полотнищами, и покупатели протискиваются между тележками под капающими краями навесов. К полудню здесь знают, какие лодки вернулись с уловом и кто привёз самый сухой запас дров.",
+      "shortDescription": "Рынок Темной Гавани с рыбными рядами и сельским привозом.",
+      "typeReason": "Approved functional override",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-23a70dac-df4b-5e12-bf4f-057509ce1069"
+      ],
+      "modifierIds": [
+        "modifier-efdd1550-2ae8-5c35-8fc5-40f562b58378",
+        "modifier-a8441301-287e-556c-babb-8dc2ea268972"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-94b0bb4b-f058-4b9d-9ec3-eb3fdb02b21f",
+      "name": "Городская ратуша",
+      "oldType": "building",
+      "chosenType": "building",
+      "rpDescription": "В Городской ратуше Темной Гавани писари разбирают прошения и ведут городские книги. На доске у входа вывешивают распоряжения, а посетители стряхивают дождь с шляп, ожидая вызова к столу. Сюда приходят по вопросам торговли, податей и ремонта улиц, когда соседских договорённостей уже недостаточно.",
+      "shortDescription": "Ратуша Темной Гавани с городскими книгами и приёмом прошений.",
+      "typeReason": "Муниципальное административное здание.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-c9c0295e-d2fe-519c-a3b5-5217b1a696cf"
+      ],
+      "modifierIds": [
+        "modifier-9885e7d0-56b5-5a90-b5fb-7d56e28c15d2",
+        "modifier-6922f68c-2229-5086-b42f-38dfac84e67b"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-3cfcf216-6753-4b1a-bd43-3adc40bd96f0",
+      "name": "Паб Медный Пес",
+      "oldType": "inn",
+      "chosenType": "inn",
+      "rpDescription": "В Пабе Медный Пес пахнет солодом, горячей похлёбкой и дымом очага. Моряки делят столы с ремесленниками, а хозяин просит оставлять мокрые плащи подальше от скамей. Здесь спорят об улове и ценах на бочки, но к последней кружке голоса обычно становятся тише.",
+      "shortDescription": "Городской паб с горячей едой и разговорами моряков и ремесленников.",
+      "typeReason": "Питейное заведение для горожан и приезжих.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-f8e9640f-96b1-5bdf-a6e9-bbb88252e438"
+      ],
+      "modifierIds": [
+        "modifier-2faf8a40-3382-5c06-839a-4e1574e724bb",
+        "modifier-8190c1af-4e25-58e8-8e58-1b248f369fce"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-18f52fa5-7ee8-467f-81a1-d8d8ec11929f",
+      "name": "Алкогольная мануфактура",
+      "oldType": "workshop",
+      "chosenType": "workshop",
+      "rpDescription": "На Алкогольной мануфактуре дом Эвермонт изготавливает виски и брэнди. В рабочих помещениях пахнет нагретым зерном и медью перегонных кубов, а в хранилище бочки отдают древесной сладостью. Приказчики следят за выдержкой и записывают отправленные партии, прежде чем возчики увезут их в лавки и питейные дома.",
+      "shortDescription": "Мануфактура дома Эвермонт, перегоняющая и выдерживающая виски и брэнди.",
+      "typeReason": "Производство виски и брэнди, прямо указанное для дома Эвермонт.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "evermont",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-5b624d1e-ba5b-51a5-bb98-aeb5dba0be15"
+      ],
+      "modifierIds": [
+        "modifier-5069d004-f714-52dc-b3f1-f6369dc7cba9",
+        "modifier-973e4842-1e12-5002-9110-c58d0f68c4a1"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-76bf7c1a-fcd2-4dfc-9013-26b909b4732f",
+      "name": "Поместье Дома Эвермонт",
+      "oldType": "estate",
+      "chosenType": "estate",
+      "rpDescription": "В Поместье Дома Эвермонт хозяйственные возы останавливаются у двора, пока в жилом доме принимают гостей. Из конюшен доносится перестук копыт, а со стороны псарни слышен знакомый слугам лай. В дождь между домом и служебными постройками ходят по утоптанным дорожкам, придерживая полы плащей.",
+      "shortDescription": "Усадьба дома Эвермонт с жилым домом, конюшнями и псарней.",
+      "typeReason": "Поместье дома Эвермонт с указанными хозяйственными постройками.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "evermont",
+      "childIds": [
+        "location-6f6350b7-e0d4-49f0-b333-a807c0003842",
+        "location-d62d4e06-bb2d-48dc-8f59-fcbe0641f652",
+        "location-d3cda392-00e2-4afd-8cb4-09e8330221a6",
+        "location-18f52fa5-7ee8-467f-81a1-d8d8ec11929f"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-9a73fd2c-4db1-565a-a959-bf8fb9c2ee98"
+      ],
+      "modifierIds": [
+        "modifier-948b48d4-ec81-5df5-97e8-204f00f22c50",
+        "modifier-48c967bc-776b-523c-85b6-b49e3a36f715"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-60382f79-7237-4492-a95b-749b4f290d9b",
+      "name": "Поместье Краули",
+      "oldType": "estate",
+      "chosenType": "estate",
+      "rpDescription": "В Поместье Краули в Темной Гавани у ворот принимают письма и посетителей дома. Во дворе разворачивают экипажи, а конюхи выводят лошадей из конюшен перед поездкой. Слуги разносят сухие дрова по жилым комнатам, когда морской ветер приносит очередной дождь.",
+      "shortDescription": "Городское поместье Краули с приёмным домом и собственными конюшнями.",
+      "typeReason": "Поместье Краули, связанное с городом и служебными зданиями.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "crowley",
+      "childIds": [
+        "location-883f0f53-ba1a-44a5-bd8e-60b2d5d8cc22",
+        "location-ea37cf4e-63d7-48d1-bb38-c5a465f16f3a"
+      ],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-7912db47-b9e1-54b6-a6df-9a07cabf0b08"
+      ],
+      "modifierIds": [
+        "modifier-aff530b1-1f95-5091-afa1-45bcb37f2f54",
+        "modifier-2658a8fa-e9c5-5a65-b867-eb706a394d2d"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-883f0f53-ba1a-44a5-bd8e-60b2d5d8cc22",
+      "name": "Дом для прислуги",
+      "oldType": "settlement",
+      "chosenType": "building",
+      "rpDescription": "В Доме для прислуги живут работники поместья Краули, возвращающиеся сюда после дневных поручений. Возле печи сушат фартуки и чулки, а за общим столом делят ужин и договариваются о завтрашних делах. Утром дом пустеет, пока жильцы расходятся в господские покои и хозяйственный двор.",
+      "shortDescription": "Жилой дом работников поместья Краули с общей кухней и комнатами.",
+      "typeReason": "Жильё прислуги одного поместья, не отдельная деревня.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "crowley",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-7ee67b31-61da-5ce3-bee8-5eddb3ab1271"
+      ],
+      "modifierIds": [
+        "modifier-8629e944-cb0e-5f06-9f49-4d2a012a38ef",
+        "modifier-7dc0273f-3813-5869-8d66-9706d164a719"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-ea37cf4e-63d7-48d1-bb38-c5a465f16f3a",
+      "name": "Конюшни Краули",
+      "oldType": "stable",
+      "chosenType": "stable",
+      "rpDescription": "В Конюшнях Краули пахнет сухим сеном, кожаной сбруей и тёплыми лошадьми. Конюхи чистят денники, проверяют копыта и готовят упряжь для экипажей поместья. В дождь животных растирают после дороги, прежде чем дать им корм и свежую подстилку.",
+      "shortDescription": "Поместные конюшни Краули для ухода за лошадьми и подготовки экипажей.",
+      "typeReason": "Конюшни с обычным уходом за поместными лошадьми.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "crowley",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-dc96c2df-21a4-5a20-b2b2-2b0b67489a9c"
+      ],
+      "modifierIds": [
+        "modifier-0b87047e-ea07-5693-9758-5ca8f71f6496",
+        "modifier-5c296801-1961-52b1-9b38-fa5655f24f4d"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-6f6350b7-e0d4-49f0-b333-a807c0003842",
+      "name": "Конюшни поместья Эвермонт",
+      "oldType": "stable",
+      "chosenType": "stable",
+      "rpDescription": "В Конюшнях поместья Эвермонт под крышей хранят сено и сушат сбрую после поездок. Конюхи ухаживают за верховыми и упряжными лошадьми, готовя их для гостей и хозяйственных выездов. У дверей слышен скребок по копытам, а в холодные дни денники закрывают от сквозняка.",
+      "shortDescription": "Конюшни Эвермонтов для верховых лошадей, упряжи и хозяйственных поездок.",
+      "typeReason": "Поместные конюшни, не место военного формирования.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "evermont",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-73b6ed3f-2c78-5f45-9f89-56024f0b567f"
+      ],
+      "modifierIds": [
+        "modifier-d1090e65-7e2f-5fc3-a18c-616098019293",
+        "modifier-9d7db93c-a36d-50c6-bd1c-779dda873914"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-d62d4e06-bb2d-48dc-8f59-fcbe0641f652",
+      "name": "Псарня поместья Эвермонт",
+      "oldType": "building",
+      "chosenType": "building",
+      "rpDescription": "В Псарне поместья Эвермонт собак кормят по часам и выводят на ограждённый выгул. Под навесом сушат подстилки, а псарь осматривает лапы после долгих прогулок по сырой земле. Привычный голос работника быстро успокаивает лай, поднятый при появлении незнакомого посетителя.",
+      "shortDescription": "Поместная псарня с кормлением, уходом за собаками и ограждённым выгулом.",
+      "typeReason": "Хозяйственное помещение для содержания собак.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "evermont",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-d4fdca48-788d-526f-9b92-a34a89ef65a2"
+      ],
+      "modifierIds": [
+        "modifier-36aafbef-dbd8-5a2e-aedf-ca0b446e3052",
+        "modifier-d7f5f5e9-f2f4-57cf-b7f1-4480f6af6a46"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-d3cda392-00e2-4afd-8cb4-09e8330221a6",
+      "name": "Домик прислуги поместья Эвермонт",
+      "oldType": "building",
+      "chosenType": "building",
+      "rpDescription": "В Домике прислуги поместья Эвермонт после работы слышны звон посуды и разговоры за ужином. На крючках сушится повседневная одежда, а у окна чинят бельё для господского дома. Перед рассветом жильцы растапливают печь и расходятся по хозяйственным поручениям.",
+      "shortDescription": "Жильё прислуги Эвермонтов с общей повседневной домашней жизнью.",
+      "typeReason": "Жилой служебный дом при поместье Эвермонт.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "evermont",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-49c859f9-10b7-54cb-a5e0-9dd09e0ec4a2"
+      ],
+      "modifierIds": [
+        "modifier-40044a9f-b8f7-5205-9dae-30769d0ce1ef",
+        "modifier-752e04cb-f438-5ec7-b884-209f688035f5"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "location-6e3bbad5-4890-4ae0-b8cc-1a3fa97535a4",
+      "name": "Постоялый двор",
+      "oldType": "settlement",
+      "chosenType": "inn",
+      "rpDescription": "На Постоялом дворе путники оставляют повозки во дворе и спрашивают свободное место у хозяина. Из кухни тянет горячим бульоном, а промокшие плащи развешивают возле очага, не загораживая проход. Возчики проверяют груз перед ночлегом и договариваются ехать вместе, если дорога после дождя тяжела.",
+      "shortDescription": "Постоялый двор с ночлегом, горячей едой и местом для повозок.",
+      "typeReason": "Дорожное заведение для ночлега, не отдельное поселение.",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": null,
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-8234efc3-a045-50ba-bfd3-0d88b5eb74cd"
+      ],
+      "modifierIds": [
+        "modifier-74073caa-084a-53f9-aaae-11be4142be20",
+        "modifier-57879863-1624-5ab6-ae92-4ff225ad50f7"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "ambermill-town-hall",
+      "name": "Ратуша Янтарной мельницы",
+      "oldType": null,
+      "chosenType": "building",
+      "rpDescription": "Над дверью ратуши висит герб дома Краули, а под навесом объявляют цены на лес и дни торгов. Здесь хранят земельные книги, разбирают соседские споры и собирают людей на помощь дорогам и мостам.",
+      "shortDescription": "Ратуша, земельные книги и общинные дела Янтарной мельницы.",
+      "typeReason": "Visible author-raster building/field, roleplay name",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "crowley",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-ambermill-town-hall"
+      ],
+      "modifierIds": [
+        "modifier-ambermill-town-hall-bonus",
+        "modifier-ambermill-town-hall-penalty"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "ambermill-westbank-farm",
+      "name": "Ферма Янтарный Колос",
+      "oldType": null,
+      "chosenType": "farm",
+      "rpDescription": "За плетнём колышется рожь, а у приземистого амбара пахнет соломой и свежим хлебом. Хозяева возят зерно в Янтарную мельницу и привечают путников, готовых помочь с починкой изгородей.",
+      "shortDescription": "Зерновое хозяйство у дороги к Янтарной мельнице.",
+      "typeReason": "Visible author-raster building/field, roleplay name",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "crowley",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-ambermill-westbank-farm"
+      ],
+      "modifierIds": [
+        "modifier-ambermill-westbank-farm-bonus",
+        "modifier-ambermill-westbank-farm-penalty"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "ambermill-firrow-farm",
+      "name": "Ферма Вересковый Двор",
+      "oldType": null,
+      "chosenType": "farm",
+      "rpDescription": "Длинные полосы овса и овощей тянутся от низких хозяйственных домов к лесной опушке. По утрам здесь слышны стук вёдер и скрип телеги, увозящей припасы на поселковый торг.",
+      "shortDescription": "Овсяные поля и огороды Верескового Двора.",
+      "typeReason": "Visible author-raster building/field, roleplay name",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "crowley",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-ambermill-firrow-farm"
+      ],
+      "modifierIds": [
+        "modifier-ambermill-firrow-farm-bonus",
+        "modifier-ambermill-firrow-farm-penalty"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    },
+    {
+      "id": "ambermill-moorfield-farm",
+      "name": "Ферма Тёплая Борозда",
+      "oldType": null,
+      "chosenType": "farm",
+      "rpDescription": "Небольшое поле укрыто от ветра каменными грядами; рядом стоят дом землепашца и крытый сарай. Семья растит корнеплоды, сушит травы и оставляет у калитки фонарь для тех, кто поздно возвращается с лесной дороги.",
+      "shortDescription": "Укрытое от ветра хозяйство у южной лесной дороги.",
+      "typeReason": "Visible author-raster building/field, roleplay name",
+      "descriptionAudited": true,
+      "iconAudited": true,
+      "objectAudited": true,
+      "linksAudited": true,
+      "faction": "crowley",
+      "childIds": [],
+      "coordinatePreserved": true,
+      "status": "objects and native integration pending",
+      "objectIds": [
+        "object-ambermill-moorfield-farm"
+      ],
+      "modifierIds": [
+        "modifier-ambermill-moorfield-farm-bonus",
+        "modifier-ambermill-moorfield-farm-penalty"
+      ],
+      "state": "parent-data-audited; independentreview and native acceptance pending",
+      "fullVerificationComplete": false
+    }
+  ],
+  "notPlaytested": true,
+  "automaticDiceEngine": false
+}

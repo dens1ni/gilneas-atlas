@@ -1,0 +1,73 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {effectiveFaction,normalizeData} from '../assets/js/model.mjs';
+const read=name=>JSON.parse(fs.readFileSync(new URL(`../assets/data/${name}`,import.meta.url),'utf8'));
+const place=(data,id)=>{const location=data.locations.find(record=>record.id===id);assert.ok(location,id);return location;};
+const object=(location,id)=>{const record=location.objects.find(entry=>entry.id===id);assert.ok(record,id);return record;};
+const ownershipRules={edition:'dnd5e',homebrew:true,mode:'faction-ownership',activation:'ownership',scope:'faction',appliesTo:'all-members',stacking:'additive',bonusValue:1};
+
+test('Emberstone Village has a water-driven ore crusher as its own mill object',()=>{
+ const data=read('atlas.json'),village=place(data,'emberstone-village');
+ const wheel=object(village,'object-emberstone-ore-crushing-waterwheel');
+ assert.equal(wheel.name,'Водяное колесо рудодробилки');
+ assert.equal(wheel.type,'mill');
+ assert.match(wheel.description,/руд/iu);
+ assert.match(wheel.description,/дроб/iu);
+ assert.match(wheel.description,/вод|поток/iu);
+ assert.equal(wheel.owner,'Лорд Марли');
+ assert.equal(Object.hasOwn(wheel,'faction'),false,'The object inherits the village faction instead of inventing a private owner');
+ assert.equal(effectiveFaction(village,wheel),'marley');
+ assert.deepEqual(wheel.rules,ownershipRules);
+ assert.deepEqual(wheel.modifiers,[{id:'modifier-emberstone-waterwheel-bonus',kind:'bonus',text:'+1 к проверкам с инструментами кузнеца всей фракции.'}]);
+ assert.equal(wheel.provenance.authorScenario.basis,'explicit-user-authorship');
+ assert.equal(wheel.provenance.authorScenario.canonicalEvidence,false);
+ assert.deepEqual(village.objects.map(entry=>entry.id),['object-043cd8bc-00a8-57c7-9ab5-bd58cb000164',wheel.id,'object-emberstone-watch-post']);
+ assert.deepEqual(village.linkedLocationIds,['emberstone-mine']);
+ assert.deepEqual([village.x,village.y],[2159,2630]);
+ assert.equal(village.isLocation,true);
+ assert.deepEqual(normalizeData(data),data);
+ assert.deepEqual(data,read('publication-v6.json'));
+});
+
+test('Emberstone Mine contains a separately identified copper deposit alongside the old lamp room',()=>{
+ const data=read('atlas.json'),mine=place(data,'emberstone-mine');
+ const copper=object(mine,'object-emberstone-copper-deposit');
+ assert.equal(copper.name,'Месторождение меди');
+ assert.equal(copper.type,'resource');
+ assert.match(copper.description,/мед/iu);
+ assert.equal(copper.owner,'Лорд Марли');
+ assert.equal(Object.hasOwn(copper,'faction'),false);
+ assert.equal(Object.hasOwn(copper,'amount'),false,'The author did not specify a finite or infinite reserve');
+ assert.equal(effectiveFaction(mine,copper),'marley');
+ assert.deepEqual(copper.rules,ownershipRules);
+ assert.deepEqual(copper.modifiers,[{id:'modifier-emberstone-copper-deposit-bonus',kind:'bonus',text:'+1 к проверкам Интеллекта (Природа) всей фракции.'}]);
+ assert.equal(copper.provenance.authorScenario.basis,'explicit-user-authorship');
+ assert.equal(copper.provenance.authorScenario.canonicalEvidence,false);
+ assert.equal(copper.provenance.authorScenario.mineral,'copper');
+ assert.equal(mine.objects[0].id,'object-2cd23821-608a-534c-9d26-125f4dd6fba5');
+ assert.equal(mine.type,'mine');assert.equal(mine.isLocation,false);
+ assert.deepEqual([mine.x,mine.y],[2267,2662]);
+ assert.deepEqual(normalizeData(data),data);
+ assert.deepEqual(data,read('publication-v6.json'));
+});
+
+test('Emberstone Mine also contains its own tin deposit, not a renamed copper or lamp object',()=>{
+ const data=read('atlas.json'),mine=place(data,'emberstone-mine');
+ const tin=object(mine,'object-emberstone-tin-deposit');
+ assert.equal(tin.name,'Месторождение олова');
+ assert.equal(tin.type,'resource');
+ assert.match(tin.description,/олов/iu);
+ assert.equal(tin.owner,'Лорд Марли');
+ assert.equal(Object.hasOwn(tin,'faction'),false);
+ assert.equal(Object.hasOwn(tin,'amount'),false);
+ assert.equal(effectiveFaction(mine,tin),'marley');
+ assert.deepEqual(tin.rules,ownershipRules);
+ assert.deepEqual(tin.modifiers,[{id:'modifier-emberstone-tin-deposit-bonus',kind:'bonus',text:'+1 к проверкам с инструментами кузнеца всей фракции.'}]);
+ assert.equal(tin.provenance.authorScenario.basis,'explicit-user-authorship');
+ assert.equal(tin.provenance.authorScenario.canonicalEvidence,false);
+ assert.equal(tin.provenance.authorScenario.mineral,'tin');
+ assert.deepEqual(mine.objects.map(entry=>entry.id),['object-2cd23821-608a-534c-9d26-125f4dd6fba5','object-emberstone-copper-deposit',tin.id]);
+ assert.deepEqual(normalizeData(data),data);
+ assert.deepEqual(data,read('publication-v6.json'));
+});

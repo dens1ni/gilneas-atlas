@@ -4,6 +4,7 @@ import { svgIcon } from './icons.mjs';
 import { populateTypeSelect } from './object-types.mjs';
 import { isEditingEnabled, getEditingRevision } from './edit-mode.mjs';
 import { initLocationLinksEditor } from './location-links-ui.mjs';
+import { initObjectConditionEditor } from './object-condition.mjs';
 
 /** Editor transactions are delegated to the parent; no storage is owned here. */
 export function initEditor(ctx) {
@@ -18,6 +19,7 @@ export function initEditor(ctx) {
   let mapTask = null;
   const getUI = () => ctx.getUI?.() ?? ctx.ui;
   const locationLinksEditor = initLocationLinksEditor({ getData: ctx.getData });
+  const conditionEditor = initObjectConditionEditor({ getData: ctx.getData });
 
   function showDialog(id, titleId) {
     document.querySelectorAll('dialog[open]').forEach(dialog => dialog.close());
@@ -151,6 +153,7 @@ export function initEditor(ctx) {
     locationDraft = { id: location.id, creating };
     byId('location-form').reset();
     locationLinksEditor.fill(location);
+    conditionEditor.fillLocation(location);
     byId('location-form-title').textContent = creating ? 'Новая локация' : `Досье · ${location.name}`;
     byId('location-name').value = location.name;
     populateTypeSelect(byId('location-type'), { scope: 'location', currentType: location.type });
@@ -217,6 +220,7 @@ export function initEditor(ctx) {
     objectDraft = { locationId, id: obj?.id ?? makeId('object'), existing: !!obj,
       modifiers: (obj?.modifiers ?? []).map(modifier => ({ ...modifier })) };
     byId('object-form').reset();
+    conditionEditor.fillObject(obj ?? {});
     byId('object-form-title').textContent = `${obj ? 'Изменить объект' : 'Новый объект'} · ${location.name}`;
     populateTypeSelect(byId('object-type'), { currentType: obj?.type ?? 'building' });
     byId('object-name').value = obj?.name ?? '';
@@ -280,6 +284,7 @@ export function initEditor(ctx) {
       if (!locationDraft.creating && !location) throw new Error('Локация больше не существует.');
       const patch = {
         ...locationLinksEditor.readPatch(),
+        ...conditionEditor.readLocationPatch(),
         name: byId('location-name').value,
         type: byId('location-type').value,
         faction: byId('location-faction').value === '__independent__' ? null : byId('location-faction').value,
@@ -314,6 +319,7 @@ export function initEditor(ctx) {
       if (objectDraft.existing && !existing) throw new Error('Объект больше не существует.');
       const obj = {
         ...existing,
+        ...conditionEditor.readObjectPatch(),
         id: objectDraft.id,
         type: byId('object-type').value,
         name: byId('object-name').value,

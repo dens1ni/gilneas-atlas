@@ -4,6 +4,8 @@ import { createTypeIcon, typeName } from './object-types.mjs';
 import { decorateLocationMarker, renderLocationLinkSections } from './location-links-ui.mjs';
 import { createNobleLifeStatusTag } from './noble-life-status.mjs';
 import { orderNobles } from './noble-order.mjs';
+import { renderFerryNetwork } from './ferry-routes.mjs';
+import { createObjectConditionTag } from './object-condition.mjs';
 
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const FAVORITES_KEY = 'gilneas-atlas-favorites-v1';
@@ -48,7 +50,7 @@ function icon(name, className = '') {
 
 function locationGlyph(location) {
   if (location.capital) return 'crown';
-  return { city: 'city', fortress: 'fortress', estate: 'tower', forest: 'forest', harbor: 'harbor', mine: 'mine', settlement: 'building', district: 'city' }[location.type] || 'shield';
+  return { city: 'city', fortress: 'fortress', estate: 'tower', forest: 'forest', harbor: 'harbor', mine: 'mine', settlement: 'building', building: 'building', district: 'city' }[location.type] || 'shield';
 }
 
 const casefold = value => String(value ?? '').normalize('NFKC').toLocaleLowerCase('ru');
@@ -130,7 +132,7 @@ export function initUI(context) {
 
   function showMarkerTooltip(marker, location) {
     hideMarkerTooltip();
-    if (location.id === context.getSelectedId() || mapInteraction || pointers.size || viewport.classList.contains('dragging')) return;
+    if (marker.disabled || location.id === context.getSelectedId() || mapInteraction || pointers.size || viewport.classList.contains('dragging')) return;
     tooltipMarker = marker;
     const factions = factionMap();
     const faction = factions.get(location.faction);
@@ -187,11 +189,21 @@ export function initUI(context) {
     return { x: Math.min(marginX, Math.max(minX, next.x)), y: Math.min(marginY, Math.max(minY, next.y)), scale };
   }
 
+  function syncMarkerZoomVisibility() {
+    const opacity = camera.scale <= 0.4 + Number.EPSILON ? 0 : Math.min(1, (camera.scale - 0.4) / 0.1);
+    world.style.setProperty('--detail-marker-opacity', String(opacity));
+    world.classList.toggle('detail-markers-hidden', opacity === 0);
+    for (const marker of dom.markers.children) {
+      marker.disabled = opacity === 0 && !marker.classList.contains('location-container');
+    }
+  }
+
   function applyCamera(next) {
     hideMarkerTooltip();
     camera = constrained(next);
     world.style.transform = `translate(${camera.x}px, ${camera.y}px) scale(${camera.scale})`;
     world.style.setProperty('--inverse-scale', String(1 / camera.scale));
+    syncMarkerZoomVisibility();
     dom['zoom-status'].textContent = `${Math.round(camera.scale * 100)}%`;
     positionSelectedLabel();
   }
@@ -478,6 +490,8 @@ export function initUI(context) {
       row.classList.toggle('active', location.id === context.getSelectedId());
       const copy = make('span', 'row-copy');
       copy.append(make('span', 'row-name', location.name), make('small', 'location-type', typeName(location.type)));
+      const condition = createObjectConditionTag(location);
+      if (condition) copy.append(condition);
       const marks = make('span', 'row-marks');
       if (location.capital) { const crown = make('span', 'row-capital'); crown.append(icon('crown')); marks.append(crown); }
       if (favorites.has(location.id)) marks.append(icon('star', 'row-favorite'));
@@ -574,6 +588,7 @@ export function initUI(context) {
       marker.style.top = `${location.y}px`;
       marker.style.setProperty('--marker-color', colorOf(factions.get(location.faction)));
       marker.classList.toggle('capital', Boolean(location.capital));
+      marker.classList.toggle('ferry-marker', location.type === 'ferry');
       marker.classList.toggle('selected', location.id === context.getSelectedId());
       marker.classList.toggle('dimmed', Boolean(included && !included.has(location.faction) && location.id !== context.getSelectedId()));
       const symbol = location.capital || Object.hasOwn(TYPE_NAMES, location.type)
@@ -584,6 +599,7 @@ export function initUI(context) {
       fragment.append(marker);
     }
     dom.markers.replaceChildren(fragment);
+    syncMarkerZoomVisibility();
     positionSelectedLabel();
   }
 
@@ -701,6 +717,8 @@ export function initUI(context) {
     dossierHeader.title = dossierHeaderLabel.title;
     dom['dossier-title'].textContent = location.name;
     dom['dossier-subtitle'].textContent = location.capital ? 'Столица' : typeName(location.type);
+    const condition = createObjectConditionTag(location);
+    if (condition) dom['dossier-subtitle'].append(document.createTextNode(' '), condition);
     const unknown = unknownAffiliation(location);
     dom['dossier-faction'].textContent = faction?.name || (unknown ? 'Принадлежность не установлена' : 'Без державы');
     dom['dossier-sovereign'].textContent = sovereign?.name || (unknown ? 'Не установлено' : 'Независимое владение');
@@ -738,6 +756,8 @@ export function initUI(context) {
       badge.style.color = 'var(--object-color)';
       const badges = make('span', 'object-badges');
       badges.append(badge);
+      const condition = createObjectConditionTag(object);
+      if (condition) badges.append(condition);
       const owner = typeof object.owner === 'string' ? object.owner.trim() : '';
       if (owner) badges.append(make('small', 'object-owner-badge', owner));
       const heading = make('span', 'object-heading');
@@ -825,6 +845,7 @@ export function initUI(context) {
     }));
     renderNavigation();
     renderMarkers();
+    renderFerryNetwork(data(), world);
     renderLayers();
     renderDossier();
     if (!initialized) { initialized = true; home(false); }

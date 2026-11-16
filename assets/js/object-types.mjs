@@ -6,6 +6,7 @@ export const TYPE_DEFINITIONS = Object.freeze([
   { id: 'fortress', label: 'Крепость', path: 'M3 21V7H6V10H9V7H15V10H18V7H21V21Z M10 21V16H14V21' },
   { id: 'district', label: 'Квартал', path: 'M3 21V12H8V7H15V12H21V21Z M10 21V16H14V21 M10 10H12 M17 15H18 M5 15H6' },
   { id: 'harbor', label: 'Гавань', path: 'M12 4V19 M7 8H17 M4 14C4 22 20 22 20 14 M2 15 4 13 6 15 M18 15 20 13 22 15 M10 3A2 2 0 1 0 14 3A2 2 0 1 0 10 3' },
+  { id: 'ferry', label: 'Паромная пристань', path: 'M3 15H21L18 20H6Z M7 15V9H17V15 M9 9V6H15V9 M12 6V3 M3 22C5 20 7 24 9 22S13 20 15 22 19 24 21 22' },
   { id: 'forest', label: 'Лес', path: 'M12 2 5 11H8L3 17H10V22H14V17H21L16 11H19Z' },
   { id: 'mine', label: 'Шахта', path: 'M3 21 9 5 15 3 21 21Z M7 21V14L12 10 17 14V21 M10 21V16H14V21' },
   { id: 'landmark', label: 'Ориентир', path: 'M4 3H20V12C20 17 16 20 12 22 8 20 4 17 4 12Z M8 8H16 M12 5V17' },
@@ -39,6 +40,7 @@ export const TYPE_DEFINITIONS = Object.freeze([
   { id: 'ruins', label: 'Руины', path: 'M3 21V10H7V6L11 10V21 M11 16H16V10L21 14V21 M3 14H7 M16 17H21 M2 22H22 M13 3 11 6 M18 4 20 7' },
   { id: 'monument', label: 'Памятник', path: 'M8 17 10 3H14L16 17Z M6 17H18V20H6Z M3 20H21V23H3Z M10 3 12 1 14 3 M11 8H13' },
   { id: 'well', label: 'Колодец', path: 'M3 9 12 3 21 9 M5 9V21 M19 9V21 M5 18C5 15 19 15 19 18V21H5Z M8 11H16 M12 11V16 M10 13H14V16H10Z' },
+  { id: 'lighthouse', label: 'Маяк', path: 'M8 5 12 2 16 5Z M9 5H15V9H9Z M12 5V9 M8 10H16 M10 10 8 22H16L14 10Z M11 22V18H13V22 M9 16H15 M6 22H18 M2 5 6 6 M2 9 6 8 M18 6 22 5 M18 8 22 9' },
 ].map(definition => Object.freeze(definition)));
 
 export const OBJECT_TYPE_IDS = Object.freeze(TYPE_DEFINITIONS.map(definition => definition.id));

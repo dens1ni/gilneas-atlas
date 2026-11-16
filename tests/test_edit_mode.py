@@ -39,10 +39,20 @@ class EditMode(unittest.TestCase):
         self.page.on('pageerror', lambda error: self.errors.append(str(error)))
         self.page.on('console', lambda message: self.errors.append(message.text) if message.type == 'error' else None)
         self.page.on('response', lambda response: self.errors.append(f'{response.status} {response.url}') if response.status >= 400 else None)
-        if self._testMethodName == 'test_02_checkbox_reveals_all_dossier_actions_then_removes_them_without_gaps_or_writes':
+        # Memory-only full-snapshot fixtures, not production author data.
+        fixture_targets = {
+            'test_02_checkbox_reveals_all_dossier_actions_then_removes_them_without_gaps_or_writes': 'northern-headlands',
+            'test_03_all_windows_keep_viewing_but_hide_dynamic_editing_and_cancel_forms_when_disabled': 'northern-headlands',
+            'test_07_reading_views_are_compact_and_native_toggle_fits_desktop_portrait_and_landscape': 'northern-headlands',
+            'test_empty_canonical_container_allows_its_first_object_only_after_editing_opt_in': 'ambermill',
+        }
+        if self._testMethodName in fixture_targets:
             fixture = json.loads((ROOT / 'assets/data/atlas.json').read_text())
-            location = next(record for record in fixture['locations'] if record['id'] == 'northgate-river')
-            location['objects'] = [{'id':'editing-test-object', 'name':'Проверочный объект теста', 'type':'building', 'description':'Только тестовый снимок', 'modifiers':[]}]
+            location = next(record for record in fixture['locations'] if record['id'] == fixture_targets[self._testMethodName])
+            # Change only this container's own objects; retain all links and records.
+            location['objects'] = []
+            if self._testMethodName == 'test_02_checkbox_reveals_all_dossier_actions_then_removes_them_without_gaps_or_writes':
+                location['objects'] = [{'id':'editing-test-object', 'name':'Проверочный объект теста', 'type':'building', 'description':'Только тестовый снимок — не production', 'modifiers':[]}]
             self.page.route('**/assets/data/atlas.json', lambda route: route.fulfill(status=200, content_type='application/json', body=json.dumps(fixture, ensure_ascii=False)))
         self.page.goto(self.url, wait_until='domcontentloaded')
         self.page.wait_for_function('window.gilneasApp?.ready', polling=50, timeout=25000)
@@ -60,7 +70,7 @@ class EditMode(unittest.TestCase):
 
     def test_01_new_visit_is_view_only_and_editor_is_compact_without_writing_data(self):
         before = self.data(); self.assertIsNone(self.draft())
-        self.page.evaluate('window.gilneasApp.selectId("northgate-river")')
+        self.page.evaluate('window.gilneasApp.selectId("northern-headlands")')
         self.assertFalse(self.page.locator('#dossier-edit').is_visible(), 'Atlas must start with editing hidden')
         self.assertFalse(self.page.locator('#dossier-add-object').is_visible())
         self.assertTrue(self.page.locator('#dossier-favorite').is_visible())
@@ -80,7 +90,7 @@ class EditMode(unittest.TestCase):
 
     def test_02_checkbox_reveals_all_dossier_actions_then_removes_them_without_gaps_or_writes(self):
         before = self.data()
-        self.page.evaluate('window.gilneasApp.selectId("northgate-river")')
+        self.page.evaluate('window.gilneasApp.selectId("northern-headlands")')
         self.toggle()
         editing_height = self.page.locator('#editor').bounding_box()['height']
         for selector in ['.editor-actions', '.editor-selection', '.destructive-actions', 'label:has(#import-json)']:
@@ -101,7 +111,7 @@ class EditMode(unittest.TestCase):
         self.assertFalse(self.page.locator('#dossier-edit').is_visible())
         self.assertTrue(self.page.locator('#dossier-favorite').is_visible())
         self.assertTrue(self.page.locator('#dossier-focus').is_visible())
-        self.assertEqual(self.page.evaluate('window.gilneasApp.getSelectedId()'), 'northgate-river')
+        self.assertEqual(self.page.evaluate('window.gilneasApp.getSelectedId()'), 'northern-headlands')
         self.assertEqual(self.data(), before); self.assertIsNone(self.draft())
         self.assertEqual(self.errors, [])
 
@@ -129,19 +139,19 @@ class EditMode(unittest.TestCase):
         self.assertFalse(self.page.locator('#wall-event-form').is_visible())
         self.assertEqual(self.page.locator('#wall-event-name').input_value(), '')
         self.page.locator('[data-close="wall-journal"]').click()
-        self.page.evaluate('window.gilneasApp.selectId("northgate-river")')
+        self.page.evaluate('window.gilneasApp.selectId("northern-headlands")')
         self.assertFalse(self.page.locator('#dossier .composition').is_visible(), 'An empty editor-only composition must not make a blank block in reading mode')
         self.assertEqual(self.data(), before); self.assertIsNone(self.draft())
         self.assertEqual(self.errors, [])
 
     def test_04_hidden_actions_keyboard_and_public_edit_callbacks_cannot_modify_a_readonly_snapshot(self):
         before = self.data()
-        self.page.evaluate('window.gilneasApp.selectId("northgate-river")')
+        self.page.evaluate('window.gilneasApp.selectId("northern-headlands")')
         self.page.keyboard.press('e')
         self.assertFalse(self.page.locator('#location-editor').is_visible(), 'Quick edit is inactive without opt-in')
         self.page.evaluate('document.getElementById("dossier-edit").click()')
         self.assertFalse(self.page.locator('#location-editor').is_visible())
-        self.page.evaluate('window.gilneasApp.editor.editLocation("northgate-river")')
+        self.page.evaluate('window.gilneasApp.editor.editLocation("northern-headlands")')
         self.assertFalse(self.page.locator('#location-editor').is_visible())
         self.page.evaluate('document.getElementById("location-create").click()')
         self.assertFalse(self.page.locator('#map-task').is_visible())
@@ -155,7 +165,7 @@ class EditMode(unittest.TestCase):
     def test_05_editing_only_dialogs_have_no_readonly_layout_or_submit_path(self):
         before = self.data()
         self.toggle(); self.close_editor()
-        self.page.evaluate('window.gilneasApp.selectId("northgate-river")')
+        self.page.evaluate('window.gilneasApp.selectId("northern-headlands")')
         self.page.locator('#dossier-edit').click()
         self.page.locator('#location-name').fill('Не сохранять после выключения')
         self.page.evaluate('''()=>{const checkbox=document.getElementById('editing-enabled');checkbox.checked=false;checkbox.dispatchEvent(new Event('change',{bubbles:true}));}''')
@@ -168,7 +178,7 @@ class EditMode(unittest.TestCase):
 
     def test_06_saved_edits_survive_reload_but_the_mode_never_survives_entry(self):
         original = self.data()
-        self.page.evaluate('window.gilneasApp.selectId("northgate-river")')
+        self.page.evaluate('window.gilneasApp.selectId("northern-headlands")')
         self.toggle(); self.close_editor()
         self.page.locator('#dossier-edit').click()
         self.page.locator('#location-description').fill('  Сохранённый авторский текст режима.  ')
@@ -187,7 +197,7 @@ class EditMode(unittest.TestCase):
         self.assertFalse(self.page.locator('.editor-actions').is_visible())
         self.assertFalse(self.page.evaluate('document.body.classList.contains("edit-mode")'))
         self.close_editor()
-        self.page.evaluate('window.gilneasApp.selectId("northgate-river")')
+        self.page.evaluate('window.gilneasApp.selectId("northern-headlands")')
         self.assertEqual(self.page.locator('#dossier-description').inner_text(), '  Сохранённый авторский текст режима.  ')
         self.assertFalse(self.page.locator('#dossier-edit').is_visible())
         self.assertNotIn('editingEnabled', json.loads(literal_draft))
@@ -228,7 +238,7 @@ class EditMode(unittest.TestCase):
                 self.assertTrue(self.page.locator('#council-filter-party').is_visible())
                 self.assertFalse(self.page.locator('#council-add').is_visible())
                 self.page.locator('#council-close').click()
-                self.page.evaluate('window.gilneasApp.selectId("northgate-river")')
+                self.page.evaluate('window.gilneasApp.selectId("northern-headlands")')
                 self.page.screenshot(path=str(SCRATCH / f'dossier-view-{width}x{height}.png'))
                 self.assertFalse(self.page.locator('#dossier .composition').is_visible())
                 self.assertTrue(self.page.locator('#dossier-focus').is_visible())

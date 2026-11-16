@@ -31,6 +31,8 @@ def snapshot():
     peer = copy.deepcopy(location)
     peer.update(id='test-court-peer', name='Тестовая соседняя локация', type='city', x=2050, y=3400)
     data['locations'] = [location, peer]
+    # This labelled isolated fixture excludes every canonical ferry endpoint.
+    data['meta'].pop('ferryNetwork', None)
     data['territories'] = []
     data['nobles'] = [{'id': 'test-court-noble', 'name': 'Тестовый авторский дворянин',
                        'title': 'Тестовый титул', 'description': 'Только тестовая запись.',
@@ -426,7 +428,9 @@ class CourtUI(unittest.TestCase):
             self.assertEqual(symbol.locator('path').get_attribute('d'),definition['path'])
             self.assertEqual(card.locator('.object-title').text_content(),'Авторский объект '+kind)
             marker=self.page.locator(f'.map-marker[data-location-id="test-type-{kind}"]')
-            expected=shield if kind in {'landmark','building','resource'} else definition['path']
+            # Buildings now use their approved functional house glyph.
+            # Landmark/resource legacy map fallback geometry stays unchanged.
+            expected=shield if kind in {'landmark','resource'} else definition['path']
             self.assertEqual(marker.locator('svg path').get_attribute('d'),expected,'Legacy location geometry must remain exact; new kinds use catalog geometry')
             if kind not in legacy:
                 self.assertEqual(marker.locator('svg').get_attribute('data-type'),kind)

@@ -24,7 +24,10 @@
 #wall-journal .dialog-head h2 { margin: 4px 0 0; font-size: 23px; line-height: 1.2; overflow-wrap: anywhere; }
 #wall-journal .dialog-head .square { margin-left: auto; }
 #wall-journal .wall-journal-body { display: grid; gap: 14px; padding: 20px 24px 24px; }
-#wall-journal .wall-journal-summary { color: var(--gold-bright, #e0c493); margin: 0; font-variant-numeric: tabular-nums; }
+#wall-journal .wall-journal-summary { display: grid; gap: 6px; color: var(--gold-bright, #e0c493); margin: 12px 0 0; font-variant-numeric: tabular-nums; }
+#wall-journal .wall-journal-summary .wall-heading { gap: 8px; }
+#wall-journal .wall-journal-progress-value { flex: none; color: #d6b77d; font-size: 12px; white-space: nowrap; }
+#wall-journal > .dialog-head { align-items: flex-start; }
 #wall-journal .wall-journal-note, #wall-journal .wall-history-empty { color: var(--royal-muted, #96978d); margin: 0; font-size: 12px; line-height: 1.65; }
 #wall-journal .wall-event-history { display: grid; gap: 12px; min-width: 0; }
 #wall-journal .wall-event-card { padding: 14px 16px; background: #202629; border: 1px solid var(--royal-line, #393b3b); min-width: 0; }

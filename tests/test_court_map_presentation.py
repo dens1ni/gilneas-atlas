@@ -346,6 +346,9 @@ class CourtMapPresentation(unittest.TestCase):
         self.assert_clean()
     def test_08_unsafe_image_tokens_and_invalid_dimensions_are_rejected_before_any_request(self):
         self.boot()
+        # initMapPresentation assigns these loader images after navigation load.
+        # Settle their real requests before measuring forbidden image requests.
+        self.page.wait_for_function("Array.from(document.querySelectorAll('#map-loading img')).every(i=>i.complete&&i.naturalWidth>0)", polling=50)
         unsafe = [None, 9, '', ' assets/maps/gilneas-enhanced.webp', 'assets/maps/gilneas-enhanced.webp ',
                   'javascript:alert(1)', 'data:image/svg+xml,<svg onload="window.bad=1"/>',
                   'https://name:password@example.invalid/map.png', 'https://example.invalid/not-an-image.html']
@@ -444,10 +447,21 @@ class CourtMapPresentation(unittest.TestCase):
         fixture = copy.deepcopy(self.snapshot)
         fixture['territories'] = []
         fixture['nobles'] = []
+        # No Council panel participates; its references target excluded nobles.
+        fixture.pop('royalCouncil', None)
         marker = copy.deepcopy(fixture['locations'][0])
+        # Keep the location classification at fit scale, but no excluded children.
+        marker.update(isLocation=True, linkedLocationIds=[])
         marker.update(id='test-map-frame-marker', name='Тестовая метка у края карты', x=12, y=12, objects=[])
         fixture['locations'] = [marker]
+        # This one-marker geometry fixture deliberately excludes all ferry docks.
+        # Remove only their inherited network; production keeps every real route.
+        fixture['meta'].pop('ferryNetwork', None)
         self.page.evaluate("""async snapshot=>{
+            const {validateLocationLinks}=await import('./assets/js/location-links.mjs');
+            validateLocationLinks(snapshot);
+            const {normalizeData}=await import('./assets/js/model.mjs');
+            normalizeData(snapshot);
             window.fixtureSnapshot=snapshot; window.nativeSelections=[];
             const {initUI}=await import('./assets/js/ui.mjs');
             window.ui=initUI({getData:()=>window.fixtureSnapshot,getSelectedId:()=>null,

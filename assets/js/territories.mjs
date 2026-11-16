@@ -2,9 +2,44 @@ import { normalizeData, factionMembers, sovereignOf } from './model.mjs';
 import { validate, generate, paint, cellPoint, MIN_RADIUS, MAX_RADIUS } from './territory-engine.mjs';
 import { geometryAsync, paths } from './smooth-territories.mjs';
 import { isEditingEnabled } from './edit-mode.mjs';
+import { generateRealmTerritoryLayout } from './realm-territory-layout.mjs';
 export { prepareTerritoryGrid } from './territory-data.mjs';
 
 const NS = 'http://www.w3.org/2000/svg';
+const ROOT = new URL('../../', import.meta.url);
+const realmTerrain = new Map();
+const terrainKey = snapshot => {
+  const mask = snapshot.territoryGrid?.realmLayout?.landMask;
+  return mask ? JSON.stringify([new URL(mask, ROOT).href, snapshot.meta.image, snapshot.meta.mapRevision, snapshot.meta.width, snapshot.meta.height]) : null;
+};
+
+/** Map identity-bound mask readiness: imports and commits cannot borrow another mask. */
+export async function prepareRealmTerrain(snapshot) {
+  validate(snapshot.territoryGrid, snapshot.factions, snapshot.meta, { clone: false });
+  const key = terrainKey(snapshot);
+  if (!key) return null;
+  let entry = realmTerrain.get(key);
+  if (!entry) {
+    entry = { ready: false }; realmTerrain.set(key, entry);
+    entry.promise = (async () => {
+      const image = new Image();
+      await new Promise((resolve, reject) => {
+        image.onload = resolve; image.onerror = reject;
+        image.src = new URL(snapshot.territoryGrid.realmLayout.landMask, ROOT).href;
+      });
+      if (image.naturalWidth !== snapshot.meta.width || image.naturalHeight !== snapshot.meta.height) throw Error('Размер маски суши не совпадает с картой.');
+      const canvas = document.createElement('canvas'); canvas.width = canvas.height = 1;
+      const context = canvas.getContext('2d'); context.drawImage(image, 0, 0, 1, 1); context.getImageData(0, 0, 1, 1);
+      entry.ready = true; return entry;
+    })().catch(error => { realmTerrain.delete(key); throw Error('Не удалось подготовить маску суши: ' + (error.message || 'ошибка загрузки')); });
+  }
+  return entry.promise;
+}
+export function requireRealmTerrain(snapshot) {
+  const key = terrainKey(snapshot);
+  if (key && !realmTerrain.get(key)?.ready) throw Error('Маска суши для этой карты ещё не подготовлена.');
+  return key ? realmTerrain.get(key) : null;
+}
 const copy = value => JSON.parse(JSON.stringify(value));
 const sameArray = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]);
 const sameGrid = (a, b) => a && b && a.width === b.width && a.height === b.height && a.step === b.step &&
@@ -51,6 +86,7 @@ export function initTerritories(context) {
   if (legacy) legacy.after(vector, preview);
   let sourceData = null, sourceGrid = null, layer = null, editing = false, stroke = null;
   let revision = 0, cachedRevision = -1, cachedGeometry = null, cachedPaths = [], cachedBloc = [], cachedOwners = '';
+  let cachedVassals = [], cachedRelations = '', domRelations = '';
   let domRevision = -1, domOwners = '', styles = [], busy = false, scheduled = 0, failedRevision = -1, failedError = null;
   let options = {}, syncing = false, applyingCommit = false, disposed = false;
   const waiters = [];
@@ -117,7 +153,7 @@ export function initTerritories(context) {
     performanceInfo.geometryCalls++;
     geometryAsync(snapshot).then(chains => {
       if (!disposed && target === revision && !stroke) {
-        cachedGeometry = chains; cachedPaths = paths(snapshot, chains); cachedRevision = target; cachedOwners = '';
+        cachedGeometry = chains; cachedPaths = paths(snapshot, chains); cachedRevision = target; cachedOwners = ''; cachedRelations = '';
         if (failedError && $('status').textContent === 'Не удалось обновить контуры: ' + failedError.message) status('');
         failedError = null;
         Object.assign(performanceInfo, { revision: target, geometryWallMs: performance.now() - start, chains: chains.length });
@@ -133,14 +169,32 @@ export function initTerritories(context) {
     syncData();
     if (!stroke) rebuild();
     const data = getData(), byKey = new Map(data.factions.map(f => [f.id, f])), ownerMap = owners(), signature = ownerMap.join(',');
+    requireRealmTerrain(data);
+    const relations = JSON.stringify([data.factions.map(f => [f.id, f.parent]), terrainKey(data)]);
     if (cachedGeometry && cachedOwners !== signature) {
       cachedBloc = paths(layer, cachedGeometry, ownerMap); cachedOwners = signature;
     }
-    if (domRevision !== cachedRevision || domOwners !== signature) {
+    if (cachedGeometry && cachedRelations !== relations) {
+      cachedVassals = data.factions.filter(f => f.parent != null).map(faction => {
+        const index = layer.keys.indexOf(faction.id), descendants = new Set(factionMembers(data.factions, faction.id));
+        if (index < 0) return null;
+        if (descendants.size === 1) return cachedPaths[index];
+        const map = [0, ...layer.keys.map(key => descendants.has(key) ? index + 1 : 0)];
+        return paths(layer, cachedGeometry, map)[index];
+      }).filter(Boolean);
+      cachedRelations = relations;
+    }
+    if (domRevision !== cachedRevision || domOwners !== signature || domRelations !== relations) {
       vector.replaceChildren(); styles = [];
       const defs = node('defs', {}, vector);
+      const landMask = data.territoryGrid?.realmLayout?.landMask;
+      if (landMask) {
+        const mask = node('mask', { id: 'boundary-terrain-mask', x: 0, y: 0, width: data.meta.width, height: data.meta.height,
+          maskUnits: 'userSpaceOnUse', maskContentUnits: 'userSpaceOnUse', style: 'mask-type:luminance' }, defs);
+        node('image', { href: landMask, x: 0, y: 0, width: data.meta.width, height: data.meta.height, preserveAspectRatio: 'none' }, mask);
+      }
       const styledPath = (region, attrs, baseOpacity, fill = false, bloc = false) => {
-        const el = node('path', { d: region.d, 'data-faction-id': region.key, 'data-bloc': String(bloc), ...attrs }, vector);
+        const el = node('path', { d: region.d, 'data-faction-id': region.key, 'data-bloc': String(bloc), ...(landMask ? { mask: 'url(#boundary-terrain-mask)' } : {}), ...attrs }, vector);
         styles.push({ el, key: region.key, baseOpacity, fill, bloc }); return el;
       };
       for (const region of cachedPaths) {
@@ -157,13 +211,14 @@ export function initTerritories(context) {
         for (const [width, opacity] of [[16, .12], [2, .62]]) styledPath(region, { fill: 'none', stroke: faction.color,
           'stroke-width': width, 'stroke-linejoin': 'round', 'clip-path': `url(#${id})` }, opacity, false, true);
       }
-      for (let i = 0; i < cachedPaths.length; i++) {
-        const region = cachedPaths[i], faction = byKey.get(region.key);
-        if (!faction || ownerMap[i + 1] === i + 1 || !region.d) continue;
-        styledPath(region, { fill: 'none', stroke: faction.color, 'stroke-width': 1.15,
-          'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, .38);
+      for (const region of cachedVassals) {
+        const faction = byKey.get(region.key);
+        if (!faction || !region.d) continue;
+        const hasVassals = data.factions.some(f => f.parent === faction.id);
+        styledPath(region, { fill: 'none', stroke: faction.color, 'stroke-width': hasVassals ? 1.8 : 1.15,
+          'data-region': 'vassal-union', 'stroke-linejoin': 'round', 'stroke-linecap': 'round' }, hasVassals ? .54 : .38);
       }
-      domRevision = cachedRevision; domOwners = signature;
+      domRevision = cachedRevision; domOwners = signature; domRelations = relations;
     }
     const selected = selectedFactions();
     for (const item of styles) {
@@ -327,7 +382,13 @@ export function initTerritories(context) {
     }
     if (!confirm('Перестроить территории по локациям? Ручные изменения заменятся; действие можно отменить.')) return;
     try {
-      const data = getData(), generated = generate(data.locations, data.factions, radius, data.meta, canPlace, layer.step);
+      const data = getData();
+      const realm = layer.realmLayout;
+      const generated = realm ? (() => {
+        const { rootKeys, domainCells, ...metadata } = realm;
+        return generateRealmTerritoryLayout(data, { ...metadata, version: 1, width: layer.width, height: layer.height,
+          step: layer.step, mapWidth: layer.mapWidth, mapHeight: layer.mapHeight, keys: rootKeys, cells: domainCells }, { radius });
+      })() : generate(data.locations, data.factions, radius, data.meta, canPlace, layer.step);
       editGrid({ ...layer, ...generated }, 'Границы перестроены по локациям');
     } catch (error) { status(error.message); toast(error.message); }
   });

@@ -32,7 +32,7 @@ export function createFactionShield(snapshot, factionId, { className = '', id } 
     ancestor = factions.get(ancestor.parent);
   }
   const usesHeraldry = factionId === 'gilneas' || Boolean(faction?.heraldry) || (legacy && gilneas && LEGACY_GILNEAN_IDS.has(factionId));
-  const field = factionId === 'gilneas' ? color(heraldry.field) : color(faction?.color);
+  const field = factionId === 'gilneas' ? color(heraldry.field) : color(Object.hasOwn(faction?.heraldry || {}, 'field') ? faction.heraldry.field : faction?.color);
   const svg = document.createElementNS(SVG_NS, 'svg');
   svg.setAttribute('viewBox', '0 0 60 72');
   svg.setAttribute('class', `faction-shield${typeof className === 'string' && className ? ` ${className}` : ''}`);

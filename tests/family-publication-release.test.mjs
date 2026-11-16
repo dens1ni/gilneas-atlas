@@ -7,7 +7,7 @@ const root=new URL('../',import.meta.url);
 const read=async path=>JSON.parse(await readFile(new URL(path,root),'utf8'));
 
 test('the family release has a distinct revision so existing Court drafts actually receive new people',async()=>{
-  const current=await read('assets/data/atlas.json');
+  const current=await read('assets/data/publication-v5.json');
   const previous=await read('assets/data/publication-v4.json');
   const census=await read('docs/noble-family-census.json');
   assert.equal(current.meta.publicationRevision,'royal-council-v5');
@@ -35,7 +35,7 @@ test('the family release has a distinct revision so existing Court drafts actual
 test('a family-era draft compares future releases against its own immutable family baseline',async()=>{
   assert.equal(previousPublicationFile({publicationRevision:'royal-council-v5'}),'publication-v5.json');
   const baseline=await read('assets/data/publication-v5.json');
-  const current=await read('assets/data/atlas.json');
+  const current=await read('assets/data/publication-v5.json');
   assert.deepEqual(baseline,current,'The new baseline is a complete snapshot, not a recreated pre-family comparison');
   assert.equal(baseline.meta.publicationRevision,'royal-council-v5');
   const manifest=await read('assets/runtime-manifest.json');
@@ -43,6 +43,15 @@ test('a family-era draft compares future releases against its own immutable fami
 });
 
 test('the distribution version identifies the Court and family release separately from Origins 1.2',async()=>{
-  const metadata=await read('package.json');
+  const metadata=await read('tests/fixtures/publication-v5-package.json');
   assert.equal(metadata.version,'1.3.0');
+});
+
+test('the approved authored-estates distribution packages its v6 snapshot, author seed and scenario helper',async()=>{
+  const metadata=await read('package.json');
+  assert.equal(metadata.version,'1.4.0');
+  const manifest=await read('assets/runtime-manifest.json');
+  for(const path of ['assets/data/publication-v6.json','assets/data/publication-author-v5.json','assets/js/scenario-publication.mjs']){
+    assert.ok(manifest.includes(path),'Authored-estates migration input must remain in runtime exports: '+path);
+  }
 });

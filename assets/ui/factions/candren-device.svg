@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" width="40" height="44">
+<title>Авторский знак Дома Кандрен: мост над водой</title>
+<g fill="#c6bca1" stroke="#343c43" stroke-width=".9" stroke-linejoin="round" paint-order="stroke fill">
+<path fill-rule="evenodd" d="M5 18H35V31H28V25C28 21 22 21 22 25V31H18V25C18 21 12 21 12 25V31H5Z"/>
+<path d="M4 13H36V18H4Z M7 10H11V14H7Z M18 10H22V14H18Z M29 10H33V14H29Z"/>
+</g>
+<path d="M5 36C9 32 13 40 17 36S25 40 29 36 33 36 35 36 M8 41H32" fill="none" stroke="#c6bca1" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

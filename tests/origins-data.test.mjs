@@ -4,7 +4,7 @@ import {readFile} from 'node:fs/promises';
 const root=new URL('../',import.meta.url);
 
 test('Origins replaces every reviewed marker point while preserving names owners lore and map glyph types',async()=>{
-  const data=JSON.parse(await readFile(new URL('assets/data/atlas.json',root),'utf8'));
+  const data=JSON.parse(await readFile(new URL('assets/data/publication-v5.json',root),'utf8'));
   const previous=JSON.parse(await readFile(new URL('assets/data/publication-v2.json',root),'utf8'));
   assert.equal(data.meta.width,3526,'Use the newly supplied custom map');assert.equal(data.meta.height,4548);
   assert.equal(data.meta.image,'assets/maps/gilneas-origins-enhanced.webp');
@@ -25,7 +25,7 @@ test('Origins replaces every reviewed marker point while preserving names owners
 
 test('scenario territories follow relocated major estates and the junior-vassal castle',async()=>{
   const {prepareTerritoryGrid}=await import('../assets/js/territory-data.mjs');
-  const raw=JSON.parse(await readFile(new URL('assets/data/atlas.json',root),'utf8')),data=prepareTerritoryGrid(raw),grid=data.territoryGrid;
+  const raw=JSON.parse(await readFile(new URL('assets/data/publication-v5.json',root),'utf8')),data=prepareTerritoryGrid(raw),grid=data.territoryGrid;
   for(const [id,expected] of [['greymane-manor','greymane'],['duskhaven','gilneas'],['crowley-orchard','crowley'],['crowley-stable-grounds','crowley'],['galewatch-lighthouse','gilneas'],['the-headlands','gilneas'],['shadowfang','silverlaine'],['dalaran-city','dalaran']]){
     const point=data.locations.find(record=>record.id===id),owner=grid.cells[Math.floor(point.y/grid.step)*grid.width+Math.floor(point.x/grid.step)];
     assert.equal(grid.keys[owner-1]??null,expected,id+' must be inside its relocated scenario influence, not the old point envelope');

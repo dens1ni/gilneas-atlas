@@ -1,0 +1,67 @@
+The subject of this article was removed from World of Warcraft in patch 7.0.3.
+This includes items and quests that can no longer be obtained or are now deprecated.
+The in-game information in this article is kept purely for historical purposes.
+MoonfireStart
+Celestine of the HarvestEnd
+Celestine of the HarvestLevel
+2Category
+DruidRace
+WorgenExperience
+85Reputation
++75 GilneasPrevious
+[2] The Winds Know Your Name... ApparentlyNext
+[1-30] Safety in NumbersMoonfire
+Level: 2
+Celestine of the Harvest
+Celestine of the Harvest
+XP: 85
+Rep: +75 Gilneas
+Contents
+1 Objectives
+2 Description
+3 Progress
+4 Completion
+5 Notes
+6 Progression
+7 Patch changes
+8 External links
+Objectives[]
+Reach level 3 to learn [Moonfire], then use it against a Bloodfang Worgen.
+Practice Moonfire
+Description[]
+We were driven to the edge of extinction once before, <name>. But we druids, keepers of the old ways, saved our people from famine.
+When we cut ourselves off from the outside world and our crops failed, it was our order who called upon the earth's blessings and restored the harvest.
+Just as our powers restored the crops, your growth in power will develop your connection to our ancient arts. Go, develop your powers, and use what you learn against the Bloodfang Worgen.
+Progress[]
+The earth speaks to us, <name>. It will not abandon us even in these perilous times.
+Completion[]
+Not bad at all. Perhaps there is still hope for the old ways.
+Notes[]
+An introduction to the class trainer mechanic!
+Progression[]
+[1-30] Lockdown!
+[1-30] Something's Amiss
+[1-30] All Hell Breaks Loose & [1-30] Evacuate the Merchant Square & [1-30] Salvage the Supplies
+[1-30] Royal Orders
+[1-30] Safety in Numbers
+Stoneward Prison quests & [1-30] While You're At It
+Stoneward Prison:
+[1-30] Old Divisions
+[1-30] The Prison Rooftop
+[1-30] By the Skin of His Teeth
+[1-30] Brothers In Arms
+[1-30] The Rebel Lord's Arsenal
+[1-30] From the Shadows
+[1-30] Message to Greymane
+[1-30] Save Krennan Aranas
+[1-30] Time to Regroup
+[1-30] Sacrifices
+[1-30] By Blood and Ash
+[1-30] Never Surrender, Sometimes Retreat
+[1-30] Last Stand
+Patch changes[]
+Patch 7.0.3 (2016-07-19): Removed.
+Patch 5.0.4 (2012-08-28): Added. Replaced [2] A Rejuvenating Touch.
+External links[]
+Wowhead
+WoWDB

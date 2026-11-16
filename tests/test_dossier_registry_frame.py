@@ -7,6 +7,7 @@ import unittest
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from pathlib import Path
 from playwright.sync_api import sync_playwright
+
 ROOT=Path(os.environ.get('GILNEAS_TEST_ROOT',str(Path(__file__).resolve().parents[1])))
 PREFIX=os.environ.get('GILNEAS_TEST_PREFIX','/')
 OUT=Path('/Users/daniil_si/.hermes/cache/scratch/gilneas-dossier-frame-evidence')
@@ -35,6 +36,16 @@ class DossierRegistryFrame(unittest.TestCase):
     def tearDown(self):self.context.close()
     def boot(self):
         self.page.goto(self.url,wait_until='domcontentloaded');self.page.wait_for_function('window.gilneasApp?.ready',polling=50)
+        data=self.page.evaluate('window.gilneasApp.getData()')
+        published=json.loads((ROOT/'assets/data/atlas.json').read_text())
+        for collection in ['locations','factions','nobles']:
+            self.assertEqual(data[collection],published[collection],collection)
+        landmark=next(row for row in data['locations'] if row['id']=='northern-headlands')
+        self.assertEqual(landmark['type'],'landmark')
+        # A natural map marker can contain canonical own buildings.
+        published=json.loads((ROOT/'assets/data/atlas.json').read_text())
+        expected=next(row for row in published['locations'] if row['id']=='northern-headlands')
+        self.assertEqual(landmark,expected,'Focus preserves the complete canonical landmark and its own objects')
     def profile(self,id):return self.page.evaluate(PROFILE,id)
     def assert_literal_frame(self, profile, mobile=False):
         self.assertEqual(profile['borderWidth'], '1px')
@@ -51,24 +62,26 @@ class DossierRegistryFrame(unittest.TestCase):
         stored=self.page.evaluate('localStorage.getItem("gilneas-atlas-draft-v1")')
         reference=self.profile('navigation');self.assertEqual(self.profile('layers'),reference)
         self.assert_literal_frame(reference)
-        self.assertEqual(len(data['locations']), 39)
+        expected_ids=[row['id'] for row in json.loads((ROOT/'assets/data/atlas.json').read_text())['locations']]
+        self.assertEqual(len(data['locations']), len(expected_ids))
+        self.assertEqual(sorted(l['id'] for l in data['locations']), sorted(expected_ids))
         rows=[]
         for location in data['locations']:
             self.page.evaluate('id=>window.gilneasApp.selectId(id)',location['id'])
             self.assertEqual(self.profile('dossier'),reference,location['id']+' must lose the separate bright inset and share registry corners')
             color=self.page.locator('#dossier-seal .faction-shield .shield-field').get_attribute('fill')
             faction=next((f for f in data['factions'] if f['id']==location.get('faction')),None)
-            expected=data['meta']['gilneasHeraldry']['field'] if location.get('faction')=='gilneas' else faction['color'] if faction else '#87918d'
+            expected=data['meta']['gilneasHeraldry']['field'] if location.get('faction')=='gilneas' else faction.get('heraldry',{}).get('field',faction['color']) if faction else '#87918d'
             self.assertEqual(color,expected,'Only exterior frame changes, not the inner heraldry')
             rows.append({'id':location['id'],'frame':self.profile('dossier'),'shield':color})
-        self.page.evaluate('window.gilneasApp.selectId("northgate-river")')
-        self.page.screenshot(path=str(OUT/'river-dossier-desktop.png'))
+        self.page.evaluate('window.gilneasApp.selectId("northern-headlands")')
+        self.page.screenshot(path=str(OUT/'headlands-dossier-desktop.png'))
         self.page.locator('#dossier-fold').click();self.assertTrue(self.page.locator('#dossier-body').is_hidden())
         self.assertEqual(self.profile('dossier'),reference)
         self.page.locator('#dossier-fold').click();self.assertTrue(self.page.locator('#dossier-body').is_visible())
         self.assertEqual(self.page.evaluate('window.gilneasApp.getData()'),data)
         self.assertEqual(self.page.evaluate('localStorage.getItem("gilneas-atlas-draft-v1")'),stored)
-        self.assertEqual(len(rows),len(data['locations']));self.assertEqual(self.errors,[])
+        self.assertEqual(len(rows),len(data['locations']));self.assertEqual(sorted(row['id'] for row in rows),sorted(expected_ids));self.assertEqual(self.errors,[])
         (OUT/'map-dossier-frames.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
     def test_mobile_dossier_keeps_the_registry_sheet_frame_and_native_controls(self):
         rows=[]
@@ -77,19 +90,19 @@ class DossierRegistryFrame(unittest.TestCase):
             self.page.locator('#mobile-nav').click();reference=self.profile('navigation')
             self.assert_literal_frame(reference, mobile=True)
             self.page.locator('#mobile-layers').click();self.assertEqual(self.profile('layers'),reference)
-            self.page.evaluate('window.gilneasApp.selectId("northgate-river")')
+            self.page.evaluate('window.gilneasApp.selectId("northern-headlands")')
             self.assertEqual(self.profile('dossier'),reference,'Mobile removes silver inset without moving the sheet')
             rows.append({'viewport':[width,height],'frame':self.profile('dossier')})
-            self.page.screenshot(path=str(OUT/f'river-dossier-{width}x{height}.png'))
+            self.page.screenshot(path=str(OUT/f'headlands-dossier-{width}x{height}.png'))
             header=self.page.locator('#dossier .dossier-head').bounding_box()
             self.page.locator('#dossier-focus').scroll_into_view_if_needed()
             self.assertTrue(self.page.locator('#dossier-focus').is_visible(),'The final action remains reachable below the full description')
             self.assertAlmostEqual(self.page.locator('#dossier .dossier-head').bounding_box()['y'],header['y'],delta=1)
-            self.page.screenshot(path=str(OUT/f'river-dossier-scrolled-{width}x{height}.png'))
+            self.page.screenshot(path=str(OUT/f'headlands-dossier-scrolled-{width}x{height}.png'))
             self.page.locator('#dossier-fold').click();self.assertTrue(self.page.locator('#dossier-body').is_hidden())
             self.page.locator('#dossier-fold').click();self.page.locator('#dossier-close').click()
             self.assertTrue(self.page.locator('#dossier').is_hidden())
-            self.assertEqual(self.page.evaluate('window.gilneasApp.getSelectedId()'),'northgate-river')
+            self.assertEqual(self.page.evaluate('window.gilneasApp.getSelectedId()'),'northern-headlands')
         self.assertEqual(self.errors,[])
         (OUT/'mobile-frames.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2)+'\n')
     def test_noble_dossier_uses_registry_exterior_without_changing_the_house_device(self):

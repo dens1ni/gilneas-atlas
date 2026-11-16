@@ -4,7 +4,7 @@ import { initEditor } from './editor.mjs';
 import { initEditMode, isEditingEnabled } from './edit-mode.mjs';
 import { reconcileDraftPublication, previousPublicationFile } from './draft-publication.mjs';
 import { reconcileMapPublication } from './map-publication.mjs';
-import { initTerritories, prepareTerritoryGrid } from './territories.mjs';
+import { initTerritories, prepareTerritoryGrid, prepareRealmTerrain, requireRealmTerrain } from './territories.mjs';
 import { initNobleDossier } from './noble-dossier.mjs';
 import { initChronicle } from './chronicle.mjs';
 import { initRoyalCouncilWindow } from './council-window.mjs';
@@ -40,6 +40,7 @@ function commit(incoming) {
   requireEditing();
   const normalized=normalizeData(incoming);
   requireInactiveMask(normalized);
+  requireRealmTerrain(normalized);
   mapPresentation.requirePrepared(normalized);
   const next=prepareTerritoryGrid(normalized,point=>canPlaceFor(normalized,point));
   saveDraft(localStorage,next);
@@ -117,14 +118,14 @@ async function onImport(file) {
   requireEditing();const revision=editMode.getRevision();
   if(file.size>20000000)throw Error('Файл снимка слишком велик');
   const next=deserializeSnapshot(await file.text());
-  await Promise.all([loadInactiveMask(next),mapPresentation.prepare(next)]);
+  await Promise.all([loadInactiveMask(next),mapPresentation.prepare(next),next.territoryGrid ? prepareRealmTerrain(next) : Promise.resolve(null)]);
   requireEditing(revision);
   commit(next);toast('Атлас восстановлен из JSON.');return next;
 }
 async function onReset() {
   requireEditing();const revision=editMode.getRevision();
   if(!(await confirmAction('Восстановить королевский архив?','Все локальные изменения будут отменены. Опубликованный сайт и скачанные резервные копии не изменятся.')))return;
-  await Promise.all([loadInactiveMask(baseline),mapPresentation.prepare(baseline)]);
+  await Promise.all([loadInactiveMask(baseline),mapPresentation.prepare(baseline),baseline.territoryGrid ? prepareRealmTerrain(baseline) : Promise.resolve(null)]);
   requireEditing(revision);
   const next=prepareTerritoryGrid(normalizeData(baseline),point=>canPlaceFor(baseline,point));
   resetDraft(localStorage);data=next;isDraft=false;selectedId=null;ui.render();mapPresentation.renderFrame(data);editor?.refresh?.();updateDraftBadge();
@@ -170,11 +171,17 @@ async function start() {
       const prior=await fetch(new URL('assets/data/'+previousVersion,root));
       if(!prior.ok)throw new Error('Предыдущая основа недоступна: '+prior.status);
       const previous=await prior.json();
-      let next=reconcileDraftPublication(data,baseline,previous);
+      let authorSeed;
+      if(baseline.meta.publicationRevision==='authored-estates-v6'){
+        const seed=await fetch(new URL('assets/data/publication-author-v5.json',root),{cache:'no-store'});
+        if(!seed.ok)throw new Error('Авторская основа недоступна: '+seed.status);
+        authorSeed=await seed.json();
+      }
+      let next=reconcileDraftPublication(data,baseline,previous,authorSeed);
       if(baseline.meta.mapRevision&&next.meta.mapRevision!==baseline.meta.mapRevision){
         next=reconcileMapPublication(next,baseline,previous,baseline.meta.mapRegistration);
       }
-      if(baseline.meta.gilneasHeraldry&&!Object.hasOwn(data.meta,'gilneasHeraldry'))next.meta.gilneasHeraldry=structuredClone(baseline.meta.gilneasHeraldry);
+      if(Object.hasOwn(baseline.meta,'gilneasHeraldry')&&!Object.hasOwn(data.meta,'gilneasHeraldry')&&!Object.hasOwn(previous.meta||{},'gilneasHeraldry')&&!Object.hasOwn(authorSeed?.meta||{},'gilneasHeraldry'))next.meta.gilneasHeraldry=structuredClone(baseline.meta.gilneasHeraldry);
       data=normalizeData(next);
     }catch(error){console.warn('Обновление не объединено с черновиком; сохранён ваш снимок.',error);toast('Сохранён ваш исходный черновик. Обновление не объединено: '+error.message);}
   }
@@ -183,6 +190,7 @@ async function start() {
   }),loadInactiveMask(data),mapPresentation.prepare(data)]);
   if(baselineMask)baseline=prepareTerritoryGrid(baseline,point=>canPlaceFor(baseline,point));
   data=prepareTerritoryGrid(data,canPlace);
+  await Promise.all([prepareRealmTerrain(data),baseline.territoryGrid ? prepareRealmTerrain(baseline) : Promise.resolve(null)]);
   nobleDossier=initNobleDossier({getData:()=>data,onSelect:select});
   royalCouncil=initRoyalCouncilWindow({getData:()=>data,replaceData:commit,isEditingEnabled,toast,confirm:confirmAction,onShowNoble:id=>nobleDossier.open(id)});
   wallJournal=initWallJournal({getData:()=>data,replaceData:commit,isEditingEnabled,toast,confirm:confirmAction});

@@ -1,0 +1,135 @@
+# Blessing of the Tides
+
+| Blessing of the Tides | |
+|---|---|
+| Start | [Lady Jaina Proudmoore](/wiki/Lady_Jaina_Proudmoore) |
+| End | [Lady Jaina Proudmoore](/wiki/Lady_Jaina_Proudmoore) |
+| Level | 40-70 |
+| Category | [Kul Tiran](/wiki/Kul_Tiran) |
+| Experience | 8,950 |
+| Rewards | 11 70 |
+| Previous | [40-70] [A Worthy Crew](/wiki/A_Worthy_Crew) |
+| Next | [40-70] [Allegiance of Kul Tiras](/wiki/Allegiance_of_Kul_Tiras) |
+
+##
+Objectives
+
+Choose a name for the new vessel, then witness [Brother Pike](/wiki/Brother_Pike)'s blessing.
+
+- [Vessel named](/wiki/Jaina_Proudmoore)
+- Vessel blessed
+
+##
+Description
+
+Dorian certainly lives up to her reputation, <name>.
+
+This magnificent vessel is complete and now it has a crew. Two pieces remain.
+
+First, we must give the ship a name.
+
+Then it falls to Brother Pike to bless this vessel. As is tradition, a [tidesage](/wiki/Tidesage)'s blessing fortifies the ship against storms and encourages fair weather and smooth seas. It is as much ceremonial as it is practical.
+
+Once that is done, we will set sail for [Stormwind](/wiki/Stormwind_City).
+
+##
+Rewards
+
+You will receive:
+
+- 11 70
+- 8,950 [XP](/wiki/XP)
+
+##
+Progress
+
+I chose you for this honor to thank you for all you have done for my people, and all that you have done for me.
+
+##
+Completion
+
+It has been so long since I have seen such a rite performed. I was only a child.
+
+It means a great deal to me to have had your help in this. Thank you.
+
+##
+Notes
+
+On picking up this quest:
+
+- *The group turns to the completed ship out in the bay.*
+- **Jaina Proudmoore says:** She needs a name, as all great ships do. Any suggestions?
+- **Rosaline Madison says:** Anduin's Wrath. The Horde will learn to fear her!
+- *Brother Pike speaks thoughtfully.*
+- **Brother Pike says:** She seems like a Dawnsailor to me.
+- **Captain Tandred Proudmoore says:** The Alliance is fond of its lions. How does Lionheart sound?
+- *Katherine speaks fondly.*
+- **Katherine Proudmoore says:** Tiffin's Melody.
+- *Jaina briefly half turns to her and gives a heartfelt sigh.*
+- **Lady Jaina Proudmoore says:** That is beautiful, mother.
+- **Lady Jaina Proudmoore says:** They all have merit. The choice is yours, <name>.
+Speak to [Lady Jaina Proudmoore](/wiki/Lady_Jaina_Proudmoore):
+
+- What shall we call this new vessel, <name>?
+  - Anduin's Wrath
+  - Dawnsailor
+  - Tiffin's Melody
+  - The Lionheart
+- *This action is permanent and cannot be changed later.
+Continue?*
+- (Accept/Cancel)
+
+- **Lady Jaina Proudmoore says:** [<Ship's name>](/wiki/Anduin%27s_vessel). Well chosen.
+- **Lady Jaina Proudmoore says:** Brother Pike, will you do the honors?
+- *Brother Pike makes his way down to the rowboat.*
+- **Brother Pike says:** Let us see this done.
+On speaking with Brother Pike:
+
+- It is my pleasure to offer my services to bless this vessel.
+- Join me as we cross the bay to deliver a proper sermon.
+Interact with the rowboat:
+
+- *Cutscene. At the tiller, the adventurer steers the rowboat into the water, then stops a short distance off the ship's starboard side. A light drizzle has begun.*
+- **Brother Pike says:** Storm above and tides below, hear us now!
+- **Brother Pike says:** Breathe strength into our sails, and guard us against the crushing depths!
+- *Pike raises his arms into the air, as if speaking to the darkening sky.*
+- **Brother Pike says:** Let this vessel be one with the vast ocean, and us with her.
+- *Pike lowers his arms. Power radiates from his hands, and water and lightning crash around him.*
+- **Brother Pike says:** Sea to sea, storm to storm, tide to tide.
+- *Brother Pike fires a bolt of energy into the ship's center mast. As a spire of water forms around the mast and shoots into the sky, a watery barrier briefly shimmers around the ship. Finally, the sky clears; the blessing is done.*
+
+##
+Progression
+
+1. [40-70] [Made in Kul Tiras](/wiki/Made_in_Kul_Tiras)
+2. [40-70] [The Master Shipwright](/wiki/The_Master_Shipwright)
+3. [40-70] [Fish Tales and Distant Sails](/wiki/Fish_Tales_and_Distant_Sails)
+4. [40-70] [Home, Home On the Range](/wiki/Home,_Home_On_the_Range)
+5. [40-70] [I'm Too Old for This Ship](/wiki/I%27m_Too_Old_for_This_Ship)
+6. [40-70] [Covering Our Masts](/wiki/Covering_Our_Masts) & [40-70] [The Deep Ones](/wiki/The_Deep_Ones)
+7. [40-70] [Frame Work](/wiki/Frame_Work)
+8. [40-70] [Team Carry](/wiki/Team_Carry)
+9. Complete all of:
+  1. [40-70] [This Lumber is Haunted](/wiki/This_Lumber_is_Haunted)
+  2. [40-70] [Gorak Tul's Influence](/wiki/Gorak_Tul%27s_Influence)
+  3. [40-70] [Balance in All Things](/wiki/Balance_in_All_Things)
+  - and:
+  1. [40-70] [The Bleak Hills](/wiki/The_Bleak_Hills)
+  2. [40-70] [Drop It!](/wiki/Drop_It!_(quest))
+  3. [40-70] [Her Dog Days Are Over](/wiki/Her_Dog_Days_Are_Over)
+  4. [40-70] [Make it Wright](/wiki/Make_it_Wright)
+10. [40-70] [Summons from Dorian](/wiki/Summons_from_Dorian)
+11. [40-70] [A Worthy Crew](/wiki/A_Worthy_Crew)
+12. [40-70] **Blessing of the Tides**
+13. [40-70] [Allegiance of Kul Tiras](/wiki/Allegiance_of_Kul_Tiras)
+
+##
+Patch changes
+
+- **[Patch 8.1.5](/wiki/Patch_8.1.5) (2019-03-12):** Added.
+
+##
+External links
+
+- [Wowhead](https://www.wowhead.com/quest=54851)
+- [WoWDB](https://www.wowdb.com/quests/54851)

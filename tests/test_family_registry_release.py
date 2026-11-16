@@ -31,6 +31,8 @@ class FamilyRegistryRelease(unittest.TestCase):
         cls.playwright=sync_playwright().start()
         cls.browser=cls.playwright.chromium.launch(args=['--disable-renderer-backgrounding','--disable-background-timer-throttling','--disable-backgrounding-occluded-windows'])
         cls.census=json.loads((SOURCE_ROOT/'docs/noble-family-census.json').read_text())
+        cls.current=json.loads((ROOT/'assets/data/atlas.json').read_text())
+        cls.historical=json.loads((ROOT/'assets/data/publication-v5.json').read_text())
         OUT.mkdir(parents=True,exist_ok=True)
     @classmethod
     def tearDownClass(cls):
@@ -46,6 +48,8 @@ class FamilyRegistryRelease(unittest.TestCase):
     def boot(self):
         self.page.goto(self.url,wait_until='domcontentloaded')
         self.page.wait_for_function('window.gilneasApp?.ready',polling=50,timeout=40000)
+    def route_historical_v5(self):
+        self.page.route('**/assets/data/atlas.json',lambda route:route.fulfill(content_type='application/json',body=json.dumps(self.historical,ensure_ascii=False)))
     def data(self):return self.page.evaluate('window.gilneasApp.getData()')
     def draft(self):return self.page.evaluate(f'localStorage.getItem("{DRAFT}")')
     def assert_tag(self,node,status):
@@ -55,7 +59,19 @@ class FamilyRegistryRelease(unittest.TestCase):
         self.assertEqual(node.evaluate('e=>getComputedStyle(e).color'),COLORS[status])
     def test_01_every_reviewed_new_identity_is_in_the_current_registry_and_council_without_invented_votes(self):
         self.boot();before=self.data()
-        self.assertEqual(before['meta']['publicationRevision'],'royal-council-v5')
+        self.assertEqual(before['meta']['publicationRevision'],self.current['meta']['publicationRevision'])
+        self.assertEqual(len(before['nobles']),26)
+        self.assertEqual(len(self.current['nobles']),26)
+        self.assertEqual({n['id'] for n in before['nobles']},{n['id'] for n in self.historical['nobles']})
+        for noble in self.historical['nobles']:
+            actual=next(n for n in before['nobles'] if n['id']==noble['id'])
+            for field in ['lifeStatus','lifeStatusNote','lifeStatusBasis','lifeStatusScope']:
+                self.assertEqual((field in actual,actual.get(field)),(field in noble,noble.get(field)),(noble['id'],field))
+            self.assertEqual(actual.get('fieldSources',{}).get('lifeStatus'),noble.get('fieldSources',{}).get('lifeStatus'),noble['id'])
+        self.assertEqual(before['royalCouncil'],self.current['royalCouncil'])
+        for addition in self.census['additions']:
+            member=next(m for m in before['royalCouncil']['members'] if m['id']==addition['council']['id'])
+            self.assertEqual(member,addition['council'])
         self.assertFalse(self.page.locator('#editing-enabled').is_checked())
         self.page.locator('#filter-nobles').click()
         ids=self.page.locator('#location-list .noble-row').evaluate_all('nodes=>nodes.map(n=>n.dataset.nobleId)')
@@ -76,6 +92,8 @@ class FamilyRegistryRelease(unittest.TestCase):
                 self.assertIn('неканоническ',self.page.locator('#noble-title').inner_text()+' '+self.page.locator('#noble-description').inner_text())
             self.page.locator('[data-close="noble-dossier"]').click()
         self.page.locator('#council-open').click()
+        for noble in before['nobles']:
+            self.assert_tag(self.page.locator(f'#location-list .noble-row[data-noble-id="{noble["id"]}"] .noble-life-status'),noble['lifeStatus'])
         for addition in self.census['additions']:
             member=addition['council'];row=self.page.locator(f'#royal-council [data-member-id="{member["id"]}"]')
             self.assertEqual(row.count(),int(member['active']),member['id'])
@@ -90,6 +108,7 @@ class FamilyRegistryRelease(unittest.TestCase):
         self.page.screenshot(path=str(OUT/'family-council-desktop.png'))
         self.assertEqual(self.data(),before);self.assertIsNone(self.draft());self.assertEqual(self.errors,[])
     def test_02_old_court_draft_enriches_without_rewriting_author_data_or_storage_on_startup(self):
+        self.route_historical_v5()
         self.page.goto(self.url+'assets/data/publication-v4.json',wait_until='domcontentloaded')
         prior=json.loads((ROOT/'assets/data/publication-v4.json').read_text())
         draft=copy.deepcopy(prior)
@@ -127,11 +146,13 @@ class FamilyRegistryRelease(unittest.TestCase):
             self.assertIsNone(archive.testzip())
             self.assertEqual(set(archive.namelist()),set(manifest))
             self.assertEqual(json.loads(archive.read('assets/data/atlas.json')),before)
-            for resource in ['assets/css/favorites.css','assets/js/noble-order.mjs','assets/js/noble-life-status.mjs','assets/js/location-links.mjs','assets/data/publication-v5.json']:
-                self.assertEqual(archive.read(resource),(ROOT/resource).read_bytes())
+            for resource in manifest:
+                if resource!='assets/data/atlas.json':
+                    self.assertEqual(archive.read(resource),(ROOT/resource).read_bytes(),resource)
         self.assertEqual(self.data(),before);self.assertIsNone(self.draft());self.assertEqual(self.errors,[])
 
     def test_04_migration_preserves_author_deleted_optional_registries_on_startup_reload_and_json_export(self):
+        self.route_historical_v5()
         self.page.goto(self.url+'assets/data/publication-v4.json',wait_until='domcontentloaded')
         prior=json.loads((ROOT/'assets/data/publication-v4.json').read_text())
         draft=copy.deepcopy(prior)

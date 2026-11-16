@@ -39,8 +39,17 @@ export function initWallJournal(ctx) {
   closeButton.append(svgIcon('close'));
   head.append(heading, closeButton);
   const body = element('div', 'dialog-content wall-journal-body');
-  const summary = element('p', 'wall-journal-summary');
+  const summary = element('div', 'wall-journal-summary');
   summary.id = 'wall-journal-summary';
+  const progressHeading = element('div', 'wall-heading');
+  const progressValue = element('span', 'wall-journal-progress-value');
+  progressValue.id = 'wall-journal-progress-value';
+  progressHeading.append(element('strong', '', 'Строительство Стены Седогрива'), progressValue);
+  const journalProgress = element('progress');
+  journalProgress.id = 'wall-journal-progress';
+  const trackNotice = element('p', 'wall-journal-note');
+  summary.append(progressHeading, journalProgress, trackNotice);
+  heading.append(summary);
   const order = element('p', 'wall-journal-note', 'События идут в порядке добавления. Изменение или удаление записи пересчитывает все последующие события.');
   order.setAttribute('data-edit-only', '');
   const history = element('div', 'wall-event-history');
@@ -80,7 +89,7 @@ export function initWallJournal(ctx) {
   const saveButton = element('button', 'brass-button', 'Сохранить событие');
   saveButton.type = 'submit';
   form.append(formTitle, id, name.label, description.label, delta.label, effectsSection, errorField, saveButton);
-  body.append(summary, order, history, form);
+  body.append(order, history, form);
   dialog.append(head, body);
   document.body.append(dialog);
 
@@ -98,8 +107,13 @@ export function initWallJournal(ctx) {
     progress.setAttribute('aria-valuemax', String(derived.max));
     progress.setAttribute('aria-label', `Строительство Стены Седогрива: ${derived.value} из ${derived.max}`);
     document.getElementById('wall-progress-value').textContent = `${derived.value} / ${derived.max}`;
-    summary.textContent = hasTrack ? `Прогресс: ${derived.value} / ${derived.max}. Начальная отметка: ${derived.baseValue}.` :
-      'Начальная отметка строительства не задана в этом снимке. Добавление событий недоступно.';
+    journalProgress.max = derived.max;
+    journalProgress.value = derived.value;
+    journalProgress.textContent = `${derived.value} / ${derived.max}`;
+    for (const attribute of ['aria-valuemin', 'aria-valuenow', 'aria-valuemax', 'aria-label']) journalProgress.setAttribute(attribute, progress.getAttribute(attribute));
+    progressValue.textContent = `${derived.value} / ${derived.max}`;
+    trackNotice.textContent = hasTrack ? '' : 'Шкала строительства не задана в этом снимке. Добавление событий недоступно.';
+    trackNotice.hidden = hasTrack;
     history.replaceChildren();
     if (!derived.events.length) history.append(element('p', 'wall-history-empty', 'События ещё не добавлены'));
     for (const event of derived.events) {

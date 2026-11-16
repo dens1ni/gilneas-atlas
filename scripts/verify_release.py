@@ -55,11 +55,12 @@ with sync_playwright() as playwright:
             page.wait_for_function('window.gilneasApp?.ready',polling=50,timeout=40000)
             page.wait_for_function('document.querySelector("#base-map").complete && document.querySelector("#base-map").naturalWidth>0',polling=50)
             data=page.evaluate('window.gilneasApp.getData()')
-            assert len(data['locations'])==39 and len(data['nobles'])==26 and len(data['sources'])==124
-            assert data['meta']['publicationRevision']=='royal-council-v5'
-            assert len(data['royalCouncil']['members'])==33
-            for field in ['locations','nobles','sources','factions','territories','royalCouncil']:
-                assert data[field]==published[field],field
+            for collection in ['locations','nobles','sources','factions','territories']:
+                assert len(data[collection])==len(published[collection]),collection
+                assert [record['id'] for record in data[collection]]==[record['id'] for record in published[collection]],collection
+            assert data['meta']['publicationRevision']==published['meta']['publicationRevision']
+            assert len(data['royalCouncil']['members'])==len(published['royalCouncil']['members'])
+            assert data==published,'The complete clean-export snapshot must match the frozen publication'
             assert page.locator('#base-map').evaluate('e=>[e.naturalWidth,e.naturalHeight]')==[5289,6822]
             assert not page.locator('#editing-enabled').is_checked()
             assert page.evaluate('localStorage.getItem("gilneas-atlas-draft-v1")') is None

@@ -7,7 +7,7 @@ const root=new URL('../',import.meta.url);
 const load=async path=>JSON.parse(await readFile(new URL(path,root),'utf8'));
 
 test('the court publication covers every existing person and all seven houses without appointing historical predecessors',async()=>{
-  const data=await load('assets/data/atlas.json');
+  const data=await load('assets/data/publication-v5.json');
   const previous=await load('assets/data/publication-v3.json');
   assert.ok(data.royalCouncil,'The researched Royal Council must be published, not remain a scratch-only fixture');
   const members=data.royalCouncil.members;

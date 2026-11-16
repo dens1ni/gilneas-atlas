@@ -5,7 +5,7 @@ const root=new URL('../',import.meta.url);
 
 test('court revision preserves every existing map point, owner, source identity and manual-border baseline',async()=>{
   const previous=JSON.parse(await readFile(new URL('assets/data/publication-v3.json',root),'utf8'));
-  const actual=JSON.parse(await readFile(new URL('assets/data/atlas.json',root),'utf8'));
+  const actual=JSON.parse(await readFile(new URL('assets/data/publication-v5.json',root),'utf8'));
   assert.deepEqual(actual.locations.map(record=>record.id),previous.locations.map(record=>record.id),'No extra, removed or reordered map records');
   for(const original of previous.locations){
     const current=actual.locations.find(record=>record.id===original.id);

@@ -1,3 +1,24 @@
+/* Camera-only detail fade: keep canonical locations, anchors and type glyphs. */
+#markers .map-marker:not(.location-container) {
+  opacity: var(--detail-marker-opacity, 1);
+}
+#markers .map-marker.dimmed:not(.location-container) {
+  opacity: calc(.15 * var(--detail-marker-opacity, 1));
+}
+#world.detail-markers-hidden #markers .map-marker:not(.location-container) {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Ferry markers alone use a round nautical plate; anchor/size/fade stay shared. */
+#markers .map-marker.ferry-marker::before {
+  inset: 4px;
+  transform: none;
+  border-radius: 50%;
+  background: #173239;
+  box-shadow: inset 0 0 0 2px #0b1b20, 0 0 0 1px #80bbc67a;
+}
+
 /* Inert extra ornament only: never alter marker anchors, glyphs or rings. */
 #markers .map-marker > .location-container-frame {
   position: absolute;

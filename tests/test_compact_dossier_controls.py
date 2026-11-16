@@ -7,6 +7,7 @@ import unittest
 from http.server import SimpleHTTPRequestHandler,ThreadingHTTPServer
 from pathlib import Path
 from playwright.sync_api import sync_playwright
+
 ROOT=Path(os.environ.get('GILNEAS_TEST_ROOT',str(Path(__file__).resolve().parents[1])))
 PREFIX=os.environ.get('GILNEAS_TEST_PREFIX','/')
 OUT=Path('/Users/daniil_si/.hermes/cache/scratch/gilneas-compact-dossier-evidence')
@@ -36,8 +37,15 @@ class CompactDossierControls(unittest.TestCase):
         self.page.route('**/assets/js/app.mjs',lambda route:route.fulfill(status=200,content_type='application/javascript',body='// Isolate unrelated in-flight Council bootstrap.'))
         self.page.set_viewport_size({'width':width,'height':height});self.page.goto(self.url,wait_until='domcontentloaded')
         data=json.loads((ROOT/'assets/data/atlas.json').read_text())
-        self.page.evaluate('''async data=>{const {initUI}=await import('./assets/js/ui.mjs');const {decorateIcons}=await import('./assets/js/icons.mjs');decorateIcons();window.fixtureData=data;window.fixtureSelected='northgate-river';const ui=initUI({getData:()=>window.fixtureData,getSelectedId:()=>window.fixtureSelected,onSelect:id=>{window.fixtureSelected=id;ui.render();}});window.gilneasApp={ready:true,ui,getData:()=>window.fixtureData,selectId:id=>{window.fixtureSelected=id;ui.render();}};ui.focusLocation('northgate-river',false);}''',data)
+        for collection in ['locations','factions','nobles']:
+            ids=[row['id'] for row in data[collection]]
+            self.assertEqual(len(ids),len(set(ids)),collection)
+        landmark=next(row for row in data['locations'] if row['id']=='northern-headlands')
+        self.assertEqual(landmark['type'],'landmark')
+        # Only the map marker must be natural; retain all canonical own objects.
+        self.page.evaluate('''async data=>{const {initUI}=await import('./assets/js/ui.mjs');const {decorateIcons}=await import('./assets/js/icons.mjs');decorateIcons();window.fixtureData=data;window.fixtureSelected='northern-headlands';const ui=initUI({getData:()=>window.fixtureData,getSelectedId:()=>window.fixtureSelected,onSelect:id=>{window.fixtureSelected=id;ui.render();}});window.gilneasApp={ready:true,ui,getData:()=>window.fixtureData,selectId:id=>{window.fixtureSelected=id;ui.render();}};ui.focusLocation('northern-headlands',false);}''',data)
         self.page.wait_for_function('document.querySelector("#base-map").complete&&document.querySelector("#base-map").naturalWidth>0',polling=50)
+        self.assertEqual(self.page.evaluate('window.gilneasApp.getData()'),data,'Natural marker focus preserves the full snapshot, including nested own buildings')
     def test_desktop_dossier_buttons_are_32px_inside_the_unchanged_44px_header(self):
         self.boot();before=self.page.evaluate('window.gilneasApp.getData()');stored=self.page.evaluate('localStorage.getItem("gilneas-atlas-draft-v1")')
         header=self.page.locator('#dossier .dossier-head').bounding_box();self.assertEqual(header['height'],44)

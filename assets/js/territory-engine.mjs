@@ -37,6 +37,22 @@ export function validate(t, factions, meta, { clone = true } = {}) {
       if (dimension !== undefined && (!Number.isFinite(dimension) || dimension <= 0 || Math.ceil(dimension / t.step) !== count)) fail();
     }
   }
+  if (Object.hasOwn(t, 'realmLayout')) {
+    const layout = t.realmLayout;
+    if (!layout || typeof layout !== 'object' || Array.isArray(layout) || layout.version !== 1 ||
+        typeof layout.image !== 'string' || !layout.image.length || typeof layout.mapRevision !== 'string' || !layout.mapRevision.length ||
+        (meta && (layout.image !== meta.image || layout.mapRevision !== meta.mapRevision)) ||
+        !Array.isArray(layout.rootKeys) || layout.rootKeys.length !== 3 || new Set(layout.rootKeys).size !== 3 ||
+        !['gilneas', 'lordaeron', 'dalaran'].every(id => layout.rootKeys.includes(id)) ||
+        layout.rootKeys.some(id => !factions.some(f => f.id === id && f.parent == null)) ||
+        !Array.isArray(layout.domainCells) || layout.domainCells.length !== t.cells.length) fail();
+    for (let i = 0; i < layout.rootKeys.length; i++) if (!Object.hasOwn(layout.rootKeys, i)) fail();
+    for (let i = 0; i < layout.domainCells.length; i++) {
+      const value = layout.domainCells[i];
+      if (!Object.hasOwn(layout.domainCells, i) || !Number.isInteger(value) || value < 0 || value > layout.rootKeys.length) fail();
+    }
+    if (Object.hasOwn(layout, 'landMask') && (typeof layout.landMask !== 'string' || !/^assets\/maps\/[a-zA-Z0-9_-]+\.png$/.test(layout.landMask))) fail();
+  }
   return clone ? JSON.parse(JSON.stringify(t)) : t;
 }
 

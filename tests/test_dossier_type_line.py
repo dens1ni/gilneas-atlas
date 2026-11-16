@@ -35,6 +35,8 @@ class DossierTypeLine(unittest.TestCase):
                 for location in before['locations']:
                     page.evaluate('id=>window.gilneasApp.selectId(id)', location['id'])
                     expected = 'Столица' if location.get('capital') else page.locator('#dossier-type').text_content()
+                    if location.get('destroyed') is True:
+                        expected += ' Разрушено'
                     self.assertEqual(page.locator('#dossier-subtitle').text_content(), expected, location['id'])
                     self.assertEqual(page.locator('#dossier-title').text_content(), location['name'])
                     self.assertEqual(page.locator('#dossier-description').text_content(), location.get('description') or '')

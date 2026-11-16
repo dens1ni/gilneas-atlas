@@ -160,7 +160,7 @@ class RoyalWindows(unittest.TestCase):
             shield = self.page.locator('#dossier-seal .faction-shield')
             self.assertEqual(shield.count(), 1, location['id'])
             faction = factions.get(location.get('faction'))
-            expected = data['meta']['gilneasHeraldry']['field'] if location.get('faction') == 'gilneas' else faction['color'] if faction else '#87918d'
+            expected = data['meta']['gilneasHeraldry']['field'] if location.get('faction') == 'gilneas' else faction.get('heraldry', {}).get('field', faction['color']) if faction else '#87918d'
             self.assertEqual(shield.get_attribute('data-color'), expected, location['id'])
             self.assertEqual(shield.locator('.shield-field').get_attribute('fill'), expected)
             parent = faction

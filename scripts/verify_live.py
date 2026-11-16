@@ -16,6 +16,7 @@ out = Path(args.output)
 out.mkdir(parents=True, exist_ok=True)
 base = args.url.rstrip('/') + '/'
 manifest = json.loads((root / 'assets/runtime-manifest.json').read_text())
+expected_release = json.loads((root / 'assets/data/atlas.json').read_text())
 verified = []
 for name in manifest:
     if name == '.nojekyll' or name.startswith('.github/'):
@@ -42,26 +43,33 @@ with sync_playwright() as p:
     page.wait_for_function('window.gilneasApp?.ready', timeout=60000)
     page.wait_for_function("document.getElementById('base-map').complete && document.getElementById('base-map').naturalWidth > 0", polling=100, timeout=60000)
     baseline = page.evaluate('window.gilneasApp.getData()')
-    assert len(baseline['locations']) == 39
-    assert len(baseline['nobles']) == 26
-    assert len(baseline['sources']) == 124
-    assert baseline['meta']['publicationRevision'] == 'royal-council-v5'
-    assert len(baseline['royalCouncil']['members']) == 33
+    for collection in ['locations','factions','nobles','sources','territories']:
+        assert len(baseline[collection]) == len(expected_release[collection]), collection
+        assert [record['id'] for record in baseline[collection]] == [record['id'] for record in expected_release[collection]], collection
+    assert baseline['meta']['publicationRevision'] == expected_release['meta']['publicationRevision']
+    assert len(baseline['royalCouncil']['members']) == len(expected_release['royalCouncil']['members'])
+    assert baseline == expected_release, 'The complete deployed author snapshot must match the reviewed publication'
     assert not page.locator('#editing-enabled').is_checked()
     assert page.locator('#dossier-edit').is_hidden()
     assert page.evaluate("localStorage.getItem('gilneas-atlas-draft-v1')") is None
     assert len(baseline['territoryGrid']['cells']) == 62985
-    assert page.locator('#wall-progress').get_attribute('value') == '10'
-    assert page.locator('#wall-progress').get_attribute('max') == '100'
+    assert page.locator('#wall-progress').get_attribute('value') == str(expected_release['meta']['wallConstruction']['value'])
+    assert page.locator('#wall-progress').get_attribute('max') == str(expected_release['meta']['wallConstruction']['max'])
     assert page.locator('#boundary-vector path').count() > 0
     assert baseline['meta']['gilneasCrest'] == 'assets/ui/gilneas-royal-shield.svg'
     assert page.locator('.brand img').get_attribute('src') == 'assets/ui/gilneas-royal-shield.svg'
     assert page.locator('#map-home img').get_attribute('src') == 'assets/ui/gilneas-royal-shield.svg'
     assert page.locator('.brand img').evaluate('e=>getComputedStyle(e).backgroundColor') == 'rgba(0, 0, 0, 0)'
     assert page.locator('img[src*=gilneas-human-banner]').count() == 0
-    assert all(location.get('wowpediaUrl') and location.get('shortDescription') for location in baseline['locations'])
+    assert all(location.get('shortDescription') for location in baseline['locations'])
+    assert [location.get('wowpediaUrl') for location in baseline['locations']] == [location.get('wowpediaUrl') for location in expected_release['locations']], 'No invented reference URL may replace an author place without evidence'
     assert page.locator('#base-map').evaluate('e=>[e.naturalWidth,e.naturalHeight]') == [5289, 6822]
-    assert all(not location['objects'] for location in baseline['locations'])
+    assert [location['objects'] for location in baseline['locations']] == [location['objects'] for location in expected_release['locations']]
+    if baseline['meta']['publicationRevision'] == 'authored-estates-v6':
+        assert len(baseline['locations']) == 86 and len(baseline['factions']) == 14
+        assert all(any(obj.get('rules', {}).get('edition') == 'dnd5e' for obj in location['objects']) for location in baseline['locations'])
+        for identifier in ['galewatch-lighthouse','location-3325cfda-47a7-4e3d-9cac-3797f4dbaa9d','location-e8c8f59c-83ac-49ff-819f-9708a9734ff1']:
+            assert next(location for location in baseline['locations'] if location['id'] == identifier)['type'] == 'lighthouse'
     page.screenshot(path=str(out / 'live-desktop.png'), full_page=True)
     page.locator('#editor-open').click()
     page.locator('label:has(#editing-enabled)').click()
@@ -127,7 +135,7 @@ with sync_playwright() as p:
     page.evaluate("window.gilneasApp.nobleDossier.open('noble-darius')")
     assert page.locator('#noble-dossier').is_visible()
     assert 'Генн Седогрив' in page.locator('#noble-suzerain').inner_text()
-    assert 'Крепость над Пирвудом' in page.locator('#noble-holdings').inner_text()
+    assert next(location for location in baseline['locations'] if location['id'] == 'shadowfang')['name'] in page.locator('#noble-holdings').inner_text()
     assert page.locator('#noble-crest .faction-shield').count() == 1
     crowley = next(faction for faction in baseline['factions'] if faction['id'] == 'crowley')
     assert page.locator('#noble-crest .shield-device').get_attribute('href') == crowley['heraldry']['symbol']

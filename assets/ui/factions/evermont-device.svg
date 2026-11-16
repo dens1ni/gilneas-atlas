@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" width="40" height="44" data-symbol="needle-snake-apple" data-treatment="compact-source-adaptation">
+<title>Знак Дома Эвермонт — золотые игла, змея и яблоко</title>
+<g data-part="needle" fill="#cda24f">
+  <path data-detail="needle-eye" fill-rule="evenodd" d="M20 1C22 3.1 25 6.3 25 9.3C25 11.7 23.5 13.6 22 14.5L21.4 30 20 43 18.6 30 18 14.5C16.5 13.6 15 11.7 15 9.3C15 6.3 18 3.1 20 1ZM20 4.3C18.6 6 17.3 7.8 17.3 9.3C17.3 10.9 18.6 12.4 20 13.1C21.4 12.4 22.7 10.9 22.7 9.3C22.7 7.8 21.4 6 20 4.3Z"/>
+</g>
+<g data-part="snake" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 18C5.3 15.5 6.3 11.4 10 10.8C14.3 10.2 17.4 15.9 22.7 13.7C27.8 10.9 32.6 12 32.3 16.4C32 21.1 27.2 21.8 19 22.4C10.1 23.1 5.2 26.1 7.1 31.3C9 36.7 14.8 38.1 20.7 38C26 37.9 30.7 35.5 34.4 37.2" stroke="#350a13" stroke-width="5.1"/>
+  <path d="M8 18C5.3 15.5 6.3 11.4 10 10.8C14.3 10.2 17.4 15.9 22.7 13.7C27.8 10.9 32.6 12 32.3 16.4C32 21.1 27.2 21.8 19 22.4C10.1 23.1 5.2 26.1 7.1 31.3C9 36.7 14.8 38.1 20.7 38C26 37.9 30.7 35.5 34.4 37.2" stroke="#cda24f" stroke-width="3.2"/>
+  <path d="M33.4 35.9C35.6 36.4 36.8 38 38.2 40C35.7 39.6 34.2 38.3 33.4 37.9Z" fill="#cda24f"/>
+  <path d="M7.6 16.4C5.4 15.9 4.5 17.5 5.5 19.5L7.5 22.1C8.6 22.9 10.4 21.5 10.3 20.1L9.9 17.5Z" fill="#cda24f" stroke="#350a13" stroke-width=".6"/>
+  <path d="M7.2 18.7 7.6 19.7" stroke="#350a13" stroke-width=".9"/>
+</g>
+<g data-part="apple" fill="#cda24f" stroke="#350a13" stroke-width="1.65" stroke-linejoin="round" paint-order="stroke fill">
+  <path d="M23 26.5C20.2 23.7 16.7 25.3 16.3 28.1C15.9 31.1 18.3 34.8 20.7 34.7C21.7 34.7 22.3 34 23 34.4C25.5 35.7 28.8 33.4 29.8 30.1C30.9 26.6 28.5 24.2 25.9 25.1C24.6 25.5 24 26.5 23 26.5Z"/>
+  <path d="M23 26.8C23.1 25.1 22.3 24.1 21.7 23.2" fill="none" stroke="#350a13" stroke-width="3.7" stroke-linecap="round"/>
+  <path d="M23 26.8C23.1 25.1 22.3 24.1 21.7 23.2" fill="none" stroke="#cda24f" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M23.1 25C23.6 22.1 26.3 21.4 29 21.8C28.1 24.1 25.7 25.3 23.1 25Z"/>
+</g>
+</svg>

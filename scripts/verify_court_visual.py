@@ -28,14 +28,16 @@ try:
         page.on('response',lambda response:errors.append(f'{response.status} {response.url}') if response.status>=400 else None)
         page.goto(url,wait_until='domcontentloaded'); page.wait_for_function('window.gilneasApp?.ready',timeout=60000,polling=50)
         original=page.evaluate('window.gilneasApp.getData()')
-        assert len(original['factions'])==10
+        expected=json.loads((ROOT/'assets/data/atlas.json').read_text())
+        assert [f['id'] for f in original['factions']]==[f['id'] for f in expected['factions']]
+        assert original['factions']==expected['factions']
         for faction in original['factions']:
             row=page.locator('#faction-list .faction-row[data-faction-id="'+faction['id']+'"]')
             shield=row.locator('.faction-shield')
             state=shield.evaluate('e=>({id:e.dataset.factionId,shape:e.querySelector("path").getAttribute("d"),field:e.querySelector("path").getAttribute("fill"),device:e.querySelector("image").getAttribute("href")})')
             assert state['device']==faction['heraldry']['symbol']
             assert state['shape']=='M1 1H59V46.4L30 71 1 46.4Z'
-            expected=original['meta']['gilneasHeraldry']['field'] if faction['id']=='gilneas' else faction['color']
+            expected=original['meta']['gilneasHeraldry']['field'] if faction['id']=='gilneas' else faction.get('heraldry',{}).get('field',faction['color'])
             assert state['field']==expected
             decode=page.evaluate('''async source=>{const image=new Image(); image.src=new URL(source,document.baseURI).href;await image.decode();return {width:image.naturalWidth,height:image.naturalHeight};}''',state['device'])
             assert decode['width']>0 and decode['height']>0
@@ -56,7 +58,7 @@ try:
         context.close(); browser.close()
 finally:
     if server: server.shutdown(); server.server_close()
-contact=Image.new('RGB',(820,430),'#171b1e'); draw=ImageDraw.Draw(contact)
+contact=Image.new('RGB',(820,((len(results)+4)//5)*210+10),'#171b1e'); draw=ImageDraw.Draw(contact)
 for i,result in enumerate(results):
     image=Image.open(OUT/('shield-'+result['id']+'.png')); image.load(); assert image.width==120 and image.height==144
     x=(i%5)*164+22; y=(i//5)*210+10

@@ -2,6 +2,7 @@ import { createTypeIcon, typeName } from './object-types.mjs';
 import { svgIcon } from './icons.mjs';
 import { isMapLocation, resolveLocationLinks, eligibleLocationLinkTargets } from './location-links.mjs';
 import { isEditingEnabled } from './edit-mode.mjs';
+import { createObjectConditionTag } from './object-condition.mjs';
 
 /** Add an inert sibling frame; the existing glyph and map anchor stay intact. */
 export function decorateLocationMarker(marker, location) {
@@ -39,6 +40,8 @@ function locationIdentity(snapshot, location) {
   const identity = make('span', 'location-link-identity');
   identity.append(make('span', 'location-link-name', location.name),
     make('small', 'location-link-meta', `${typeName(location.type)} · ${affiliation(snapshot, location)}`));
+  const condition = createObjectConditionTag(location);
+  if (condition) identity.append(condition);
   return identity;
 }
 

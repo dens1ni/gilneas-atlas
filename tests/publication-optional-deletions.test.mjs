@@ -6,7 +6,7 @@ import {reconcileDraftPublication} from '../assets/js/draft-publication.mjs';
 
 const read = name => JSON.parse(readFileSync(new URL(`../assets/data/${name}`, import.meta.url), 'utf8'));
 const previous = read('publication-v4.json');
-const published = read('atlas.json');
+const published = read('publication-v5.json');
 const v5 = read('publication-v5.json');
 const previousNobleIds = new Set(previous.nobles.map(record => record.id));
 const additions = published.nobles.filter(record => !previousNobleIds.has(record.id));

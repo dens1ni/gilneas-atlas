@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 const json=async name=>JSON.parse(await readFile(new URL('../assets/data/'+name,import.meta.url),'utf8'));
 
 test('every existing location retains source-linked immersive lore and receives its reviewed new map point',async()=>{
-  const [current,original]=await Promise.all([json('atlas.json'),json('publication-v1.json')]);
+  const [current,original]=await Promise.all([json('publication-v5.json'),json('publication-v1.json')]);
   assert.equal(current.locations.length,39);assert.deepEqual(current.locations.map(l=>l.id),original.locations.map(l=>l.id));
   for(const location of current.locations){
     const before=original.locations.find(l=>l.id===location.id);
@@ -20,7 +20,7 @@ test('every existing location retains source-linked immersive lore and receives 
 });
 
 test('every registered noble gets historical description appearance social status and a source-backed allegiance',async()=>{
-  const [current,original]=await Promise.all([json('atlas.json'),json('publication-v1.json')]);
+  const [current,original]=await Promise.all([json('publication-v5.json'),json('publication-v1.json')]);
   const census=JSON.parse(await readFile(new URL('../docs/noble-family-census.json',import.meta.url),'utf8'));
   assert.equal(current.nobles.length,original.nobles.length+census.additions.length);
   assert.deepEqual(current.nobles.slice(0,original.nobles.length).map(n=>n.id),original.nobles.map(n=>n.id));

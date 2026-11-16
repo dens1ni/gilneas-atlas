@@ -6,7 +6,7 @@ const root=new URL('../',import.meta.url);
 const read=async path=>JSON.parse(await readFile(new URL(path,root),'utf8'));
 
 test('all audited location-container flags and exact canonical references reach production without copying points',async()=>{
-  const data=await read('assets/data/atlas.json'),proof=await read('docs/location-links-review.json'),before=await read('assets/data/publication-v4.json');
+  const data=await read('assets/data/publication-v5.json'),proof=await read('docs/location-links-review.json'),before=await read('assets/data/publication-v4.json');
   assert.equal(proof.records.length,proof.auditedCount);
   assert.deepEqual(proof.records.map(row=>row.id),before.locations.map(row=>row.id));
   assert.deepEqual(data.locations.map(row=>row.id),before.locations.map(row=>row.id));

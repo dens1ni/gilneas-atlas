@@ -1,0 +1,213 @@
+[
+  {
+    "id": "source-lore-harvest-witches-wowpedia",
+    "title": "Harvest-witch",
+    "url": "https://wowpedia.fandom.com/wiki/Harvest-witch",
+    "canonicalUrl": "https://wowpedia.fandom.com/wiki/Harvest-witch",
+    "retrievedUrl": "https://wowpedia.fandom.com/wiki/Harvest-witch",
+    "attribution": "Wowpedia",
+    "quote": "Harvest-witches[1] are humans gifted with minor control over nature. They are not widespread, and live on the fringes of Gilnean society.",
+    "evidence": [
+      {
+        "quote": "Harvest-witches[1] are humans gifted with minor control over nature. They are not widespread, and live on the fringes of Gilnean society.",
+        "path": "docs/authored-estates-evidence/lore-page2-4.txt",
+        "sha256": "b07b4c5ba685b22eec9539e2935faf7d1ce94ee018f25ecc84751dc0591a5d51"
+      },
+      {
+        "quote": "Harvest-witches have a limited control over nature, especially plant life, and the powers of harvest witches bear a coincidental resemblance to the low-level abilities of actual druids.[3]",
+        "path": "docs/authored-estates-evidence/lore-page2-4.txt",
+        "sha256": "b07b4c5ba685b22eec9539e2935faf7d1ce94ee018f25ecc84751dc0591a5d51"
+      }
+    ]
+  },
+  {
+    "id": "source-lore-kul-tiras-founding-wowpedia",
+    "title": "Kul Tiras (kingdom)",
+    "url": "https://wowpedia.fandom.com/wiki/Kul_Tiras_(kingdom)",
+    "canonicalUrl": "https://wowpedia.fandom.com/wiki/Kul_Tiras_(kingdom)",
+    "retrievedUrl": "https://wowpedia.fandom.com/wiki/Kul_Tiras_(kingdom)",
+    "attribution": "Wowpedia",
+    "quote": "Those who had settled in the coastal region of Gilneas constructed a series of robust harbors. The boldest of the sailors eventually discovered a large island to the south that was rich with metal ores and other valuable natural resources.[14] The first of them became the tidesages, and they guided others to the island soon after.[15] Some of them stayed on this island and founded a mighty maritime outpost named Kul Tiras.",
+    "evidence": [
+      {
+        "quote": "Those who had settled in the coastal region of Gilneas constructed a series of robust harbors. The boldest of the sailors eventually discovered a large island to the south that was rich with metal ores and other valuable natural resources.[14] The first of them became the tidesages, and they guided others to the island soon after.[15] Some of them stayed on this island and founded a mighty maritime outpost named Kul Tiras.",
+        "path": "docs/authored-estates-evidence/lore-page2-5.txt",
+        "sha256": "9480263a02c5231ddabcb117cb4f42d61ad8a229a2ccc1dfd5fde30450c1f31f"
+      },
+      {
+        "quote": "During the Second War, Kul Tiras joined the other human kingdoms in forming the Alliance of Lordaeron, and its ruler Lord Admiral Daelin Proudmoore was named Grand Admiral of the Alliance, giving him supreme command over all Alliance naval forces.",
+        "path": "docs/authored-estates-evidence/lore-page2-5.txt",
+        "sha256": "9480263a02c5231ddabcb117cb4f42d61ad8a229a2ccc1dfd5fde30450c1f31f"
+      }
+    ]
+  },
+  {
+    "id": "source-lore-tides-blessing-wowpedia",
+    "title": "Blessing of the Tides",
+    "url": "https://wowpedia.fandom.com/wiki/Blessing_of_the_Tides",
+    "canonicalUrl": "https://wowpedia.fandom.com/wiki/Blessing_of_the_Tides",
+    "retrievedUrl": "https://wowpedia.fandom.com/wiki/Blessing_of_the_Tides",
+    "attribution": "Wowpedia",
+    "quote": "As is tradition, a tidesage's blessing fortifies the ship against storms and encourages fair weather and smooth seas. It is as much ceremonial as it is practical.",
+    "evidence": [
+      {
+        "quote": "As is tradition, a tidesage's blessing fortifies the ship against storms and encourages fair weather and smooth seas. It is as much ceremonial as it is practical.",
+        "path": "docs/authored-estates-evidence/lore-page4-2.txt",
+        "sha256": "0b9c5f758041bd719e69a927cc63250f6c56963701211ba3b6763b2940bf3c24"
+      }
+    ]
+  },
+  {
+    "id": "source-lore-walden-wowpedia-api",
+    "title": "Lord Walden — live Wowpedia MediaWiki API",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Walden&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "canonicalUrl": "https://wowpedia.fandom.com/wiki/Lord_Walden",
+    "retrievedUrl": "https://wowpedia.fandom.com/api.php?action=parse&page=Lord+Walden&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "attribution": "Wowpedia",
+    "quote": "Lord Walden was a human nobleman from eastern Gilneas.",
+    "evidence": [
+      {
+        "quote": "Lord Walden was a human nobleman from eastern Gilneas.",
+        "path": "docs/authored-estates-evidence/lore-api-walden.txt",
+        "sha256": "6cb1f7427712bdb83810a21fa1382bf6797a589033aed6c4178a1bb8c4a6c159"
+      },
+      {
+        "quote": "One day before the attack on Gilneas City, he quarreled with Baron Ashbury because of the bad situation in Gilneas.",
+        "path": "docs/authored-estates-evidence/lore-api-walden.txt",
+        "sha256": "6cb1f7427712bdb83810a21fa1382bf6797a589033aed6c4178a1bb8c4a6c159"
+      },
+      {
+        "quote": "Lieutenant Walden might be related to the Lord.",
+        "path": "docs/authored-estates-evidence/lore-api-walden.txt",
+        "sha256": "6cb1f7427712bdb83810a21fa1382bf6797a589033aed6c4178a1bb8c4a6c159"
+      }
+    ]
+  },
+  {
+    "id": "source-lore-walden-house-wowpedia-api",
+    "title": "Leader of the Pack (quest) — live Wowpedia MediaWiki API",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Leader+of+the+Pack+%28quest%29&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "canonicalUrl": "https://wowpedia.fandom.com/wiki/Leader_of_the_Pack_(quest)",
+    "retrievedUrl": "https://wowpedia.fandom.com/api.php?action=parse&page=Leader+of+the+Pack+%28quest%29&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "attribution": "Wowpedia",
+    "quote": "One of Sylvanas' handpicked dark rangers is overseeing the battlefront from the Walden house near the shore. Take this whistle and use it when you're close to her.",
+    "evidence": [
+      {
+        "quote": "One of Sylvanas' handpicked dark rangers is overseeing the battlefront from the Walden house near the shore. Take this whistle and use it when you're close to her.",
+        "path": "docs/authored-estates-evidence/lore-api-walden-house.txt",
+        "sha256": "dcf21287464544a34becf8c7610334fe75d0c156d702dd4cf6f3a89743b9f10d"
+      }
+    ]
+  },
+  {
+    "id": "source-lore-tidesages-wowpedia",
+    "title": "Tidesages",
+    "url": "https://wowpedia.fandom.com/wiki/Tidesages",
+    "canonicalUrl": "https://wowpedia.fandom.com/wiki/Tidesages",
+    "retrievedUrl": "https://wowpedia.fandom.com/wiki/Tidesages",
+    "attribution": "Wowpedia",
+    "quote": "The Tidesages (also written tidesages), also known as sea priests or tidepriests,[1][2] are a religious Kul Tiran group that worship the Tidemother based in Stormsong Valley, in the Shrine of the Storm.",
+    "evidence": [
+      {
+        "quote": "The Tidesages (also written tidesages), also known as sea priests or tidepriests,[1][2] are a religious Kul Tiran group that worship the Tidemother based in Stormsong Valley, in the Shrine of the Storm.",
+        "path": "docs/authored-estates-evidence/lore-page2-1.txt",
+        "sha256": "fd9525ba06e5302b79e4e91b21d8c6c78923687a321fc95368fc280e26f263b6"
+      },
+      {
+        "quote": "2,700 years ago, a group of humans from Gilneas left their homes and took to the ocean.[4]",
+        "path": "docs/authored-estates-evidence/lore-page2-1.txt",
+        "sha256": "fd9525ba06e5302b79e4e91b21d8c6c78923687a321fc95368fc280e26f263b6"
+      }
+    ]
+  },
+  {
+    "id": "source-lore-tidesage-legends-wowpedia",
+    "title": "Legends of the Tidesages",
+    "url": "https://wowpedia.fandom.com/wiki/Legends_of_the_Tidesages",
+    "canonicalUrl": "https://wowpedia.fandom.com/wiki/Legends_of_the_Tidesages",
+    "retrievedUrl": "https://wowpedia.fandom.com/wiki/Legends_of_the_Tidesages",
+    "attribution": "Wowpedia",
+    "quote": "The depths' guidance became clear; they guided us home. A new home. The land was rich and could provide for endless generations. We guided others to us, sending our sages to ensure safe passage.",
+    "evidence": [
+      {
+        "quote": "The depths' guidance became clear; they guided us home. A new home. The land was rich and could provide for endless generations. We guided others to us, sending our sages to ensure safe passage.",
+        "path": "docs/authored-estates-evidence/lore-page2-2.txt",
+        "sha256": "52391fcd873653fd793cb55e677f3b60f9161776091e3f4a90992b5271ce1ef0"
+      },
+      {
+        "quote": "It began simply. Stormsong's gifts guided fish into our nets and fresh water into our mouths. No longer were we slaves to the elements. We were the masters.",
+        "path": "docs/authored-estates-evidence/lore-page2-2.txt",
+        "sha256": "52391fcd873653fd793cb55e677f3b60f9161776091e3f4a90992b5271ce1ef0"
+      }
+    ]
+  },
+  {
+    "id": "source-lore-kul-tiras-settlers-wowpedia",
+    "title": "Kul Tiras",
+    "url": "https://wowpedia.fandom.com/wiki/Kul_Tiras",
+    "canonicalUrl": "https://wowpedia.fandom.com/wiki/Kul_Tiras",
+    "retrievedUrl": "https://wowpedia.fandom.com/wiki/Kul_Tiras",
+    "attribution": "Wowpedia",
+    "quote": "The islands are home to the human nation of the same name, having originally been discovered and colonized by Gilnean sailors from the mainland Eastern Kingdoms.[4]",
+    "evidence": [
+      {
+        "quote": "The islands are home to the human nation of the same name, having originally been discovered and colonized by Gilnean sailors from the mainland Eastern Kingdoms.[4]",
+        "path": "docs/authored-estates-evidence/lore-page2-3.txt",
+        "sha256": "d57d78e444f6c8a0bf4617bac237d35d0f81116fa2b1943609278821323b5756"
+      }
+    ]
+  },
+  {
+    "id": "source-lore-cdev3-blizzplanet",
+    "title": "Ask Creative Development III — attributed Blizzplanet blue-post reproduction",
+    "url": "https://www.blizzplanet.com/blog/comments/ask-creative-development-round-iii",
+    "canonicalUrl": "https://wowpedia.fandom.com/wiki/Ask_CDev",
+    "retrievedUrl": "https://www.blizzplanet.com/blog/comments/ask-creative-development-round-iii",
+    "attribution": "Blizzplanet reproduces a Blizzard/Bashiok blue post; official announcement independently retrieved but the old forum body was not retrieved",
+    "quote": "The religious leaders of what was in Gilneas referred to as the “old ways” eventually became “harvest-witches”; those who used their nature powers to augment Gilneas’ agricultural output during and following its period of industrialization.",
+    "evidence": [
+      {
+        "quote": "The religious leaders of what was in Gilneas referred to as the “old ways” eventually became “harvest-witches”; those who used their nature powers to augment Gilneas’ agricultural output during and following its period of industrialization.",
+        "path": "docs/authored-estates-evidence/lore-page4-1.txt",
+        "sha256": "9172bf0bca4b5b8a1a4412eb0f700f234a529e37fdb1317d93eae7cf4ed045aa"
+      },
+      {
+        "quote": "Harvest-witches have a limited control over nature, especially plant life, and the powers of harvest witches bear a coincidental resemblance to the low-level abilities of actual druids.",
+        "path": "docs/authored-estates-evidence/lore-page4-1.txt",
+        "sha256": "9172bf0bca4b5b8a1a4412eb0f700f234a529e37fdb1317d93eae7cf4ed045aa"
+      }
+    ]
+  },
+  {
+    "id": "source-lore-harvest-witches-warcraftwiki",
+    "title": "Harvest-witch — Warcraft Wiki",
+    "url": "https://warcraft.wiki.gg/wiki/Harvest-witch",
+    "canonicalUrl": "https://wowpedia.fandom.com/wiki/Harvest-witch",
+    "retrievedUrl": "https://warcraft.wiki.gg/wiki/Harvest-witch",
+    "attribution": "Warcraft Wiki, successor/mirror of Wowpedia",
+    "quote": "At one point after Gilneas cut itself off from the outside world with the Greymane Wall, the kingdom was struck by a famine that drove its inhabitants to the edge of extinction.",
+    "evidence": [
+      {
+        "quote": "At one point after Gilneas cut itself off from the outside world with the Greymane Wall, the kingdom was struck by a famine that drove its inhabitants to the edge of extinction.",
+        "path": "docs/authored-estates-evidence/lore-page4-3.txt",
+        "sha256": "a9b7582fa866e41d7cc84f69206c8f0099029651897e8023dcbc135f2dd3e1dd"
+      }
+    ]
+  },
+  {
+    "id": "source-lore-harvest-famine-wowpedia-api",
+    "title": "Moonfire (worgen) — live Wowpedia MediaWiki API",
+    "url": "https://wowpedia.fandom.com/api.php?action=parse&page=Moonfire+%28worgen%29&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "canonicalUrl": "https://wowpedia.fandom.com/wiki/Moonfire_(worgen)",
+    "retrievedUrl": "https://wowpedia.fandom.com/api.php?action=parse&page=Moonfire+%28worgen%29&prop=text%7Crevid%7Cdisplaytitle&format=json",
+    "attribution": "Wowpedia",
+    "quote": "When we cut ourselves off from the outside world and our crops failed, it was our order who called upon the earth's blessings and restored the harvest.",
+    "evidence": [
+      {
+        "quote": "When we cut ourselves off from the outside world and our crops failed, it was our order who called upon the earth's blessings and restored the harvest.",
+        "path": "docs/authored-estates-evidence/lore-api-moonfire-worgen.txt",
+        "sha256": "0bbd7b3d4cde51df7649382b7b533ae1c8bf66d9e905e8e4f8d1c03d33f23ad8"
+      }
+    ]
+  }
+]

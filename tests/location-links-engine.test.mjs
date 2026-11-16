@@ -74,8 +74,13 @@ test('isMapLocation recognizes only the literal true flag without writing a reco
 test('legacy snapshots validate without adding optional schema or changing full frozen author data', async () => {
   const { validateLocationLinks, resolveLocationLinks, eligibleLocationLinkTargets } = await engineModule();
   assert.equal(typeof validateLocationLinks, 'function');
-  const published = JSON.parse(await readFile(new URL('../assets/data/atlas.json', import.meta.url), 'utf8'));
+  const published = JSON.parse(await readFile(new URL('../assets/data/publication-v5.json', import.meta.url), 'utf8'));
   assert.equal(published.locations.length, 39);
+  const current = JSON.parse(await readFile(new URL('../assets/data/atlas.json', import.meta.url), 'utf8'));
+  const currentBefore = structuredClone(current);
+  assert.equal(validateLocationLinks(deepFreeze(current)), true);
+  assert.deepEqual(current, currentBefore);
+  assert.equal(new Set(current.locations.map(record => record.id)).size, current.locations.length);
   const publishedBefore = structuredClone(published);
   assert.equal(validateLocationLinks(deepFreeze(published)), true);
   assert.deepEqual(published, publishedBefore);

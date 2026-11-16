@@ -131,7 +131,7 @@
         }
       ]
     },
-    "publicationRevision": "authored-estates-v9",
+    "publicationRevision": "authored-estates-v10",
     "gilneasCrest": "assets/ui/gilneas-royal-shield.svg",
     "enhancedWidth": 5289,
     "enhancedHeight": 6822,
@@ -1173,7 +1173,8 @@
       "isLocation": true,
       "linkedLocationIds": [
         "location-greymane-record-office",
-        "location-greymane-post-office"
+        "location-greymane-post-office",
+        "location-v10-smuggler-capital-exit"
       ]
     },
     {
@@ -1596,7 +1597,12 @@
         "location-54cebe0e-8a63-43c7-86d2-b85f6edf2732",
         "location-mereldar-church-orphanage",
         "location-duskhaven-duelist-club",
-        "location-duskhaven-powder-and-ash"
+        "location-duskhaven-powder-and-ash",
+        "location-v10-duskhaven-1",
+        "location-v10-duskhaven-2",
+        "location-v10-duskhaven-3",
+        "location-v10-duskhaven-4",
+        "location-duskhaven-duncan-firm"
       ]
     },
     {
@@ -2207,7 +2213,20 @@
         "bradshaw-mill",
         "ferry-stormglen",
         "location-8288bc4e-bb08-45d9-ace3-bc878fe7e8ba",
-        "location-52d50172-b218-4b6b-be09-eccd9fb419ce"
+        "location-52d50172-b218-4b6b-be09-eccd9fb419ce",
+        "location-v10-stormglen-1",
+        "location-v10-stormglen-2",
+        "location-v10-stormglen-3",
+        "location-v10-stormglen-4",
+        "location-v10-stormglen-5",
+        "location-v10-stormglen-6",
+        "location-v10-stormglen-7",
+        "location-v10-stormglen-8",
+        "location-v10-stormglen-9",
+        "location-v10-stormglen-10",
+        "location-v10-stormglen-11",
+        "location-v10-stormglen-12",
+        "location-v10-stormglen-13"
       ]
     },
     {
@@ -6414,8 +6433,8 @@
       "id": "location-greymane-post-office",
       "name": "Дом королевской почты",
       "type": "building",
-      "x": 1681,
-      "y": 3103,
+      "x": 1637,
+      "y": 3109,
       "faction": "greymane",
       "owner": "",
       "description": "У Дома королевской почты посыльные меняют мокрые плащи и передают запечатанные сумки дежурному. Внутри письма раскладывают по дорогам и городам, сверяют отметки прибытия и вносят задержавшиеся отправления в книгу. Под навесом ждут дорожные лошади; с первым просветом в дождевых тучах курьеры снова выходят на площадь.",
@@ -7849,6 +7868,1038 @@
           "basis": "explicit-user-authorship",
           "canonicalBuilding": false,
           "position": "user-confirmed long building on western edge of central Duskhaven district; minimap comparison and visual centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-stormglen-1",
+      "name": "Таверна «Последний Очаг»",
+      "x": 1812.67,
+      "y": 3920,
+      "type": "inn",
+      "faction": "ashbury",
+      "owner": "Барон Эшбери",
+      "description": "Напротив поместья Дома Эшбери горят окна таверны «Последний Очаг». Здесь встречают путников горячей похлёбкой, сушат плащи у широкого камина и передают вести с восточных дорог. Хозяин держит для запоздавших гостей несколько комнат над общим залом.",
+      "shortDescription": "Напротив поместья Дома Эшбери горят окна таверны «Последний Очаг».",
+      "objects": [
+        {
+          "id": "object-5777c3e9-22d5-5686-974a-94c92f634c2f",
+          "name": "Книга дорожных вестей",
+          "type": "building",
+          "owner": "Барон Эшбери",
+          "description": "Книга дорожных вестей хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-2ea7d4a2-934c-5283-a494-97ef9876c912",
+              "kind": "bonus",
+              "text": "+1 к проверкам Харизмы (Убеждение) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-stormglen-2",
+      "name": "Ратушная канцелярия Грозового Перевала",
+      "x": 1883,
+      "y": 3740,
+      "type": "building",
+      "faction": "ashbury",
+      "owner": "Барон Эшбери",
+      "description": "В небольшой канцелярии управляющие Дома Эшбери принимают прошения, записывают повинности и разбирают споры о дворах и мастерских. На стене висит расписание приёмов, а старые бумаги берегут от морской сырости.",
+      "shortDescription": "В небольшой канцелярии управляющие Дома Эшбери принимают прошения, записывают повинности и разбирают споры о дворах и мастерских.",
+      "objects": [
+        {
+          "id": "object-192e25ae-a2a9-5987-ac4e-726db5f6c939",
+          "name": "Шкаф общинных записей",
+          "type": "building",
+          "owner": "Барон Эшбери",
+          "description": "Шкаф общинных записей хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-34f74be7-d338-5e44-9bec-bee84b81074c",
+              "kind": "bonus",
+              "text": "+1 к проверкам Интеллекта (История) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-stormglen-3",
+      "name": "Мастерская берегового плотника",
+      "x": 1910.67,
+      "y": 3776.67,
+      "type": "workshop",
+      "faction": "ashbury",
+      "owner": "Барон Эшбери",
+      "description": "Под навесом мастерской сохнут доски для лодок и домашних ставней. Плотник принимает заказы жителей и чинит вещи, которым солёный ветер сократил срок службы.",
+      "shortDescription": "Под навесом мастерской сохнут доски для лодок и домашних ставней.",
+      "objects": [
+        {
+          "id": "object-03e86964-cead-587d-b3b1-ed692fa92aa0",
+          "name": "Плотницкий верстак",
+          "type": "building",
+          "owner": "Барон Эшбери",
+          "description": "Плотницкий верстак хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-735a0392-a28d-58c4-979b-0c497f069fb2",
+              "kind": "bonus",
+              "text": "+1 к проверкам Интеллекта (Расследование) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-stormglen-4",
+      "name": "Кузница перевальных дорог",
+      "x": 1750.67,
+      "y": 3822,
+      "type": "forge",
+      "faction": "ashbury",
+      "owner": "Барон Эшбери",
+      "description": "В низкой кузнице подковывают вьючных животных и правят деревенский инструмент. По вечерам мастер гасит горн лишь после осмотра всех заказов, принесённых с соседних дорог.",
+      "shortDescription": "В низкой кузнице подковывают вьючных животных и правят деревенский инструмент.",
+      "objects": [
+        {
+          "id": "object-06aed27d-d16d-56a6-a31e-c8c02d887466",
+          "name": "Стол осмотра металла",
+          "type": "building",
+          "owner": "Барон Эшбери",
+          "description": "Стол осмотра металла хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-bfac3f9f-d8c6-59c5-be6b-7ea57b85e6d9",
+              "kind": "bonus",
+              "text": "+1 к проверкам Интеллекта (Расследование) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-stormglen-5",
+      "name": "Дом лекаря прибрежья",
+      "x": 1847.33,
+      "y": 3851.33,
+      "type": "building",
+      "faction": "ashbury",
+      "owner": "Барон Эшбери",
+      "description": "За чистыми ставнями лекарь хранит перевязи и сушёные травы. Жители приходят сюда с дорожными ушибами и домашними заботами; хозяин терпеливо обучает помощников уходу за больными.",
+      "shortDescription": "За чистыми ставнями лекарь хранит перевязи и сушёные травы.",
+      "objects": [
+        {
+          "id": "object-e2e09144-12fb-5b88-ab1d-36bfac96e032",
+          "name": "Лекарская комната",
+          "type": "building",
+          "owner": "Барон Эшбери",
+          "description": "Лекарская комната хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-d65ec9e9-c57b-55bb-837b-2670aa2ce64f",
+              "kind": "bonus",
+              "text": "+1 к проверкам Мудрости (Медицина) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-stormglen-6",
+      "name": "Швейная мастерская «Солёный Ветер»",
+      "x": 1820.67,
+      "y": 3865.33,
+      "type": "workshop",
+      "faction": "ashbury",
+      "owner": "Барон Эшбери",
+      "description": "Швеи чинят плащи и шьют прочную одежду для работников побережья. У окон разложены выкройки, а иглы и нитки убраны в закрытые коробки, чтобы не потеряться в сумерках.",
+      "shortDescription": "Швеи чинят плащи и шьют прочную одежду для работников побережья.",
+      "objects": [
+        {
+          "id": "object-0d3e44d4-06f3-570f-8a68-f734b9b2544f",
+          "name": "Стол закройщика",
+          "type": "building",
+          "owner": "Барон Эшбери",
+          "description": "Стол закройщика хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-3f41abb4-374d-58b1-8dae-5929def352c0",
+              "kind": "bonus",
+              "text": "+1 к проверкам Ловкости (Ловкость рук) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-stormglen-7",
+      "name": "Пекарня перевала",
+      "x": 1771.33,
+      "y": 3879.33,
+      "type": "workshop",
+      "faction": "ashbury",
+      "owner": "Барон Эшбери",
+      "description": "Рано утром из пекарни выносят хлеб для соседних дворов. Семья пекаря следит за запасом муки и делит работу так, чтобы печь не простаивала в непогоду.",
+      "shortDescription": "Рано утром из пекарни выносят хлеб для соседних дворов.",
+      "objects": [
+        {
+          "id": "object-24a12ab6-5478-5397-b083-9e1a55b19f5d",
+          "name": "Склад зерна и муки",
+          "type": "building",
+          "owner": "Барон Эшбери",
+          "description": "Склад зерна и муки хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-2f4a4948-b0c3-5684-86ff-2a785b57e6b2",
+              "kind": "bonus",
+              "text": "+1 к проверкам Интеллекта (Природа) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-stormglen-8",
+      "name": "Дом портового счетовода",
+      "x": 1907.33,
+      "y": 3851.33,
+      "type": "building",
+      "faction": "ashbury",
+      "owner": "Барон Эшбери",
+      "description": "Счетовод живёт вместе с семьёй и ведёт расписки прибрежных поставок. На его столе рядом с домашними вещами лежат книги мер и весов, которыми пользуются торговцы Дома Эшбери.",
+      "shortDescription": "Счетовод живёт вместе с семьёй и ведёт расписки прибрежных поставок.",
+      "objects": [
+        {
+          "id": "object-36ec45a6-3339-5fb5-a251-59283795e887",
+          "name": "Счётная книга поставок",
+          "type": "building",
+          "owner": "Барон Эшбери",
+          "description": "Счётная книга поставок хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-83403f09-1b6b-5c16-bb49-0b534e38660b",
+              "kind": "bonus",
+              "text": "+1 к проверкам Интеллекта (История) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-stormglen-9",
+      "name": "Дом семьи лодочника",
+      "x": 1939.33,
+      "y": 3866.67,
+      "type": "building",
+      "faction": "ashbury",
+      "owner": "Барон Эшбери",
+      "description": "Во дворе лодочника хранят запасные вёсла и сушат спасённые от сырости верёвки. У семейного очага обсуждают перемены ветра и помогают соседям подготовиться к выходу на воду.",
+      "shortDescription": "Во дворе лодочника хранят запасные вёсла и сушат спасённые от сырости верёвки.",
+      "objects": [
+        {
+          "id": "object-0f151905-baf3-5adf-b8a8-86c0b628f707",
+          "name": "Кладовая лодочных снастей",
+          "type": "building",
+          "owner": "Барон Эшбери",
+          "description": "Кладовая лодочных снастей хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-5b67e055-9890-54f4-ba72-fd46cada3dd0",
+              "kind": "bonus",
+              "text": "+1 к проверкам Мудрости (Выживание) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-stormglen-10",
+      "name": "Дом лесного возчика",
+      "x": 1967,
+      "y": 3840,
+      "type": "building",
+      "faction": "ashbury",
+      "owner": "Барон Эшбери",
+      "description": "Возчик держит у дома крепкую повозку и запас ремней. Его семья знает стоянки на перевальных дорогах и бережёт путевые заметки, оставленные прежними поколениями.",
+      "shortDescription": "Возчик держит у дома крепкую повозку и запас ремней.",
+      "objects": [
+        {
+          "id": "object-a7578604-1fd2-5b07-862f-b25dfe6fc418",
+          "name": "Сундук дорожных принадлежностей",
+          "type": "building",
+          "owner": "Барон Эшбери",
+          "description": "Сундук дорожных принадлежностей хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-1a2910bd-e776-5325-bc77-187ce87c1920",
+              "kind": "bonus",
+              "text": "+1 к проверкам Мудрости (Выживание) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-stormglen-11",
+      "name": "Дом ткачей Грозового Перевала",
+      "x": 1965.33,
+      "y": 3907.33,
+      "type": "building",
+      "faction": "ashbury",
+      "owner": "Барон Эшбери",
+      "description": "В жилом доме ткачей по очереди работают за станком и разбирают пряжу. Соседи заходят за полотном и новостями, а молодые помощники учатся терпению и точности ремесла.",
+      "shortDescription": "В жилом доме ткачей по очереди работают за станком и разбирают пряжу.",
+      "objects": [
+        {
+          "id": "object-b2bcbbd1-5faa-5102-9324-186b0a219a95",
+          "name": "Учебный ткацкий станок",
+          "type": "building",
+          "owner": "Барон Эшбери",
+          "description": "Учебный ткацкий станок хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-54a4572f-21df-5cb2-8d08-8bc44b0458ad",
+              "kind": "bonus",
+              "text": "+1 к проверкам Ловкости (Ловкость рук) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-stormglen-12",
+      "name": "Дом берегового дозорного",
+      "x": 1908,
+      "y": 3658,
+      "type": "building",
+      "faction": "ashbury",
+      "owner": "Барон Эшбери",
+      "description": "Окна дома обращены к дороге и прибрежным подходам. Дозорный замечает непривычные огни, передаёт вести стражникам и хранит семейный запас сухого топлива.",
+      "shortDescription": "Окна дома обращены к дороге и прибрежным подходам.",
+      "objects": [
+        {
+          "id": "object-daa8f6ef-9dd1-55e1-a6cc-f01e76d25fa6",
+          "name": "Окно берегового наблюдения",
+          "type": "building",
+          "owner": "Барон Эшбери",
+          "description": "Окно берегового наблюдения хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-73d307fd-cbdb-5ebe-a9c8-69ccc70049a9",
+              "kind": "bonus",
+              "text": "+1 к проверкам Мудрости (Внимательность) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-stormglen-13",
+      "name": "Общинная учебная комната",
+      "x": 1811.67,
+      "y": 3680,
+      "type": "building",
+      "faction": "ashbury",
+      "owner": "Барон Эшбери",
+      "description": "В скромном доме жители устроили место для уроков грамоты и счёта. Старшие помогают детям читать дорожные указатели и понимать записи, нужные в городской жизни.",
+      "shortDescription": "В скромном доме жители устроили место для уроков грамоты и счёта.",
+      "objects": [
+        {
+          "id": "object-4269c6b4-e3a1-557b-bf1b-3f55b0d4ca44",
+          "name": "Шкаф учебных книг",
+          "type": "building",
+          "owner": "Барон Эшбери",
+          "description": "Шкаф учебных книг хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-85946a55-3aaf-59fa-828b-7fae5be4b281",
+              "kind": "bonus",
+              "text": "+1 к проверкам Интеллекта (История) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-duskhaven-1",
+      "name": "Дом семьи портового грузчика",
+      "x": 1090.67,
+      "y": 3312.0,
+      "type": "building",
+      "faction": "gilneas",
+      "owner": "Королевство Гилнеас",
+      "description": "Рядом с постоялым двором живёт семья портового грузчика. В доме берегут рабочие ремни, сушат плащи и обсуждают порядок завтрашних поставок; запас инструментов помогает соседям готовиться к долгому дню у пристаней.",
+      "shortDescription": "Рядом с постоялым двором живёт семья портового грузчика.",
+      "objects": [
+        {
+          "id": "object-c3c2ea85-174a-5e87-8a57-efccd4720c51",
+          "name": "Кладовая грузовых креплений",
+          "type": "building",
+          "owner": "Королевство Гилнеас",
+          "description": "Кладовая грузовых креплений хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-e2297694-a202-5c77-bf80-3a6a062b5619",
+              "kind": "bonus",
+              "text": "+1 к проверкам Интеллекта (Расследование) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-duskhaven-2",
+      "name": "Дом городского переписчика",
+      "x": 1108.67,
+      "y": 3332.67,
+      "type": "building",
+      "faction": "gilneas",
+      "owner": "Королевство Гилнеас",
+      "description": "В тихом доме рядом с постоялым двором переписчик составляет письма и расписки для жителей Тёмной Гавани. Его семья бережно складывает бумаги в сухие ящики и помогает посетителям разобраться в старых записях.",
+      "shortDescription": "В тихом доме рядом с постоялым двором переписчик составляет письма и расписки для жителей Тёмной Гавани.",
+      "objects": [
+        {
+          "id": "object-a0eb2fe3-1482-574a-b1ec-e32b54efd2e5",
+          "name": "Домашний письменный стол",
+          "type": "building",
+          "owner": "Королевство Гилнеас",
+          "description": "Домашний письменный стол хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-1f5a779e-9970-5184-8425-2f9cf2e54b03",
+              "kind": "bonus",
+              "text": "+1 к проверкам Интеллекта (История) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-duskhaven-3",
+      "name": "Дом семьи дорожного мастера",
+      "x": 1072.0,
+      "y": 3352.67,
+      "type": "building",
+      "faction": "gilneas",
+      "owner": "Королевство Гилнеас",
+      "description": "Ниже постоялого двора дорожный мастер живёт с семьёй и хранит принадлежности для мелкого ремонта повозок. На стене отмечены удобные стоянки и опасные участки пригородных дорог.",
+      "shortDescription": "Ниже постоялого двора дорожный мастер живёт с семьёй и хранит принадлежности для мелкого ремонта повозок.",
+      "objects": [
+        {
+          "id": "object-9f10fc12-7b9d-5559-9cf6-6fe427dbb49b",
+          "name": "Карта городских подходов",
+          "type": "building",
+          "owner": "Королевство Гилнеас",
+          "description": "Карта городских подходов хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-80aa3722-c867-55d7-b974-78271d96218e",
+              "kind": "bonus",
+              "text": "+1 к проверкам Мудрости (Выживание) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-duskhaven-4",
+      "name": "Дом прачки у постоялого двора",
+      "x": 1056.67,
+      "y": 3362.67,
+      "type": "building",
+      "faction": "gilneas",
+      "owner": "Королевство Гилнеас",
+      "description": "В доме под постоялым двором сушат чистое полотно и чинят дорожную одежду. Хозяйка знает привычки постоянных гостей и умеет выслушать человека, прежде чем пустить дальше домашнего порога.",
+      "shortDescription": "В доме под постоялым двором сушат чистое полотно и чинят дорожную одежду.",
+      "objects": [
+        {
+          "id": "object-a3f46a44-2308-59a2-8b12-3aad9cb61157",
+          "name": "Комната приёма белья",
+          "type": "building",
+          "owner": "Королевство Гилнеас",
+          "description": "Комната приёма белья хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-1e8e6502-61e0-5fc2-b390-14db1b06b0c3",
+              "kind": "bonus",
+              "text": "+1 к проверкам Мудрости (Проницательность) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-duskhaven-duncan-firm",
+      "name": "Торговая фирма «Говард Дункан и сыновья»",
+      "x": 764.67,
+      "y": 3479.33,
+      "type": "building",
+      "faction": "gilneas",
+      "owner": "Говард Дункан и сыновья",
+      "description": "На западной стороне центрального квартала Тёмной Гавани работает торговая фирма «Говард Дункан и сыновья». За стойкой принимают заказы, сверяют накладные и обсуждают сроки доставки грузов. Семейные книги хранят рядом с образцами товара; старший Дункан требует, чтобы каждая расписка была понятна и покупателю, и возчику.",
+      "shortDescription": "На западной стороне центрального квартала Тёмной Гавани работает торговая фирма «Говард Дункан и сыновья».",
+      "objects": [
+        {
+          "id": "object-9f374517-9a7a-59a4-8144-8db6a0f2edf5",
+          "name": "Стол торговых накладных",
+          "type": "building",
+          "owner": "Говард Дункан и сыновья",
+          "description": "Стол торговых накладных хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-0f238865-4494-56b4-be1f-04ef89c933d3",
+              "kind": "bonus",
+              "text": "+1 к проверкам Интеллекта (Расследование) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate"
+        }
+      }
+    },
+    {
+      "id": "location-v10-smuggler-capital-exit",
+      "name": "Путь Контрабандиста — городской выход",
+      "x": 1681,
+      "y": 3103,
+      "type": "building",
+      "faction": "raft",
+      "owner": "Дом Рафт",
+      "description": "На Площади Седогрива за неприметным домашним входом скрывается выход подземного пути. Узкая лестница уводит к тоннелю, ведущему к крипте за Покоем Адерика. Люди Дома Рафт берегут этот проход от любопытных глаз; снаружи здание не отличается от соседних домов.",
+      "shortDescription": "На Площади Седогрива за неприметным домашним входом скрывается выход подземного пути.",
+      "objects": [
+        {
+          "id": "object-2bc900f0-ad16-59e0-8549-db118673f483",
+          "name": "Тайная комната дорожных записей",
+          "type": "building",
+          "owner": "Дом Рафт",
+          "description": "Тайная комната дорожных записей хранит практические знания и принадлежности этого владения. Его люди поддерживают здесь порядок и передают накопленный опыт соседям.",
+          "modifiers": [
+            {
+              "id": "modifier-092bbc87-09ce-5fd1-8154-a3654605e7e4",
+              "kind": "bonus",
+              "text": "+1 к проверкам Ловкости (Скрытность) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "source raster visual/registered centre estimate",
+          "tunnelEndpoint": "location-v10-smuggler-crypt"
+        }
+      }
+    },
+    {
+      "id": "location-v10-cliff-office-ruins",
+      "name": "Руины конторы над обрывом",
+      "x": 1357.0,
+      "y": 3032.0,
+      "type": "building",
+      "faction": "gilneas",
+      "owner": "Королевство Гилнеас",
+      "description": "У дороги между Поместьем Седогрива и столицей над каменистым обрывом держатся стены разрушенной конторы. Крыша обвалилась, ветер гуляет по пустым проёмам, а в щелях кладки собирается сырость. Никто уже не помнит, какие дела вели здесь прежде: от старого назначения остались лишь слухи и стёртые следы на уцелевших досках.",
+      "objects": [
+        {
+          "id": "object-6da1b8aa-8c64-5c87-9c3e-5cd60fe4cfc4",
+          "name": "Сохранившиеся путевые записи",
+          "type": "building",
+          "owner": "Королевство Гилнеас",
+          "description": "Сохранившиеся записи помогают разобраться в забытых путях и прежнем устройстве здания.",
+          "modifiers": [
+            {
+              "id": "modifier-d0a5ba58-b2ff-5360-9a03-912c5c317244",
+              "kind": "bonus",
+              "text": "+1 к проверкам Интеллекта (История) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": false,
+      "linkedLocationIds": [],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "visible building centre on source raster; approximate"
+        }
+      },
+      "destroyed": true
+    },
+    {
+      "id": "location-v10-smuggler-crypt",
+      "name": "Крипта Контрабандиста",
+      "x": 1346.67,
+      "y": 2919.17,
+      "type": "building",
+      "faction": "raft",
+      "owner": "Дом Рафт",
+      "description": "За Покоем Адерика стоит неприметное здание крипты. Его дверь открывает вход в усыпальницу, но за погребальными нишами скрывается другой путь: лестница и тоннель, ведущие в столицу Гилнеаса. Люди Дома Рафт используют подземную дорогу и берегут её городской выход на Площади Седогрива от посторонних глаз.",
+      "objects": [
+        {
+          "id": "object-176ca140-08c0-5faf-aaa5-1f92150899d5",
+          "name": "Потаённая лестница крипты",
+          "type": "building",
+          "owner": "Дом Рафт",
+          "description": "За входом в усыпальницу скрыта лестница к подземному проходу. Люди Дома Рафт следят за дверями и запоминают повороты тоннеля.",
+          "modifiers": [
+            {
+              "id": "modifier-a7bae9f8-1f03-5bb2-bb21-ff4e3ec398cc",
+              "kind": "bonus",
+              "text": "+1 к проверкам Ловкости (Скрытность) всей фракции."
+            }
+          ],
+          "rules": {
+            "edition": "dnd5e",
+            "homebrew": true,
+            "mode": "faction-ownership",
+            "activation": "ownership",
+            "scope": "faction",
+            "appliesTo": "all-members",
+            "stacking": "additive",
+            "bonusValue": 1
+          }
+        }
+      ],
+      "isLocation": true,
+      "linkedLocationIds": [
+        "location-v10-smuggler-capital-exit"
+      ],
+      "sources": [],
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalBuilding": false,
+          "position": "visible building centre on source raster; approximate",
+          "tunnelEndpoint": "location-v10-smuggler-capital-exit"
         }
       }
     }

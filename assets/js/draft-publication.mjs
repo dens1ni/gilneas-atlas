@@ -2,6 +2,7 @@ import { reconcileScenarioPublication } from './scenario-publication.mjs';
 
 /** Keep each published draft on its actual three-way comparison baseline. */
 export function previousPublicationFile(meta={}) {
+  if(meta.publicationRevision==='authored-estates-v10')return 'publication-v10.json';
   if(meta.publicationRevision==='authored-estates-v9')return 'publication-v9.json';
   if(meta.publicationRevision==='authored-estates-v8')return 'publication-v8.json';
   if(meta.publicationRevision==='authored-estates-v7')return 'publication-v7.json';
@@ -15,7 +16,7 @@ export function previousPublicationFile(meta={}) {
 
 /** Three-way update: only unchanged published fields adopt new lore. */
 export function reconcileDraftPublication(draft,published,previous,authorSeed){
-  if(['authored-estates-v6','authored-estates-v7','authored-estates-v8','authored-estates-v9'].includes(published.meta?.publicationRevision))return reconcileScenarioPublication(draft,published,previous,authorSeed);
+  if(['authored-estates-v6','authored-estates-v7','authored-estates-v8','authored-estates-v9','authored-estates-v10'].includes(published.meta?.publicationRevision))return reconcileScenarioPublication(draft,published,previous,authorSeed);
   const revision=published.meta?.publicationRevision;
   if(!revision||draft.meta?.publicationRevision===revision){
     const result=structuredClone(draft);

@@ -42,6 +42,13 @@ export function initRoyalCouncilWindow(ctx) {
   }
   const partyFilter = filter('council-filter-party', 'Партия', [['all', 'Все партии'], ...COUNCIL_PARTIES.map(party => [party.id, party.name])]);
   const kindFilter = filter('council-filter-kind', 'Участники', [['all', 'Люди и дома'], ['person', 'Люди'], ['faction', 'Дома / фракции']]);
+  kindFilter.value = 'faction';
+  // Presentation-only hint: consumed once, never restored by render/open.
+  const kindFilterLabel = kindFilter.parentElement;
+  kindFilterLabel.classList.add('council-filter-hint');
+  kindFilterLabel.addEventListener('mouseover', () => {
+    kindFilterLabel.classList.remove('council-filter-hint');
+  }, { once: true });
   const influence = element('section', '', 'council-influence'); influence.id = 'council-influence';
   influence.setAttribute('aria-labelledby', 'council-influence-title');
   const influenceTitle = element('h3', 'Влияние партий'); influenceTitle.id = 'council-influence-title';

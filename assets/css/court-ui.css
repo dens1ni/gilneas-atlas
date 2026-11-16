@@ -1,11 +1,19 @@
 /* Last-loaded, narrowly scoped court interaction corrections. */
 #region-labels { display: none; }
-/* Vertical-only heraldry: an auto Y axis otherwise makes X scrollable too. */
-#layers { overflow-x: hidden; overflow-y: auto; bottom: 140px; max-height: calc(100% - 162px); }
+/* Keep the established height/camera reserve; only the house list scrolls. */
+#layers { display: flex; flex-direction: column; overflow: hidden; bottom: 140px; max-height: calc(100% - 162px); }
+#layers > .panel-head { flex: 0 0 auto; }
+#layers #layer-body { display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
+#layers #layer-body[hidden] { display: none; }
+#layers:has(> #layer-body[hidden]) { bottom: auto; }
+#layers #faction-list { min-height: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+#layers :is(.layer-options, #faction-clear) { flex: 0 0 auto; }
 @media (max-width:760px), (max-height:540px) {
   #layers { right: 70px; width: calc(100vw - 78px); max-width: 318px; max-height: calc(var(--app-height, 100dvh) - var(--header) - var(--dock) - 88px); }
 }
 #layer-body, #faction-list { min-width: 0; }
+#faction-list .faction-row { padding-left: calc(8px + var(--faction-depth, 0) * 24px); }
+#faction-list .faction-row.vassal::before { left: calc(-5px + var(--faction-depth, 1) * 24px); }
 #faction-list .faction-row :is(.faction-name, .faction-parent) {
   min-width: 0;
   overflow-wrap: anywhere;
@@ -16,6 +24,9 @@ body.nav-hidden .map-title { top: 78px; }
 /* A later sibling marker must not paint over selected text inside its pill. */
 #markers .map-marker.selected { z-index: 16; }
 #markers .map-marker.selected .marker-label {
+  /* The viewport clamp can lift the pill over its own glyph/rings. Their
+     positive stacking level otherwise paints through this auto-z label. */
+  z-index: 2;
   width: max-content;
   min-width: 0;
   white-space: normal;
@@ -172,5 +183,14 @@ body.nav-hidden .map-title { top: 78px; }
 @media (max-width: 1050px) and (max-height: 540px) and (orientation: landscape) {
   /* Keep the native layers close button outside the camera-control rail. */
   #layers { right: 70px; }
+  /* Keep the existing short-screen frame and camera rail. Compact chrome
+     instead of spending its entire height on header and stacked toggles. */
+  #layers > .panel-head { padding: 2px 8px; min-height: 44px; }
+  #layers .panel-head h2 { font-size: 14px; }
+  #layers .panel-head .eyebrow { font-size: 5px; letter-spacing: .5px; }
+  #layers #layer-body { padding: 4px 8px 6px; }
+  #layers .layer-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 4px; padding-top: 4px; }
+  #layers .layer-options label { min-width: 0; gap: 4px; font-size: 10px; min-height: 44px; }
+  #layers .layer-options i { flex-shrink: 0; }
   #dossier.folded { top: 8px; bottom: auto; }
 }

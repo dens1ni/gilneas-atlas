@@ -49,6 +49,32 @@
   font-size: 12px;
   line-height: 1.5;
 }
+#royal-council .council-filters > .council-filter-hint { position: relative; }
+#royal-council .council-filter-hint::after {
+  content: '';
+  position: absolute;
+  inset: auto -2px -2px;
+  height: 48px;
+  box-sizing: border-box;
+  border: 1px solid rgba(194, 165, 117, .35);
+  border-radius: 4px;
+  background: linear-gradient(110deg, transparent 25%, rgba(224, 196, 147, .7) 48%, transparent 70%);
+  background-size: 300% 300%;
+  padding: 1px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  animation: council-filter-gold-glow 5s ease-in-out infinite;
+}
+@keyframes council-filter-gold-glow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #royal-council .council-filter-hint::after { animation: none; background-position: 50% 50%; }
+}
 #royal-council .council-check input {
   position: static;
   width: 20px;

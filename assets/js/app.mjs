@@ -172,7 +172,7 @@ async function start() {
       if(!prior.ok)throw new Error('Предыдущая основа недоступна: '+prior.status);
       const previous=await prior.json();
       let authorSeed;
-      if(baseline.meta.publicationRevision==='authored-estates-v6'){
+      if(['authored-estates-v6','authored-estates-v7'].includes(baseline.meta.publicationRevision)){
         const seed=await fetch(new URL('assets/data/publication-author-v5.json',root),{cache:'no-store'});
         if(!seed.ok)throw new Error('Авторская основа недоступна: '+seed.status);
         authorSeed=await seed.json();

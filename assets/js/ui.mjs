@@ -619,6 +619,7 @@ export function initUI(context) {
       const row = make('button', `faction-row${depth ? ' vassal' : ''}`);
       row.type = 'button';
       row.dataset.factionId = faction.id;
+      row.style.setProperty('--faction-depth', String(depth));
       row.style.setProperty('--faction-color', colorOf(faction));
       row.classList.toggle('active', selectedFaction === faction.id);
       row.setAttribute('aria-pressed', String(selectedFaction === faction.id));

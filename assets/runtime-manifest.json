@@ -93,5 +93,6 @@
   "assets/ui/factions/harford-device.svg",
   "assets/ui/factions/candren-device.svg",
   "assets/js/realm-territory-layout.mjs",
-  "assets/maps/origins-realm-landmask.png"
+  "assets/maps/origins-realm-landmask.png",
+  "assets/data/publication-v8.json"
 ]

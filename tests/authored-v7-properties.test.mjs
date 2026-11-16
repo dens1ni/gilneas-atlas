@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {normalizeData} from '../assets/js/model.mjs';
-const data=JSON.parse(fs.readFileSync(new URL('../assets/data/atlas.json',import.meta.url)));
+const data=JSON.parse(fs.readFileSync(new URL('../assets/data/publication-v7.json',import.meta.url)));
 const previous=JSON.parse(fs.readFileSync(new URL('../assets/data/publication-v6.json',import.meta.url)));
 const find=id=>data.locations.find(l=>l.id===id);
 test('v7 preserves existing literal records and adds exactly 21 requested properties',()=>{

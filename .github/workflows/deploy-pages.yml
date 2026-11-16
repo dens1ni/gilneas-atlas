@@ -28,7 +28,7 @@ jobs:
         run: |
           # Keep deployment bounded; the full npm test suite remains available separately.
           if test -f tests/model.test.mjs; then
-            node --test --test-concurrency=1 tests/model.test.mjs tests/authored-v7-migration.test.mjs tests/authored-v7-properties.test.mjs
+            node --test --test-concurrency=1 tests/model.test.mjs tests/authored-v7-migration.test.mjs tests/authored-v7-properties.test.mjs tests/authored-v8-positions.test.mjs
           fi
           npm run check
           test -s index.html

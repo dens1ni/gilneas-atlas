@@ -96,5 +96,8 @@
   "assets/maps/origins-realm-landmask.png",
   "assets/data/publication-v8.json",
   "assets/data/publication-v9.json",
-  "assets/data/publication-v10.json"
+  "assets/data/publication-v10.json",
+  "assets/data/publication-v11.json",
+  "assets/ui/factions/darkboar-device.svg",
+  "assets/ui/factions/frauli-device.svg"
 ]

@@ -131,7 +131,7 @@
         }
       ]
     },
-    "publicationRevision": "authored-estates-v10",
+    "publicationRevision": "authored-estates-v11",
     "gilneasCrest": "assets/ui/gilneas-royal-shield.svg",
     "enhancedWidth": 5289,
     "enhancedHeight": 6822,
@@ -785,6 +785,57 @@
         "device": "#c6bca1",
         "origin": "author",
         "note": "Author-designed house device in the existing shared shield; not canonical arms."
+      }
+    },
+    {
+      "id": "frauli",
+      "name": "Дом Фраули",
+      "color": "#8d7f78",
+      "parent": "ashbury",
+      "ruler": "Леди Елена Фраули",
+      "description": "Дом Фраули — вассал барона Эшбери, известный добычей руды, камня и драгоценных камней и торговлей металлами и углём. Леди Елена продолжает семейные торговые связи и самостоятельно судит о союзе, стене и ограничениях торговли.",
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalEarlyCadastre": false,
+          "motto": "Из недр — к вершинам",
+          "heraldry": "user reference, stylized stag, mountains and crossed picks"
+        }
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/frauli-device.svg",
+        "field": "#1c1b1b",
+        "edge": "#796f69",
+        "device": "#c5c0b6",
+        "origin": "author",
+        "note": "Авторский герб по изображению пользователя; общий щит сохранён."
+      }
+    },
+    {
+      "id": "darkboar",
+      "name": "Дом Даркбоар",
+      "color": "#795b5e",
+      "parent": "gilneas",
+      "ruler": "Баронесса Эостре Даркбоар",
+      "description": "Дом Даркбоар возглавляет баронесса Эостре, старшая ведьма ковена ведьм Урожая Чёрной Дубравы. Её дом принадлежит к гилнеасской знати; земельные владения пока не указаны.",
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "parent": "gilneas default; relation to harvest witches is personal covenant role",
+          "heraldry": "user boar reference"
+        }
+      },
+      "heraldry": {
+        "symbol": "assets/ui/factions/darkboar-device.svg",
+        "field": "#251c1e",
+        "edge": "#777475",
+        "device": "#c1c1bc",
+        "origin": "author",
+        "note": "Авторский герб по изображению пользователя; общий щит сохранён."
       }
     }
   ],
@@ -3694,8 +3745,8 @@
       "y": 1156,
       "type": "mine",
       "positionConfidence": "reconstruction",
-      "faction": "lordaeron",
-      "owner": "",
+      "faction": "crowley",
+      "owner": "Дом Краули",
       "englishName": "Deep Elem Mine",
       "description": "У Серебряного рудника рабочая тропа выходит из леса к навесам с инструментами и штабелям крепёжного леса. Из выработок тянет холодной сыростью, а на площадке гремят тележки с добытой породой. После ливней шахтёры проверяют водоотвод, прежде чем отправить следующую смену под землю.",
       "objects": [
@@ -3704,7 +3755,7 @@
           "type": "workshop",
           "name": "Рудничный пробирный двор",
           "description": "На пробирном столе лежат подписанные образцы пород из местных выработок. Пыль дробильного короба висит перед узким окном.",
-          "owner": "",
+          "owner": "Дом Краули",
           "modifiers": [
             {
               "id": "modifier-aed52291-06d9-5d0d-8f03-d67591f6fd52",
@@ -3735,7 +3786,7 @@
           "type": "resource",
           "name": "Месторождения серебра",
           "description": "В выработках рудника тянутся сереброносные жилы. Рабочие выбирают богатую руду из каменных прослоек и складывают её в отдельные тележки; образцы каждой партии передают в пробирный двор, где оценивают содержание серебра. После дробления и отделения пустой породы сырьё отправляют на плавку.",
-          "owner": "",
+          "owner": "Дом Краули",
           "modifiers": [
             {
               "id": "modifier-deep-elem-silver-deposits-bonus",
@@ -3800,8 +3851,8 @@
       "y": 2203,
       "type": "lighthouse",
       "positionConfidence": "reconstruction",
-      "faction": "gilneas",
-      "owner": "",
+      "faction": "raft",
+      "owner": "Дом Рафт",
       "englishName": "Galewatch Lighthouse",
       "description": "На скалистом острове Штормовой маяк поднимает огонь над морем, помогая кормчим распознать опасный берег. Смотритель очищает стекло от соли и запасает топливо, пока тропа к пристани ещё проходима. В сильный ветер дверь башни открывают с усилием, а припасы приходится ждать до спокойной воды.",
       "objects": [
@@ -3810,7 +3861,7 @@
           "type": "building",
           "name": "Смотровая палата Штормового маяка",
           "description": "Смотровая палата обращена к воде между каменистыми мысами. Яркий маячный луч проходит по галерее и обрисовывает дежурных.",
-          "owner": "",
+          "owner": "Дом Рафт",
           "modifiers": [
             {
               "id": "modifier-18410a08-9131-5fca-b59a-07d22863ae10",
@@ -11546,6 +11597,63 @@
       },
       "lifeStatusBasis": "unknown",
       "lifeStatusNote": "Состояние только выбранного предвыходного этапа; не современный wiki-инфобокс. Раннее существование не датировано: unknown, а не перенесённая из будущего смерть."
+    },
+    {
+      "id": "noble-elena-frauli",
+      "name": "Леди Елена Фраули",
+      "title": "Леди · глава Дома Фраули",
+      "house": "frauli",
+      "description": "Елена Фраули выросла в семье торговцев металлами, сплавами и драгоценными камнями, которые добывали в шахте, пожалованной её роду. Со временем она возглавила дом, унаследовав предприятия и прочные торговые связи. Люди Фраули добывают руду, камень и драгоценности в шахтах Гилнеаса, а также поставляют королевству металлы и уголь. Оставаясь вассалом барона Эшбери, Елена сохраняет самостоятельное суждение о связях с Альянсом, строительстве Стены и ограничениях торговли. Её дом предпочитает сдержанность, хорошие манеры и тихую роскошь громким демонстрациям богатства.",
+      "shortDescription": "Глава горнопромышленного Дома Фраули, вассального барону Эшбери.",
+      "appearance": "Иссиня-чёрные волосы и узкий разрез глаз — семейные черты Фраули. Лицо Елены узкое, пропорциональное, с тоном кожи, напоминающим рассветные облака. Волосы уложены на затылке в пучок и закреплены заколкой с янтарём; нередко её голову украшает венец из оленьих рогов, повторяющий мотив герба. Она атлетична и чуть выше среднего роста среди дам Гилнеаса; строгие одежды лишены броских деталей.",
+      "socialStatus": "Леди · глава Дома Фраули",
+      "allegiance": "Дом Фраули; Королевство Гилнеас",
+      "overlord": "noble-ashbury",
+      "overlordText": "Вассал барона Эшбери.",
+      "sources": [],
+      "confidence": "scenario",
+      "lifeStatus": "unknown",
+      "lifeStatusBasis": "unknown",
+      "relations": [],
+      "spouse": null,
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "canonicalEarlyCadastre": false,
+          "politics": "independent position, not a specified party or stance"
+        }
+      },
+      "holdingsNote": "Родовая шахта и предприятия описаны автором; конкретная метка владения не назначена."
+    },
+    {
+      "id": "noble-eostre-darkboar",
+      "name": "Баронесса Эостре Даркбоар",
+      "title": "Баронесса · старшая ведьма ковена",
+      "house": "darkboar",
+      "description": "Баронесса Эостре Даркбоар возглавляет Дом Даркбоар и служит старшей ведьмой ковена ведьм Урожая Чёрной Дубравы. В её лице дворянский дом связан с кругом хранительниц старых обычаев и урожая.",
+      "shortDescription": "Баронесса Дома Даркбоар и старшая ведьма ковена Чёрной Дубравы.",
+      "appearance": "Внешность в авторском описании пока не определена.",
+      "socialStatus": "Баронесса · глава Дома Даркбоар",
+      "allegiance": "Дом Даркбоар; ковен ведьм Урожая Чёрной Дубравы",
+      "overlord": null,
+      "overlordText": "Подданная Королевства Гилнеас.",
+      "sources": [],
+      "confidence": "scenario",
+      "lifeStatus": "unknown",
+      "lifeStatusBasis": "unknown",
+      "relations": [],
+      "spouse": null,
+      "provenance": {
+        "confidence": "scenario",
+        "sources": [],
+        "authorScenario": {
+          "basis": "explicit-user-authorship",
+          "coven": "harvest-witches",
+          "no_invented_holdings": true
+        }
+      }
     }
   ],
   "sources": [
